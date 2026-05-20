@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Nav from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer";
+// 1. 改成官方最新版的引入路徑
+import { ReactLenis } from "lenis/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +32,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* 2. 選項配置維持不變，完美套用平滑滾動 */}
+        <ReactLenis
+          root
+          options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}
+        >
+          <Nav />
+          {children}
+        </ReactLenis>
+        <Footer />
       </body>
     </html>
   );
