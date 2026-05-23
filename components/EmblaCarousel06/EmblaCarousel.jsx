@@ -43,16 +43,9 @@ const EmblaCarousel = (props) => {
                   {slide.title}
                 </h4>
 
-                <p className="text-[10px] md:text-[11px] font-bold text-gray-800 tracking-widest inline-block border-b border-gray-400 pb-[2px] mb-6">
+                <p className="text-[10px] md:text-[11px] font-bold text-gray-800 tracking-widest inline-block   pb-[2px] mb-6">
                   {slide.price}
                 </p>
-
-                <Link
-                  href={`/product/${slide.slug}`}
-                  className="block w-full bg-black text-white text-[9px] md:text-[10px] font-bold tracking-[0.2em] py-3.5 hover:bg-gray-800 transition-colors uppercase"
-                >
-                  BUY NOW
-                </Link>
               </div>
             </div>
           </div>

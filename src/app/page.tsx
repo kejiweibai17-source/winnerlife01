@@ -6,6 +6,8 @@ import Link from "next/link";
 import Hero from "../../components/Slider01";
 import Slider from "../../components/Slider/Slider";
 import ShowCase from "../../components/CollectionShowcase";
+import ParallaxImage from "../../components/ParallaxImage/page";
+
 export default function InformationSection() {
   const cards = [
     {
@@ -188,8 +190,41 @@ export default function InformationSection() {
         </div>
       </section>
       <ShowCase />
+      <Link
+        href="#"
+        className="block relative w-full overflow-hidden group cursor-pointer"
+      >
+        <div className="transition-transform duration-700 ease-out ">
+          <ParallaxImage
+            src="https://sumai.tokyu-land.co.jp/branz/shinagawa-renaicanal/common/img/top/linkBlock-landscape.jpg"
+            alt="アルファステイツ博多サウス"
+            tag="SOCIAL SIGHT"
+            title="現代感立面設計。兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵。"
+            body="利用時間光影變化呈現不同表情的入口空間。兼具迎賓感、品味與安心感的建築外觀設計。"
+          />
+        </div>
+      </Link>
       <WovenStory />
       <Slider />
+
+      <section className="section-banner bg-stone-100 flex justify-center gap-3 px-10 py-20">
+        <Image
+          src="/images/banner01.png"
+          alt="banner"
+          width={1000}
+          height={500}
+          className="max-w-[1300px]  border-gray-200 mx-auto "
+          placeholder="empty"
+        ></Image>
+        <Image
+          src="/images/banner02.png"
+          alt="banner"
+          width={1000}
+          height={500}
+          className="max-w-[1300px]  border-gray-200 mx-auto "
+          placeholder="empty"
+        ></Image>
+      </section>
     </>
   );
 }

@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer";
+import ContentGrid from "../../components/ContentGrid";
+
 // 1. 改成官方最新版的引入路徑
 import { ReactLenis } from "lenis/react";
 
@@ -40,6 +42,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </ReactLenis>
+        <ContentGrid />
         <Footer />
       </body>
     </html>
