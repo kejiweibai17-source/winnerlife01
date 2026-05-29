@@ -17,7 +17,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* 👇 已經刪除 Arial，交由 layout.tsx 裡的 Tailwind class 控制 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
@@ -26,21 +28,21 @@ body {
   }
 }
 
- 
 h1 {
   font-size: 3rem;
   font-weight: 400;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.05rem; /* 稍微收緊中文字距 */
   line-height: 1.2;
 }
 
 p {
-  font-family: "Geist Mono";
+  /* 👇 已經刪除 Geist Mono，讓內文順利繼承思源宋體 */
   font-weight: 400;
   font-size: 0.85rem;
+  letter-spacing: 0.05em; /* 中文內文加一點字距更好閱讀 */
 }
  
- 
+/* 以下保留您的 Slider 樣式不變 */
 .section-slider {
   position: relative;
   width: 100%;

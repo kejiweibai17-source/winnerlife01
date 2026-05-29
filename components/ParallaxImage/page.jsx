@@ -6,7 +6,7 @@ import "./style.css";
 
 const lerp = (start, end, factor) => start + (end - start) * factor;
 
-const ParallaxImage = ({ src, alt, tag, title, body }) => {
+const ParallaxImage = ({ src, alt, tag, title, body, navyOverlay = false }) => {
   const imageRef = useRef(null);
   const containerRef = useRef(null);
   const bounds = useRef(null);
@@ -97,11 +97,19 @@ const ParallaxImage = ({ src, alt, tag, title, body }) => {
         }}
       />
 
+      {navyOverlay && (
+        <div
+          className="absolute inset-0 bg-[#16294d]/80 pointer-events-none"
+          aria-hidden
+        />
+      )}
+
       {/* 文字覆蓋層 */}
       <div
         style={{
           position: "absolute",
           inset: 0,
+          zIndex: 1,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

@@ -29,7 +29,7 @@ const EmblaCarousel = (props) => {
           >
             <div className="flex flex-col items-center w-full group">
               {/* 商品圖片區 (淺灰底色，懸浮輕微放大) */}
-              <div className="w-full aspect-[4/5] bg-[#f4f4f4] mb-5 overflow-hidden relative">
+              <div className="w-full aspect-[4/3] bg-[#f4f4f4] mb-5 overflow-hidden relative">
                 <img
                   src={slide.image}
                   className="w-full h-full object-cover mix-blend-darken transition-transform duration-700 ease-out group-hover:scale-105"

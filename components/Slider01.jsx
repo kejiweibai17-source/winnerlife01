@@ -1,28 +1,42 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Copy from "./Copy";
 
+/**
+ * Hero 輪播設定（在此自訂即可）
+ * - image:      圖片路徑（放在 public 下，以 / 開頭）
+ * - titleLine1: 主標題（大字，第一行）
+ * - titleLine2: 副標題（第二行；不需要可設為 ""）
+ */
 const slides = [
   {
-    image: "https://www.shamaison.com/assets/img/Main_image3.webp",
+    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_52_50.png",
+    titleLine1: "Exquisite Detail",
+    titleLine2: "Exceptional Quality.",
   },
   {
-    image: "https://www.shamaison.com/assets/img/Main_image1.webp",
+    image: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+    titleLine1: "Premium Location",
+    titleLine2: "品川・港區核心生活圈。",
   },
   {
-    image:
-      "https://storage.googleapis.com/studio-cms-assets/projects/91aPvjveOl/s-3000x2000_bc88459c-f59b-4a9f-a85e-cdb8d9aca23c.webp",
+    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_59_00.png",
+    titleLine1: "Timeless Design",
+    titleLine2: "洗鍊質感與溫潤氛圍並存。",
   },
 ];
 
 export default function Slider() {
   const containerRef = useRef(null);
   const imagesRef = useRef([]);
-  const titleRef = useRef(null);
   const indicatorsRef = useRef([]);
   const timerRef = useRef(null);
+  const [textIndex, setTextIndex] = useState(0);
+  const setTextIndexRef = useRef(setTextIndex);
+  setTextIndexRef.current = setTextIndex;
 
   useGSAP(
     () => {
@@ -75,47 +89,8 @@ export default function Slider() {
         // 使用獨立的 gsap.to 控制收縮，讓它突破時間軸的限制，持續收縮！
         gsap.to(nextImg, { scale: 1, duration: scaleDuration, ease: "none" });
 
-        // ==========================================
-        // 文字乾淨切換 (無多餘特效，單純淡入淡出)
-        // ==========================================
-        // 🔥 防呆 2：確保 titleRef 存在，且 querySelector 有抓到東西
-        if (titleRef.current) {
-          const currentTitle = titleRef.current.querySelector(
-            `div[data-index="${currentIndex}"]`,
-          );
-          const nextTitle = titleRef.current.querySelector(
-            `div[data-index="${nextIndex}"]`,
-          );
-
-          if (currentTitle && nextTitle) {
-            // 隱藏所有其他文字層
-            const allTitleDivs =
-              titleRef.current.querySelectorAll(".title-group");
-            gsap.set(allTitleDivs, { zIndex: 1 });
-            gsap.set(nextTitle, { zIndex: 2 });
-
-            // 舊文字淡出，新文字淡入
-            tl.to(
-              currentTitle,
-              {
-                autoAlpha: 0,
-                duration: transitionDuration,
-                ease: "power2.inOut",
-              },
-              0,
-            );
-            gsap.set(nextTitle, { autoAlpha: 0 });
-            tl.to(
-              nextTitle,
-              {
-                autoAlpha: 1,
-                duration: transitionDuration,
-                ease: "power2.inOut",
-              },
-              0,
-            );
-          }
-        }
+        // 文字：Copy 元件逐行上浮（與圖片切換同步）
+        setTextIndexRef.current(nextIndex);
 
         // ==========================================
         // 右側導覽圓點動畫
@@ -182,15 +157,6 @@ export default function Slider() {
         }
       });
 
-      // 文字初始化 (直接顯示，無進場特效)
-      if (titleRef.current) {
-        const allTitleDivs = titleRef.current.querySelectorAll(".title-group");
-        if (allTitleDivs.length > 0) {
-          gsap.set(allTitleDivs, { autoAlpha: 0 });
-          gsap.set(allTitleDivs[0], { autoAlpha: 1, zIndex: 2 });
-        }
-      }
-
       startAutoplay();
 
       return () => {
@@ -226,7 +192,12 @@ export default function Slider() {
         .overlay {
           position: absolute;
           inset: 0;
-          background: rgba(0, 0, 0, 0.25);
+          background: linear-gradient(
+            105deg,
+            rgba(11, 31, 60, 0.62) 0%,
+            rgba(11, 31, 60, 0.32) 42%,
+            rgba(0, 0, 0, 0.18) 100%
+          );
           z-index: 10;
           pointer-events: none;
         }
@@ -263,35 +234,42 @@ export default function Slider() {
           letter-spacing: 0.1em;
         }
 
-        /* 正中央 標題 */
-        .center-title {
+        /* 左側標題（參照 Sha Maison 版型） */
+        .hero-title {
           position: absolute;
-          top: 50%; left: 50%;
-          transform: translate(-50%, -50%);
+          left: clamp(1.5rem, 5vw, 4rem);
+          top: 50%;
+          transform: translateY(-50%);
           z-index: 20;
-          text-align: center;
-          width: 100%;
+          width: min(92%, 44rem);
+          min-height: clamp(7rem, 16vw, 12rem);
+          text-align: left;
+          pointer-events: none;
         }
-        .title-group {
-          position: absolute;
-          top: 50%; left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
+        .hero-title [data-copy-wrapper="true"] {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
         }
-        .title-group .ja {
+        .title-line {
           display: block;
-          font-size: clamp(1.8rem, 3.5vw, 3rem);
-          font-weight: 700;
-          letter-spacing: 0.15em;
-          margin-bottom: 1rem;
-          text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+          font-family: var(--font-noto-serif-tc), Georgia, "Times New Roman", serif;
+          color: #fff;
+          margin: 0;
         }
-        .title-group .en {
-          display: block;
-          font-size: clamp(1.2rem, 2vw, 1.8rem);
-          font-weight: 700;
-          letter-spacing: 0.05em;
-          text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        .title-line-1 {
+          font-size: clamp(2.25rem, 5.2vw, 4.25rem);
+          font-weight: 400;
+          letter-spacing: 0.04em;
+          line-height: 1.12;
+          margin-bottom: 0.35rem;
+        }
+        .title-line-2 {
+          font-size: clamp(1.5rem, 3.2vw, 2.75rem);
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          line-height: 1.25;
+          opacity: 0.95;
         }
 
         /* 左下角 */
@@ -364,6 +342,13 @@ export default function Slider() {
         @media (max-width: 768px) {
           .top-left-logo { top: 1.5rem; left: 1.5rem; }
           .top-right-badge { top: 1.5rem; padding: 0.4rem 1rem; }
+          .hero-title {
+            left: 1.5rem;
+            top: auto;
+            bottom: 28%;
+            transform: none;
+            width: calc(100% - 3rem);
+          }
           .bottom-left-text { bottom: 1.5rem; left: 1.5rem; font-size: 0.65rem; }
           .bottom-right-scroll { display: none; }
           .side-indicators { right: 1.5rem; }
@@ -384,19 +369,23 @@ export default function Slider() {
         </div>
         <div className="overlay"></div>
 
-        <div className="center-title" ref={titleRef}>
-          {slides.map((slide, idx) => (
-            <div key={`title-${idx}`} className="title-group" data-index={idx}>
-              <span className="text-[50px] tracking-widest !font-normal">
-                Exquisite Detail
-              </span>
-              <br></br>
-              <span className="text-[32px] tracking-widest !font-normal">
-                {" "}
-                Exceptional Quality.
-              </span>
-            </div>
-          ))}
+        <div className="hero-title">
+          <Copy
+            key={`hero-title-${textIndex}`}
+            animateOnScroll={false}
+            delay={0.2}
+          >
+            {slides[textIndex].titleLine1 ? (
+              <p className="title-line title-line-1">
+                {slides[textIndex].titleLine1}
+              </p>
+            ) : null}
+            {slides[textIndex].titleLine2 ? (
+              <p className="title-line title-line-2">
+                {slides[textIndex].titleLine2}
+              </p>
+            ) : null}
+          </Copy>
         </div>
 
         <div className="bottom-left-text">

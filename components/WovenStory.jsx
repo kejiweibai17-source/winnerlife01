@@ -9,15 +9,15 @@ import Link from "next/link";
 const slides = [
   {
     id: 1,
-    image: "https://neie.jp/wp-content/uploads/2025/10/img_mv_obu.jpg",
+    image: "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
   },
   {
     id: 2,
-    image: "https://neie.jp/wp-content/uploads/2025/10/img_mv_toyama.jpg",
+    image: "/images/index/marquee01.png",
   },
   {
     id: 3,
-    image: "https://neie.jp/wp-content/uploads/2025/10/img_mv_meito.jpg",
+    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_56_39.png",
   },
 ];
 

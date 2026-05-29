@@ -7,10 +7,9 @@ import Copy from "./Copy"; // 載入您提供的 GSAP 元件
 const gridData = [
   {
     id: 1,
-    title: "建案理念",
-    subtitle: "コンセプト",
-    bgImage:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+    title: "交通連結",
+    subtitle: "Transportation",
+    bgImage: "/images/index/wall/交通連結.png",
     hoverText: "都市核心・現代美學・沉穩居所",
     // 深海藍
     maskFrom: "rgba(4,18,45,0.88)",
@@ -19,10 +18,9 @@ const gridData = [
   },
   {
     id: 2,
-    title: "都更計畫",
-    subtitle: "港区のポテンシャル",
-    bgImage:
-      "https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=800&auto=format&fit=crop",
+    title: "區域再開發",
+    subtitle: "Area Redevelopment",
+    bgImage: "/images/index/wall/都更計畫.png",
     hoverText: "核心地段・增值潛力・未來規劃",
     // 電光青藍
     maskFrom: "rgba(0,25,55,0.90)",
@@ -31,10 +29,9 @@ const gridData = [
   },
   {
     id: 3,
-    title: "建築設計",
-    subtitle: "再開発",
-    bgImage:
-      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=800&auto=format&fit=crop",
+    title: "建築外觀",
+    subtitle: "Architecture",
+    bgImage: "/images/index/wall/建築設計.png",
     hoverText: "都市更新・全新街廓・帶動發展",
     // 靛紫藍
     maskFrom: "rgba(15,10,50,0.90)",
@@ -43,10 +40,9 @@ const gridData = [
   },
   {
     id: 4,
-    title: "房型規劃",
-    subtitle: "アクセス",
-    bgImage:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop",
+    title: "共用空間",
+    subtitle: "Common Area",
+    bgImage: "/images/index/wall/共用空間.png",
     hoverText: "多鐵共構・連接機場・四通八達",
     // 蒼青藍
     maskFrom: "rgba(0,30,50,0.90)",
@@ -55,10 +51,9 @@ const gridData = [
   },
   {
     id: 5,
-    title: "室內效果",
-    subtitle: "周辺環境",
-    bgImage:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=800&auto=format&fit=crop",
+    title: "室內情境",
+    subtitle: "Common Area",
+    bgImage: "/images/index/wall/房型規劃.png",
     hoverText: "公園綠地・完善機能・優質學區",
     // 暗藍灰
     maskFrom: "rgba(8,18,38,0.92)",
@@ -67,10 +62,9 @@ const gridData = [
   },
   {
     id: 6,
-    title: "設備規格",
-    subtitle: "デザイン",
-    bgImage:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",
+    title: "生活圈",
+    subtitle: "Lifestyle",
+    bgImage: "/images/index/wall/生活圈.png",
     hoverText: "大師操刀・簡約外觀・工藝細節",
     // 深橘棕科技
     maskFrom: "rgba(40,15,5,0.90)",
@@ -79,10 +73,9 @@ const gridData = [
   },
   {
     id: 7,
-    title: "周邊環境",
-    subtitle: "ランドスケープ",
-    bgImage:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f0a?q=80&w=800&auto=format&fit=crop",
+    title: "設備與家電",
+    subtitle: "equipment",
+    bgImage: "/images/index/wall/設備與家電.png",
     hoverText: "四季植栽・自然和諧・私密庭園",
     // 深邃綠藍
     maskFrom: "rgba(0,25,25,0.90)",
@@ -91,10 +84,9 @@ const gridData = [
   },
   {
     id: 8,
-    title: "交通位置",
+    title: "IoT系統與保全設備",
     subtitle: "間取り",
-    bgImage:
-      "https://images.unsplash.com/photo-1502672260266-1c1c24226133?q=80&w=800&auto=format&fit=crop",
+    bgImage: "/images/index/wall/IoT系統與保全設備.png",
     hoverText: "高坪效・採光通風・多元房型",
     // 鋼鐵藍灰
     maskFrom: "rgba(10,14,28,0.92)",
@@ -103,10 +95,9 @@ const gridData = [
   },
   {
     id: 9,
-    title: "品牌介紹",
-    subtitle: "モデルルーム",
-    bgImage:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",
+    title: "地段核心",
+    subtitle: "Location Value",
+    bgImage: "/images/index/wall/地段核心.png",
     hoverText: "頂級建材・情境展示・專業導覽",
     // 琥珀橘金
     maskFrom: "rgba(35,18,0,0.90)",
@@ -115,7 +106,7 @@ const gridData = [
   },
   {
     id: 10,
-    title: "EQUIPMENT",
+    title: "建商與設計師介紹",
     subtitle: "設備仕様",
     bgImage:
       "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop",

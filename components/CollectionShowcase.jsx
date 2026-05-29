@@ -18,73 +18,67 @@ gsap.registerPlugin(ScrollTrigger);
 // ==========================================
 const content = {
   headerTitle: "LOCATION",
-  headerSub: "(LIFE HACK)",
-  headerTag: "盡情享受博多核心生活圈的居住體驗",
+  headerSub: "(Life Imfomation)",
+  headerTag: "都市の利便と、穏やかな住環境が調和する街",
   headerDesc:
-    "JR博多站周邊作為九州最大的交通樞紐，擁有高度便利性。大型商業設施、時尚、娛樂、美食等都市機能齊聚一堂。這裡是一個能同時享受都會便利與悠閒生活的理想環境。不只是博多站，更擁有令人嚮往的新生活價值。",
+    "白金高輪駅周辺には、日常の買い物に便利な商業施設や多彩な飲食店が揃い、暮らしを支える生活利便性が充実しています。また、近隣には公園や緑豊かな街並みが点在し、都心でありながら落ち着いた住環境を確保。都市の機能性と心地よい静けさを兼ね備えた快適な日常を享受できるエリアです。",
   tagFeatured: "アルファステイツ博多サウス",
   btnReadMore: "DISCOVER MORE",
   cases: [
     {
       id: "style-01",
-      caseNumber: "LIFE HACK",
-      role: "HAKATA CORE AREA",
-      name: "自在掌握博多核心生活圈，多元便捷的交通網絡為日常注入活力與機動性。",
+      caseNumber: "KEIO",
+      role: "Univercuty",
+      name: "慶應義塾大学至近という文教エリアならではの価値",
       description:
-        "鄰近博多站商圈、大型購物設施、高速道路交通動線，工作、購物、娛樂、休閒皆便利的理想生活圈。",
-      image:
-        "https://monarchitects.jp/wp-content/uploads/2024/05/detail-contents02@2x-1380x920.jpg",
-      blockTitle: "博多のコアピースを使いこなす。自在掌握博多核心生活圈。",
+        "“慶應義塾大学まで徒歩5分。”都心でありながら、由緒ある文教エリアの落ち着きと知的な雰囲気を日常に感じられる、希少性の高い住環境です。",
+      image: "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
+      blockTitle: "【周邊環境】都會便捷與質感綠意的美好交會",
       blockDesc:
-        "多元便捷的交通網絡，為日常注入活力與機動性。鄰近博多站商圈，大型購物設施、高速道路與交通動線便利，工作、購物、娛樂、休閒皆齊備，打造真正宜居的都會生活圈。",
+        "多元便捷的交通網絡，為日常注入活力與機動性。大型購物設施、高速道路與交通動線便利，工作、購物、娛樂、休閒皆齊備，打造真正宜居的都會生活圈。",
       customProducts: [
         {
           id: "prod_01",
-          title: "Hakata Station",
+          title: "白金アエルシティ",
           slug: "hakata-station",
-          price: "JR博多站，九州最大交通樞紐，新幹線與機場交通便利。",
-          image: "/images/img-01.png",
+          price:
+            "白金高輪駅直結の大規模複合施設。商業・医療が揃う街のランドマークとなっています。",
+          image: "/images/index/白金アエルシティ.png",
           stepNum: "15 min",
         },
         {
           id: "prod_02",
-          title: "JR Takeshita Station",
+          title: "東京都済生会中央病院",
           slug: "takeshita-station",
-          price: "竹下站，生活便利的交通節點，通勤通學輕鬆順暢。",
-          image: "/images/img-02.png",
+          price:
+            "100年以上の歴史を持つ総合病院。救急医療にも対応する街の中核施設です。",
+          image: "/images/index/東京都済生会中央病院.png",
           stepNum: "8 min",
         },
         {
           id: "prod_03",
-          title: "LaLaport Fukuoka",
+          title: "芝公園",
           slug: "lalaport-fukuoka",
-          price: "大型複合商業設施，購物、餐飲、娛樂一站全滿足。",
-          image: "/images/img-03.png",
-          stepNum: "7 min",
-        },
-        {
-          id: "prod_04",
-          title: "FOLEO Hakata",
-          slug: "foleo-hakata",
-          price: "生活型購物中心，日常採買輕鬆愜意。",
-          image: "/images/img-04.png",
+          price:
+            "日本最古級の歴史を持つ公園。東京タワーの眺めと豊かな緑、運動施設が整う憩いの場。",
+          image: "/images/index/芝公園.png",
           stepNum: "7 min",
         },
       ],
     },
     {
       id: "style-02",
-      caseNumber: "IoT",
-      role: "SMART LIVING",
-      name: "為了享受從容生活而打造的 IoT 智慧住宅。",
+      caseNumber: "白金高輪",
+      role: "SHIROKANE TAKANAWA",
+      name: "都市機能が一新される大規模再開発の進行",
       description:
-        "智慧遙控、智慧窗簾、智慧居家安全系統。多種可搭載 IoT 設備，透過效率化與節省時間，創造更自在的生活品質。",
-      image:
-        "https://www.yahagijisyo.co.jp/assets/img/index/img-business03Right.webp",
-      blockTitle: "ゆとりある暮らしを楽しむためのIoT搭載マンション。為從容生活而生的智慧宅。",
+        "歴史と品格を受け継ぐ白金高輪は今、街全体の機能更新とともに新たな進化の局面を迎えています。住宅整備に加え、商業施設や飲食店、オフィス、生活利便施設が計画的に整い、暮らし・働く・憩うが身近で完結する都市環境へ。将来にわたり価値を育み続ける街、それが白金高輪です。",
+      image: "/images/index/ChatGPT Image 2026年5月29日 上午11_52_53.png",
+      blockTitle:
+        "ゆとりある暮らしを楽しむためのIoT搭載マンション。為從容生活而生的智慧宅。",
       blockDesc:
         "用智慧遙控打造舒適空間，自動開關與居家安全管理讓生活更安心。可集中控制燈光與家電的多功能按鍵、一鍵打造舒適生活的智慧照明、可遠端通話的智慧攝影機，更支援語音控制家電與住宅設備。使用手機即可輕鬆控制窗簾與百葉窗，多種 IoT 設備整合，為您的每一天省時提效，成就真正有餘裕的理想生活。",
-      bigImage: "/images/Photoroom_20260422_115847.jpg.webp",
+      bigImage: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
     },
   ],
 };
