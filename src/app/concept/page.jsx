@@ -188,24 +188,34 @@ export default function Concept() {
               {[...Array(2)]
                 .flatMap(() => [
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/09/eye-catch01-5-690x460.jpg",
+                    src: "/images/concept/9adca514-b1df-4095-b86e-8ceaed137441.png",
                     label: "Hakata Station (15min・徒步)",
                     alt: "Hakata Station",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/05/desk-catcage01-690x460.jpg",
+                    src: "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
                     label: "LaLaport Fukuoka (7min・徒步)",
                     alt: "LaLaport",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/05/oandm01-690x460.jpg",
+                    src: "/images/concept/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
                     label: "FOLEO Hakata (7min・徒步)",
                     alt: "FOLEO",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/05/medical-shibaura01-690x460.jpg",
-                    label: "JR Takeshita Station (8min・徒步)",
-                    alt: "Takeshita",
+                    src: "/images/concept/9adca514-b1df-4095-b86e-8ceaed137441.png",
+                    label: "Hakata Station (15min・徒步)",
+                    alt: "Hakata Station",
+                  },
+                  {
+                    src: "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+                    label: "LaLaport Fukuoka (7min・徒步)",
+                    alt: "LaLaport",
+                  },
+                  {
+                    src: "/images/concept/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+                    label: "FOLEO Hakata (7min・徒步)",
+                    alt: "FOLEO",
                   },
                 ])
                 .map((item, i) => (
@@ -232,24 +242,34 @@ export default function Concept() {
               {[...Array(2)]
                 .flatMap(() => [
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2025/04/oyamacho-eye-catch02-690x460.jpg",
-                    label: "博多周邊生活圈",
-                    alt: "Area",
+                    src: "/images/concept/9adca514-b1df-4095-b86e-8ceaed137441.png",
+                    label: "Hakata Station (15min・徒步)",
+                    alt: "Hakata Station",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/05/yakumo01-690x460.jpg",
-                    label: "都市便利・綠意生活",
-                    alt: "Green",
+                    src: "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+                    label: "LaLaport Fukuoka (7min・徒步)",
+                    alt: "LaLaport",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/05/oandm01-690x460.jpg",
-                    label: "商業設施・餐飲娛樂",
-                    alt: "Shop",
+                    src: "/images/concept/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+                    label: "FOLEO Hakata (7min・徒步)",
+                    alt: "FOLEO",
                   },
                   {
-                    src: "https://monarchitects.jp/wp-content/uploads/2024/09/eye-catch01-5-690x460.jpg",
-                    label: "高速道路・交通動線便利",
-                    alt: "Access",
+                    src: "/images/concept/9adca514-b1df-4095-b86e-8ceaed137441.png",
+                    label: "Hakata Station (15min・徒步)",
+                    alt: "Hakata Station",
+                  },
+                  {
+                    src: "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+                    label: "LaLaport Fukuoka (7min・徒步)",
+                    alt: "LaLaport",
+                  },
+                  {
+                    src: "/images/concept/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+                    label: "FOLEO Hakata (7min・徒步)",
+                    alt: "FOLEO",
                   },
                 ])
                 .map((item, i) => (

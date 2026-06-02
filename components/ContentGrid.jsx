@@ -31,6 +31,30 @@ const gridData = [
     maskTo: "rgba(0,90,140,0.16)",
   },
   {
+    id: 9,
+    href: "/location",
+    title: "地段核心",
+    subtitle: "Location Value",
+    bgImage: "/images/index/wall/地段核心.png",
+    hoverText: "頂級建材・情境展示・專業導覽",
+    // 琥珀橘金
+    maskFrom: "rgba(35,18,0,0.90)",
+    maskVia: "rgba(75,40,5,0.55)",
+    maskTo: "rgba(110,65,10,0.18)",
+  },
+  {
+    id: 6,
+    href: "/transportation",
+    title: "生活圈 / 交通 / 設施",
+    subtitle: "Lifestyle",
+    bgImage: "/images/index/wall/生活圈.png",
+    hoverText: "大師操刀・簡約外觀・工藝細節",
+    // 深橘棕科技
+    maskFrom: "rgba(40,15,5,0.90)",
+    maskVia: "rgba(80,35,10,0.55)",
+    maskTo: "rgba(110,55,15,0.18)",
+  },
+  {
     id: 3,
     href: "",
     title: "建築外觀",
@@ -66,18 +90,7 @@ const gridData = [
     maskVia: "rgba(18,35,65,0.55)",
     maskTo: "rgba(28,50,90,0.18)",
   },
-  {
-    id: 6,
-    href: "",
-    title: "生活圈",
-    subtitle: "Lifestyle",
-    bgImage: "/images/index/wall/生活圈.png",
-    hoverText: "大師操刀・簡約外觀・工藝細節",
-    // 深橘棕科技
-    maskFrom: "rgba(40,15,5,0.90)",
-    maskVia: "rgba(80,35,10,0.55)",
-    maskTo: "rgba(110,55,15,0.18)",
-  },
+
   {
     id: 7,
     href: "",
@@ -102,18 +115,7 @@ const gridData = [
     maskVia: "rgba(22,30,55,0.55)",
     maskTo: "rgba(35,48,80,0.18)",
   },
-  {
-    id: 9,
-    href: "/location",
-    title: "地段核心",
-    subtitle: "Location Value",
-    bgImage: "/images/index/wall/地段核心.png",
-    hoverText: "頂級建材・情境展示・專業導覽",
-    // 琥珀橘金
-    maskFrom: "rgba(35,18,0,0.90)",
-    maskVia: "rgba(75,40,5,0.55)",
-    maskTo: "rgba(110,65,10,0.18)",
-  },
+
   {
     id: 10,
     href: "",

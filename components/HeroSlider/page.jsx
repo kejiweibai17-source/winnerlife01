@@ -30,12 +30,7 @@ const slidesData = [
   },
 ];
 
-const imagePaths = [
-  "https://monarchitects.jp/wp-content/uploads/2024/05/kozen01-1440x780.jpg",
-  "https://monarchitects.jp/wp-content/uploads/2024/05/omaruyama01-1440x780.jpg",
-  "https://monarchitects.jp/wp-content/uploads/2024/05/sun-farmers01-1440x780.jpg",
-  "https://monarchitects.jp/wp-content/uploads/2024/05/mercury01-1440x780.jpg",
-];
+const imagePaths = ["/images/concept/001.png", "/images/concept/002.png"];
 // ───────────────────────────────────────────────────────────
 
 const SliderInner = () => {

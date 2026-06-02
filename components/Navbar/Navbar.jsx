@@ -48,16 +48,18 @@ export default function Header() {
     }),
   };
 
+  // 與 ContentGrid（首頁底部十格）相同順序與連結
   const navItems = [
     { label: "建案理念", href: "/concept" },
-    { label: "都更計畫", href: "/redevelopment" },
-    { label: "建築設計", href: "/design" },
-    { label: "房型規劃", href: "/room-plan" },
-    { label: "室內效果圖", href: "/model-room" },
-    { label: "設備規格", href: "/equipment" },
-    { label: "周邊環境", href: "/location" },
-    { label: "交通位置", href: "/access" },
-    { label: "品牌介紹", href: "/brand" },
+    { label: "區域再開發 / 周邊設施", href: "/amenities" },
+    { label: "地段核心", href: "/location" },
+    { label: "生活圈 / 交通 / 設施", href: "/transportation" },
+    { label: "建築外觀", href: "" },
+    { label: "共用空間", href: "" },
+    { label: "室內情境", href: "" },
+    { label: "設備與家電", href: "" },
+    { label: "IoT系統與保全設備", href: "" },
+    { label: "建商與設計師介紹", href: "" },
   ];
 
   return (
@@ -104,7 +106,7 @@ export default function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.label}
-                  href={item.href}
+                  href={item.href || "#"}
                   className="relative group/nav inline-block pb-1"
                 >
                   <span className="group-hover/nav:opacity-70 transition-opacity duration-300">
@@ -170,7 +172,7 @@ export default function Header() {
                     animate="open"
                   >
                     <Link
-                      href={item.href}
+                      href={item.href || "#"}
                       onClick={() => setIsOpen(false)}
                       className="relative group/link inline-block pb-1"
                     >
@@ -183,9 +185,9 @@ export default function Header() {
                 ))}
               </div>
 
-              {/* 第二欄 (後 4 個項目) */}
+              {/* 第二欄 (後 5 個項目) */}
               <div className="flex flex-col gap-6 text-xl md:text-2xl lg:text-3xl font-medium tracking-widest lg:pl-10">
-                {navItems.slice(5, 9).map((item, index) => (
+                {navItems.slice(5, 10).map((item, index) => (
                   <motion.div
                     key={item.label}
                     custom={index + 5}
@@ -194,7 +196,7 @@ export default function Header() {
                     animate="open"
                   >
                     <Link
-                      href={item.href}
+                      href={item.href || "#"}
                       onClick={() => setIsOpen(false)}
                       className="relative group/link inline-block pb-1"
                     >
