@@ -5,6 +5,7 @@ import "./globals.css";
 import Nav from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer";
 import ContentGrid from "../../components/ContentGrid";
+import ScrollToTopOnNavigate from "../../components/ScrollToTopOnNavigate";
 import { ReactLenis } from "lenis/react";
 
 // 配置思源宋體
@@ -56,6 +57,7 @@ export default function RootLayout({
           root
           options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}
         >
+          <ScrollToTopOnNavigate />
           <Nav />
           {children}
         </ReactLenis>

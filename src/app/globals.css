@@ -29,12 +29,17 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 6vmin !important;
   font-weight: 400;
   letter-spacing: -0.05rem; /* 稍微收緊中文字距 */
   line-height: 1.2;
 }
-
+h2{
+    font-size: 3.5vmin !important;
+  font-weight: 400;
+  letter-spacing: -0.05rem; /* 稍微收緊中文字距 */
+  line-height: 1.2;
+}
 p {
   /* 👇 已經刪除 Geist Mono，讓內文順利繼承思源宋體 */
   font-weight: 400;

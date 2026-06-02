@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Copy from "./Copy"; // 載入您提供的 GSAP 元件
 
 // 每張卡片有獨立科技色系遮罩
 const gridData = [
   {
     id: 1,
-    title: "交通連結",
+    href: "/concept",
+    title: "建案理念",
     subtitle: "Transportation",
     bgImage: "/images/index/wall/交通連結.png",
     hoverText: "都市核心・現代美學・沉穩居所",
@@ -18,10 +20,11 @@ const gridData = [
   },
   {
     id: 2,
-    title: "區域再開發",
+    href: "/amenities",
+    title: "區域再開發 / 周邊設施",
     subtitle: "Area Redevelopment",
-    bgImage: "/images/index/wall/都更計畫.png",
-    hoverText: "核心地段・增值潛力・未來規劃",
+    bgImage: "/images/amenities/001.png",
+    hoverText: "商場 電車站等",
     // 電光青藍
     maskFrom: "rgba(0,25,55,0.90)",
     maskVia: "rgba(0,60,100,0.52)",
@@ -29,6 +32,7 @@ const gridData = [
   },
   {
     id: 3,
+    href: "",
     title: "建築外觀",
     subtitle: "Architecture",
     bgImage: "/images/index/wall/建築設計.png",
@@ -40,6 +44,7 @@ const gridData = [
   },
   {
     id: 4,
+    href: "",
     title: "共用空間",
     subtitle: "Common Area",
     bgImage: "/images/index/wall/共用空間.png",
@@ -51,6 +56,7 @@ const gridData = [
   },
   {
     id: 5,
+    href: "",
     title: "室內情境",
     subtitle: "Common Area",
     bgImage: "/images/index/wall/房型規劃.png",
@@ -62,6 +68,7 @@ const gridData = [
   },
   {
     id: 6,
+    href: "",
     title: "生活圈",
     subtitle: "Lifestyle",
     bgImage: "/images/index/wall/生活圈.png",
@@ -73,6 +80,7 @@ const gridData = [
   },
   {
     id: 7,
+    href: "",
     title: "設備與家電",
     subtitle: "equipment",
     bgImage: "/images/index/wall/設備與家電.png",
@@ -84,6 +92,7 @@ const gridData = [
   },
   {
     id: 8,
+    href: "",
     title: "IoT系統與保全設備",
     subtitle: "間取り",
     bgImage: "/images/index/wall/IoT系統與保全設備.png",
@@ -95,6 +104,7 @@ const gridData = [
   },
   {
     id: 9,
+    href: "/location",
     title: "地段核心",
     subtitle: "Location Value",
     bgImage: "/images/index/wall/地段核心.png",
@@ -106,6 +116,7 @@ const gridData = [
   },
   {
     id: 10,
+    href: "",
     title: "建商與設計師介紹",
     subtitle: "設備仕様",
     bgImage:
@@ -123,9 +134,10 @@ export default function ContentGrid() {
     <section className="w-full bg-[#0c0f1c]">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
         {gridData.map((item, index) => (
-          <div
+          <Link
             key={item.id}
-            className="group relative aspect-[4/3] overflow-hidden cursor-pointer border-[0.5px] border-white/[0.08]"
+            href={item.href || "#"}
+            className="group relative block aspect-[4/3] overflow-hidden cursor-pointer border-[0.5px] border-white/[0.08]"
           >
             {/* 背景圖：hover 放大 */}
             <div
@@ -140,9 +152,9 @@ export default function ContentGrid() {
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
               {/* 主標題 */}
               <Copy animateOnScroll delay={index * 0.05}>
-                <h2 className="text-white text-base md:text-lg font-semibold tracking-[0.18em] leading-none mb-3 uppercase">
+                <b className="text-white text-base   font-semibold tracking-[0.18em] leading-none mb-3 uppercase">
                   {item.title}
-                </h2>
+                </b>
               </Copy>
 
               {/* 細橫線：hover 時延伸 */}
@@ -162,7 +174,7 @@ export default function ContentGrid() {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

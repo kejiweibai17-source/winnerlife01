@@ -2,7 +2,7 @@
 export const siteConfig = {
   name: "忠訓地產",
   legalName: "忠訓地產開發有限公司",
-  tagline: "財富自由．享富人生",
+ 
   parentBrand: "OK忠訓國際集團",
   /** 建案名稱 */
   buildingName: "白金高輪",

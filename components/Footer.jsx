@@ -19,9 +19,7 @@ export default function Footer() {
                   忠訓地產
                 </span>
               </div>
-              <span className="text-sm tracking-wider mb-1 opacity-90">
-                財富自由．享富人生
-              </span>
+               
             </div>
 
             {/* 公司資訊與地址 */}
