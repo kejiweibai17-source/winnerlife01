@@ -8,25 +8,22 @@ import Slider from "./Slider/Slider";
 import ShowCase from "./CollectionShowcase";
 import ParallaxImage from "./ParallaxImage/page";
 import HomeBottomPromo from "./HomeBottomPromo";
+import { useTranslations } from "next-intl";
+
+const CARD_IMAGES = [
+  "/images/index/grid-02.png",
+  "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
+  "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+];
 
 export default function HomePage() {
-  const cards = [
-    {
-      id: 1,
-      title: "將持續演進的「品川地區」納入生活圈的「港區」地址",
-      image: "/images/index/grid-02.png",
-    },
-    {
-      id: 2,
-      title: "前往可搭乘兩條路線的天王洲艾爾站\n「平坦步道步行6分鐘※1」",
-      image: "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
-    },
-    {
-      id: 3,
-      title: "233戶住宅，環繞著綠意與水景\n「向南可眺望運河的開闊地段」",
-      image: "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
-    },
-  ];
+  const t = useTranslations();
+
+  const cards = CARD_IMAGES.map((image, i) => ({
+    id: i + 1,
+    title: t(`cards.${i}.title`),
+    image,
+  }));
 
   return (
     <>
@@ -39,12 +36,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <div className="flex flex-col gap-8">
               <h2 className="text-sm tracking-[0.2em] font-serif border-b border-gray-300 pb-4 inline-block w-full max-w-[200px]">
-                INFORMATION
+                {t("info.title")}
               </h2>
               <ul className="flex flex-col gap-4 text-sm md:text-base tracking-widest leading-relaxed font-medium">
-                <li>銷售時程：現正依報名順序受理中</li>
-                <li>樣品屋開放日期：樣品屋現正開放參觀</li>
-                <li>現正受理物件登記及參觀預約！</li>
+                <li>{t("info.items.0")}</li>
+                <li>{t("info.items.1")}</li>
+                <li>{t("info.items.2")}</li>
               </ul>
             </div>
 
@@ -69,11 +66,11 @@ export default function HomePage() {
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                   <span className="text-lg tracking-widest font-medium">
-                    房源登記
+                    {t("info.register.label")}
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm tracking-widest leading-relaxed opacity-80">
-                  完成房源登記後，我們將寄送僅限房源登記者瀏覽的內容頁面網址。
+                  {t("info.register.desc")}
                 </p>
               </Link>
 
@@ -106,17 +103,17 @@ export default function HomePage() {
                     <path d="M8 14h.01" />
                   </svg>
                   <span className="text-lg tracking-widest font-medium">
-                    預約參觀
+                    {t("info.reserve.label")}
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm tracking-widest leading-relaxed opacity-80">
-                  如欲參觀公寓展示中心，請點此
+                  {t("info.reserve.desc")}
                 </p>
               </Link>
 
               <div className="bg-white border border-gray-200 p-8 flex flex-col items-center justify-center text-center gap-4 shadow-sm">
                 <p className="text-xs tracking-widest text-gray-600">
-                  如有任何疑問，請洽
+                  {t("info.contact.label")}
                 </p>
                 <div className="flex items-center gap-3">
                   <svg
@@ -138,7 +135,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <p className="text-[10px] sm:text-xs tracking-widest text-gray-500 mt-2">
-                  營業時間：10:00～18:00　公休日：每週三、四、五（國定假日除外）
+                  {t("info.contact.hours")}
                 </p>
               </div>
             </div>
@@ -186,10 +183,10 @@ export default function HomePage() {
         <div className="transition-transform duration-700 ease-out">
           <ParallaxImage
             src="/images/index/ChatGPT Image 2026年5月29日 下午12_10_20.png"
-            alt="現代感立面設計，兼具洗鍊質感與溫潤氛圍的建築外觀"
-            tag="SOCIAL SIGHT"
-            title="現代感立面設計。兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵。"
-            body="利用時間光影變化呈現不同表情的入口空間。兼具迎賓感、品味與安心感的建築外觀設計。"
+            alt={t("parallax.title")}
+            tag={t("parallax.tag")}
+            title={t("parallax.title")}
+            body={t("parallax.body")}
             navyOverlay
           />
         </div>

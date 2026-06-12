@@ -1,0 +1,289 @@
+{
+  "hero": {
+    "slides": [
+      { "line1": "白金高輪", "line2": "かつて格式あり。港湾の暮らしを秘蔵。" },
+      { "line1": "Exquisite Detail", "line2": "Exceptional Quality." },
+      { "line1": "Premium Location", "line2": "品川・港区の中心生活圏。" },
+      { "line1": "Timeless Design", "line2": "洗練された質感と温もりの共存。" }
+    ],
+    "newWorkStyle": "NEW WORK STYLE",
+    "scrollText": "SCROLL FOR CONTENTS"
+  },
+  "info": {
+    "title": "INFORMATION",
+    "items": [
+      "販売スケジュール：現在申込み順に受付中",
+      "モデルルーム公開日：モデルルーム現在公開中",
+      "物件登録・見学予約受付中！"
+    ],
+    "register": {
+      "label": "住戸登録",
+      "desc": "住戸登録完了後、登録者限定のコンテンツページURLをお送りします。"
+    },
+    "reserve": {
+      "label": "見学予約",
+      "desc": "マンションギャラリーへのご来場はこちらから"
+    },
+    "contact": {
+      "label": "お問い合わせはこちら",
+      "hours": "営業時間：10:00～18:00　定休日：水・木・金曜日（祝日除く）"
+    }
+  },
+  "cards": [
+    { "title": "進化し続ける「品川エリア」を生活圏に持つ「港区」のアドレス" },
+    { "title": "2路線利用可能な天王洲アイル駅へ\n「フラットな歩行者デッキ徒歩6分※1」" },
+    { "title": "233戸の住まいが、緑と水を囲む\n「南向き、運河を望む開放的な立地」" }
+  ],
+  "parallax": {
+    "tag": "SOCIAL SIGHT",
+    "title": "現代的な外観デザイン。洗練された質感と温かみを兼ね備え、住宅の顔となる象徴的な設計。",
+    "body": "時間と光の変化によってさまざまな表情を見せるエントランス空間。歓迎感・品格・安心感を備えた建築外観デザイン。"
+  },
+  "woven": {
+    "titleV": "庭とともに\n足跡を織る",
+    "body": "造園師である父の姿を見ながら育ち、「庭づくりを通じて人々に喜びを届けたい」という想いを胸に刻み続けてきました。長年の研鑽を経て、お客様の理想を一つひとつの庭に込める使命を持ち、今日も歩み続けています。",
+    "more": "詳しく見る"
+  },
+  "transportSlider": {
+    "slides": [
+      {
+        "subtitle": "Exquisite Detail",
+        "title": "品川まで5分\n東京まで9分",
+        "description": "品川駅直結で東京都心・横浜方面へ快適アクセス。通勤も週末も最短の移動時間で実現します。",
+        "subtext": "Exceptional Quality."
+      },
+      {
+        "subtitle": "Urban Core",
+        "title": "商圏へ即アクセス\n都市のコアな生活",
+        "description": "徒歩圏内に商業・生活機能が集積。ショッピング、飲食、日常の買い物が揃い、都心ならではの利便な生活リズムを享受できます。",
+        "subtext": "Premium Lifestyle."
+      },
+      {
+        "subtitle": "Global Gateway",
+        "title": "2大空港を擁する\n圧倒的な優位性",
+        "description": "2大空港への直通路線が充実。出張も海外旅行も自宅玄関からスムーズに出発し、生活の行動半径を広げます。",
+        "subtext": "Seamless Connection."
+      },
+      {
+        "subtitle": "Daily Convenience",
+        "title": "空港アクセスの\n圧倒的な利便性",
+        "description": "空港動線と市街地生活をシームレスに接続。長距離移動の負担をなくし、大切な時間を自分と家族のために。",
+        "subtext": "Time is Luxury."
+      },
+      {
+        "subtitle": "Future Mobility",
+        "title": "世界基準の\nモビリティ拠点へ",
+        "description": "住まいから国際路線へ素早くアクセスし、都市生活の質とグローバルな機動性を兼ね備えた暮らしを実現します。",
+        "subtext": "Beyond Borders."
+      }
+    ]
+  },
+  "showcase": {
+    "headerTitle": "LOCATION",
+    "headerSub": "(Life Information)",
+    "headerTag": "都市の利便と、穏やかな住環境が調和する街",
+    "headerDesc": "白金高輪駅周辺には、日常の買い物に便利な商業施設や多彩な飲食店が揃い、暮らしを支える生活利便性が充実しています。また、近隣には公園や緑豊かな街並みが点在し、都心でありながら落ち着いた住環境を確保。都市の機能性と心地よい静けさを兼ね備えた快適な日常を享受できるエリアです。",
+    "tagFeatured": "アルファステイツ博多サウス",
+    "btnReadMore": "DISCOVER MORE",
+    "cases": [
+      {
+        "caseNumber": "KEIO",
+        "role": "University",
+        "name": "慶應義塾大学至近という文教エリアならではの価値",
+        "description": "「慶應義塾大学まで徒歩5分。」都心でありながら、由緒ある文教エリアの落ち着きと知的な雰囲気を日常に感じられる、希少性の高い住環境です。",
+        "blockTitle": "【周辺環境】都市の利便と、上質な緑の美しい出会い",
+        "blockDesc": "充実した交通ネットワークが、日常に活力と機動性をもたらします。大型商業施設、高速道路と便利な交通アクセス、仕事・買い物・娯楽・余暇のすべてが揃う、本当に住みやすい都市生活圏を実現します。",
+        "products": [
+          {
+            "title": "白金アエルシティ",
+            "price": "白金高輪駅直結の大規模複合施設。商業・医療が揃う街のランドマークとなっています。",
+            "stepNum": "15 min"
+          },
+          {
+            "title": "東京都済生会中央病院",
+            "price": "100年以上の歴史を持つ総合病院。救急医療にも対応する街の中核施設です。",
+            "stepNum": "8 min"
+          },
+          {
+            "title": "芝公園",
+            "price": "日本最古級の歴史を持つ公園。東京タワーの眺めと豊かな緑、運動施設が整う憩いの場。",
+            "stepNum": "7 min"
+          }
+        ]
+      },
+      {
+        "caseNumber": "白金高輪",
+        "role": "SHIROKANE TAKANAWA",
+        "name": "都市機能が一新される大規模再開発の進行",
+        "description": "歴史と品格を受け継ぐ白金高輪は今、街全体の機能更新とともに新たな進化の局面を迎えています。住宅整備に加え、商業施設や飲食店、オフィス、生活利便施設が計画的に整い、暮らし・働く・憩うが身近で完結する都市環境へ。将来にわたり価値を育み続ける街、それが白金高輪です。",
+        "blockTitle": "ゆとりある暮らしを楽しむためのIoT搭載マンション。",
+        "blockDesc": "スマート操作で快適な空間を実現し、自動制御と住宅セキュリティ管理で安心の暮らしを。照明や家電を一括制御できる多機能スイッチ、ワンタッチで快適な照明環境を作るスマート照明、リモート通話対応のスマートカメラ、さらに音声で家電や住宅設備をコントロール。スマートフォンでカーテンやブラインドも簡単操作。複数のIoT機器を統合し、毎日の時間とエフォートを節約して、本当にゆとりある理想の生活を実現します。"
+      }
+    ]
+  },
+  "bottomPromo": {
+    "sectionTitle": "住まいを買う",
+    "columns": [
+      {
+        "cta": "住宅購入トップを見る",
+        "desc": "マンション・戸建てなど、さまざまな住まいの選択肢をご紹介。ライフスタイルに合わせた住まい探しをサポートします。"
+      },
+      {
+        "cta": "住宅購入トップを見る",
+        "desc": "マンション・戸建てなど、さまざまな住まいの選択肢をご紹介。ライフスタイルに合わせた住まい探しをサポートします。"
+      }
+    ]
+  },
+  "nav": {
+    "items": [
+      { "label": "建築理念", "href": "/concept" },
+      { "label": "地域再開発 / 周辺施設", "href": "/amenities" },
+      { "label": "立地の核心", "href": "/location" },
+      { "label": "生活圏 / 交通 / 施設", "href": "/transportation" },
+      { "label": "建築外観", "href": "" },
+      { "label": "共用スペース", "href": "" },
+      { "label": "室内イメージ", "href": "" },
+      { "label": "設備と家電", "href": "" },
+      { "label": "IoTシステムと防犯設備", "href": "" },
+      { "label": "デベロッパーとデザイナー紹介", "href": "" }
+    ],
+    "menu": "Menu",
+    "close": "Close",
+    "download": "資料ダウンロード",
+    "reserve": "見学予約・ご相談",
+    "phoneInquiries": "お電話でのお問い合わせ・ご相談",
+    "kantoOffice": "関東エリアオフィス",
+    "kansaiOffice": "関西エリアオフィス",
+    "businessHours": "営業時間：9:00〜17:40（土日祝休み）",
+    "slogan": "このオフィスと、未来を。"
+  },
+  "footer": {
+    "brand": "忠訓地產",
+    "privacy": "プライバシーポリシー",
+    "designBy": "Design By",
+    "designer": "極客網頁設計"
+  },
+  "contentGrid": {
+    "items": [
+      {
+        "title": "建築理念",
+        "subtitle": "Transportation",
+        "hoverText": "都市の核心・現代美学・落ち着いた住まい"
+      },
+      {
+        "title": "地域再開発 / 周辺施設",
+        "subtitle": "Area Redevelopment",
+        "hoverText": "商業施設・駅など"
+      },
+      {
+        "title": "立地の核心",
+        "subtitle": "Location Value",
+        "hoverText": "上質な建材・モデル展示・専門ガイド"
+      },
+      {
+        "title": "生活圏 / 交通 / 施設",
+        "subtitle": "Lifestyle",
+        "hoverText": "名建築家による・シンプルな外観・匠の細部"
+      },
+      {
+        "title": "建築外観",
+        "subtitle": "Architecture",
+        "hoverText": "都市再生・新しい街並み・発展の牽引"
+      },
+      {
+        "title": "共用スペース",
+        "subtitle": "Common Area",
+        "hoverText": "複数路線・空港アクセス・交通至便"
+      },
+      {
+        "title": "室内イメージ",
+        "subtitle": "Interior",
+        "hoverText": "公園緑地・充実した機能・優良学区"
+      },
+      {
+        "title": "設備と家電",
+        "subtitle": "Equipment",
+        "hoverText": "四季の植栽・自然との調和・プライベートガーデン"
+      },
+      {
+        "title": "IoTシステムと防犯設備",
+        "subtitle": "IoT & Security",
+        "hoverText": "高い坪効率・採光通風・多様な間取り"
+      },
+      {
+        "title": "デベロッパーとデザイナー紹介",
+        "subtitle": "Developer",
+        "hoverText": "スマートシステム・最高級設備・全方位セキュリティ"
+      }
+    ]
+  },
+  "concept": {
+    "heroSlider": {
+      "slides": [
+        {
+          "title": "ブランズシティ品川ルネ キャナル",
+          "description": "品川の核心生活圏を存分に楽しむ住まい"
+        },
+        {
+          "title": "品川の核心生活圏を自在に",
+          "description": "充実した交通ネットワークが、日常に活力と機動性をもたらす"
+        },
+        {
+          "title": "IoTスマート住宅",
+          "description": "スマート操作、スマートカーテン、スマートホームセキュリティ"
+        },
+        {
+          "title": "現代的な外観デザイン",
+          "description": "洗練された質感と温かみを兼ね備え、住宅の顔となる象徴的な設計"
+        }
+      ]
+    },
+    "waterFront": {
+      "line1": "By The",
+      "line2": "Water Front",
+      "subtitle": "運河に臨む、開放のウォーターフロントへ。",
+      "paragraphs": [
+        "港区アドレスにありながら、再開発の機運に沸く品川エリアの\nその進化の最前線を感じて暮らすことのできる可能性に満ちたロケーション。",
+        "天王洲アイル駅と品川駅を使いこなし、都心を軽やかに駆け抜けながら\n開放感あふれる南方面のウォーターフロントをかなえる日常へ。",
+        "先進と自然が溶け合うベイエリアに新たな価値を創造する、全233邸。\nブランズシティ品川ルネ キャナル、いよいよ始動。"
+      ]
+    },
+    "marquee": [
+      {
+        "alt": "博多駅",
+        "label": "博多駅（15分・徒歩）"
+      },
+      {
+        "alt": "LaLaport 福岡",
+        "label": "LaLaport 福岡（7分・徒歩）"
+      },
+      {
+        "alt": "FOLEO 博多",
+        "label": "FOLEO 博多（7分・徒歩）"
+      }
+    ],
+    "canalGreen": {
+      "title": "CANAL & GREEN",
+      "description": "南方面を運河に臨む開放感。発展を遂げる都心の中で、緑と水辺に彩られた風景がここに。",
+      "mapLabelLine1": "ブランズシティ品川ルネ",
+      "mapLabelLine2": "キャナル"
+    },
+    "surroundings": {
+      "intro": "瑞々しい緑と水辺風景、そして洗練された文化が息づく街並みが日常の舞台になる。",
+      "items": [
+        {
+          "alt": "公園",
+          "caption": "品川シーズンテラス（15分・約1,200m）"
+        },
+        {
+          "alt": "建築外観",
+          "caption": "品川インターシティ（14分・約1,060m）"
+        },
+        {
+          "alt": "水辺ウォーク",
+          "caption": "天王洲アイル水辺広場（7分・約490m）"
+        }
+      ]
+    }
+  }
+}

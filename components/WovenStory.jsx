@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 // 我們只需要一張非常寬的圖片，或者幾張圖片拼成的長條圖。
 // 為了示範無縫平移，我們將這三張圖片拼在同一個容器裡。
@@ -22,6 +23,7 @@ const slides = [
 ];
 
 export default function WovenStory() {
+  const t = useTranslations("woven");
   return (
     <section className="relative w-full h-[100svh] overflow-hidden bg-[#111]">
       {/* 🔴 關鍵修改 1：無限平移背景 (Infinite Marquee) */}
@@ -75,32 +77,27 @@ export default function WovenStory() {
             {/* 內文與 More 按鈕 */}
             <div className="flex flex-col gap-10 max-w-sm md:mt-24">
               <p className="text-white text-sm leading-[2.2] tracking-[0.15em] font-light text-justify md:text-left drop-shadow-md">
-                自幼看著身為園藝師的父親的身影長大，心中始終銘記著「希望能透過造園為人們帶來喜悅」這份信念。經過多年的磨練，我始終秉持著將客戶的理想融入每一座庭園的使命，持續前行。
+                {t("body")}
               </p>
 
               <Link
                 href="#"
                 className="group inline-flex items-center gap-4 text-white hover:opacity-70 transition-opacity w-fit drop-shadow-md"
               >
-                <span className="text-lg font-serif tracking-widest">More</span>
+                <span className="text-lg font-serif tracking-widest">{t("more")}</span>
                 <span className="h-[1px] w-12 bg-white group-hover:w-24 transition-all duration-500 ease-out" />
               </Link>
             </div>
 
             {/* 直式標題 */}
             <h3
-              className="text-white text-3xl md:text-4xl font-serif tracking-[0.3em] leading-loose hidden md:block drop-shadow-lg"
+              className="text-white text-3xl md:text-4xl font-serif tracking-[0.3em] leading-loose hidden md:block drop-shadow-lg whitespace-pre-line"
               style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
             >
-              與庭院一同編織
-              <br />
-              我們的足跡
+              {t("titleV")}
             </h3>
-            {/* 手機版標題 */}
-            <h3 className="text-white text-2xl font-serif tracking-[0.3em] leading-loose md:hidden text-right w-full drop-shadow-lg">
-              與庭院一同編織
-              <br />
-              我們的足跡
+            <h3 className="text-white text-2xl font-serif tracking-[0.3em] leading-loose md:hidden text-right w-full drop-shadow-lg whitespace-pre-line">
+              {t("titleV")}
             </h3>
           </div>
         </div>

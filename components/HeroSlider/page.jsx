@@ -1,39 +1,17 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CustomEase } from "gsap/CustomEase";
 
 gsap.registerPlugin(CustomEase);
 
-// ── 直接在此修改輪播內容 ────────────────────────────────────
-const slidesData = [
-  {
-    title: "アルファステイツ博多サウス",
-    description: "盡情享受博多核心生活圈的居住體驗",
-    button: "了解更多",
-  },
-  {
-    title: "自在掌握博多核心生活圈",
-    description: "多元便捷的交通網絡，為日常注入活力與機動性",
-    button: "交通資訊",
-  },
-  {
-    title: "IoT 智慧住宅",
-    description: "智慧遙控、智慧窗簾、智慧居家安全系統",
-    button: "設備介紹",
-  },
-  {
-    title: "現代感立面設計",
-    description: "兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵",
-    button: "外觀欣賞",
-  },
-];
-
 const imagePaths = ["/images/concept/001.png", "/images/concept/002.png"];
-// ───────────────────────────────────────────────────────────
 
 const SliderInner = () => {
+  const t = useTranslations("concept.heroSlider");
+  const slidesData = t.raw("slides");
   const sliderRef = useRef(null);
   const sliderImagesRef = useRef(null);
   const counterRef = useRef(null);

@@ -5,70 +5,40 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-// --- 調整文字樣式以符合設計圖 ---
 const TEXT_CLASSES = {
-  // 最上方小標題 (例如 "Exquisite Detail")
   subtitle:
     "text-sm md:text-base font-light tracking-[0.2em] text-white/80 mb-2 uppercase",
-  // 核心大標題 (例如 "目指したのは...")
   title:
     "text-4xl md:text-6xl lg:text-7xl font-serif tracking-widest leading-tight text-white mb-6",
-  // 段落描述文字
   description:
     "text-sm md:text-base font-light tracking-[0.1em] leading-loose text-white/90 max-w-xl",
-  // 底部裝飾性副標 (例如 "Exceptional Quality.")
   subtext:
     "text-xs md:text-sm font-light tracking-widest text-white/60 mt-4 uppercase",
 };
 
-// --- 更新 Slider 資料 ---
-const slides = [
-  {
-    subtitle: "Exquisite Detail",
-    title: "5分鐘直達品川<br/>9分鐘直通東京",
-    description:
-      "品川站直結，輕鬆串聯東京都心與橫濱方向。日常通勤與週末出遊，都能以最短的移動時間完成。",
-    subtext: "Exceptional Quality.",
-    image: "images/index/cd78a1ca-c3db-4c12-a8b2-413e62181b4f.png",
-  },
-  {
-    subtitle: "Urban Core",
-    title: "瞬達商圈<br/>核心生活",
-    description:
-      "步行即可抵達商業與生活機能，購物、餐飲、日常採買一應俱全，享受都會核心區的便利節奏。",
-    subtext: "Premium Lifestyle.",
-    image: "/images/index/8f2716f6-12ae-4ff6-b310-1bfb8b3c20a7.png",
-  },
-  {
-    title: "坐擁雙機場<br/>絕對優勢",
-    subtitle: "Global Gateway",
-    description:
-      "雙機場直達路線完善，商務出差與海外旅行皆能從家門口順暢啟程，拓展生活的行動半徑。",
-    subtext: "Seamless Connection.",
-    image: "images/index/4e8ee07e-5f3d-4a04-9b30-078ba9c7fb8c.png",
-  },
-  {
-    subtitle: "Daily Convenience",
-    title: "空港アクセスの<br/>圧倒的な利便性",
-    description:
-      "機場動線與市區生活無縫銜接，讓長途移動不再成為負擔，把寶貴時間留給自己與家人。",
-    subtext: "Time is Luxury.",
-    image: "images/index/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
-  },
-  {
-    subtitle: "Future Mobility",
-    title: "世界基準の<br/>モビリティ拠点へ",
-    description:
-      "從住宅出發即可快速接軌國際航線，兼具都會生活品質與全球連結的機動性。",
-    subtext: "Beyond Borders.",
-    image: "images/index/9adca514-b1df-4095-b86e-8ceaed137441.png",
-  },
+const SLIDE_IMAGES = [
+  "images/index/cd78a1ca-c3db-4c12-a8b2-413e62181b4f.png",
+  "/images/index/8f2716f6-12ae-4ff6-b310-1bfb8b3c20a7.png",
+  "images/index/4e8ee07e-5f3d-4a04-9b30-078ba9c7fb8c.png",
+  "images/index/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+  "images/index/9adca514-b1df-4095-b86e-8ceaed137441.png",
 ];
 
 export default function Slider() {
+  const t = useTranslations("transportSlider");
+
+  const slides = SLIDE_IMAGES.map((image, i) => ({
+    subtitle: t(`slides.${i}.subtitle`),
+    title: t(`slides.${i}.title`).replace(/\n/g, "<br/>"),
+    description: t(`slides.${i}.description`),
+    subtext: t(`slides.${i}.subtext`),
+    image,
+  }));
+
   const sliderRef = useRef(null);
   const sliderImagesRef = useRef(null);
   const textContainerRef = useRef(null);

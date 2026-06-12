@@ -4,32 +4,24 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Copy from "./Copy";
+import { useTranslations } from "next-intl";
 
-/**
- * Hero 輪播設定（在此自訂即可）
- * - image:      圖片路徑（放在 public 下，以 / 開頭）
- * - titleLine1: 主標題（大字，第一行）
- * - titleLine2: 副標題（第二行；不需要可設為 ""）
- */
-const slides = [
-  {
-    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_52_50.png",
-    titleLine1: "Exquisite Detail",
-    titleLine2: "Exceptional Quality.",
-  },
-  {
-    image: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
-    titleLine1: "Premium Location",
-    titleLine2: "品川・港區核心生活圈。",
-  },
-  {
-    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_59_00.png",
-    titleLine1: "Timeless Design",
-    titleLine2: "洗鍊質感與溫潤氛圍並存。",
-  },
+const SLIDE_IMAGES = [
+  "/images/index/d6589afc-53c8-4818-a46c-62f46eb0925c.png",
+  "/images/index/ChatGPT Image 2026年5月29日 上午10_52_50.png",
+  "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+  "/images/index/XkREhAhg66PHPQxHcFQTjB4nzG0c0C8pS1QgzKD7-c9Uagm9MqqBTROfvXu6KHXBLna7xIA4xt_sX1r_iYNmL0JRK7JdK_Whz-zOteMrIDXc8VuzGbJCW2OknTAWtt50z-l8wzGQwHLkU5ioxg2GJw==.png",
 ];
 
 export default function Slider() {
+  const t = useTranslations("hero");
+
+  const slides = SLIDE_IMAGES.map((image, i) => ({
+    image,
+    titleLine1: t(`slides.${i}.line1`),
+    titleLine2: t(`slides.${i}.line2`),
+  }));
+
   const containerRef = useRef(null);
   const imagesRef = useRef([]);
   const indicatorsRef = useRef([]);
@@ -389,14 +381,14 @@ export default function Slider() {
         </div>
 
         <div className="bottom-left-text">
-          <span className="underline">NEW WORK STYLE</span>
+          <span className="underline">{t("newWorkStyle")}</span>
           <span>
             from <strong> by Kesh</strong>
           </span>
         </div>
 
         <div className="bottom-right-scroll">
-          SCROLL FOR CONTENTS
+          {t("scrollText")}
           <div className="arrow-circle">↓</div>
         </div>
 

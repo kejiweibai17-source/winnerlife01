@@ -1,0 +1,289 @@
+{
+  "hero": {
+    "slides": [
+      { "line1": "白金高輪", "line2": "昔有席次。珍藏港灣生活" },
+      { "line1": "Exquisite Detail", "line2": "Exceptional Quality." },
+      { "line1": "Premium Location", "line2": "品川・港區核心生活圈。" },
+      { "line1": "Timeless Design", "line2": "洗鍊質感與溫潤氛圍並存。" }
+    ],
+    "newWorkStyle": "NEW WORK STYLE",
+    "scrollText": "SCROLL FOR CONTENTS"
+  },
+  "info": {
+    "title": "INFORMATION",
+    "items": [
+      "銷售時程：現正依報名順序受理中",
+      "樣品屋開放日期：樣品屋現正開放參觀",
+      "現正受理物件登記及參觀預約！"
+    ],
+    "register": {
+      "label": "房源登記",
+      "desc": "完成房源登記後，我們將寄送僅限房源登記者瀏覽的內容頁面網址。"
+    },
+    "reserve": {
+      "label": "預約參觀",
+      "desc": "如欲參觀公寓展示中心，請點此"
+    },
+    "contact": {
+      "label": "如有任何疑問，請洽",
+      "hours": "營業時間：10:00～18:00　公休日：每週三、四、五（國定假日除外）"
+    }
+  },
+  "cards": [
+    { "title": "將持續演進的「品川地區」納入生活圈的「港區」地址" },
+    { "title": "前往可搭乘兩條路線的天王洲艾爾站\n「平坦步道步行6分鐘※1」" },
+    { "title": "233戶住宅，環繞著綠意與水景\n「向南可眺望運河的開闊地段」" }
+  ],
+  "parallax": {
+    "tag": "SOCIAL SIGHT",
+    "title": "現代感立面設計。兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵。",
+    "body": "利用時間光影變化呈現不同表情的入口空間。兼具迎賓感、品味與安心感的建築外觀設計。"
+  },
+  "woven": {
+    "titleV": "在都市中，\n織就生活的樣貌",
+    "body": "從幼年起便在父親身為庭園師的身影中長大，心中始終銘記著「希望能透過造園為人們帶來喜悅」的信念。歷經多年磨練，秉持著將客戶理想融入每一座庭園的使命，持續前行。",
+    "more": "More"
+  },
+  "transportSlider": {
+    "slides": [
+      {
+        "subtitle": "Exquisite Detail",
+        "title": "5分鐘直達品川\n9分鐘直通東京",
+        "description": "品川站直結，輕鬆串聯東京都心與橫濱方向。日常通勤與週末出遊，都能以最短的移動時間完成。",
+        "subtext": "Exceptional Quality."
+      },
+      {
+        "subtitle": "Urban Core",
+        "title": "瞬達商圈\n核心生活",
+        "description": "步行即可抵達商業與生活機能，購物、餐飲、日常採買一應俱全，享受都會核心區的便利節奏。",
+        "subtext": "Premium Lifestyle."
+      },
+      {
+        "subtitle": "Global Gateway",
+        "title": "坐擁雙機場\n絕對優勢",
+        "description": "雙機場直達路線完善，商務出差與海外旅行皆能從家門口順暢啟程，拓展生活的行動半徑。",
+        "subtext": "Seamless Connection."
+      },
+      {
+        "subtitle": "Daily Convenience",
+        "title": "機場交通\n壓倒性便利",
+        "description": "機場動線與市區生活無縫銜接，讓長途移動不再成為負擔，把寶貴時間留給自己與家人。",
+        "subtext": "Time is Luxury."
+      },
+      {
+        "subtitle": "Future Mobility",
+        "title": "邁向世界標準\n的移動樞紐",
+        "description": "從住宅出發即可快速接軌國際航線，兼具都會生活品質與全球連結的機動性。",
+        "subtext": "Beyond Borders."
+      }
+    ]
+  },
+  "showcase": {
+    "headerTitle": "LOCATION",
+    "headerSub": "(Life Information)",
+    "headerTag": "都市便利與靜謐住環境和諧共存的街區",
+    "headerDesc": "白金高輪站周邊，設有日常購物便利的商業設施及多元飲食選擇，完善生活便利性。鄰近公園與綠意盎然的街景點綴其中，身處都心卻擁有靜謐安適的居住環境。兼具都市機能與宜人寧靜的優質日常生活，盡在此區實現。",
+    "tagFeatured": "白金高輪周邊特集",
+    "btnReadMore": "DISCOVER MORE",
+    "cases": [
+      {
+        "caseNumber": "KEIO",
+        "role": "University",
+        "name": "鄰近慶應義塾大學的文教區，獨特地段價值",
+        "description": "「距慶應義塾大學步行5分鐘。」身處都心，卻能日常感受歷史悠久文教區的靜謐氛圍與知性氣息，是稀有且珍貴的居住環境。",
+        "blockTitle": "【周邊環境】都會便捷與質感綠意的美好交會",
+        "blockDesc": "多元便捷的交通網絡，為日常注入活力與機動性。大型購物設施、高速道路與交通動線便利，工作、購物、娛樂、休閒皆齊備，打造真正宜居的都會生活圈。",
+        "products": [
+          {
+            "title": "白金AEL CITY",
+            "price": "白金高輪站直連的大型複合設施，集商業與醫療於一體，是街區的地標建築。",
+            "stepNum": "15 min"
+          },
+          {
+            "title": "東京都濟生會中央醫院",
+            "price": "擁有逾百年歷史的綜合醫院，同時提供急診醫療，是地區核心醫療機構。",
+            "stepNum": "8 min"
+          },
+          {
+            "title": "芝公園",
+            "price": "日本歷史最悠久的公園之一，可眺望東京鐵塔，綠意豐沛，設有完善休閒運動設施。",
+            "stepNum": "7 min"
+          }
+        ]
+      },
+      {
+        "caseNumber": "白金高輪",
+        "role": "SHIROKANE TAKANAWA",
+        "name": "大規模重建開發進行中，街區機能全面更新",
+        "description": "承繼歷史與品格的白金高輪，正以整體街區機能更新為契機，迎向全新的演進階段。住宅整備之外，商業設施、餐飲店、辦公室、生活便利設施均有計劃性地整合導入，打造工作、生活、休憩皆可就近完成的都市環境。持續孕育價值的街區，正是白金高輪。",
+        "blockTitle": "智慧宅．從容生活，IoT 導入讓每天更安心",
+        "blockDesc": "用智慧遙控打造舒適空間，自動開關與居家安全管理讓生活更安心。可集中控制燈光與家電的多功能按鍵、一鍵打造舒適生活的智慧照明、可遠端通話的智慧攝影機，更支援語音控制家電與住宅設備。使用手機即可輕鬆控制窗簾與百葉窗，多種 IoT 設備整合，為您的每一天省時提效，成就真正有餘裕的理想生活。"
+      }
+    ]
+  },
+  "bottomPromo": {
+    "sectionTitle": "選購住宅",
+    "columns": [
+      {
+        "cta": "查看住宅購買精選",
+        "desc": "提供公寓、獨棟等多元住宅選項。協助您依生活風格找到理想的居所。"
+      },
+      {
+        "cta": "查看住宅購買精選",
+        "desc": "提供公寓、獨棟等多元住宅選項。協助您依生活風格找到理想的居所。"
+      }
+    ]
+  },
+  "nav": {
+    "items": [
+      { "label": "建案理念", "href": "/concept" },
+      { "label": "區域再開發 / 周邊設施", "href": "/amenities" },
+      { "label": "地段核心", "href": "/location" },
+      { "label": "生活圈 / 交通 / 設施", "href": "/transportation" },
+      { "label": "建築外觀", "href": "" },
+      { "label": "共用空間", "href": "" },
+      { "label": "室內情境", "href": "" },
+      { "label": "設備與家電", "href": "" },
+      { "label": "IoT系統與保全設備", "href": "" },
+      { "label": "建商與設計師介紹", "href": "" }
+    ],
+    "menu": "Menu",
+    "close": "Close",
+    "download": "下載建案資料",
+    "reserve": "預約賞屋與諮詢",
+    "phoneInquiries": "Telephone inquiries and consultations",
+    "kantoOffice": "Kanto Area Office",
+    "kansaiOffice": "Kansai Area Office",
+    "businessHours": "Business hours: 9:00-17:40 (closed on weekends and holidays)",
+    "slogan": "このオフィスと、未来を。"
+  },
+  "footer": {
+    "brand": "忠訓地產",
+    "privacy": "Privacy Policy",
+    "designBy": "Design By",
+    "designer": "極客網頁設計"
+  },
+  "contentGrid": {
+    "items": [
+      {
+        "title": "建築理念",
+        "subtitle": "Transportation",
+        "hoverText": "都市核心・現代美學・沉穩居所"
+      },
+      {
+        "title": "區域再開發 / 周邊設施",
+        "subtitle": "Area Redevelopment",
+        "hoverText": "商場 電車站等"
+      },
+      {
+        "title": "地段核心",
+        "subtitle": "Location Value",
+        "hoverText": "頂級建材・情境展示・專業導覽"
+      },
+      {
+        "title": "生活圈 / 交通 / 設施",
+        "subtitle": "Lifestyle",
+        "hoverText": "大師操刀・簡約外觀・工藝細節"
+      },
+      {
+        "title": "建築外觀",
+        "subtitle": "Architecture",
+        "hoverText": "都市更新・全新街廓・帶動發展"
+      },
+      {
+        "title": "共用空間",
+        "subtitle": "Common Area",
+        "hoverText": "多鐵共構・連接機場・四通八達"
+      },
+      {
+        "title": "室內情境",
+        "subtitle": "Interior",
+        "hoverText": "公園綠地・完善機能・優質學區"
+      },
+      {
+        "title": "設備與家電",
+        "subtitle": "Equipment",
+        "hoverText": "四季植栽・自然和諧・私密庭園"
+      },
+      {
+        "title": "IoT系統與保全設備",
+        "subtitle": "IoT & Security",
+        "hoverText": "高坪效・採光通風・多元房型"
+      },
+      {
+        "title": "建商與設計師介紹",
+        "subtitle": "Developer",
+        "hoverText": "智慧系統・頂級設備・全方位安全"
+      }
+    ]
+  },
+  "concept": {
+    "heroSlider": {
+      "slides": [
+        {
+          "title": "白金高輪運河住宅",
+          "description": "盡情享受品川核心生活圈的居住體驗"
+        },
+        {
+          "title": "自在掌握品川核心生活圈",
+          "description": "多元便捷的交通網絡，為日常注入活力與機動性"
+        },
+        {
+          "title": "IoT 智慧住宅",
+          "description": "智慧遙控、智慧窗簾、智慧居家安全系統"
+        },
+        {
+          "title": "現代感立面設計",
+          "description": "兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵"
+        }
+      ]
+    },
+    "waterFront": {
+      "line1": "By The",
+      "line2": "Water Front",
+      "subtitle": "臨運河而居，開闊的水岸生活。",
+      "paragraphs": [
+        "座落港區，卻能感受再開發蓬勃發展中的品川區域，\n其進化最前線的居住潛力，盡在此處實現。",
+        "靈活運用天王洲艾爾站與品川站，輕鬆往返都心，\n實現南向開闊水岸的日常風景。",
+        "在先進與自然融合的灣區創造全新價值，全233戶。\n品牌城市品川 René Canal，正式啟動。"
+      ]
+    },
+    "marquee": [
+      {
+        "alt": "博多站",
+        "label": "博多站（15分鐘・步行）"
+      },
+      {
+        "alt": "LaLaport 福岡",
+        "label": "LaLaport 福岡（7分鐘・步行）"
+      },
+      {
+        "alt": "FOLEO 博多",
+        "label": "FOLEO 博多（7分鐘・步行）"
+      }
+    ],
+    "canalGreen": {
+      "title": "CANAL & GREEN",
+      "description": "南向臨運河的開闊視野。在持續發展的都心中，綠意與水岸交織的景致在此呈現。",
+      "mapLabelLine1": "品牌城市品川 René",
+      "mapLabelLine2": "Canal"
+    },
+    "surroundings": {
+      "intro": "清新的綠意與水岸風景，以及洗鍊文化共存的街景，成為日常生活的舞台。",
+      "items": [
+        {
+          "alt": "公園",
+          "caption": "品川季節露台（15分鐘・約1,200m）"
+        },
+        {
+          "alt": "建築外觀",
+          "caption": "品川 Intercity（14分鐘・約1,060m）"
+        },
+        {
+          "alt": "水岸步道",
+          "caption": "天王洲艾爾水岸廣場（7分鐘・約490m）"
+        }
+      ]
+    }
+  }
+}

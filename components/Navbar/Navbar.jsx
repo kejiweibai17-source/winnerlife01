@@ -2,10 +2,24 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { getLocalizedPath, switchLocalePath } from "@/lib/locale-path";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const t = useTranslations("nav");
+  const navItems = t.raw("items");
+
+  const isJp = pathname.startsWith("/jp");
+  const currentLocale = isJp ? "jp" : "zh";
+
+  function switchLocale(targetLocale) {
+    if (targetLocale === currentLocale) return;
+    window.location.href = switchLocalePath(pathname, targetLocale);
+  }
 
   // 鎖定背景滾動：當選單打開時，防止背景頁面滾動
   useEffect(() => {
@@ -48,27 +62,30 @@ export default function Header() {
     }),
   };
 
-  // 與 ContentGrid（首頁底部十格）相同順序與連結
-  const navItems = [
-    { label: "建案理念", href: "/concept" },
-    { label: "區域再開發 / 周邊設施", href: "/amenities" },
-    { label: "地段核心", href: "/location" },
-    { label: "生活圈 / 交通 / 設施", href: "/transportation" },
-    { label: "建築外觀", href: "" },
-    { label: "共用空間", href: "" },
-    { label: "室內情境", href: "" },
-    { label: "設備與家電", href: "" },
-    { label: "IoT系統與保全設備", href: "" },
-    { label: "建商與設計師介紹", href: "" },
-  ];
+  const homeHref = getLocalizedPath("/", currentLocale);
+
+  function NavLink({ item, className = "", onClick }) {
+    const href = item.href
+      ? getLocalizedPath(item.href, currentLocale)
+      : "#";
+    return (
+      <Link
+        href={href}
+        onClick={onClick}
+        className={`relative group/nav inline-block text-center leading-tight pb-1 ${className}`}
+      >
+        <span className="group-hover/nav:opacity-70 transition-opacity duration-300">
+          {item.label}
+        </span>
+        <span className="absolute left-0 bottom-0 w-full h-[1px] bg-white transition-transform duration-300 ease-out origin-right scale-x-0 group-hover/nav:origin-left group-hover/nav:scale-x-100" />
+      </Link>
+    );
+  }
 
   return (
     <>
       {/* 頂部靜態導覽列 Navbar */}
       <header className="fixed top-0 left-0 w-full z-50 pointer-events-none text-white transition-all duration-300">
-        {/* 🔴 關鍵修改：獨立的漸層背景層 */}
-        {/* 給予足夠的高度 (h-[140px] 到 md:h-[180px])，讓漸層有極長的空間可以完美淡出 */}
-        {/* 使用 to-[#0b1f3c]/0 確保在任何瀏覽器都不會產生灰色斷層 */}
         <div
           className="absolute top-0 left-0 w-full h-[135px] pointer-events-none"
           style={{
@@ -82,56 +99,61 @@ export default function Header() {
             )`,
           }}
         />
-        {/* 🔴 加上 relative 確保內容浮在獨立背景層之上 */}
         <div className="relative flex items-center justify-between px-6 py-5 md:px-10 pointer-events-auto">
           {/* 左側 Logo */}
-          <div className="w-[20%]">
-            <Link href="/" className="z-50 flex items-center gap-2 group">
+          <div className="w-[20%] shrink-0">
+            <Link href={homeHref} className="z-50 flex items-center gap-2 group">
               <Image
                 src="/images/js_logo_h1.png"
                 width={130}
                 height={70}
                 className="w-[120px]"
                 priority
-              ></Image>
+              />
               <span className="text-[10px] mt-3 tracking-widest hidden md:block mb-1 opacity-80">
                 PREMIUM MIDSIZE OFFICE
               </span>
             </Link>
           </div>
 
-          {/* 中間大螢幕導覽列 */}
-          <div className="w-[60%] flex justify-center">
-            <nav className="hidden xl:flex items-center gap-5 text-[13px] tracking-widest opacity-90">
+          {/* 中間大螢幕導覽列 — 中日文共用相同排版 */}
+          <div className="w-[60%] flex justify-center min-w-0">
+            <nav className="hidden xl:flex items-center justify-center flex-wrap gap-x-[clamp(0.5rem,1.2vw,1.25rem)] gap-y-1 max-w-full px-1 text-[clamp(9px,0.72vw,13px)] tracking-[clamp(0.06em,0.12vw,0.18em)] opacity-90">
               {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href || "#"}
-                  className="relative group/nav inline-block pb-1"
-                >
-                  <span className="group-hover/nav:opacity-70 transition-opacity duration-300">
-                    {item.label}
-                  </span>
-                  <span className="absolute left-0 bottom-0 w-full h-[1px] bg-white transition-transform duration-300 ease-out origin-right scale-x-0 group-hover/nav:origin-left group-hover/nav:scale-x-100" />
-                </Link>
+                <NavLink key={item.label} item={item} />
               ))}
             </nav>
           </div>
 
-          <div className="flex w-[20%] justify-end items-center">
-            <div className="flex items-center gap-2 mr-8">
-              <span>JAPANESE</span>
-              <span className="border border-white px-3 py-1 rounded-full text-[10px]">
-                ENGLISH
-              </span>
+          <div className="flex w-[20%] shrink-0 justify-end items-center">
+            <div className="flex items-center gap-1 mr-8 text-[11px] tracking-widest">
+              <button
+                onClick={() => switchLocale("zh")}
+                className={`px-3 py-1 rounded-full transition-all duration-200 ${
+                  currentLocale === "zh"
+                    ? "border border-white bg-white/15"
+                    : "opacity-60 hover:opacity-100"
+                }`}
+              >
+                中文
+              </button>
+              <button
+                onClick={() => switchLocale("jp")}
+                className={`px-3 py-1 rounded-full transition-all duration-200 ${
+                  currentLocale === "jp"
+                    ? "border border-white bg-white/15"
+                    : "opacity-60 hover:opacity-100"
+                }`}
+              >
+                日本語
+              </button>
             </div>
-            {/* 右側 Menu 按鈕與漢堡圖標 */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="z-50 flex items-center gap-3 hover:opacity-70 transition-opacity"
             >
               <span className="text-sm tracking-widest hidden sm:block uppercase">
-                {isOpen ? "Close" : "Menu"}
+                {isOpen ? t("close") : t("menu")}
               </span>
               <div className="w-6 h-4 relative flex flex-col justify-between">
                 <span
@@ -171,16 +193,11 @@ export default function Header() {
                     initial="closed"
                     animate="open"
                   >
-                    <Link
-                      href={item.href || "#"}
+                    <NavLink
+                      item={item}
+                      className="pb-1 group-hover/link:opacity-70"
                       onClick={() => setIsOpen(false)}
-                      className="relative group/link inline-block pb-1"
-                    >
-                      <span className="transition-opacity duration-300 group-hover/link:opacity-70">
-                        {item.label}
-                      </span>
-                      <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-white transition-transform duration-300 ease-out origin-right scale-x-0 group-hover/link:origin-left group-hover/link:scale-x-100" />
-                    </Link>
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -195,16 +212,11 @@ export default function Header() {
                     initial="closed"
                     animate="open"
                   >
-                    <Link
-                      href={item.href || "#"}
+                    <NavLink
+                      item={item}
+                      className="pb-1 group-hover/link:opacity-70"
                       onClick={() => setIsOpen(false)}
-                      className="relative group/link inline-block pb-1"
-                    >
-                      <span className="transition-opacity duration-300 group-hover/link:opacity-70">
-                        {item.label}
-                      </span>
-                      <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-white transition-transform duration-300 ease-out origin-right scale-x-0 group-hover/link:origin-left group-hover/link:scale-x-100" />
-                    </Link>
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -217,23 +229,35 @@ export default function Header() {
                 animate="open"
                 className="flex flex-col items-start gap-5 lg:pl-10"
               >
-                <div className="flex items-center gap-2 text-xs border border-white/30 rounded-full p-1 mb-4">
-                  <span className="px-3 py-1 cursor-pointer">JAPANESE</span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full cursor-pointer">
-                    ENGLISH
-                  </span>
+                <div className="flex items-center gap-1 text-xs border border-white/30 rounded-full p-1 mb-4">
+                  <button
+                    onClick={() => switchLocale("zh")}
+                    className={`px-3 py-1 rounded-full transition-all duration-200 ${
+                      currentLocale === "zh" ? "bg-white/20" : "opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    中文
+                  </button>
+                  <button
+                    onClick={() => switchLocale("jp")}
+                    className={`px-3 py-1 rounded-full transition-all duration-200 ${
+                      currentLocale === "jp" ? "bg-white/20" : "opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    日本語
+                  </button>
                 </div>
                 <Link
                   href="#"
                   className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-white/30 transition text-center"
                 >
-                  下載建案資料
+                  {t("download")}
                 </Link>
                 <Link
                   href="#"
                   className="w-full sm:w-auto bg-[#4fb8b3] text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-[#3ea09b] transition text-center"
                 >
-                  預約賞屋與諮詢
+                  {t("reserve")}
                 </Link>
               </motion.div>
             </div>
@@ -247,12 +271,12 @@ export default function Header() {
             >
               <div className="flex flex-col gap-4">
                 <p className="text-xs tracking-widest opacity-60">
-                  Telephone inquiries and consultations
+                  {t("phoneInquiries")}
                 </p>
                 <div className="flex flex-wrap gap-x-12 gap-y-4">
                   <div>
                     <p className="text-[10px] opacity-60 mb-1">
-                      Kanto Area Office
+                      {t("kantoOffice")}
                     </p>
                     <p className="text-xl md:text-2xl font-light tracking-wider">
                       0120-557-088
@@ -260,7 +284,7 @@ export default function Header() {
                   </div>
                   <div>
                     <p className="text-[10px] opacity-60 mb-1">
-                      Kansai Area Office
+                      {t("kansaiOffice")}
                     </p>
                     <p className="text-xl md:text-2xl font-light tracking-wider">
                       06-4391-3220
@@ -268,8 +292,7 @@ export default function Header() {
                   </div>
                   <div className="flex items-end pb-1 lg:max-w-xs">
                     <p className="text-[10px] opacity-40">
-                      Business hours: 9:00-17:40 (closed on weekends and
-                      holidays)
+                      {t("businessHours")}
                     </p>
                   </div>
                 </div>
@@ -277,7 +300,7 @@ export default function Header() {
 
               <div className="text-right flex flex-col items-end gap-4">
                 <p className="text-xs md:text-sm tracking-widest opacity-80">
-                  このオフィスと、未来を。
+                  {t("slogan")}
                 </p>
                 <div className="flex flex-col items-end opacity-50">
                   <span className="text-4xl md:text-5xl font-black tracking-tighter leading-none">
