@@ -13,7 +13,7 @@ import { useTranslations } from "next-intl";
 const CARD_IMAGES = [
   "/images/index/grid-02.png",
   "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
-  "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+  "/images/index/運河.png",
 ];
 
 export default function HomePage() {

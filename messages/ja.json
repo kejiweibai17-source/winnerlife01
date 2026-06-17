@@ -6,7 +6,8 @@
       { "line1": "Premium Location", "line2": "品川・港区の中心生活圏。" },
       { "line1": "Timeless Design", "line2": "洗練された質感と温もりの共存。" }
     ],
-    "newWorkStyle": "NEW WORK STYLE",
+    "bottomTag": "品川・港区",
+    "bottomBrand": "忠訓地產",
     "scrollText": "SCROLL FOR CONTENTS"
   },
   "info": {

@@ -52,6 +52,13 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           element.style.textIndent = "0";
         }
 
+        split.lines.forEach((line) => {
+          const mask = line.parentElement;
+          if (mask && mask !== element) {
+            mask.style.paddingBottom = "0.18em";
+          }
+        });
+
         lines.current.push(...split.lines);
       });
 

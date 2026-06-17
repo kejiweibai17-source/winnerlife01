@@ -7,10 +7,11 @@ import Copy from "./Copy";
 import { useTranslations } from "next-intl";
 
 const SLIDE_IMAGES = [
-  "/images/index/d6589afc-53c8-4818-a46c-62f46eb0925c.png",
-  "/images/index/ChatGPT Image 2026年5月29日 上午10_52_50.png",
+  "/images/index/152f7e88-f8c2-47bb-bfa4-38ba3cca70de.png",
+
   "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
-  "/images/index/XkREhAhg66PHPQxHcFQTjB4nzG0c0C8pS1QgzKD7-c9Uagm9MqqBTROfvXu6KHXBLna7xIA4xt_sX1r_iYNmL0JRK7JdK_Whz-zOteMrIDXc8VuzGbJCW2OknTAWtt50z-l8wzGQwHLkU5ioxg2GJw==.png",
+  "/images/index/0f8e46f5-ef09-4528-977e-2bb774d803ef.png",
+  "/images/index/8f2716f6-12ae-4ff6-b310-1bfb8b3c20a7.png",
 ];
 
 export default function Slider() {
@@ -381,9 +382,9 @@ export default function Slider() {
         </div>
 
         <div className="bottom-left-text">
-          <span className="underline">{t("newWorkStyle")}</span>
+          <span className="underline">{t("bottomTag")}</span>
           <span>
-            from <strong> by Kesh</strong>
+            by <strong>{t("bottomBrand")}</strong>
           </span>
         </div>
 

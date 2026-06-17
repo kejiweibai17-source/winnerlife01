@@ -3,10 +3,12 @@
     "slides": [
       { "line1": "白金高輪", "line2": "昔有席次。珍藏港灣生活" },
       { "line1": "Exquisite Detail", "line2": "Exceptional Quality." },
-      { "line1": "Premium Location", "line2": "品川・港區核心生活圈。" },
-      { "line1": "Timeless Design", "line2": "洗鍊質感與溫潤氛圍並存。" }
+          { "line1": "Timeless Design", "line2": "洗鍊質感與溫潤氛圍並存。" },
+      { "line1": "Premium Location", "line2": "品川・港區核心生活圈。" }
+  
     ],
-    "newWorkStyle": "NEW WORK STYLE",
+    "bottomTag": "品川・港區",
+    "bottomBrand": "忠訓地產",
     "scrollText": "SCROLL FOR CONTENTS"
   },
   "info": {
@@ -30,14 +32,14 @@
     }
   },
   "cards": [
-    { "title": "將持續演進的「品川地區」納入生活圈的「港區」地址" },
+    { "title": "將持續演進的「品川地區」納入生活圈\n的「港區」地址" },
     { "title": "前往可搭乘兩條路線的天王洲艾爾站\n「平坦步道步行6分鐘※1」" },
     { "title": "233戶住宅，環繞著綠意與水景\n「向南可眺望運河的開闊地段」" }
   ],
   "parallax": {
-    "tag": "SOCIAL SIGHT",
-    "title": "現代感立面設計。兼具洗鍊質感與溫潤氛圍，成為住宅的門面象徵。",
-    "body": "利用時間光影變化呈現不同表情的入口空間。兼具迎賓感、品味與安心感的建築外觀設計。"
+    "tag": "TRANSPORTATION",
+    "title": "連接都心與機場，\n輕巧靈活的交通動線。",
+    "body": "白金高輪、天王洲艾爾、品川—步行圈內的車站與羽田機場交通。"
   },
   "woven": {
     "titleV": "在都市中，\n織就生活的樣貌",
@@ -140,12 +142,12 @@
       { "label": "區域再開發 / 周邊設施", "href": "/amenities" },
       { "label": "地段核心", "href": "/location" },
       { "label": "生活圈 / 交通 / 設施", "href": "/transportation" },
-      { "label": "建築外觀", "href": "" },
-      { "label": "共用空間", "href": "" },
-      { "label": "室內情境", "href": "" },
+      { "label": "建築特色", "href": "/architecture" },
+      { "label": "物件概要", "href": "/summary" },
+      { "label": "室內情境", "href": "/interior" },
       { "label": "設備與家電", "href": "" },
       { "label": "IoT系統與保全設備", "href": "" },
-      { "label": "建商與設計師介紹", "href": "" }
+      { "label": "品牌故事", "href": "/story" }
     ],
     "menu": "Menu",
     "close": "Close",
@@ -186,13 +188,13 @@
         "hoverText": "大師操刀・簡約外觀・工藝細節"
       },
       {
-        "title": "建築外觀",
+        "title": "建築特色",
         "subtitle": "Architecture",
         "hoverText": "都市更新・全新街廓・帶動發展"
       },
       {
-        "title": "共用空間",
-        "subtitle": "Common Area",
+        "title": "物件概要",
+        "subtitle": "Overview",
         "hoverText": "多鐵共構・連接機場・四通八達"
       },
       {
@@ -211,8 +213,8 @@
         "hoverText": "高坪效・採光通風・多元房型"
       },
       {
-        "title": "建商與設計師介紹",
-        "subtitle": "Developer",
+        "title": "品牌故事",
+        "subtitle": "Brand Story",
         "hoverText": "智慧系統・頂級設備・全方位安全"
       }
     ]
@@ -284,6 +286,690 @@
           "caption": "天王洲艾爾水岸廣場（7分鐘・約490m）"
         }
       ]
+    }
+  },
+  "transportation": {
+    "hero": {
+      "tag": "TRANSPORTATION",
+      "title": "連接都心與機場，\n輕巧靈活的交通動線。",
+      "subtitle": "白金高輪、天王洲艾爾、品川—步行圈內的車站與羽田機場交通。"
+    },
+    "heroImage": {
+      "alt": "EF Plus 白金高輪"
+    },
+    "sections": {
+      "s01": {
+        "title": "多條路線交會的港南交通樞紐。",
+        "description": "東京地鐵、都營地下鐵、JR、京急、臨海線、東京單軌電車。從都心主要車站到羽田機場，可依生活場景選擇最適合的路線。"
+      },
+      "s02": {
+        "title": "從白金高輪區域，順暢前往都心與機場。",
+        "description": "步行圈內匯集三個主要車站。無論是品川轉運站或羽田機場，皆可透過電車、汽車與單軌電車舒適抵達。",
+        "routesLabel": "路線",
+        "minutesLabel": "分",
+        "shinagawaWalkNote": "至品川站（步行）",
+        "footnote": "※2026年5月時點之參考值",
+        "walkStationsTag": "步行圈車站",
+        "mapAlt": "周邊交通地圖"
+      },
+      "s03": {
+        "title": "電車、汽車、單軌電車—依場景自由選擇。",
+        "description": "通勤搭地鐵、出差從品川搭新幹線、前往機場則直達羽田。多種移動方式組合，輕鬆支撐都心生活。",
+        "accessLabel": "交通動線",
+        "cta": "了解更多交通資訊"
+      },
+      "gallery": {
+        "title": "用照片感受交通魅力。",
+        "description": "從車站、街景到機場交通。一覽港南區域的交通環境。"
+      },
+      "s04": {
+        "title": "ACCESS",
+        "description": "連接都心、品川與機場—多種移動方式匯聚的立地。",
+        "accessImageAlt": "巴士與路線交通"
+      },
+      "travelTime": {
+        "title": "至主要目的地之參考時間"
+      },
+      "map": {
+        "alt": "交通連結圖",
+        "note": "※所需時間與距離為參考值，可能因路況、轉乘等而異。"
+      }
+    },
+    "stationAreasCol1": ["白金高輪", "天王洲艾爾", "品川", "田町"],
+    "stationAreasCol2": ["六本木一丁目", "大手町", "羽田機場", "首都高速"],
+    "transportNodes": [
+      { "label": "電車", "sub": "多條路線" },
+      { "label": "汽車", "sub": "高速・機場" },
+      { "label": "單軌電車", "sub": "直達羽田" }
+    ],
+    "photoGallery": [
+      { "caption": "白金高輪區域車站周邊" },
+      { "caption": "品川方向商業與車站前" },
+      { "caption": "天王洲艾爾站前　步行約6分" },
+      { "caption": "港南地區街道路景" }
+    ],
+    "accessModes": [
+      {
+        "label": "BY TRAIN",
+        "items": [
+          "東京地鐵南北線・都營三田線「白金高輪」站　步行約6分（約480m）",
+          "臨海線・東京單軌電車「天王洲艾爾」站　步行約6分（約490m）",
+          "JR・京急「品川」站　步行約15分（約1,200m）"
+        ]
+      },
+      {
+        "label": "BY CAR",
+        "items": [
+          "首都高速「芝公園」出入口　車程約5分（約1.5km）※",
+          "羽田機場　車程約20分（約15km）※",
+          "成田機場　車程約60分（約70km）※"
+        ]
+      },
+      {
+        "label": "BY MONORAIL",
+        "items": [
+          "東京單軌電車「天王洲艾爾」站　步行約6分",
+          "羽田機場第3航廈　單軌電車約13分※"
+        ]
+      }
+    ],
+    "travelTimeRows": [
+      { "from": "東京站", "time": "約15分" },
+      { "from": "六本木一丁目站", "time": "約10分" },
+      { "from": "大手町站", "time": "約12分" },
+      { "from": "品川站", "time": "步行約15分" },
+      { "from": "羽田機場", "time": "車程約20分" },
+      { "from": "成田機場", "time": "車程約60分" }
+    ],
+    "links": {
+      "toLocation": "前往周邊環境",
+      "toAmenities": "前往周邊設施",
+      "backToTop": "返回頂部"
+    }
+  },
+  "location": {
+    "page": {
+      "heroAlt": "周邊環境",
+      "intro": {
+        "title": "LOCATION",
+        "subtitle": "臨近運河，走向開放的濱水前沿。",
+        "paragraphs": [
+          "坐擁港區地址，同時身處品川區再開發的最前線，感受街區持續演進的脈動，是一處充滿潛力的立地。",
+          "善用天王洲艾爾站與品川站，輕鬆穿梭都心，日常即可享有南向開闊的濱水生活。"
+        ],
+        "waterfrontAlt": "臨近運河的濱水景觀"
+      },
+      "overview": {
+        "title": "周邊環境導覽",
+        "subtitle": "為您介紹地理位置、交通、設施與交通概要",
+        "items": [
+          {
+            "id": "geo",
+            "num": "01",
+            "title": "地理位置",
+            "body": "白金高輪・港南區域。都心便利性與水岸開放感並存，持續進化的立地。"
+          },
+          {
+            "id": "access",
+            "num": "02",
+            "title": "交通（電車站與機場）",
+            "body": "多條路線車站與羽田・成田的連結。連接都心、機場與國際都市的交通樞紐。"
+          },
+          {
+            "id": "facilities",
+            "num": "03",
+            "title": "設施與移動時間",
+            "body": "商業、醫療、公園皆在步行範圍。從日常購物到綠意休憩，一併介紹移動時間。"
+          },
+          {
+            "id": "summary",
+            "num": "04",
+            "title": "交通簡述",
+            "body": "整理車站、機場與生活設施的連結。快速掌握日常移動情境。"
+          }
+        ]
+      },
+      "geo": {
+        "breadcrumb": "TOP　|　周邊環境　|　地理位置",
+        "title": "地理位置",
+        "subtitle": "Location",
+        "tagline": "白金高輪・港南—都心與水岸交會的地址。",
+        "body": "位於東京都港區，品川區再開發持續推進的港南地區。運河沿岸的濱水景觀與沉穩的住宅氛圍共存，是具高未來性的立地。商務、文化與生活機能均衡發展的街景在此延展。",
+        "imageAlt": "白金高輪・港南區域"
+      },
+      "access": {
+        "title": "交通",
+        "description": "多條路線車站步行即達，羽田・成田也能順暢連結。連接都心與機場的高便利性交通環境。",
+        "trainLabel": "電車站",
+        "airportLabel": "機場",
+        "trainItems": [
+          {
+            "id": "shirokane",
+            "name": "白金高輪站",
+            "time": "步行約 6 分",
+            "distance": "約 480m"
+          },
+          {
+            "id": "tennozu",
+            "name": "天王洲艾爾站",
+            "time": "步行約 6 分",
+            "distance": "約 490m"
+          },
+          {
+            "id": "shinagawa",
+            "name": "品川站",
+            "time": "步行約 15 分",
+            "distance": "約 1,200m"
+          }
+        ],
+        "airportItems": [
+          {
+            "id": "haneda",
+            "name": "羽田機場",
+            "time": "車程約 20 分",
+            "distance": "※參考值"
+          },
+          {
+            "id": "narita",
+            "name": "成田機場",
+            "time": "車程約 60 分",
+            "distance": "※參考值"
+          }
+        ]
+      },
+      "facilities": {
+        "title": "設施",
+        "description": "商業、醫療、公園皆在步行範圍。從日常購物到休憩時光，可搭配移動時間一併確認。",
+        "items": [
+          {
+            "id": "ael",
+            "name": "白金 AEL CITY",
+            "time": "步行約 3 分",
+            "distance": "約 240m"
+          },
+          {
+            "id": "season",
+            "name": "品川 Season Terrace",
+            "time": "步行約 15 分",
+            "distance": "約 1,200m"
+          },
+          {
+            "id": "shiba",
+            "name": "芝公園",
+            "time": "步行約 20 分",
+            "distance": "約 1,600m"
+          }
+        ]
+      },
+      "summary": {
+        "imageAlt": "交通連結",
+        "title": "交通簡述",
+        "description": "彙整主要車站與機場的連結方式。供日常通勤、出差與旅行參考。",
+        "rows": [
+          { "label": "白金高輪站", "detail": "南北線・三田線　步行約 6 分" },
+          { "label": "天王洲艾爾站", "detail": "臨海線・東京單軌　步行約 6 分" },
+          { "label": "品川站", "detail": "JR・京急　步行約 15 分" },
+          { "label": "羽田機場", "detail": "車程約 20 分（參考值）" },
+          { "label": "成田機場", "detail": "車程約 60 分（參考值）" }
+        ],
+        "backToTop": "返回首頁"
+      },
+      "backToTop": "返回頂部"
+    },
+    "designSections": {
+      "s1": {
+        "title": "SHINAGAWA Sta.",
+        "subtitle": "磁浮中央新幹線帶來的「未來交通價值」",
+        "paragraphs": [
+          "品川站預計開通磁浮中央新幹線，最快僅需 40 分鐘即可連結東京與名古屋，世界級的高速交通網絡即將誕生。",
+          "從白金高輪前往品川站僅需 2 站距離。無論國內外，移動便利性都將大幅提升，作為住宅區的稀有價值也將進一步提高。"
+        ],
+        "imageAlt": "品川站周邊",
+        "footer": "ELFARO SHIROKANE-TAKANAWA | 03"
+      },
+      "s2": {
+        "verticalTitle": "白金高輪",
+        "enTitle": "SHIROKANE TAKANAWA",
+        "tagline": "The Ever-Evolving Shirokane-Takanawa",
+        "title": "都市機能煥然一新\n大規模再開發的進展",
+        "body": "繼承歷史與格調的白金高輪，現在正隨著整個街道功能的更新，迎來全新的進化階段。除了住宅建設外，商業設施、餐飲店、辦公室及生活便利設施也都在計畫中逐步完善，邁向一個生活、工作、休憩皆能在近處完成的都市環境。這是一個將在未來持續孕育價值的街道，這就是白金高輪。"
+      },
+      "s3": {
+        "titleKeio": "KEIO",
+        "titleUniversity": "University",
+        "title": "KEIO University",
+        "heading": "慶應義塾大學至近的文教區域獨特價值",
+        "quote": "「慶應義塾大學步行 5 分鐘。」",
+        "body": "身處都心，卻能日常感受歷史悠久文教區的靜謐氛圍與知性氣息，是稀有且珍貴的居住環境。",
+        "imageCaption": "慶應義塾大學 —— 步行 5 分／350m",
+        "cards": [
+          {
+            "name": "白金 AEL CITY",
+            "time": "步行 10 分",
+            "description": "白金高輪站直連的大型複合設施。集商業與醫療於一體，是街區的地標建築。"
+          },
+          {
+            "name": "東京都濟生會中央醫院",
+            "time": "步行 16 分",
+            "description": "擁有逾百年歷史的綜合醫院。同時提供急診醫療，是地區核心醫療機構。"
+          },
+          {
+            "name": "芝公園",
+            "time": "步行 21 分",
+            "description": "日本歷史最悠久的公園之一。可眺望東京鐵塔，綠意豐沛，設有完善休閒運動設施。"
+          }
+        ]
+      },
+      "s4": {
+        "imageLabels": [
+          "TAKANAWA GATEWAY CITY / THE LINKPILLAR 1 NORTH/SOUTH",
+          "SHIROKANE The SKY"
+        ],
+        "title": "地標誕生提升的地位",
+        "body": "以已完工的「SHIROKANE The SKY」為首，「TAKANAWA GATEWAY CITY」等大型建築成為新的地標，白金高輪周邊的景觀正在煥然一新。精緻的建築設計與優質的居住環境相結合，白金特有的寧靜與高級感，加上現代化的都市性，提升了整個區域的品牌價值。"
+      },
+      "s5": {
+        "title": "LOCATION",
+        "subtitle": "都市便利與靜謐住環境和諧共存的街區",
+        "body": "白金高輪站周邊，設有日常購物便利的商業設施及多元飲食選擇，完善生活便利性。鄰近公園與綠意盎然的街景點綴其中，身處都心卻擁有靜謐安適的居住環境。兼具都市機能與宜人寧靜的優質日常生活，盡在此區實現。",
+        "lifeInfoTitle": "Life Information",
+        "mapProject": "EL FARO+ SHIROKANE-TAKANAWA",
+        "mapStations": [
+          "白金高輪站 — 步行 9 分",
+          "田町／三田站 — 步行 14 分"
+        ],
+        "mapLabels": [
+          "東京地鐵南北線／都營三田線「白金高輪」站",
+          "都營淺草線／三田線「三田」站",
+          "JR 京濱東北線・根岸線／山手線「田町」站"
+        ],
+        "lifeItems": [
+          { "name": "DCM 三田店", "time": "步行 3 分", "distance": "190m" },
+          { "name": "7-Eleven 港區三田五丁目店", "time": "步行 6 分", "distance": "400m" },
+          { "name": "三井住友銀行 三田通支店", "time": "步行 10 分", "distance": "600m" },
+          { "name": "白金 AEL CITY", "time": "步行 10 分", "distance": "700m" },
+          { "name": "港區立高輪區民中心", "time": "步行 14 分", "distance": "950m" },
+          { "name": "白金商店街", "time": "步行 14 分", "distance": "1.0km" }
+        ],
+        "pageNum": "04"
+      }
+    }
+  },
+  "developer": {
+    "hero": {
+      "tag": "BRAND STORY",
+      "title": "品牌故事",
+      "subtitle": "OK PRIME — 從第一間房到家族資產版圖",
+      "intro": "我們經營的，從來不是房地產，而是人們對未來的期待。我們銷售的，從來不是建築物，而是家族世代傳承的基石。",
+      "imageAlt": "白金高輪建築外觀"
+    },
+    "brandStory": {
+      "lines": [
+        "我們經營的，從來不是房地產。",
+        "而是人們對未來的期待。",
+        "我們銷售的，從來不是建築物。",
+        "而是家族世代傳承的基石。"
+      ],
+      "body": "OK PRIME 希望在未來一百年，持續陪伴每一位客戶，從第一間房開始，到一個家族的資產版圖形成。讓世界每一個角落，都有 OK PRIME 的足跡。讓每一次置產，都成為人生更美好的開始。",
+      "brand": "OK PRIME",
+      "tagline": "Prime Location · Prime Living · Prime Legacy",
+      "pillarsLabel": "全球資產配置｜全球健康守護｜全球生活服務｜家族世代傳承"
+    },
+    "recommend": {
+      "title": "為什麼選擇 OK PRIME",
+      "items": [
+        "重視長期資產價值，而非短期投機的置產規劃",
+        "從第一間房到家族資產版圖，提供跨世代陪伴",
+        "連結全球置產、健康、生活服務的整合顧問",
+        "追求穿越時間考驗的建築品質與生活美學"
+      ]
+    },
+    "pillars": [
+      {
+        "num": "01",
+        "title": "全球資產配置",
+        "description": "以國際視野整合不動產、金融與稅務策略，協助客戶在全球主要城市建立穩健的資產配置架構，讓每一筆投資都成為家族財富的基石。"
+      },
+      {
+        "num": "02",
+        "title": "全球健康守護",
+        "description": "置產不只是買房，更是為家人選擇一種生活環境。我們關注醫療資源、空氣品質、社區安全與長照配套，讓健康成為資產配置中不可忽視的一環。"
+      },
+      {
+        "num": "03",
+        "title": "全球生活服務",
+        "description": "從交屋、租賃管理到跨境移居與子女教育，OK PRIME 提供一站式生活服務網絡，讓客戶在異地也能享有安心、便利的居住體驗。"
+      },
+      {
+        "num": "04",
+        "title": "家族世代傳承",
+        "description": "我們相信真正的價值存在於未來。透過專業的資產傳承規劃與品質建築，協助家族將置產轉化為可延續、可傳承的核心資產。"
+      }
+    ],
+    "team": {
+      "title": "專業團隊，為您守護每一步",
+      "description": "OK PRIME 匯聚置產顧問、建築設計與資產規劃專業人才。無論是首次海外置產、家族資產傳承，或對建築美學與生活品質的追求，我們以誠信與專業，陪伴您做出最適合的選擇。",
+      "members": [
+        {
+          "title": "置產顧問團隊",
+          "description": "深耕日本不動產市場，熟悉港區、品川等核心區域的市場脈動。從物件篩選、交易流程到稅務與貸款，提供透明且完整的置產諮詢。"
+        },
+        {
+          "title": "建築設計美學",
+          "description": "融合歐洲經典街景的人文底蘊與現代都心建築語彙，以立面比例、建材質感與光影細節，打造歷久彌新的建築氣質。"
+        },
+        {
+          "title": "資產傳承規劃",
+          "description": "以百年視野規劃家族資產版圖，整合全球配置、健康守護與生活服務，讓每一次置產都成為世代傳承的起點。"
+        }
+      ]
+    },
+    "project": {
+      "title": "白金高輪介紹",
+      "subtitle": "成為人生資產旅程中的燈塔",
+      "paragraphs": [
+        "坐落於東京港區白金高輪，OK PRIME 所追求的，不僅是建築的美感，更是能夠穿越時間考驗的價值。",
+        "建築融合歐洲經典街景的人文底蘊，以細膩的立面設計、層次豐富的建材質感、精緻的金屬細節與光影表情，共同塑造出沉穩而優雅的都心風景。",
+        "如同燈塔為航行者指引方向，OK PRIME 期望為每一位住戶守護生活品質，為每一位投資者守護資產價值。在城市的繁華與歲月的流轉之中，持續散發穩定而溫暖的光芒。"
+      ],
+      "imageAlt": "白金高輪建築細節"
+    },
+    "craftsmanship": {
+      "title": "工藝與承諾",
+      "description": "入口大門、迎賓廊道、大廳空間與每一處細節，皆體現對品質的堅持與對未來的承諾。透過對設計、工藝與生活美學的不斷追求，打造值得長期持有、值得世代傳承的核心資產。",
+      "closing": "OK PRIME，相信真正的價值，不只存在於今天，更存在於未來。",
+      "details": [
+        { "label": "地點", "value": "東京都港區白金高輪" },
+        { "label": "建築理念", "value": "歐洲經典街景 × 現代都心美學" },
+        { "label": "核心價值", "value": "穿越時間的資產與生活品質" }
+      ]
+    },
+    "cta": {
+      "download": {
+        "title": "資料請求",
+        "description": "索取建案完整資料\n了解白金高輪的建築與生活願景",
+        "button": "下載建案資料"
+      },
+      "reserve": {
+        "title": "預約賞屋",
+        "description": "親身感受空間氛圍\n與顧問一對一諮詢",
+        "button": "預約賞屋與諮詢"
+      }
+    }
+  },
+  "summary": {
+    "heroAlt": "エルファーロプラス白金高輪 物件概要",
+    "intro": {
+      "image02Alt": "エルファーロ 品牌意象",
+      "image03Alt": "エルファーロプラス白金高輪",
+      "paragraph": "西班牙語中意為「燈塔」的 El Faro（エルファーロ）。\n展現石造建築堅固形態的設計，歷經歲月依舊美麗。\n而那光芒，將成為人們心靈的歸宿，照亮未來的路標。",
+      "heading": "超越時代，延續資產價值"
+    },
+    "overview": {
+      "title": "物件概要",
+      "subtitle": "Design overview",
+      "disclaimer": "※外・内部仕上表および設備表記載の内容は、施工上の都合等により変更となる場合があります。"
+    },
+    "floorPlan": {
+      "title": "間取り図",
+      "subtitle": "Plan",
+      "footnote": "※間取り図はあくまでイメージで、施工上の都合等により変更となる場合があります。"
+    },
+    "interior": {
+      "title": "內部仕上表",
+      "subtitle": "Finish schedule"
+    },
+    "equipment": {
+      "title": "設備"
+    },
+    "exterior": {
+      "title": "外部仕上表",
+      "subtitle": "Finish schedule"
+    },
+    "labels": {
+      "name": "名稱",
+      "location": "所在地",
+      "lotNumber": "地名地番",
+      "address": "住居表示",
+      "siteOverview": "敷地概要",
+      "siteArea": "敷地面積",
+      "zoning": "用途地域",
+      "fireZone": "防火地域",
+      "coverage": "建ぺい率",
+      "far": "容積率",
+      "heightDistrict": "高度地区",
+      "other": "その他",
+      "buildingOverview": "建物概要",
+      "mainUse": "主要用途",
+      "totalFloorArea": "延べ面積",
+      "constructionType": "工事種別",
+      "buildingArea": "建築面積",
+      "buildingCoverage": "建ぺい率",
+      "constructionPeriod": "工事期間",
+      "structure": "構造・階數",
+      "farFloorArea": "容積対象延面積",
+      "floorAreaRatio": "容積率",
+      "fireResistance": "耐火種別",
+      "elevator": "エレベーター",
+      "parking": "駐車場",
+      "permitNumber": "建築確認番号",
+      "bicycleParking": "駐輪場",
+      "motorcycleParking": "バイク置場",
+      "privateArea": "専有面積",
+      "developer": "建築主",
+      "part": "部位",
+      "roomName": "室名",
+      "floor": "床",
+      "finishMaterial": "仕上材料",
+      "substrate": "下地",
+      "baseboard": "巾木",
+      "wall": "壁",
+      "ceiling": "天井",
+      "ceilingHeight": "天井高",
+      "specification": "仕様",
+      "layout": "間取り",
+      "roomNo": "号室",
+      "exclusiveArea": "専有面積"
+    }
+  },
+  "architecture": {
+    "hero": {
+      "tag": "ARCHITECTURE & MATERIALS",
+      "title": "建築特色",
+      "subtitle": "以千年工藝，打造穿越時代的建築外觀",
+      "imageAlt": "EL FARO+ SHIROKANE-TAKANAWA 建築外觀"
+    },
+    "intro": {
+      "heading": "職人工藝 × 現代建築技術的極致融合",
+      "body": "EL FARO+ 白金高輪，從外牆磁磚到塗裝系統，每一個材料的選擇都代表著對品質的堅持。我們選用日本最高規格的建材，以傳承千年的工藝美學，為您打造歷久彌新的都心資產。"
+    },
+    "highlights": [
+      {
+        "num": "01",
+        "tag": "美濃燒・傳統工藝",
+        "title": "純正「美濃燒」血統——承襲千年的日本國寶級工藝",
+        "body": "美濃燒（Mino Yaki）擁有超過 1300 年的歷史，是日本政府指定的「傳統工藝品」。長江陶業將這種原本用於高端茶器、食器上的窯燒技術，完美轉化為現代建築的外牆磁磚。將日本茶道追求的『wabi-sabi（侘寂）』美學融入建築外觀，讓您的房子隨時間推移，越看越有味道。"
+      },
+      {
+        "num": "02",
+        "tag": "黃金混色・職人調配",
+        "title": "獨家「5:9:4 黃金混色」技術——職人精準調配的立體視覺",
+        "body": "由職人精準調配濃、中、淡三種深灰階，以 5:9:4 的完美黃金比例進行隨機網拼。在不同時段的自然陽光下，或者雨天過後，牆面會呈現出極其細膩的深淺立體感。這種內斂的奢華，能瞬間拉高整個建案的檔次。"
+      },
+      {
+        "num": "03",
+        "tag": "BI類磁器質・頂級規格",
+        "title": "最高規格「BI類磁器質」——專為極端氣候而生的耐久性",
+        "body": "在規格表中，它被歸類為 BI類（磁器質），這是磁磚中吸水率最低（通常小於 1%）、燒結溫度最高（1200°C以上）的頂級規格。型錄上特別標註了『耐凍害 ◎』，在日本高寒地區都經得起考驗，在台灣使用更能確保建築外觀三十年如新，省下驚人的外牆清洗與維護成本。"
+      },
+      {
+        "num": "04",
+        "tag": "50二丁・黃金比例",
+        "title": "50二丁（材貼網拼）——兼顧「手工質感」與「施工效率」",
+        "body": "單片 95×45 mm 的「50二丁」是日系建築最經典的黃金比例，能拉出精緻的線條。採用背面材貼（網拼 300×300 mm）出貨，既保留了小磚的精緻度，又大幅提升了現場施工的速度與平整度。"
+      }
+    ],
+    "advantages": {
+      "title": "產品優勢",
+      "subtitle": "超越時代的建材性能",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "超強耐久性",
+          "body": "具有矽氧烷鍵結的交聯塗膜，能有效抵抗紫外線、濕氣等導致聚合物老化的因素，長期保護建築外觀。"
+        },
+        {
+          "icon": "sparkles",
+          "title": "優異低汙染性",
+          "body": "緻密的交聯塗膜能防止大氣中的粉塵與排氣瓦斯等髒汙附著，發揮卓越的抗汙染效果。"
+        },
+        {
+          "icon": "leaf",
+          "title": "防黴與防藻",
+          "body": "透過特殊的配方設計，能長期防止黴菌和藻類等微生物汙染，維持建築物表面的衛生與整潔。"
+        },
+        {
+          "icon": "globe",
+          "title": "高度環保安全",
+          "body": "水性塗料（使用清水稀釋），沒有溶劑中毒或引發火災的疑慮，有效提升並保障施工現場的作業環境安全。"
+        },
+        {
+          "icon": "trend",
+          "title": "提升資產價值",
+          "body": "與傳統壓克力或聚氨酯樹脂塗料相比具備更高的耐久性，整體生命週期成本較低，能提升建築物的資產價值。"
+        },
+        {
+          "icon": "gem",
+          "title": "獨特視覺觸感",
+          "body": "結合充滿起伏變化的立體表面以及散發獨特光澤的珠光釉，展現難以複製的視覺層次與材質美感。"
+        }
+      ]
+    },
+    "spec": {
+      "title": "主要規格",
+      "items": [
+        { "label": "磁磚尺寸", "value": "95 × 45 mm（50二丁）" },
+        { "label": "出貨規格", "value": "材貼網拼 300 × 300 mm" },
+        { "label": "磁磚類型", "value": "BI類（磁器質）" },
+        { "label": "吸水率", "value": "< 1%（頂級規格）" },
+        { "label": "燒結溫度", "value": "1200°C 以上" },
+        { "label": "耐凍害性能", "value": "◎（日本高寒地區認證）" },
+        { "label": "顏色比例", "value": "濃：中：淡 = 5:9:4（黃金混色）" },
+        { "label": "工藝產地", "value": "日本岐阜縣 美濃燒（長江陶業）" }
+      ]
+    }
+  },
+  "interiorPage": {
+    "hero": {
+      "tag": "空間願景",
+      "body": "以光線、材質與比例，勾勒白金高輪的室內生活想像。從玄關到客廳，每一處空間都承載著對日常品質的細膩思考。",
+      "image": "/images/interior/住戶E-室內.png",
+      "imageAlt": "EL FARO+ 白金高輪 室內情境"
+    },
+    "philosophy": {
+      "heading": "思考建築與環境的「間」",
+      "body": "以建築為黑、環境為白，我們相信人們的舒適生活，落在兩者之間的灰色地帶。",
+      "aside": "在此探索我們的空間理念、設計哲學與室內情境。",
+      "link": "建案理念 →"
+    },
+    "showcase": {
+      "image": "/images/index/9497269d-233d-4a5e-8325-5febb2acf4d7.png",
+      "imageAlt": "EL FARO+ 白金高輪 室內全景"
+    },
+    "projects": {
+      "title": "空間情境",
+      "subtitle": "精選作品",
+      "link": "查看物件概要",
+      "items": [
+        {
+          "id": "cabinet",
+          "title": "住戶 C — 開放式廚房",
+          "category": "廚房・客廳",
+          "image": "/images/interior/住戶C-有櫥櫃.png"
+        },
+        {
+          "id": "hidden",
+          "title": "住戶 C — 隱藏式收納",
+          "category": "收納・細部",
+          "image": "/images/interior/住戶C-隱藏櫥櫃.png"
+        },
+        {
+          "id": "resident-e",
+          "title": "住戶 E — 客廳情境",
+          "category": "客廳・室內",
+          "image": "/images/interior/住戶E-室內.png"
+        }
+      ]
+    },
+    "moreProjects": {
+      "title": "更多空間 →",
+      "body": "探索更多室內空間設計與生活情境展示。",
+      "items": [
+        {
+          "id": "lobby",
+          "title": "迎賓大廳",
+          "category": "公設・玄關",
+          "image": "/images/transportation/EFプラス白金高輪05.06p.jpg"
+        },
+        {
+          "id": "concept",
+          "title": "空間美學概念",
+          "category": "概念・設計",
+          "image": "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png"
+        },
+        {
+          "id": "news1",
+          "title": "自然光與材質",
+          "category": "光線・材質",
+          "image": "/images/story/news1-1280x850.png"
+        },
+        {
+          "id": "news3",
+          "title": "和式現代融合",
+          "category": "住宅・都心",
+          "image": "/images/story/news3-1280x850.png"
+        }
+      ]
+    },
+    "journal": {
+      "title": "空間筆記",
+      "subtitle": "資訊／思考",
+      "link": "更多文章 →",
+      "items": [
+        {
+          "id": "01",
+          "date": "2025.12.10",
+          "title": "自然光與深灰調的室內平衡",
+          "category": "室內設計",
+          "image": "/images/story/news1-1280x850.png"
+        },
+        {
+          "id": "02",
+          "date": "2025.11.28",
+          "title": "開放式廚房與客廳的一體化設計",
+          "category": "格局規劃",
+          "image": "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png"
+        },
+        {
+          "id": "03",
+          "date": "2025.11.05",
+          "title": "和式氣息融入現代都心住宅",
+          "category": "作品案例",
+          "image": "/images/index/0f8e46f5-ef09-4528-977e-2bb774d803ef.png"
+        },
+        {
+          "id": "04",
+          "date": "2025.10.18",
+          "title": "白金高輪的生活美學日常",
+          "category": "生活風格",
+          "image": "/images/index/152f7e88-f8c2-47bb-bfa4-38ba3cca70de.png"
+        }
+      ]
+    },
+    "cta": {
+      "tag": "EL FARO+ 白金高輪",
+      "body": "探索更多室內規劃與物件詳細資訊",
+      "button": "查看物件概要"
     }
   }
 }

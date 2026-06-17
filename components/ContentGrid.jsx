@@ -50,15 +50,15 @@ const gridMeta = [
   },
   {
     id: 4,
-    href: "",
+    href: "/summary",
     bgImage: "/images/index/wall/共用空間.png",
     maskFrom: "rgba(0,30,50,0.90)",
     maskVia: "rgba(0,65,90,0.55)",
     maskTo: "rgba(0,100,120,0.18)",
   },
   {
-    id: 5,
-    href: "",
+    "id": 5,
+    href: "/interior",
     bgImage: "/images/index/wall/房型規劃.png",
     maskFrom: "rgba(8,18,38,0.92)",
     maskVia: "rgba(18,35,65,0.55)",
@@ -82,9 +82,7 @@ const gridMeta = [
   },
   {
     id: 10,
-    href: "",
-    bgImage:
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop",
+    href: "/story",
     maskFrom: "rgba(0,10,40,0.92)",
     maskVia: "rgba(0,30,80,0.55)",
     maskTo: "rgba(0,55,120,0.18)",
@@ -106,7 +104,9 @@ export default function ContentGrid() {
           return (
             <Link
               key={meta.id}
-              href={meta.href ? getLocalizedPath(meta.href, currentLocale) : "#"}
+              href={
+                meta.href ? getLocalizedPath(meta.href, currentLocale) : "#"
+              }
               className="group relative block aspect-[4/3] overflow-hidden cursor-pointer border-[0.5px] border-white/[0.08]"
             >
               <div

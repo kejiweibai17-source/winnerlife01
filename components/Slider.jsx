@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { siteConfig } from "@/lib/site";
 
 const slides = [
   {
@@ -404,9 +405,9 @@ export default function Slider() {
         </div>
 
         <div className="bottom-left-text">
-          <span className="underline">NEW WORK STYLE</span>
+          <span className="underline">{siteConfig.projectSubtitle}</span>
           <span>
-            from <strong> by Kesh</strong>
+            by <strong>{siteConfig.name}</strong>
           </span>
         </div>
 

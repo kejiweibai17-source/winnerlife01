@@ -147,6 +147,7 @@ const ParallaxImage = ({ src, alt, tag, title, body, navyOverlay = false }) => {
                 letterSpacing: "0.08em",
                 lineHeight: 1.5,
                 marginBottom: "1.2rem",
+                whiteSpace: "pre-line",
               }}
             >
               {title}
