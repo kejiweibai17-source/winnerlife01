@@ -10,6 +10,7 @@ import Nav from "./Navbar/Navbar";
 import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
 import ScrollToTopOnNavigate from "./ScrollToTopOnNavigate";
+import PageTransition from "./PageTransition";
 
 export default function AppShell({
   children,
@@ -33,7 +34,7 @@ export default function AppShell({
       >
         <ScrollToTopOnNavigate />
         <Nav />
-        {children}
+        <PageTransition>{children}</PageTransition>
       </ReactLenis>
       <ContentGrid />
       <Footer />

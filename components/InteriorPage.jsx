@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Copy from "./Copy";
+import { useIsMobile } from "@/lib/use-is-mobile";
 import { getLocalizedPath } from "@/lib/locale-path";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -80,13 +81,28 @@ function CopyBlock({ children, delay = 0, className = "", heading = false }) {
 }
 
 function RevealImage({ src, alt, className = "" }) {
+  const isMobile = useIsMobile();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [revealed, setRevealed] = useState(false);
+  const [revealed, setRevealed] = useState(isMobile);
 
   useEffect(() => {
-    if (isInView) setRevealed(true);
-  }, [isInView]);
+    if (isMobile || isInView) setRevealed(true);
+  }, [isInView, isMobile]);
+
+  if (isMobile) {
+    return (
+      <div className={`relative overflow-hidden shrink-0 ${className}`}>
+        <img
+          src={src}
+          alt={alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    );
+  }
 
   return (
     <motion.div

@@ -48,9 +48,9 @@ export const homeMetadata: Metadata = {
     images: [
       {
         url: absoluteUrl(siteConfig.ogImage),
-        width: 1200,
-        height: 630,
-        alt: `${getBuildingDisplayName()} 建案主視覺`,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: siteConfig.ogImageAlt.zh,
       },
     ],
   },

@@ -3,7 +3,7 @@ import { Noto_Serif_TC } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import AppShell from "../../components/AppShell";
-import { siteConfig } from "@/lib/site";
+import { getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
 
 const notoSerifTC = Noto_Serif_TC({
   weight: ["400", "500", "700", "900"],
@@ -20,8 +20,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: siteConfig.name, template: `%s｜${siteConfig.name}` },
-  description: siteConfig.description,
+  title: { default: getHomePageTitle("zh"), template: `%s` },
+  description: getHomeDescription("zh"),
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
     shortcut: "/favicon.ico",

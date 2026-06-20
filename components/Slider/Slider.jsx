@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useTranslations } from "next-intl";
+import { useIsMobile } from "@/lib/use-is-mobile";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -44,6 +45,7 @@ export default function Slider() {
   const textContainerRef = useRef(null);
   const sliderIndicesRef = useRef(null);
   const progressBarRef = useRef(null);
+  const isMobile = useIsMobile();
 
   useGSAP(
     () => {
@@ -93,7 +95,7 @@ export default function Slider() {
         newSliderImage.className =
           "absolute inset-0 object-cover w-full h-full";
 
-        gsap.set(newSliderImage, { opacity: 0, scale: 1.05 });
+        gsap.set(newSliderImage, { opacity: 0, scale: 1 });
         sliderImagesRef.current.appendChild(newSliderImage);
 
         gsap.to(newSliderImage, {
@@ -101,11 +103,14 @@ export default function Slider() {
           duration: 0.8,
           ease: "power2.inOut",
         });
-        gsap.to(newSliderImage, {
-          scale: 1,
-          duration: 1.5,
-          ease: "power2.out",
-        });
+        if (!isMobile) {
+          gsap.set(newSliderImage, { scale: 1.05 });
+          gsap.to(newSliderImage, {
+            scale: 1,
+            duration: 1.5,
+            ease: "power2.out",
+          });
+        }
 
         // 清理舊圖片，避免 DOM 過於肥大
         const allImages = sliderImagesRef.current.querySelectorAll("img");
@@ -243,7 +248,7 @@ export default function Slider() {
         ScrollTrigger.getAll().forEach((st) => st.kill());
       };
     },
-    { scope: sliderRef },
+    { scope: sliderRef, dependencies: [isMobile] },
   );
 
   return (

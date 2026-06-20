@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { usePathname } from "next/navigation";
 
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -10,6 +11,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
+  const pathname = usePathname();
   const containerRef = useRef(null);
   const elementRefs = useRef([]);
   const splitRefs = useRef([]);
@@ -93,7 +95,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
         });
       };
     },
-    { scope: containerRef, dependencies: [animateOnScroll, delay] }
+    { scope: containerRef, dependencies: [animateOnScroll, delay, pathname] }
   );
 
   if (React.Children.count(children) === 1) {

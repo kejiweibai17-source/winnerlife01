@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useLenis } from "lenis/react";
 import Copy from "../Copy";
+import { MOBILE_MEDIA_QUERY } from "@/lib/use-is-mobile";
 import "./style.css";
 
 const lerp = (start, end, factor) => start + (end - start) * factor;
@@ -28,7 +29,7 @@ const ParallaxImage = ({ src, alt, tag, title, body, navyOverlay = false }) => {
     };
 
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 600);
+      setIsMobile(window.matchMedia(MOBILE_MEDIA_QUERY).matches);
     };
 
     checkIfMobile();

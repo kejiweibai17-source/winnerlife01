@@ -18,6 +18,7 @@ export default function Header() {
 
   function switchLocale(targetLocale) {
     if (targetLocale === currentLocale) return;
+    setIsOpen(false);
     window.location.href = switchLocalePath(pathname, targetLocale);
   }
 
@@ -28,6 +29,37 @@ export default function Header() {
     } else {
       document.body.style.overflow = "auto";
     }
+  }, [isOpen]);
+
+  // 頁面跳轉後自動收起選單
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  // PageTransition 會在 capture 階段攔截 Link，選單內 onClick 不一定觸發
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleLinkClick = (event) => {
+      const anchor = event.target.closest("a");
+      if (!anchor) return;
+      if (anchor.target === "_blank" || anchor.hasAttribute("download")) return;
+
+      const href = anchor.getAttribute("href");
+      if (
+        !href ||
+        href.startsWith("#") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:")
+      ) {
+        return;
+      }
+
+      setIsOpen(false);
+    };
+
+    document.addEventListener("click", handleLinkClick, true);
+    return () => document.removeEventListener("click", handleLinkClick, true);
   }, [isOpen]);
 
   // Framer Motion 動畫配置

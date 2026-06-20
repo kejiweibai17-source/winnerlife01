@@ -35,6 +35,16 @@ body {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* 手機版：取消頁面內容圖片的 CSS 動畫（跑馬燈等） */
+  @media (max-width: 767px) {
+    .marquee-track,
+    .marquee-track-1,
+    .marquee-track-2 {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
 }
 
 h1 {

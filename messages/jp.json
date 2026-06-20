@@ -144,8 +144,7 @@
       { "label": "建築特色", "href": "/architecture" },
       { "label": "物件概要", "href": "/summary" },
       { "label": "室内イメージ", "href": "/interior" },
-      { "label": "設備と家電", "href": "" },
-      { "label": "IoTシステムと防犯設備", "href": "" },
+      { "label": "設備・家電・保全系統", "href": "/equipment" },
       { "label": "ブランドストーリー", "href": "/story" }
     ],
     "menu": "Menu",
@@ -167,8 +166,13 @@
   "contentGrid": {
     "items": [
       {
+        "title": "トップへ",
+        "subtitle": "Home",
+        "hoverText": "ホームへ戻る・物件を探索"
+      },
+      {
         "title": "建築理念",
-        "subtitle": "Transportation",
+        "subtitle": "Concept",
         "hoverText": "都市の核心・現代美学・落ち着いた住まい"
       },
       {
@@ -202,23 +206,29 @@
         "hoverText": "公園緑地・充実した機能・優良学区"
       },
       {
-        "title": "設備と家電",
-        "subtitle": "Equipment",
-        "hoverText": "四季の植栽・自然との調和・プライベートガーデン"
-      },
-      {
-        "title": "IoTシステムと防犯設備",
-        "subtitle": "IoT & Security",
-        "hoverText": "高い坪効率・採光通風・多様な間取り"
+        "title": "設備・家電・保全系統",
+        "subtitle": "Equipment & Security",
+        "hoverText": "スマートシステム・最高級設備・全方位セキュリティ"
       },
       {
         "title": "ブランドストーリー",
         "subtitle": "Brand Story",
-        "hoverText": "スマートシステム・最高級設備・全方位セキュリティ"
+        "hoverText": "ブランド精神・開発の歩み・価値ビジョン"
       }
     ]
   },
   "concept": {
+    "seo": {
+      "title": "コンセプト｜EL FARO+ 白金高輪",
+      "description": "EL FARO+ 白金高輪—東京の中心で時代と流行を超える賃貸レジデンスシリーズ。住まいの灯台を目指す Urban Classic デザイン。忠訓地產が見学・ご相談をご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "コンセプト", "忠訓地產", "東京住宅", "品川"],
+      "ogImage": "/images/concept/001.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 運河沿いの外観"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "コンセプト"
+    },
     "heroSlider": {
       "slides": [
         {
@@ -288,6 +298,17 @@
     }
   },
   "transportation": {
+    "seo": {
+      "title": "交通・アクセス｜EL FARO+ 白金高輪",
+      "description": "白金高輪・三田・田町の3駅、5路線が交差。都営浅草線快速特急で羽田・成田空港へ直通。都心と世界をつなぐ交通環境。忠訓地產が EL FARO+ 白金高輪の交通をご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "交通", "品川", "羽田空港", "忠訓地產"],
+      "ogImage": "/images/index/wall/交通連結.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 品川アクセス"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "生活圏・交通・施設"
+    },
     "hero": {
       "tag": "TRANSPORTATION",
       "title": "都心と空港をつなぐ、\n軽やかな交通のしなやかさ。",
@@ -388,6 +409,17 @@
   },
   "location": {
     "page": {
+      "seo": {
+        "title": "ロケーション・周辺環境｜EL FARO+ 白金高輪",
+        "description": "白金高輪・港南エリアの地理位置、交通、生活施設、慶應義塾大学文教エリアの価値。都市利便と静謐な住環境が共存。忠訓地產が物件情報をご案内します。",
+        "keywords": ["EL FARO+", "白金高輪", "周辺環境", "ロケーション", "忠訓地產"],
+        "ogImage": "/images/location/location-01.png",
+        "ogImageAlt": "EL FARO+ 白金高輪 港区ロケーション"
+      },
+      "breadcrumb": {
+        "home": "トップ",
+        "current": "ロケーション"
+      },
       "heroAlt": "周辺環境",
       "intro": {
         "title": "LOCATION",
@@ -595,6 +627,17 @@
     }
   },
   "developer": {
+    "seo": {
+      "title": "ブランドストーリー｜EL FARO+ 白金高輪",
+      "description": "OK PRIME ブランドストーリー—最初の一戸から家族の資産版図へ。忠訓地產が EL FARO+ 白金高輪の日本不動産・見学・投資相談をご提供します。",
+      "keywords": ["EL FARO+", "OK PRIME", "忠訓地產", "ブランド", "日本不動産"],
+      "ogImage": "/images/story/news1-1280x850.png",
+      "ogImageAlt": "OK PRIME 忠訓地產 ブランドストーリー"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "ブランドストーリー"
+    },
     "hero": {
       "tag": "BRAND STORY",
       "title": "ブランドストーリー",
@@ -697,6 +740,17 @@
     }
   },
   "summary": {
+    "seo": {
+      "title": "物件概要｜EL FARO+ 白金高輪",
+      "description": "EL FARO+ 白金高輪の物件概要、間取り図、内外装仕上表・設備仕様。スペイン語で灯台を意味する El Faro。忠訓地產が見学予約をご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "物件概要", "間取り", "忠訓地產"],
+      "ogImage": "/images/summary/物件概要01.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 物件概要"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "物件概要"
+    },
     "heroAlt": "エルファーロプラス白金高輪 物件概要",
     "intro": {
       "image02Alt": "エルファーロ ブランドイメージ",
@@ -772,6 +826,17 @@
     }
   },
   "architecture": {
+    "seo": {
+      "title": "建築デザイン｜EL FARO+ 白金高輪",
+      "description": "EL FARO+ 白金高輪の外観デザイン。二丁掛タイル、石材、スペイン風タイルと光と影のコントラスト。Design Meiho Archilabo 設計。忠訓地產がご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "建築", "外観", "忠訓地產"],
+      "ogImage": "/images/architecture/sk-building-02.jpg",
+      "ogImageAlt": "EL FARO+ 白金高輪 Urban Classic 外観"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "建築デザイン"
+    },
     "hero": {
       "tag": "ARCHITECTURE & MATERIALS",
       "title": "建築特色",
@@ -859,6 +924,17 @@
     }
   },
   "interiorPage": {
+    "seo": {
+      "title": "インテリア｜EL FARO+ 白金高輪",
+      "description": "EL FARO+ 白金高輪の室内デザイン。大きな窓から光が差し込み、柔らかな照明が美しい陰影を演出。住まいの灯台となる空間。忠訓地產が見学予約をご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "インテリア", "忠訓地產"],
+      "ogImage": "/images/index/wall/共用空間.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 共用スペース"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "インテリア"
+    },
     "hero": {
       "tag": "空間ビジョン",
       "body": "光、素材、プロポーションによって、白金高輪の室内ライフを描きます。玄関からリビングまで、日常の品質への繊細な配慮が宿る空間です。",
@@ -969,6 +1045,1058 @@
       "tag": "EL FARO+ 白金高輪",
       "body": "室内プランと物件詳細をもっと見る",
       "button": "物件概要を見る"
+    }
+  },
+  "equipmentPage": {
+    "seo": {
+      "title": "設備・家電・保全系統｜EL FARO+ 白金高輪",
+      "description": "EL FARO+ 白金高輪の設備紹介。キッチン、バスルーム、トイレ、ALSOK 防犯設備。上質な設備とスマートセキュリティ。忠訓地產がご案内します。",
+      "keywords": ["EL FARO+", "白金高輪", "設備", "防犯", "忠訓地產"],
+      "ogImage": "/images/index/wall/設備與家電.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 設備"
+    },
+    "breadcrumb": {
+      "home": "トップ",
+      "current": "設備・家電・保全系統"
+    },
+    "intro": {
+      "tag": "EQUIPMENT & SECURITY",
+      "mainImage": "/images/interior/住戶E-室內.png",
+      "mainImageAlt": "設備と空間",
+      "titleLine1": "設備",
+      "titleLine2": "安心",
+      "titleX": "×",
+      "subtitle": "最高級設備・スマートシステム・全方位セキュリティ",
+      "description": "キッチン家電から防犯システムまで、白金高輪の日常に品質と安心をもたらす厳選設備。",
+      "gridImages": [
+        "/images/index/wall/設備與家電.png",
+        "/images/index/wall/IoT系統與保全設備.png",
+        "/images/index/wall/房型規劃.png",
+        "/images/architecture/sk-building-03.jpg"
+      ]
+    },
+    "categories": {
+      "label": "CATEGORIES",
+      "heading": "設備カテゴリー",
+      "items": [
+        {
+          "id": "toilet",
+          "title": "トイレ",
+          "subtitle": "Toilet",
+          "href": "/equipment/toilet",
+          "image": "/images/equipment/toilet/page-01.png"
+        },
+        {
+          "id": "security",
+          "title": "防犯設備",
+          "subtitle": "Security",
+          "href": "/equipment/security",
+          "image": "/images/equipment/security/alsok-main-02.jpg"
+        },
+        {
+          "id": "kitchen",
+          "title": "キッチン設備",
+          "subtitle": "Kitchen",
+          "href": "/equipment/kitchen",
+          "image": "/images/equipment/kitchen/riviere-07.jpg"
+        },
+        {
+          "id": "bathroom",
+          "title": "浴室設備",
+          "subtitle": "Bathroom",
+          "href": "/equipment/bathroom",
+          "image": "/images/equipment/bathroom/nasluck-01.jpg"
+        }
+      ]
+    }
+  },
+  "amenitiesPage": {
+    "seo": {
+      "title": "地域再開発・周辺施設｜EL FARO+ 白金高輪",
+      "description": "白金高輪の大規模都市更新、ランドマーク、リニア中央新幹線の交通価値、周辺商業・駅・公園・生活施設を紹介。忠訓地產が EL FARO+ 白金高輪の周辺環境をご案内します。",
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "地域再開発",
+        "周辺施設",
+        "品川",
+        "港区",
+        "都市更新",
+        "忠訓地產"
+      ],
+      "ogImage": "/images/amenities/001.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 周辺商業・生活施設"
+    },
+    "breadcrumb": {
+      "ariaLabel": "パンくずリスト",
+      "home": "トップ",
+      "current": "地域再開発・周辺施設"
+    },
+    "hero": {
+      "imageAlt": "周辺施設"
+    },
+    "title": "周辺の施設を知る",
+    "intro": {
+      "sideTag": "商場・電車駅・生活施設をご紹介",
+      "sideTitle": "AMENITIES",
+      "allFacilities": "すべての施設",
+      "body": "白金高輪・天王洲アイルエリアには、日常を支える商業施設や複数路線の駅、公園・医療などが徒歩圏に揃っています。買い物から通勤、週末のお出かけまで—都心の利便性を、バランスよく享受できる環境です。"
+    },
+    "redevelopment": {
+      "label": "URBAN RENEWAL",
+      "heading": "白金高輪・大規模都市更新",
+      "items": [
+        {
+          "title": "都市機能が一新",
+          "body": "歴史と品格を継ぐ白金高輪は、街全体の機能更新を契機に新たな進化の段階へ。住宅整備に加え、商業施設、飲食店、オフィス、生活便利施設も計画的に整備され、暮らし・仕事・憩いが近くで完結する都市環境へ。価値を育み続ける街、それが白金高輪です。"
+        },
+        {
+          "title": "ランドマーク誕生が地位を高める",
+          "body": "竣工した「SHIROKANE The SKY」や「TAKANAWA GATEWAY CITY」など大型建築が新たなランドマークとなり、白金高輪周辺の景観は一新されています。洗練された建築と上質な住環境が交わり、白金特有の静けさと高級感、現代的な都市性が重なり、エリア全体のブランド価値を高めています。"
+        },
+        {
+          "title": "リニア中央新幹線が「未来の交通価値」を押し上げる",
+          "body": "品川駅には東京と名古屋を最短40分で結ぶリニア中央新幹線が開業予定。世界級の高速交通網が誕生します。白金高輪から品川駅までは2駅。国内外の移動利便性が大きく向上し、住宅地としての希少価値もさらに高まる見込みです。"
+        }
+      ]
+    },
+    "pickUpLabel": "Pick Up!",
+    "pickUpItems": [
+      {
+        "title": "白金アエルシティで日常の買い物を",
+        "body": "スーパー・専門店・カフェが揃う複合施設。帰宅前のちょっとしたお買い物にも便利です。",
+        "image": "/images/amenities/002.png",
+        "tags": ["Shopping", "商業施設"],
+        "href": "#shopping"
+      },
+      {
+        "title": "品川駅—新幹線・空港アクセスの玄関口",
+        "body": "東海道新幹線・京急・JR各線が集まるターミナル。ビジネス・旅行の起点としても頼れる存在です。",
+        "image": "/images/amenities/009.png",
+        "tags": ["Station", "電車駅"],
+        "href": "#shinagawa"
+      },
+      {
+        "title": "天王洲アイル—運河沿いのウォーターフロント",
+        "body": "再開発が進む水辺エリア。商業・オフィス・イベント空間が集まり、休日の散策にも最適です。",
+        "image": "/images/amenities/012.png",
+        "tags": ["Lifestyle", "生活圏"],
+        "href": "#tennozu"
+      },
+      {
+        "title": "白金高輪駅—南北線・三田線の交差",
+        "body": "都心南部を縦横に結ぶ2路線。六本木・大手町・目黒方面へ、乗り換え少なくアクセスできます。",
+        "image": "/images/amenities/006.png",
+        "tags": ["Station", "電車駅"],
+        "href": "#shirokane"
+      }
+    ],
+    "spotlightSections": [
+      {
+        "id": "shopping",
+        "titleEn": "Shirokane Aercity",
+        "minutes": "3",
+        "showBike": false,
+        "lead": "日々の買い物は白金アエルシティへ。",
+        "body": "日用品から生鮮食品、飲食、サービス施設まで、毎日に必要な店舗が徒歩圏に豊富に揃うライフラインです。",
+        "note": "白金アエルシティ",
+        "noteDetail": "徒歩約3分［約240m］",
+        "imageMain": "/images/amenities/002.png",
+        "imageSub1": "/images/amenities/004.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/amenities/005.png",
+        "imageSub2Label": ""
+      },
+      {
+        "id": "shirokane",
+        "titleEn": "Shirokane-Takanawa Station",
+        "minutes": "6",
+        "showBike": false,
+        "lead": "約6分で白金高輪駅へアクセス、都心各所へスムーズに。",
+        "body": "東京メトロ南北線・都営三田線の2路線が利用可能。ビジネスや遊び、どんなシーンでも便利で理想的な拠点となるポテンシャルを秘めています。",
+        "note": "東京メトロ南北線・都営三田線「白金高輪」駅",
+        "noteDetail": "徒歩約6分［約480m］",
+        "imageMain": "/images/amenities/006.png",
+        "imageSub1": "/images/amenities/007.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/amenities/008.png",
+        "imageSub2Label": ""
+      },
+      {
+        "id": "shinagawa",
+        "titleEn": "Shinagawa Station",
+        "minutes": "15",
+        "showBike": true,
+        "lead": "首都圏最大級のターミナル駅としてだけでなく",
+        "body": "品川駅前の商業施設やアトレ、駅ナカのショッピングエリアとしても、買い物・外食・出張のニーズに充分に応えてくれる場所です。",
+        "note": "JR・京急「品川」駅",
+        "noteDetail": "徒歩約15分［約1,200m］※1",
+        "imageMain": "/images/amenities/009.png",
+        "imageSub1": "/images/amenities/010.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/amenities/011.png",
+        "imageSub2Label": ""
+      }
+    ],
+    "stations": {
+      "title": "周辺の主な電車駅",
+      "footnote": "複数路線の駅が徒歩圏に。都心・空港・横浜方面へもスムーズにつながります。",
+      "items": [
+        { "name": "白金高輪", "lines": "南北線・三田線", "time": "徒歩約6分", "image": "/images/amenities/006.png" },
+        { "name": "天王洲アイル", "lines": "りんかい線", "time": "徒歩約6分", "image": "/images/amenities/007.png" },
+        { "name": "品川", "lines": "JR・京急", "time": "徒歩約15分", "image": "/images/amenities/009.png" },
+        { "name": "田町", "lines": "JR山手線", "time": "徒歩約18分", "image": "/images/amenities/010.png" },
+        { "name": "五反田", "lines": "JR・東急", "time": "車約8分", "image": "/images/amenities/011.png" },
+        { "name": "浜松町", "lines": "JR・モノレール", "time": "車約10分", "image": "/images/amenities/013.png" }
+      ]
+    },
+    "features": {
+      "label": "周辺施設の魅力",
+      "heading": "暮らしを支える、身近なインフラ",
+      "body": "買い物・交通・緑と医療まで。港区港南エリアで叶う、バランスの取れた日常。",
+      "items": [
+        { "title": "ショッピングモール", "image": "/images/amenities/002.png" },
+        { "title": "スーパー・日用品", "image": "/images/amenities/004.png" },
+        { "title": "飲食・カフェ", "image": "/images/amenities/005.png" },
+        { "title": "複数路線の駅", "image": "/images/amenities/006.png" },
+        { "title": "公園・緑地", "image": "/images/amenities/012.png" },
+        { "title": "医療・公共", "image": "/images/amenities/013.png" }
+      ]
+    },
+    "cta": {
+      "heading": "周辺環境の詳細",
+      "body": "地理位置・交通・空港アクセスなど、ロケーションの詳しい情報は周辺環境ページでご覧いただけます。",
+      "link": "詳細をみる"
+    },
+    "carousel": {
+      "heading": "周辺施設ギャラリー",
+      "body": "商場・電車駅・公園など、徒歩圏の主要施設をご紹介します。写真をスライドして、街の魅力をご覧ください。",
+      "prevLabel": "前へ",
+      "nextLabel": "次へ",
+      "slides": [
+        { "title": "白金アエルシティ", "caption": "徒歩約3分・日常の買い物", "image": "/images/amenities/002.png" },
+        { "title": "品川シーズンテラス", "caption": "徒歩約15分・大型商業", "image": "/images/amenities/005.png" },
+        { "title": "天王洲アイル", "caption": "徒歩約6分・運河沿い", "image": "/images/amenities/012.png" },
+        { "title": "白金高輪駅", "caption": "徒歩約6分・2路線", "image": "/images/amenities/008.png" },
+        { "title": "品川駅", "caption": "徒歩約15分・ターミナル", "image": "/images/amenities/009.png" }
+      ]
+    },
+    "summary": {
+      "heading": "施設までの目安時間",
+      "subheading": "徒歩・車の目安です。実際の時間は道路状況等により異なります。",
+      "listLink": "一覧を見る",
+      "rows": [
+        { "label": "白金アエルシティ", "detail": "商業施設　徒歩約3分" },
+        { "label": "品川シーズンテラス", "detail": "商業・オフィス　徒歩約15分" },
+        { "label": "白金高輪駅", "detail": "南北線・三田線　徒歩約6分" },
+        { "label": "天王洲アイル駅", "detail": "りんかい線・東京モノレール　徒歩約6分" },
+        { "label": "品川駅", "detail": "JR・京急　徒歩約15分" },
+        { "label": "芝公園", "detail": "緑地・散策　徒歩約20分" }
+      ],
+      "footnote": "※1　距離・所要時間は地図上の直線距離および徒歩80m＝1分で算出した目安です。実際の時間は道路状況等により異なります。",
+      "homeLink": "トップページへ"
+    },
+    "backToTop": "ページトップへ",
+    "faq": {
+      "items": [
+        {
+          "question": "白金高輪周辺にはどのような生活施設がありますか？",
+          "answer": "徒歩圏に白金アエルシティ、品川シーズンテラス、白金高輪・天王洲アイル・品川など複数路線の駅、芝公園などの緑地、スーパー・銀行・医療機関が揃い、日常に必要な施設が充実しています。"
+        },
+        {
+          "question": "白金高輪の都市再開発の状況は？",
+          "answer": "白金高輪では大規模な都市更新が進行中です。SHIROKANE The SKY、TAKANAWA GATEWAY CITY などのランドマークが相次いで竣工し、商業・オフィス・生活機能が着実に整備され、エリア価値が高まっています。"
+        },
+        {
+          "question": "見学予約で周辺環境を確認できますか？",
+          "answer": "はい。ウェブサイトから見学予約をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の周辺施設、交通動線、投資・購入に関するご質問にお答えします。"
+        }
+      ]
+    }
+  },
+  "equipmentToiletPage": {
+    "seo": {
+      "title": "TOTO WASHLET SS1 トイレ設備｜白金高輪 EL FARO+",
+      "description": "白金高輪 EL FARO+ には TOTO WASHLET SS1 温水洗浄便座を採用。「びっくリーン」清潔技術、除菌・節電機能を搭載。仕様、カタログ、よくある質問を掲載。",
+      "keywords": [
+        "TOTO WASHLET",
+        "SS1",
+        "温水洗浄便座",
+        "白金高輪",
+        "EL FARO+",
+        "トイレ設備",
+        "ウォシュレット",
+        "忠訓地產"
+      ],
+      "ogImage": "/images/equipment/toilet/toilet-07.jpeg",
+      "ogImageAlt": "TOTO WASHLET SS1 温水洗浄便座",
+      "productName": "TOTO WASHLET SS1"
+    },
+    "breadcrumb": {
+      "ariaLabel": "パンくずリスト",
+      "home": "トップ",
+      "equipment": "設備・家電・保全系統",
+      "current": "トイレ"
+    },
+    "hero": {
+      "category": "トイレ設備",
+      "brand": "TOTO",
+      "title": "WASHLET",
+      "model": "品番：SS1",
+      "description": "TOTO ウォシュレット SS1 シリーズ。「びっくリーン」清潔技術を搭載し、快適で安心なトイレ空間を実現します。",
+      "image": "/images/equipment/toilet/page-01.png",
+      "imageAlt": "TOTO WASHLET SS1 カタログ"
+    },
+    "intro": {
+      "heading": "使いやすく、嬉しい機能が満載",
+      "body": "TOTO独自の「びっくリーン」技術を搭載。汚れがつきにくく、お掃除もラク。\n毎日の使用が、清潔で安心な暮らしへ。"
+    },
+    "plans": {
+      "heading": "製品仕様",
+      "viewPlan": "仕様を見る",
+      "items": [
+        {
+          "id": "ss1",
+          "tags": ["SS1", "標準型"],
+          "title": "WASHLET SS1",
+          "image": "/images/equipment/toilet/page-03.png",
+          "specs": [
+            "品番：SS1",
+            "「びっくリーン」清潔技術搭載",
+            "汚れがつきにくい表面加工",
+            "使うたび除菌機能",
+            "お掃除超ラク設計"
+          ],
+          "note": "※ 仕様・機能はカタログ記載内容に準じます。施工上の都合により変更となる場合があります。"
+        },
+        {
+          "id": "ss2",
+          "tags": ["SS2", "上級型"],
+          "title": "WASHLET SS2",
+          "image": "/images/equipment/toilet/page-04.png",
+          "specs": [
+            "品番：SS2",
+            "SS1 全機能搭載",
+            "暖風乾燥機能追加",
+            "自動開閉便座（オプション）"
+          ],
+          "note": "※ 詳細仕様はカタログをご確認ください。"
+        },
+        {
+          "id": "ss3",
+          "tags": ["SS3", "フラッグシップ"],
+          "title": "WASHLET SS3",
+          "image": "/images/equipment/toilet/page-05.png",
+          "specs": [
+            "品番：SS3",
+            "最上級 WASHLET シリーズ",
+            "全自動清掃・除菌",
+            "静音ソフトクローズ便座"
+          ],
+          "note": "※ 詳細仕様はカタログをご確認ください。"
+        }
+      ]
+    },
+    "features": {
+      "heading": "コア機能",
+      "image": "/images/equipment/toilet/page-02.png",
+      "imageAlt": "びっくリーン技術",
+      "items": [
+        {
+          "title": "汚れツルリン",
+          "body": "特殊表面加工により、汚れや水アカが付着しにくい設計。"
+        },
+        {
+          "title": "おそうじ超ラク",
+          "body": "ノズル・便器内面のお手入れが簡単。日常の清掃負担を大幅に軽減。"
+        },
+        {
+          "title": "使うたび除菌",
+          "body": "使用のたびに除菌機能が作動し、いつも清潔な状態をキープ。"
+        }
+      ]
+    },
+    "specs": {
+      "heading": "仕様・機能",
+      "items": [
+        {
+          "title": "SS1 標準型",
+          "image": "/images/equipment/toilet/toilet-03.png",
+          "details": ["温水洗浄便座", "暖房便座", "節電モード"]
+        },
+        {
+          "title": "操作パネル",
+          "image": "/images/equipment/toilet/toilet-08.png",
+          "details": ["ワンタッチ操作", "着座センサー連動", "音量調整可能"]
+        }
+      ]
+    },
+    "catalog": {
+      "heading": "カタログ詳細",
+      "pageAlt": "カタログページ",
+      "pages": [
+        "/images/equipment/toilet/page-02.png",
+        "/images/equipment/toilet/page-03.png",
+        "/images/equipment/toilet/page-04.png",
+        "/images/equipment/toilet/page-05.png",
+        "/images/equipment/toilet/page-06.png",
+        "/images/equipment/toilet/page-07.png",
+        "/images/equipment/toilet/page-08.png",
+        "/images/equipment/toilet/page-09.png",
+        "/images/equipment/toilet/page-10.png",
+        "/images/equipment/toilet/page-11.png",
+        "/images/equipment/toilet/page-12.png",
+        "/images/equipment/toilet/page-13.png"
+      ]
+    },
+    "faq": {
+      "heading": "よくある質問",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "白金高輪 EL FARO+ にはどの WASHLET が採用されていますか？",
+          "answer": "本物件のトイレ設備には TOTO WASHLET SS1 シリーズ（品番：SS1）を採用しています。温水洗浄、暖房便座、節電モードなどの基本機能に加え、TOTO 独自の「びっくリーン」清潔技術を搭載しています。"
+        },
+        {
+          "question": "「びっくリーン」清潔技術とは何ですか？",
+          "answer": "「びっくリーン」は TOTO が開発した清潔技術です。特殊な表面加工により汚れが付着しにくく、水アカも残りにくい設計。日常使用時の除菌機能とあわせて、いつも清潔なトイレ空間を保ちます。"
+        },
+        {
+          "question": "WASHLET には節電機能がありますか？",
+          "answer": "はい。SS1 シリーズは節電モードに対応しており、使用状況に応じて加熱・待機状態を調整。快適性を保ちながら電力消費を抑えます。"
+        },
+        {
+          "question": "設備仕様は変更される可能性がありますか？",
+          "answer": "本ページの仕様・機能・カタログ内容は、実際の施工図および設備表を基準とします。施工上の都合、メーカー仕様変更、法規改定等により変更となる場合があります。"
+        },
+        {
+          "question": "見学予約で実際の設備を確認できますか？",
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪のトイレ設備、室内プラン、投資・購入に関するご質問にお答えします。"
+        }
+      ]
+    }
+  },
+  "equipmentBathroomPage": {
+    "seo": {
+      "title": "浴室設備｜白金高輪 EL FARO+",
+      "description": "白金高輪 EL FARO+ の浴室設備：TOTO WASHLET 温水洗浄便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ システムバスルーム。機能・仕様・よくある質問を掲載。",
+      "keywords": [
+        "浴室設備",
+        "洗面化粧台",
+        "ベラーザ・ネオ",
+        "NASLUCK",
+        "HOUSETEC NJ",
+        "システムバス",
+        "白金高輪",
+        "EL FARO+",
+        "忠訓地產"
+      ],
+      "ogImage": "/images/equipment/bathroom/nasluck-02.jpg",
+      "ogImageAlt": "NASLUCK ベラーザ・ネオ 洗面化粧台",
+      "productName": "浴室設備",
+      "products": [
+        {
+          "name": "TOTO WASHLET SS1",
+          "brand": "TOTO",
+          "description": "EWATER+ 除菌水、ノズル自動洗浄、自動脱臭機能を搭載した温水洗浄便座。"
+        },
+        {
+          "name": "ベラーザ・ネオ",
+          "brand": "NASLUCK",
+          "description": "ハンドシャワー、リフトアップ水栓、大容量洗面ボウルを備えた洗面化粧台。"
+        },
+        {
+          "name": "NJ システムバスルーム",
+          "brand": "HOUSETEC",
+          "description": "清掃性、安心入浴、節水・省エネ、省スペース設計を兼ね備えたアパート向けシステムバス。"
+        }
+      ]
+    },
+    "breadcrumb": {
+      "ariaLabel": "パンくずリスト",
+      "home": "トップ",
+      "equipment": "設備・家電・保全系統",
+      "current": "浴室設備"
+    },
+    "hero": {
+      "title": "浴室設備",
+      "subtitle": "トイレ、洗面台、浴室",
+      "image": "/images/equipment/bathroom/nasluck-01.jpg",
+      "imageAlt": "ベラーザ・ネオ 洗面化粧台"
+    },
+    "toilet": {
+      "tag": "TOILET",
+      "brand": "TOTO",
+      "product": "",
+      "linkLabel": "トイレ設備の詳細を見る",
+      "specs": [
+        { "label": "清潔除菌", "value": "EWATER+除菌水系統" },
+        { "label": "ノズル洗浄", "value": "使用前後自動洗浄" },
+        { "label": "脱臭機能", "value": "自動脱臭システム" }
+      ]
+    },
+    "nasluck": {
+      "tag": "VANITY",
+      "brand": "NASLUCK",
+      "product": "ベラーザ・ネオ 洗面化粧台",
+      "heroImage": "/images/equipment/bathroom/nasluck-01.jpg",
+      "heroImageAlt": "ベラーザ・ネオ 洗面化粧台",
+      "paragraphs": [
+        "美しさと実用性を兼ね備えたベラーザ・ネオは、現代の都市生活にふさわしい快適な洗面空間を実現します。",
+        "引き出し可能なハンドシャワー水栓で、日常の清掃はもちろん洗髪もラクラク。リフトアップ機能付き水栓で、さまざまな使用シーンに対応。大容量の洗面ボウルで、忙しい朝も余裕を持って身支度できます。",
+        "下部には十分な収納スペースを確保。洗面用品をすっきり収納し、空間を整然と保ちます。細部にこだわり、暮らしに寄り添う洗面空間を創り上げます。"
+      ],
+      "highlights": [
+        {
+          "image": "/images/equipment/bathroom/nasluck-05.jpg",
+          "imageAlt": "ホース内蔵のシャワー水栓",
+          "caption": "ハンドシャワー・リフトアップ水栓"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-02.jpg",
+          "imageAlt": "樹脂ボウル",
+          "caption": "大容量洗面ボウル"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-07.jpg",
+          "imageAlt": "アッパーキャビネット",
+          "caption": "ゆとりの収納スペース"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-10.jpg",
+          "imageAlt": "ミラーキャビネット",
+          "caption": "ミラーキャビネット"
+        }
+      ]
+    },
+    "housetec": {
+      "tag": "SYSTEM BATH",
+      "brand": "HOUSETEC",
+      "product": "NJ システムバスルーム",
+      "heroImage": "/images/equipment/bathroom/nj-hero.jpg",
+      "heroImageAlt": "HOUSETEC NJ システムバスルーム",
+      "colorLineupHeading": "カラーラインアップ",
+      "colorLineup": [
+        "/images/equipment/bathroom/nj-color-03.png",
+        "/images/equipment/bathroom/nj-extra-14.png"
+      ],
+      "features": [
+        {
+          "title": "卓越した清掃性",
+          "subtitle": "清掃性",
+          "body": "大きな凹凸のない「プレーンフロア」は、優れた排水性を実現。床から浴槽まで一体構造で汚れがたまりにくく、スポンジ洗いでさっと済ませられます。また、水流の勢いで毛髪を自然にまとめる「楽すてヘアキャッチャー」を搭載。排水口の掃除も衛生的でラクに行えます。",
+          "layout": "double",
+          "images": [
+            { "src": "/images/equipment/bathroom/nj-clean-01.jpg", "alt": "プレーンフロア" },
+            { "src": "/images/equipment/bathroom/nj-clean-02.jpg", "alt": "楽すてヘアキャッチャー" }
+          ]
+        },
+        {
+          "title": "安心入浴",
+          "subtitle": "安心入浴",
+          "body": "脱衣室から浴室への段差を極力抑えた低床仕様で、つまずきや転倒を防止。浴槽のまたぎ高さを約450mmに抑え、腰掛けスペースを設けることで、出入り時のバランスと安全をサポートします。",
+          "layout": "double",
+          "images": [
+            { "src": "/images/equipment/bathroom/nj-safe-01.jpg", "alt": "低床仕様 出入口" },
+            { "src": "/images/equipment/bathroom/nj-safe-02.jpg", "alt": "またぎ高さ約450mm" }
+          ]
+        },
+        {
+          "title": "くつろぎと節水・省エネ",
+          "subtitle": "くつろぎと節水・省エネ",
+          "body": "肩まわりにゆとりを持たせた浴槽とひじ掛けを備え、くつろぎを保ちながら従来浴槽比約45Lの節水を実現。eシャワーNf と高断熱浴槽により、追いだきを減らし光熱費とCO₂排出の抑制に貢献します。",
+          "layout": "eco",
+          "images": [
+            { "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg", "alt": "浴槽 俯瞰" },
+            { "src": "/images/equipment/bathroom/nj-eco-insulation.jpg", "alt": "高断熱浴槽 断面図" },
+            { "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg", "alt": "eシャワーNf" },
+            { "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg", "alt": "節水シャワー" }
+          ]
+        },
+        {
+          "title": "省スペース設計",
+          "subtitle": "柔軟な対応・省スペース設計",
+          "body": "独自のスリム構造により、浴室の内法寸法を維持しながら外法寸法を抑制。狭小リフォーム現場にも対応しやすく、余ったスペースを廊下や洗面所に活かすなど、住居全体の設計自由度を高めます。",
+          "layout": "wide",
+          "images": [
+            { "src": "/images/equipment/bathroom/nj-space-02.jpg", "alt": "省スペース設計 スリム構造" }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "heading": "よくある質問",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "白金高輪 EL FARO+ にはどの浴室設備が採用されていますか？",
+          "answer": "本物件には TOTO WASHLET 温水洗浄便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ システムバスルームを採用しています。美観・機能・日常の使いやすさを兼ね備えた設備を厳選しています。"
+        },
+        {
+          "question": "ベラーザ・ネオ 洗面化粧台の特長は？",
+          "answer": "引き出し可能なハンドシャワー水栓とリフトアップ水栓、大容量洗面ボウル、十分な下部収納を備えています。Sタイプにはライン引手とソフトクローズを搭載し、デザイン性と使い心地を両立しています。"
+        },
+        {
+          "question": "HOUSETEC NJ システムバスルームはどんな方に向いていますか？",
+          "answer": "清掃性・安心入浴・節水省エネ・省スペース設計が特長です。プレーンフロアとヘアキャッチャーで掃除がラク、低床出入口と低いまたぎ高さで安全性を確保。高断熱浴槽と節水シャワーで光熱費の抑制にも貢献します。"
+        },
+        {
+          "question": "設備仕様は変更される可能性がありますか？",
+          "answer": "本ページの仕様・機能・カタログ内容は、実際の施工図および設備表を基準とします。施工上の都合、メーカー仕様変更、法規改定等により変更となる場合があります。"
+        },
+        {
+          "question": "見学予約で実際の設備を確認できますか？",
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の浴室設備、室内プラン、投資・購入に関するご質問にお答えします。"
+        }
+      ]
+    }
+  },
+  "equipmentKitchenPage": {
+    "seo": {
+      "title": "NASLUCK リヴィエール キッチン設備｜白金高輪 EL FARO+",
+      "description": "白金高輪 EL FARO+ には NASLUCK コンパクトキッチン「リヴィエール」を採用。間口900mmから、I型・アイランド型・ペニンシュラ型に対応。設備機器、セットプラン、施工事例を掲載。",
+      "keywords": [
+        "リヴィエール",
+        "RIVIERE",
+        "NASLUCK",
+        "コンパクトキッチン",
+        "キッチン設備",
+        "白金高輪",
+        "EL FARO+",
+        "忠訓地產"
+      ],
+      "ogImage": "/images/equipment/kitchen/riviere-12.jpg",
+      "ogImageAlt": "NASLUCK リヴィエール コンパクトキッチン",
+      "productName": "NASLUCK リヴィエール"
+    },
+    "breadcrumb": {
+      "ariaLabel": "パンくずリスト",
+      "home": "トップ",
+      "equipment": "設備・家電・保全系統",
+      "current": "キッチン設備"
+    },
+    "hero": {
+      "tag": "KITCHEN EQUIPMENT",
+      "title": "キッチン設備",
+      "brand": "NASLUCK",
+      "product": "リヴィエール コンパクトキッチン",
+      "description": "コンパクトな間取りでも、対面キッチンの理想を叶えます。間口900mmから、都市生活にぴったりのキッチン空間を実現。",
+      "image": "/images/equipment/kitchen/riviere-01.jpg",
+      "imageAlt": "NASLUCK リヴィエール コンパクトキッチン"
+    },
+    "concept": {
+      "label": "CONCEPT",
+      "heading": "コンセプト",
+      "paragraphs": [
+        "コンパクトな間取りでも「アイランド型・ペニンシュラ型」が可能なキッチン。",
+        "ナスラックのコンパクトキッチン「リヴィエール」は、小さな間取りにもぴったりと収まるサイズ感が特長です。人気の「アイランド型・ペニンシュラ型」の対面レイアウトも実現でき、空間の主役として、使う人一人ひとりの理想を叶えます。",
+        "狭小間取りや2世帯住宅のセカンドキッチンなど、限られたスペースでも最大限にキッチンが活躍するよう、作業導線や通路幅なども考慮したサイズで設計されています。"
+      ],
+      "image": "/images/equipment/kitchen/riviere-03.jpg",
+      "imageAlt": "アイランド型キッチン"
+    },
+    "features": {
+      "label": "FEATURES",
+      "heading": "特長・魅力",
+      "paragraphs": [
+        "狭小間取りや2世帯住宅のセカンドキッチンなど、限られたスペースでも最大限にキッチンが活躍するよう、作業導線や通路幅なども考慮したサイズで設計。",
+        "極限までそぎ落されたスリムボディに、必要な機能がキュッと凝縮。吊戸棚も備えた十分な収納に加え、2口コンロ・IHにも対応しています。"
+      ],
+      "imageMain": "/images/equipment/kitchen/riviere-07.jpg",
+      "imageMainAlt": "I型 システムタイプキッチン",
+      "imageDiagram": "/images/equipment/kitchen/riviere-02.png",
+      "imageDiagramAlt": "キッチン寸法",
+      "note": "※ 間口900仕様の設置においては、必ずコンロ側壁面に不燃材を使用してください。"
+    },
+    "layouts": {
+      "label": "LAYOUT",
+      "heading": "3つのタイプから選べるレイアウト",
+      "viewLabel": "レイアウトを見る",
+      "items": [
+        {
+          "id": "island",
+          "title": "アイランド型",
+          "subtitle": "Island Type",
+          "body": "キッチンを囲んで、一緒におしゃべりしながらにぎやかに料理をつくることができるアイランド型。開放的で空間が広く感じられる、オープンなキッチンです。",
+          "images": [
+            { "src": "/images/equipment/kitchen/riviere-03.jpg", "alt": "アイランド型01" },
+            { "src": "/images/equipment/kitchen/riviere-04.jpg", "alt": "アイランド型02" }
+          ]
+        },
+        {
+          "id": "peninsula",
+          "title": "ペニンシュラ型",
+          "subtitle": "Peninsula Type",
+          "body": "リビングとキッチン、それぞれのスペースをつくりながら、一体感のある空間を演出するペニンシュラ型。調理をしながらリビングが見渡せるキッチンです。",
+          "images": [
+            { "src": "/images/equipment/kitchen/riviere-05.jpg", "alt": "ペニンシュラ型01" },
+            { "src": "/images/equipment/kitchen/riviere-06.jpg", "alt": "ペニンシュラ型02" }
+          ]
+        },
+        {
+          "id": "i-type",
+          "title": "I型",
+          "subtitle": "I-Type",
+          "body": "キッチンを壁に付けることで空間を広く取れる、もっとも狭小間取りに適した基本スタイル。ご自身で加熱機器を据え置けるセパレートタイプ、加熱機器を組み込んで一体化したシステムタイプ、間口は900mmからございます。",
+          "images": [
+            { "src": "/images/equipment/kitchen/riviere-07.jpg", "alt": "I型01 セパレートタイプ" },
+            { "src": "/images/equipment/kitchen/riviere-08.jpg", "alt": "I型02 システムタイプ" },
+            { "src": "/images/equipment/kitchen/riviere-09.jpg", "alt": "I型03" },
+            { "src": "/images/equipment/kitchen/riviere-10.jpg", "alt": "I型対面設置" }
+          ]
+        }
+      ]
+    },
+    "colors": {
+      "label": "COLOR",
+      "heading": "扉カラーバリエーション",
+      "body": "ナスラックならではのステンシア扉をはじめ、木の温もりを感じられる木目柄や色鮮やかなカラー扉まで、選りすぐりの全32色を揃えました。",
+      "image": "/images/equipment/kitchen/riviere-11.jpg",
+      "imageAlt": "扉カラーバリエーション"
+    },
+    "equipment": {
+      "label": "EQUIPMENT",
+      "heading": "設備機器",
+      "items": [
+        {
+          "title": "ワークトップ・シンクバリエーション",
+          "image": "/images/equipment/kitchen/riviere-15.jpg",
+          "imageAlt": "ワークトップ・シンク"
+        },
+        {
+          "title": "フロアキャビネット",
+          "image": "/images/equipment/kitchen/riviere-16.jpg",
+          "imageAlt": "フロアキャビネット"
+        },
+        {
+          "title": "吊戸棚・キッチン収納",
+          "image": "/images/equipment/kitchen/riviere-17.jpg",
+          "imageAlt": "吊戸棚・キッチン収納"
+        },
+        {
+          "title": "キッチンパネル",
+          "image": "/images/equipment/kitchen/riviere-18.jpg",
+          "imageAlt": "キッチンパネル"
+        },
+        {
+          "title": "レンジフード",
+          "image": "/images/equipment/kitchen/riviere-19.jpg",
+          "imageAlt": "レンジフード"
+        }
+      ]
+    },
+    "setPlans": {
+      "label": "PLAN",
+      "heading": "セットプラン",
+      "items": [
+        { "title": "アイランド型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-20.jpg" },
+        { "title": "ペニンシュラ型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-21.jpg" },
+        { "title": "I型 システムタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-22.jpg" },
+        { "title": "I型 システムタイプ（開き扉）02", "image": "/images/equipment/kitchen/riviere-23.jpg" },
+        { "title": "I型 システムタイプ（開き扉）03", "image": "/images/equipment/kitchen/riviere-24.jpg" },
+        { "title": "I型 セパレートタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-25.jpg" },
+        { "title": "I型 システムタイプ（開き扉）04", "image": "/images/equipment/kitchen/riviere-26.jpg" },
+        { "title": "I型 システムタイプ（開き扉）05", "image": "/images/equipment/kitchen/riviere-27.jpg" }
+      ]
+    },
+    "cases": {
+      "label": "CASE",
+      "heading": "施工事例",
+      "items": [
+        { "title": "コンパクトキッチン施工事例01", "image": "/images/equipment/kitchen/riviere-13.jpg" },
+        { "title": "コンパクトキッチン施工事例02", "image": "/images/equipment/kitchen/riviere-14.jpg" }
+      ]
+    },
+    "faq": {
+      "heading": "よくある質問",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "白金高輪 EL FARO+ にはどのキッチン設備が採用されていますか？",
+          "answer": "本物件のキッチン設備には NASLUCK コンパクトキッチン「リヴィエール」を採用しています。間口900mmからのジャストサイズ設計で、I型・アイランド型・ペニンシュラ型など多彩なレイアウトに対応。収納力とコンロの互換性も備えています。"
+        },
+        {
+          "question": "リヴィエール はどんな空間に向いていますか？",
+          "answer": "狭小間取り、コンパクトマンション、2世帯住宅のセカンドキッチンなど、限られたスペースに最適です。作業導線と通路幅を考慮した設計により、小さな間取りでもキッチンが最大限に活躍します。"
+        },
+        {
+          "question": "選べるレイアウトは？",
+          "answer": "ライフスタイルやお部屋の形に合わせて3タイプから選択できます。開放的な「アイランド型」、リビングとの一体感を演出する「ペニンシュラ型」、狭小間取りに適した「I型」。I型はセパレートタイプとシステムタイプがあり、間口900mmから対応します。"
+        },
+        {
+          "question": "設備仕様は変更される可能性がありますか？",
+          "answer": "本ページの仕様・機能・カタログ内容は、実際の施工図および設備表を基準とします。施工上の都合、メーカー仕様変更、法規改定等により変更となる場合があります。"
+        },
+        {
+          "question": "見学予約で実際の設備を確認できますか？",
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪のキッチン設備、室内プラン、投資・購入に関するご質問にお答えします。"
+        }
+      ]
+    }
+  },
+  "equipmentSecurityPage": {
+    "seo": {
+      "title": "ALSOK 防犯設備｜白金高輪 EL FARO+",
+      "description": "白金高輪 EL FARO+ 全棟に ALSOK「HOME ALSOK アパート・マンションプラン」を導入。侵入監視、火災監視、緊急通報、24時間ガードマン駆けつけなどの保全サービスを掲載。",
+      "keywords": [
+        "ALSOK",
+        "防犯設備",
+        "ホームセキュリティ",
+        "HOME ALSOK",
+        "白金高輪",
+        "EL FARO+",
+        "セキュリティ",
+        "忠訓地產"
+      ],
+      "ogImage": "/images/equipment/security/alsok-main-08.jpg",
+      "ogImageAlt": "ALSOK HOME ALSOK アパート・マンションプラン",
+      "productName": "ALSOK HOME ALSOK アパート・マンションプラン"
+    },
+    "breadcrumb": {
+      "ariaLabel": "パンくずリスト",
+      "home": "トップ",
+      "equipment": "設備・家電・保全系統",
+      "current": "防犯設備"
+    },
+    "hero": {
+      "tag": "SECURITY SYSTEM",
+      "title": "防犯設備",
+      "subtitle": "安心と安全の守護者",
+      "description": "日本の有名な警備会社と連携し、全方位のホームセキュリティを提供。外出時も在宅時も、先進のセンサー技術と24時間監視システムで、安心な暮らしをサポートします。",
+      "image": "/images/equipment/security/alsok-main-02.jpg",
+      "imageAlt": "ALSOK ホームセキュリティ"
+    },
+    "intro": {
+      "heading": "安心こそ、本当の贅沢",
+      "paragraphs": [
+        "東京の中心地に住まいを持つことは、資産形成であると同時に、家族と未来への約束でもあります。",
+        "OK PRIME 白金高輪全棟には、日本の有名警備ブランド ALSOK のセキュリティシステムを導入。スマート入退室、24時間監視、緊急対応体制を組み合わせ、住戸に安心な住環境を提供します。"
+      ]
+    },
+    "brand": {
+      "tag": "ALSOK",
+      "name": "日本 ALSOK",
+      "product": "HOME ALSOK アパート・マンションプラン",
+      "description": "ALSOK は集合住宅（アパート・マンション）向けの専門警備サービスを提供。センサーとコントローラーの連動により、24時間365日の守りを実現。初期費用0円から、緊急時の警備員駆けつけ、インターネット回線不要など、賃貸住宅にも最適です。",
+      "includesLabel": "ALSOK 基本住宅保全の内容：",
+      "image": "/images/equipment/security/alsok-main-11.png",
+      "imageAlt": "HOME ALSOK アパート・マンションプラン 概要"
+    },
+    "monitoring": {
+      "heading": "24時間365日の徹底警備",
+      "subtitle": "待機するガードマン（警備員）が迅速に駆けつけます。異常が起きたときには状況の確認と対処を行い、お客様にご報告。侵入や急病など、あらゆる場面で安心を支えます。",
+      "items": [
+        {
+          "title": "侵入感知",
+          "body": "ピッキングやガラス割りなど、窓・ドアからの不法侵入を検知。在宅警備も可能です。",
+          "image": "/images/equipment/security/alsok-main-21.jpg",
+          "imageAlt": "侵入感知"
+        },
+        {
+          "title": "非常通報",
+          "body": "押し売りや急病の際など、非常ボタンを押すだけで ALSOK に通報できます。",
+          "image": "/images/equipment/security/alsok-main-10.png",
+          "imageAlt": "非常通報"
+        },
+        {
+          "title": "火災感知",
+          "body": "火災による温度の異常上昇や煙の発生を感知し、自動的に通報します。",
+          "image": "/images/equipment/security/alsok-main-16.png",
+          "imageAlt": "火災感知"
+        }
+      ]
+    },
+    "serviceGrid": {
+      "label": "SERVICE",
+      "heading": "ALSOK 基本住宅保全",
+      "items": [
+        {
+          "title": "侵入監視",
+          "body": "開閉センサーなどを扉や窓に配置し、侵入を検知します。",
+          "image": "/images/equipment/security/alsok-extra-26.jpg",
+          "imageAlt": "侵入監視"
+        },
+        {
+          "title": "火災監視",
+          "body": "火災センサーを設置した監視の他、自動火災報知設備からの移報も監視します。",
+          "image": "/images/equipment/security/alsok-fire-sensor.webp",
+          "imageAlt": "火災監視"
+        },
+        {
+          "title": "非常通報",
+          "body": "身の危険を感じたときなどに遠隔非常ボタンを押すと ALSOK に通報されます。",
+          "image": "/images/equipment/security/alsok-emergency-button.webp",
+          "imageAlt": "非常通報"
+        },
+        {
+          "title": "施錠確認",
+          "body": "扉や窓に配置した開閉センサーの開閉を感知し、戸締まりの確認ができます。",
+          "image": "/images/equipment/security/alsok-main-14.png",
+          "imageAlt": "施錠確認"
+        },
+        {
+          "title": "出入管理情報",
+          "body": "コントローラー操作を記録し、メールでお知らせします。",
+          "image": "/images/equipment/security/alsok-main-20.jpg",
+          "imageAlt": "出入管理情報"
+        },
+        {
+          "title": "外部通知",
+          "body": "異常が発生すると ALSOK ライトが点滅し、周囲に知らせます。",
+          "image": "/images/equipment/security/alsok-sticker.png",
+          "imageAlt": "外部通知"
+        }
+      ]
+    },
+    "dispatch": {
+      "heading": "緊急時にはガードマン（警備員）が現場に急行",
+      "subtitle": "緊急時には監視センターに通報され、ご自宅にもっとも早く到着できるガードマン（警備員）が現場に急行。豊富なノウハウと高度なシステムで、スピード駆けつけを実現します。",
+      "items": [
+        {
+          "title": "全国の待機所からスピード駆けつけ",
+          "body": "全国ネットワークの待機拠点から、最短ルートで現場へ急行。",
+          "image": "/images/equipment/security/alsok-main-26.jpg",
+          "imageAlt": "全国ネットワーク"
+        },
+        {
+          "title": "ガードセンター監視",
+          "body": "24時間365日、異常信号を受信し即座に対応する監視センター。",
+          "image": "/images/equipment/security/alsok-main-07.png",
+          "imageAlt": "ガードセンター"
+        },
+        {
+          "title": "訓練を受けたガードマンが急行",
+          "body": "緊急時には、鍛え抜かれた高水準の警備員が現場に急行します！",
+          "image": "/images/equipment/security/alsok-main-18.jpg",
+          "imageAlt": "ガードマン"
+        }
+      ]
+    },
+    "editorial": {
+      "label": "FEATURE",
+      "heading": "スマート保全で、全方位の守りを",
+      "items": [
+        {
+          "title": "緊急通報機能",
+          "body": "押し売りや急病の際など、非常ボタンを押すだけで ALSOK に通報。センサーと遠隔非常ボタンの二重配置で、危機的状況でも迅速にサポートを受けられます。",
+          "image": "/images/equipment/security/alsok-emergency-button.webp",
+          "imageAlt": "遠隔非常ボタン"
+        },
+        {
+          "title": "施錠確認・出入管理",
+          "body": "扉や窓の開閉を感知して戸締まりを確認。コントローラー操作を記録し、メールでお知らせします。",
+          "image": "/images/equipment/security/alsok-lock-check.png",
+          "imageAlt": "施錠確認センサー"
+        },
+        {
+          "title": "遠隔操作・警備切り替え",
+          "body": "専用アプリで外出先から住まいの状況を確認・操作。「外出」「在宅」に応じて警備モードを切り替えられます。",
+          "image": "/images/equipment/security/alsok-remote-app.png",
+          "imageAlt": "HOME ALSOK アプリ"
+        },
+        {
+          "title": "24時間ガードマン迅速派遣",
+          "body": "異常発生時、全国の待機拠点から訓練を受けた警備員を最短で現場に派遣し、状況を処理・報告します。",
+          "image": "/images/equipment/security/alsok-main-19.jpg",
+          "imageAlt": "ガードマン駆けつけ"
+        }
+      ]
+    },
+    "devices": {
+      "label": "DEVICE",
+      "heading": "設備機器",
+      "body": "一般的な2LDK・3LDKの間取りを想定した設置例。コントローラー、各種センサー、遠隔非常ボタンなど、住戸内に最適配置された機器群で住まいを守ります。",
+      "floorplan2ldk": "/images/equipment/security/alsok-extra-25.jpg",
+      "floorplan2ldkAlt": "一般的な2LDK 設置事例",
+      "floorplan3ldk": "/images/equipment/security/alsok-case-02.jpg",
+      "floorplan3ldkAlt": "一般的な3LDK 設置事例",
+      "items": [
+        {
+          "number": "1",
+          "title": "コントローラー",
+          "location": "設置例：キッチン付近の壁",
+          "image": "/images/equipment/security/alsok-main-10.png",
+          "imageAlt": "コントローラー"
+        },
+        {
+          "number": "2",
+          "title": "開閉センサー",
+          "location": "設置例：玄関ドア内側の上部",
+          "image": "/images/equipment/security/alsok-extra-26.jpg",
+          "imageAlt": "開閉センサー"
+        },
+        {
+          "number": "3",
+          "title": "センサー送信機",
+          "location": "設置例：玄関ドア内側の枠沿い",
+          "image": "/images/equipment/security/alsok-extra-27.jpg",
+          "imageAlt": "センサー送信機"
+        },
+        {
+          "number": "4",
+          "title": "施錠確認センサー",
+          "location": "設置例：バルコニー窓の鍵上部",
+          "image": "/images/equipment/security/alsok-main-14.png",
+          "imageAlt": "施錠確認センサー"
+        },
+        {
+          "number": "5",
+          "title": "空間センサー",
+          "location": "設置例：リビングや廊下などの天井",
+          "image": "/images/equipment/security/alsok-main-15.png",
+          "imageAlt": "空間センサー"
+        },
+        {
+          "number": "6",
+          "title": "火災センサー（熱）",
+          "location": "設置例：キッチンの天井",
+          "image": "/images/equipment/security/alsok-fire-sensor.webp",
+          "imageAlt": "火災センサー"
+        },
+        {
+          "number": "7",
+          "title": "遠隔非常ボタン",
+          "location": "設置例：リビングなど使いやすい場所",
+          "image": "/images/equipment/security/alsok-emergency-button.webp",
+          "imageAlt": "遠隔非常ボタン"
+        }
+      ]
+    },
+    "operation": {
+      "label": "OPERATION",
+      "heading": "操作・通信",
+      "paragraphs": [
+        "暗証番号や専用アプリで、外出先からでもかんたんに操作・確認が可能。気になった時、いつでもどこでも住まいの状況をチェックできます。",
+        "コントローラーに無線通信回線を内蔵しているため、インターネットや電話回線がなくても設置可能。警備通信専用回線不要、通信費不要、断線・停電も監視します。"
+      ],
+      "image": "/images/equipment/security/alsok-main-24.png",
+      "imageAlt": "警備エリア設定"
+    },
+    "faq": {
+      "heading": "よくある質問",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "白金高輪 EL FARO+ にはどの保全系統が導入されていますか？",
+          "answer": "本物件全棟に ALSOK「HOME ALSOK アパート・マンションプラン」を導入しています。集合住宅向けに設計され、侵入監視、火災監視、緊急通報、遠隔操作、24時間ガードマン駆けつけを組み合わせた全方位のセキュリティです。"
+        },
+        {
+          "question": "オートロックがあってもホームセキュリティは必要ですか？",
+          "answer": "オートロックだけでは、住人や宅配業者の後をつけて内部に侵入される可能性があります。ALSOK ホームセキュリティは、異常時にガードマンが現場に急行し、状況に応じた対応を実施後、お客様へ報告します。"
+        },
+        {
+          "question": "在宅時にも警備を設定できますか？",
+          "answer": "はい。在宅警備モードに対応しており、玄関や窓などエリアごとに警備範囲を設定できます。寝室のみ警備解除し、その他の空間は防護を維持するなど、柔軟な運用が可能です。"
+        },
+        {
+          "question": "設備仕様は変更される可能性がありますか？",
+          "answer": "本ページの仕様・機能・サービス内容は、実際の施工図および設備表を基準とします。施工上の都合、メーカー仕様変更、法規改定等により変更となる場合があります。"
+        },
+        {
+          "question": "見学予約で実際の設備を確認できますか？",
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の防犯設備、室内プラン、投資・購入に関するご質問にお答えします。"
+        }
+      ]
     }
   }
 }

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Copy from "./Copy";
+import { useIsMobile } from "@/lib/use-is-mobile";
 import { useTranslations } from "next-intl";
 
 const SLIDE_IMAGES = [
@@ -28,6 +29,7 @@ export default function Slider() {
   const indicatorsRef = useRef([]);
   const timerRef = useRef(null);
   const [textIndex, setTextIndex] = useState(0);
+  const isMobile = useIsMobile();
   const setTextIndexRef = useRef(setTextIndex);
   setTextIndexRef.current = setTextIndex;
 
@@ -39,7 +41,7 @@ export default function Slider() {
       const slideDuration = 4; // 自動輪播停留時間 (秒)
       const transitionDuration = 1.5; // 淡入淡出過場時間 (秒)
       const scaleDuration = 12; // 圖片持續收縮時間
-      const scaleStart = 1.08; // 🔥 收縮幅度加大 (從 1.08 縮小到 1)
+      const scaleStart = isMobile ? 1 : 1.08;
 
       function animateSlide(nextIndex) {
         if (isAnimating || nextIndex === currentIndex) return;
@@ -71,16 +73,18 @@ export default function Slider() {
           0,
         );
 
-        // 新圖片設定為較明顯的放大 (1.08)，並淡入
-        gsap.set(nextImg, { scale: scaleStart, opacity: 0 });
+        // 新圖片淡入（手機版不做縮放動畫）
+        gsap.set(nextImg, { scale: 1, opacity: 0 });
         tl.to(
           nextImg,
           { opacity: 1, duration: transitionDuration, ease: "power2.inOut" },
           0,
         );
 
-        // 使用獨立的 gsap.to 控制收縮，讓它突破時間軸的限制，持續收縮！
-        gsap.to(nextImg, { scale: 1, duration: scaleDuration, ease: "none" });
+        if (!isMobile) {
+          gsap.set(nextImg, { scale: scaleStart });
+          gsap.to(nextImg, { scale: 1, duration: scaleDuration, ease: "none" });
+        }
 
         // 文字：Copy 元件逐行上浮（與圖片切換同步）
         setTextIndexRef.current(nextIndex);
@@ -123,16 +127,18 @@ export default function Slider() {
         gsap.set(imagesRef.current, { opacity: 0 });
         gsap.set(imagesRef.current[0], {
           opacity: 1,
-          scale: scaleStart,
+          scale: 1,
           zIndex: 2,
         });
 
-        // 第一張圖開始獨立的緩慢收縮
-        gsap.to(imagesRef.current[0], {
-          scale: 1,
-          duration: scaleDuration,
-          ease: "none",
-        });
+        if (!isMobile) {
+          gsap.set(imagesRef.current[0], { scale: scaleStart });
+          gsap.to(imagesRef.current[0], {
+            scale: 1,
+            duration: scaleDuration,
+            ease: "none",
+          });
+        }
       }
 
       // 導覽圓點初始化
@@ -156,7 +162,7 @@ export default function Slider() {
         clearTimeout(timerRef.current);
       };
     },
-    { scope: containerRef },
+    { scope: containerRef, dependencies: [isMobile] },
   );
 
   return (

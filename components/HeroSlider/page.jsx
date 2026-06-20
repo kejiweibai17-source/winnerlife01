@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { useIsMobile } from "@/lib/use-is-mobile";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CustomEase } from "gsap/CustomEase";
@@ -12,6 +13,7 @@ const imagePaths = ["/images/concept/001.png", "/images/concept/002.png"];
 const SliderInner = () => {
   const t = useTranslations("concept.heroSlider");
   const slidesData = t.raw("slides");
+  const isMobile = useIsMobile();
   const sliderRef = useRef(null);
   const sliderImagesRef = useRef(null);
   const counterRef = useRef(null);
@@ -106,49 +108,68 @@ const SliderInner = () => {
 
         const slideImgElem = document.createElement("img");
         slideImgElem.src = imagePaths[currentImg - 1];
-        gsap.set(slideImgElem, { x: direction === "left" ? -500 : 500 });
-
         slideImg.appendChild(slideImgElem);
         sliderImagesRef.current.appendChild(slideImg);
 
-        const tl = gsap.timeline();
+        if (isMobile) {
+          gsap.set(slideImgElem, { x: 0, scale: 1 });
+          gsap.set(slideImg, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          });
+          gsap.set(slideImgElem, { opacity: 0 });
+          gsap.to(currentSlide?.querySelector("img"), {
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.inOut",
+          });
+          gsap.to(slideImgElem, {
+            opacity: 1,
+            duration: 0.4,
+            ease: "power2.inOut",
+            onComplete: () => cleanupSlides(),
+          });
+        } else {
+          gsap.set(slideImgElem, { x: direction === "left" ? -500 : 500 });
 
-        tl.to(currentSlide.querySelector("img"), {
-          x: direction === "left" ? 500 : -500,
-          duration: 1.5,
-          ease: "hop2",
-        })
-          .fromTo(
-            slideImg,
-            {
-              clipPath:
-                direction === "left"
-                  ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                  : "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-            },
-            {
-              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-              duration: 1.5,
-              ease: "hop2",
-            },
-            0,
-          )
-          .to(
-            slideImgElem,
-            {
-              x: 0,
-              duration: 1.5,
-              ease: "hop2",
-            },
-            0,
-          )
-          .call(() => cleanupSlides(), null, 1.5);
+          const tl = gsap.timeline();
+
+          tl.to(currentSlide.querySelector("img"), {
+            x: direction === "left" ? 500 : -500,
+            duration: 1.5,
+            ease: "hop2",
+          })
+            .fromTo(
+              slideImg,
+              {
+                clipPath:
+                  direction === "left"
+                    ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                    : "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+              },
+              {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                duration: 1.5,
+                ease: "hop2",
+              },
+              0,
+            )
+            .to(
+              slideImgElem,
+              {
+                x: 0,
+                duration: 1.5,
+                ease: "hop2",
+              },
+              0,
+            )
+            .call(() => cleanupSlides(), null, 1.5);
+        }
 
         if (indicatorsRef.current && indicatorsRef.current.children) {
           indicatorRotation += direction === "left" ? -90 : 90;
           gsap.to(indicatorsRef.current.children, {
             rotate: indicatorRotation,
-            duration: 1,
+            duration: isMobile ? 0.3 : 1,
             ease: "hop2",
           });
         }
@@ -234,7 +255,7 @@ const SliderInner = () => {
         if (autoSlideTimer) clearInterval(autoSlideTimer);
       };
     },
-    { scope: sliderRef },
+    { scope: sliderRef, dependencies: [isMobile] },
   );
 
   return (

@@ -9,6 +9,8 @@ import ShowCase from "./CollectionShowcase";
 import ParallaxImage from "./ParallaxImage/page";
 import HomeBottomPromo from "./HomeBottomPromo";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import { homeSitelinks } from "@/lib/site";
 
 const CARD_IMAGES = [
   "/images/index/grid-02.png",
@@ -18,6 +20,10 @@ const CARD_IMAGES = [
 
 export default function HomePage() {
   const t = useTranslations();
+  const pathname = usePathname();
+  const isJp = pathname.startsWith("/jp");
+  const locale = isJp ? "jp" : "zh";
+  const siteNavLinks = homeSitelinks[locale];
 
   const cards = CARD_IMAGES.map((image, i) => ({
     id: i + 1,
@@ -195,6 +201,19 @@ export default function HomePage() {
       <WovenStory />
       <Slider />
       <HomeBottomPromo />
+
+      <nav
+        aria-label={isJp ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面"}
+        className="sr-only"
+      >
+        <ul>
+          {siteNavLinks.map((link) => (
+            <li key={link.path}>
+              <Link href={link.path}>{link.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }

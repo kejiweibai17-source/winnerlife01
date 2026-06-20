@@ -8,6 +8,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import { useIsMobile } from "@/lib/use-is-mobile";
+
 import Carousel from "../components/EmblaCarousel06/index.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,6 +29,7 @@ const PRODUCT_IMAGES = [
 export default function CollectionShowcase() {
   const t = useTranslations("showcase");
   const containerRef = useRef(null);
+  const isMobile = useIsMobile();
 
   const cases = [
     {
@@ -62,6 +65,8 @@ export default function CollectionShowcase() {
 
   useGSAP(
     () => {
+      if (isMobile) return;
+
       const images = gsap.utils.toArray(".parallax-img-wrapper");
       images.forEach((img) => {
         gsap.to(img, {
@@ -76,7 +81,7 @@ export default function CollectionShowcase() {
         });
       });
     },
-    { scope: containerRef },
+    { scope: containerRef, dependencies: [isMobile] },
   );
 
   return (

@@ -9,6 +9,14 @@ import Copy from "./Copy";
 
 const gridMeta = [
   {
+    id: 0,
+    href: "/",
+    bgImage: "/images/index/wall/設備與家電.png",
+    maskFrom: "rgba(0,25,25,0.90)",
+    maskVia: "rgba(0,55,50,0.52)",
+    maskTo: "rgba(0,80,70,0.18)",
+  },
+  {
     id: 1,
     href: "/concept",
     bgImage: "/images/index/wall/交通連結.png",
@@ -42,7 +50,7 @@ const gridMeta = [
   },
   {
     id: 3,
-    href: "",
+    href: "/architecture",
     bgImage: "/images/index/wall/建築設計.png",
     maskFrom: "rgba(15,10,50,0.90)",
     maskVia: "rgba(35,20,90,0.55)",
@@ -57,7 +65,7 @@ const gridMeta = [
     maskTo: "rgba(0,100,120,0.18)",
   },
   {
-    "id": 5,
+    id: 5,
     href: "/interior",
     bgImage: "/images/index/wall/房型規劃.png",
     maskFrom: "rgba(8,18,38,0.92)",
@@ -65,16 +73,8 @@ const gridMeta = [
     maskTo: "rgba(28,50,90,0.18)",
   },
   {
-    id: 7,
-    href: "",
-    bgImage: "/images/index/wall/設備與家電.png",
-    maskFrom: "rgba(0,25,25,0.90)",
-    maskVia: "rgba(0,55,50,0.52)",
-    maskTo: "rgba(0,80,70,0.18)",
-  },
-  {
     id: 8,
-    href: "",
+    href: "/equipment",
     bgImage: "/images/index/wall/IoT系統與保全設備.png",
     maskFrom: "rgba(10,14,28,0.92)",
     maskVia: "rgba(22,30,55,0.55)",

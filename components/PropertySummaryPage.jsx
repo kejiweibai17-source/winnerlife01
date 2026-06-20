@@ -12,97 +12,347 @@ const HERO_IMAGE = "/images/summary/物件概要01.png";
 const INTRO_IMAGE_02 = "/images/summary/物件概要02.png";
 const INTRO_IMAGE_03 = "/images/summary/物件概要03.png";
 
+function WaveDivider() {
+  return (
+    <div className="pointer-events-none absolute -bottom-px left-0 right-0 z-20 w-full overflow-hidden leading-[0]">
+      <svg
+        className="relative block h-[100px] md:h-[180px] lg:h-[250px]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 2400 120"
+        preserveAspectRatio="none"
+        style={{ width: "200%", marginLeft: 0 }}
+      >
+        <defs>
+          <linearGradient
+            id="summary-wave-gradient"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+            <stop offset="35%" stopColor="#ffffff" stopOpacity="1" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
+          </linearGradient>
+        </defs>
+
+        <rect x="0" y="95" width="2400" height="30" fill="#ffffff" />
+
+        <path
+          className="animate-wave-slow"
+          d="M0,70 C400,90 800,30 1200,60 C1600,80 2000,60 2400,70 L2400,120 L0,120 Z"
+          fill="#ffffff"
+          opacity="0.25"
+        />
+        <path
+          className="animate-wave-mid"
+          d="M0,60 C400,30 800,90 1200,60 C1600,30 2000,90 2400,60 L2400,120 L0,120 Z"
+          fill="#ffffff"
+          opacity="0.45"
+        />
+        <path
+          className="animate-wave-fast"
+          d="M0,80 C600,110 1000,40 1400,70 C1800,90 2100,50 2400,60 L2400,120 L0,120 Z"
+          fill="url(#summary-wave-gradient)"
+        />
+      </svg>
+    </div>
+  );
+}
+
 const FLOOR_PLANS = [
   {
     floor: "1F Floor Plan",
     units: [
-      { type: "A", layout: "2LDK", rooms: "101号室", area: "47.58 m²", tsubo: "14.39 坪" },
-      { type: "B", layout: "1LDK", rooms: "102号室", area: "37.13 m²", tsubo: "11.23 坪" },
+      {
+        type: "A",
+        layout: "2LDK",
+        rooms: "101号室",
+        area: "47.58 m²",
+        tsubo: "14.39 坪",
+      },
+      {
+        type: "B",
+        layout: "1LDK",
+        rooms: "102号室",
+        area: "37.13 m²",
+        tsubo: "11.23 坪",
+      },
     ],
   },
   {
     floor: "2F–4F Floor Plan",
     units: [
-      { type: "C", layout: "1LDK", rooms: "201 / 301 / 401 号室", area: "37.67 m²", tsubo: "11.40 坪" },
-      { type: "D", layout: "1K", rooms: "202 / 302 / 402 号室", area: "20.66 m²", tsubo: "6.25 坪" },
-      { type: "E", layout: "1LDK", rooms: "203 / 303 / 403 号室", area: "37.92 m²", tsubo: "11.47 坪" },
+      {
+        type: "C",
+        layout: "1LDK",
+        rooms: "201 / 301 / 401 号室",
+        area: "37.67 m²",
+        tsubo: "11.40 坪",
+      },
+      {
+        type: "D",
+        layout: "1K",
+        rooms: "202 / 302 / 402 号室",
+        area: "20.66 m²",
+        tsubo: "6.25 坪",
+      },
+      {
+        type: "E",
+        layout: "1LDK",
+        rooms: "203 / 303 / 403 号室",
+        area: "37.92 m²",
+        tsubo: "11.47 坪",
+      },
     ],
   },
   {
     floor: "5F Floor Plan",
     units: [
-      { type: "F", layout: "1LDK", rooms: "501号室", area: "31.26 m²", tsubo: "9.46 坪" },
-      { type: "G", layout: "1K", rooms: "502号室", area: "20.02 m²", tsubo: "6.06 坪" },
-      { type: "H", layout: "1LDK", rooms: "503号室", area: "33.46 m²", tsubo: "10.12 坪" },
+      {
+        type: "F",
+        layout: "1LDK",
+        rooms: "501号室",
+        area: "31.26 m²",
+        tsubo: "9.46 坪",
+      },
+      {
+        type: "G",
+        layout: "1K",
+        rooms: "502号室",
+        area: "20.02 m²",
+        tsubo: "6.06 坪",
+      },
+      {
+        type: "H",
+        layout: "1LDK",
+        rooms: "503号室",
+        area: "33.46 m²",
+        tsubo: "10.12 坪",
+      },
     ],
   },
 ];
 
 const INTERIOR_ROWS = [
-  { room: "ポーチ", floor: "磁器質タイル", floorSub: "—", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "—" },
-  { room: "階段室・共用廊下", floor: "防滑性ビニル床シート", floorSub: "—", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "—" },
-  { room: "玄関", floor: "磁器質タイル", floorSub: "セルフレベルリング材", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "2150" },
-  { room: "LDK", floor: "フローリング", floorSub: "セルフレベルリング材", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "2100" },
-  { room: "洋室", floor: "フローリング", floorSub: "セルフレベルリング材", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "2275" },
-  { room: "CL", floor: "フローリング", floorSub: "セルフレベルリング材", baseboard: "木巾木", wall: "ビニルクロス貼り", wallSub: "PB t=12.5", ceiling: "ビニルクロス貼り", ceilingSub: "PB t=9.5", height: "2270" },
-  { room: "トイレ", floor: "磁器質タイル", floorSub: "セルフレベルリング材", baseboard: "—", wall: "ビニルクロス貼り", wallSub: "耐水PB", ceiling: "ビニルクロス貼り", ceilingSub: "耐水PB", height: "2000" },
-  { room: "洗面室", floor: "磁器質タイル", floorSub: "セルフレベルリング材", baseboard: "—", wall: "ビニルクロス貼り", wallSub: "耐水PB", ceiling: "ビニルクロス貼り", ceilingSub: "耐水PB", height: "2000" },
-  { room: "洗濯機置場", floor: "磁器質タイル", floorSub: "セルフレベルリング材", baseboard: "—", wall: "ビニルクロス貼り", wallSub: "耐水PB", ceiling: "ビニルクロス貼り", ceilingSub: "耐水PB", height: "2000" },
-  { room: "浴室", floor: "ユニットバス", floorSub: "—", baseboard: "—", wall: "ユニットバス", wallSub: "—", ceiling: "ユニットバス", ceilingSub: "—", height: "—" },
+  {
+    room: "ポーチ",
+    floor: "磁器質タイル",
+    floorSub: "—",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "—",
+  },
+  {
+    room: "階段室・共用廊下",
+    floor: "防滑性ビニル床シート",
+    floorSub: "—",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "—",
+  },
+  {
+    room: "玄関",
+    floor: "磁器質タイル",
+    floorSub: "セルフレベルリング材",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "2150",
+  },
+  {
+    room: "LDK",
+    floor: "フローリング",
+    floorSub: "セルフレベルリング材",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "2100",
+  },
+  {
+    room: "洋室",
+    floor: "フローリング",
+    floorSub: "セルフレベルリング材",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "2275",
+  },
+  {
+    room: "CL",
+    floor: "フローリング",
+    floorSub: "セルフレベルリング材",
+    baseboard: "木巾木",
+    wall: "ビニルクロス貼り",
+    wallSub: "PB t=12.5",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "PB t=9.5",
+    height: "2270",
+  },
+  {
+    room: "トイレ",
+    floor: "磁器質タイル",
+    floorSub: "セルフレベルリング材",
+    baseboard: "—",
+    wall: "ビニルクロス貼り",
+    wallSub: "耐水PB",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "耐水PB",
+    height: "2000",
+  },
+  {
+    room: "洗面室",
+    floor: "磁器質タイル",
+    floorSub: "セルフレベルリング材",
+    baseboard: "—",
+    wall: "ビニルクロス貼り",
+    wallSub: "耐水PB",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "耐水PB",
+    height: "2000",
+  },
+  {
+    room: "洗濯機置場",
+    floor: "磁器質タイル",
+    floorSub: "セルフレベルリング材",
+    baseboard: "—",
+    wall: "ビニルクロス貼り",
+    wallSub: "耐水PB",
+    ceiling: "ビニルクロス貼り",
+    ceilingSub: "耐水PB",
+    height: "2000",
+  },
+  {
+    room: "浴室",
+    floor: "ユニットバス",
+    floorSub: "—",
+    baseboard: "—",
+    wall: "ユニットバス",
+    wallSub: "—",
+    ceiling: "ユニットバス",
+    ceilingSub: "—",
+    height: "—",
+  },
 ];
 
 const EQUIPMENT_ROWS = [
-  { part: "ポーチ", spec: "集合玄関機 ●メールボックス一体型宅配ボックス（防雨仕様）[NASTA] ●管理者連絡表示板（樹脂製）300×500 ●消火器 ●非常用照明 ●誘導灯" },
-  { part: "階段室・共用廊下", spec: "階段手摺：樹脂手摺既製品 ●踏面・蹴込：防滑性ビニル床シート ●段鼻：ビニル床シート一体型 ●アクセントタイル：各住戸前 W200×H2000 ピッツモザイクボーダー・陶彩 BM-OLM-4795/CAR [ニッタイ工業]同等 ●階数表示板（SUS製） ●掲示板（A2サイズ） ●消火器 ●非常用照明 ●誘導灯" },
+  {
+    part: "ポーチ",
+    spec: "集合玄関機 ●メールボックス一体型宅配ボックス（防雨仕様）[NASTA] ●管理者連絡表示板（樹脂製）300×500 ●消火器 ●非常用照明 ●誘導灯",
+  },
+  {
+    part: "階段室・共用廊下",
+    spec: "階段手摺：樹脂手摺既製品 ●踏面・蹴込：防滑性ビニル床シート ●段鼻：ビニル床シート一体型 ●アクセントタイル：各住戸前 W200×H2000 ピッツモザイクボーダー・陶彩 BM-OLM-4795/CAR [ニッタイ工業]同等 ●階数表示板（SUS製） ●掲示板（A2サイズ） ●消火器 ●非常用照明 ●誘導灯",
+  },
   { part: "玄関", spec: "下足入 ●床見切り（SUS-FB） ●ダウンライト" },
-  { part: "LDK", spec: "システムキッチン ●レンジフード（ダクトはRW被覆） ●エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●給気口150φ（差圧式・FD付） ●住宅用火災警報器（熱感）" },
-  { part: "洋室", spec: "エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●室内物干金物 ●給気口100φ ●住宅用火災警報器（煙感）" },
+  {
+    part: "LDK",
+    spec: "システムキッチン ●レンジフード（ダクトはRW被覆） ●エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●給気口150φ（差圧式・FD付） ●住宅用火災警報器（熱感）",
+  },
+  {
+    part: "洋室",
+    spec: "エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●室内物干金物 ●給気口100φ ●住宅用火災警報器（煙感）",
+  },
   { part: "CL", spec: "ハンガーパイプ（SUS32φ同等） ●枕棚D400" },
-  { part: "トイレ", spec: "洋式便器（温水洗浄便座付/タンク上部手洗付） ●ペーパーホルダー ●タオルリング ●固定棚 ●ダウンライト ●換気設備（24時間換気）" },
-  { part: "洗面室", spec: "洗面化粧台L600 ●タオルリング ●ダウンライト ●換気設備（24時間換気） ●分電盤" },
-  { part: "洗濯機置場", spec: "洗濯機パン640□（洗濯機パン下を他配管が通過する場合、SL+120とし薄型タイプを基本とする。他配管が通過せず、配管を隠蔽可能な場合、高床タイプも可とする。）" },
-  { part: "浴室", spec: "ユニットバス1014/1116 ●浴室換気暖房乾燥機（24時間換気） ●ハンガーパイプ（UB付属品）※JIS A4416に適合する。" },
+  {
+    part: "トイレ",
+    spec: "洋式便器（温水洗浄便座付/タンク上部手洗付） ●ペーパーホルダー ●タオルリング ●固定棚 ●ダウンライト ●換気設備（24時間換気）",
+  },
+  {
+    part: "洗面室",
+    spec: "洗面化粧台L600 ●タオルリング ●ダウンライト ●換気設備（24時間換気） ●分電盤",
+  },
+  {
+    part: "洗濯機置場",
+    spec: "洗濯機パン640□（洗濯機パン下を他配管が通過する場合、SL+120とし薄型タイプを基本とする。他配管が通過せず、配管を隠蔽可能な場合、高床タイプも可とする。）",
+  },
+  {
+    part: "浴室",
+    spec: "ユニットバス1014/1116 ●浴室換気暖房乾燥機（24時間換気） ●ハンガーパイプ（UB付属品）※JIS A4416に適合する。",
+  },
 ];
 
 const EXTERIOR_ROWS = [
-  { part: "屋上", items: [
-    { label: "屋根", value: "アスファルト防水（トーチ工法）" },
-    { label: "パラペット", value: "外壁仕上と同仕様" },
-    { label: "設備基礎", value: "モルタル仕上" },
-    { label: "ハト小屋", value: "ガルバリウム鋼板 t=0.35" },
-    { label: "屋上点検口", value: "アルミ製" },
-  ]},
-  { part: "ルーフバルコニー", items: [{ label: "", value: "アスファルト防水（トーチ工法）●手摺：アルミ製" }] },
+  {
+    part: "屋上",
+    items: [
+      { label: "屋根", value: "アスファルト防水（トーチ工法）" },
+      { label: "パラペット", value: "外壁仕上と同仕様" },
+      { label: "設備基礎", value: "モルタル仕上" },
+      { label: "ハト小屋", value: "ガルバリウム鋼板 t=0.35" },
+      { label: "屋上点検口", value: "アルミ製" },
+    ],
+  },
+  {
+    part: "ルーフバルコニー",
+    items: [
+      { label: "", value: "アスファルト防水（トーチ工法）●手摺：アルミ製" },
+    ],
+  },
   { part: "ルーフドレイン", items: [{ label: "", value: "ステンレス製" }] },
   { part: "竪樋", items: [{ label: "", value: "塩ビ製 色：外壁色に準ずる" }] },
-  { part: "外壁", items: [{ label: "", value: "塗装：セラミックシリコン樹脂塗装 ●タイル：石目調タイル" }] },
-  { part: "基礎立上り", items: [{ label: "", value: "モルタル仕上 色：外壁色に準ずる" }] },
+  {
+    part: "外壁",
+    items: [
+      {
+        label: "",
+        value: "塗装：セラミックシリコン樹脂塗装 ●タイル：石目調タイル",
+      },
+    ],
+  },
+  {
+    part: "基礎立上り",
+    items: [{ label: "", value: "モルタル仕上 色：外壁色に準ずる" }],
+  },
   { part: "目地", items: [{ label: "", value: "シーリング材：ウレタン系" }] },
-  { part: "開口部", items: [
-    { label: "出入口", value: "アルミ製 断熱サッシ" },
-    { label: "玄関ドア", value: "防火戸 断熱仕様" },
-    { label: "窓", value: "アルミ製 断熱サッシ Low-E複層ガラス" },
-    { label: "MB/PS", value: "アルミ製" },
-  ]},
-  { part: "外構", items: [
-    { label: "アプローチ床", value: "磁器質タイル" },
-    { label: "犬走り", value: "コンクリート仕上" },
-    { label: "塀", value: "タイル貼り" },
-    { label: "共用水栓", value: "ステンレス製" },
-  ]},
-  { part: "その他", items: [
-    { label: "館銘板", value: "ステンレス製" },
-    { label: "管理者連絡表示板", value: "樹脂製" },
-    { label: "避難器具", value: "—" },
-    { label: "物干金物", value: "ステンレス製" },
-    { label: "消火器", value: "各階設置" },
-  ]},
+  {
+    part: "開口部",
+    items: [
+      { label: "出入口", value: "アルミ製 断熱サッシ" },
+      { label: "玄関ドア", value: "防火戸 断熱仕様" },
+      { label: "窓", value: "アルミ製 断熱サッシ Low-E複層ガラス" },
+      { label: "MB/PS", value: "アルミ製" },
+    ],
+  },
+  {
+    part: "外構",
+    items: [
+      { label: "アプローチ床", value: "磁器質タイル" },
+      { label: "犬走り", value: "コンクリート仕上" },
+      { label: "塀", value: "タイル貼り" },
+      { label: "共用水栓", value: "ステンレス製" },
+    ],
+  },
+  {
+    part: "その他",
+    items: [
+      { label: "館銘板", value: "ステンレス製" },
+      { label: "管理者連絡表示板", value: "樹脂製" },
+      { label: "避難器具", value: "—" },
+      { label: "物干金物", value: "ステンレス製" },
+      { label: "消火器", value: "各階設置" },
+    ],
+  },
 ];
 
 function CopyBlock({ children, delay = 0, className = "" }) {
   return (
     <div className={`overflow-hidden ${className}`}>
-      <Copy animateOnScroll delay={delay}>{children}</Copy>
+      <Copy animateOnScroll delay={delay}>
+        {children}
+      </Copy>
     </div>
   );
 }
@@ -198,11 +448,15 @@ function OverviewTable({ t }) {
           </tr>
           <tr>
             <Th>{l("coverage")}</Th>
-            <Td colSpan={4}>80%（指定）100.00%（許容）（準防火地域内の耐火建築物）</Td>
+            <Td colSpan={4}>
+              80%（指定）100.00%（許容）（準防火地域内の耐火建築物）
+            </Td>
           </tr>
           <tr>
             <Th>{l("far")}</Th>
-            <Td colSpan={4}>500%（指定）320.00%（許容）（道路幅員 4m × 0.8）</Td>
+            <Td colSpan={4}>
+              500%（指定）320.00%（許容）（道路幅員 4m × 0.8）
+            </Td>
           </tr>
           <tr>
             <Th>{l("heightDistrict")}</Th>
@@ -262,7 +516,8 @@ function OverviewTable({ t }) {
           <tr>
             <LabelCell>{l("developer")}</LabelCell>
             <Td colSpan={5}>
-              東京都目黒区目黒2-10-11 目黒山手プレイス4階／株式会社明豊エンタープライズ
+              東京都目黒区目黒2-10-11
+              目黒山手プレイス4階／株式会社明豊エンタープライズ
             </Td>
           </tr>
         </tbody>
@@ -312,11 +567,15 @@ function FloorPlanSection({ t }) {
                             {unit.type}
                           </span>
                         </Td>
-                        <Td className="text-center font-medium">{unit.layout}</Td>
+                        <Td className="text-center font-medium">
+                          {unit.layout}
+                        </Td>
                         <Td className="text-center">{unit.rooms}</Td>
                         <Td className="text-center">
                           {unit.area}
-                          <span className="text-gray-500">（{unit.tsubo}）</span>
+                          <span className="text-gray-500">
+                            （{unit.tsubo}）
+                          </span>
                         </Td>
                       </tr>
                     ))}
@@ -341,7 +600,10 @@ function InteriorFinishSection({ t }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-16 md:py-20" style={{ backgroundColor: BEIGE }}>
+    <section
+      className="px-6 md:px-10 lg:px-16 py-16 md:py-20"
+      style={{ backgroundColor: BEIGE }}
+    >
       <div className="mx-auto max-w-[1200px]">
         <SectionHeading
           title={t("interior.title")}
@@ -352,7 +614,13 @@ function InteriorFinishSection({ t }) {
           <table className="w-full min-w-[900px] border-collapse">
             <thead>
               <tr>
-                <Th rowSpan={2}>{l("part")}<br /><span className="text-[10px] font-light">{l("roomName")}</span></Th>
+                <Th rowSpan={2}>
+                  {l("part")}
+                  <br />
+                  <span className="text-[10px] font-light">
+                    {l("roomName")}
+                  </span>
+                </Th>
                 <Th colSpan={2}>{l("floor")}</Th>
                 <Th>{l("baseboard")}</Th>
                 <Th colSpan={2}>{l("wall")}</Th>
@@ -379,7 +647,9 @@ function InteriorFinishSection({ t }) {
                   <Td className="text-center">{row.wall}</Td>
                   <Td className="text-center text-gray-500">{row.wallSub}</Td>
                   <Td className="text-center">{row.ceiling}</Td>
-                  <Td className="text-center text-gray-500">{row.ceilingSub}</Td>
+                  <Td className="text-center text-gray-500">
+                    {row.ceilingSub}
+                  </Td>
                   <Td className="text-center">{row.height}</Td>
                 </tr>
               ))}
@@ -411,7 +681,10 @@ function EquipmentSection({ t }) {
               >
                 {row.part}
               </div>
-              <CopyBlock delay={index * 0.03} className="px-4 py-4 md:py-5 md:px-6">
+              <CopyBlock
+                delay={index * 0.03}
+                className="px-4 py-4 md:py-5 md:px-6"
+              >
                 <p className="m-0 text-xs md:text-[13px] leading-[2] text-gray-700">
                   {row.spec}
                 </p>
@@ -428,7 +701,10 @@ function ExteriorFinishSection({ t }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-32" style={{ backgroundColor: BEIGE }}>
+    <section
+      className="px-6 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-32"
+      style={{ backgroundColor: BEIGE }}
+    >
       <div className="mx-auto max-w-[1100px]">
         <SectionHeading
           title={t("exterior.title")}
@@ -437,7 +713,10 @@ function ExteriorFinishSection({ t }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {EXTERIOR_ROWS.map((group, gi) => (
-            <div key={group.part} className="bg-white border border-gray-200 shadow-sm overflow-hidden">
+            <div
+              key={group.part}
+              className="bg-white border border-gray-200 shadow-sm overflow-hidden"
+            >
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
@@ -449,11 +728,15 @@ function ExteriorFinishSection({ t }) {
                   {group.items.map((item, ii) => (
                     <tr key={ii}>
                       {ii === 0 ? (
-                        <LabelCell rowSpan={group.items.length}>{group.part}</LabelCell>
+                        <LabelCell rowSpan={group.items.length}>
+                          {group.part}
+                        </LabelCell>
                       ) : null}
                       <Td>
                         {item.label && (
-                          <span className="text-gray-500 mr-1">{item.label}：</span>
+                          <span className="text-gray-500 mr-1">
+                            {item.label}：
+                          </span>
                         )}
                         {item.value}
                       </Td>
@@ -482,10 +765,57 @@ export default function PropertySummaryPage() {
 
   return (
     <div className="relative w-full overflow-x-hidden font-sans text-gray-800 bg-white">
-      <main className="pt-20 md:pt-24">
+      <style jsx global>{`
+        @keyframes waveSlow {
+          0% {
+            transform: translateX(0) scaleY(1);
+          }
+          50% {
+            transform: translateX(-25%) scaleY(0.8);
+          }
+          100% {
+            transform: translateX(-50%) scaleY(1);
+          }
+        }
+        @keyframes waveMid {
+          0% {
+            transform: translateX(0) scaleY(1);
+          }
+          50% {
+            transform: translateX(-15%) scaleY(1.1);
+          }
+          100% {
+            transform: translateX(-30%) scaleY(1);
+          }
+        }
+        @keyframes waveFast {
+          0% {
+            transform: translateX(0) scaleY(1);
+          }
+          50% {
+            transform: translateX(-20%) scaleY(0.9);
+          }
+          100% {
+            transform: translateX(-40%) scaleY(1);
+          }
+        }
+        .animate-wave-slow {
+          animation: waveSlow 15s linear infinite;
+          transform-origin: bottom;
+        }
+        .animate-wave-mid {
+          animation: waveMid 10s linear infinite;
+          transform-origin: bottom;
+        }
+        .animate-wave-fast {
+          animation: waveFast 8s linear infinite;
+          transform-origin: bottom;
+        }
+      `}</style>
+      <main className="bg-[#0d417b] pt-20">
         {/* Hero & intro images */}
         <section className="w-full">
-          <div className="relative w-full aspect-[16/7] md:aspect-[21/7]">
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/7]">
             <Image
               src={HERO_IMAGE}
               alt={t("heroAlt")}
@@ -496,15 +826,15 @@ export default function PropertySummaryPage() {
             />
           </div>
 
-          <div className="relative w-full">
+          <div className="relative w-full bg-[#0d417b] pb-20">
             <Image
               src={INTRO_IMAGE_02}
               alt={t("intro.image02Alt")}
               width={1920}
               height={1080}
-              className="w-full h-auto"
-              sizes="100vw"
+              className="w-[500px] mx-auto h-auto"
             />
+            <WaveDivider />
           </div>
 
           <div className="px-6 md:px-10 lg:px-16 py-12 md:py-16 bg-white">
@@ -522,21 +852,23 @@ export default function PropertySummaryPage() {
             </div>
           </div>
 
-          <div className="relative w-full">
+          <div className="relative w-full bg-[#0d417b] ">
             <Image
               src={INTRO_IMAGE_03}
               alt={t("intro.image03Alt")}
               width={1920}
               height={1080}
-              className="w-full h-auto"
-              sizes="100vw"
+              className="w-[500px] mx-auto h-auto"
             />
           </div>
         </section>
 
         {/* Section 1: Overview table — split background */}
         <section className="relative">
-          <div className="absolute inset-0 flex flex-col pointer-events-none" aria-hidden>
+          <div
+            className="absolute inset-0 flex flex-col pointer-events-none"
+            aria-hidden
+          >
             <div className="h-1/2" style={{ backgroundColor: NAVY }} />
             <div className="h-1/2" style={{ backgroundColor: BEIGE }} />
           </div>
@@ -577,8 +909,19 @@ export default function PropertySummaryPage() {
         className="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-opacity hover:opacity-80"
         style={{ backgroundColor: NAVY }}
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5" aria-hidden>
-          <path d="M12 19V5M5 12l7-7 7 7" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="h-5 w-5"
+          aria-hidden
+        >
+          <path
+            d="M12 19V5M5 12l7-7 7 7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
     </div>
