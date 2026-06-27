@@ -92,11 +92,15 @@ export default function Footer() {
   const t = useTranslations("footer");
   const navT = useTranslations("nav");
   const footerNav = navT.raw("items");
+  const storyNavItem = footerNav[8];
   const navColumns = [
     footerNav.slice(0, 4),
     footerNav.slice(4, 7),
     footerNav.slice(7, 10),
   ];
+  const storyHref = storyNavItem?.href
+    ? getLocalizedPath(storyNavItem.href, currentLocale)
+    : getLocalizedPath("/story", currentLocale);
 
   const { address, taipeiPhoneDisplay, email, corporateUrl, license } =
     siteConfig;
@@ -182,9 +186,18 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-start md:items-end gap-4 md:ml-auto">
-            <div className="w-16 h-16 md:w-20 md:h-20 border border-white/30 flex items-center justify-center">
-              <span className="block w-[70%] h-px bg-white/50 rotate-45 origin-center" />
-            </div>
+            <Link
+              href={storyHref}
+              className="block overflow-hidden border border-white/30 hover:border-white/50 transition-colors duration-300"
+            >
+              <Image
+                src="/images/story/news3-1280x850.png"
+                alt={storyNavItem?.label ?? t("brand")}
+                width={128}
+                height={85}
+                className="w-20 md:w-24 h-auto object-cover"
+              />
+            </Link>
             <div className="flex flex-col items-start md:items-end gap-1">
               <Image
                 src={siteConfig.logo}

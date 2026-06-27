@@ -444,12 +444,14 @@ export default function AmenitiesPage() {
 
       <main>
         {/* Hero */}
-        <section className="relative w-full z-10">
-          <img
-            src="/images/amenities/c282249a-d722-45f4-95d5-03e6a1bb9f52.png"
-            alt={t("hero.imageAlt")}
-            className="w-full block"
-          />
+        <section className="relative z-10 h-[85vh] w-full">
+          <div className="absolute inset-0 overflow-hidden">
+            <img
+              src="/images/index/03.png"
+              alt={t("hero.imageAlt")}
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
           <WaveDivider />
         </section>
 

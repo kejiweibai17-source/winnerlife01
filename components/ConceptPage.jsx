@@ -5,15 +5,18 @@ import { useTranslations } from "next-intl";
 import HeroSlider from "./HeroSlider/page";
 
 const MARQUEE_IMAGES = [
-  "/images/concept/9adca514-b1df-4095-b86e-8ceaed137441.png",
-  "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
-  "/images/concept/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+  "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+  "/images/index/周邊.png",
+  "/images/index/白金アエルシティ.png",
+  "/images/index/東京都済生会中央病院.png",
+  "/images/index/芝公園.png",
+  "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
 ];
 
 const SURROUNDING_IMAGES = [
-  "https://monarchitects.jp/wp-content/uploads/2026/04/%E3%81%8A%E4%B8%B8%E5%B1%B1%E3%83%9B%E3%83%86%E3%83%AB%E5%AE%A2%E5%AE%A4eye-catch01-690x460.jpg",
-  "https://monarchitects.jp/wp-content/uploads/2026/04/%E5%94%90%E6%B2%A2%E3%82%B4%E3%83%AB%E3%83%9501-690x460.jpg",
-  "https://monarchitects.jp/wp-content/uploads/2025/11/SavortheMatcha-1-690x460.jpg",
+  "/images/index/01.png",
+  "/images/index/02.png",
+  "/images/index/03.png",
 ];
 
 function Paragraph({ text }) {
@@ -40,13 +43,12 @@ export default function ConceptPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const marqueeRow1 = [...Array(2)]
-    .flatMap(() =>
-      marqueeItems.map((item, index) => ({
-        ...item,
-        src: MARQUEE_IMAGES[index],
-      })),
-    );
+  const marqueeRow1 = [...Array(2)].flatMap(() =>
+    MARQUEE_IMAGES.map((src, index) => ({
+      ...marqueeItems[index % marqueeItems.length],
+      src,
+    })),
+  );
 
   const marqueeRow2 = marqueeRow1;
 
@@ -247,19 +249,12 @@ export default function ConceptPage() {
             </p>
           </div>
 
-          <div className="w-full max-w-5xl shadow-2xl relative">
+          <div className="w-full max-w-5xl shadow-2xl">
             <img
-              src="/images/index/slider03.png"
+              src="/images/index/c2de02b1-7105-4795-ab74-c45b00505a7b.png"
               alt="Area Map"
               className="w-full h-auto object-cover"
             />
-            <div className="absolute top-[60%] right-[25%] bg-red-600 w-12 h-16 md:w-20 md:h-24 opacity-90 shadow-lg border border-white" />
-            <div className="absolute top-[52%] right-[22%] bg-[#182848] text-white text-[10px] md:text-sm px-3 py-2 shadow-lg tracking-wider font-serif">
-              {t("canalGreen.mapLabelLine1")}
-              <br />
-              {t("canalGreen.mapLabelLine2")}
-              <div className="absolute -bottom-2 left-10 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-[#182848]" />
-            </div>
           </div>
         </section>
 

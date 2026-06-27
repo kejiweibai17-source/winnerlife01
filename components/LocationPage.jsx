@@ -224,7 +224,7 @@ export default function LocationPage() {
         <section className="relative z-10 h-[85vh] w-full">
           <div className="absolute inset-0 overflow-hidden">
             <img
-              src="/images/location/location-01.png"
+              src="/images/index/c2de02b1-7105-4795-ab74-c45b00505a7b.png"
               alt={t("heroAlt")}
               className="h-full w-full object-cover object-center"
             />

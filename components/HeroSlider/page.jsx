@@ -8,7 +8,10 @@ import { CustomEase } from "gsap/CustomEase";
 
 gsap.registerPlugin(CustomEase);
 
-const imagePaths = ["/images/concept/001.png", "/images/concept/002.png"];
+const imagePaths = [
+  "/images/story/152f7e88-f8c2-47bb-bfa4-38ba3cca70de.png",
+  "/images/index/cd78a1ca-c3db-4c12-a8b2-413e62181b4f.png",
+];
 
 const SliderInner = () => {
   const t = useTranslations("concept.heroSlider");

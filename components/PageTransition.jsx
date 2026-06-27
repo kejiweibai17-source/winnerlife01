@@ -109,7 +109,8 @@ export default function PageTransition({ children }) {
   useEffect(() => {
     const handleClick = (event) => {
       if (event.defaultPrevented) return;
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
 
       const anchor = event.target.closest("a");
       if (!anchor) return;

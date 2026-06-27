@@ -95,6 +95,7 @@ export default function Header() {
   };
 
   const homeHref = getLocalizedPath("/", currentLocale);
+  const contactHref = getLocalizedPath("/contact", currentLocale);
 
   function NavLink({ item, className = "", onClick }) {
     const href = item.href
@@ -280,13 +281,13 @@ export default function Header() {
                   </button>
                 </div>
                 <Link
-                  href="#"
+                  href={contactHref}
                   className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-white/30 transition text-center"
                 >
                   {t("download")}
                 </Link>
                 <Link
-                  href="#"
+                  href={contactHref}
                   className="w-full sm:w-auto bg-[#4fb8b3] text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-[#3ea09b] transition text-center"
                 >
                   {t("reserve")}

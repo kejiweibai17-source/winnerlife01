@@ -114,12 +114,14 @@
         ]
       },
       {
-        "caseNumber": "白金高輪",
-        "role": "SHIROKANE TAKANAWA",
-        "name": "大規模重建開發進行中，街區機能全面更新",
-        "description": "承繼歷史與品格的白金高輪，正以整體街區機能更新為契機，迎向全新的演進階段。住宅整備之外，商業設施、餐飲店、辦公室、生活便利設施均有計劃性地整合導入，打造工作、生活、休憩皆可就近完成的都市環境。持續孕育價值的街區，正是白金高輪。",
-        "blockTitle": "智慧宅．從容生活，IoT 導入讓每天更安心",
-        "blockDesc": "用智慧遙控打造舒適空間，自動開關與居家安全管理讓生活更安心。可集中控制燈光與家電的多功能按鍵、一鍵打造舒適生活的智慧照明、可遠端通話的智慧攝影機，更支援語音控制家電與住宅設備。使用手機即可輕鬆控制窗簾與百葉窗，多種 IoT 設備整合，為您的每一天省時提效，成就真正有餘裕的理想生活。"
+        "caseNumber": "EL FARO+",
+        "role": "東京港區・品川生活圈",
+        "name": "東京港區水岸生活，即刻入席",
+        "description": "白金高輪質感 × 品川生活圈 × 運河景觀\n都心之中，留一席水岸從容",
+        "blockTitle": "白金高輪 × 品川 × 運河水岸",
+        "blockDesc": "這裡是東京港區中少見的平衡點。\n一面享有白金高輪的沉穩街廓與都心質感，一面銜接品川區域的交通、商業與再開發動能。日常採買、通勤、機場往返與休閒散步，都能在自然流暢的生活半徑中完成。當城市機能與運河景觀在此交會，生活也多了一份東京少有的開闊與安定。",
+        "featuredTag": "探索品川生活圈",
+        "btnLabel": "預約賞屋"
       }
     ]
   },
@@ -146,7 +148,8 @@
       { "label": "物件概要", "href": "/summary" },
       { "label": "室內情境", "href": "/interior" },
       { "label": "設備家電與保全系統", "href": "/equipment" },
-      { "label": "品牌故事", "href": "/story" }
+      { "label": "品牌故事", "href": "/story" },
+      { "label": "聯絡我們", "href": "/contact" }
     ],
     "menu": "Menu",
     "close": "Close",
@@ -233,7 +236,7 @@
     "heroSlider": {
       "slides": [
         {
-          "title": "白金高輪運河住宅",
+          "title": "白金高輪低密度住宅",
           "description": "盡情享受品川核心生活圈的居住體驗"
         },
         {
@@ -2098,6 +2101,195 @@
           "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪的保全設施、室內規劃與投資置產資訊。"
         }
       ]
+    }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "聯絡我們・說明會報名｜EL FARO+ 白金高輪",
+      "description": "忠訓地產 EL FARO+ 白金高輪日本置產說明會—北中南巡迴加開。深入解析東京港區房市、法規稅制與投資趨勢，現正受理說明會報名、房源登記與樣品屋參觀預約。",
+      "keywords": ["EL FARO+", "白金高輪", "日本置產", "說明會", "忠訓地產", "品川", "預約賞屋"],
+      "ogImage": "/images/index/運河.png",
+      "ogImageAlt": "EL FARO+ 白金高輪 日本置產說明會"
+    },
+    "breadcrumb": {
+      "home": "首頁",
+      "current": "聯絡我們"
+    },
+    "hero": {
+      "eyebrow": "▁ ▂ ▃ 忠訓地產 ◭ EL FARO+ 白金高輪 ▃ ▂ ▁",
+      "title": "日本房產投資說明會",
+      "watermark": "TOKYO LIVING",
+      "highlights": [
+        "門檻清晰，海外投資人可依法規劃日本不動產",
+        "品川・港區核心地段，長期居住與租賃需求穩定",
+        "233戶運河水岸住宅，ALSOK 保全與智慧設備完備"
+      ],
+      "ctaPrimary": "立即報名",
+      "ctaLine": "LINE 一對一諮詢",
+      "tickerLabel": "NEWS",
+      "tickerText": "⇝ 北中南巡迴說明會火熱加開！名額有限，報名從速 ⇜"
+    },
+    "intro": {
+      "watermark": "PHILOSOPHY",
+      "title": "深入解析東京港區最新動態與投資趨勢",
+      "paragraphs": [
+        "涵蓋日本不動產法規、稅制與持有成本等重點資訊，協助您掌握 EL FARO+ 白金高輪的入手時機，規劃資產佈局、分散風險。",
+        "說明會採預約報名制，座席有限。由忠訓地產專業團隊現場解析建案定位、交通生活圈、設備規格與海外置產流程。"
+      ],
+      "urgency": "🤎 說明會採預約報名制，座席有限",
+      "cta": "立即報名"
+    },
+    "regions": {
+      "label": "LOCATION",
+      "heading": "發展成熟、交通便利的東京核心",
+      "subheading": "西東京：品川・港區 — 兼具自住品質與長期資產價值的都心標的",
+      "cta": "立即報名",
+      "items": [
+        {
+          "tag": "MINATO · SHIROKANE-TAKANAWA",
+          "title": "白金高輪｜運河水岸的穩健型資產",
+          "subtitle": "233戶大型住宅，南向運河開闊視野，Urban Classic 建築美學",
+          "image": "/images/index/運河.png",
+          "points": [
+            "品川・港區再開發帶動，周邊機能持續升級",
+            "三站五線交通動線，羽田成田直達便利",
+            "ALSOK 全棟保全，智慧家居設備完整",
+            "兼具自住、出租與中長期資產配置的基石標的"
+          ],
+          "propertiesLabel": "╭。✧ 建案亮點 ✧。╮",
+          "properties": [
+            "EL FARO+ 白金高輪｜233戶運河水岸",
+            "品川・天王洲生活圈｜ALSOK 保全",
+            "Urban Classic 外觀｜智慧設備完備"
+          ]
+        },
+        {
+          "tag": "SHINAGAWA · ACCESS",
+          "title": "品川生活圈｜都心樞紐的成長動能",
+          "subtitle": "新幹線・リニア開發題材，商業與租賃市場成熟",
+          "image": "/images/location/location-01.png",
+          "points": [
+            "品川站為東京交通樞紐，通勤與商務需求穩定",
+            "リニア中央新幹線題材，強化長期資產想像",
+            "港區國際氛圍，外籍與高端租屋族群多元",
+            "適合追求現金流穩定與資本增值的投資策略"
+          ],
+          "propertiesLabel": "╭。✧ 生活機能 ✧。╮",
+          "properties": [
+            "白金高輪・三田・田町 三站生活圈",
+            "慶應義塾大學文教區",
+            "天王洲・品川商業設施"
+          ]
+        }
+      ]
+    },
+    "reasons": {
+      "heading": "海外置產首選【忠訓地產】",
+      "subheading": "嚴選東京黃金物件 · 宜居宜投資",
+      "cta": "即刻行動",
+      "items": [
+        "知名建商物件，EL FARO+ 白金高輪全案代銷",
+        "宜居宜投資，233戶大型社區完整規劃",
+        "專業團隊奧援，提供完整置產財務規劃建議",
+        "掌握法規與市場資訊，讓您安穩投資日本不動產"
+      ]
+    },
+    "seminars": {
+      "label": "SEMINAR",
+      "heading": "【日本｜房產投資說明會】",
+      "note": "各場次內容依地域略有調整，報名後將由專人確認場次與連線資訊。",
+      "sessions": [
+        {
+          "label": "綜合說明會",
+          "title": "EL FARO+ 白金高輪 置產說明會 — 台北",
+          "image": "/images/concept/001.png",
+          "dates": ["» 忠訓地產會議廳 14:00 開始", "｜6/24（三）", "｜6/25（四）"],
+          "ctaAria": "報名台北場"
+        },
+        {
+          "label": "品川生活圈專場",
+          "title": "品川・港區投資專場 — 台中",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": ["» 忠訓台中分部", "｜6/26（五）14:00 開始"],
+          "ctaAria": "報名台中場"
+        },
+        {
+          "label": "運河水岸專場",
+          "title": "運河水岸資產配置說明會 — 台南｜高雄",
+          "image": "/images/index/wall/共用空間.png",
+          "dates": ["» 台南 TCCC 文創訓練中心 ｜6/27（六）14:00", "» 高雄 TCCC 文創訓練中心 ｜6/28（日）14:00"],
+          "ctaAria": "報名台南高雄場"
+        }
+      ]
+    },
+    "venues": {
+      "heading": "— 活動場地 —",
+      "linePrefix": "點擊連結加入",
+      "lineLink": "忠訓地產 LINE 官方帳號",
+      "lineSuffix": "一對一諮詢",
+      "items": [
+        {
+          "city": "【台北場地址】",
+          "address": "📍 忠訓地產會議廳\n台北市南京東路四段1號4樓"
+        },
+        {
+          "city": "【台中場地址】",
+          "address": "📍 忠訓集團（台中・中港經貿大樓）\n台中市台灣大道二段573號11樓E室"
+        },
+        {
+          "city": "【台南場地址】",
+          "address": "📍 TCCC 文創訓練中心・台南擎天館\n台南市東區中華東路二段77號9樓之3"
+        },
+        {
+          "city": "【高雄場地址】",
+          "address": "📍 TCCC 文創訓練中心・高雄信義館\n高雄市苓雅區中正二路175號13樓之3"
+        }
+      ]
+    },
+    "form": {
+      "label": "REGISTRATION",
+      "heading": "說明會報名表單",
+      "note": "請填寫以下資料，我們將於一個工作天內與您聯繫確認場次。",
+      "name": "您的大名",
+      "salutation": "稱謂",
+      "session": "欲報名場次",
+      "sessionHint": "＊因地域不同，確認後將提供對應場次資訊",
+      "region": "所在區域",
+      "regionHint": "＊方便安排顧問與您聯繫",
+      "guests": "報名人數",
+      "phone": "聯絡電話",
+      "phoneHint": "建議留下手機號碼，字元上限 10 碼",
+      "contactTime": "方便聯繫時段",
+      "email": "電子郵件（Email）",
+      "remarks": "其他備註事項",
+      "remarksHint": "建議可留下 LINE ID，方便通知說明會相關事宜",
+      "submit": "送出報名資料",
+      "selectPlaceholder": "請選擇",
+      "backHome": "返回首頁",
+      "errorRequired": "請填寫所有必填欄位",
+      "errorPhone": "手機號碼請輸入 10 碼以內",
+      "successTitle": "感謝您的報名",
+      "successBody": "已為您開啟郵件程式，請確認寄出；我們也將盡快以電話或 LINE 與您聯繫。",
+      "mailSubject": "【{project}】說明會報名",
+      "mailName": "姓名",
+      "mailSalutation": "稱謂",
+      "mailSession": "報名場次",
+      "mailRegion": "所在區域",
+      "mailGuests": "人數",
+      "mailPhone": "電話",
+      "mailTime": "聯繫時段",
+      "mailEmail": "Email",
+      "mailNote": "備註",
+      "mailFooter": "— 由 EL FARO+ 白金高輪官網表單送出",
+      "sessionOptions": [
+        { "value": "taipei", "label": "【東京港區置產說明會】— 台北" },
+        { "value": "taichung", "label": "【品川生活圈投資專場】— 台中" },
+        { "value": "south", "label": "【運河水岸資產配置說明會】— 台南｜高雄" },
+        { "value": "viewing", "label": "【樣品屋參觀・一對一諮詢】— 另約時間" }
+      ],
+      "regionOptions": ["台北", "新北", "桃園", "台中", "台南", "高雄", "其他"],
+      "salutationOptions": ["先生", "女士", "小姐", "其他"],
+      "timeOptions": ["上午 10:00–12:00", "下午 14:00–17:00", "晚上 18:00–20:00", "皆可"]
     }
   }
 }

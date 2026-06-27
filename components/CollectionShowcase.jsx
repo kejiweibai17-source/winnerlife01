@@ -59,6 +59,8 @@ export default function CollectionShowcase() {
       image: CASE_IMAGES[1],
       blockTitle: t("cases.1.blockTitle"),
       blockDesc: t("cases.1.blockDesc"),
+      featuredTag: t("cases.1.featuredTag"),
+      btnLabel: t("cases.1.btnLabel"),
       bigImage: CASE_BIG_IMAGE,
     },
   ];
@@ -122,7 +124,7 @@ export default function CollectionShowcase() {
                 </p>
                 <div className="mt-6 inline-block border border-gray-300 rounded-full px-5 py-1.5">
                   <span className="text-[9px] font-bold tracking-[0.15em] text-gray-600 uppercase">
-                    {t("tagFeatured")}
+                    {item.featuredTag ?? t("tagFeatured")}
                   </span>
                 </div>
               </div>
@@ -173,7 +175,7 @@ export default function CollectionShowcase() {
                   {item.description}
                 </p>
                 <div className="bg-[#fd4e27] text-white border border-white text-[10px] font-bold tracking-[0.2em] uppercase px-12 py-4 hover:bg-white hover:text-black transition-colors duration-300">
-                  {t("btnReadMore")}
+                  {item.btnLabel ?? t("btnReadMore")}
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ const NAVY = "#0d417b";
 const BEIGE = "#dad5d0";
 const TH_BG = "#555555";
 const HERO_IMAGE = "/images/summary/物件概要01.png";
-const INTRO_IMAGE_02 = "/images/summary/物件概要02.png";
+const INTRO_IMAGE_02 = "/images/company-logo.svg";
 const INTRO_IMAGE_03 = "/images/summary/物件概要03.png";
 
 function WaveDivider() {

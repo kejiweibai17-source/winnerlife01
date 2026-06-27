@@ -11,6 +11,7 @@ import HomeBottomPromo from "./HomeBottomPromo";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { homeSitelinks } from "@/lib/site";
+import { getLocalizedPath } from "@/lib/locale-path";
 
 const CARD_IMAGES = [
   "/images/index/grid-02.png",
@@ -24,6 +25,7 @@ export default function HomePage() {
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
   const siteNavLinks = homeSitelinks[locale];
+  const contactHref = getLocalizedPath("/contact", locale);
 
   const cards = CARD_IMAGES.map((image, i) => ({
     id: i + 1,
@@ -53,7 +55,7 @@ export default function HomePage() {
 
             <div className="flex flex-col gap-6">
               <Link
-                href="#"
+                href={contactHref}
                 className="group bg-[#16294d] text-white p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 hover:bg-[#203968] transition-colors duration-300"
               >
                 <div className="flex items-center gap-4 w-full sm:w-1/3 shrink-0">
@@ -81,7 +83,7 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="#"
+                href={contactHref}
                 className="group bg-[#b29759] text-white p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 hover:bg-[#c7ab6b] transition-colors duration-300"
               >
                 <div className="flex items-center gap-4 w-full sm:w-1/3 shrink-0">

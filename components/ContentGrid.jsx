@@ -51,7 +51,7 @@ const gridMeta = [
   {
     id: 3,
     href: "/architecture",
-    bgImage: "/images/index/wall/建築設計.png",
+    bgImage: "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
     maskFrom: "rgba(15,10,50,0.90)",
     maskVia: "rgba(35,20,90,0.55)",
     maskTo: "rgba(55,30,110,0.18)",
@@ -83,6 +83,7 @@ const gridMeta = [
   {
     id: 10,
     href: "/story",
+    bgImage: "/images/story/news3-1280x850.png",
     maskFrom: "rgba(0,10,40,0.92)",
     maskVia: "rgba(0,30,80,0.55)",
     maskTo: "rgba(0,55,120,0.18)",

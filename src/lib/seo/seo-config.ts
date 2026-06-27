@@ -49,4 +49,9 @@ export const seoPageConfigs = {
     zhPath: "/story",
     jpPath: "/jp/developer",
   },
+  contact: {
+    messageKey: "contactPage",
+    zhPath: "/contact",
+    jpPath: "/jp/contact",
+  },
 } as const satisfies Record<string, PageSeoConfig>;
