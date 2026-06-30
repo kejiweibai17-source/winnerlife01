@@ -260,17 +260,6 @@ export default function LocationPage() {
               ))}
             </div>
           </div>
-          <div className="relative z-10 w-full">
-            <img
-              src="/images/location/location-02.png"
-              alt={t("intro.waterfrontAlt")}
-              width={1920}
-              height={800}
-              className="w-full"
-              loading="eager"
-              decoding="async"
-            />
-          </div>
         </section>
 
         <LocationDesignSections />
@@ -356,16 +345,6 @@ export default function LocationPage() {
                 </p>
               </Copy>
             </div>
-          </div>
-          <div className="relative order-1 h-full min-h-[280px] sm:min-h-[360px] lg:order-2 lg:min-h-[520px]">
-            <Image
-              src="/images/location/location-02.png"
-              alt={t("geo.imageAlt")}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
           </div>
         </section>
 

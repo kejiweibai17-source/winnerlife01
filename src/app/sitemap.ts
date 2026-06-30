@@ -32,6 +32,7 @@ const marketingPaths = [
   "/jp/developer",
   "/contact",
   "/jp/contact",
+  "/landing-page-01",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

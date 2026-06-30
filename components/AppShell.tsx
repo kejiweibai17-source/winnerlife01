@@ -18,6 +18,7 @@ export default function AppShell({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const isLandingPage = pathname.startsWith("/landing-page-01");
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
   const messages = isJp ? jpMessages : zhMessages;
@@ -30,14 +31,24 @@ export default function AppShell({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ReactLenis
         root
-        options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}
+        options={
+          isLandingPage
+            ? {
+                lerp: 0.055,
+                duration: 1.35,
+                smoothWheel: true,
+                wheelMultiplier: 1,
+                touchMultiplier: 1.15,
+              }
+            : { lerp: 0.08, duration: 1.2, smoothWheel: true }
+        }
       >
         <ScrollToTopOnNavigate />
-        <Nav />
+        {!isLandingPage && <Nav />}
         <PageTransition>{children}</PageTransition>
       </ReactLenis>
-      <ContentGrid />
-      <Footer />
+      {!isLandingPage && <ContentGrid />}
+      {!isLandingPage && <Footer />}
     </NextIntlClientProvider>
   );
 }
