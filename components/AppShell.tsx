@@ -11,6 +11,10 @@ import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
 import ScrollToTopOnNavigate from "./ScrollToTopOnNavigate";
 import PageTransition from "./PageTransition";
+import {
+  landingPage01Path,
+  legacyLandingPage01Path,
+} from "@/lib/landing-page-01-path";
 
 export default function AppShell({
   children,
@@ -18,7 +22,9 @@ export default function AppShell({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const isLandingPage = pathname.startsWith("/landing-page-01");
+  const isLandingPage =
+    pathname.startsWith(landingPage01Path) ||
+    pathname.startsWith(legacyLandingPage01Path);
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
   const messages = isJp ? jpMessages : zhMessages;

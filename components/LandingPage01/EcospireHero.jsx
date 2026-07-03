@@ -221,7 +221,13 @@ export default function EcospireHero() {
 
           <div ref={foregroundRef} className="lp-eco-foreground">
             <div ref={mountainsRef} className="lp-eco-foreground-image">
-              <img src={ECOSPIRE_HERO.foreground} alt="" loading="lazy" />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcSet={ECOSPIRE_HERO.foregroundMobile}
+                />
+                <img src={ECOSPIRE_HERO.foreground} alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site";
+import { landingPage01Path } from "@/lib/landing-page-01-path";
 
-export const landingPage01Path = "/landing-page-01";
+export { landingPage01Path } from "@/lib/landing-page-01-path";
 
 export const landingPage01OgImage = "/images/landing-page/質感生活圈.png";
 

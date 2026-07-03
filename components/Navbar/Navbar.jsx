@@ -132,20 +132,18 @@ export default function Header() {
             )`,
           }}
         />
-        <div className="relative flex items-center justify-between px-6 py-5 md:px-10 pointer-events-auto">
+        <div className="relative flex items-center justify-between px-6 py-3 md:px-10 md:py-4 pointer-events-auto">
           {/* 左側 Logo */}
           <div className="w-[20%] shrink-0">
-            <Link href={homeHref} className="z-50 flex items-center gap-2 group">
+            <Link href={homeHref} className="z-50 flex items-center group">
               <Image
-                src="/images/js_logo_h1.png"
-                width={130}
-                height={70}
-                className="w-[120px]"
+                src="/images/company-logo.svg"
+                alt="忠訓地產"
+                width={260}
+                height={65}
+                className="h-[2.75rem] sm:h-[3rem] md:h-[3.25rem] w-auto"
                 priority
               />
-              <span className="text-[10px] mt-3 tracking-widest hidden md:block mb-1 opacity-80">
-                PREMIUM MIDSIZE OFFICE
-              </span>
             </Link>
           </div>
 
@@ -159,7 +157,7 @@ export default function Header() {
           </div>
 
           <div className="flex w-[20%] shrink-0 justify-end items-center">
-            <div className="flex items-center gap-1 mr-8 text-[11px] tracking-widest">
+            <div className="hidden md:flex items-center gap-1 mr-8 text-[11px] tracking-widest">
               <button
                 onClick={() => switchLocale("zh")}
                 className={`px-3 py-1 rounded-full transition-all duration-200 ${

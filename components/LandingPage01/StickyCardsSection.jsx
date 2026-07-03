@@ -100,7 +100,6 @@ function IntroPanel({ intro }) {
           </span>
         ))}
       </h2>
-      <span className="lp-sc-intro-rule" aria-hidden="true" />
       <p className="lp-sc-intro-tags">{intro.tags}</p>
       <p className="lp-sc-intro-sub">{intro.sub}</p>
     </div>

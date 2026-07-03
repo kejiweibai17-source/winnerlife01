@@ -43,6 +43,7 @@ export const ECOSPIRE_HERO = {
     { text: "白金高輪", row: 2 },
   ],
   foreground: "/images/landing-page/b0d60c30-06d-4645-89db-f0c705f61630.png",
+  foregroundMobile: "/images/landing-page/mobile.png",
   copy: {
     headline: ["真正有價值的，", "不是房子，"],
     headlineHighlight: {
@@ -374,6 +375,8 @@ export const SEMINAR_REGISTRATION = {
 export const LANDING_NAV = {
   brand: "OK PRIME",
   brandSub: "SHIROKANE TAKANAWA",
+  logo: "/images/company-logo.svg",
+  logoAlt: "OK PRIME SHIROKANE TAKANAWA",
   cta: "預約海外置產說明會",
   ctaHref: "#SeminarRegistrationForm",
   links: [

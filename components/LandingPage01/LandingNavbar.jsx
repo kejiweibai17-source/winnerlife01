@@ -4,19 +4,10 @@ import { useCallback, useEffect, useState } from "react";
 import { useLenis } from "lenis/react";
 import { LANDING_NAV } from "./data";
 
-function BrandMark({ className = "" }) {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" className={className} aria-hidden="true">
-      <path d="M6 26V6l10-4 10 4v20" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M12 26V14h8v12" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
 export default function LandingNavbar() {
   const lenis = useLenis();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { brand, brandSub, links, cta, ctaHref } = LANDING_NAV;
+  const { logo, logoAlt, links, cta, ctaHref } = LANDING_NAV;
 
   const scrollToAnchor = useCallback(
     (href) => {
@@ -64,11 +55,14 @@ export default function LandingNavbar() {
           aria-label="首頁"
           onClick={(event) => handleAnchorClick(event, "#FramevoHero")}
         >
-          <BrandMark className="lp-nav-brand-icon" />
-          <span className="lp-nav-brand-text">
-            <span className="lp-nav-brand-name">{brand}</span>
-            <span className="lp-nav-brand-sub">{brandSub}</span>
-          </span>
+          <img
+            src={logo}
+            alt={logoAlt}
+            className="lp-nav-brand-logo"
+            width={260}
+            height={65}
+            decoding="async"
+          />
         </a>
 
         <nav className="lp-nav-links" aria-label="頁面導覽">

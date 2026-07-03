@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
+import { landingPage01Path } from "@/lib/landing-page-01-path";
 
 const marketingPaths = [
   "/",
@@ -32,7 +33,7 @@ const marketingPaths = [
   "/jp/developer",
   "/contact",
   "/jp/contact",
-  "/landing-page-01",
+  landingPage01Path,
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

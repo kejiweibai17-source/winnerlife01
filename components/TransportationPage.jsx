@@ -8,7 +8,6 @@ import { getLocalizedPath } from "@/lib/locale-path";
 
 const ACCENT = "#d4622a";
 const TAG_BG = "#4a3f35";
-const BEIGE = "#f0ebe3";
 const HERO_IMAGE = "/images/transportation/EFプラス白金高輪05.06p.jpg";
 
 const PHOTO_GALLERY_IMAGES = [
@@ -189,19 +188,6 @@ export default function TransportationPage() {
           />
         </section>
 
-        <section className="py-20 md:py-28 px-6 md:px-8 border-b border-gray-100">
-          <SanuSectionHeader
-            num="01."
-            title={t("sections.s01.title")}
-            description={t("sections.s01.description")}
-          />
-          <img
-            src="/images/transportation/2e1db6cf-3af3-452a-bc95-9e240c728533.png"
-            className="w-full mx-auto max-w-[1100px]"
-            alt=""
-          />
-        </section>
-
         <section className="py-16 md:py-24 px-6 md:px-8 bg-white border-b border-gray-100">
           <SanuSectionHeader
             num="02."
@@ -210,7 +196,7 @@ export default function TransportationPage() {
             delay={0.05}
           />
 
-          <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="max-w-[1100px] mx-auto">
             <div>
               <div className="flex flex-wrap items-end gap-8 md:gap-12 mb-8">
                 <div className="overflow-hidden">
@@ -272,36 +258,6 @@ export default function TransportationPage() {
                 </ul>
               </div>
             </div>
-
-            <div
-              className="aspect-[4/3] lg:aspect-square overflow-hidden flex items-center justify-center p-4 md:p-6"
-              style={{ backgroundColor: BEIGE }}
-            >
-              <img
-                src="/images/transportation/map01.png"
-                alt={t("sections.s02.mapAlt")}
-                className="w-full h-full object-contain block"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24 px-6 md:px-8 bg-[#fafafa] border-b border-gray-100">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="w-full aspect-[16/10] md:aspect-[2/1] mb-6 flex items-center justify-center bg-[#fafafa]">
-              <img
-                src="/images/transportation/map02.png"
-                alt={t("sections.map.alt")}
-                className="w-full h-full object-contain block"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <p className="text-[10px] text-gray-400 tracking-wider text-center m-0 leading-relaxed">
-              {t("sections.map.note")}
-            </p>
           </div>
         </section>
 

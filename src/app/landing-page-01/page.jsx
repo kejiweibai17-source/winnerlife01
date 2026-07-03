@@ -1,17 +1,6 @@
-import LandingPage01 from "../../../components/LandingPage01/LandingPage01";
-import JsonLd from "@/components/JsonLd";
-import {
-  getLandingPage01JsonLd,
-  landingPage01Metadata,
-} from "@/lib/seo/landing-page-01-seo";
+import { permanentRedirect } from "next/navigation";
+import { landingPage01Path } from "@/lib/landing-page-01-path";
 
-export const metadata = landingPage01Metadata;
-
-export default function LandingPage01Route() {
-  return (
-    <>
-      <JsonLd data={getLandingPage01JsonLd()} />
-      <LandingPage01 />
-    </>
-  );
+export default function LegacyLandingPage01Redirect() {
+  permanentRedirect(landingPage01Path);
 }
