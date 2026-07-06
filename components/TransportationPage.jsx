@@ -157,7 +157,7 @@ export default function TransportationPage() {
       <main className="bg-white">
         <section className="relative w-full z-10 min-h-[50vh] md:min-h-[85vh] flex items-end">
           <img
-            src="/images/transportation/001.png"
+            src="/images/index/31bf0df3-fbb7-4dc8-9a6e-437e64553efc.png"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
           />

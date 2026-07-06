@@ -11,7 +11,7 @@ const gridMeta = [
   {
     id: 0,
     href: "/",
-    bgImage: "/images/index/wall/設備與家電.png",
+    bgImage: "/images/concept/置產顧問團隊.png",
     maskFrom: "rgba(0,25,25,0.90)",
     maskVia: "rgba(0,55,50,0.52)",
     maskTo: "rgba(0,80,70,0.18)",
@@ -35,7 +35,7 @@ const gridMeta = [
   {
     id: 9,
     href: "/location",
-    bgImage: "/images/index/wall/地段核心.png",
+    bgImage: "/images/location/section-01/section-1-1.png",
     maskFrom: "rgba(35,18,0,0.90)",
     maskVia: "rgba(75,40,5,0.55)",
     maskTo: "rgba(110,65,10,0.18)",

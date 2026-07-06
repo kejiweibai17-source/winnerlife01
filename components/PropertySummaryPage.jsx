@@ -2,7 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { getSummaryPageData } from "@/lib/summary-page-data";
 import Copy from "./Copy";
 
 const NAVY = "#0d417b";
@@ -59,293 +61,6 @@ function WaveDivider() {
     </div>
   );
 }
-
-const FLOOR_PLANS = [
-  {
-    floor: "1F Floor Plan",
-    units: [
-      {
-        type: "A",
-        layout: "2LDK",
-        rooms: "101号室",
-        area: "47.58 m²",
-        tsubo: "14.39 坪",
-      },
-      {
-        type: "B",
-        layout: "1LDK",
-        rooms: "102号室",
-        area: "37.13 m²",
-        tsubo: "11.23 坪",
-      },
-    ],
-  },
-  {
-    floor: "2F–4F Floor Plan",
-    units: [
-      {
-        type: "C",
-        layout: "1LDK",
-        rooms: "201 / 301 / 401 号室",
-        area: "37.67 m²",
-        tsubo: "11.40 坪",
-      },
-      {
-        type: "D",
-        layout: "1K",
-        rooms: "202 / 302 / 402 号室",
-        area: "20.66 m²",
-        tsubo: "6.25 坪",
-      },
-      {
-        type: "E",
-        layout: "1LDK",
-        rooms: "203 / 303 / 403 号室",
-        area: "37.92 m²",
-        tsubo: "11.47 坪",
-      },
-    ],
-  },
-  {
-    floor: "5F Floor Plan",
-    units: [
-      {
-        type: "F",
-        layout: "1LDK",
-        rooms: "501号室",
-        area: "31.26 m²",
-        tsubo: "9.46 坪",
-      },
-      {
-        type: "G",
-        layout: "1K",
-        rooms: "502号室",
-        area: "20.02 m²",
-        tsubo: "6.06 坪",
-      },
-      {
-        type: "H",
-        layout: "1LDK",
-        rooms: "503号室",
-        area: "33.46 m²",
-        tsubo: "10.12 坪",
-      },
-    ],
-  },
-];
-
-const INTERIOR_ROWS = [
-  {
-    room: "ポーチ",
-    floor: "磁器質タイル",
-    floorSub: "—",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "—",
-  },
-  {
-    room: "階段室・共用廊下",
-    floor: "防滑性ビニル床シート",
-    floorSub: "—",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "—",
-  },
-  {
-    room: "玄関",
-    floor: "磁器質タイル",
-    floorSub: "セルフレベルリング材",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "2150",
-  },
-  {
-    room: "LDK",
-    floor: "フローリング",
-    floorSub: "セルフレベルリング材",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "2100",
-  },
-  {
-    room: "洋室",
-    floor: "フローリング",
-    floorSub: "セルフレベルリング材",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "2275",
-  },
-  {
-    room: "CL",
-    floor: "フローリング",
-    floorSub: "セルフレベルリング材",
-    baseboard: "木巾木",
-    wall: "ビニルクロス貼り",
-    wallSub: "PB t=12.5",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "PB t=9.5",
-    height: "2270",
-  },
-  {
-    room: "トイレ",
-    floor: "磁器質タイル",
-    floorSub: "セルフレベルリング材",
-    baseboard: "—",
-    wall: "ビニルクロス貼り",
-    wallSub: "耐水PB",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "耐水PB",
-    height: "2000",
-  },
-  {
-    room: "洗面室",
-    floor: "磁器質タイル",
-    floorSub: "セルフレベルリング材",
-    baseboard: "—",
-    wall: "ビニルクロス貼り",
-    wallSub: "耐水PB",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "耐水PB",
-    height: "2000",
-  },
-  {
-    room: "洗濯機置場",
-    floor: "磁器質タイル",
-    floorSub: "セルフレベルリング材",
-    baseboard: "—",
-    wall: "ビニルクロス貼り",
-    wallSub: "耐水PB",
-    ceiling: "ビニルクロス貼り",
-    ceilingSub: "耐水PB",
-    height: "2000",
-  },
-  {
-    room: "浴室",
-    floor: "ユニットバス",
-    floorSub: "—",
-    baseboard: "—",
-    wall: "ユニットバス",
-    wallSub: "—",
-    ceiling: "ユニットバス",
-    ceilingSub: "—",
-    height: "—",
-  },
-];
-
-const EQUIPMENT_ROWS = [
-  {
-    part: "ポーチ",
-    spec: "集合玄関機 ●メールボックス一体型宅配ボックス（防雨仕様）[NASTA] ●管理者連絡表示板（樹脂製）300×500 ●消火器 ●非常用照明 ●誘導灯",
-  },
-  {
-    part: "階段室・共用廊下",
-    spec: "階段手摺：樹脂手摺既製品 ●踏面・蹴込：防滑性ビニル床シート ●段鼻：ビニル床シート一体型 ●アクセントタイル：各住戸前 W200×H2000 ピッツモザイクボーダー・陶彩 BM-OLM-4795/CAR [ニッタイ工業]同等 ●階数表示板（SUS製） ●掲示板（A2サイズ） ●消火器 ●非常用照明 ●誘導灯",
-  },
-  { part: "玄関", spec: "下足入 ●床見切り（SUS-FB） ●ダウンライト" },
-  {
-    part: "LDK",
-    spec: "システムキッチン ●レンジフード（ダクトはRW被覆） ●エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●給気口150φ（差圧式・FD付） ●住宅用火災警報器（熱感）",
-  },
-  {
-    part: "洋室",
-    spec: "エアコン室内機（設備工事・下地・スリーブ） ●カーテンレール（W） ●室内物干金物 ●給気口100φ ●住宅用火災警報器（煙感）",
-  },
-  { part: "CL", spec: "ハンガーパイプ（SUS32φ同等） ●枕棚D400" },
-  {
-    part: "トイレ",
-    spec: "洋式便器（温水洗浄便座付/タンク上部手洗付） ●ペーパーホルダー ●タオルリング ●固定棚 ●ダウンライト ●換気設備（24時間換気）",
-  },
-  {
-    part: "洗面室",
-    spec: "洗面化粧台L600 ●タオルリング ●ダウンライト ●換気設備（24時間換気） ●分電盤",
-  },
-  {
-    part: "洗濯機置場",
-    spec: "洗濯機パン640□（洗濯機パン下を他配管が通過する場合、SL+120とし薄型タイプを基本とする。他配管が通過せず、配管を隠蔽可能な場合、高床タイプも可とする。）",
-  },
-  {
-    part: "浴室",
-    spec: "ユニットバス1014/1116 ●浴室換気暖房乾燥機（24時間換気） ●ハンガーパイプ（UB付属品）※JIS A4416に適合する。",
-  },
-];
-
-const EXTERIOR_ROWS = [
-  {
-    part: "屋上",
-    items: [
-      { label: "屋根", value: "アスファルト防水（トーチ工法）" },
-      { label: "パラペット", value: "外壁仕上と同仕様" },
-      { label: "設備基礎", value: "モルタル仕上" },
-      { label: "ハト小屋", value: "ガルバリウム鋼板 t=0.35" },
-      { label: "屋上点検口", value: "アルミ製" },
-    ],
-  },
-  {
-    part: "ルーフバルコニー",
-    items: [
-      { label: "", value: "アスファルト防水（トーチ工法）●手摺：アルミ製" },
-    ],
-  },
-  { part: "ルーフドレイン", items: [{ label: "", value: "ステンレス製" }] },
-  { part: "竪樋", items: [{ label: "", value: "塩ビ製 色：外壁色に準ずる" }] },
-  {
-    part: "外壁",
-    items: [
-      {
-        label: "",
-        value: "塗装：セラミックシリコン樹脂塗装 ●タイル：石目調タイル",
-      },
-    ],
-  },
-  {
-    part: "基礎立上り",
-    items: [{ label: "", value: "モルタル仕上 色：外壁色に準ずる" }],
-  },
-  { part: "目地", items: [{ label: "", value: "シーリング材：ウレタン系" }] },
-  {
-    part: "開口部",
-    items: [
-      { label: "出入口", value: "アルミ製 断熱サッシ" },
-      { label: "玄関ドア", value: "防火戸 断熱仕様" },
-      { label: "窓", value: "アルミ製 断熱サッシ Low-E複層ガラス" },
-      { label: "MB/PS", value: "アルミ製" },
-    ],
-  },
-  {
-    part: "外構",
-    items: [
-      { label: "アプローチ床", value: "磁器質タイル" },
-      { label: "犬走り", value: "コンクリート仕上" },
-      { label: "塀", value: "タイル貼り" },
-      { label: "共用水栓", value: "ステンレス製" },
-    ],
-  },
-  {
-    part: "その他",
-    items: [
-      { label: "館銘板", value: "ステンレス製" },
-      { label: "管理者連絡表示板", value: "樹脂製" },
-      { label: "避難器具", value: "—" },
-      { label: "物干金物", value: "ステンレス製" },
-      { label: "消火器", value: "各階設置" },
-    ],
-  },
-];
 
 function CopyBlock({ children, delay = 0, className = "" }) {
   return (
@@ -413,8 +128,9 @@ function LabelCell({ children }) {
   );
 }
 
-function OverviewTable({ t }) {
+function OverviewTable({ t, overview }) {
   const l = (key) => t(`labels.${key}`);
+  const o = overview;
 
   return (
     <div className="bg-white shadow-sm border border-gray-200 overflow-x-auto">
@@ -422,103 +138,96 @@ function OverviewTable({ t }) {
         <tbody>
           <tr>
             <LabelCell>{l("name")}</LabelCell>
-            <Td colSpan={5}>エルファーロプラス白金高輪 新築工事</Td>
+            <Td colSpan={5}>{o.name}</Td>
           </tr>
           <tr>
             <LabelCell rowSpan={2}>{l("location")}</LabelCell>
             <Th>{l("lotNumber")}</Th>
-            <Td colSpan={4}>東京都港区三田5丁目1番52</Td>
+            <Td colSpan={4}>{o.lotNumber}</Td>
           </tr>
           <tr>
             <Th>{l("address")}</Th>
-            <Td colSpan={4}>東京都港区三田5丁目5番10号</Td>
+            <Td colSpan={4}>{o.address}</Td>
           </tr>
           <tr>
             <LabelCell rowSpan={7}>{l("siteOverview")}</LabelCell>
             <Th>{l("siteArea")}</Th>
-            <Td colSpan={4}>148.83 ㎡（建築確認申請書 記載面積）</Td>
+            <Td colSpan={4}>{o.siteArea}</Td>
           </tr>
           <tr>
             <Th>{l("zoning")}</Th>
-            <Td colSpan={4}>商業地域</Td>
+            <Td colSpan={4}>{o.zoning}</Td>
           </tr>
           <tr>
             <Th>{l("fireZone")}</Th>
-            <Td colSpan={4}>防火地域</Td>
+            <Td colSpan={4}>{o.fireZone}</Td>
           </tr>
           <tr>
             <Th>{l("coverage")}</Th>
-            <Td colSpan={4}>
-              80%（指定）100.00%（許容）（準防火地域内の耐火建築物）
-            </Td>
+            <Td colSpan={4}>{o.coverage}</Td>
           </tr>
           <tr>
             <Th>{l("far")}</Th>
-            <Td colSpan={4}>
-              500%（指定）320.00%（許容）（道路幅員 4m × 0.8）
-            </Td>
+            <Td colSpan={4}>{o.far}</Td>
           </tr>
           <tr>
             <Th>{l("heightDistrict")}</Th>
-            <Td colSpan={4}>40m 高度地区</Td>
+            <Td colSpan={4}>{o.heightDistrict}</Td>
           </tr>
           <tr>
             <Th>{l("other")}</Th>
-            <Td colSpan={4}>第二種文教地区</Td>
+            <Td colSpan={4}>{o.other}</Td>
           </tr>
           <tr>
             <LabelCell rowSpan={7}>{l("buildingOverview")}</LabelCell>
             <Th>{l("mainUse")}</Th>
-            <Td>共同住宅（14戸）</Td>
+            <Td>{o.mainUse}</Td>
             <Th>{l("totalFloorArea")}</Th>
-            <Td colSpan={2}>541.28 ㎡</Td>
+            <Td colSpan={2}>{o.totalFloorArea}</Td>
           </tr>
           <tr>
             <Th>{l("constructionType")}</Th>
-            <Td>新築工事</Td>
+            <Td>{o.constructionType}</Td>
             <Th>{l("buildingArea")}</Th>
-            <Td>110.56 ㎡</Td>
+            <Td>{o.buildingArea}</Td>
             <Th>{l("buildingCoverage")}</Th>
-            <Td>74.29%</Td>
+            <Td>{o.buildingCoverage}</Td>
           </tr>
           <tr>
             <Th colSpan={2}>{l("constructionPeriod")}</Th>
-            <Td colSpan={4}>令和7年12月1日～令和8年11月上旬竣工（予定）</Td>
+            <Td colSpan={4}>{o.constructionPeriod}</Td>
           </tr>
           <tr>
             <Th>{l("structure")}</Th>
-            <Td>鉄筋コンクリート造・地上5階建て</Td>
+            <Td>{o.structure}</Td>
             <Th>{l("farFloorArea")}</Th>
-            <Td>466.86 ㎡</Td>
+            <Td>{o.farFloorArea}</Td>
             <Th>{l("floorAreaRatio")}</Th>
-            <Td>313.69%</Td>
+            <Td>{o.floorAreaRatio}</Td>
           </tr>
           <tr>
             <Th>{l("fireResistance")}</Th>
-            <Td>耐火建築物</Td>
+            <Td>{o.fireResistance}</Td>
             <Th>{l("elevator")}</Th>
-            <Td>1基</Td>
+            <Td>{o.elevator}</Td>
             <Th>{l("parking")}</Th>
-            <Td>—</Td>
+            <Td>{o.parking}</Td>
           </tr>
           <tr>
             <Th>{l("permitNumber")}</Th>
-            <Td>未定</Td>
+            <Td>{o.permitNumber}</Td>
             <Th>{l("bicycleParking")}</Th>
-            <Td>1台（屋根なし）</Td>
+            <Td>{o.bicycleParking}</Td>
             <Th>{l("motorcycleParking")}</Th>
-            <Td>—</Td>
+            <Td>{o.motorcycleParking}</Td>
           </tr>
           <tr>
             <Th colSpan={2}>{l("privateArea")}</Th>
-            <Td colSpan={4}>20.02 ㎡（1K）～ 47.58 ㎡（2LDK）</Td>
+            <Td colSpan={4}>{o.privateArea}</Td>
           </tr>
           <tr>
             <LabelCell>{l("developer")}</LabelCell>
-            <Td colSpan={5}>
-              東京都目黒区目黒2-10-11
-              目黒山手プレイス4階／株式会社明豊エンタープライズ
-            </Td>
+            <Td colSpan={5}>{o.developer}</Td>
           </tr>
         </tbody>
       </table>
@@ -526,7 +235,7 @@ function OverviewTable({ t }) {
   );
 }
 
-function FloorPlanSection({ t }) {
+function FloorPlanSection({ t, floorPlans }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
@@ -538,7 +247,7 @@ function FloorPlanSection({ t }) {
         />
 
         <div className="space-y-14 md:space-y-20">
-          {FLOOR_PLANS.map((plan, planIndex) => (
+          {floorPlans.map((plan, planIndex) => (
             <div key={plan.floor}>
               <CopyBlock delay={planIndex * 0.05}>
                 <h3 className="m-0 mb-6 font-serif text-base md:text-lg tracking-[0.08em] text-gray-800 border-b border-gray-300 pb-3">
@@ -596,7 +305,7 @@ function FloorPlanSection({ t }) {
   );
 }
 
-function InteriorFinishSection({ t }) {
+function InteriorFinishSection({ t, interiorRows }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
@@ -638,7 +347,7 @@ function InteriorFinishSection({ t }) {
               </tr>
             </thead>
             <tbody>
-              {INTERIOR_ROWS.map((row) => (
+              {interiorRows.map((row) => (
                 <tr key={row.room}>
                   <LabelCell>{row.room}</LabelCell>
                   <Td className="text-center">{row.floor}</Td>
@@ -661,7 +370,7 @@ function InteriorFinishSection({ t }) {
   );
 }
 
-function EquipmentSection({ t }) {
+function EquipmentSection({ t, equipmentRows }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
@@ -670,7 +379,7 @@ function EquipmentSection({ t }) {
         <SectionHeading title={t("equipment.title")} />
 
         <div className="divide-y divide-gray-200 border border-gray-200 bg-white shadow-sm">
-          {EQUIPMENT_ROWS.map((row, index) => (
+          {equipmentRows.map((row, index) => (
             <div
               key={row.part}
               className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-0"
@@ -697,7 +406,7 @@ function EquipmentSection({ t }) {
   );
 }
 
-function ExteriorFinishSection({ t }) {
+function ExteriorFinishSection({ t, exteriorRows }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
@@ -712,7 +421,7 @@ function ExteriorFinishSection({ t }) {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {EXTERIOR_ROWS.map((group, gi) => (
+          {exteriorRows.map((group, gi) => (
             <div
               key={group.part}
               className="bg-white border border-gray-200 shadow-sm overflow-hidden"
@@ -759,6 +468,9 @@ function ExteriorFinishSection({ t }) {
 }
 
 export default function PropertySummaryPage() {
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const data = getSummaryPageData(locale);
   const t = useTranslations("summary");
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -879,7 +591,7 @@ export default function PropertySummaryPage() {
                 title={t("overview.title")}
                 subtitle={t("overview.subtitle")}
               />
-              <OverviewTable t={t} />
+              <OverviewTable t={t} overview={data.overview} />
               <CopyBlock delay={0.1} className="mt-6">
                 <p className="m-0 text-[11px] md:text-xs text-white/80 md:text-gray-500 leading-relaxed">
                   {t("overview.disclaimer")}
@@ -890,16 +602,16 @@ export default function PropertySummaryPage() {
         </section>
 
         {/* Section 2–4: Floor plans */}
-        <FloorPlanSection t={t} />
+        <FloorPlanSection t={t} floorPlans={data.floorPlans} />
 
         {/* Section 5: Interior finish */}
-        <InteriorFinishSection t={t} />
+        <InteriorFinishSection t={t} interiorRows={data.interiorRows} />
 
         {/* Section 6: Equipment */}
-        <EquipmentSection t={t} />
+        <EquipmentSection t={t} equipmentRows={data.equipmentRows} />
 
         {/* Section 7: Exterior finish — still part of the 6 content blocks; equipment+exterior could count as 5+6 */}
-        <ExteriorFinishSection t={t} />
+        <ExteriorFinishSection t={t} exteriorRows={data.exteriorRows} />
       </main>
 
       <button

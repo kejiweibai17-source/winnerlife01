@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { SiLine } from "react-icons/si";
 import { getLocalizedPath } from "@/lib/locale-path";
 import { siteConfig } from "@/lib/site";
 
@@ -12,58 +14,17 @@ const socialLinks = [
   {
     label: "Instagram",
     href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-        aria-hidden
-      >
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    Icon: FaInstagram,
   },
   {
     label: "Facebook",
     href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-        aria-hidden
-      >
-        <path d="M14 8h2.5a1 1 0 0 1 1 1V12h-3.5l.5 4H14v-9.5a1 1 0 0 1 1-1Z" />
-        <path d="M10 16v-9.5a1 1 0 0 1 1-1h1.5" />
-        <rect x="3" y="3" width="18" height="18" rx="4" />
-      </svg>
-    ),
+    Icon: FaFacebookF,
   },
   {
     label: "LINE",
     href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-5 h-5"
-        aria-hidden
-      >
-        <path d="M4 12c0-4.2 3.6-7.5 8-7.5s8 3.3 8 7.5c0 3.7-3.3 6.7-7.5 7.3-1 .2-2.4.7-3 .9-.4.1-.7-.2-.6-.6l.3-1.4c.1-.4-.1-.7-.4-.9C5.8 18.8 4 15.6 4 12Z" />
-        <path
-          d="M9 10.5h1M11.5 10.5v3M14 10.5h1M16.5 10.5v3"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
+    Icon: SiLine,
   },
 ];
 
@@ -126,7 +87,9 @@ export default function Footer() {
 
           <div className="lg:col-span-3 flex flex-col items-start lg:items-end gap-6">
             <div className="flex items-center gap-5">
-              {socialLinks.map((social) => (
+              {socialLinks.map((social) => {
+                const Icon = social.Icon;
+                return (
                 <Link
                   key={social.label}
                   href={social.href}
@@ -135,9 +98,10 @@ export default function Footer() {
                   aria-label={social.label}
                   className="text-white hover:opacity-70 transition-opacity duration-300"
                 >
-                  {social.icon}
+                  <Icon className="w-5 h-5" aria-hidden />
                 </Link>
-              ))}
+                );
+              })}
             </div>
             <Link
               href="#"

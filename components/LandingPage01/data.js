@@ -124,12 +124,12 @@ export const TOKYO_CORE = {
     {
       number: "03",
       icon: "users",
-      title: "國際租賃需求強勁",
+      title: "東京白金高輪 高資產家庭的東京入口",
       subtitle: "外派．留學．高收入族群",
       body: "大量外商、外派人士、留學生與高收入族群長期居住東京，形成穩定且持續的租賃市場，帶來穩健的投資報酬。",
-      image: "/images/landing-page/白金高輪站.png",
+      image: "/images/location/section-01/section-1-8.png",
       panel: {
-        bg: "/images/landing-page/白金高輪站.png",
+        bg: "/images/location/section-01/section-1-8.png",
         headline: ["外派、留學與高收入族群，"],
         headlineLine2: {
           before: "支撐",
