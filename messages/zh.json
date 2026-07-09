@@ -1,7 +1,7 @@
 {
   "hero": {
     "slides": [
-      { "line1": "白金高輪", "line2": "昔有席次。珍藏港灣生活" },
+      { "line1": "白金高輪", "line2": "稀有席次。珍藏港灣生活" },
       { "line1": "Exquisite Detail", "line2": "Exceptional Quality." },
           { "line1": "Timeless Design", "line2": "洗鍊質感與溫潤氛圍並存。" },
       { "line1": "Premium Location", "line2": "品川・港區核心生活圈。" }
@@ -916,6 +916,7 @@
     "spec": {
       "title": "主要規格",
       "items": [
+        { "label": "磁磚名稱", "value": "EL FARO+ 外牆磁磚" },
         { "label": "磁磚尺寸", "value": "95 × 45 mm（50二丁）" },
         { "label": "出貨規格", "value": "材貼網拼 300 × 300 mm" },
         { "label": "磁磚類型", "value": "BI類（磁器質）" },
@@ -925,7 +926,50 @@
         { "label": "顏色比例", "value": "濃：中：淡 = 5:9:4（黃金混色）" },
         { "label": "工藝產地", "value": "日本岐阜縣 美濃燒（長江陶業）" }
       ]
-    }
+    },
+    "tags": ["美濃燒", "BI類磁器質", "5:9:4混色", "50二丁"],
+    "consultant": {
+      "name": "OK PRIME 顧問"
+    },
+    "bubbles": [
+      "採用日本傳統工藝美濃燒，1300 年窯燒技術的傳承。",
+      "外牆磁磚是頂級 BI 類磁器質，吸水率不到 1%，耐久性極強。",
+      "5:9:4 黃金混色比例，讓牆面在不同光線下呈現細膩立體感。"
+    ],
+    "sidebar": {
+      "premiumAlt": "SK 化研 Premium 系列",
+      "premiumCaption": "SK 化研 Premium 塗料系列",
+      "specTitle": "基本規格",
+      "ctaPrompt": "想了解更多？",
+      "lineCta": "LINE 立即諮詢",
+      "summaryCta": "查看物件概要",
+      "advantagesTitle": "產品優勢"
+    },
+    "gallery": {
+      "label": "CASE STUDY",
+      "title": "SK 化研建材採用案例",
+      "items": [
+        { "src": "/images/architecture/sk-material-01.jpg", "caption": "外牆塗裝面 — 超低汙染・超耐候" },
+        { "src": "/images/architecture/sk-material-02.jpg", "caption": "スーパーセラタイトF 外牆系統" },
+        { "src": "/images/architecture/sk-material-03.jpg", "caption": "水性セラタイトF 耐久塗料" },
+        { "src": "/images/architecture/sk-material-04.jpg", "caption": "水性セラタイトSi 系列" },
+        { "src": "/images/architecture/sk-material-05.jpg", "caption": "エスケープレミアムシリコン" },
+        { "src": "/images/architecture/sk-material-06.jpg", "caption": "水性セラミシリコン 外牆塗料" },
+        { "src": "/images/architecture/sk-material-07.jpg", "caption": "エスケープレミアム無機シリーズ" },
+        { "src": "/images/architecture/sk-material-08.jpg", "caption": "超低汙染性 — 親水性塗膜" },
+        { "src": "/images/architecture/sk-material-09.jpg", "caption": "超耐候性 — 無機ハイブリッド技術" },
+        { "src": "/images/architecture/sk-material-11.jpg", "caption": "マンション長寿命化仕様" },
+        { "src": "/images/architecture/sk-building-01.jpg", "caption": "採用事例 — 高級集合住宅" },
+        { "src": "/images/architecture/sk-building-05.jpg", "caption": "採用事例 — 大型複合施設" }
+      ]
+    },
+    "partner": {
+      "label": "MATERIAL PARTNER",
+      "name": "エスケー化研株式会社 (SK KAKEN Co., Ltd.)",
+      "description": "創業於 1955 年，日本建築仕上塗材・外牆磁磚國內市佔率 No.1，為 EL FARO+ 白金高輪指定外牆建材合作夥伴。"
+    },
+    "backLink": "← 返回首頁",
+    "backToTop": "返回頂部"
   },
   "interiorPage": {
     "seo": {

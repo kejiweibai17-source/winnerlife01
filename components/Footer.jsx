@@ -13,17 +13,17 @@ import { siteConfig } from "@/lib/site";
 const socialLinks = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true",
     Icon: FaInstagram,
   },
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/ok.winnerlife/",
     Icon: FaFacebookF,
   },
   {
     label: "LINE",
-    href: "#",
+    href: "https://www.instagram.com/winnerlife914/",
     Icon: SiLine,
   },
 ];
@@ -90,16 +90,18 @@ export default function Footer() {
               {socialLinks.map((social) => {
                 const Icon = social.Icon;
                 return (
-                <Link
-                  key={social.label}
-                  href={social.href}
-                  target={social.href !== "#" ? "_blank" : undefined}
-                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
-                  aria-label={social.label}
-                  className="text-white hover:opacity-70 transition-opacity duration-300"
-                >
-                  <Icon className="w-5 h-5" aria-hidden />
-                </Link>
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    target={social.href !== "#" ? "_blank" : undefined}
+                    rel={
+                      social.href !== "#" ? "noopener noreferrer" : undefined
+                    }
+                    aria-label={social.label}
+                    className="text-white hover:opacity-70 transition-opacity duration-300"
+                  >
+                    <Icon className="w-5 h-5" aria-hidden />
+                  </Link>
                 );
               })}
             </div>
@@ -162,7 +164,11 @@ export default function Footer() {
                 className="w-20 md:w-24 h-auto object-cover"
               />
             </Link>
-            <div className="flex flex-col items-start md:items-end gap-1">
+            <a
+              href="https://www.winnerlife.com/"
+              target="_blank"
+              className="flex flex-col items-start md:items-end gap-1"
+            >
               <Image
                 src={siteConfig.logo}
                 alt={siteConfig.name}
@@ -173,7 +179,7 @@ export default function Footer() {
               <span className="text-[8px] tracking-[0.35em] text-white/40 uppercase">
                 Premium Midsize Office
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

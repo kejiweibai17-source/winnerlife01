@@ -842,7 +842,7 @@
     },
     "hero": {
       "tag": "ARCHITECTURE & MATERIALS",
-      "title": "建築特色",
+      "title": "建築デザイン",
       "subtitle": "千年の工芸で、時代を超える建築外観を。",
       "imageAlt": "EL FARO+ SHIROKANE-TAKANAWA 建築外観"
     },
@@ -915,6 +915,7 @@
     "spec": {
       "title": "主要仕様",
       "items": [
+        { "label": "タイル名称", "value": "EL FARO+ 外壁タイル" },
         { "label": "タイルサイズ", "value": "95 × 45 mm（50二丁）" },
         { "label": "出荷仕様", "value": "材貼ネット貼り 300 × 300 mm" },
         { "label": "タイル種別", "value": "BI類（磁器質）" },
@@ -924,7 +925,50 @@
         { "label": "色調比率", "value": "濃：中：淡 = 5:9:4（黄金混色）" },
         { "label": "産地・製造", "value": "岐阜県 美濃焼（長江陶業）" }
       ]
-    }
+    },
+    "tags": ["美濃焼", "BI類磁器質", "5:9:4混色", "50二丁"],
+    "consultant": {
+      "name": "OK PRIME 担当"
+    },
+    "bubbles": [
+      "日本の伝統工芸・美濃焼を採用。1300年の窯焼き技術の継承です。",
+      "外壁タイルはトップグレードのBI類磁器質。吸水率1%未満の高耐久仕様。",
+      "5:9:4 の黄金混色比率により、光の変化で繊細な奥行きが生まれます。"
+    ],
+    "sidebar": {
+      "premiumAlt": "エスケープレミアムシリーズ",
+      "premiumCaption": "エスケー化研 プレミアムシリーズ",
+      "specTitle": "基本仕様",
+      "ctaPrompt": "この物件が気になる方は…",
+      "lineCta": "LINE で相談する",
+      "summaryCta": "物件概要を見る",
+      "advantagesTitle": "製品の優位性"
+    },
+    "gallery": {
+      "label": "CASE STUDY",
+      "title": "エスケー化研 建材採用事例",
+      "items": [
+        { "src": "/images/architecture/sk-material-01.jpg", "caption": "外壁塗装面 — 超低汚染・超耐候" },
+        { "src": "/images/architecture/sk-material-02.jpg", "caption": "スーパーセラタイトF 外壁システム" },
+        { "src": "/images/architecture/sk-material-03.jpg", "caption": "水性セラタイトF 耐久塗料" },
+        { "src": "/images/architecture/sk-material-04.jpg", "caption": "水性セラタイトSi シリーズ" },
+        { "src": "/images/architecture/sk-material-05.jpg", "caption": "エスケープレミアムシリコン" },
+        { "src": "/images/architecture/sk-material-06.jpg", "caption": "水性セラミシリコン 外壁塗料" },
+        { "src": "/images/architecture/sk-material-07.jpg", "caption": "エスケープレミアム無機シリーズ" },
+        { "src": "/images/architecture/sk-material-08.jpg", "caption": "超低汚染性 — 親水性塗膜" },
+        { "src": "/images/architecture/sk-material-09.jpg", "caption": "超耐候性 — 無機ハイブリッド技術" },
+        { "src": "/images/architecture/sk-material-11.jpg", "caption": "マンション長寿命化仕様" },
+        { "src": "/images/architecture/sk-building-01.jpg", "caption": "採用事例 — 高級マンション" },
+        { "src": "/images/architecture/sk-building-05.jpg", "caption": "採用事例 — 大型複合施設" }
+      ]
+    },
+    "partner": {
+      "label": "MATERIAL PARTNER",
+      "name": "エスケー化研株式会社 (SK KAKEN Co., Ltd.)",
+      "description": "1955年創業。建築仕上塗材・外壁タイルの国内シェアNo.1メーカー。EL FARO+ 白金高輪の外装仕上材として採用。"
+    },
+    "backLink": "← 一覧へ",
+    "backToTop": "ページトップへ"
   },
   "interiorPage": {
     "seo": {
