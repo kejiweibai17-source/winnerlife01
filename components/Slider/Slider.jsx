@@ -257,15 +257,22 @@ export default function Slider() {
       ref={sliderRef}
     >
       {/* 圖片容器 */}
-      <div className="absolute inset-0 w-full h-full" ref={sliderImagesRef}>
+      <div
+        className="absolute inset-0 z-0 w-full h-full"
+        ref={sliderImagesRef}
+      >
         <img
           src={slides[0].image}
           alt="Slide 1"
           className="absolute inset-0 object-cover w-full h-full"
         />
-        {/* 深色遮罩，讓文字更易讀 */}
-        <div className="absolute inset-0 bg-black/40"></div>
       </div>
+
+      {/* 透明黑遮罩：固定在最上層，避免切換圖片時被蓋過 */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-r from-black/50 via-black/25 to-black/10"
+        aria-hidden
+      />
 
       {/* 文字容器：靠左對齊，並加入 padding 避免貼齊邊緣 */}
       <div className="relative z-10 flex flex-col justify-center h-full w-full pl-12 md:pl-24 lg:pl-32 max-w-4xl">

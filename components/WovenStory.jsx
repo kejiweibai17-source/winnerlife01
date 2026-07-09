@@ -2,25 +2,32 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 // 我們只需要一張非常寬的圖片，或者幾張圖片拼成的長條圖。
-// 為了示範無縫平移，我們將這三張圖片拼在同一個容器裡。
+// 為了無縫平移，將四張圖片拼在同一個容器裡。
 const slides = [
   {
     id: 1,
-    image: "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
+    image: "/images/index/27c79940-b46e-4b55-a382-5d9efc2415ff.png",
   },
   {
     id: 2,
-    image: "/images/index/marquee01.png",
+    image:
+      "/images/index/XkREhAhg66PHPQxHcFQTjB4nzG0c0C8pS1QgzKD7-c9Uagm9MqqBTROfvXu6KHXBLna7xIA4xt_sX1r_iYNmL0JRK7JdK_Whz-zOteMrIDXc8VuzGbJCW2OknTAWtt50z-l8wzGQwHLkU5ioxg2GJw==.png",
   },
   {
     id: 3,
-    image: "/images/index/ChatGPT Image 2026年5月29日 上午10_56_39.png",
+    image: "/images/index/31bf0df3-fbb7-4dc8-9a6e-437e64553efc.png",
+  },
+  {
+    id: 4,
+    image: "/images/index/03-521d8c49-8f42-4237-a9e0-23a655a1b5d0.png",
   },
 ];
+
+const LINE_URL =
+  "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true";
 
 export default function WovenStory() {
   const t = useTranslations("woven");
@@ -32,7 +39,7 @@ export default function WovenStory() {
         {[...slides, ...slides].map((slide, index) => (
           <div
             key={`${slide.id}-${index}`}
-            className="relative h-full w-[33.333%] shrink-0"
+            className="relative h-full w-1/4 shrink-0"
           >
             {/* 漸層遮罩：壓暗圖片讓文字清晰 */}
             <div className="absolute inset-0 bg-black/50 z-10" />
@@ -41,7 +48,7 @@ export default function WovenStory() {
               alt="Background"
               fill
               className="object-cover"
-              priority={index < 3} // 前三張優先載入
+              priority={index < slides.length}
             />
           </div>
         ))}
@@ -80,13 +87,15 @@ export default function WovenStory() {
                 {t("body")}
               </p>
 
-              <Link
-                href="#"
+              <a
+                href={LINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-4 text-white hover:opacity-70 transition-opacity w-fit drop-shadow-md"
               >
                 <span className="text-lg font-serif tracking-widest">{t("more")}</span>
                 <span className="h-[1px] w-12 bg-white group-hover:w-24 transition-all duration-500 ease-out" />
-              </Link>
+              </a>
             </div>
 
             {/* 直式標題 */}
