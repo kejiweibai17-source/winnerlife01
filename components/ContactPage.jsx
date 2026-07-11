@@ -13,13 +13,30 @@ const NAVY_DEEP = "#1a365d";
 const GOLD = "#b29759";
 const SKY = "#3b82f6";
 
-function GoldArrowButton({ children, href, onClick, type = "button", className = "" }) {
+function GoldArrowButton({
+  children,
+  href,
+  onClick,
+  type = "button",
+  className = "",
+}) {
   const inner = (
     <>
       <span className="tracking-[0.12em]">{children}</span>
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#b29759] text-white transition-transform group-hover:translate-x-0.5">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4" aria-hidden>
-          <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="h-4 w-4"
+          aria-hidden
+        >
+          <path
+            d="M5 12h14M13 6l6 6-6 6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </span>
     </>
@@ -67,11 +84,15 @@ function RegionPanel({ region }) {
           />
         </div>
         <div className="flex min-h-[7.5rem] min-w-0 flex-1 flex-col sm:min-h-[6.5rem]">
-          <p className="m-0 text-[10px] tracking-[0.35em] text-white/50">{region.tag}</p>
+          <p className="m-0 text-[10px] tracking-[0.35em] text-white/50">
+            {region.tag}
+          </p>
           <h3 className="m-0 mt-2 font-serif text-xl tracking-[0.08em] text-white md:text-2xl">
             {region.title}
           </h3>
-          <p className="m-0 mt-2 text-sm leading-relaxed text-white/75">{region.subtitle}</p>
+          <p className="m-0 mt-2 text-sm leading-relaxed text-white/75">
+            {region.subtitle}
+          </p>
         </div>
       </div>
       <ul className="m-0 flex-1 list-none space-y-3 p-0">
@@ -86,7 +107,7 @@ function RegionPanel({ region }) {
           </p>
           <ul className="m-0 list-none space-y-2 p-0 text-center text-sm text-white/85">
             {region.properties.map((name) => (
-              <li key={name}>🏠 {name}</li>
+              <li key={name}>{name}</li>
             ))}
           </ul>
         </div>
@@ -99,12 +120,20 @@ function SeminarCard({ session }) {
   return (
     <article className="group flex flex-col border border-white/25 bg-white/5 transition hover:bg-white/10 md:flex-row">
       <div className="relative h-44 w-full shrink-0 md:h-auto md:w-48 lg:w-56">
-        <Image src={session.image} alt="" fill className="object-cover" sizes="224px" />
+        <Image
+          src={session.image}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="224px"
+        />
         <div className="absolute inset-0 bg-[#0d417b]/40" />
       </div>
       <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
         <div>
-          <p className="m-0 text-[10px] tracking-[0.3em] text-white/50">{session.label}</p>
+          <p className="m-0 text-[10px] tracking-[0.3em] text-white/50">
+            {session.label}
+          </p>
           <h3 className="m-0 mt-2 font-serif text-lg tracking-[0.08em] text-white md:text-xl">
             {session.title}
           </h3>
@@ -136,7 +165,9 @@ function FormField({ label, required, children, hint }) {
         {required && <span className="ml-1 text-[#c41e3a]">*</span>}
       </label>
       {children}
-      {hint && <p className="m-0 text-[11px] leading-relaxed text-gray-400">{hint}</p>}
+      {hint && (
+        <p className="m-0 text-[11px] leading-relaxed text-gray-400">{hint}</p>
+      )}
     </div>
   );
 }
@@ -175,7 +206,10 @@ export default function ContactPage() {
   const [error, setError] = useState("");
 
   const mailSubject = useMemo(
-    () => encodeURIComponent(t("form.mailSubject", { project: siteConfig.buildingName })),
+    () =>
+      encodeURIComponent(
+        t("form.mailSubject", { project: siteConfig.buildingName }),
+      ),
     [t],
   );
 
@@ -188,7 +222,13 @@ export default function ContactPage() {
     e.preventDefault();
     setError("");
 
-    if (!form.name.trim() || !form.salutation || !form.session || !form.region || !form.phone.trim()) {
+    if (
+      !form.name.trim() ||
+      !form.salutation ||
+      !form.session ||
+      !form.region ||
+      !form.phone.trim()
+    ) {
       setError(t("form.errorRequired"));
       return;
     }
@@ -239,13 +279,18 @@ export default function ContactPage() {
         </p>
 
         <div className="relative z-10 flex min-h-[88vh] flex-col justify-end px-6 pb-28 pt-32 md:px-12 lg:px-20">
-          <p className="m-0 mb-4 text-[11px] tracking-[0.35em] text-white/70">{t("hero.eyebrow")}</p>
+          <p className="m-0 mb-4 text-[11px] tracking-[0.35em] text-white/70">
+            {t("hero.eyebrow")}
+          </p>
           <h1 className="m-0 max-w-3xl font-serif text-3xl font-medium leading-snug tracking-[0.06em] text-white md:text-5xl lg:text-[3.25rem]">
             {t("hero.title")}
           </h1>
           <ul className="m-0 mt-8 max-w-2xl list-none space-y-2 p-0">
             {highlights.map((item) => (
-              <li key={item} className="flex gap-2 text-sm text-white/90 md:text-base">
+              <li
+                key={item}
+                className="flex gap-2 text-sm text-white/90 md:text-base"
+              >
                 <span className="text-[#b29759]" aria-hidden>
                   ✸
                 </span>
@@ -254,7 +299,9 @@ export default function ContactPage() {
             ))}
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
-            <GoldArrowButton href="#contact-form">{t("hero.ctaPrimary")}</GoldArrowButton>
+            <GoldArrowButton href="#contact-form">
+              {t("hero.ctaPrimary")}
+            </GoldArrowButton>
             <Link
               href="https://page.line.me/qoi6885d?oat_content=url&openQrModal=true"
               target="_blank"
@@ -268,7 +315,9 @@ export default function ContactPage() {
 
         <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/20 bg-[#0d417b]/90 backdrop-blur-sm">
           <div className="mx-auto flex max-w-[1400px] items-center gap-6 overflow-x-auto px-6 py-3 text-[11px] tracking-[0.08em] text-white/85 md:px-12">
-            <span className="shrink-0 font-medium text-[#b29759]">{t("hero.tickerLabel")}</span>
+            <span className="shrink-0 font-medium text-[#b29759]">
+              {t("hero.tickerLabel")}
+            </span>
             <span className="whitespace-nowrap">{t("hero.tickerText")}</span>
           </div>
         </div>
@@ -277,7 +326,9 @@ export default function ContactPage() {
       {/* Philosophy */}
       <section
         className="relative overflow-hidden px-6 py-20 md:px-12 md:py-28 lg:px-20"
-        style={{ background: `linear-gradient(135deg, ${SKY} 0%, ${NAVY_DEEP} 55%, ${NAVY} 100%)` }}
+        style={{
+          background: `linear-gradient(135deg, ${SKY} 0%, ${NAVY_DEEP} 55%, ${NAVY} 100%)`,
+        }}
       >
         <p
           className="pointer-events-none absolute bottom-8 right-4 select-none font-serif text-[14vw] font-bold leading-none tracking-tighter text-white/[0.06] md:right-12"
@@ -300,15 +351,22 @@ export default function ContactPage() {
             {t("intro.urgency")}
           </p>
           <div className="mt-10">
-            <GoldArrowButton href="#contact-form">{t("intro.cta")}</GoldArrowButton>
+            <GoldArrowButton href="#contact-form">
+              {t("intro.cta")}
+            </GoldArrowButton>
           </div>
         </div>
       </section>
 
       {/* Regions */}
-      <section className="relative px-6 py-20 md:px-12 md:py-28" style={{ backgroundColor: NAVY }}>
+      <section
+        className="relative px-6 py-20 md:px-12 md:py-28"
+        style={{ backgroundColor: NAVY }}
+      >
         <div className="mx-auto max-w-[1200px]">
-          <p className="m-0 text-center text-[10px] tracking-[0.35em] text-white/50">{t("regions.label")}</p>
+          <p className="m-0 text-center text-[10px] tracking-[0.35em] text-white/50">
+            {t("regions.label")}
+          </p>
           <h2 className="m-0 mt-3 text-center font-serif text-2xl tracking-[0.1em] text-white md:text-3xl">
             {t("regions.heading")}
           </h2>
@@ -321,7 +379,9 @@ export default function ContactPage() {
             ))}
           </div>
           <div className="mt-14 text-center">
-            <GoldArrowButton href="#contact-form">{t("regions.cta")}</GoldArrowButton>
+            <GoldArrowButton href="#contact-form">
+              {t("regions.cta")}
+            </GoldArrowButton>
           </div>
         </div>
       </section>
@@ -332,10 +392,15 @@ export default function ContactPage() {
           <h2 className="m-0 font-serif text-2xl tracking-[0.1em] text-[#1a365d] md:text-3xl">
             {t("reasons.heading")}
           </h2>
-          <p className="m-0 mt-3 text-sm tracking-[0.15em] text-gray-500">{t("reasons.subheading")}</p>
+          <p className="m-0 mt-3 text-sm tracking-[0.15em] text-gray-500">
+            {t("reasons.subheading")}
+          </p>
           <ul className="m-0 mt-12 list-none space-y-4 p-0 text-left md:mx-auto md:max-w-xl">
             {reasons.map((item) => (
-              <li key={item} className="flex gap-3 border-b border-gray-200 pb-4 text-sm leading-relaxed text-gray-700">
+              <li
+                key={item}
+                className="flex gap-3 border-b border-gray-200 pb-4 text-sm leading-relaxed text-gray-700"
+              >
                 <span className="text-[#b29759]" aria-hidden>
                   ✔
                 </span>
@@ -344,7 +409,9 @@ export default function ContactPage() {
             ))}
           </ul>
           <div className="mt-12">
-            <GoldArrowButton href="#contact-form">{t("reasons.cta")}</GoldArrowButton>
+            <GoldArrowButton href="#contact-form">
+              {t("reasons.cta")}
+            </GoldArrowButton>
           </div>
         </div>
       </section>
@@ -352,14 +419,20 @@ export default function ContactPage() {
       {/* Seminars */}
       <section
         className="px-6 py-20 md:px-12 md:py-28"
-        style={{ background: `linear-gradient(180deg, ${NAVY_DEEP} 0%, ${NAVY} 100%)` }}
+        style={{
+          background: `linear-gradient(180deg, ${NAVY_DEEP} 0%, ${NAVY} 100%)`,
+        }}
       >
         <div className="mx-auto max-w-[1100px]">
-          <p className="m-0 text-[10px] tracking-[0.35em] text-white/50">{t("seminars.label")}</p>
+          <p className="m-0 text-[10px] tracking-[0.35em] text-white/50">
+            {t("seminars.label")}
+          </p>
           <h2 className="m-0 mt-3 font-serif text-2xl tracking-[0.1em] text-white md:text-3xl">
             {t("seminars.heading")}
           </h2>
-          <p className="m-0 mt-4 max-w-2xl text-sm leading-relaxed text-white/75">{t("seminars.note")}</p>
+          <p className="m-0 mt-4 max-w-2xl text-sm leading-relaxed text-white/75">
+            {t("seminars.note")}
+          </p>
           <div className="mt-12 space-y-4">
             {sessions.map((session) => (
               <SeminarCard key={session.title} session={session} />
@@ -376,9 +449,16 @@ export default function ContactPage() {
           </h2>
           <div className="mt-10 space-y-8">
             {venues.map((venue) => (
-              <div key={venue.city} className="border-l-4 border-[#b29759] pl-5">
-                <h3 className="m-0 text-sm font-medium tracking-[0.1em] text-[#0d417b]">{venue.city}</h3>
-                <p className="m-0 mt-2 text-sm leading-relaxed text-gray-600 whitespace-pre-line">{venue.address}</p>
+              <div
+                key={venue.city}
+                className="border-l-4 border-[#b29759] pl-5"
+              >
+                <h3 className="m-0 text-sm font-medium tracking-[0.1em] text-[#0d417b]">
+                  {venue.city}
+                </h3>
+                <p className="m-0 mt-2 text-sm leading-relaxed text-gray-600 whitespace-pre-line">
+                  {venue.address}
+                </p>
               </div>
             ))}
           </div>
@@ -398,28 +478,45 @@ export default function ContactPage() {
       </section>
 
       {/* Form */}
-      <section id="contact-form" className="bg-[#eef2f7] px-6 py-20 md:px-12 md:py-28">
+      <section
+        id="contact-form"
+        className="bg-[#eef2f7] px-6 py-20 md:px-12 md:py-28"
+      >
         <div className="mx-auto max-w-[720px]">
           <div className="mb-10 text-center">
-            <p className="m-0 text-[10px] tracking-[0.35em] text-gray-400">{t("form.label")}</p>
+            <p className="m-0 text-[10px] tracking-[0.35em] text-gray-400">
+              {t("form.label")}
+            </p>
             <h2 className="m-0 mt-3 font-serif text-2xl tracking-[0.1em] text-gray-900 md:text-3xl">
               {t("form.heading")}
             </h2>
-            <p className="m-0 mt-4 text-sm leading-relaxed text-gray-500">{t("form.note")}</p>
+            <p className="m-0 mt-4 text-sm leading-relaxed text-gray-500">
+              {t("form.note")}
+            </p>
           </div>
 
           {submitted ? (
             <div className="rounded-sm border border-[#0d417b]/20 bg-white p-10 text-center shadow-sm">
-              <p className="m-0 font-serif text-xl tracking-[0.08em] text-[#0d417b]">{t("form.successTitle")}</p>
-              <p className="m-0 mt-4 text-sm leading-relaxed text-gray-600">{t("form.successBody")}</p>
+              <p className="m-0 font-serif text-xl tracking-[0.08em] text-[#0d417b]">
+                {t("form.successTitle")}
+              </p>
+              <p className="m-0 mt-4 text-sm leading-relaxed text-gray-600">
+                {t("form.successBody")}
+              </p>
               <p className="m-0 mt-6 text-sm text-gray-500">
                 {siteConfig.taipeiPhoneDisplay} · {siteConfig.email}
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6 rounded-sm bg-white p-6 shadow-sm md:p-10">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 rounded-sm bg-white p-6 shadow-sm md:p-10"
+            >
               {error && (
-                <p className="m-0 rounded-sm bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+                <p
+                  className="m-0 rounded-sm bg-red-50 px-4 py-3 text-sm text-red-700"
+                  role="alert"
+                >
                   {error}
                 </p>
               )}
@@ -454,7 +551,11 @@ export default function ContactPage() {
                 </FormField>
               </div>
 
-              <FormField label={t("form.session")} required hint={t("form.sessionHint")}>
+              <FormField
+                label={t("form.session")}
+                required
+                hint={t("form.sessionHint")}
+              >
                 <div className="space-y-3">
                   {sessionOptions.map((opt) => (
                     <label
@@ -481,7 +582,11 @@ export default function ContactPage() {
               </FormField>
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <FormField label={t("form.region")} required hint={t("form.regionHint")}>
+                <FormField
+                  label={t("form.region")}
+                  required
+                  hint={t("form.regionHint")}
+                >
                   <select
                     name="region"
                     required
@@ -498,7 +603,12 @@ export default function ContactPage() {
                   </select>
                 </FormField>
                 <FormField label={t("form.guests")} required>
-                  <select name="guests" value={form.guests} onChange={handleChange} className={inputCls}>
+                  <select
+                    name="guests"
+                    value={form.guests}
+                    onChange={handleChange}
+                    className={inputCls}
+                  >
                     {[1, 2, 3, 4, 5].map((n) => (
                       <option key={n} value={String(n)}>
                         {n}
@@ -508,7 +618,11 @@ export default function ContactPage() {
                 </FormField>
               </div>
 
-              <FormField label={t("form.phone")} required hint={t("form.phoneHint")}>
+              <FormField
+                label={t("form.phone")}
+                required
+                hint={t("form.phoneHint")}
+              >
                 <input
                   type="tel"
                   name="phone"
@@ -523,7 +637,12 @@ export default function ContactPage() {
               </FormField>
 
               <FormField label={t("form.contactTime")}>
-                <select name="contactTime" value={form.contactTime} onChange={handleChange} className={inputCls}>
+                <select
+                  name="contactTime"
+                  value={form.contactTime}
+                  onChange={handleChange}
+                  className={inputCls}
+                >
                   <option value="">{t("form.selectPlaceholder")}</option>
                   {timeOptions.map((opt) => (
                     <option key={opt} value={opt}>
@@ -571,7 +690,10 @@ export default function ContactPage() {
       </section>
 
       <div className="border-t border-gray-100 bg-white px-6 py-6 text-center text-[11px] text-gray-400">
-        <Link href={getLocalizedPath("/", locale)} className="hover:text-gray-600">
+        <Link
+          href={getLocalizedPath("/", locale)}
+          className="hover:text-gray-600"
+        >
           ← {t("form.backHome")}
         </Link>
       </div>

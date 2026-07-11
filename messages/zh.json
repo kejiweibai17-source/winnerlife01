@@ -155,11 +155,13 @@
     "close": "Close",
     "download": "下載建案資料",
     "reserve": "預約賞屋與諮詢",
-    "phoneInquiries": "Telephone inquiries and consultations",
-    "kantoOffice": "Kanto Area Office",
-    "kansaiOffice": "Kansai Area Office",
-    "businessHours": "Business hours: 9:00-17:40 (closed on weekends and holidays)",
-    "slogan": "このオフィスと、未来を。"
+    "phoneInquiries": "電話諮詢與預約",
+    "taipeiOffice": "台北辦公室",
+    "japanHotline": "日本諮詢專線",
+    "kantoOffice": "台北辦公室",
+    "kansaiOffice": "日本諮詢專線",
+    "businessHours": "營業時間：10:00～18:00（週三、四、五公休）",
+    "slogan": "與您共築未來。"
   },
   "footer": {
     "brand": "忠訓地產",
@@ -2180,7 +2182,7 @@
         "涵蓋日本不動產法規、稅制與持有成本等重點資訊，協助您掌握 EL FARO+ 白金高輪的入手時機，規劃資產佈局、分散風險。",
         "說明會採預約報名制，座席有限。由忠訓地產專業團隊現場解析建案定位、交通生活圈、設備規格與海外置產流程。"
       ],
-      "urgency": "🤎 說明會採預約報名制，座席有限",
+      "urgency": "說明會採預約報名制，座席有限",
       "cta": "立即報名"
     },
     "regions": {
@@ -2211,7 +2213,7 @@
           "tag": "SHINAGAWA · ACCESS",
           "title": "品川生活圈｜都心樞紐的成長動能",
           "subtitle": "新幹線・リニア開發題材，商業與租賃市場成熟",
-          "image": "/images/location/location-01.png",
+          "image": "/images/index/03.png",
           "points": [
             "品川站為東京交通樞紐，通勤與商務需求穩定",
             "リニア中央新幹線題材，強化長期資產想像",

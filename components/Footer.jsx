@@ -13,7 +13,7 @@ import { siteConfig } from "@/lib/site";
 const socialLinks = [
   {
     label: "Instagram",
-    href: "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true",
+    href: "https://www.instagram.com/winnerlife914/",
     Icon: FaInstagram,
   },
   {
@@ -23,7 +23,7 @@ const socialLinks = [
   },
   {
     label: "LINE",
-    href: "https://www.instagram.com/winnerlife914/",
+    href: "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true",
     Icon: SiLine,
   },
 ];

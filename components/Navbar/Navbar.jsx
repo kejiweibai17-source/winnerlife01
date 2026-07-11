@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 import { getLocalizedPath, switchLocalePath } from "@/lib/locale-path";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { siteConfig } from "@/lib/site";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -307,19 +309,25 @@ export default function Header() {
                 <div className="flex flex-wrap gap-x-12 gap-y-4">
                   <div>
                     <p className="text-[10px] opacity-60 mb-1">
-                      {t("kantoOffice")}
+                      {t("taipeiOffice")}
                     </p>
-                    <p className="text-xl md:text-2xl font-light tracking-wider">
-                      0120-557-088
-                    </p>
+                    <a
+                      href={`tel:${siteConfig.taipeiPhone}`}
+                      className="text-xl md:text-2xl font-light tracking-wider hover:opacity-80 transition-opacity"
+                    >
+                      {siteConfig.taipeiPhoneDisplay}
+                    </a>
                   </div>
                   <div>
                     <p className="text-[10px] opacity-60 mb-1">
-                      {t("kansaiOffice")}
+                      {t("japanHotline")}
                     </p>
-                    <p className="text-xl md:text-2xl font-light tracking-wider">
-                      06-4391-3220
-                    </p>
+                    <a
+                      href={`tel:${siteConfig.phone}`}
+                      className="text-xl md:text-2xl font-light tracking-wider hover:opacity-80 transition-opacity"
+                    >
+                      {siteConfig.phoneDisplay}
+                    </a>
                   </div>
                   <div className="flex items-end pb-1 lg:max-w-xs">
                     <p className="text-[10px] opacity-40">
@@ -333,12 +341,12 @@ export default function Header() {
                 <p className="text-xs md:text-sm tracking-widest opacity-80">
                   {t("slogan")}
                 </p>
-                <div className="flex flex-col items-end opacity-50">
-                  <span className="text-4xl md:text-5xl font-black tracking-tighter leading-none">
-                    pmo
+                <div className="flex flex-col items-end opacity-80">
+                  <span className="font-serif text-3xl md:text-4xl tracking-[0.18em] leading-none">
+                    {siteConfig.name}
                   </span>
-                  <span className="text-[8px] md:text-[10px] tracking-[0.3em] mt-1">
-                    PREMIUM MIDSIZE OFFICE
+                  <span className="text-[8px] md:text-[10px] tracking-[0.2em] mt-2 opacity-70">
+                    {siteConfig.parentBrand}
                   </span>
                 </div>
               </div>
