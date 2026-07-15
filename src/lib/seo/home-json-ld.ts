@@ -117,7 +117,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       name: siteConfig.parentBrand,
       url: siteConfig.corporateUrl,
     },
-    sameAs: [siteConfig.corporateUrl],
+    sameAs: [...siteConfig.sameAs],
     description:
       locale === "jp"
         ? "忠訓地產は EL FARO+ 白金高輪の日本不動産マーケティング・見学予約・投資相談を担当する不動産エージェントです。"

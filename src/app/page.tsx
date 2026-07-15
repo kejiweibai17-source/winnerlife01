@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   alternates: {
     canonical: "/",
-    languages: { "zh-TW": "/", ja: "/jp" },
+    languages: { "zh-TW": "/", ja: "/jp", "x-default": "/" },
   },
   robots: {
     index: true,

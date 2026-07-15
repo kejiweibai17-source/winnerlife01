@@ -87,8 +87,11 @@ export default function CollectionShowcase() {
   );
 
   return (
-    <section ref={containerRef} className="w-full bg-white text-black font-sans">
-      <div className="w-full pt-28 pb-5 md:pb-20 px-6 flex flex-col items-center justify-center text-center">
+    <section
+      ref={containerRef}
+      className="w-full bg-white text-black font-sans"
+    >
+      <div className="w-full pt-8 pb-5 md:pb-20 px-6 flex flex-col items-center justify-center text-center">
         <div className="mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-widest flex items-start justify-center gap-1 mb-2">
             {t("headerTitle")}

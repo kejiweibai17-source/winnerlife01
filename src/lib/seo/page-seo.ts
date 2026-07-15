@@ -81,6 +81,7 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
       languages: {
         "zh-TW": config.zhPath,
         ja: config.jpPath,
+        "x-default": config.zhPath,
       },
     },
     robots: {
@@ -182,6 +183,12 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
       "@type": "RealEstateListing",
       name: getBuildingDisplayName(),
       url: absoluteUrl("/"),
+    },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
   };
 

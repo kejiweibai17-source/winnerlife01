@@ -49,6 +49,7 @@ export function getEquipmentToiletMetadata(locale: Locale): Metadata {
       languages: {
         "zh-TW": "/equipment/toilet",
         ja: "/jp/equipment/toilet",
+        "x-default": "/equipment/toilet",
       },
     },
     robots: {
@@ -144,6 +145,12 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: { "@id": `${pageUrl}#product` },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 
   const product = {

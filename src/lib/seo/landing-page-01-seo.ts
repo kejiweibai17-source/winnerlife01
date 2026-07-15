@@ -4,7 +4,7 @@ import { landingPage01Path } from "@/lib/landing-page-01-path";
 
 export { landingPage01Path } from "@/lib/landing-page-01-path";
 
-export const landingPage01OgImage = "/images/landing-page/質感生活圈.png";
+export const landingPage01OgImage = "/images/og/landing.jpg";
 
 const brandName = "OK PRIME";
 const projectName = "OK PRIME 白金高輪";
@@ -32,8 +32,8 @@ export const landingPage01Seo = {
     "日本置產",
   ],
   ogImageAlt: "OK PRIME 白金高輪 質感生活圈—東京港區精品住宅生活情境",
-  ogImageWidth: 1672,
-  ogImageHeight: 941,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
 } as const;
 
 const seminarLocation = {
@@ -185,7 +185,12 @@ export function getLandingPage01JsonLd() {
       caption: landingPage01Seo.ogImageAlt,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
-    publisher: { "@id": orgId },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": orgId,
+      name: siteConfig.name,
+      url: siteUrl,
+    },
     significantLink: pageSections.map((section) => `${pageUrl}${section.url}`),
     hasPart: pageSections.map((section, index) => ({
       "@type": "WebPageElement",

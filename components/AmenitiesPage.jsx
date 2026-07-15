@@ -261,10 +261,6 @@ function AmenitySpotlight({
 function FeatureCell({ title, image, delay = 0 }) {
   return (
     <div className="flex flex-col items-center px-4 py-8 md:py-10 border-b border-r border-gray-200 md:[&:nth-child(3n)]:border-r-0 md:[&:nth-last-child(-n+3)]:border-b-0">
-      <div
-        className="w-10 h-[3px] mb-6"
-        style={{ backgroundColor: ACCENT }}
-      />
       <div className="relative w-full aspect-[4/3] max-w-[220px] overflow-hidden rounded-md mb-5">
         <Image
           src={image}
@@ -275,7 +271,7 @@ function FeatureCell({ title, image, delay = 0 }) {
         />
       </div>
       <Copy animateOnScroll delay={delay}>
-        <p className="font-serif text-sm md:text-base tracking-[0.12em] text-center text-gray-800 m-0 flex items-center justify-center gap-2">
+        <p className="font-serif text-sm md:text-base tracking-[0.08em] text-center text-gray-800 m-0 flex items-center justify-center gap-2 max-w-[16rem] leading-snug">
           {title}
           <span className="inline-flex w-4 h-4 rounded-full border border-gray-300 text-[10px] text-gray-400 items-center justify-center shrink-0">
             ?
@@ -586,12 +582,6 @@ export default function AmenitiesPage() {
         <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-t border-gray-200">
           <div className="max-w-[1000px] mx-auto text-center mb-8 md:mb-12 overflow-hidden">
             <Copy animateOnScroll>
-              <p
-                className="text-xs tracking-[0.3em] font-medium m-0 mb-3"
-                style={{ color: ACCENT }}
-              >
-                {t("features.label")}
-              </p>
               <h2 className="font-serif text-2xl md:text-3xl tracking-[0.1em] m-0 mb-4">
                 {t("features.heading")}
               </h2>

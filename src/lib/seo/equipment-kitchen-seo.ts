@@ -44,6 +44,7 @@ export function getEquipmentKitchenMetadata(locale: Locale): Metadata {
       languages: {
         "zh-TW": "/equipment/kitchen",
         ja: "/jp/equipment/kitchen",
+        "x-default": "/equipment/kitchen",
       },
     },
     robots: {
@@ -136,6 +137,12 @@ export function getEquipmentKitchenJsonLd(locale: Locale) {
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: { "@id": `${pageUrl}#product` },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 
   const product = {

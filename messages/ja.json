@@ -48,6 +48,12 @@
   "transportSlider": {
     "slides": [
       {
+        "subtitle": "Landmark 2025",
+        "title": "東京2025最新ランドマーク\n高輪GATEWAY CITY",
+        "description": "東京2025年最新ランドマーク誕生！「高輪GATEWAY CITY」—JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集積し、白金・品川周辺に新たな都市エネルギーをもたらします。",
+        "subtext": "Urban Renaissance."
+      },
+      {
         "subtitle": "Exquisite Detail",
         "title": "品川まで5分\n東京まで9分",
         "description": "品川駅直結で東京都心・横浜方面へ快適アクセス。通勤も週末も最短の移動時間で実現します。",
@@ -66,16 +72,10 @@
         "subtext": "Seamless Connection."
       },
       {
-        "subtitle": "Daily Convenience",
-        "title": "空港アクセスの\n圧倒的な利便性",
-        "description": "空港動線と市街地生活をシームレスに接続。長距離移動の負担をなくし、大切な時間を自分と家族のために。",
-        "subtext": "Time is Luxury."
-      },
-      {
-        "subtitle": "Future Mobility",
-        "title": "世界基準の\nモビリティ拠点へ",
-        "description": "住まいから国際路線へ素早くアクセスし、都市生活の質とグローバルな機動性を兼ね備えた暮らしを実現します。",
-        "subtext": "Beyond Borders."
+        "subtitle": "Riverside Living",
+        "title": "東京・白金高輪\n運河沿いの暮らし",
+        "description": "白金高輪の運河沿いは、緑と水辺の風景が交差する場所。散策・憩い・都心機能がほどよく近く、静かでありながら華やかな水辺の日常を楽しめます。",
+        "subtext": "Along the Canal."
       }
     ]
   },

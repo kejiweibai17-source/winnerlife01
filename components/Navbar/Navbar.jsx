@@ -318,17 +318,6 @@ export default function Header() {
                       {siteConfig.taipeiPhoneDisplay}
                     </a>
                   </div>
-                  <div>
-                    <p className="text-[10px] opacity-60 mb-1">
-                      {t("japanHotline")}
-                    </p>
-                    <a
-                      href={`tel:${siteConfig.phone}`}
-                      className="text-xl md:text-2xl font-light tracking-wider hover:opacity-80 transition-opacity"
-                    >
-                      {siteConfig.phoneDisplay}
-                    </a>
-                  </div>
                   <div className="flex items-end pb-1 lg:max-w-xs">
                     <p className="text-[10px] opacity-40">
                       {t("businessHours")}

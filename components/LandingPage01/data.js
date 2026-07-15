@@ -378,6 +378,7 @@ export const LANDING_NAV = {
   logo: "/images/company-logo.svg",
   logoAlt: "OK PRIME SHIROKANE TAKANAWA",
   cta: "預約海外置產說明會",
+  ctaShort: "立即預約",
   ctaHref: "#SeminarRegistrationForm",
   links: [
     { label: "港區物件", href: "#FramevoHero" },

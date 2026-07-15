@@ -44,6 +44,7 @@ export function getEquipmentSecurityMetadata(locale: Locale): Metadata {
       languages: {
         "zh-TW": "/equipment/security",
         ja: "/jp/equipment/security",
+        "x-default": "/equipment/security",
       },
     },
     robots: {
@@ -136,6 +137,12 @@ export function getEquipmentSecurityJsonLd(locale: Locale) {
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: { "@id": `${pageUrl}#product` },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 
   const product = {

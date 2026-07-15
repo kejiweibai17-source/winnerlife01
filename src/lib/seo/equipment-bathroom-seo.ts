@@ -44,6 +44,7 @@ export function getEquipmentBathroomMetadata(locale: Locale): Metadata {
       languages: {
         "zh-TW": "/equipment/bathroom",
         ja: "/jp/equipment/bathroom",
+        "x-default": "/equipment/bathroom",
       },
     },
     robots: {
@@ -136,6 +137,12 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: { "@id": `${pageUrl}#itemlist` },
+    publisher: {
+      "@type": ["Organization", "RealEstateAgent"],
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 
   const itemList = {

@@ -7,7 +7,7 @@ import { LANDING_NAV } from "./data";
 export default function LandingNavbar() {
   const lenis = useLenis();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { logo, logoAlt, links, cta, ctaHref } = LANDING_NAV;
+  const { logo, logoAlt, links, cta, ctaShort, ctaHref } = LANDING_NAV;
 
   const scrollToAnchor = useCallback(
     (href) => {
@@ -84,8 +84,13 @@ export default function LandingNavbar() {
             className="lp-nav-cta"
             onClick={(event) => handleAnchorClick(event, ctaHref)}
           >
-            {cta}
-            <span aria-hidden="true">→</span>
+            <span className="lp-nav-cta__label lp-nav-cta__label--full">{cta}</span>
+            <span className="lp-nav-cta__label lp-nav-cta__label--short">
+              {ctaShort}
+            </span>
+            <span className="lp-nav-cta__arrow" aria-hidden="true">
+              →
+            </span>
           </a>
 
           <button
@@ -114,14 +119,6 @@ export default function LandingNavbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={ctaHref}
-            className="lp-nav-cta lp-nav-cta--mobile"
-            onClick={(event) => handleAnchorClick(event, ctaHref)}
-          >
-            {cta}
-            <span aria-hidden="true">→</span>
-          </a>
         </nav>
       </div>
     </header>

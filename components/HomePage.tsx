@@ -15,7 +15,7 @@ import { getLocalizedPath } from "@/lib/locale-path";
 
 const CARD_IMAGES = [
   "/images/index/grid-02.png",
-  "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
+  "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png",
   "/images/index/運河.png",
 ];
 

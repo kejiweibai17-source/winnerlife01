@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
 import ScrollToTopOnNavigate from "./ScrollToTopOnNavigate";
 import PageTransition from "./PageTransition";
+import FixedSideActions from "./FixedSideActions";
 import {
   landingPage01Path,
   legacyLandingPage01Path,
@@ -52,6 +53,7 @@ export default function AppShell({
         <ScrollToTopOnNavigate />
         {!isLandingPage && <Nav />}
         <PageTransition>{children}</PageTransition>
+        <FixedSideActions />
       </ReactLenis>
       {!isLandingPage && <ContentGrid />}
       {!isLandingPage && <Footer />}

@@ -49,6 +49,12 @@
   "transportSlider": {
     "slides": [
       {
+        "subtitle": "Landmark 2025",
+        "title": "東京2025最新地標\n高輪GATEWAY CITY",
+        "description": "東京2025年最新地標誕生！「高輪GATEWAY CITY」—JR 高輪 Gateway 站直結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金・品川周邊注入全新城市能量。",
+        "subtext": "Urban Renaissance."
+      },
+      {
         "subtitle": "Exquisite Detail",
         "title": "5分鐘直達品川\n9分鐘直通東京",
         "description": "品川站直結，輕鬆串聯東京都心與橫濱方向。日常通勤與週末出遊，都能以最短的移動時間完成。",
@@ -67,16 +73,10 @@
         "subtext": "Seamless Connection."
       },
       {
-        "subtitle": "Daily Convenience",
-        "title": "機場交通\n壓倒性便利",
-        "description": "機場動線與市區生活無縫銜接，讓長途移動不再成為負擔，把寶貴時間留給自己與家人。",
-        "subtext": "Time is Luxury."
-      },
-      {
-        "subtitle": "Future Mobility",
-        "title": "邁向世界標準\n的移動樞紐",
-        "description": "從住宅出發即可快速接軌國際航線，兼具都會生活品質與全球連結的機動性。",
-        "subtext": "Beyond Borders."
+        "subtitle": "Riverside Living",
+        "title": "東京白金高輪\n河畔生活圈",
+        "description": "白金高輪運河河畔，綠意與水景交織；散步、休憩與都心機能並存，享受靜謐而不離繁華的岸邊日常。",
+        "subtext": "Along the Canal."
       }
     ]
   },
@@ -169,6 +169,12 @@
     "designBy": "Design By",
     "designer": "極客網頁設計"
   },
+  "sideActions": {
+    "ariaLabel": "快捷聯絡",
+    "line": "LINE 官方帳號",
+    "contact": "聯絡我們",
+    "goTop": "回到頂部"
+  },
   "contentGrid": {
     "items": [
       {
@@ -228,7 +234,7 @@
       "title": "建案理念｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪—東京都心超越時代與流行的東京港區出租公寓系列，目標成為住戶的燈塔。融合西班牙建築美景、質感外牆與 Urban Classic 設計，由忠訓地產提供賞屋諮詢。",
       "keywords": ["EL FARO+", "白金高輪", "建案理念", "忠訓地產", "東京住宅", "品川"],
-      "ogImage": "/images/concept/001.png",
+      "ogImage": "/images/og/concept.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 運河水岸建案外觀"
     },
     "breadcrumb": {
@@ -308,7 +314,7 @@
       "title": "交通動線｜EL FARO+ 白金高輪",
       "description": "白金高輪、三田、田町三站交會，五線四通八達。都營淺草線快速特急直達羽田・成田機場，輕鬆連結都心與世界。忠訓地產為您說明 EL FARO+ 白金高輪交通優勢。",
       "keywords": ["EL FARO+", "白金高輪", "交通", "品川", "羽田機場", "忠訓地產"],
-      "ogImage": "/images/index/wall/交通連結.png",
+      "ogImage": "/images/og/transportation.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 品川交通動線"
     },
     "breadcrumb": {
@@ -419,7 +425,7 @@
         "title": "地段核心・周邊環境｜EL FARO+ 白金高輪",
         "description": "白金高輪・港南區域地理位置、交通、生活設施與慶應義塾大學文教區價值。都市便利與靜謐住環境和諧共存，由忠訓地產提供建案資訊。",
         "keywords": ["EL FARO+", "白金高輪", "周邊環境", "地理位置", "忠訓地產"],
-        "ogImage": "/images/location/location-01.png",
+        "ogImage": "/images/og/location.jpg",
         "ogImageAlt": "EL FARO+ 白金高輪 港區地段與周邊環境"
       },
       "breadcrumb": {
@@ -637,7 +643,7 @@
       "title": "品牌故事｜EL FARO+ 白金高輪",
       "description": "OK PRIME 品牌故事—從第一間房到家族資產版圖。忠訓地產為 EL FARO+ 白金高輪提供專業日本置產、賞屋諮詢與投資規劃服務。",
       "keywords": ["EL FARO+", "OK PRIME", "忠訓地產", "品牌故事", "日本置產"],
-      "ogImage": "/images/story/news1-1280x850.png",
+      "ogImage": "/images/og/story.jpg",
       "ogImageAlt": "OK PRIME 忠訓地產 品牌故事"
     },
     "breadcrumb": {
@@ -750,7 +756,7 @@
       "title": "物件概要｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪物件概要、間取圖、內外部仕上表與設備規格。西班牙語「燈塔」之意，超越時代延續資產價值。由忠訓地產提供賞屋諮詢。",
       "keywords": ["EL FARO+", "白金高輪", "物件概要", "間取り", "忠訓地產"],
-      "ogImage": "/images/summary/物件概要01.png",
+      "ogImage": "/images/og/summary.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 物件概要"
     },
     "breadcrumb": {
@@ -836,7 +842,7 @@
       "title": "建築特色｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪外觀設計：二丁掛磚、石材紋理、西班牙風格地磚與光影對比，呈現 Urban Classic 的沉穩屹立。Design Meiho Archilabo 操刀，由忠訓地產提供建案資訊。",
       "keywords": ["EL FARO+", "白金高輪", "建築設計", "外觀", "忠訓地產"],
-      "ogImage": "/images/architecture/sk-building-02.jpg",
+      "ogImage": "/images/og/architecture.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 Urban Classic 建築外觀"
     },
     "breadcrumb": {
@@ -978,7 +984,7 @@
       "title": "室內情境｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪室內設計情境展示。寬闊大窗引入充沛陽光，柔和燈光映照美麗陰影，打造住戶心中的燈塔。由忠訓地產提供賞屋預約。",
       "keywords": ["EL FARO+", "白金高輪", "室內設計", "忠訓地產"],
-      "ogImage": "/images/index/wall/共用空間.png",
+      "ogImage": "/images/og/interior.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 室內共用空間"
     },
     "breadcrumb": {
@@ -1102,7 +1108,7 @@
       "title": "設備家電與保全系統｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪設備介紹：廚房、衛浴、廁所設備與 ALSOK 保全系統。頂級設備・智慧系統・全方位安全，由忠訓地產提供建案資訊。",
       "keywords": ["EL FARO+", "白金高輪", "設備", "保全系統", "忠訓地產"],
-      "ogImage": "/images/index/wall/設備與家電.png",
+      "ogImage": "/images/og/equipment.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 設備"
     },
     "breadcrumb": {
@@ -1174,7 +1180,7 @@
         "都市更新",
         "忠訓地產"
       ],
-      "ogImage": "/images/amenities/001.png",
+      "ogImage": "/images/og/amenities.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 周邊商業與生活設施"
     },
     "breadcrumb": {
@@ -1213,10 +1219,10 @@
     "pickUpLabel": "Pick Up!",
     "pickUpItems": [
       {
-        "title": "在白金 Aeru City 完成日常採買",
-        "body": "超市、專賣店、咖啡廳一應俱全的複合設施。返家前順道採買也十分便利。",
-        "image": "/images/amenities/002.png",
-        "tags": ["Shopping", "商業設施"],
+        "title": "東京2025年最新地標誕生！「高輪GATEWAY CITY」",
+        "body": "JR 高輪 Gateway 站直結的大規模複合都市開發。辦公、商業、住宿與文化空間匯聚，為白金・品川周邊注入全新城市能量。",
+        "image": "/images/002.png",
+        "tags": ["Landmark", "都市更新"],
         "href": "#shopping"
       },
       {
@@ -1244,14 +1250,14 @@
     "spotlightSections": [
       {
         "id": "shopping",
-        "titleEn": "Shirokane Aercity",
-        "minutes": "3",
-        "showBike": false,
-        "lead": "日常採買，就到白金 Aeru City。",
-        "body": "從日用品、生鮮食品到餐飲與服務設施，每日所需店鋪豐富齊備，是步行圈內完善的生活動線。",
-        "note": "白金 Aeru City",
-        "noteDetail": "步行約 3 分［約 240m］",
-        "imageMain": "/images/amenities/002.png",
+        "titleEn": "TAKANAWA GATEWAY CITY",
+        "minutes": "15",
+        "showBike": true,
+        "lead": "東京2025年最新地標誕生！「高輪GATEWAY CITY」",
+        "body": "JR 高輪 Gateway 站直結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金・品川生活圈帶來全新城市景觀與機能。",
+        "note": "高輪 GATEWAY CITY",
+        "noteDetail": "步行約 15 分［約 1,200m］",
+        "imageMain": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png",
         "imageSub1": "/images/amenities/004.png",
         "imageSub1Label": "",
         "imageSub2": "/images/amenities/005.png",
@@ -1305,9 +1311,9 @@
       "heading": "支撐生活的近距離基礎建設",
       "body": "購物・交通・綠地與醫療。在港區港南區域實現均衡的日常。",
       "items": [
-        { "title": "購物中心", "image": "/images/amenities/002.png" },
+        { "title": "東京2025最新地標「高輪GATEWAY CITY」", "image": "/images/002.png" },
         { "title": "超市・日用品", "image": "/images/amenities/004.png" },
-        { "title": "餐飲・咖啡", "image": "/images/amenities/005.png" },
+        { "title": "餐飲・咖啡", "image": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png" },
         { "title": "多路線車站", "image": "/images/amenities/006.png" },
         { "title": "公園・綠地", "image": "/images/amenities/012.png" },
         { "title": "醫療・公共設施", "image": "/images/amenities/013.png" }
@@ -1319,12 +1325,12 @@
       "link": "查看詳情"
     },
     "carousel": {
-      "heading": "周邊設施圖庫",
+      "heading": "周邊設施",
       "body": "商場、電車站、公園等步行圈主要設施介紹。滑動照片，感受街區魅力。",
       "prevLabel": "上一張",
       "nextLabel": "下一張",
       "slides": [
-        { "title": "白金 Aeru City", "caption": "步行約 3 分・日常採買", "image": "/images/amenities/002.png" },
+        { "title": "高輪 GATEWAY CITY", "caption": "2025最新地標・都市更新", "image": "/images/002.png" },
         { "title": "品川 Season Terrace", "caption": "步行約 15 分・大型商業", "image": "/images/amenities/005.png" },
         { "title": "天王洲艾爾", "caption": "步行約 6 分・運河沿岸", "image": "/images/amenities/012.png" },
         { "title": "白金高輪站", "caption": "步行約 6 分・雙路線", "image": "/images/amenities/008.png" },
@@ -1336,7 +1342,7 @@
       "subheading": "為步行・車程預估值，實際時間可能因路況而異。",
       "listLink": "查看一覽",
       "rows": [
-        { "label": "白金 Aeru City", "detail": "商業設施　步行約 3 分" },
+        { "label": "高輪 GATEWAY CITY", "detail": "2025最新地標　步行約 15 分" },
         { "label": "品川 Season Terrace", "detail": "商業・辦公　步行約 15 分" },
         { "label": "白金高輪站", "detail": "南北線・三田線　步行約 6 分" },
         { "label": "天王洲艾爾站", "detail": "臨海線・東京單軌　步行約 6 分" },
@@ -1378,7 +1384,7 @@
         "智能馬桶",
         "忠訓地產"
       ],
-      "ogImage": "/images/equipment/toilet/toilet-07.jpeg",
+      "ogImage": "/images/og/equipment-toilet.jpg",
       "ogImageAlt": "TOTO WASHLET SS1 溫水洗淨便座",
       "productName": "TOTO WASHLET SS1"
     },
@@ -1541,7 +1547,7 @@
         "EL FARO+",
         "忠訓地產"
       ],
-      "ogImage": "/images/equipment/bathroom/nasluck-02.jpg",
+      "ogImage": "/images/og/equipment-bathroom.jpg",
       "ogImageAlt": "NASLUCK ベラーザ・ネオ 洗面化粧台",
       "productName": "衛浴設備",
       "products": [
@@ -1715,7 +1721,7 @@
         "EL FARO+",
         "忠訓地產"
       ],
-      "ogImage": "/images/equipment/kitchen/riviere-12.jpg",
+      "ogImage": "/images/og/equipment-kitchen.jpg",
       "ogImageAlt": "NASLUCK リヴィエール コンパクトキッチン",
       "productName": "NASLUCK リヴィエール"
     },
@@ -1898,7 +1904,7 @@
         "防盜",
         "忠訓地產"
       ],
-      "ogImage": "/images/equipment/security/alsok-main-08.jpg",
+      "ogImage": "/images/og/equipment-security.jpg",
       "ogImageAlt": "ALSOK HOME ALSOK 公寓・大樓保全方案",
       "productName": "ALSOK HOME ALSOK 公寓・大樓保全方案"
     },
@@ -2154,7 +2160,7 @@
       "title": "聯絡我們・說明會報名｜EL FARO+ 白金高輪",
       "description": "忠訓地產 EL FARO+ 白金高輪日本置產說明會—北中南巡迴加開。深入解析東京港區房市、法規稅制與投資趨勢，現正受理說明會報名、房源登記與樣品屋參觀預約。",
       "keywords": ["EL FARO+", "白金高輪", "日本置產", "說明會", "忠訓地產", "品川", "預約賞屋"],
-      "ogImage": "/images/index/運河.png",
+      "ogImage": "/images/og/home.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 日本置產說明會"
     },
     "breadcrumb": {

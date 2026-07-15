@@ -43,14 +43,20 @@ export const siteConfig = {
     jp: "営業時間：10:00〜18:00（水・木・金定休）",
   },
   areaServed: ["東京都", "日本"],
-  ogImage: "/images/index/運河.png",
+  ogImage: "/images/og/home.jpg",
   ogImageAlt: {
     zh: "EL FARO+ 白金高輪 運河水岸建案外觀",
     jp: "EL FARO+ 白金高輪 運河沿いの外観",
   },
-  ogImageWidth: 1035,
-  ogImageHeight: 852,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   logo: "/images/js_logo_h1.png",
+  sameAs: [
+    "https://www.winnerlife.com/",
+    "https://www.facebook.com/ok.winnerlife/",
+    "https://www.instagram.com/winnerlife914/",
+    "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true",
+  ],
   keywords: [
     "EL FARO+",
     "白金高輪",
@@ -88,7 +94,7 @@ export function getHomeDescription(locale: "zh" | "jp" = "zh") {
   return siteConfig.description;
 }
 
-/** 首頁 Sitelink 導覽（結構化資料・站內導覽一致） */
+/** 首頁 Sitelink 導覽（結構化資料・站內導覽一致；為 sr-only 語意導覽，不影響視覺設計） */
 export const homeSitelinks = {
   zh: [
     { name: "建案理念", path: "/concept", description: "EL FARO+ 燈塔理念與 Urban Classic 設計願景" },
@@ -100,6 +106,7 @@ export const homeSitelinks = {
     { name: "室內情境", path: "/interior", description: "室內設計情境與居住空間" },
     { name: "設備與保全系統", path: "/equipment", description: "廚衛設備、家電與 ALSOK 保全" },
     { name: "品牌故事", path: "/story", description: "OK PRIME 與忠訓地產品牌願景" },
+    { name: "聯絡我們", path: "/contact", description: "賞屋預約、房源登記與置產諮詢" },
   ],
   jp: [
     { name: "コンセプト", path: "/jp/concept", description: "EL FARO+ 灯台コンセプトと Urban Classic" },
@@ -111,6 +118,7 @@ export const homeSitelinks = {
     { name: "インテリア", path: "/jp/interior", description: "室内デザインと居住空間" },
     { name: "設備・保全系統", path: "/jp/equipment", description: "キッチン・バス・ALSOK防犯" },
     { name: "ブランドストーリー", path: "/jp/developer", description: "OK PRIME・忠訓地產のブランド" },
+    { name: "お問い合わせ", path: "/jp/contact", description: "見学予約・登録・購入相談" },
   ],
 } as const;
 
