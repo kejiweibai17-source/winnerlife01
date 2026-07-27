@@ -44,6 +44,12 @@ export const metadata: Metadata = {
     description: getHomeDescription("zh"),
     images: [siteConfig.ogImage],
   },
+  other: {
+    "geo.region": "JP-13",
+    "geo.placename": "Minato City, Tokyo",
+    "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
+    ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
+  },
 };
 
 export default function Home() {

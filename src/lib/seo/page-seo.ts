@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
 import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
+import {
+  getOrganizationStub,
+  getPropertyGeo,
+  getPropertyPlace,
+  getPropertyPostalAddress,
+} from "@/lib/seo/geo";
 
 export type Locale = "zh" | "jp";
 
@@ -14,7 +20,22 @@ export type PageSeoConfig = {
   seoKey?: string;
   breadcrumbKey?: string;
   faqKey?: string;
+  /** Attach Tokyo property Place + GeoCoordinates */
+  includePropertyGeo?: boolean;
 };
+
+const GEO_PAGE_KEYS = new Set([
+  "location",
+  "amenitiesPage",
+  "transportation",
+  "contactPage",
+  "architecture",
+  "summary",
+  "concept",
+  "interiorPage",
+  "equipmentPage",
+  "developer",
+]);
 
 function getMessages(locale: Locale) {
   return locale === "jp" ? jpMessages : zhMessages;
@@ -67,6 +88,10 @@ function getFaqItems(locale: Locale, config: PageSeoConfig): FaqItem[] {
   return Array.isArray(items) ? items : [];
 }
 
+function shouldIncludeGeo(config: PageSeoConfig) {
+  return config.includePropertyGeo !== false && GEO_PAGE_KEYS.has(config.messageKey);
+}
+
 export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata {
   const seo = getSeoData(locale, config);
   const path = getPagePath(locale, config);
@@ -116,6 +141,12 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
       description: seo.description,
       images: [ogImage],
     },
+    other: {
+      "geo.region": "JP-13",
+      "geo.placename": "Minato City, Tokyo",
+      "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
+      ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
+    },
   };
 }
 
@@ -127,6 +158,9 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
   const homeUrl = absoluteUrl(locale === "jp" ? "/jp" : "/");
   const ogImage = absoluteUrl(seo.ogImage ?? siteConfig.ogImage);
   const inLanguage = locale === "jp" ? "ja" : "zh-TW";
+  const includeGeo = shouldIncludeGeo(config);
+  const propertyPlace = getPropertyPlace(locale);
+  const propertyPlaceId = propertyPlace["@id"];
 
   const breadcrumbItems = breadcrumbData
     ? Object.entries(breadcrumbData)
@@ -161,7 +195,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     itemListElement: breadcrumbItems,
   };
 
-  const webPage = {
+  const webPage: Record<string, unknown> = {
     "@type": "WebPage",
     "@id": `${pageUrl}#webpage`,
     url: pageUrl,
@@ -173,26 +207,43 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
       "@id": `${absoluteUrl("/")}#website`,
       name: getBuildingDisplayName(),
       url: absoluteUrl("/"),
+      publisher: getOrganizationStub(),
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
       url: ogImage,
+      width: 1200,
+      height: 630,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: {
       "@type": "RealEstateListing",
+      "@id": `${absoluteUrl("/")}#listing`,
       name: getBuildingDisplayName(),
       url: absoluteUrl("/"),
+      address: getPropertyPostalAddress(),
+      geo: getPropertyGeo(),
     },
-    publisher: {
-      "@type": ["Organization", "RealEstateAgent"],
-      "@id": `${absoluteUrl("/")}#organization`,
-      name: siteConfig.name,
-      url: siteConfig.url,
+    publisher: getOrganizationStub(),
+    mainEntity: {
+      "@type": "RealEstateListing",
+      name: getBuildingDisplayName(),
+      url: absoluteUrl("/"),
+      address: getPropertyPostalAddress(),
+      geo: getPropertyGeo(),
     },
   };
 
+  if (includeGeo) {
+    webPage.contentLocation = { "@id": propertyPlaceId };
+    webPage.spatialCoverage = { "@id": propertyPlaceId };
+  }
+
   const graph: Record<string, unknown>[] = [webPage, breadcrumb];
+
+  if (includeGeo) {
+    graph.push(propertyPlace);
+  }
 
   if (faqItems.length > 0) {
     graph.push({

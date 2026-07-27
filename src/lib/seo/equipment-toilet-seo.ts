@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
 import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
+import {
+  getGeoMetaOther,
+  getPropertyGeo,
+  getPropertyPlace,
+  getPropertyPostalAddress,
+} from "@/lib/seo/geo";
 
 type Locale = "zh" | "jp";
 
@@ -84,6 +90,7 @@ export function getEquipmentToiletMetadata(locale: Locale): Metadata {
       description: seo.description,
       images: [ogImage],
     },
+    other: getGeoMetaOther(),
   };
 }
 
@@ -144,6 +151,7 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
       url: ogImage,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
+    contentLocation: getPropertyPlace(locale),
     about: { "@id": `${pageUrl}#product` },
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
@@ -169,6 +177,8 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
       "@type": "RealEstateListing",
       name: getBuildingDisplayName(),
       url: absoluteUrl("/"),
+      address: getPropertyPostalAddress(),
+      geo: getPropertyGeo(),
     },
   };
 
@@ -187,6 +197,6 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webPage, breadcrumb, product, faqPage],
+    "@graph": [webPage, breadcrumb, getPropertyPlace(locale), product, faqPage],
   };
 }

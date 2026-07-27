@@ -6,6 +6,14 @@ import {
   homeSitelinks,
   siteConfig,
 } from "@/lib/site";
+import {
+  getPropertyGeo,
+  getPropertyPlace,
+  getPropertyPostalAddress,
+  getTaipeiOfficeAddress,
+  getTaipeiOfficeGeo,
+  officeOpenDays,
+} from "@/lib/seo/geo";
 
 type Locale = "zh" | "jp";
 
@@ -15,6 +23,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
   const siteUrl = absoluteUrl("/");
   const ogImage = absoluteUrl(siteConfig.ogImage);
   const logoUrl = absoluteUrl(siteConfig.logo);
+  const iconUrl = absoluteUrl(siteConfig.icons.icon512);
   const inLanguage = locale === "jp" ? "ja" : "zh-TW";
   const homeLabel = locale === "jp" ? "トップ" : "首頁";
   const title = getHomePageTitle(locale);
@@ -31,29 +40,19 @@ export function getHomeJsonLd(locale: Locale = "zh") {
   const listingId = `${pageUrl}#listing`;
   const residenceId = `${pageUrl}#residence`;
   const sitelinksId = `${pageUrl}#sitelinks`;
+  const propertyPlaceId = `${siteUrl}#property-place`;
 
-  const postalAddress = {
-    "@type": "PostalAddress",
-    streetAddress: siteConfig.address.streetAddress,
-    addressLocality: siteConfig.address.addressLocality,
-    addressRegion: siteConfig.address.addressRegion,
-    postalCode: siteConfig.address.postalCode,
-    addressCountry: siteConfig.address.addressCountry,
-  };
-
-  const propertyAddress = {
-    "@type": "PostalAddress",
-    addressLocality: siteConfig.propertyAddress.addressLocality,
-    addressRegion: siteConfig.propertyAddress.addressRegion,
-    addressCountry: siteConfig.propertyAddress.addressCountry,
-  };
+  const postalAddress = getTaipeiOfficeAddress();
+  const propertyAddress = getPropertyPostalAddress();
+  const propertyGeo = getPropertyGeo();
+  const propertyPlace = getPropertyPlace(locale);
 
   const organization = {
     "@type": ["Organization", "RealEstateAgent", "LocalBusiness"],
     "@id": orgId,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
-    alternateName: [siteConfig.legalName, "WinnerLife", "OK忠訓國際集團", "忠訓地產開發有限公司"],
+    alternateName: [siteConfig.legalName, "WinnerLife", "OK忠訓國際集團", "Jung Shing Real Estate"],
     url: siteUrl,
     mainEntityOfPage: { "@id": webpageId },
     logo: {
@@ -61,20 +60,22 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       "@id": `${siteUrl}#logo`,
       url: logoUrl,
       contentUrl: logoUrl,
+      width: 1600,
+      height: 800,
     },
-    image: logoUrl,
+    image: [logoUrl, iconUrl, ogImage],
     email: siteConfig.email,
     telephone: [siteConfig.taipeiPhone, siteConfig.phone],
     contactPoint: [
       {
         "@type": "ContactPoint",
         telephone: siteConfig.taipeiPhone,
-        contactType: locale === "jp" ? "customer service" : "customer service",
+        contactType: "customer service",
         areaServed: "TW",
         availableLanguage: ["zh-TW", "ja", "en"],
         hoursAvailable: {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          dayOfWeek: [...officeOpenDays],
           opens: "10:00",
           closes: "18:00",
         },
@@ -88,13 +89,17 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       },
     ],
     address: postalAddress,
-    areaServed: siteConfig.areaServed.map((name) => ({
-      "@type": "AdministrativeArea",
-      name,
-    })),
+    geo: getTaipeiOfficeGeo(),
+    areaServed: [
+      ...siteConfig.areaServed.map((name) => ({
+        "@type": "AdministrativeArea",
+        name,
+      })),
+      { "@id": propertyPlaceId },
+    ],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      dayOfWeek: [...officeOpenDays],
       opens: "10:00",
       closes: "18:00",
     },
@@ -106,6 +111,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       "EL FARO+ 白金高輪",
       "品川",
       "港区",
+      "白金高輪",
     ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
@@ -133,7 +139,8 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     telephone: siteConfig.taipeiPhone,
     email: siteConfig.email,
     address: postalAddress,
-    areaServed: propertyAddress,
+    geo: getTaipeiOfficeGeo(),
+    areaServed: [{ "@id": propertyPlaceId }, propertyAddress],
     parentOrganization: { "@id": orgId },
     makesOffer: { "@id": listingId },
   };
@@ -182,12 +189,12 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     "@id": websiteId,
     url: siteUrl,
     name: getBuildingDisplayName(),
-    alternateName: [siteConfig.buildingName, "EL FARO+ SHIROKANE-TAKANAWA"],
+    alternateName: [siteConfig.buildingName, "EL FARO+ SHIROKANE-TAKANAWA", siteConfig.name],
     description,
     publisher: { "@id": orgId },
     copyrightHolder: { "@id": orgId },
     inLanguage: ["zh-TW", "ja"],
-    about: { "@id": listingId },
+    about: [{ "@id": listingId }, { "@id": propertyPlaceId }],
     hasPart: { "@id": sitelinksId },
     mainEntity: { "@id": listingId },
   };
@@ -199,18 +206,22 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     name: title,
     description,
     isPartOf: { "@id": websiteId },
-    about: [{ "@id": listingId }, { "@id": orgId }],
+    about: [{ "@id": listingId }, { "@id": orgId }, { "@id": propertyPlaceId }],
     primaryImageOfPage: {
       "@type": "ImageObject",
       url: ogImage,
       contentUrl: ogImage,
+      width: siteConfig.ogImageWidth,
+      height: siteConfig.ogImageHeight,
     },
     inLanguage,
     breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
     hasPart: [{ "@id": sitelinksId }, ...siteNavigationElements.map((el) => ({ "@id": el["@id"] }))],
     significantLink: navLinks.map((link) => absoluteUrl(link.path)),
+    relatedLink: navLinks.map((link) => absoluteUrl(link.path)),
     mainEntity: { "@id": listingId },
     publisher: { "@id": orgId },
+    contentLocation: { "@id": propertyPlaceId },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".hero-title"],
@@ -236,19 +247,16 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     name: getBuildingDisplayName(),
     description,
     url: pageUrl,
-    image: [ogImage],
+    image: [ogImage, iconUrl],
     inLanguage,
-    datePosted: "2019-01-01",
+    datePosted: "2024-01-01",
     address: propertyAddress,
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 35.6431,
-      longitude: 139.7402,
-    },
+    geo: propertyGeo,
+    contentLocation: { "@id": propertyPlaceId },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
-      url: pageUrl,
+      url: absoluteUrl("/contact"),
       priceCurrency: "JPY",
       seller: { "@id": agentId },
       offeredBy: { "@id": orgId },
@@ -266,6 +274,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     url: pageUrl,
     image: ogImage,
     address: propertyAddress,
+    geo: propertyGeo,
     numberOfAccommodationUnits: 233,
     numberOfBedrooms: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
     amenityFeature: [
@@ -273,11 +282,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       { "@type": "LocationFeatureSpecification", name: "IoT スマートホーム", value: true },
       { "@type": "LocationFeatureSpecification", name: locale === "jp" ? "運河ビュー" : "運河景觀", value: true },
     ],
-    containedInPlace: {
-      "@type": "Place",
-      name: locale === "jp" ? "白金高輪・港南エリア" : "白金高輪・港南區域",
-      address: propertyAddress,
-    },
+    containedInPlace: { "@id": propertyPlaceId },
   };
 
   return {
@@ -285,6 +290,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     "@graph": [
       organization,
       realEstateAgent,
+      propertyPlace,
       website,
       sitelinksList,
       ...siteNavigationElements,

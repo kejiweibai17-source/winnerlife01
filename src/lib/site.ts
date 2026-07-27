@@ -12,12 +12,13 @@ export const siteConfig = {
   description:
     "EL FARO+ 白金高輪—東京都心超越時代與流行的東京港區出租公寓系列。233戶住宅環繞綠意與水景，結合品川・港區核心交通與 ALSOK 保全，由忠訓地產提供專業日本置產與賞屋諮詢。現正受理房源登記及樣品屋參觀預約。",
   locale: "zh-TW",
-  /** 正式網域（部署後請在 .env.local 設定 NEXT_PUBLIC_SITE_URL） */
+  /**
+   * 正式網域。務必在 Vercel / .env 設定 NEXT_PUBLIC_SITE_URL=https://okprime.winnerlife.com
+   * 否則 canonical / JSON-LD 會落到預覽網域，影響 Google 圖示與 sitelinks。
+   */
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "https://www.winnerlife.com"),
+    "https://okprime.winnerlife.com",
   corporateUrl: "https://www.winnerlife.com",
   email: "service@winnerlife.com",
   phone: "+81-120-109-230",
@@ -25,24 +26,37 @@ export const siteConfig = {
   taipeiPhone: "+886-2-2713-1039",
   taipeiPhoneDisplay: "(02) 2713-1039",
   address: {
-    streetAddress: "南京市東路四段1號4樓",
+    streetAddress: "南京東路四段1號4樓",
     addressLocality: "松山區",
     addressRegion: "台北市",
     postalCode: "105",
     addressCountry: "TW",
   },
+  /** 台北辦公室座標（南京東路四段一帶） */
+  officeGeo: {
+    latitude: 25.0516,
+    longitude: 121.5484,
+  },
   propertyAddress: {
+    streetAddress: "港南",
     addressLocality: "港區",
     addressRegion: "東京都",
+    postalCode: "108-0075",
     addressCountry: "JP",
   },
+  /** 建案／白金高輪・港南一帶座標 */
+  propertyGeo: {
+    latitude: 35.6431,
+    longitude: 139.7402,
+    mapUrl: "https://maps.google.com/?q=35.6431,139.7402",
+  },
   license: "北市代銷會證字第 110011 號",
-  businessHours: "Mo-Fr 10:00-18:00",
+  businessHours: "Mo,Tu,Sa,Su 10:00-18:00",
   businessHoursDisplay: {
     zh: "營業時間：10:00～18:00（週三、四、五公休）",
     jp: "営業時間：10:00〜18:00（水・木・金定休）",
   },
-  areaServed: ["東京都", "日本"],
+  areaServed: ["東京都", "日本", "台北市"],
   ogImage: "/images/og/home.jpg",
   ogImageAlt: {
     zh: "EL FARO+ 白金高輪 運河水岸建案外觀",
@@ -51,6 +65,15 @@ export const siteConfig = {
   ogImageWidth: 1200,
   ogImageHeight: 630,
   logo: "/images/js_logo_h1.png",
+  /** Google / PWA 用正方形圖示（≥48px） */
+  icons: {
+    favicon: "/favicon.ico",
+    icon48: "/icons/icon-48.png",
+    icon96: "/icons/icon-96.png",
+    icon192: "/icons/icon-192.png",
+    icon512: "/icons/icon-512.png",
+    apple: "/apple-touch-icon.png",
+  },
   sameAs: [
     "https://www.winnerlife.com/",
     "https://www.facebook.com/ok.winnerlife/",
