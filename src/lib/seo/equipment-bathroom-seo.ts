@@ -5,9 +5,10 @@ import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
 import {
   getGeoMetaOther,
   getPropertyGeo,
-  getPropertyPlace,
+  getPropertyGeoGraph,
   getPropertyPostalAddress,
 } from "@/lib/seo/geo";
+import { orgId } from "@/lib/seo/schema-common";
 
 type Locale = "zh" | "jp";
 
@@ -141,15 +142,23 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
     primaryImageOfPage: {
       "@type": "ImageObject",
       url: ogImage,
+      width: 1200,
+      height: 630,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
-    contentLocation: getPropertyPlace(locale),
+    contentLocation: { "@id": `${absoluteUrl("/")}#property-place` },
+    spatialCoverage: { "@id": `${absoluteUrl("/")}#property-place` },
     about: { "@id": `${pageUrl}#itemlist` },
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
-      "@id": `${absoluteUrl("/")}#organization`,
+      "@id": orgId(),
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+    workTranslation: {
+      "@type": "WebPage",
+      url: absoluteUrl(locale === "jp" ? "/equipment/bathroom" : "/jp/equipment/bathroom"),
+      inLanguage: locale === "jp" ? "zh-TW" : "ja",
     },
   };
 
@@ -197,6 +206,6 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webPage, breadcrumb, getPropertyPlace(locale), itemList, faqPage],
+    "@graph": [webPage, breadcrumb, ...getPropertyGeoGraph(locale), itemList, faqPage],
   };
 }

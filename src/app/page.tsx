@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HomePage from "../../components/HomePage";
 import JsonLd from "@/components/JsonLd";
 import { getHomeJsonLd } from "@/lib/seo/home-json-ld";
+import { getGeoMetaOther } from "@/lib/seo/geo";
 import { getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   openGraph: {
@@ -44,12 +46,7 @@ export const metadata: Metadata = {
     description: getHomeDescription("zh"),
     images: [siteConfig.ogImage],
   },
-  other: {
-    "geo.region": "JP-13",
-    "geo.placename": "Minato City, Tokyo",
-    "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
-    ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
-  },
+  other: getGeoMetaOther(),
 };
 
 export default function Home() {

@@ -5,12 +5,14 @@ export const seoPageConfigs = {
     messageKey: "concept",
     zhPath: "/concept",
     jpPath: "/jp/concept",
+    pageType: "WebPage",
   },
   amenities: {
     messageKey: "amenitiesPage",
     zhPath: "/amenities",
     jpPath: "/jp/amenities",
     faqKey: "faq",
+    pageType: ["WebPage", "CollectionPage"],
   },
   location: {
     messageKey: "location",
@@ -18,40 +20,48 @@ export const seoPageConfigs = {
     jpPath: "/jp/location",
     seoKey: "page.seo",
     breadcrumbKey: "page.breadcrumb",
+    pageType: ["WebPage", "CollectionPage"],
   },
   transportation: {
     messageKey: "transportation",
     zhPath: "/transportation",
     jpPath: "/jp/transportation",
+    pageType: ["WebPage", "CollectionPage"],
   },
   architecture: {
     messageKey: "architecture",
     zhPath: "/architecture",
     jpPath: "/jp/architecture",
+    pageType: "WebPage",
   },
   summary: {
     messageKey: "summary",
     zhPath: "/summary",
     jpPath: "/jp/summary",
+    pageType: "WebPage",
   },
   interior: {
     messageKey: "interiorPage",
     zhPath: "/interior",
     jpPath: "/jp/interior",
+    pageType: ["WebPage", "CollectionPage", "ImageGallery"],
   },
   equipment: {
     messageKey: "equipmentPage",
     zhPath: "/equipment",
     jpPath: "/jp/equipment",
+    pageType: ["WebPage", "CollectionPage"],
   },
   story: {
     messageKey: "developer",
     zhPath: "/story",
     jpPath: "/jp/developer",
+    pageType: "AboutPage",
   },
   contact: {
     messageKey: "contactPage",
     zhPath: "/contact",
     jpPath: "/jp/contact",
+    pageType: "ContactPage",
   },
 } as const satisfies Record<string, PageSeoConfig>;

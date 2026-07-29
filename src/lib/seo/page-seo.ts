@@ -3,13 +3,21 @@ import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
 import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
 import {
+  getGeoMetaOther,
   getOrganizationStub,
   getPropertyGeo,
-  getPropertyPlace,
+  getPropertyGeoGraph,
   getPropertyPostalAddress,
 } from "@/lib/seo/geo";
+import {
+  localeLang,
+  orgId,
+  propertyPlaceId,
+  websiteId,
+  type Locale,
+} from "@/lib/seo/schema-common";
 
-export type Locale = "zh" | "jp";
+export type { Locale };
 
 type FaqItem = { question: string; answer: string };
 
@@ -22,6 +30,11 @@ export type PageSeoConfig = {
   faqKey?: string;
   /** Attach Tokyo property Place + GeoCoordinates */
   includePropertyGeo?: boolean;
+  /**
+   * Schema.org @type for the page node.
+   * Defaults inferred from messageKey when omitted.
+   */
+  pageType?: string | string[];
 };
 
 const GEO_PAGE_KEYS = new Set([
@@ -92,6 +105,25 @@ function shouldIncludeGeo(config: PageSeoConfig) {
   return config.includePropertyGeo !== false && GEO_PAGE_KEYS.has(config.messageKey);
 }
 
+function resolvePageType(config: PageSeoConfig): string | string[] {
+  if (config.pageType) return config.pageType;
+  switch (config.messageKey) {
+    case "contactPage":
+      return "ContactPage";
+    case "developer":
+      return "AboutPage";
+    case "interiorPage":
+    case "amenitiesPage":
+    case "equipmentPage":
+      return ["WebPage", "CollectionPage"];
+    case "location":
+    case "transportation":
+      return ["WebPage", "CollectionPage"];
+    default:
+      return "WebPage";
+  }
+}
+
 export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata {
   const seo = getSeoData(locale, config);
   const path = getPagePath(locale, config);
@@ -141,12 +173,7 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
       description: seo.description,
       images: [ogImage],
     },
-    other: {
-      "geo.region": "JP-13",
-      "geo.placename": "Minato City, Tokyo",
-      "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
-      ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
-    },
+    other: getGeoMetaOther(),
   };
 }
 
@@ -155,12 +182,12 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
   const breadcrumbData = getBreadcrumb(locale, config);
   const faqItems = getFaqItems(locale, config);
   const pageUrl = absoluteUrl(getPagePath(locale, config));
+  const altUrl = absoluteUrl(locale === "jp" ? config.zhPath : config.jpPath);
   const homeUrl = absoluteUrl(locale === "jp" ? "/jp" : "/");
   const ogImage = absoluteUrl(seo.ogImage ?? siteConfig.ogImage);
-  const inLanguage = locale === "jp" ? "ja" : "zh-TW";
+  const inLanguage = localeLang(locale);
   const includeGeo = shouldIncludeGeo(config);
-  const propertyPlace = getPropertyPlace(locale);
-  const propertyPlaceId = propertyPlace["@id"];
+  const pageType = resolvePageType(config);
 
   const breadcrumbItems = breadcrumbData
     ? Object.entries(breadcrumbData)
@@ -195,8 +222,18 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     itemListElement: breadcrumbItems,
   };
 
+  const listingRef = {
+    "@type": "RealEstateListing",
+    "@id": `${absoluteUrl("/")}#listing`,
+    name: getBuildingDisplayName(),
+    url: absoluteUrl("/"),
+    address: getPropertyPostalAddress(),
+    geo: getPropertyGeo(),
+    contentLocation: { "@id": propertyPlaceId() },
+  };
+
   const webPage: Record<string, unknown> = {
-    "@type": "WebPage",
+    "@type": pageType,
     "@id": `${pageUrl}#webpage`,
     url: pageUrl,
     name: seo.title,
@@ -204,51 +241,87 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     inLanguage,
     isPartOf: {
       "@type": "WebSite",
-      "@id": `${absoluteUrl("/")}#website`,
+      "@id": websiteId(),
       name: getBuildingDisplayName(),
       url: absoluteUrl("/"),
       publisher: getOrganizationStub(),
+      inLanguage: ["zh-TW", "ja"],
     },
     primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: ogImage,
+      contentUrl: ogImage,
+      width: 1200,
+      height: 630,
+      caption: seo.ogImageAlt ?? seo.title,
+    },
+    image: {
       "@type": "ImageObject",
       url: ogImage,
       width: 1200,
       height: 630,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
-    about: {
-      "@type": "RealEstateListing",
-      "@id": `${absoluteUrl("/")}#listing`,
-      name: getBuildingDisplayName(),
-      url: absoluteUrl("/"),
-      address: getPropertyPostalAddress(),
-      geo: getPropertyGeo(),
-    },
+    about: [listingRef, { "@id": orgId() }],
     publisher: getOrganizationStub(),
-    mainEntity: {
-      "@type": "RealEstateListing",
-      name: getBuildingDisplayName(),
-      url: absoluteUrl("/"),
-      address: getPropertyPostalAddress(),
-      geo: getPropertyGeo(),
+    mainEntity: listingRef,
+    isAccessibleForFree: true,
+    workTranslation: {
+      "@type": "WebPage",
+      "@id": `${altUrl}#webpage`,
+      url: altUrl,
+      inLanguage: locale === "jp" ? "zh-TW" : "ja",
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2"],
     },
   };
 
   if (includeGeo) {
-    webPage.contentLocation = { "@id": propertyPlaceId };
-    webPage.spatialCoverage = { "@id": propertyPlaceId };
+    webPage.contentLocation = { "@id": propertyPlaceId() };
+    webPage.spatialCoverage = { "@id": propertyPlaceId() };
+    (webPage.about as unknown[]).push({ "@id": propertyPlaceId() });
   }
 
-  const graph: Record<string, unknown>[] = [webPage, breadcrumb];
+  if (config.messageKey === "contactPage") {
+    webPage.mainEntity = {
+      "@type": "RealEstateAgent",
+      "@id": orgId(),
+      name: siteConfig.name,
+      telephone: siteConfig.taipeiPhone,
+      email: siteConfig.email,
+      url: absoluteUrl(locale === "jp" ? "/jp/contact" : "/contact"),
+      address: getOrganizationStub().address,
+    };
+  }
+
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": ["Organization", "RealEstateAgent", "LocalBusiness"],
+      "@id": orgId(),
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: absoluteUrl(siteConfig.logo),
+      telephone: siteConfig.taipeiPhone,
+      email: siteConfig.email,
+      address: getOrganizationStub().address,
+      sameAs: [...siteConfig.sameAs],
+    },
+    webPage,
+    breadcrumb,
+    listingRef,
+  ];
 
   if (includeGeo) {
-    graph.push(propertyPlace);
+    graph.push(...getPropertyGeoGraph(locale));
   }
 
   if (faqItems.length > 0) {
     graph.push({
       "@type": "FAQPage",
       "@id": `${pageUrl}#faq`,
+      inLanguage,
       mainEntity: faqItems.map((item) => ({
         "@type": "Question",
         name: item.question,

@@ -117,31 +117,34 @@ export function getHomeDescription(locale: "zh" | "jp" = "zh") {
   return siteConfig.description;
 }
 
-/** 首頁 Sitelink 導覽（結構化資料・站內導覽一致；為 sr-only 語意導覽，不影響視覺設計） */
+/**
+ * 首頁 Sitelink 導覽（JSON-LD ItemList / SiteNavigationElement + 首頁可見導覽）。
+ * 順序以 Google 常顯示的核心頁優先：理念 → 地段 → 交通 → 概要 → 設備 → 聯絡。
+ */
 export const homeSitelinks = {
   zh: [
     { name: "建案理念", path: "/concept", description: "EL FARO+ 燈塔理念與 Urban Classic 設計願景" },
-    { name: "區域再開發與周邊設施", path: "/amenities", description: "白金高輪都市更新、商業與生活設施" },
     { name: "地段核心", path: "/location", description: "港區地理位置、文教區與周邊環境" },
     { name: "交通動線", path: "/transportation", description: "三站五線交通、羽田成田直達" },
-    { name: "建築特色", path: "/architecture", description: "外觀設計、建材與光影美學" },
     { name: "物件概要", path: "/summary", description: "間取圖、仕上表與建案規格" },
-    { name: "室內情境", path: "/interior", description: "室內設計情境與居住空間" },
     { name: "設備與保全系統", path: "/equipment", description: "廚衛設備、家電與 ALSOK 保全" },
-    { name: "品牌故事", path: "/story", description: "OK PRIME 與忠訓地產品牌願景" },
     { name: "聯絡我們", path: "/contact", description: "賞屋預約、房源登記與置產諮詢" },
+    { name: "區域再開發與周邊設施", path: "/amenities", description: "白金高輪都市更新、商業與生活設施" },
+    { name: "建築特色", path: "/architecture", description: "外觀設計、建材與光影美學" },
+    { name: "室內情境", path: "/interior", description: "室內設計情境與居住空間" },
+    { name: "品牌故事", path: "/story", description: "OK PRIME 與忠訓地產品牌願景" },
   ],
   jp: [
     { name: "コンセプト", path: "/jp/concept", description: "EL FARO+ 灯台コンセプトと Urban Classic" },
-    { name: "地域再開発・周辺施設", path: "/jp/amenities", description: "白金高輪の都市更新と生活施設" },
     { name: "ロケーション", path: "/jp/location", description: "港区の立地・文教エリア・周辺環境" },
     { name: "交通・アクセス", path: "/jp/transportation", description: "3駅5路線・羽田成田アクセス" },
-    { name: "建築デザイン", path: "/jp/architecture", description: "外観・建材・光と影のデザイン" },
     { name: "物件概要", path: "/jp/summary", description: "間取り図・仕様・建物概要" },
-    { name: "インテリア", path: "/jp/interior", description: "室内デザインと居住空間" },
     { name: "設備・保全系統", path: "/jp/equipment", description: "キッチン・バス・ALSOK防犯" },
-    { name: "ブランドストーリー", path: "/jp/developer", description: "OK PRIME・忠訓地產のブランド" },
     { name: "お問い合わせ", path: "/jp/contact", description: "見学予約・登録・購入相談" },
+    { name: "地域再開発・周辺施設", path: "/jp/amenities", description: "白金高輪の都市更新と生活施設" },
+    { name: "建築デザイン", path: "/jp/architecture", description: "外観・建材・光と影のデザイン" },
+    { name: "インテリア", path: "/jp/interior", description: "室内デザインと居住空間" },
+    { name: "ブランドストーリー", path: "/jp/developer", description: "OK PRIME・忠訓地產のブランド" },
   ],
 } as const;
 
@@ -149,3 +152,47 @@ export const homeSitelinks = {
 export function getBuildingDisplayName() {
   return `${siteConfig.projectName} ${siteConfig.projectSubtitle}`;
 }
+
+/** 首頁 FAQ（與 HomePage 可見內容、JSON-LD FAQPage 同步） */
+export const homeFaqItems = {
+  zh: [
+    {
+      question: "EL FARO+ 白金高輪位於哪裡？",
+      answer:
+        "位於東京都港區港南・白金高輪一帶，鄰近天王洲艾爾站與白金高輪站，可串聯品川站與羽田機場，是港區核心生活圈的水岸立地。",
+    },
+    {
+      question: "如何預約樣品屋或索取資料？",
+      answer: `請至「聯絡我們」頁面填寫表單，或致電 ${siteConfig.taipeiPhoneDisplay}、來信 ${siteConfig.email}，由忠訓地產專員協助預約與諮詢。`,
+    },
+    {
+      question: "建案有哪些主要特色？",
+      answer:
+        "全案 233 戶，環繞綠意與運河景觀，配備 ALSOK 保全與智慧設備，鄰近品川・港區交通樞紐，適合自住與日本置產規劃。",
+    },
+    {
+      question: "網站有日文版本嗎？",
+      answer: "有。中文版首頁為 /，日文版首頁為 /jp，各主要頁面均提供中日文對應內容。",
+    },
+  ],
+  jp: [
+    {
+      question: "EL FARO+ 白金高輪はどこにありますか？",
+      answer:
+        "東京都港区港南・白金高輪エリア。天王洲アイル駅・白金高輪駅が近く、品川駅や羽田空港へのアクセスも良好な水辺の立地です。",
+    },
+    {
+      question: "モデルルーム見学や資料請求はどうすればよいですか？",
+      answer: `「お問い合わせ」ページからご予約ください。お電話（${siteConfig.taipeiPhoneDisplay}）またはメール（${siteConfig.email}）でも承ります。`,
+    },
+    {
+      question: "物件の主な特長は？",
+      answer:
+        "全233戸。緑と運河ビュー、ALSOK防犯・スマート設備を備え、品川・港区の交通利便性を活かした住まいです。",
+    },
+    {
+      question: "中国語版のサイトはありますか？",
+      answer: "はい。日本語トップは /jp、中国語トップは / です。主要ページは中日両言語でご確認いただけます。",
+    },
+  ],
+} as const;

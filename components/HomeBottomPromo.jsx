@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { getLocalizedPath } from "@/lib/locale-path";
 
 const COLUMN_IMAGES = [
   "/images/index/白金アエルシティ.png",
@@ -32,7 +34,9 @@ function PromoColumn({ image, imageAlt, ctaLabel, ctaHref, description }) {
           className="absolute bottom-5 left-5 md:bottom-6 md:left-6 z-10 inline-flex items-center gap-2 bg-[#3d7ab5] hover:bg-[#356ba3] text-white text-xs md:text-sm tracking-[0.12em] px-5 py-3 transition-colors duration-300"
         >
           <span>{ctaLabel}</span>
-          <span aria-hidden className="text-[10px]">&gt;</span>
+          <span aria-hidden className="text-[10px]">
+            &gt;
+          </span>
         </Link>
       </div>
       <p className="mt-6 w-full max-w-md text-center text-[11px] md:text-xs leading-[2] tracking-[0.08em] text-[#4a4a4a]">
@@ -44,12 +48,19 @@ function PromoColumn({ image, imageAlt, ctaLabel, ctaHref, description }) {
 
 export default function HomeBottomPromo() {
   const t = useTranslations("bottomPromo");
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+
+  const columnHrefs = [
+    getLocalizedPath("/summary", locale),
+    getLocalizedPath("/contact", locale),
+  ];
 
   const columns = COLUMN_IMAGES.map((image, i) => ({
     image,
     imageAlt: COLUMN_IMAGE_ALTS[i],
     ctaLabel: t(`columns.${i}.cta`),
-    ctaHref: "#",
+    ctaHref: columnHrefs[i] ?? getLocalizedPath("/contact", locale),
     description: t(`columns.${i}.desc`),
   }));
 

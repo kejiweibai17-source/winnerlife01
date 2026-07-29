@@ -5,7 +5,7 @@ import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
 import {
   getGeoMetaOther,
   getPropertyGeo,
-  getPropertyPlace,
+  getPropertyGeoGraph,
   getPropertyPostalAddress,
 } from "@/lib/seo/geo";
 
@@ -143,13 +143,19 @@ export function getEquipmentKitchenJsonLd(locale: Locale) {
       url: ogImage,
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
-    contentLocation: getPropertyPlace(locale),
+    contentLocation: { "@id": `${absoluteUrl("/")}#property-place` },
+    spatialCoverage: { "@id": `${absoluteUrl("/")}#property-place` },
     about: { "@id": `${pageUrl}#product` },
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
       "@id": `${absoluteUrl("/")}#organization`,
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+    workTranslation: {
+      "@type": "WebPage",
+      url: absoluteUrl(locale === "jp" ? "/equipment/kitchen" : "/jp/equipment/kitchen"),
+      inLanguage: locale === "jp" ? "zh-TW" : "ja",
     },
   };
 
@@ -188,6 +194,6 @@ export function getEquipmentKitchenJsonLd(locale: Locale) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webPage, breadcrumb, getPropertyPlace(locale), product, faqPage],
+    "@graph": [webPage, breadcrumb, ...getPropertyGeoGraph(locale), product, faqPage],
   };
 }

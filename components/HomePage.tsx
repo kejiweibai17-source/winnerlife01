@@ -10,7 +10,7 @@ import ParallaxImage from "./ParallaxImage/page";
 import HomeBottomPromo from "./HomeBottomPromo";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { homeSitelinks } from "@/lib/site";
+import { homeFaqItems, homeSitelinks } from "@/lib/site";
 import { getLocalizedPath } from "@/lib/locale-path";
 
 const CARD_IMAGES = [
@@ -202,20 +202,77 @@ export default function HomePage() {
 
       <WovenStory />
       <Slider />
-      <HomeBottomPromo />
 
-      <nav
-        aria-label={isJp ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面"}
-        className="sr-only"
+      <section
+        className="w-full bg-[#fbfcfd] text-[#1a2c4e] py-20 md:py-28 px-6 md:px-12 lg:px-20 border-t border-[#e8ecf1]"
+        data-seo-speakable
       >
-        <ul>
-          {siteNavLinks.map((link) => (
-            <li key={link.path}>
-              <Link href={link.path}>{link.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <div className="max-w-[1100px] mx-auto">
+          <header className="mb-12 md:mb-16 max-w-2xl">
+            <p className="text-xs tracking-[0.35em] uppercase text-[#8a93a3] mb-4 font-serif">
+              {isJp ? "SITE MAP" : "SITE MAP"}
+            </p>
+            <h2 className="text-2xl md:text-3xl tracking-[0.12em] font-serif font-normal leading-relaxed">
+              {isJp ? "EL FARO+ 白金高輪を知る" : "探索 EL FARO+ 白金高輪"}
+            </h2>
+            <p className="mt-4 text-sm md:text-base tracking-widest leading-[2] text-[#5a6475]">
+              {isJp
+                ? "コンセプトから立地・交通・設備・お問い合わせまで、公式サイトの主要ページへ。"
+                : "從建案理念、地段交通、設備保全到諮詢預約—快速進入官方網站主要頁面。"}
+            </p>
+          </header>
+          <nav aria-label={isJp ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面"}>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
+              {siteNavLinks.map((link) => (
+                <li key={link.path} className="border-t border-[#d8dee8] pt-5">
+                  <Link
+                    href={link.path}
+                    className="group flex flex-col gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    <span className="text-base md:text-lg tracking-[0.18em] font-serif">
+                      {link.name}
+                      <span
+                        aria-hidden
+                        className="inline-block ml-2 text-xs tracking-normal opacity-50 group-hover:translate-x-1 transition-transform"
+                      >
+                        ›
+                      </span>
+                    </span>
+                    <span className="text-xs md:text-sm tracking-widest leading-relaxed text-[#7a8494]">
+                      {link.description}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#f4f4f4] py-20 md:py-24 px-6 md:px-12 lg:px-20">
+        <div className="max-w-[900px] mx-auto">
+          <header className="mb-10 md:mb-12">
+            <p className="text-xs tracking-[0.35em] uppercase text-[#8a93a3] mb-3 font-serif">FAQ</p>
+            <h2 className="text-xl md:text-2xl tracking-[0.15em] font-serif text-[#1a2c4e]">
+              {isJp ? "よくあるご質問" : "常見問題"}
+            </h2>
+          </header>
+          <dl className="flex flex-col gap-8">
+            {homeFaqItems[locale].map((item) => (
+              <div key={item.question} className="border-t border-[#d5d5d5] pt-6">
+                <dt className="text-sm md:text-base tracking-widest font-medium text-[#1a2c4e] leading-relaxed">
+                  {item.question}
+                </dt>
+                <dd className="mt-3 text-xs md:text-sm tracking-widest leading-[2] text-[#5a5a5a]">
+                  {item.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      <HomeBottomPromo />
     </>
   );
 }

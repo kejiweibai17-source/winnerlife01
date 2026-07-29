@@ -3,229 +3,121 @@ import {
   getBuildingDisplayName,
   getHomeDescription,
   getHomePageTitle,
+  homeFaqItems,
   homeSitelinks,
   siteConfig,
 } from "@/lib/site";
+import { getPropertyGeoGraph } from "@/lib/seo/geo";
 import {
-  getPropertyGeo,
-  getPropertyPlace,
-  getPropertyPostalAddress,
-  getTaipeiOfficeAddress,
-  getTaipeiOfficeGeo,
-  officeOpenDays,
-} from "@/lib/seo/geo";
-
-type Locale = "zh" | "jp";
+  buildAgencyServices,
+  buildApartmentComplex,
+  buildOrganization,
+  buildPropertyListing,
+  buildRealEstateAgentStub,
+  buildSiteNavigationElements,
+  buildSitelinksItemList,
+  homePath,
+  localeLang,
+  orgId,
+  propertyPlaceId,
+  websiteId,
+  type Locale,
+} from "@/lib/seo/schema-common";
 
 export function getHomeJsonLd(locale: Locale = "zh") {
-  const pagePath = locale === "jp" ? "/jp" : "/";
+  const pagePath = homePath(locale);
   const pageUrl = absoluteUrl(pagePath);
+  const altPath = locale === "jp" ? "/" : "/jp";
+  const altUrl = absoluteUrl(altPath);
   const siteUrl = absoluteUrl("/");
   const ogImage = absoluteUrl(siteConfig.ogImage);
-  const logoUrl = absoluteUrl(siteConfig.logo);
-  const iconUrl = absoluteUrl(siteConfig.icons.icon512);
-  const inLanguage = locale === "jp" ? "ja" : "zh-TW";
+  const inLanguage = localeLang(locale);
   const homeLabel = locale === "jp" ? "トップ" : "首頁";
   const title = getHomePageTitle(locale);
   const description = getHomeDescription(locale);
-  const residenceDescription =
-    locale === "jp"
-      ? "233戸の住まいが緑と水に囲まれ、南に運河を望む。天王洲アイル駅徒歩圏、品川・港区のコア生活圏。"
-      : "233戶住宅環繞綠意與水景，向南可眺望運河。鄰近天王洲艾爾站，品川・港區核心生活圈。";
 
-  const orgId = `${siteUrl}#organization`;
-  const agentId = `${siteUrl}#realestate-agent`;
-  const websiteId = `${siteUrl}#website`;
-  const webpageId = `${pageUrl}#webpage`;
-  const listingId = `${pageUrl}#listing`;
-  const residenceId = `${pageUrl}#residence`;
-  const sitelinksId = `${pageUrl}#sitelinks`;
-  const propertyPlaceId = `${siteUrl}#property-place`;
-
-  const postalAddress = getTaipeiOfficeAddress();
-  const propertyAddress = getPropertyPostalAddress();
-  const propertyGeo = getPropertyGeo();
-  const propertyPlace = getPropertyPlace(locale);
-
-  const organization = {
-    "@type": ["Organization", "RealEstateAgent", "LocalBusiness"],
-    "@id": orgId,
-    name: siteConfig.name,
-    legalName: siteConfig.legalName,
-    alternateName: [siteConfig.legalName, "WinnerLife", "OK忠訓國際集團", "Jung Shing Real Estate"],
-    url: siteUrl,
-    mainEntityOfPage: { "@id": webpageId },
-    logo: {
-      "@type": "ImageObject",
-      "@id": `${siteUrl}#logo`,
-      url: logoUrl,
-      contentUrl: logoUrl,
-      width: 1600,
-      height: 800,
-    },
-    image: [logoUrl, iconUrl, ogImage],
-    email: siteConfig.email,
-    telephone: [siteConfig.taipeiPhone, siteConfig.phone],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: siteConfig.taipeiPhone,
-        contactType: "customer service",
-        areaServed: "TW",
-        availableLanguage: ["zh-TW", "ja", "en"],
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [...officeOpenDays],
-          opens: "10:00",
-          closes: "18:00",
-        },
-      },
-      {
-        "@type": "ContactPoint",
-        telephone: siteConfig.phone,
-        contactType: "customer service",
-        areaServed: "JP",
-        availableLanguage: ["ja", "zh-TW"],
-      },
-    ],
-    address: postalAddress,
-    geo: getTaipeiOfficeGeo(),
-    areaServed: [
-      ...siteConfig.areaServed.map((name) => ({
-        "@type": "AdministrativeArea",
-        name,
-      })),
-      { "@id": propertyPlaceId },
-    ],
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [...officeOpenDays],
-      opens: "10:00",
-      closes: "18:00",
-    },
-    priceRange: "$$$$",
-    knowsAbout: [
-      "日本不動產",
-      "東京住宅",
-      "海外置產",
-      "EL FARO+ 白金高輪",
-      "品川",
-      "港区",
-      "白金高輪",
-    ],
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: locale === "jp" ? "不動産仲介業免許" : "不動產仲介業執照",
-      name: siteConfig.license,
-    },
-    parentOrganization: {
-      "@type": "Organization",
-      name: siteConfig.parentBrand,
-      url: siteConfig.corporateUrl,
-    },
-    sameAs: [...siteConfig.sameAs],
-    description:
-      locale === "jp"
-        ? "忠訓地產は EL FARO+ 白金高輪の日本不動産マーケティング・見学予約・投資相談を担当する不動産エージェントです。"
-        : "忠訓地產為 EL FARO+ 白金高輪日本建案之官方行銷代理，提供日本置產、賞屋預約與投資諮詢服務。",
-  };
-
-  const realEstateAgent = {
-    "@type": "RealEstateAgent",
-    "@id": agentId,
-    name: siteConfig.name,
-    url: siteUrl,
-    image: logoUrl,
-    telephone: siteConfig.taipeiPhone,
-    email: siteConfig.email,
-    address: postalAddress,
-    geo: getTaipeiOfficeGeo(),
-    areaServed: [{ "@id": propertyPlaceId }, propertyAddress],
-    parentOrganization: { "@id": orgId },
-    makesOffer: { "@id": listingId },
+  const org = buildOrganization(locale);
+  const agent = {
+    ...buildRealEstateAgentStub(),
+    makesOffer: { "@id": `${pageUrl}#listing` },
   };
 
   const navLinks = homeSitelinks[locale];
-
-  const siteNavigationElements = navLinks.map((link, index) => ({
-    "@type": "SiteNavigationElement",
-    "@id": `${pageUrl}#nav-${index + 1}`,
-    name: link.name,
-    description: link.description,
-    url: absoluteUrl(link.path),
-    position: index + 1,
-    isPartOf: { "@id": websiteId },
-  }));
-
-  const sitelinksList = {
-    "@type": "ItemList",
-    "@id": sitelinksId,
-    name: locale === "jp" ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面",
-    description:
-      locale === "jp"
-        ? "忠訓地產 EL FARO+ 白金高輪 公式サイトの主要セクション"
-        : "忠訓地產 EL FARO+ 白金高輪 官方網站主要導覽",
-    numberOfItems: navLinks.length,
-    itemListOrder: "https://schema.org/ItemListOrderAscending",
-    itemListElement: navLinks.map((link, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: link.name,
-      description: link.description,
-      url: absoluteUrl(link.path),
-      item: {
-        "@type": "WebPage",
-        "@id": absoluteUrl(link.path),
-        name: link.name,
-        description: link.description,
-        url: absoluteUrl(link.path),
-        isPartOf: { "@id": websiteId },
-      },
-    })),
-  };
+  const sitelinksList = buildSitelinksItemList(locale);
+  const siteNavigationElements = buildSiteNavigationElements(locale);
+  const services = buildAgencyServices(locale);
+  const listing = buildPropertyListing(locale, pageUrl);
+  const residence = buildApartmentComplex(locale, pageUrl);
+  const geoGraph = getPropertyGeoGraph(locale);
 
   const website = {
     "@type": "WebSite",
-    "@id": websiteId,
+    "@id": websiteId(),
     url: siteUrl,
     name: getBuildingDisplayName(),
     alternateName: [siteConfig.buildingName, "EL FARO+ SHIROKANE-TAKANAWA", siteConfig.name],
     description,
-    publisher: { "@id": orgId },
-    copyrightHolder: { "@id": orgId },
+    publisher: { "@id": orgId() },
+    copyrightHolder: { "@id": orgId() },
     inLanguage: ["zh-TW", "ja"],
-    about: [{ "@id": listingId }, { "@id": propertyPlaceId }],
-    hasPart: { "@id": sitelinksId },
-    mainEntity: { "@id": listingId },
+    about: [{ "@id": `${pageUrl}#listing` }, { "@id": propertyPlaceId() }],
+    hasPart: [
+      { "@id": `${pageUrl}#sitelinks` },
+      ...navLinks.map((link) => ({ "@id": `${absoluteUrl(link.path)}#webpage` })),
+    ],
+    mainEntity: { "@id": `${pageUrl}#listing` },
+    significantLink: navLinks.map((link) => absoluteUrl(link.path)),
+    relatedLink: [altUrl, ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path))],
   };
 
   const webPage = {
-    "@type": ["WebPage", "CollectionPage"],
-    "@id": webpageId,
+    "@type": ["WebPage", "CollectionPage", "RealEstateListing"],
+    "@id": `${pageUrl}#webpage`,
     url: pageUrl,
     name: title,
     description,
-    isPartOf: { "@id": websiteId },
-    about: [{ "@id": listingId }, { "@id": orgId }, { "@id": propertyPlaceId }],
+    isPartOf: { "@id": websiteId() },
+    about: [{ "@id": `${pageUrl}#listing` }, { "@id": orgId() }, { "@id": propertyPlaceId() }],
     primaryImageOfPage: {
       "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
       url: ogImage,
       contentUrl: ogImage,
+      width: siteConfig.ogImageWidth,
+      height: siteConfig.ogImageHeight,
+      caption: siteConfig.ogImageAlt[locale === "jp" ? "jp" : "zh"],
+    },
+    image: {
+      "@type": "ImageObject",
+      url: ogImage,
       width: siteConfig.ogImageWidth,
       height: siteConfig.ogImageHeight,
     },
     inLanguage,
     breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
-    hasPart: [{ "@id": sitelinksId }, ...siteNavigationElements.map((el) => ({ "@id": el["@id"] }))],
+    hasPart: [
+      { "@id": `${pageUrl}#sitelinks` },
+      ...siteNavigationElements.map((el) => ({ "@id": el["@id"] })),
+      ...services.map((s) => ({ "@id": s["@id"] })),
+    ],
     significantLink: navLinks.map((link) => absoluteUrl(link.path)),
     relatedLink: navLinks.map((link) => absoluteUrl(link.path)),
-    mainEntity: { "@id": listingId },
-    publisher: { "@id": orgId },
-    contentLocation: { "@id": propertyPlaceId },
+    mainEntity: { "@id": `${pageUrl}#listing` },
+    publisher: { "@id": orgId() },
+    contentLocation: { "@id": propertyPlaceId() },
+    spatialCoverage: { "@id": propertyPlaceId() },
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".hero-title"],
+      cssSelector: ["h1", "h2", "[data-seo-speakable]"],
     },
+    workTranslation: {
+      "@type": "WebPage",
+      "@id": `${altUrl}#webpage`,
+      url: altUrl,
+      inLanguage: locale === "jp" ? "zh-TW" : "ja",
+      name: getHomePageTitle(locale === "jp" ? "zh" : "jp"),
+    },
+    isAccessibleForFree: true,
   };
 
   const breadcrumb = {
@@ -241,63 +133,47 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     ],
   };
 
-  const listing = {
-    "@type": "RealEstateListing",
-    "@id": listingId,
-    name: getBuildingDisplayName(),
-    description,
-    url: pageUrl,
-    image: [ogImage, iconUrl],
+  const faqPage = {
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
     inLanguage,
-    datePosted: "2024-01-01",
-    address: propertyAddress,
-    geo: propertyGeo,
-    contentLocation: { "@id": propertyPlaceId },
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      url: absoluteUrl("/contact"),
-      priceCurrency: "JPY",
-      seller: { "@id": agentId },
-      offeredBy: { "@id": orgId },
-    },
-    broker: { "@id": agentId },
-    provider: { "@id": orgId },
+    mainEntity: homeFaqItems[locale].map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 
-  const residence = {
-    "@type": ["ApartmentComplex", "Residence"],
-    "@id": residenceId,
-    name: getBuildingDisplayName(),
-    alternateName: siteConfig.buildingName,
-    description: residenceDescription,
-    url: pageUrl,
-    image: ogImage,
-    address: propertyAddress,
-    geo: propertyGeo,
-    numberOfAccommodationUnits: 233,
-    numberOfBedrooms: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
-    amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "ALSOK ホームセキュリティ", value: true },
-      { "@type": "LocationFeatureSpecification", name: "IoT スマートホーム", value: true },
-      { "@type": "LocationFeatureSpecification", name: locale === "jp" ? "運河ビュー" : "運河景觀", value: true },
-    ],
-    containedInPlace: { "@id": propertyPlaceId },
+  const imageObject = {
+    "@type": "ImageObject",
+    "@id": `${siteUrl}#og-image`,
+    url: ogImage,
+    contentUrl: ogImage,
+    width: siteConfig.ogImageWidth,
+    height: siteConfig.ogImageHeight,
+    caption: getBuildingDisplayName(),
+    representativeOfPage: true,
   };
 
   return {
     "@context": "https://schema.org",
     "@graph": [
-      organization,
-      realEstateAgent,
-      propertyPlace,
+      org,
+      agent,
+      ...geoGraph,
       website,
       sitelinksList,
       ...siteNavigationElements,
+      ...services,
       webPage,
       breadcrumb,
       listing,
       residence,
+      faqPage,
+      imageObject,
     ],
   };
 }

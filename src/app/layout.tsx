@@ -6,6 +6,7 @@ import Script from "next/script";
 import "./globals.css";
 import AppShell from "../../components/AppShell";
 import { getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
+import { getGeoMetaOther } from "@/lib/seo/geo";
 
 const GTM_ID = "GTM-T84JXCM4";
 
@@ -27,23 +28,19 @@ export const metadata: Metadata = {
   title: { default: getHomePageTitle("zh"), template: `%s` },
   description: getHomeDescription("zh"),
   icons: {
+    // Google SERP favicon requires ≥48×48 square. Put PNG first; ICO now embeds 16/32/48.
     icon: [
       { url: siteConfig.icons.icon48, sizes: "48x48", type: "image/png" },
       { url: siteConfig.icons.icon96, sizes: "96x96", type: "image/png" },
       { url: siteConfig.icons.icon192, sizes: "192x192", type: "image/png" },
       { url: siteConfig.icons.icon512, sizes: "512x512", type: "image/png" },
-      { url: siteConfig.icons.favicon, sizes: "any" },
+      { url: siteConfig.icons.favicon, sizes: "48x48", type: "image/x-icon" },
     ],
-    shortcut: siteConfig.icons.favicon,
+    shortcut: siteConfig.icons.icon48,
     apple: [{ url: siteConfig.icons.apple, sizes: "180x180", type: "image/png" }],
   },
   formatDetection: { telephone: true, email: true },
-  other: {
-    "geo.region": "JP-13",
-    "geo.placename": "Minato City, Tokyo",
-    "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
-    ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
-  },
+  other: getGeoMetaOther(),
 };
 
 export default async function RootLayout({
