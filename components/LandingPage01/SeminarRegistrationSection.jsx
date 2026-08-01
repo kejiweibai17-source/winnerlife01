@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Copy from "../Copy";
 import { SEMINAR_REGISTRATION } from "./data";
-import { siteConfig } from "@/lib/site";
 
 function RegIcon({ type, className = "" }) {
   const icons = {
@@ -133,28 +132,52 @@ export default function SeminarRegistrationSection() {
     note: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!formState.name.trim() || !formState.phone.trim()) return;
+    setError("");
+    if (!formState.name.trim() || !formState.phone.trim()) {
+      setError("請填寫姓名與電話");
+      return;
+    }
 
-    const body = [
-      `姓名：${formState.name}`,
-      `電話：${formState.phone}`,
-      formState.email ? `電子郵件：${formState.email}` : "",
-      `參加人數：${formState.guests}`,
-      formState.note ? `備註：${formState.note}` : "",
-    ]
-      .filter(Boolean)
-      .join("%0D%0A");
-
-    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(form.mailSubject)}&body=${body}`;
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "landing",
+          name: formState.name,
+          phone: formState.phone,
+          email: formState.email,
+          guests: formState.guests,
+          note: formState.note,
+          locale: "zh",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(
+          data?.error === "mail_not_configured"
+            ? "郵件服務尚未設定完成，請直接來電或透過 LINE 聯絡我們。"
+            : "送出失敗，請稍後再試或來電／LINE 聯絡我們。",
+        );
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setError("送出失敗，請稍後再試或來電／LINE 聯絡我們。");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -231,9 +254,14 @@ export default function SeminarRegistrationSection() {
             <SectionDivider title={form.title} />
 
           {submitted ? (
-            <p className="lp-sr-success">感謝您的預約，我們將盡快與您聯繫確認。</p>
+            <p className="lp-sr-success">感謝您的預約，報名資料已送出，我們將盡快與您聯繫確認。</p>
           ) : (
             <form className="lp-sr-form" onSubmit={handleSubmit}>
+              {error ? (
+                <p className="lp-sr-form-error" role="alert">
+                  {error}
+                </p>
+              ) : null}
               <div className="lp-sr-form-grid">
                 <label className="lp-sr-field">
                   <RegIcon type="user" className="lp-sr-field-icon" />
@@ -294,8 +322,8 @@ export default function SeminarRegistrationSection() {
                 </label>
               </div>
 
-              <button type="submit" className="lp-sr-submit">
-                {form.submit}
+              <button type="submit" className="lp-sr-submit" disabled={submitting}>
+                {submitting ? "送出中…" : form.submit}
                 <span aria-hidden="true">→</span>
               </button>
               <p className="lp-sr-form-note">{form.disclaimer}</p>

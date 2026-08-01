@@ -4240,6 +4240,25 @@
   color: var(--lp-sr-muted);
 }
 
+.lp-sr-form-error {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-family: var(--font-noto-sans-tc), "Noto Sans TC", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: #9b1c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.lp-sr-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 @media (max-width: 900px) {
   .lp-sr-benefits {
     grid-template-columns: repeat(3, minmax(0, 1fr));

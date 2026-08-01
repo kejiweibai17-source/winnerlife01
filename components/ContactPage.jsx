@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -203,22 +203,15 @@ export default function ContactPage() {
     note: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
-
-  const mailSubject = useMemo(
-    () =>
-      encodeURIComponent(
-        t("form.mailSubject", { project: siteConfig.buildingName }),
-      ),
-    [t],
-  );
 
   function handleChange(e) {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setError("");
 
@@ -238,24 +231,32 @@ export default function ContactPage() {
       return;
     }
 
-    const body = [
-      `${t("form.mailName")}: ${form.name}`,
-      `${t("form.mailSalutation")}: ${form.salutation}`,
-      `${t("form.mailSession")}: ${form.session}`,
-      `${t("form.mailRegion")}: ${form.region}`,
-      `${t("form.mailGuests")}: ${form.guests}`,
-      `${t("form.mailPhone")}: ${form.phone}`,
-      form.contactTime ? `${t("form.mailTime")}: ${form.contactTime}` : "",
-      form.email ? `${t("form.mailEmail")}: ${form.email}` : "",
-      form.note ? `${t("form.mailNote")}: ${form.note}` : "",
-      "",
-      t("form.mailFooter"),
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:${siteConfig.email}?subject=${mailSubject}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          locale,
+          source: "contact",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        if (data?.error === "mail_not_configured") {
+          setError(t("form.errorConfig"));
+        } else {
+          setError(t("form.errorSend"));
+        }
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setError(t("form.errorSend"));
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -676,9 +677,10 @@ export default function ContactPage() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-3 rounded-sm bg-[#0d417b] px-8 py-4 text-sm font-medium tracking-[0.15em] text-white transition hover:bg-[#1a365d]"
+                  disabled={submitting}
+                  className="group flex w-full items-center justify-center gap-3 rounded-sm bg-[#0d417b] px-8 py-4 text-sm font-medium tracking-[0.15em] text-white transition hover:bg-[#1a365d] disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {t("form.submit")}
+                  {submitting ? t("form.submitting") : t("form.submit")}
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b29759] transition group-hover:translate-x-0.5">
                     →
                   </span>
