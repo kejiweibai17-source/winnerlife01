@@ -213,6 +213,7 @@ export default function ContactPage() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (submitting) return;
     setError("");
 
     if (

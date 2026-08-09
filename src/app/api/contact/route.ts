@@ -21,12 +21,39 @@ type ContactPayload = {
   website?: string;
 };
 
+/** Per-instance cooldown (best-effort on serverless). Key → last send ms */
+const recentSends = new Map<string, number>();
+const RATE_LIMIT_MS = 60_000;
+const RATE_LIMIT_MAX_KEYS = 500;
+
 function clean(value: unknown, max = 500) {
   if (typeof value !== "string") return "";
   return value.trim().slice(0, max);
 }
 
+function clientIp(request: Request) {
+  return (
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown"
+  );
+}
+
+function isRateLimited(key: string) {
+  const now = Date.now();
+  const last = recentSends.get(key);
+  if (last && now - last < RATE_LIMIT_MS) return true;
+  if (recentSends.size > RATE_LIMIT_MAX_KEYS) recentSends.clear();
+  recentSends.set(key, now);
+  return false;
+}
+
 export async function POST(request: Request) {
+  // Emergency kill switch — set CONTACT_EMAIL_ENABLED=false to stop all sends
+  if (process.env.CONTACT_EMAIL_ENABLED === "false") {
+    return NextResponse.json({ error: "mail_disabled" }, { status: 503 });
+  }
+
   let body: ContactPayload;
   try {
     body = (await request.json()) as ContactPayload;
@@ -64,6 +91,12 @@ export async function POST(request: Request) {
 
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: "invalid_email" }, { status: 400 });
+  }
+
+  const ip = clientIp(request);
+  const rateKey = `${ip}|${phone}|${name}`;
+  if (isRateLimited(rateKey)) {
+    return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

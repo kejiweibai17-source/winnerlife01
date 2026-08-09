@@ -142,6 +142,7 @@ export default function SeminarRegistrationSection() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (submitting) return;
     setError("");
     if (!formState.name.trim() || !formState.phone.trim()) {
       setError("請填寫姓名與電話");
