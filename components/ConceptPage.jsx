@@ -45,7 +45,7 @@ export default function ConceptPage() {
 
   const marqueeRow1 = [...Array(2)].flatMap(() =>
     MARQUEE_IMAGES.map((src, index) => ({
-      ...marqueeItems[index % marqueeItems.length],
+      ...(marqueeItems[index] ?? marqueeItems[index % marqueeItems.length]),
       src,
     })),
   );

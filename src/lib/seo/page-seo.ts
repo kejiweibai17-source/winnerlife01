@@ -8,8 +8,12 @@ import {
   getPropertyGeo,
   getPropertyGeoGraph,
   getPropertyPostalAddress,
+  getTaipeiOfficeAddress,
+  getTaipeiOfficeGeo,
+  officeOpenDays,
 } from "@/lib/seo/geo";
 import {
+  buildApartmentComplex,
   localeLang,
   orgId,
   propertyPlaceId,
@@ -49,6 +53,13 @@ const GEO_PAGE_KEYS = new Set([
   "equipmentPage",
   "developer",
 ]);
+
+/** Middle breadcrumb labels → absolute path (locale-aware) */
+const BREADCRUMB_PATH_MAP: Record<string, { zh: string; jp: string }> = {
+  equipment: { zh: "/equipment", jp: "/jp/equipment" },
+  amenities: { zh: "/amenities", jp: "/jp/amenities" },
+  location: { zh: "/location", jp: "/jp/location" },
+};
 
 function getMessages(locale: Locale) {
   return locale === "jp" ? jpMessages : zhMessages;
@@ -124,6 +135,23 @@ function resolvePageType(config: PageSeoConfig): string | string[] {
   }
 }
 
+function resolveBreadcrumbItemUrl(
+  locale: Locale,
+  config: PageSeoConfig,
+  key: string,
+  index: number,
+  total: number,
+  homeUrl: string,
+  pageUrl: string
+) {
+  if (index === 0 || key === "home") return homeUrl;
+  if (index === total - 1 || key === "current") return pageUrl;
+  const mapped = BREADCRUMB_PATH_MAP[key];
+  if (mapped) return absoluteUrl(locale === "jp" ? mapped.jp : mapped.zh);
+  // Fallback: keep crawlable URL (same page) rather than omitting item
+  return pageUrl;
+}
+
 export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata {
   const seo = getSeoData(locale, config);
   const path = getPagePath(locale, config);
@@ -189,18 +217,17 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
   const includeGeo = shouldIncludeGeo(config);
   const pageType = resolvePageType(config);
 
-  const breadcrumbItems = breadcrumbData
-    ? Object.entries(breadcrumbData)
-        .filter(([key]) => key !== "ariaLabel")
-        .map(([, name], index, arr) => {
-          const isLast = index === arr.length - 1;
-          return {
-            "@type": "ListItem",
-            position: index + 1,
-            name,
-            item: isLast ? pageUrl : index === 0 ? homeUrl : undefined,
-          };
-        })
+  const breadcrumbEntries = breadcrumbData
+    ? Object.entries(breadcrumbData).filter(([key]) => key !== "ariaLabel")
+    : null;
+
+  const breadcrumbItems = breadcrumbEntries
+    ? breadcrumbEntries.map(([key, name], index, arr) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name,
+        item: resolveBreadcrumbItemUrl(locale, config, key, index, arr.length, homeUrl, pageUrl),
+      }))
     : [
         {
           "@type": "ListItem",
@@ -229,6 +256,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     url: absoluteUrl("/"),
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),
+    hasMap: siteConfig.propertyGeo.mapUrl,
     contentLocation: { "@id": propertyPlaceId() },
   };
 
@@ -286,13 +314,21 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
 
   if (config.messageKey === "contactPage") {
     webPage.mainEntity = {
-      "@type": "RealEstateAgent",
+      "@type": ["RealEstateAgent", "LocalBusiness"],
       "@id": orgId(),
       name: siteConfig.name,
       telephone: siteConfig.taipeiPhone,
       email: siteConfig.email,
       url: absoluteUrl(locale === "jp" ? "/jp/contact" : "/contact"),
-      address: getOrganizationStub().address,
+      address: getTaipeiOfficeAddress(),
+      geo: getTaipeiOfficeGeo(),
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [...officeOpenDays],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      areaServed: [{ "@id": propertyPlaceId() }],
     };
   }
 
@@ -305,8 +341,10 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
       logo: absoluteUrl(siteConfig.logo),
       telephone: siteConfig.taipeiPhone,
       email: siteConfig.email,
-      address: getOrganizationStub().address,
+      address: getTaipeiOfficeAddress(),
+      geo: getTaipeiOfficeGeo(),
       sameAs: [...siteConfig.sameAs],
+      areaServed: [{ "@id": propertyPlaceId() }],
     },
     webPage,
     breadcrumb,
@@ -315,6 +353,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
 
   if (includeGeo) {
     graph.push(...getPropertyGeoGraph(locale));
+    graph.push(buildApartmentComplex(locale, pageUrl));
   }
 
   if (faqItems.length > 0) {

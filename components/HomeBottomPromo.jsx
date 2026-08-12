@@ -53,14 +53,14 @@ export default function HomeBottomPromo() {
 
   const columnHrefs = [
     getLocalizedPath("/summary", locale),
-    getLocalizedPath("/contact", locale),
+    `${getLocalizedPath("/contact", locale)}#contact-form`,
   ];
 
   const columns = COLUMN_IMAGES.map((image, i) => ({
     image,
     imageAlt: COLUMN_IMAGE_ALTS[i],
     ctaLabel: t(`columns.${i}.cta`),
-    ctaHref: columnHrefs[i] ?? getLocalizedPath("/contact", locale),
+    ctaHref: columnHrefs[i] ?? `${getLocalizedPath("/contact", locale)}#contact-form`,
     description: t(`columns.${i}.desc`),
   }));
 

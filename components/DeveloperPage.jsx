@@ -126,6 +126,11 @@ function SplitCTA({ t }) {
 export default function DeveloperPage() {
   const t = useTranslations("developer");
   const brandLines = t.raw("brandStory.lines");
+  const bodyParagraphs = t.raw("brandStory.bodyParagraphs");
+  const pillarsLabelItems = String(t("brandStory.pillarsLabel"))
+    .split("｜")
+    .map((s) => s.trim())
+    .filter(Boolean);
   const recommendItems = t.raw("recommend.items");
   const pillars = t.raw("pillars");
   const teamMembers = t.raw("team.members");
@@ -177,39 +182,61 @@ export default function DeveloperPage() {
           </div>
         </section>
 
-        {/* Brand story — centered lines */}
-        <section className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
-          <div className="mx-auto max-w-[800px] text-center">
-            {brandLines.map((line, index) => (
-              <CopyBlock
-                key={index}
-                delay={index * 0.06}
-                className="mb-2 md:mb-3"
-              >
-                <p className="m-0 font-serif text-lg md:text-xl lg:text-2xl tracking-[0.06em] leading-relaxed text-gray-800">
-                  {line}
-                </p>
-              </CopyBlock>
-            ))}
-            <CopyBlock delay={0.2}>
-              <p className="mt-10 md:mt-14 text-sm md:text-[15px] leading-[2.2] text-gray-600 font-light text-left md:text-center">
-                {t("brandStory.body")}
-              </p>
-            </CopyBlock>
-            <div className="mt-14 md:mt-20">
-              <CopyBlock delay={0.25}>
-                <p className="m-0 font-serif text-2xl md:text-3xl tracking-[0.2em] text-gray-900">
+        {/* Brand story — manifesto + readable body */}
+        <section className="px-6 md:px-10 lg:px-16 py-16 md:py-28">
+          <div className="mx-auto max-w-[920px]">
+            <div className="mx-auto max-w-[640px] text-center">
+              {brandLines.map((line, index) => (
+                <CopyBlock
+                  key={index}
+                  delay={index * 0.06}
+                  className="mb-3 md:mb-4"
+                >
+                  <p className="m-0 font-serif text-lg md:text-xl lg:text-[1.65rem] tracking-[0.04em] leading-[1.85] text-gray-800">
+                    {line}
+                  </p>
+                </CopyBlock>
+              ))}
+            </div>
+
+            <div
+              className="mx-auto mt-14 md:mt-20 max-w-[38rem] border-t pt-12 md:pt-16"
+              style={{ borderColor: BORDER }}
+            >
+              <CopyBlock delay={0.18}>
+                <p
+                  className="m-0 text-center font-serif text-xl md:text-2xl tracking-[0.22em] text-gray-900"
+                  style={{ color: DARK }}
+                >
                   {t("brandStory.brand")}
                 </p>
               </CopyBlock>
-              <CopyBlock delay={0.3}>
-                <p className="mt-4 text-xs md:text-sm tracking-[0.18em] text-gray-500">
+
+              <div className="mt-8 md:mt-10 space-y-5 md:space-y-6">
+                {bodyParagraphs.map((paragraph, index) => (
+                  <CopyBlock key={index} delay={0.22 + index * 0.05}>
+                    <p
+                      className={`m-0 text-[15px] md:text-base leading-[1.95] md:leading-[2.05] font-light text-gray-700 ${
+                        index === 0
+                          ? "text-center font-normal text-gray-800"
+                          : "text-left md:text-center"
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
+                  </CopyBlock>
+                ))}
+              </div>
+
+              <CopyBlock delay={0.4}>
+                <p className="mt-10 md:mt-12 text-center text-[11px] md:text-xs tracking-[0.2em] text-gray-500">
                   {t("brandStory.tagline")}
                 </p>
               </CopyBlock>
-              <CopyBlock delay={0.35}>
-                <p className="mt-6 text-[11px] md:text-xs tracking-[0.12em] text-gray-500 leading-relaxed">
-                  {t("brandStory.pillarsLabel")}
+
+              <CopyBlock delay={0.45}>
+                <p className="mt-6 md:mt-8 text-center text-[11px] md:text-xs tracking-[0.12em] leading-relaxed text-gray-500">
+                  {pillarsLabelItems.join("  ·  ")}
                 </p>
               </CopyBlock>
             </div>

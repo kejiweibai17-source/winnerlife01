@@ -84,7 +84,7 @@ export function buildOrganization(locale: Locale) {
         hoursAvailable: {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: [...officeOpenDays],
-          opens: "10:00",
+          opens: "09:00",
           closes: "18:00",
         },
       },
@@ -109,7 +109,7 @@ export function buildOrganization(locale: Locale) {
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [...officeOpenDays],
-      opens: "10:00",
+      opens: "09:00",
       closes: "18:00",
     },
     priceRange: "$$$$",
@@ -211,8 +211,9 @@ export function buildAgencyServices(locale: Locale) {
 }
 
 export function buildSitelinksItemList(locale: Locale) {
+  /** Google sitelinks typically surface ~6; keep the primary set focused */
+  const navLinks = homeSitelinks[locale].slice(0, 6);
   const pageUrl = absoluteUrl(homePath(locale));
-  const navLinks = homeSitelinks[locale];
   const sitelinksId = `${pageUrl}#sitelinks`;
 
   return {
@@ -221,8 +222,8 @@ export function buildSitelinksItemList(locale: Locale) {
     name: locale === "jp" ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面",
     description:
       locale === "jp"
-        ? "公式サイトの主要セクション：コンセプト・立地・交通・建築・設備・お問い合わせ"
-        : "官方網站主要章節：建案理念、地段、交通、建築、設備與聯絡諮詢",
+        ? "公式サイトの主要セクション：コンセプト・立地・交通・物件概要・設備・お問い合わせ"
+        : "官方網站主要章節：建案理念、地段、交通、物件概要、設備與聯絡諮詢",
     numberOfItems: navLinks.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: navLinks.map((link, index) => ({
@@ -246,6 +247,7 @@ export function buildSitelinksItemList(locale: Locale) {
 
 export function buildSiteNavigationElements(locale: Locale) {
   const pageUrl = absoluteUrl(homePath(locale));
+  /** Full crawlable nav set (HTML sr-only + JSON-LD); ItemList uses top 6 */
   return homeSitelinks[locale].map((link, index) => ({
     "@type": "SiteNavigationElement",
     "@id": `${pageUrl}#nav-${index + 1}`,
@@ -265,14 +267,15 @@ export function buildPropertyListing(locale: Locale, pageUrl: string) {
     name: getBuildingDisplayName(),
     description:
       locale === "jp"
-        ? "東京港区・白金高輪の賃貸レジデンス。233戸、運河ビュー、ALSOK防犯。"
-        : "東京港區・白金高輪出租公寓。233戶、運河景觀、ALSOK 保全。",
+        ? "東京港区三田5-5-10の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、ALSOK防犯。"
+        : "東京港區三田5-5-10出租公寓。全案14戶。白金高輪站步行約5分、ALSOK 保全。",
     url: pageUrl,
     image: [ogImage, absoluteUrl(siteConfig.icons.icon512)],
     inLanguage: localeLang(locale),
     datePosted: "2024-01-01",
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),
+    hasMap: siteConfig.propertyGeo.mapUrl,
     contentLocation: { "@id": propertyPlaceId() },
     offers: {
       "@type": "Offer",
@@ -292,8 +295,8 @@ export function buildPropertyListing(locale: Locale, pageUrl: string) {
 export function buildApartmentComplex(locale: Locale, pageUrl: string) {
   const residenceDescription =
     locale === "jp"
-      ? "233戸の住まいが緑と水に囲まれ、南に運河を望む。天王洲アイル駅徒歩圏、品川・港区のコア生活圏。"
-      : "233戶住宅環繞綠意與水景，向南可眺望運河。鄰近天王洲艾爾站，品川・港區核心生活圈。";
+      ? "全14戸。港区三田5-5-10、白金高輪駅徒歩約5分。三田・田町・泉岳寺も徒歩圏。ALSOK防犯・スマート設備完備。"
+      : "全案14戶。港區三田5-5-10，白金高輪站步行約5分。三田・田町・泉岳寺亦在步行圈。ALSOK 保全與智慧設備完備。";
 
   return {
     "@type": ["ApartmentComplex", "Residence", "Accommodation"],
@@ -305,7 +308,7 @@ export function buildApartmentComplex(locale: Locale, pageUrl: string) {
     image: absoluteUrl(siteConfig.ogImage),
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),
-    numberOfAccommodationUnits: 233,
+    numberOfAccommodationUnits: 14,
     numberOfBedrooms: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
     petsAllowed: false,
     smokingAllowed: false,
@@ -314,17 +317,18 @@ export function buildApartmentComplex(locale: Locale, pageUrl: string) {
       { "@type": "LocationFeatureSpecification", name: "IoT スマートホーム", value: true },
       {
         "@type": "LocationFeatureSpecification",
-        name: locale === "jp" ? "運河ビュー" : "運河景觀",
+        name: locale === "jp" ? "白金高輪駅徒歩約5分" : "白金高輪站步行約5分",
         value: true,
       },
       {
         "@type": "LocationFeatureSpecification",
-        name: locale === "jp" ? "天王洲アイル駅徒歩圏" : "天王洲艾爾站步行圈",
+        name: locale === "jp" ? "三田・田町駅徒歩圏" : "三田・田町站步行圈",
         value: true,
       },
     ],
     containedInPlace: getPropertyPlace(locale),
     publicAccess: false,
+    hasMap: siteConfig.propertyGeo.mapUrl,
   };
 }
 

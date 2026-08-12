@@ -4,14 +4,17 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useLenis } from "lenis/react";
 import { getLocalizedPath, switchLocalePath } from "@/lib/locale-path";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site";
+import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const lenis = useLenis();
   const t = useTranslations("nav");
   const navItems = t.raw("items");
 
@@ -97,7 +100,24 @@ export default function Header() {
   };
 
   const homeHref = getLocalizedPath("/", currentLocale);
-  const contactHref = getLocalizedPath("/contact", currentLocale);
+  const contactPath = getLocalizedPath("/contact", currentLocale);
+  const contactHref = `${contactPath}#${CONTACT_FORM_ID}`;
+  const onContactPage =
+    pathname === contactPath || pathname === `${contactPath}/`;
+
+  function handleReserveClick(e) {
+    if (!onContactPage) {
+      setIsOpen(false);
+      return;
+    }
+    e.preventDefault();
+    setIsOpen(false);
+    // Wait for menu close / overflow unlock
+    window.setTimeout(() => {
+      scrollToElementId(CONTACT_FORM_ID, lenis);
+      window.history.replaceState(null, "", `#${CONTACT_FORM_ID}`);
+    }, 50);
+  }
 
   function NavLink({ item, className = "", onClick }) {
     const href = item.href
@@ -282,12 +302,7 @@ export default function Header() {
                 </div>
                 <Link
                   href={contactHref}
-                  className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-white/30 transition text-center"
-                >
-                  {t("download")}
-                </Link>
-                <Link
-                  href={contactHref}
+                  onClick={handleReserveClick}
                   className="w-full sm:w-auto bg-[#4fb8b3] text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-[#3ea09b] transition text-center"
                 >
                   {t("reserve")}

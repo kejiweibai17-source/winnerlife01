@@ -7,6 +7,7 @@ import { useLenis } from "lenis/react";
 import { useTranslations } from "next-intl";
 import { SiLine } from "react-icons/si";
 import { getLocalizedPath } from "@/lib/locale-path";
+import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
 
 const LINE_URL =
   "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true";
@@ -17,7 +18,10 @@ export default function FixedSideActions() {
   const t = useTranslations("sideActions");
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
-  const contactHref = getLocalizedPath("/contact", locale);
+  const contactPath = getLocalizedPath("/contact", locale);
+  const contactHref = `${contactPath}#${CONTACT_FORM_ID}`;
+  const onContactPage =
+    pathname === contactPath || pathname === `${contactPath}/`;
   const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
@@ -36,6 +40,13 @@ export default function FixedSideActions() {
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+  };
+
+  const goContactForm = (e) => {
+    if (!onContactPage) return;
+    e.preventDefault();
+    scrollToElementId(CONTACT_FORM_ID, lenis);
+    window.history.replaceState(null, "", `#${CONTACT_FORM_ID}`);
   };
 
   return (
@@ -58,6 +69,7 @@ export default function FixedSideActions() {
 
       <Link
         href={contactHref}
+        onClick={goContactForm}
         className="group flex h-[4.75rem] w-9 flex-col items-center justify-center gap-1 bg-[#0d417b] text-white shadow-lg transition hover:brightness-110 md:h-[6.25rem] md:w-[3.15rem] md:gap-1.5"
         aria-label={t("contact")}
       >

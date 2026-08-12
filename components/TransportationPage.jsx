@@ -221,14 +221,14 @@ export default function TransportationPage() {
                         className="font-serif text-6xl md:text-7xl leading-none"
                         style={{ color: ACCENT }}
                       >
-                        15
+                        {t("sections.s02.nearestWalkMinutes")}
                       </span>
                       <span className="text-base md:text-lg pb-2 text-gray-800">
                         {t("sections.s02.minutesLabel")}
                       </span>
                     </p>
                     <p className="text-xs text-gray-500 mt-1 m-0">
-                      {t("sections.s02.shinagawaWalkNote")}
+                      {t("sections.s02.nearestWalkNote")}
                     </p>
                   </Copy>
                 </div>

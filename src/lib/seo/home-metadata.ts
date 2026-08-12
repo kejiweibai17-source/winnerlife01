@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { absoluteUrl, getBuildingDisplayName, getHomePageTitle, siteConfig } from "@/lib/site";
+import { absoluteUrl, getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
+import { getGeoMetaOther } from "@/lib/seo/geo";
 
 const title = getHomePageTitle();
-const description = siteConfig.description;
+const description = getHomeDescription("zh");
 
 export const homeMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -66,10 +67,5 @@ export const homeMetadata: Metadata = {
     description,
     images: [absoluteUrl(siteConfig.ogImage)],
   },
-  other: {
-    "geo.region": "JP-13",
-    "geo.placename": "Minato City, Tokyo",
-    "geo.position": `${siteConfig.propertyGeo.latitude};${siteConfig.propertyGeo.longitude}`,
-    ICBM: `${siteConfig.propertyGeo.latitude}, ${siteConfig.propertyGeo.longitude}`,
-  },
+  other: getGeoMetaOther(),
 };

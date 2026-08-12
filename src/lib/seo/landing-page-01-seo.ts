@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 import { landingPage01Path } from "@/lib/landing-page-01-path";
+import {
+  getGeoMetaOther,
+  getPropertyGeo,
+  getPropertyGeoGraph,
+  getPropertyPostalAddress,
+} from "@/lib/seo/geo";
 
 export { landingPage01Path } from "@/lib/landing-page-01-path";
 
@@ -13,11 +19,12 @@ const projectSubtitle = "SHIROKANE TAKANAWA";
 export const landingPage01Seo = {
   title: `${projectName}｜東京港區精品住宅・海外置產說明會｜${siteConfig.name}`,
   description:
-    "港區・白金高輪精品住宅，坐落東京核心黃金地段。探索品川生活圈、運河水岸與質感生活圈，掌握日本不動產市場趨勢、稅務與資產配置策略。免費參加海外置產說明會，由忠訓地產專家親自講解，協助您做出穩健的海外置產決策。",
+    "港區三田5-5-10・白金高輪精品住宅（〒108-0073）。白金高輪站步行約5分，串聯三田・田町・品川與羽田。掌握日本不動產市場趨勢、稅務與資產配置策略。免費參加海外置產說明會，由忠訓地產專家親自講解。",
   keywords: [
     "OK PRIME",
     "白金高輪",
     "東京港區",
+    "三田5-5-10",
     "精品住宅",
     "海外置產",
     "日本不動產",
@@ -59,7 +66,8 @@ const faqItems = [
   },
   {
     question: "說明會在哪裡舉辦？",
-    answer: "說明會於台北市松山區南京東路四段1號4樓（台北小巨蛋站）舉辦，場次時間為每週六 13:30–15:00。",
+    answer:
+      "說明會於台北市松山區南京東路四段1號4樓（台北小巨蛋站）舉辦，場次為平日（週三至週五）13:30–15:00，請以頁面公告場次為準。",
   },
   {
     question: "說明會會分享哪些內容？",
@@ -69,7 +77,7 @@ const faqItems = [
   {
     question: "OK PRIME 白金高輪位於哪裡？",
     answer:
-      "OK PRIME 白金高輪位於東京港區白金高輪一帶，鄰近白金高輪站，享有品川生活圈、運河水岸與港區核心地段等優勢，是兼具生活質感與資產價值的精品住宅選擇。",
+      "位於東京都港區三田5-5-10（〒108-0073），鄰近白金高輪站（步行約5分），亦可利用三田・田町・泉岳寺站，享有品川生活圈與港區核心地段優勢，適合長期自住與資產配置。",
   },
   {
     question: "如何預約說明會或諮詢？",
@@ -141,8 +149,7 @@ export const landingPage01Metadata: Metadata = {
     images: [ogImageUrl],
   },
   other: {
-    "geo.region": "JP-13",
-    "geo.placename": "Minato City, Tokyo",
+    ...getGeoMetaOther(),
   },
 };
 
@@ -174,7 +181,7 @@ export function getLandingPage01JsonLd() {
     description: landingPage01Seo.description,
     inLanguage: "zh-TW",
     isPartOf: { "@id": websiteId },
-    about: [{ "@id": listingId }, { "@id": orgId }],
+    about: [{ "@id": listingId }, { "@id": orgId }, { "@id": `${siteUrl}#property-place` }],
     primaryImageOfPage: {
       "@type": "ImageObject",
       "@id": `${pageUrl}#primary-image`,
@@ -191,6 +198,8 @@ export function getLandingPage01JsonLd() {
       name: siteConfig.name,
       url: siteUrl,
     },
+    contentLocation: { "@id": `${siteUrl}#property-place` },
+    spatialCoverage: { "@id": `${siteUrl}#property-place` },
     significantLink: pageSections.map((section) => `${pageUrl}${section.url}`),
     hasPart: pageSections.map((section, index) => ({
       "@type": "WebPageElement",
@@ -209,22 +218,15 @@ export function getLandingPage01JsonLd() {
     "@type": "RealEstateListing",
     "@id": listingId,
     name: projectName,
-    alternateName: [brandName, projectSubtitle, "白金高輪精品住宅"],
+    alternateName: [brandName, projectSubtitle, "白金高輪精品住宅", "EL FARO+ 白金高輪"],
     description: landingPage01Seo.description,
     url: pageUrl,
     image: [ogImageUrl, absoluteUrl("/images/landing-page/港區核心.png")],
     inLanguage: "zh-TW",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: siteConfig.propertyAddress.addressLocality,
-      addressRegion: siteConfig.propertyAddress.addressRegion,
-      addressCountry: siteConfig.propertyAddress.addressCountry,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 35.6431,
-      longitude: 139.7402,
-    },
+    address: getPropertyPostalAddress(),
+    geo: getPropertyGeo(),
+    hasMap: siteConfig.propertyGeo.mapUrl,
+    contentLocation: { "@id": `${siteUrl}#property-place` },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -242,30 +244,14 @@ export function getLandingPage01JsonLd() {
     "@id": residenceId,
     name: projectName,
     description:
-      "坐落東京港區白金高輪核心，兼具品川生活圈、運河水岸與質感生活圈的稀有精品住宅，適合長期自住與資產配置。",
+      "東京都港區三田5-5-10（〒108-0073）。白金高輪站步行約5分，兼具品川生活圈與港區核心立地的精品住宅，適合長期自住與資產配置。",
     url: pageUrl,
     image: ogImageUrl,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "港區",
-      addressRegion: "東京都",
-      addressCountry: "JP",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 35.6431,
-      longitude: 139.7402,
-    },
-    containedInPlace: {
-      "@type": "Place",
-      name: "白金高輪",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "港區",
-        addressRegion: "東京都",
-        addressCountry: "JP",
-      },
-    },
+    address: getPropertyPostalAddress(),
+    geo: getPropertyGeo(),
+    hasMap: siteConfig.propertyGeo.mapUrl,
+    numberOfAccommodationUnits: 14,
+    containedInPlace: { "@id": `${siteUrl}#property-place` },
   };
 
   const seminarEvents = seminarSessions.map((session, index) => ({
@@ -354,6 +340,7 @@ export function getLandingPage01JsonLd() {
       breadcrumb,
       listing,
       residence,
+      ...getPropertyGeoGraph("zh"),
       ...seminarEvents,
       faqPage,
       contactPoint,

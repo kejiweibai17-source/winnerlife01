@@ -40,7 +40,7 @@ export function getTaipeiOfficeGeo() {
   };
 }
 
-/** Tokyo → Minato → Konan / Shirokane-Takanawa place hierarchy */
+/** Tokyo → Minato → Mita / Shirokane-Takanawa place hierarchy */
 export function getJapanCountry() {
   return {
     "@type": "Country" as const,
@@ -54,7 +54,7 @@ export function getTokyoRegion(locale: "zh" | "jp" = "zh") {
   return {
     "@type": "AdministrativeArea" as const,
     "@id": `${absoluteUrl("/")}#tokyo`,
-    name: locale === "jp" ? "東京都" : "東京都",
+    name: "東京都",
     alternateName: ["Tokyo", "Tokyo Metropolis"],
     containedInPlace: { "@id": `${absoluteUrl("/")}#country-jp` },
   };
@@ -76,16 +76,17 @@ export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
     "@id": `${absoluteUrl("/")}#property-place`,
     name:
       locale === "jp"
-        ? `${getBuildingDisplayName()}（白金高輪・港南）`
-        : `${getBuildingDisplayName()}（白金高輪・港南）`,
+        ? `${getBuildingDisplayName()}（港区三田・白金高輪）`
+        : `${getBuildingDisplayName()}（港區三田・白金高輪）`,
     alternateName: [
       "EL FARO+ SHIROKANE-TAKANAWA",
-      locale === "jp" ? "白金高輪・港南" : "白金高輪・港南",
+      "5-5-10 Mita, Minato City, Tokyo",
+      locale === "jp" ? "港区三田5-5-10" : "港區三田5-5-10",
     ],
     description:
       locale === "jp"
-        ? "東京都港区港南エリア。運河沿いの水辺景観と品川・白金高輪の都市機能が近接する立地。"
-        : "東京都港區港南地區。運河濱水景觀與品川・白金高輪都市機能近接的立地。",
+        ? "東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分。三田・田町・泉岳寺も徒歩圏の港区コア立地。"
+        : "東京都港區三田5-5-10（〒108-0073）。白金高輪站步行約5分，三田・田町・泉岳寺亦在步行圈內的港區核心立地。",
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),
     hasMap: siteConfig.propertyGeo.mapUrl,
@@ -96,12 +97,20 @@ export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
       {
         "@type": "PropertyValue",
         name: "nearestStation",
-        value: locale === "jp" ? "天王洲アイル駅・白金高輪駅" : "天王洲艾爾站・白金高輪站",
+        value:
+          locale === "jp"
+            ? "白金高輪駅（徒歩約5分）・三田駅・田町駅"
+            : "白金高輪站（步行約5分）・三田站・田町站",
       },
       {
         "@type": "PropertyValue",
         name: "units",
-        value: "233",
+        value: "14",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "postalCode",
+        value: siteConfig.propertyAddress.postalCode,
       },
     ],
   };
@@ -125,12 +134,13 @@ export function getOrganizationStub() {
   };
 }
 
-/** Opening days matching siteConfig.businessHoursDisplay (Wed–Fri closed) */
+/** Opening days matching siteConfig.businessHoursDisplay (Sat–Sun closed) */
 export const officeOpenDays = [
   "Monday",
   "Tuesday",
-  "Saturday",
-  "Sunday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
 ] as const;
 
 /** HTML geo meta tags for page Metadata.other */

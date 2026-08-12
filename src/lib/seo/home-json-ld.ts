@@ -66,7 +66,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       ...navLinks.map((link) => ({ "@id": `${absoluteUrl(link.path)}#webpage` })),
     ],
     mainEntity: { "@id": `${pageUrl}#listing` },
-    significantLink: navLinks.map((link) => absoluteUrl(link.path)),
+    significantLink: navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
     relatedLink: [altUrl, ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path))],
   };
 
@@ -100,7 +100,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       ...siteNavigationElements.map((el) => ({ "@id": el["@id"] })),
       ...services.map((s) => ({ "@id": s["@id"] })),
     ],
-    significantLink: navLinks.map((link) => absoluteUrl(link.path)),
+    significantLink: navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
     relatedLink: navLinks.map((link) => absoluteUrl(link.path)),
     mainEntity: { "@id": `${pageUrl}#listing` },
     publisher: { "@id": orgId() },

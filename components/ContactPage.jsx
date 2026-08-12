@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLenis } from "lenis/react";
 import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
 import { getLocalizedPath } from "@/lib/locale-path";
+import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
 
 const NAVY = "#0d417b";
 const NAVY_DEEP = "#1a365d";
@@ -20,6 +22,21 @@ function GoldArrowButton({
   type = "button",
   className = "",
 }) {
+  const lenis = useLenis();
+  const isHash =
+    typeof href === "string" && href.startsWith("#") && href.length > 1;
+
+  const handleClick = (e) => {
+    if (isHash) {
+      e.preventDefault();
+      scrollToElementId(href.slice(1), lenis);
+      if (typeof window !== "undefined") {
+        window.history.replaceState(null, "", href);
+      }
+    }
+    onClick?.(e);
+  };
+
   const inner = (
     <>
       <span className="tracking-[0.12em]">{children}</span>
@@ -46,9 +63,9 @@ function GoldArrowButton({
 
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <a href={href} onClick={handleClick} className={cls}>
         {inner}
-      </Link>
+      </a>
     );
   }
 
@@ -117,6 +134,16 @@ function RegionPanel({ region }) {
 }
 
 function SeminarCard({ session }) {
+  const lenis = useLenis();
+
+  const goForm = (e) => {
+    e.preventDefault();
+    scrollToElementId(CONTACT_FORM_ID, lenis);
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", `#${CONTACT_FORM_ID}`);
+    }
+  };
+
   return (
     <article className="group flex flex-col border border-white/25 bg-white/5 transition hover:bg-white/10 md:flex-row">
       <div className="relative h-44 w-full shrink-0 md:h-auto md:w-48 lg:w-56">
@@ -145,7 +172,8 @@ function SeminarCard({ session }) {
         </div>
         <div className="mt-6 flex justify-end">
           <a
-            href="#contact-form"
+            href={`#${CONTACT_FORM_ID}`}
+            onClick={goForm}
             className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition group-hover:bg-white group-hover:text-[#0d417b]"
             aria-label={session.ctaAria}
           >
@@ -178,8 +206,18 @@ const inputCls =
 export default function ContactPage() {
   const t = useTranslations("contactPage");
   const pathname = usePathname();
+  const lenis = useLenis();
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
+
+  useEffect(() => {
+    const hash = window.location.hash.replace(/^#/, "");
+    if (hash !== CONTACT_FORM_ID) return;
+    const timer = window.setTimeout(() => {
+      scrollToElementId(CONTACT_FORM_ID, lenis, { duration: 1.15 });
+    }, 100);
+    return () => window.clearTimeout(timer);
+  }, [lenis]);
 
   const highlights = t.raw("hero.highlights");
   const regions = t.raw("regions.items");
@@ -301,7 +339,7 @@ export default function ContactPage() {
             ))}
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
-            <GoldArrowButton href="#contact-form">
+            <GoldArrowButton href={`#${CONTACT_FORM_ID}`}>
               {t("hero.ctaPrimary")}
             </GoldArrowButton>
             <Link
@@ -353,7 +391,7 @@ export default function ContactPage() {
             {t("intro.urgency")}
           </p>
           <div className="mt-10">
-            <GoldArrowButton href="#contact-form">
+            <GoldArrowButton href={`#${CONTACT_FORM_ID}`}>
               {t("intro.cta")}
             </GoldArrowButton>
           </div>
@@ -381,7 +419,7 @@ export default function ContactPage() {
             ))}
           </div>
           <div className="mt-14 text-center">
-            <GoldArrowButton href="#contact-form">
+            <GoldArrowButton href={`#${CONTACT_FORM_ID}`}>
               {t("regions.cta")}
             </GoldArrowButton>
           </div>
@@ -411,7 +449,7 @@ export default function ContactPage() {
             ))}
           </ul>
           <div className="mt-12">
-            <GoldArrowButton href="#contact-form">
+            <GoldArrowButton href={`#${CONTACT_FORM_ID}`}>
               {t("reasons.cta")}
             </GoldArrowButton>
           </div>
@@ -481,8 +519,8 @@ export default function ContactPage() {
 
       {/* Form */}
       <section
-        id="contact-form"
-        className="bg-[#eef2f7] px-6 py-20 md:px-12 md:py-28"
+        id={CONTACT_FORM_ID}
+        className="scroll-mt-28 bg-[#eef2f7] px-6 py-20 md:px-12 md:py-28"
       >
         <div className="mx-auto max-w-[720px]">
           <div className="mb-10 text-center">

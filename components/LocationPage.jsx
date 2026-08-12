@@ -9,19 +9,19 @@ import LocationDesignSections from "./LocationDesignSections";
 import { getLocalizedPath } from "@/lib/locale-path";
 
 const TRAIN_IMAGES = {
-  shirokane: "/images/index/659caf7f-6f74-462b-9485-2967b742dfc2.png",
-  tennozu: "/images/index/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
-  shinagawa: "/images/index/cd78a1ca-c3db-4c12-a8b2-413e62181b4f.png",
+  shirokane: "/images/landing-page/白金高輪站.png",
+  tennozu: "/images/landing-page/品川生活圈.png",
+  shinagawa: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
 };
 
 const AIRPORT_IMAGES = {
-  haneda: "/images/index/9adca514-b1df-4095-b86e-8ceaed137441.png",
-  narita: "/images/index/c3ba1316-d87a-412b-ae7a-378fbaae4d2c.png",
+  haneda: "/images/index/4e8ee07e-5f3d-4a04-9b30-078ba9c7fb8c.png",
+  narita: "/images/index/wall/交通連結.png",
 };
 
 const FACILITY_IMAGES = {
   ael: "/images/index/白金アエルシティ.png",
-  season: "/images/index/grid-02.png",
+  season: "/images/amenities/001.png",
   shiba: "/images/index/芝公園.png",
 };
 

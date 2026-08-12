@@ -396,7 +396,7 @@ export const LANDING_CONTACT = {
       icon: "headset",
       title: "聯絡諮詢",
       lines: [
-        { text: "(02) 2713-1039", accent: true, href: "tel:+886227131039" },
+        { text: "02-2713-1039", accent: true, href: "tel:+886227131039" },
         { text: "service@winnerlife.com", accent: true, href: "mailto:service@winnerlife.com" },
       ],
     },

@@ -20,12 +20,14 @@ export const seoPageConfigs = {
     jpPath: "/jp/location",
     seoKey: "page.seo",
     breadcrumbKey: "page.breadcrumb",
+    faqKey: "page.faq",
     pageType: ["WebPage", "CollectionPage"],
   },
   transportation: {
     messageKey: "transportation",
     zhPath: "/transportation",
     jpPath: "/jp/transportation",
+    faqKey: "faq",
     pageType: ["WebPage", "CollectionPage"],
   },
   architecture: {
@@ -62,6 +64,7 @@ export const seoPageConfigs = {
     messageKey: "contactPage",
     zhPath: "/contact",
     jpPath: "/jp/contact",
+    faqKey: "faq",
     pageType: "ContactPage",
   },
 } as const satisfies Record<string, PageSeoConfig>;

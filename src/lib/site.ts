@@ -10,10 +10,11 @@ export const siteConfig = {
   projectName: "EL FARO+",
   projectSubtitle: "白金高輪",
   description:
-    "EL FARO+ 白金高輪—東京都心超越時代與流行的東京港區出租公寓系列。233戶住宅環繞綠意與水景，結合品川・港區核心交通與 ALSOK 保全，由忠訓地產提供專業日本置產與賞屋諮詢。現正受理房源登記及樣品屋參觀預約。",
+    "EL FARO+ 白金高輪—東京都港區三田5-5-10（〒108-0073）出租公寓系列。全案14戶，白金高輪站步行約5分，串聯三田・田町・品川與羽田機場。ALSOK 保全與智慧設備完備，由忠訓地產提供日本置產與賞屋諮詢。",
   locale: "zh-TW",
   /**
    * 正式網域。務必在 Vercel / .env 設定 NEXT_PUBLIC_SITE_URL=https://okprime.winnerlife.com
+   * （若正式網域為 ckprime.winnerlife.com 請改為該網域，與 Search Console 一致）
    * 否則 canonical / JSON-LD 會落到預覽網域，影響 Google 圖示與 sitelinks。
    */
   url:
@@ -24,7 +25,7 @@ export const siteConfig = {
   phone: "+81-120-109-230",
   phoneDisplay: "0120-109-230",
   taipeiPhone: "+886-2-2713-1039",
-  taipeiPhoneDisplay: "(02) 2713-1039",
+  taipeiPhoneDisplay: "02-2713-1039",
   address: {
     streetAddress: "南京東路四段1號4樓",
     addressLocality: "松山區",
@@ -38,23 +39,23 @@ export const siteConfig = {
     longitude: 121.5484,
   },
   propertyAddress: {
-    streetAddress: "港南",
-    addressLocality: "港區",
+    streetAddress: "三田5-5-10",
+    addressLocality: "港区",
     addressRegion: "東京都",
-    postalCode: "108-0075",
+    postalCode: "108-0073",
     addressCountry: "JP",
   },
-  /** 建案／白金高輪・港南一帶座標 */
+  /** 建案／港区三田5-5-10 */
   propertyGeo: {
-    latitude: 35.6431,
-    longitude: 139.7402,
-    mapUrl: "https://maps.google.com/?q=35.6431,139.7402",
+    latitude: 35.6463,
+    longitude: 139.7383,
+    mapUrl: "https://maps.google.com/?q=5-5-10+Mita,+Minato+City,+Tokyo+108-0073",
   },
   license: "北市代銷會證字第 110011 號",
-  businessHours: "Mo,Tu,Sa,Su 10:00-18:00",
+  businessHours: "Mo,Tu,We,Th,Fr 09:00-18:00",
   businessHoursDisplay: {
-    zh: "營業時間：10:00～18:00（週三、四、五公休）",
-    jp: "営業時間：10:00〜18:00（水・木・金定休）",
+    zh: "營業時間：09:00~18:00　休六日(國定假日)",
+    jp: "営業時間：09:00〜18:00　土日定休（祝日）",
   },
   areaServed: ["東京都", "日本", "台北市"],
   ogImage: "/images/og/home.jpg",
@@ -87,6 +88,8 @@ export const siteConfig = {
     "WinnerLife",
     "日本置產",
     "海外不動產",
+    "港區三田",
+    "三田5-5-10",
     "品川",
     "港區",
     "東京住宅",
@@ -104,15 +107,15 @@ export function absoluteUrl(path: string) {
 /** 首頁瀏覽器分頁標題 */
 export function getHomePageTitle(locale: "zh" | "jp" = "zh") {
   if (locale === "jp") {
-    return `EL FARO+ 白金高輪｜東京港区賃貸レジデンス・品川生活圏233戸｜ALSOK防犯｜${siteConfig.name}`;
+    return `EL FARO+ 白金高輪｜東京港区賃貸レジデンス・品川生活圏14戸｜ALSOK防犯｜${siteConfig.name}`;
   }
-  return `EL FARO+ 白金高輪｜東京港區出租公寓・品川生活圈233戶運河水岸｜ALSOK保全｜${siteConfig.name}`;
+  return `EL FARO+ 白金高輪｜東京港區出租公寓・品川生活圈14戶運河水岸｜ALSOK保全｜${siteConfig.name}`;
 }
 
 /** 首頁 meta description */
 export function getHomeDescription(locale: "zh" | "jp" = "zh") {
   if (locale === "jp") {
-    return "EL FARO+ 白金高輪—東京の中心・港区の賃貸レジデンス。233戸が緑と水に囲まれ、品川・天王洲アイル駅徒歩圏。ALSOK防犯・スマート設備完備。忠訓地產が見学予約・日本不動産相談をご案内。";
+    return "EL FARO+ 白金高輪—東京都港区三田5-5-10（〒108-0073）の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、三田・田町も徒歩圏。ALSOK防犯・スマート設備完備。忠訓地產が見学予約・日本不動産相談をご案内。";
   }
   return siteConfig.description;
 }
@@ -124,8 +127,8 @@ export function getHomeDescription(locale: "zh" | "jp" = "zh") {
 export const homeSitelinks = {
   zh: [
     { name: "建案理念", path: "/concept", description: "EL FARO+ 燈塔理念與 Urban Classic 設計願景" },
-    { name: "地段核心", path: "/location", description: "港區地理位置、文教區與周邊環境" },
-    { name: "交通動線", path: "/transportation", description: "三站五線交通、羽田成田直達" },
+    { name: "地段核心", path: "/location", description: "港區三田5-5-10立地、文教區與周邊環境" },
+    { name: "交通動線", path: "/transportation", description: "白金高輪站徒歩約5分、三田・田町・羽田成田" },
     { name: "物件概要", path: "/summary", description: "間取圖、仕上表與建案規格" },
     { name: "設備與保全系統", path: "/equipment", description: "廚衛設備、家電與 ALSOK 保全" },
     { name: "聯絡我們", path: "/contact", description: "賞屋預約、房源登記與置產諮詢" },
@@ -136,8 +139,8 @@ export const homeSitelinks = {
   ],
   jp: [
     { name: "コンセプト", path: "/jp/concept", description: "EL FARO+ 灯台コンセプトと Urban Classic" },
-    { name: "ロケーション", path: "/jp/location", description: "港区の立地・文教エリア・周辺環境" },
-    { name: "交通・アクセス", path: "/jp/transportation", description: "3駅5路線・羽田成田アクセス" },
+    { name: "ロケーション", path: "/jp/location", description: "港区三田5-5-10の立地・文教エリア・周辺環境" },
+    { name: "交通・アクセス", path: "/jp/transportation", description: "白金高輪駅徒歩約5分・三田・田町・羽田成田" },
     { name: "物件概要", path: "/jp/summary", description: "間取り図・仕様・建物概要" },
     { name: "設備・保全系統", path: "/jp/equipment", description: "キッチン・バス・ALSOK防犯" },
     { name: "お問い合わせ", path: "/jp/contact", description: "見学予約・登録・購入相談" },
@@ -159,7 +162,7 @@ export const homeFaqItems = {
     {
       question: "EL FARO+ 白金高輪位於哪裡？",
       answer:
-        "位於東京都港區港南・白金高輪一帶，鄰近天王洲艾爾站與白金高輪站，可串聯品川站與羽田機場，是港區核心生活圈的水岸立地。",
+        "位於東京都港區三田5-5-10（〒108-0073）。最近車站為白金高輪站（南北線・三田線，步行約5分），亦可利用三田站、田町站與泉岳寺站，輕鬆前往品川與羽田機場。",
     },
     {
       question: "如何預約樣品屋或索取資料？",
@@ -168,7 +171,7 @@ export const homeFaqItems = {
     {
       question: "建案有哪些主要特色？",
       answer:
-        "全案 233 戶，環繞綠意與運河景觀，配備 ALSOK 保全與智慧設備，鄰近品川・港區交通樞紐，適合自住與日本置產規劃。",
+        "全案14戶，配備 ALSOK 保全與智慧設備，鄰近白金高輪・三田・田町交通樞紐與高輪 GATEWAY CITY，適合自住與日本置產規劃。",
     },
     {
       question: "網站有日文版本嗎？",
@@ -179,7 +182,7 @@ export const homeFaqItems = {
     {
       question: "EL FARO+ 白金高輪はどこにありますか？",
       answer:
-        "東京都港区港南・白金高輪エリア。天王洲アイル駅・白金高輪駅が近く、品川駅や羽田空港へのアクセスも良好な水辺の立地です。",
+        "東京都港区三田5-5-10（〒108-0073）。最寄りは白金高輪駅（南北線・三田線、徒歩約5分）。三田駅・田町駅・泉岳寺駅も利用でき、品川や羽田空港へのアクセスも良好です。",
     },
     {
       question: "モデルルーム見学や資料請求はどうすればよいですか？",
@@ -188,7 +191,7 @@ export const homeFaqItems = {
     {
       question: "物件の主な特長は？",
       answer:
-        "全233戸。緑と運河ビュー、ALSOK防犯・スマート設備を備え、品川・港区の交通利便性を活かした住まいです。",
+        "全14戸。ALSOK防犯・スマート設備を備え、白金高輪・三田・田町の交通利便性と高輪 GATEWAY CITY に近い住まいです。",
     },
     {
       question: "中国語版のサイトはありますか？",

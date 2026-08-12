@@ -1,10 +1,22 @@
 {
   "hero": {
     "slides": [
-      { "line1": "白金高輪", "line2": "かつて格式あり。港湾の暮らしを秘蔵。" },
-      { "line1": "Exquisite Detail", "line2": "Exceptional Quality." },
-      { "line1": "Premium Location", "line2": "品川・港区の中心生活圏。" },
-      { "line1": "Timeless Design", "line2": "洗練された質感と温もりの共存。" }
+      {
+        "line1": "白金高輪",
+        "line2": "かつて格式あり。港湾の暮らしを秘蔵。"
+      },
+      {
+        "line1": "Exquisite Detail",
+        "line2": "Exceptional Quality."
+      },
+      {
+        "line1": "Premium Location",
+        "line2": "品川・港区の中心生活圏。"
+      },
+      {
+        "line1": "Timeless Design",
+        "line2": "洗練された質感と温もりの共存。"
+      }
     ],
     "bottomTag": "品川・港区",
     "bottomBrand": "忠訓地產",
@@ -27,13 +39,19 @@
     },
     "contact": {
       "label": "お問い合わせはこちら",
-      "hours": "営業時間：10:00～18:00　定休日：水・木・金曜日（祝日除く）"
+      "hours": "営業時間：09:00〜18:00　土日定休（祝日）"
     }
   },
   "cards": [
-    { "title": "進化し続ける「品川エリア」を生活圏に持つ「港区」のアドレス" },
-    { "title": "2路線利用可能な天王洲アイル駅へ\n「フラットな歩行者デッキ徒歩6分※1」" },
-    { "title": "233戸の住まいが、緑と水を囲む\n「南向き、運河を望む開放的な立地」" }
+    {
+      "title": "進化し続ける「品川エリア」を生活圏に持つ「港区」のアドレス"
+    },
+    {
+      "title": "2路線利用可能な天王洲アイル駅へ\n「フラットな歩行者デッキ徒歩6分※1」"
+    },
+    {
+      "title": "14戸の住まいが、緑と水を囲む\n「南向き、運河を望む開放的な立地」"
+    }
   ],
   "parallax": {
     "tag": "TRANSPORTATION",
@@ -42,7 +60,7 @@
   },
   "woven": {
     "titleV": "白金高輪で\n都心の暮らしを",
-    "body": "EL FARO+ 白金高輪は、東京港区の希少な立地に233戸の住まいが緑と運河水景に囲まれて立地します。南向きの開放的な眺望と、品川エリアの生活圏がすぐそば。スペイン語で「灯台」を意味する名のもと、都心の中で時を超える住まいのかたちを織りなします。",
+    "body": "EL FARO+ 白金高輪は、東京港区の希少な立地に14戸の住まいが緑と運河水景に囲まれて立地します。南向きの開放的な眺望と、品川エリアの生活圏がすぐそば。スペイン語で「灯台」を意味する名のもと、都心の中で時を超える住まいのかたちを織りなします。",
     "more": "詳しく見る"
   },
   "transportSlider": {
@@ -113,7 +131,7 @@
         ]
       },
       {
-        "caseNumber": "EL FARO+",
+        "caseNumber": "OK PRIME",
         "role": "東京ベイエリア・品川生活圏",
         "name": "東京ベイエリアのウォーターフロント、今すぐその一席を",
         "description": "白金高輪の上質さ × 品川生活圏 × 運河景観\n都心の中に、水辺の余裕を残す",
@@ -139,16 +157,46 @@
   },
   "nav": {
     "items": [
-      { "label": "建築理念", "href": "/concept" },
-      { "label": "地域再開発 / 周辺施設", "href": "/amenities" },
-      { "label": "立地の核心", "href": "/location" },
-      { "label": "生活圏 / 交通 / 施設", "href": "/transportation" },
-      { "label": "建築特色", "href": "/architecture" },
-      { "label": "物件概要", "href": "/summary" },
-      { "label": "室内イメージ", "href": "/interior" },
-      { "label": "設備・家電・保全系統", "href": "/equipment" },
-      { "label": "ブランドストーリー", "href": "/story" },
-      { "label": "お問い合わせ", "href": "/contact" }
+      {
+        "label": "建築理念",
+        "href": "/concept"
+      },
+      {
+        "label": "地域再開発 / 周辺施設",
+        "href": "/amenities"
+      },
+      {
+        "label": "立地の核心",
+        "href": "/location"
+      },
+      {
+        "label": "生活圏 / 交通 / 施設",
+        "href": "/transportation"
+      },
+      {
+        "label": "建築特色",
+        "href": "/architecture"
+      },
+      {
+        "label": "物件概要",
+        "href": "/summary"
+      },
+      {
+        "label": "室内イメージ",
+        "href": "/interior"
+      },
+      {
+        "label": "設備・家電・保全系統",
+        "href": "/equipment"
+      },
+      {
+        "label": "ブランドストーリー",
+        "href": "/story"
+      },
+      {
+        "label": "お問い合わせ",
+        "href": "/contact"
+      }
     ],
     "menu": "Menu",
     "close": "Close",
@@ -159,7 +207,7 @@
     "japanHotline": "日本相談ホットライン",
     "kantoOffice": "台北オフィス",
     "kansaiOffice": "日本相談ホットライン",
-    "businessHours": "営業時間：10:00〜18:00（水・木・金定休）",
+    "businessHours": "営業時間：09:00〜18:00　土日定休（祝日）",
     "slogan": "未来を、共に築く。"
   },
   "footer": {
@@ -232,7 +280,14 @@
     "seo": {
       "title": "コンセプト｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪—東京の中心で時代と流行を超える賃貸レジデンスシリーズ。住まいの灯台を目指す Urban Classic デザイン。忠訓地產が見学・ご相談をご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "コンセプト", "忠訓地產", "東京住宅", "品川"],
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "コンセプト",
+        "忠訓地產",
+        "東京住宅",
+        "品川"
+      ],
       "ogImage": "/images/og/concept.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 運河沿いの外観"
     },
@@ -267,28 +322,40 @@
       "paragraphs": [
         "港区アドレスにありながら、再開発の機運に沸く品川エリアの\nその進化の最前線を感じて暮らすことのできる可能性に満ちたロケーション。",
         "天王洲アイル駅と品川駅を使いこなし、都心を軽やかに駆け抜けながら\n開放感あふれる南方面のウォーターフロントをかなえる日常へ。",
-        "先進と自然が溶け合うベイエリアに新たな価値を創造する、全233邸。\nブランズシティ品川ルネ キャナル、いよいよ始動。"
+        "先進と自然が溶け合うベイエリアに新たな価値を創造する、全14邸。\nEL FARO+ 白金高輪、いよいよ始動。"
       ]
     },
     "marquee": [
       {
-        "alt": "博多駅",
-        "label": "博多駅（15分・徒歩）"
+        "alt": "高輪 GATEWAY CITY",
+        "label": "高輪 GATEWAY CITY"
       },
       {
-        "alt": "LaLaport 福岡",
-        "label": "LaLaport 福岡（7分・徒歩）"
+        "alt": "東京タワーと港区ベイエリアのスカイライン",
+        "label": "東京タワー・港区ベイエリア"
       },
       {
-        "alt": "FOLEO 博多",
-        "label": "FOLEO 博多（7分・徒歩）"
+        "alt": "白金アエルシティ",
+        "label": "白金アエルシティ"
+      },
+      {
+        "alt": "東京都済生会中央病院",
+        "label": "東京都済生会中央病院"
+      },
+      {
+        "alt": "芝公園と東京タワー",
+        "label": "芝公園・東京タワー"
+      },
+      {
+        "alt": "慶應義塾大学 旧図書館（三田）",
+        "label": "慶應義塾大学（三田）"
       }
     ],
     "canalGreen": {
       "title": "CANAL & GREEN",
       "description": "南方面を運河に臨む開放感。発展を遂げる都心の中で、緑と水辺に彩られた風景がここに。",
-      "mapLabelLine1": "ブランズシティ品川ルネ",
-      "mapLabelLine2": "キャナル"
+      "mapLabelLine1": "EL FARO+",
+      "mapLabelLine2": "白金高輪"
     },
     "surroundings": {
       "intro": "瑞々しい緑と水辺風景、そして洗練された文化が息づく街並みが日常の舞台になる。",
@@ -311,10 +378,17 @@
   "transportation": {
     "seo": {
       "title": "交通・アクセス｜EL FARO+ 白金高輪",
-      "description": "白金高輪・三田・田町の3駅、5路線が交差。都営浅草線快速特急で羽田・成田空港へ直通。都心と世界をつなぐ交通環境。忠訓地產が EL FARO+ 白金高輪の交通をご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "交通", "品川", "羽田空港", "忠訓地產"],
+      "description": "東京都港区三田5-5-10。白金高輪・三田・田町の3駅が利用可能。南北線・三田線・浅草線・JRが交差し、都心と羽田空港へスムーズにアクセス。忠訓地產が EL FARO+ 白金高輪の交通をご案内します。",
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "交通",
+        "三田",
+        "田町",
+        "忠訓地產"
+      ],
       "ogImage": "/images/og/transportation.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 品川アクセス"
+      "ogImageAlt": "EL FARO+ 白金高輪 アクセス"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -323,107 +397,189 @@
     "hero": {
       "tag": "TRANSPORTATION",
       "title": "都心と空港をつなぐ、\n軽やかな交通のしなやかさ。",
-      "subtitle": "白金高輪・天王洲アイル・品川—徒歩圏の駅と羽田アクセス。"
+      "subtitle": "港区三田5-5-10｜白金高輪・三田・田町が徒歩圏、5路線が交差。"
     },
     "heroImage": {
       "alt": "EFプラス白金高輪"
     },
     "sections": {
       "s01": {
-        "title": "複数路線が交わる、港南の交通ハブ。",
-        "description": "東京メトロ・都営地下鉄・JR・京急・りんかい線・東京モノレール。都心の主要駅から羽田空港まで、暮らしのシーンに合わせて最適なルートを選べます。"
+        "title": "白金高輪・三田・田町、路線が交差する港区の拠点。",
+        "description": "東京メトロ南北線、都営三田線・浅草線、JR山手線・京浜東北線。都心の主要駅から羽田空港まで、暮らしのシーンに合わせて最適なルートを選べます。"
       },
       "s02": {
-        "title": "白金高輪エリアから、都心・空港へスムーズに。",
-        "description": "徒歩圏に3つの主要駅が集結。品川ターミナルや羽田空港へも、電車・車・モノレールで快適にアクセスできます。",
-        "routesLabel": "路線",
+        "title": "港区三田から、都心と空港へスムーズに。",
+        "description": "最寄りは白金高輪駅（徒歩約5分）。三田・田町・泉岳寺なども利用でき、品川ターミナルや羽田空港へ快適にアクセスできます。",
+        "routesLabel": "駅利用可",
         "minutesLabel": "分",
-        "shinagawaWalkNote": "品川駅まで（徒歩）",
-        "footnote": "※2026年5月時点の目安",
+        "nearestWalkMinutes": "5",
+        "nearestWalkNote": "白金高輪駅まで（徒歩）",
+        "footnote": "※物件所在地「東京都港区三田5-5-10」周辺の実測／不動産慣例（約80m＝1分）に基づく目安です。実際の時間は道路状況・出入口により異なります。",
         "walkStationsTag": "徒歩圏の駅",
-        "mapAlt": "周辺交通地圖"
+        "mapAlt": "周辺交通マップ"
       },
       "s03": {
-        "title": "電車も、車も、モノレールも—シーンに合わせて選べる。",
-        "description": "通勤は地下鉄、出張は品川から新幹線、空港へは羽田直結。移動手段の組み合わせで、都心ライフを軽やかに支えます。",
-        "accessLabel": "交通アクセス",
-        "cta": "交通の詳細をもっと知る"
+        "title": "電車・車—シーンに合わせて選べる。",
+        "description": "通勤は地下鉄、出張は品川から新幹線、空港は浅草線やJR・京急経由で羽田へ。複数の移動手段が、都心生活を支えます。",
+        "accessLabel": "アクセス",
+        "cta": "交通情報をもっと見る"
       },
       "gallery": {
-        "title": "交通の魅力を、写真で。",
-        "description": "駅・街並み・空港アクセスまで。港南エリアの交通環境をご覧ください。"
+        "title": "写真で感じる、交通の魅力。",
+        "description": "駅・街並み・空港アクセスまで。港区三田・白金高輪の交通環境をご覧ください。"
       },
       "s04": {
         "title": "ACCESS",
-        "description": "都心・品川・空港へ—複数の移動手段でつながるロケーション。",
-        "accessImageAlt": "バス・路線交通"
+        "description": "都心・品川・空港をつなぐ、多彩な移動手段が集まる立地。",
+        "accessImageAlt": "バスと路線アクセス"
       },
       "travelTime": {
-        "title": "主要目的地までの目安"
+        "title": "主要目的地までの目安時間"
       },
       "map": {
-        "alt": "交通連結図",
-        "note": "※所要時間・距離は目安です。道路状況・乗換等により異なります。"
+        "alt": "交通アクセス図",
+        "note": "※所要時間・距離は目安です。道路状況や乗換により異なります。"
       }
     },
-    "stationAreasCol1": ["白金高輪", "天王洲アイル", "品川", "田町"],
-    "stationAreasCol2": ["六本木一丁目", "大手町", "羽田空港", "首都高速"],
+    "stationAreasCol1": [
+      "白金高輪",
+      "三田",
+      "田町",
+      "泉岳寺"
+    ],
+    "stationAreasCol2": [
+      "高輪ゲートウェイ",
+      "品川",
+      "六本木一丁目",
+      "羽田空港"
+    ],
     "transportNodes": [
-      { "label": "電車", "sub": "複数路線" },
-      { "label": "車", "sub": "高速・空港" },
-      { "label": "モノレール", "sub": "羽田直結" }
+      {
+        "label": "電車",
+        "sub": "複数路線"
+      },
+      {
+        "label": "車",
+        "sub": "高速・空港"
+      },
+      {
+        "label": "乗換",
+        "sub": "品川・羽田"
+      }
     ],
     "photoGallery": [
-      { "caption": "白金高輪エリアの駅周辺" },
-      { "caption": "品川方面の商業・駅前" },
-      { "caption": "天王洲アイル駅前　徒歩約6分" },
-      { "caption": "港南地区の街路景観" }
+      {
+        "caption": "白金高輪駅周辺　徒歩約5分"
+      },
+      {
+        "caption": "三田・田町方面の街並み"
+      },
+      {
+        "caption": "高輪 GATEWAY CITY　徒歩約15分"
+      },
+      {
+        "caption": "港区三田の街路景観"
+      }
     ],
     "accessModes": [
       {
         "label": "BY TRAIN",
         "items": [
-          "東京メトロ南北線・都営三田線「白金高輪」駅　徒歩約6分（約480m）",
-          "りんかい線・東京モノレール「天王洲アイル」駅　徒歩約6分（約490m）",
-          "JR・京急「品川」駅　徒歩約15分（約1,200m）"
+          "東京メトロ南北線・都営三田線「白金高輪」駅　徒歩約5分（約400m）",
+          "都営浅草線・三田線「三田」駅　徒歩約13分（約1,000m）",
+          "JR山手線・京浜東北線「田町」駅　徒歩約14分（約1,100m）",
+          "都営浅草線・京急「泉岳寺」駅　徒歩約12分（約950m）",
+          "JR「高輪ゲートウェイ」駅　徒歩約15分（約1,200m）",
+          "JR・京急「品川」駅　徒歩約25分／電車約8分"
         ]
       },
       {
         "label": "BY CAR",
         "items": [
-          "首都高速「芝公園」出入口　車約5分（約1.5km）※",
-          "羽田空港　車約20分（約15km）※",
+          "首都高速「芝公園」出入口　車約8分（約2km）※",
+          "羽田空港　車約25分（約15km）※",
           "成田空港　車約60分（約70km）※"
         ]
       },
       {
-        "label": "BY MONORAIL",
+        "label": "TO AIRPORT",
         "items": [
-          "東京モノレール「天王洲アイル」駅　徒歩約6分",
-          "羽田空港第3ターミナル　モノレール約13分※"
+          "都営浅草線「三田／泉岳寺」→ 京急・空港線　羽田まで約25–35分※",
+          "JR「田町／品川」乗換　羽田まで約25–35分※",
+          "成田空港　JR・京成等経由で約60–80分※"
         ]
       }
     ],
     "travelTimeRows": [
-      { "from": "東京駅", "time": "約15分" },
-      { "from": "六本木一丁目駅", "time": "約10分" },
-      { "from": "大手町駅", "time": "約12分" },
-      { "from": "品川駅", "time": "徒歩約15分" },
-      { "from": "羽田空港", "time": "車約20分" },
-      { "from": "成田空港", "time": "車約60分" }
+      {
+        "from": "白金高輪駅",
+        "time": "徒歩約5分"
+      },
+      {
+        "from": "三田駅",
+        "time": "徒歩約13分"
+      },
+      {
+        "from": "田町駅",
+        "time": "徒歩約14分"
+      },
+      {
+        "from": "高輪ゲートウェイ駅",
+        "time": "徒歩約15分"
+      },
+      {
+        "from": "品川駅",
+        "time": "電車約8分"
+      },
+      {
+        "from": "東京駅",
+        "time": "電車約18分"
+      },
+      {
+        "from": "六本木一丁目駅",
+        "time": "電車約8分"
+      },
+      {
+        "from": "羽田空港",
+        "time": "電車約30分"
+      }
     ],
     "links": {
-      "toLocation": "周邊環境へ",
-      "toAmenities": "周邊設施へ",
+      "toLocation": "周辺環境へ",
+      "toAmenities": "周辺施設へ",
       "backToTop": "ページトップへ"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "EL FARO+ 白金高輪の最寄り駅は？",
+          "answer": "最寄りは東京メトロ南北線・都営三田線「白金高輪」駅、徒歩約5分（約400m）。三田駅・田町駅・泉岳寺駅も利用でき、品川や羽田空港へのアクセスも良好です。"
+        },
+        {
+          "question": "羽田空港までの所要時間は？",
+          "answer": "白金高輪・三田・田町などから乗り継ぎ、羽田空港まで約25–35分（ルート・ダイヤにより異なります）。"
+        },
+        {
+          "question": "物件の住所はどこですか？",
+          "answer": "東京都港区三田5-5-10（〒108-0073）です。"
+        }
+      ]
     }
   },
   "location": {
     "page": {
       "seo": {
         "title": "ロケーション・周辺環境｜EL FARO+ 白金高輪",
-        "description": "白金高輪・港南エリアの地理位置、交通、生活施設、慶應義塾大学文教エリアの価値。都市利便と静謐な住環境が共存。忠訓地產が物件情報をご案内します。",
-        "keywords": ["EL FARO+", "白金高輪", "周辺環境", "ロケーション", "忠訓地產"],
+        "description": "東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分。慶應義塾大学三田キャンパス・高輪 GATEWAY CITY に近い港区コア立地。都市利便と静謐な住環境が共存。忠訓地產が物件情報をご案内します。",
+        "keywords": [
+          "EL FARO+",
+          "白金高輪",
+          "三田5-5-10",
+          "周辺環境",
+          "ロケーション",
+          "港区三田",
+          "忠訓地產"
+        ],
         "ogImage": "/images/og/location.jpg",
         "ogImageAlt": "EL FARO+ 白金高輪 港区ロケーション"
       },
@@ -431,13 +587,29 @@
         "home": "トップ",
         "current": "ロケーション"
       },
+      "faq": {
+        "items": [
+          {
+            "question": "EL FARO+ 白金高輪の住所は？",
+            "answer": "東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分、三田・田町・泉岳寺も徒歩圏です。"
+          },
+          {
+            "question": "周辺の生活・文教環境は？",
+            "answer": "慶應義塾大学三田キャンパス、高輪 GATEWAY CITY、白金アエルシティなどの商業施設、スーパー・銀行・医療が徒歩圏に揃います。"
+          },
+          {
+            "question": "立地について詳しく知るには？",
+            "answer": "ウェブサイトから見学予約、またはお電話でご相談ください。忠訓地產が立地・交通・購入計画をご案内します。"
+          }
+        ]
+      },
       "heroAlt": "周辺環境",
       "intro": {
         "title": "LOCATION",
         "subtitle": "運河に臨む、開放のウォーターフロントへ。",
         "paragraphs": [
-          "港区アドレスにありながら、再開発の機運に沸く品川エリアの進化の最前線を感じて暮らすことのできる、可能性に満ちたロケーション。",
-          "天王洲アイル駅と品川駅を使いこなし、都心を軽やかに駆け抜けながら、開放感あふれる南方面のウォーターフロントをかなえる日常へ。"
+          "港区三田のアドレスにありながら、高輪・品川エリアの再開発が進む進化の最前線を感じて暮らせる、可能性に満ちたロケーション。",
+          "白金高輪・三田・田町など複数駅を使いこなし、都心と品川生活圏を軽やかに移動しながら、港区ならではの静謐な住環境もかなえる日常へ。"
         ],
         "waterfrontAlt": "運河に臨むウォーターフロント"
       },
@@ -449,7 +621,7 @@
             "id": "geo",
             "num": "01",
             "title": "地理位置",
-            "body": "白金高輪・港南エリア。都心の利便性と水辺の開放感が調和する、進化し続けるロケーション。"
+            "body": "港区三田・白金高輪。都心の利便性と落ち着いた住環境が調和する、進化し続けるロケーション。"
           },
           {
             "id": "access",
@@ -475,9 +647,9 @@
         "breadcrumb": "TOP　|　周辺環境　|　地理位置",
         "title": "地理位置",
         "subtitle": "Location",
-        "tagline": "白金高輪・港南—都心と水辺が交わるアドレス。",
-        "body": "東京都港区に位置し、品川エリアの再開発が進む港南地区。運河沿いのウォーターフロントと、落ち着いた住宅街の雰囲気が共存する、将来性の高いロケーションです。ビジネス・文化・生活がバランスよく整う街並みが広がります。",
-        "imageAlt": "白金高輪・港南エリア"
+        "tagline": "港区三田・白金高輪—都心と文教エリアが交わるアドレス。",
+        "body": "東京都港区三田5-5-10に位置し、白金高輪・高輪 GATEWAY CITY の再開発に近接。落ち着いた住宅街の雰囲気と都心利便性が共存する、将来性の高いロケーションです。ビジネス・文化・生活がバランスよく整う街並みが広がります。",
+        "imageAlt": "港区三田・白金高輪エリア"
       },
       "access": {
         "title": "交通",
@@ -488,33 +660,33 @@
           {
             "id": "shirokane",
             "name": "白金高輪駅",
-            "time": "徒歩約6分",
-            "distance": "約480m"
+            "time": "徒歩約5分",
+            "distance": "約400m"
           },
           {
             "id": "tennozu",
             "name": "天王洲アイル駅",
-            "time": "徒歩約6分",
-            "distance": "約490m"
+            "time": "電車約20分",
+            "distance": "品川／りんかい線経由"
           },
           {
             "id": "shinagawa",
             "name": "品川駅",
-            "time": "徒歩約15分",
-            "distance": "約1,200m"
+            "time": "電車約8分",
+            "distance": "白金高輪・泉岳寺経由"
           }
         ],
         "airportItems": [
           {
             "id": "haneda",
             "name": "羽田空港",
-            "time": "車約20分",
+            "time": "電車約30分",
             "distance": "※目安"
           },
           {
             "id": "narita",
             "name": "成田空港",
-            "time": "車約60分",
+            "time": "電車約60–80分",
             "distance": "※目安"
           }
         ]
@@ -548,11 +720,26 @@
         "title": "交通簡述",
         "description": "主要駅・空港へのアクセスをまとめました。日々の通勤・出張・旅行のイメージにお役立てください。",
         "rows": [
-          { "label": "白金高輪駅", "detail": "南北線・三田線　徒歩約6分" },
-          { "label": "天王洲アイル駅", "detail": "りんかい線・東京モノレール　徒歩約6分" },
-          { "label": "品川駅", "detail": "JR・京急　徒歩約15分" },
-          { "label": "羽田空港", "detail": "車約20分（目安）" },
-          { "label": "成田空港", "detail": "車約60分（目安）" }
+          {
+            "label": "白金高輪駅",
+            "detail": "南北線・三田線　徒歩約5分"
+          },
+          {
+            "label": "天王洲アイル駅",
+            "detail": "りんかい線・東京モノレール　電車約20分"
+          },
+          {
+            "label": "品川駅",
+            "detail": "JR・京急　電車約8分"
+          },
+          {
+            "label": "羽田空港",
+            "detail": "電車約30分（目安）"
+          },
+          {
+            "label": "成田空港",
+            "detail": "電車約60–80分（目安）"
+          }
         ],
         "backToTop": "トップページへ"
       },
@@ -567,7 +754,7 @@
           "白金高輪から品川駅へは2駅という近さ。国内外を問わず移動利便性が飛躍的に向上することで、住宅地としての希少価値もさらに高まると見込まれています。"
         ],
         "imageAlt": "品川駅周辺",
-        "footer": "ELFARO SHIROKANE-TAKANAWA | 03"
+        "footer": "OK PRIME SHIROKANE-TAKANAWA | 03"
       },
       "s2": {
         "verticalTitle": "白金高輪",
@@ -626,12 +813,36 @@
           "JR京浜東北線・根岸線/山手線「田町」駅"
         ],
         "lifeItems": [
-          { "name": "DCM 三田店", "time": "徒歩 3分", "distance": "190m" },
-          { "name": "セブンイレブン 港区三田五丁目店", "time": "徒歩 6分", "distance": "400m" },
-          { "name": "三井住友銀行 三田通支店", "time": "徒歩 10分", "distance": "600m" },
-          { "name": "白金アエルシティ", "time": "徒歩 10分", "distance": "700m" },
-          { "name": "港区立高輪区民センター", "time": "徒歩 14分", "distance": "950m" },
-          { "name": "白金商店街", "time": "徒歩 14分", "distance": "1.0km" }
+          {
+            "name": "DCM 三田店",
+            "time": "徒歩 3分",
+            "distance": "190m"
+          },
+          {
+            "name": "セブンイレブン 港区三田五丁目店",
+            "time": "徒歩 6分",
+            "distance": "400m"
+          },
+          {
+            "name": "三井住友銀行 三田通支店",
+            "time": "徒歩 10分",
+            "distance": "600m"
+          },
+          {
+            "name": "白金アエルシティ",
+            "time": "徒歩 10分",
+            "distance": "700m"
+          },
+          {
+            "name": "港区立高輪区民センター",
+            "time": "徒歩 14分",
+            "distance": "950m"
+          },
+          {
+            "name": "白金商店街",
+            "time": "徒歩 14分",
+            "distance": "1.0km"
+          }
         ],
         "pageNum": "04"
       }
@@ -641,7 +852,13 @@
     "seo": {
       "title": "ブランドストーリー｜EL FARO+ 白金高輪",
       "description": "OK PRIME ブランドストーリー—最初の一戸から家族の資産版図へ。忠訓地產が EL FARO+ 白金高輪の日本不動産・見学・投資相談をご提供します。",
-      "keywords": ["EL FARO+", "OK PRIME", "忠訓地產", "ブランド", "日本不動産"],
+      "keywords": [
+        "EL FARO+",
+        "OK PRIME",
+        "忠訓地產",
+        "ブランド",
+        "日本不動産"
+      ],
       "ogImage": "/images/og/story.jpg",
       "ogImageAlt": "OK PRIME 忠訓地產 ブランドストーリー"
     },
@@ -663,7 +880,11 @@
         "私たちがお届けするのは、建物ではありません。",
         "家族の世代を超える礎です。"
       ],
-      "body": "OK PRIMEは、これから100年にわたり、お客様一人ひとりに寄り添い続けます。最初の一軒から、家族の資産版図が形づくられるまで。世界のあらゆる場所にOK PRIMEの足跡を。すべての不動産取得が、より豊かな人生の始まりとなるように。",
+      "bodyParagraphs": [
+        "OK PRIMEは、これから100年にわたり、お客様一人ひとりに寄り添い続けます。",
+        "最初の一軒から、家族の資産版図が形づくられるまで。世界のあらゆる場所に、OK PRIMEの足跡を。",
+        "すべての不動産取得が、より豊かな人生の始まりとなるように。"
+      ],
       "brand": "OK PRIME",
       "tagline": "Prime Location · Prime Living · Prime Legacy",
       "pillarsLabel": "グローバル資産配分｜グローバル健康守護｜グローバル生活サービス｜家族世代継承"
@@ -732,9 +953,18 @@
       "description": "エントランスドア、迎賓の廊道、ロビー空間、そしてあらゆるディテールに、品質へのこだわりと未来への約束が息づいています。デザイン、工芸、生活美学への不断の追求を通じ、長期保有に値し、世代を超えて継承されるコア資産を創出します。",
       "closing": "OK PRIMEは、真の価値は今日だけでなく、未来にこそあると信じています。",
       "details": [
-        { "label": "所在地", "value": "東京都港区白金高輪" },
-        { "label": "建築理念", "value": "ヨーロッパの街並み × 現代都心美学" },
-        { "label": "コアバリュー", "value": "時を超える資産と生活品質" }
+        {
+          "label": "所在地",
+          "value": "東京都港区白金高輪"
+        },
+        {
+          "label": "建築理念",
+          "value": "ヨーロッパの街並み × 現代都心美学"
+        },
+        {
+          "label": "コアバリュー",
+          "value": "時を超える資産と生活品質"
+        }
       ]
     },
     "cta": {
@@ -754,7 +984,13 @@
     "seo": {
       "title": "物件概要｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪の物件概要、間取り図、内外装仕上表・設備仕様。スペイン語で灯台を意味する El Faro。忠訓地產が見学予約をご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "物件概要", "間取り", "忠訓地產"],
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "物件概要",
+        "間取り",
+        "忠訓地產"
+      ],
       "ogImage": "/images/og/summary.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 物件概要"
     },
@@ -840,7 +1076,13 @@
     "seo": {
       "title": "建築デザイン｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪の外観デザイン。二丁掛タイル、石材、スペイン風タイルと光と影のコントラスト。Design Meiho Archilabo 設計。忠訓地產がご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "建築", "外観", "忠訓地產"],
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "建築",
+        "外観",
+        "忠訓地產"
+      ],
       "ogImage": "/images/og/architecture.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 Urban Classic 外観"
     },
@@ -923,18 +1165,50 @@
     "spec": {
       "title": "主要仕様",
       "items": [
-        { "label": "タイル名称", "value": "EL FARO+ 外壁タイル" },
-        { "label": "タイルサイズ", "value": "95 × 45 mm（50二丁）" },
-        { "label": "出荷仕様", "value": "材貼ネット貼り 300 × 300 mm" },
-        { "label": "タイル種別", "value": "BI類（磁器質）" },
-        { "label": "吸水率", "value": "< 1%（最高グレード）" },
-        { "label": "焼成温度", "value": "1200°C 以上" },
-        { "label": "耐凍害性能", "value": "◎（日本寒冷地認証）" },
-        { "label": "色調比率", "value": "濃：中：淡 = 5:9:4（黄金混色）" },
-        { "label": "産地・製造", "value": "岐阜県 美濃焼（長江陶業）" }
+        {
+          "label": "タイル名称",
+          "value": "EL FARO+ 外壁タイル"
+        },
+        {
+          "label": "タイルサイズ",
+          "value": "95 × 45 mm（50二丁）"
+        },
+        {
+          "label": "出荷仕様",
+          "value": "材貼ネット貼り 300 × 300 mm"
+        },
+        {
+          "label": "タイル種別",
+          "value": "BI類（磁器質）"
+        },
+        {
+          "label": "吸水率",
+          "value": "< 1%（最高グレード）"
+        },
+        {
+          "label": "焼成温度",
+          "value": "1200°C 以上"
+        },
+        {
+          "label": "耐凍害性能",
+          "value": "◎（日本寒冷地認証）"
+        },
+        {
+          "label": "色調比率",
+          "value": "濃：中：淡 = 5:9:4（黄金混色）"
+        },
+        {
+          "label": "産地・製造",
+          "value": "岐阜県 美濃焼（長江陶業）"
+        }
       ]
     },
-    "tags": ["美濃焼", "BI類磁器質", "5:9:4混色", "50二丁"],
+    "tags": [
+      "美濃焼",
+      "BI類磁器質",
+      "5:9:4混色",
+      "50二丁"
+    ],
     "consultant": {
       "name": "OK PRIME 担当"
     },
@@ -956,18 +1230,54 @@
       "label": "CASE STUDY",
       "title": "エスケー化研 建材採用事例",
       "items": [
-        { "src": "/images/architecture/sk-material-01.jpg", "caption": "外壁塗装面 — 超低汚染・超耐候" },
-        { "src": "/images/architecture/sk-material-02.jpg", "caption": "スーパーセラタイトF 外壁システム" },
-        { "src": "/images/architecture/sk-material-03.jpg", "caption": "水性セラタイトF 耐久塗料" },
-        { "src": "/images/architecture/sk-material-04.jpg", "caption": "水性セラタイトSi シリーズ" },
-        { "src": "/images/architecture/sk-material-05.jpg", "caption": "エスケープレミアムシリコン" },
-        { "src": "/images/architecture/sk-material-06.jpg", "caption": "水性セラミシリコン 外壁塗料" },
-        { "src": "/images/architecture/sk-material-07.jpg", "caption": "エスケープレミアム無機シリーズ" },
-        { "src": "/images/architecture/sk-material-08.jpg", "caption": "超低汚染性 — 親水性塗膜" },
-        { "src": "/images/architecture/sk-material-09.jpg", "caption": "超耐候性 — 無機ハイブリッド技術" },
-        { "src": "/images/architecture/sk-material-11.jpg", "caption": "マンション長寿命化仕様" },
-        { "src": "/images/architecture/sk-building-01.jpg", "caption": "採用事例 — 高級マンション" },
-        { "src": "/images/architecture/sk-building-05.jpg", "caption": "採用事例 — 大型複合施設" }
+        {
+          "src": "/images/architecture/sk-material-01.jpg",
+          "caption": "外壁塗装面 — 超低汚染・超耐候"
+        },
+        {
+          "src": "/images/architecture/sk-material-02.jpg",
+          "caption": "スーパーセラタイトF 外壁システム"
+        },
+        {
+          "src": "/images/architecture/sk-material-03.jpg",
+          "caption": "水性セラタイトF 耐久塗料"
+        },
+        {
+          "src": "/images/architecture/sk-material-04.jpg",
+          "caption": "水性セラタイトSi シリーズ"
+        },
+        {
+          "src": "/images/architecture/sk-material-05.jpg",
+          "caption": "エスケープレミアムシリコン"
+        },
+        {
+          "src": "/images/architecture/sk-material-06.jpg",
+          "caption": "水性セラミシリコン 外壁塗料"
+        },
+        {
+          "src": "/images/architecture/sk-material-07.jpg",
+          "caption": "エスケープレミアム無機シリーズ"
+        },
+        {
+          "src": "/images/architecture/sk-material-08.jpg",
+          "caption": "超低汚染性 — 親水性塗膜"
+        },
+        {
+          "src": "/images/architecture/sk-material-09.jpg",
+          "caption": "超耐候性 — 無機ハイブリッド技術"
+        },
+        {
+          "src": "/images/architecture/sk-material-11.jpg",
+          "caption": "マンション長寿命化仕様"
+        },
+        {
+          "src": "/images/architecture/sk-building-01.jpg",
+          "caption": "採用事例 — 高級マンション"
+        },
+        {
+          "src": "/images/architecture/sk-building-05.jpg",
+          "caption": "採用事例 — 大型複合施設"
+        }
       ]
     },
     "partner": {
@@ -982,7 +1292,12 @@
     "seo": {
       "title": "インテリア｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪の室内デザイン。大きな窓から光が差し込み、柔らかな照明が美しい陰影を演出。住まいの灯台となる空間。忠訓地產が見学予約をご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "インテリア", "忠訓地產"],
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "インテリア",
+        "忠訓地產"
+      ],
       "ogImage": "/images/og/interior.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 共用スペース"
     },
@@ -1106,7 +1421,13 @@
     "seo": {
       "title": "設備・家電・保全系統｜EL FARO+ 白金高輪",
       "description": "EL FARO+ 白金高輪の設備紹介。キッチン、バスルーム、トイレ、ALSOK 防犯設備。上質な設備とスマートセキュリティ。忠訓地產がご案内します。",
-      "keywords": ["EL FARO+", "白金高輪", "設備", "防犯", "忠訓地產"],
+      "keywords": [
+        "EL FARO+",
+        "白金高輪",
+        "設備",
+        "防犯",
+        "忠訓地產"
+      ],
       "ogImage": "/images/og/equipment.jpg",
       "ogImageAlt": "EL FARO+ 白金高輪 設備"
     },
@@ -1168,14 +1489,15 @@
   "amenitiesPage": {
     "seo": {
       "title": "地域再開発・周辺施設｜EL FARO+ 白金高輪",
-      "description": "白金高輪の大規模都市更新、ランドマーク、リニア中央新幹線の交通価値、周辺商業・駅・公園・生活施設を紹介。忠訓地產が EL FARO+ 白金高輪の周辺環境をご案内します。",
+      "description": "港区三田5-5-10・白金高輪の大規模都市更新、高輪 GATEWAY CITY、商業・生活施設をご案内。白金高輪駅徒歩約5分、慶應三田・品川生活圏に近接。忠訓地產が周辺環境をご説明します。",
       "keywords": [
         "EL FARO+",
         "白金高輪",
+        "三田5-5-10",
         "地域再開発",
         "周辺施設",
         "品川",
-        "港区",
+        "港区三田",
         "都市更新",
         "忠訓地產"
       ],
@@ -1195,7 +1517,7 @@
       "sideTag": "商場・電車駅・生活施設をご紹介",
       "sideTitle": "AMENITIES",
       "allFacilities": "すべての施設",
-      "body": "白金高輪・天王洲アイルエリアには、日常を支える商業施設や複数路線の駅、公園・医療などが徒歩圏に揃っています。買い物から通勤、週末のお出かけまで—都心の利便性を、バランスよく享受できる環境です。"
+      "body": "白金高輪・三田エリアには、日常を支える商業施設や複数路線の駅、公園・医療などが徒歩圏に揃っています。買い物から通勤、週末のお出かけまで—都心の利便性を、バランスよく享受できる環境です。"
     },
     "redevelopment": {
       "label": "URBAN RENEWAL",
@@ -1218,32 +1540,34 @@
     "pickUpLabel": "Pick Up!",
     "pickUpItems": [
       {
-        "title": "東京2025年最新ランドマーク誕生！「高輪GATEWAY CITY」",
-        "body": "JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集積し、白金・品川周辺に新たな都市エネルギーをもたらします。",
-        "image": "/images/002.png",
-        "tags": ["Landmark", "都市更新"],
+        "title": "高輪 GATEWAY CITY—東京の最新複合ランドマーク",
+        "body": "JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集積し、白金高輪・品川の生活圏に新しい都市エネルギーをもたらします。",
+        "image": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+        "tags": [
+          "Landmark",
+          "都市更新"
+        ],
         "href": "#shopping"
       },
       {
-        "title": "品川駅—新幹線・空港アクセスの玄関口",
-        "body": "東海道新幹線・京急・JR各線が集まるターミナル。ビジネス・旅行の起点としても頼れる存在です。",
-        "image": "/images/amenities/009.png",
-        "tags": ["Station", "電車駅"],
-        "href": "#shinagawa"
-      },
-      {
-        "title": "天王洲アイル—運河沿いのウォーターフロント",
-        "body": "再開発が進む水辺エリア。商業・オフィス・イベント空間が集まり、休日の散策にも最適です。",
-        "image": "/images/amenities/012.png",
-        "tags": ["Lifestyle", "生活圏"],
-        "href": "#tennozu"
-      },
-      {
-        "title": "白金高輪駅—南北線・三田線の交差",
-        "body": "都心南部を縦横に結ぶ2路線。六本木・大手町・目黒方面へ、乗り換え少なくアクセスできます。",
-        "image": "/images/amenities/006.png",
-        "tags": ["Station", "電車駅"],
+        "title": "東京タワー・芝公園—港区を象徴する緑とスカイライン",
+        "body": "芝公園と東京タワーに近く、港区のランドマークがすぐそば。平日の散歩から休日のくつろぎまで、都心の緑とクラシックな都市景観を楽しめます。",
+        "image": "/images/index/周邊.png",
+        "tags": [
+          "Landmark",
+          "緑地"
+        ],
         "href": "#shirokane"
+      },
+      {
+        "title": "慶應義塾大学—三田キャンパスの文教エリア",
+        "body": "慶應義塾大学三田キャンパスと歴史ある建築群に近く、学術と文化の気配が豊かな港区の静かな文教生活圏です。",
+        "image": "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
+        "tags": [
+          "Education",
+          "文教"
+        ],
+        "href": "#shinagawa"
       }
     ],
     "spotlightSections": [
@@ -1251,45 +1575,45 @@
         "id": "shopping",
         "titleEn": "TAKANAWA GATEWAY CITY",
         "minutes": "15",
-        "showBike": true,
-        "lead": "東京2025年最新ランドマーク誕生！「高輪GATEWAY CITY」",
-        "body": "JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集まり、白金・品川の生活圏に新しい都市景観と機能をもたらします。",
+        "showBike": false,
+        "lead": "東京の最新ランドマーク「高輪 GATEWAY CITY」へ、徒歩約15分。",
+        "body": "JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集まり、白金高輪・品川の生活圏に新しい都市景観と日常の機能をもたらします。",
         "note": "高輪 GATEWAY CITY",
-        "noteDetail": "徒歩約15分［約1,200m］",
-        "imageMain": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png",
-        "imageSub1": "/images/amenities/004.png",
+        "noteDetail": "徒歩約15分",
+        "imageMain": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+        "imageSub1": "/images/amenities/012.png",
         "imageSub1Label": "",
-        "imageSub2": "/images/amenities/005.png",
+        "imageSub2": "/images/index/白金アエルシティ.png",
         "imageSub2Label": ""
       },
       {
         "id": "shirokane",
-        "titleEn": "Shirokane-Takanawa Station",
-        "minutes": "6",
+        "titleEn": "TOKYO TOWER",
+        "minutes": "20",
         "showBike": false,
-        "lead": "約6分で白金高輪駅へアクセス、都心各所へスムーズに。",
-        "body": "東京メトロ南北線・都営三田線の2路線が利用可能。ビジネスや遊び、どんなシーンでも便利で理想的な拠点となるポテンシャルを秘めています。",
-        "note": "東京メトロ南北線・都営三田線「白金高輪」駅",
-        "noteDetail": "徒歩約6分［約480m］",
-        "imageMain": "/images/amenities/006.png",
-        "imageSub1": "/images/amenities/007.png",
+        "lead": "徒歩約20分で、東京タワーと芝公園の緑とスカイラインを感じられます。",
+        "body": "芝公園と東京タワーに近く、港区を象徴するランドマークがすぐそば。平日の散歩から休日のくつろぎまで、都心の緑とクラシックな都市景観を気軽に楽しめます。",
+        "note": "東京タワー・芝公園",
+        "noteDetail": "徒歩約20分",
+        "imageMain": "/images/index/周邊.png",
+        "imageSub1": "/images/index/芝公園.png",
         "imageSub1Label": "",
-        "imageSub2": "/images/amenities/008.png",
+        "imageSub2": "/images/amenities/961acae3-48de-46bf-b84d-c8ade6e5e598.png",
         "imageSub2Label": ""
       },
       {
         "id": "shinagawa",
-        "titleEn": "Shinagawa Station",
-        "minutes": "15",
-        "showBike": true,
-        "lead": "首都圏最大級のターミナル駅としてだけでなく",
-        "body": "品川駅前の商業施設やアトレ、駅ナカのショッピングエリアとしても、買い物・外食・出張のニーズに充分に応えてくれる場所です。",
-        "note": "JR・京急「品川」駅",
-        "noteDetail": "徒歩約15分［約1,200m］※1",
-        "imageMain": "/images/amenities/009.png",
-        "imageSub1": "/images/amenities/010.png",
+        "titleEn": "KEIO UNIVERSITY",
+        "minutes": "10",
+        "showBike": false,
+        "lead": "徒歩約10分で慶應義塾大学三田キャンパス周辺へ。",
+        "body": "慶應義塾大学三田キャンパスと歴史ある建築群に近く、学術と文化の気配が豊かなエリア。白金高輪のウォーターフロントに暮らしながら、港区の静かな文教の雰囲気も楽しめます。",
+        "note": "慶應義塾大学（三田）",
+        "noteDetail": "徒歩約10分",
+        "imageMain": "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
+        "imageSub1": "/images/amenities/005.png",
         "imageSub1Label": "",
-        "imageSub2": "/images/amenities/011.png",
+        "imageSub2": "/images/amenities/007.png",
         "imageSub2Label": ""
       }
     ],
@@ -1297,25 +1621,73 @@
       "title": "周辺の主な電車駅",
       "footnote": "複数路線の駅が徒歩圏に。都心・空港・横浜方面へもスムーズにつながります。",
       "items": [
-        { "name": "白金高輪", "lines": "南北線・三田線", "time": "徒歩約6分", "image": "/images/amenities/006.png" },
-        { "name": "天王洲アイル", "lines": "りんかい線", "time": "徒歩約6分", "image": "/images/amenities/007.png" },
-        { "name": "品川", "lines": "JR・京急", "time": "徒歩約15分", "image": "/images/amenities/009.png" },
-        { "name": "田町", "lines": "JR山手線", "time": "徒歩約18分", "image": "/images/amenities/010.png" },
-        { "name": "五反田", "lines": "JR・東急", "time": "車約8分", "image": "/images/amenities/011.png" },
-        { "name": "浜松町", "lines": "JR・モノレール", "time": "車約10分", "image": "/images/amenities/013.png" }
+        {
+          "name": "白金高輪",
+          "lines": "南北線・三田線",
+          "time": "徒歩約6分",
+          "image": "/images/amenities/006.png"
+        },
+        {
+          "name": "天王洲アイル",
+          "lines": "りんかい線",
+          "time": "徒歩約6分",
+          "image": "/images/amenities/007.png"
+        },
+        {
+          "name": "品川",
+          "lines": "JR・京急",
+          "time": "徒歩約15分",
+          "image": "/images/amenities/009.png"
+        },
+        {
+          "name": "田町",
+          "lines": "JR山手線",
+          "time": "徒歩約18分",
+          "image": "/images/amenities/010.png"
+        },
+        {
+          "name": "五反田",
+          "lines": "JR・東急",
+          "time": "車約8分",
+          "image": "/images/amenities/011.png"
+        },
+        {
+          "name": "浜松町",
+          "lines": "JR・モノレール",
+          "time": "車約10分",
+          "image": "/images/amenities/013.png"
+        }
       ]
     },
     "features": {
       "label": "周辺施設の魅力",
       "heading": "暮らしを支える、身近なインフラ",
-      "body": "買い物・交通・緑と医療まで。港区港南エリアで叶う、バランスの取れた日常。",
+      "body": "買い物・交通・緑と医療まで。港区三田・白金高輪で叶う、バランスの取れた日常。",
       "items": [
-        { "title": "東京2025最新ランドマーク「高輪GATEWAY CITY」", "image": "/images/002.png" },
-        { "title": "スーパー・日用品", "image": "/images/amenities/004.png" },
-        { "title": "飲食・カフェ", "image": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png" },
-        { "title": "複数路線の駅", "image": "/images/amenities/006.png" },
-        { "title": "公園・緑地", "image": "/images/amenities/012.png" },
-        { "title": "医療・公共", "image": "/images/amenities/013.png" }
+        {
+          "title": "東京2025最新ランドマーク「高輪GATEWAY CITY」",
+          "image": "/images/002.png"
+        },
+        {
+          "title": "スーパー・日用品",
+          "image": "/images/amenities/004.png"
+        },
+        {
+          "title": "飲食・カフェ",
+          "image": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png"
+        },
+        {
+          "title": "複数路線の駅",
+          "image": "/images/amenities/006.png"
+        },
+        {
+          "title": "公園・緑地",
+          "image": "/images/amenities/012.png"
+        },
+        {
+          "title": "医療・公共",
+          "image": "/images/amenities/013.png"
+        }
       ]
     },
     "cta": {
@@ -1329,11 +1701,31 @@
       "prevLabel": "前へ",
       "nextLabel": "次へ",
       "slides": [
-        { "title": "高輪 GATEWAY CITY", "caption": "2025最新ランドマーク・都市更新", "image": "/images/002.png" },
-        { "title": "品川シーズンテラス", "caption": "徒歩約15分・大型商業", "image": "/images/amenities/005.png" },
-        { "title": "天王洲アイル", "caption": "徒歩約6分・運河沿い", "image": "/images/amenities/012.png" },
-        { "title": "白金高輪駅", "caption": "徒歩約6分・2路線", "image": "/images/amenities/008.png" },
-        { "title": "品川駅", "caption": "徒歩約15分・ターミナル", "image": "/images/amenities/009.png" }
+        {
+          "title": "高輪 GATEWAY CITY",
+          "caption": "2025最新ランドマーク・都市更新",
+          "image": "/images/002.png"
+        },
+        {
+          "title": "品川シーズンテラス",
+          "caption": "徒歩約15分・大型商業",
+          "image": "/images/amenities/005.png"
+        },
+        {
+          "title": "天王洲アイル",
+          "caption": "徒歩約6分・運河沿い",
+          "image": "/images/amenities/012.png"
+        },
+        {
+          "title": "白金高輪駅",
+          "caption": "徒歩約6分・2路線",
+          "image": "/images/amenities/008.png"
+        },
+        {
+          "title": "品川駅",
+          "caption": "徒歩約15分・ターミナル",
+          "image": "/images/amenities/009.png"
+        }
       ]
     },
     "summary": {
@@ -1341,12 +1733,30 @@
       "subheading": "徒歩・車の目安です。実際の時間は道路状況等により異なります。",
       "listLink": "一覧を見る",
       "rows": [
-        { "label": "高輪 GATEWAY CITY", "detail": "2025最新ランドマーク　徒歩約15分" },
-        { "label": "品川シーズンテラス", "detail": "商業・オフィス　徒歩約15分" },
-        { "label": "白金高輪駅", "detail": "南北線・三田線　徒歩約6分" },
-        { "label": "天王洲アイル駅", "detail": "りんかい線・東京モノレール　徒歩約6分" },
-        { "label": "品川駅", "detail": "JR・京急　徒歩約15分" },
-        { "label": "芝公園", "detail": "緑地・散策　徒歩約20分" }
+        {
+          "label": "高輪 GATEWAY CITY",
+          "detail": "2025最新ランドマーク　徒歩約15分"
+        },
+        {
+          "label": "品川シーズンテラス",
+          "detail": "商業・オフィス　徒歩約15分"
+        },
+        {
+          "label": "白金高輪駅",
+          "detail": "南北線・三田線　徒歩約6分"
+        },
+        {
+          "label": "天王洲アイル駅",
+          "detail": "りんかい線・東京モノレール　徒歩約6分"
+        },
+        {
+          "label": "品川駅",
+          "detail": "JR・京急　徒歩約15分"
+        },
+        {
+          "label": "芝公園",
+          "detail": "緑地・散策　徒歩約20分"
+        }
       ],
       "footnote": "※1　距離・所要時間は地図上の直線距離および徒歩80m＝1分で算出した目安です。実際の時間は道路状況等により異なります。",
       "homeLink": "トップページへ"
@@ -1356,7 +1766,7 @@
       "items": [
         {
           "question": "白金高輪周辺にはどのような生活施設がありますか？",
-          "answer": "徒歩圏に白金アエルシティ、品川シーズンテラス、白金高輪・天王洲アイル・品川など複数路線の駅、芝公園などの緑地、スーパー・銀行・医療機関が揃い、日常に必要な施設が充実しています。"
+          "answer": "徒歩圏に白金アエルシティ、高輪 GATEWAY CITY、白金高輪・三田・田町など複数路線の駅、芝公園などの緑地、スーパー・銀行・医療機関が揃い、日常に必要な施設が充実しています。"
         },
         {
           "question": "白金高輪の都市再開発の状況は？",
@@ -1364,7 +1774,7 @@
         },
         {
           "question": "見学予約で周辺環境を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の周辺施設、交通動線、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪（港区三田5-5-10）の周辺施設、交通動線、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
@@ -1412,7 +1822,10 @@
       "items": [
         {
           "id": "ss1",
-          "tags": ["SS1", "標準型"],
+          "tags": [
+            "SS1",
+            "標準型"
+          ],
           "title": "WASHLET SS1",
           "image": "/images/equipment/toilet/page-03.png",
           "specs": [
@@ -1426,7 +1839,10 @@
         },
         {
           "id": "ss2",
-          "tags": ["SS2", "上級型"],
+          "tags": [
+            "SS2",
+            "上級型"
+          ],
           "title": "WASHLET SS2",
           "image": "/images/equipment/toilet/page-04.png",
           "specs": [
@@ -1439,7 +1855,10 @@
         },
         {
           "id": "ss3",
-          "tags": ["SS3", "フラッグシップ"],
+          "tags": [
+            "SS3",
+            "フラッグシップ"
+          ],
           "title": "WASHLET SS3",
           "image": "/images/equipment/toilet/page-05.png",
           "specs": [
@@ -1477,12 +1896,20 @@
         {
           "title": "SS1 標準型",
           "image": "/images/equipment/toilet/toilet-03.png",
-          "details": ["温水洗浄便座", "暖房便座", "節電モード"]
+          "details": [
+            "温水洗浄便座",
+            "暖房便座",
+            "節電モード"
+          ]
         },
         {
           "title": "操作パネル",
           "image": "/images/equipment/toilet/toilet-08.png",
-          "details": ["ワンタッチ操作", "着座センサー連動", "音量調整可能"]
+          "details": [
+            "ワンタッチ操作",
+            "着座センサー連動",
+            "音量調整可能"
+          ]
         }
       ]
     },
@@ -1585,9 +2012,18 @@
       "product": "",
       "linkLabel": "トイレ設備の詳細を見る",
       "specs": [
-        { "label": "清潔除菌", "value": "EWATER+除菌水系統" },
-        { "label": "ノズル洗浄", "value": "使用前後自動洗浄" },
-        { "label": "脱臭機能", "value": "自動脱臭システム" }
+        {
+          "label": "清潔除菌",
+          "value": "EWATER+除菌水系統"
+        },
+        {
+          "label": "ノズル洗浄",
+          "value": "使用前後自動洗浄"
+        },
+        {
+          "label": "脱臭機能",
+          "value": "自動脱臭システム"
+        }
       ]
     },
     "nasluck": {
@@ -1642,8 +2078,14 @@
           "body": "大きな凹凸のない「プレーンフロア」は、優れた排水性を実現。床から浴槽まで一体構造で汚れがたまりにくく、スポンジ洗いでさっと済ませられます。また、水流の勢いで毛髪を自然にまとめる「楽すてヘアキャッチャー」を搭載。排水口の掃除も衛生的でラクに行えます。",
           "layout": "double",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-clean-01.jpg", "alt": "プレーンフロア" },
-            { "src": "/images/equipment/bathroom/nj-clean-02.jpg", "alt": "楽すてヘアキャッチャー" }
+            {
+              "src": "/images/equipment/bathroom/nj-clean-01.jpg",
+              "alt": "プレーンフロア"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-clean-02.jpg",
+              "alt": "楽すてヘアキャッチャー"
+            }
           ]
         },
         {
@@ -1652,8 +2094,14 @@
           "body": "脱衣室から浴室への段差を極力抑えた低床仕様で、つまずきや転倒を防止。浴槽のまたぎ高さを約450mmに抑え、腰掛けスペースを設けることで、出入り時のバランスと安全をサポートします。",
           "layout": "double",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-safe-01.jpg", "alt": "低床仕様 出入口" },
-            { "src": "/images/equipment/bathroom/nj-safe-02.jpg", "alt": "またぎ高さ約450mm" }
+            {
+              "src": "/images/equipment/bathroom/nj-safe-01.jpg",
+              "alt": "低床仕様 出入口"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-safe-02.jpg",
+              "alt": "またぎ高さ約450mm"
+            }
           ]
         },
         {
@@ -1662,10 +2110,22 @@
           "body": "肩まわりにゆとりを持たせた浴槽とひじ掛けを備え、くつろぎを保ちながら従来浴槽比約45Lの節水を実現。eシャワーNf と高断熱浴槽により、追いだきを減らし光熱費とCO₂排出の抑制に貢献します。",
           "layout": "eco",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg", "alt": "浴槽 俯瞰" },
-            { "src": "/images/equipment/bathroom/nj-eco-insulation.jpg", "alt": "高断熱浴槽 断面図" },
-            { "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg", "alt": "eシャワーNf" },
-            { "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg", "alt": "節水シャワー" }
+            {
+              "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg",
+              "alt": "浴槽 俯瞰"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-insulation.jpg",
+              "alt": "高断熱浴槽 断面図"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg",
+              "alt": "eシャワーNf"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg",
+              "alt": "節水シャワー"
+            }
           ]
         },
         {
@@ -1674,7 +2134,10 @@
           "body": "独自のスリム構造により、浴室の内法寸法を維持しながら外法寸法を抑制。狭小リフォーム現場にも対応しやすく、余ったスペースを廊下や洗面所に活かすなど、住居全体の設計自由度を高めます。",
           "layout": "wide",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-space-02.jpg", "alt": "省スペース設計 スリム構造" }
+            {
+              "src": "/images/equipment/bathroom/nj-space-02.jpg",
+              "alt": "省スペース設計 スリム構造"
+            }
           ]
         }
       ]
@@ -1774,8 +2237,14 @@
           "subtitle": "Island Type",
           "body": "キッチンを囲んで、一緒におしゃべりしながらにぎやかに料理をつくることができるアイランド型。開放的で空間が広く感じられる、オープンなキッチンです。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-03.jpg", "alt": "アイランド型01" },
-            { "src": "/images/equipment/kitchen/riviere-04.jpg", "alt": "アイランド型02" }
+            {
+              "src": "/images/equipment/kitchen/riviere-03.jpg",
+              "alt": "アイランド型01"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-04.jpg",
+              "alt": "アイランド型02"
+            }
           ]
         },
         {
@@ -1784,8 +2253,14 @@
           "subtitle": "Peninsula Type",
           "body": "リビングとキッチン、それぞれのスペースをつくりながら、一体感のある空間を演出するペニンシュラ型。調理をしながらリビングが見渡せるキッチンです。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-05.jpg", "alt": "ペニンシュラ型01" },
-            { "src": "/images/equipment/kitchen/riviere-06.jpg", "alt": "ペニンシュラ型02" }
+            {
+              "src": "/images/equipment/kitchen/riviere-05.jpg",
+              "alt": "ペニンシュラ型01"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-06.jpg",
+              "alt": "ペニンシュラ型02"
+            }
           ]
         },
         {
@@ -1794,10 +2269,22 @@
           "subtitle": "I-Type",
           "body": "キッチンを壁に付けることで空間を広く取れる、もっとも狭小間取りに適した基本スタイル。ご自身で加熱機器を据え置けるセパレートタイプ、加熱機器を組み込んで一体化したシステムタイプ、間口は900mmからございます。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-07.jpg", "alt": "I型01 セパレートタイプ" },
-            { "src": "/images/equipment/kitchen/riviere-08.jpg", "alt": "I型02 システムタイプ" },
-            { "src": "/images/equipment/kitchen/riviere-09.jpg", "alt": "I型03" },
-            { "src": "/images/equipment/kitchen/riviere-10.jpg", "alt": "I型対面設置" }
+            {
+              "src": "/images/equipment/kitchen/riviere-07.jpg",
+              "alt": "I型01 セパレートタイプ"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-08.jpg",
+              "alt": "I型02 システムタイプ"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-09.jpg",
+              "alt": "I型03"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-10.jpg",
+              "alt": "I型対面設置"
+            }
           ]
         }
       ]
@@ -1844,22 +2331,52 @@
       "label": "PLAN",
       "heading": "セットプラン",
       "items": [
-        { "title": "アイランド型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-20.jpg" },
-        { "title": "ペニンシュラ型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-21.jpg" },
-        { "title": "I型 システムタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-22.jpg" },
-        { "title": "I型 システムタイプ（開き扉）02", "image": "/images/equipment/kitchen/riviere-23.jpg" },
-        { "title": "I型 システムタイプ（開き扉）03", "image": "/images/equipment/kitchen/riviere-24.jpg" },
-        { "title": "I型 セパレートタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-25.jpg" },
-        { "title": "I型 システムタイプ（開き扉）04", "image": "/images/equipment/kitchen/riviere-26.jpg" },
-        { "title": "I型 システムタイプ（開き扉）05", "image": "/images/equipment/kitchen/riviere-27.jpg" }
+        {
+          "title": "アイランド型 システムタイプ（引出し）",
+          "image": "/images/equipment/kitchen/riviere-20.jpg"
+        },
+        {
+          "title": "ペニンシュラ型 システムタイプ（引出し）",
+          "image": "/images/equipment/kitchen/riviere-21.jpg"
+        },
+        {
+          "title": "I型 システムタイプ（開き扉）01",
+          "image": "/images/equipment/kitchen/riviere-22.jpg"
+        },
+        {
+          "title": "I型 システムタイプ（開き扉）02",
+          "image": "/images/equipment/kitchen/riviere-23.jpg"
+        },
+        {
+          "title": "I型 システムタイプ（開き扉）03",
+          "image": "/images/equipment/kitchen/riviere-24.jpg"
+        },
+        {
+          "title": "I型 セパレートタイプ（開き扉）01",
+          "image": "/images/equipment/kitchen/riviere-25.jpg"
+        },
+        {
+          "title": "I型 システムタイプ（開き扉）04",
+          "image": "/images/equipment/kitchen/riviere-26.jpg"
+        },
+        {
+          "title": "I型 システムタイプ（開き扉）05",
+          "image": "/images/equipment/kitchen/riviere-27.jpg"
+        }
       ]
     },
     "cases": {
       "label": "CASE",
       "heading": "施工事例",
       "items": [
-        { "title": "コンパクトキッチン施工事例01", "image": "/images/equipment/kitchen/riviere-13.jpg" },
-        { "title": "コンパクトキッチン施工事例02", "image": "/images/equipment/kitchen/riviere-14.jpg" }
+        {
+          "title": "コンパクトキッチン施工事例01",
+          "image": "/images/equipment/kitchen/riviere-13.jpg"
+        },
+        {
+          "title": "コンパクトキッチン施工事例02",
+          "image": "/images/equipment/kitchen/riviere-14.jpg"
+        }
       ]
     },
     "faq": {
@@ -2156,24 +2673,50 @@
   },
   "contactPage": {
     "seo": {
-      "title": "お問い合わせ・説明会申込｜EL FARO+ 白金高輪",
-      "description": "忠訓地產 EL FARO+ 白金高輪—東京港区不動産説明会。法規・税制・投資動向を解説。説明会申込・物件登録・モデルルーム見学予約受付中。",
-      "keywords": ["EL FARO+", "白金高輪", "日本不動産", "説明会", "忠訓地產", "品川", "見学予約"],
+      "title": "お問い合わせ・説明会申込｜OK PRIME 白金高輪",
+      "description": "忠訓地產 OK PRIME 白金高輪（港区三田5-5-10）—東京港区不動産説明会。法規・税制・投資動向を解説。説明会申込・物件登録・モデルルーム見学予約受付中。",
+      "keywords": [
+        "OK PRIME",
+        "白金高輪",
+        "三田5-5-10",
+        "日本不動産",
+        "説明会",
+        "忠訓地產",
+        "品川",
+        "見学予約",
+        "EL FARO+"
+      ],
       "ogImage": "/images/og/home.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 日本不動産説明会"
+      "ogImageAlt": "OK PRIME 白金高輪 日本不動産説明会"
     },
     "breadcrumb": {
       "home": "トップ",
       "current": "お問い合わせ"
     },
+    "faq": {
+      "items": [
+        {
+          "question": "見学や説明会の予約方法は？",
+          "answer": "本ページのフォームからお申し込みください。お電話（02-2713-1039）またはメール（service@winnerlife.com）でも承ります。"
+        },
+        {
+          "question": "営業時間は？",
+          "answer": "営業時間は 09:00〜18:00、土日・祝日定休です。"
+        },
+        {
+          "question": "物件の所在地は？",
+          "answer": "OK PRIME 白金高輪は東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分です。"
+        }
+      ]
+    },
     "hero": {
-      "eyebrow": "▁ ▂ ▃ 忠訓地產 ◭ EL FARO+ 白金高輪 ▃ ▂ ▁",
+      "eyebrow": "▁ ▂ ▃ 忠訓地產 ◭ OK PRIME 白金高輪 ▃ ▂ ▁",
       "title": "東京不動産説明会",
       "watermark": "TOKYO LIVING",
       "highlights": [
         "海外投資家も法规に沿った日本不動産のご相談が可能",
         "品川・港区の好立地、安定した居住・賃貸需要",
-        "233戸の運河沿いレジデンス、ALSOK防犯・スマート設備完備"
+        "14戸の運河沿いレジデンス、ALSOK防犯・スマート設備完備"
       ],
       "ctaPrimary": "今すぐ申込",
       "ctaLine": "LINE で相談",
@@ -2184,7 +2727,7 @@
       "watermark": "PHILOSOPHY",
       "title": "東京港区の最新動向と投資トレンドを徹底解説",
       "paragraphs": [
-        "日本不動産の法規、税制、保有コストなど重要情報を網羅し、EL FARO+ 白金高輪の購入タイミングと資産分散をサポートします。",
+        "日本不動産の法規、税制、保有コストなど重要情報を網羅し、OK PRIME 白金高輪の購入タイミングと資産分散をサポートします。",
         "説明会は完全予約制、席数限定。忠訓地產の専門チームが立地、交通、設備、海外不動産購入の流れをご案内します。"
       ],
       "urgency": "🤎 説明会は予約制、席数に限りがあります",
@@ -2199,7 +2742,7 @@
         {
           "tag": "MINATO · SHIROKANE-TAKANAWA",
           "title": "白金高輪｜運河沿いの安定型資産",
-          "subtitle": "233戸大規模レジデンス、南向き運河ビュー、Urban Classic デザイン",
+          "subtitle": "14戸大規模レジデンス、南向き運河ビュー、Urban Classic デザイン",
           "image": "/images/index/運河.png",
           "points": [
             "品川・港区の再開発で周辺機能が継続的に向上",
@@ -2209,7 +2752,7 @@
           ],
           "propertiesLabel": "╭。✧ 物件ハイライト ✧。╮",
           "properties": [
-            "EL FARO+ 白金高輪｜233戸運河沿い",
+            "OK PRIME 白金高輪｜14戸運河沿い",
             "品川・天王洲生活圏｜ALSOK防犯",
             "Urban Classic 外観｜スマート設備"
           ]
@@ -2239,37 +2782,39 @@
       "subheading": "厳選東京物件 · 住みやすく投資にも",
       "cta": "今すぐお問い合わせ",
       "items": [
-        "EL FARO+ 白金高輪を忠訓地產が全面サポート",
-        "233戸の大規模コミュニティ、住投資両立",
+        "OK PRIME 白金高輪を忠訓地產が全面サポート",
+        "14戸の大規模コミュニティ、住投資両立",
         "専門チームによる資産・財務プランニング",
         "法規と市場情報を把握し、安心の日本不動産投資"
       ]
     },
     "seminars": {
-      "label": "SEMINAR",
+      "label": "OK PRIME",
       "heading": "【日本｜東京不動産説明会】",
-      "note": "地域により内容が異なります。申込後、担当者が日程をご確認いたします。",
+      "note": "テーマは東京港区不動産説明会。日付により台北または台中会場をお選びください。",
       "sessions": [
         {
-          "label": "総合説明会",
-          "title": "EL FARO+ 白金高輪 説明会 — 台北",
+          "label": "東京・港区",
+          "title": "東京港区不動産説明会 — 台北",
           "image": "/images/concept/001.png",
-          "dates": ["» 忠訓地產会議室 14:00〜", "｜6/24（水）", "｜6/25（木）"],
+          "dates": [
+            "» 忠訓地產会議室",
+            "｜8/21（金）",
+            "｜8/26（水）",
+            "｜8/27（木）",
+            "｜8/28（金）"
+          ],
           "ctaAria": "台北会場に申込"
         },
         {
-          "label": "品川生活圏",
-          "title": "品川・港区投資セミナー — 台中",
+          "label": "東京・港区",
+          "title": "東京港区不動産説明会 — 台中",
           "image": "/images/architecture/sk-building-02.jpg",
-          "dates": ["» 忠訓台中分部", "｜6/26（金）14:00〜"],
+          "dates": [
+            "» 忠訓台中分部",
+            "｜8/22（土）"
+          ],
           "ctaAria": "台中会場に申込"
-        },
-        {
-          "label": "運河沿い",
-          "title": "運河水岸資産セミナー — 台南｜高雄",
-          "image": "/images/index/wall/共用空間.png",
-          "dates": ["» 台南 TCCC ｜6/27（土）14:00", "» 高雄 TCCC ｜6/28（日）14:00"],
-          "ctaAria": "台南・高雄会場に申込"
         }
       ]
     },
@@ -2286,14 +2831,6 @@
         {
           "city": "【台中会場】",
           "address": "📍 忠訓グループ（台中）\n台中市台湾大道二段573号11階E室"
-        },
-        {
-          "city": "【台南会場】",
-          "address": "📍 TCCC 台南擎天館\n台南市東区中華東路二段77号9階之3"
-        },
-        {
-          "city": "【高雄会場】",
-          "address": "📍 TCCC 高雄信義館\n高雄市苓雅区中正二路175号13階之3"
         }
       ]
     },
@@ -2303,8 +2840,8 @@
       "note": "以下をご記入ください。1営業日以内にご連絡いたします。",
       "name": "お名前",
       "salutation": "敬称",
-      "session": "参加希望セミナー",
-      "sessionHint": "＊地域により内容が異なります",
+      "session": "東京港区不動産説明会",
+      "sessionHint": "＊ご希望の日付・会場をお選びください",
       "region": "お住まいの地域",
       "regionHint": "＊担当者からの連絡に使用します",
       "guests": "参加人数",
@@ -2334,16 +2871,35 @@
       "mailTime": "連絡時間",
       "mailEmail": "Email",
       "mailNote": "備考",
-      "mailFooter": "— EL FARO+ 白金高輪 公式サイトより",
+      "mailFooter": "— OK PRIME 白金高輪 公式サイトより",
       "sessionOptions": [
-        { "value": "taipei", "label": "【東京港区不動産説明会】— 台北" },
-        { "value": "taichung", "label": "【品川生活圏投資セミナー】— 台中" },
-        { "value": "south", "label": "【運河水岸セミナー】— 台南｜高雄" },
-        { "value": "viewing", "label": "【モデルルーム見学・個別相談】" }
+        { "value": "2026-08-21-taipei", "label": "8/21（金）— 台北会場" },
+        { "value": "2026-08-22-taichung", "label": "8/22（土）— 台中会場" },
+        { "value": "2026-08-26-taipei", "label": "8/26（水）— 台北会場" },
+        { "value": "2026-08-27-taipei", "label": "8/27（木）— 台北会場" },
+        { "value": "2026-08-28-taipei", "label": "8/28（金）— 台北会場" }
       ],
-      "regionOptions": ["台北", "新北", "桃園", "台中", "台南", "高雄", "その他"],
-      "salutationOptions": ["様", "女士", "小姐", "その他"],
-      "timeOptions": ["午前 10:00–12:00", "午後 14:00–17:00", "夜間 18:00–20:00", "いつでも可"]
+      "regionOptions": [
+        "台北",
+        "新北",
+        "桃園",
+        "台中",
+        "台南",
+        "高雄",
+        "その他"
+      ],
+      "salutationOptions": [
+        "様",
+        "女士",
+        "小姐",
+        "その他"
+      ],
+      "timeOptions": [
+        "午前 10:00–12:00",
+        "午後 14:00–17:00",
+        "夜間 18:00–20:00",
+        "いつでも可"
+      ]
     }
   }
 }
