@@ -304,7 +304,8 @@ export default function LocationDesignSections() {
 
       {/* Section 3 — KEIO University */}
       <section
-        className="overflow-hidden border-b-2 min-h-[640px] lg:h-screen"
+        id="keio"
+        className="overflow-hidden border-b-2 min-h-[640px] lg:h-screen scroll-mt-24"
         style={{ backgroundColor: NAVY, borderColor: GOLD }}
       >
         <div className="grid h-full grid-cols-1 lg:grid-cols-2">

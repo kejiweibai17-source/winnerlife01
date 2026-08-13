@@ -2,7 +2,10 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { getLocalizedPath } from "@/lib/locale-path";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -28,6 +31,8 @@ const PRODUCT_IMAGES = [
 
 export default function CollectionShowcase() {
   const t = useTranslations("showcase");
+  const pathname = usePathname();
+  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
   const containerRef = useRef(null);
   const isMobile = useIsMobile();
 
@@ -41,6 +46,7 @@ export default function CollectionShowcase() {
       image: CASE_IMAGES[0],
       blockTitle: t("cases.0.blockTitle"),
       blockDesc: t("cases.0.blockDesc"),
+      href: `${getLocalizedPath("/location", locale)}#keio`,
       customProducts: PRODUCT_IMAGES.map((image, i) => ({
         id: `prod_0${i + 1}`,
         title: t(`cases.0.products.${i}.title`),
@@ -61,6 +67,7 @@ export default function CollectionShowcase() {
       blockDesc: t("cases.1.blockDesc"),
       featuredTag: t("cases.1.featuredTag"),
       btnLabel: t("cases.1.btnLabel"),
+      href: `${getLocalizedPath("/contact", locale)}#contact-form`,
       bigImage: CASE_BIG_IMAGE,
     },
   ];
@@ -177,9 +184,12 @@ export default function CollectionShowcase() {
                 <p className="text-[15px] tracking-widest w-[65%] mx-auto mb-8 opacity-90">
                   {item.description}
                 </p>
-                <div className="bg-[#fd4e27] text-white border border-white text-[10px] font-bold tracking-[0.2em] uppercase px-12 py-4 hover:bg-white hover:text-black transition-colors duration-300">
+                <Link
+                  href={item.href}
+                  className="bg-[#fd4e27] text-white border border-white text-[10px] font-bold tracking-[0.2em] uppercase px-12 py-4 hover:bg-white hover:text-black transition-colors duration-300"
+                >
                   {item.btnLabel ?? t("btnReadMore")}
-                </div>
+                </Link>
               </div>
             </div>
           </div>

@@ -13,10 +13,10 @@ import { usePathname } from "next/navigation";
 import { homeSitelinks } from "@/lib/site";
 import { getLocalizedPath } from "@/lib/locale-path";
 
-const CARD_IMAGES = [
-  "/images/index/grid-02.png",
-  "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png",
-  "/images/index/運河.png",
+const HOME_CARDS = [
+  { image: "/images/index/grid-02.png", href: "/location" },
+  { image: "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png", href: "/transportation" },
+  { image: "/images/index/運河.png", href: "/concept" },
 ];
 
 export default function HomePage() {
@@ -27,10 +27,11 @@ export default function HomePage() {
   const siteNavLinks = homeSitelinks[locale];
   const contactHref = `${getLocalizedPath("/contact", locale)}#contact-form`;
 
-  const cards = CARD_IMAGES.map((image, i) => ({
+  const cards = HOME_CARDS.map((card, i) => ({
     id: i + 1,
     title: t(`cards.${i}.title`),
-    image,
+    image: card.image,
+    href: getLocalizedPath(card.href, locale),
   }));
 
   return (
@@ -156,7 +157,7 @@ export default function HomePage() {
             {cards.map((card) => (
               <Link
                 key={card.id}
-                href="#"
+                href={card.href}
                 className="group relative w-full aspect-[4/5] overflow-hidden bg-gray-200"
               >
                 <Image
@@ -188,7 +189,7 @@ export default function HomePage() {
       <ShowCase />
 
       <Link
-        href="#"
+        href={getLocalizedPath("/transportation", locale)}
         className="block relative w-full overflow-hidden group cursor-pointer"
       >
         <div className="transition-transform duration-700 ease-out">
