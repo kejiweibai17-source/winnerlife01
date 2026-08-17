@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Copy from "../Copy";
 import { SEMINAR_REGISTRATION } from "./data";
 
@@ -129,11 +129,16 @@ export default function SeminarRegistrationSection() {
     phone: "",
     email: "",
     guests: form.guestOptions[0],
+    session: "",
     note: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    void fetch("/api/contact", { method: "HEAD" }).catch(() => {});
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -148,6 +153,14 @@ export default function SeminarRegistrationSection() {
       setError("請填寫姓名與電話");
       return;
     }
+    if (!formState.session) {
+      setError("請選擇欲參加的日期與場次");
+      return;
+    }
+
+    const sessionLabel =
+      form.sessionOptions.find((opt) => opt.value === formState.session)
+        ?.label || formState.session;
 
     setSubmitting(true);
     try {
@@ -160,6 +173,7 @@ export default function SeminarRegistrationSection() {
           phone: formState.phone,
           email: formState.email,
           guests: formState.guests,
+          session: sessionLabel,
           note: formState.note,
           locale: "zh",
         }),
@@ -311,6 +325,30 @@ export default function SeminarRegistrationSection() {
                     ))}
                   </select>
                 </label>
+
+                <fieldset className="lp-sr-sessions">
+                  <legend className="lp-sr-sessions-legend">
+                    {form.fields.session}
+                    <span className="lp-sr-required">*</span>
+                  </legend>
+                  <div className="lp-sr-sessions-list" role="radiogroup">
+                    {form.sessionOptions.map((opt) => (
+                      <label key={opt.value} className="lp-sr-session-option">
+                        <input
+                          type="radio"
+                          name="session"
+                          value={opt.value}
+                          checked={formState.session === opt.value}
+                          onChange={handleChange}
+                          required
+                        />
+                        <span>{opt.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                  <p className="lp-sr-sessions-hint">{form.fields.sessionHint}</p>
+                </fieldset>
+
                 <label className="lp-sr-field lp-sr-field--full">
                   <RegIcon type="note" className="lp-sr-field-icon" />
                   <input

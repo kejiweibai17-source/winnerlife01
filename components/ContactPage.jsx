@@ -219,6 +219,12 @@ export default function ContactPage() {
     return () => window.clearTimeout(timer);
   }, [lenis]);
 
+  // Local `next dev` compiles /api/contact on first hit (~20s). Warm it on page load
+  // so submit isn't blocked after the user finishes filling the form.
+  useEffect(() => {
+    void fetch("/api/contact", { method: "HEAD" }).catch(() => {});
+  }, []);
+
   const highlights = t.raw("hero.highlights");
   const regions = t.raw("regions.items");
   const reasons = t.raw("reasons.items");
@@ -487,16 +493,16 @@ export default function ContactPage() {
           <h2 className="m-0 text-center font-serif text-xl tracking-[0.12em] text-gray-900 md:text-2xl">
             {t("venues.heading")}
           </h2>
-          <div className="mt-10 space-y-8">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {venues.map((venue) => (
               <div
                 key={venue.city}
-                className="border-l-4 border-[#b29759] pl-5"
+                className="rounded-sm border border-gray-200 bg-[#f7f8fa] p-6 shadow-sm md:p-8"
               >
                 <h3 className="m-0 text-sm font-medium tracking-[0.1em] text-[#0d417b]">
                   {venue.city}
                 </h3>
-                <p className="m-0 mt-2 text-sm leading-relaxed text-gray-600 whitespace-pre-line">
+                <p className="m-0 mt-3 text-sm leading-relaxed text-gray-600 whitespace-pre-line">
                   {venue.address}
                 </p>
               </div>
@@ -524,10 +530,7 @@ export default function ContactPage() {
       >
         <div className="mx-auto max-w-[720px]">
           <div className="mb-10 text-center">
-            <p className="m-0 text-[10px] tracking-[0.35em] text-gray-400">
-              {t("form.label")}
-            </p>
-            <h2 className="m-0 mt-3 font-serif text-2xl tracking-[0.1em] text-gray-900 md:text-3xl">
+            <h2 className="m-0 font-serif text-2xl tracking-[0.1em] text-gray-900 md:text-3xl">
               {t("form.heading")}
             </h2>
             <p className="m-0 mt-4 text-sm leading-relaxed text-gray-500">

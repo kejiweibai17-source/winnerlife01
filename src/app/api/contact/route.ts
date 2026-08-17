@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -132,6 +131,7 @@ export async function POST(request: Request) {
           `姓名: ${name}`,
           `電話: ${phone}`,
           email ? `Email: ${email}` : "",
+          session ? `報名場次: ${session}` : "",
           `參加人數: ${guests}`,
           note ? `備註: ${note}` : "",
           "",
@@ -175,6 +175,7 @@ export async function POST(request: Request) {
   const text = lines.filter(Boolean).join("\n");
 
   try {
+    const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
     const { data, error } = await resend.emails.send({
       from,

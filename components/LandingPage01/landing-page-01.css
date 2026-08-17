@@ -4172,6 +4172,57 @@
   grid-column: 1 / -1;
 }
 
+.lp-sr-sessions {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--lp-sr-border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.lp-sr-sessions-legend {
+  padding: 0 0.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--lp-sr-ink);
+}
+
+.lp-sr-required {
+  margin-left: 0.2rem;
+  color: #c41e3a;
+}
+
+.lp-sr-sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.lp-sr-session-option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--lp-sr-ink);
+  cursor: pointer;
+}
+
+.lp-sr-session-option input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--lp-sr-gold, #b29759);
+}
+
+.lp-sr-sessions-hint {
+  margin: 0.65rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--lp-sr-muted);
+}
+
 .lp-sr-field-icon {
   position: absolute;
   left: 1rem;

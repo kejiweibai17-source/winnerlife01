@@ -326,15 +326,15 @@ export const SEMINAR_REGISTRATION = {
     {
       icon: "calendar",
       lines: [
-        { text: "7/08(三)　7/15(三)　7/30(四)　7/31(五)", accent: "red" },
-        { text: "場次時間：每週六 · 13:30 - 15:00" },
+        { text: "台北：8/21（五）、8/26（三）、8/27（四）、8/28（五）", accent: "red" },
+        { text: "台中：8/22（六）" },
       ],
     },
     {
       icon: "mapPin",
       lines: [
-        { text: "台北市松山區南京東路四段1號4樓", accent: "red" },
-        { text: "（台北小巨蛋站）" },
+        { text: "台北｜忠訓地產會議廳　南京東路四段1號4樓", accent: "red" },
+        { text: "台中｜忠訓集團（中港經貿大樓）台灣大道二段573號11樓E室" },
       ],
     },
     {
@@ -363,8 +363,17 @@ export const SEMINAR_REGISTRATION = {
       phone: "電話",
       email: "電子郵件",
       guests: "參加人數",
+      session: "東京港區置產說明會",
+      sessionHint: "＊請選擇欲參加的日期與場次",
       note: "備註（選填）",
     },
+    sessionOptions: [
+      { value: "2026-08-21-taipei", label: "8/21（五）— 台北場" },
+      { value: "2026-08-22-taichung", label: "8/22（六）— 台中場" },
+      { value: "2026-08-26-taipei", label: "8/26（三）— 台北場" },
+      { value: "2026-08-27-taipei", label: "8/27（四）— 台北場" },
+      { value: "2026-08-28-taipei", label: "8/28（五）— 台北場" },
+    ],
     guestOptions: ["1 人", "2 人", "3 人", "4 人以上"],
     submit: "立即預約",
     disclaimer: "※ 填寫完成後，專員將盡快與您聯繫確認。",
