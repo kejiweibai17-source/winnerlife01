@@ -250,6 +250,14 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    if (!submitted) return;
+    const timer = window.setTimeout(() => {
+      scrollToElementId(CONTACT_FORM_ID, lenis, { duration: 0.7, offset: -88 });
+    }, 80);
+    return () => window.clearTimeout(timer);
+  }, [submitted, lenis]);
+
   function handleChange(e) {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -539,7 +547,10 @@ export default function ContactPage() {
           </div>
 
           {submitted ? (
-            <div className="rounded-sm border border-[#0d417b]/20 bg-white p-10 text-center shadow-sm">
+            <div
+              role="status"
+              className="rounded-sm border border-[#0d417b]/20 bg-white p-10 text-center shadow-sm"
+            >
               <p className="m-0 font-serif text-xl tracking-[0.08em] text-[#0d417b]">
                 {t("form.successTitle")}
               </p>

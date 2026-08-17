@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLenis } from "lenis/react";
 import Copy from "../Copy";
 import { SEMINAR_REGISTRATION } from "./data";
+import { scrollToElementId } from "@/lib/scroll-to";
 
 function RegIcon({ type, className = "" }) {
   const icons = {
@@ -124,6 +126,7 @@ function SectionDivider({ title }) {
 
 export default function SeminarRegistrationSection() {
   const { hero, details, benefits, form } = SEMINAR_REGISTRATION;
+  const lenis = useLenis();
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -139,6 +142,17 @@ export default function SeminarRegistrationSection() {
   useEffect(() => {
     void fetch("/api/contact", { method: "HEAD" }).catch(() => {});
   }, []);
+
+  useEffect(() => {
+    if (!submitted) return;
+    const timer = window.setTimeout(() => {
+      scrollToElementId("SeminarRegistrationForm", lenis, {
+        duration: 0.7,
+        offset: -88,
+      });
+    }, 80);
+    return () => window.clearTimeout(timer);
+  }, [submitted, lenis]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;

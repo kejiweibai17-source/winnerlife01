@@ -13,6 +13,9 @@ import { usePathname } from "next/navigation";
 import { homeSitelinks } from "@/lib/site";
 import { getLocalizedPath } from "@/lib/locale-path";
 
+const LINE_URL =
+  "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true";
+
 const HOME_CARDS = [
   { image: "/images/index/grid-02.png", href: "/location" },
   { image: "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png", href: "/transportation" },
@@ -83,8 +86,10 @@ export default function HomePage() {
                 </p>
               </Link>
 
-              <Link
-                href={contactHref}
+              <a
+                href={LINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-[#b29759] text-white p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 hover:bg-[#c7ab6b] transition-colors duration-300"
               >
                 <div className="flex items-center gap-4 w-full sm:w-1/3 shrink-0">
@@ -118,7 +123,7 @@ export default function HomePage() {
                 <p className="text-xs sm:text-sm tracking-widest leading-relaxed opacity-80">
                   {t("info.reserve.desc")}
                 </p>
-              </Link>
+              </a>
 
               <div className="bg-white border border-gray-200 p-8 flex flex-col items-center justify-center text-center gap-4 shadow-sm">
                 <p className="text-xs tracking-widest text-gray-600">
