@@ -32,7 +32,7 @@ export const summaryOverviewJp = {
 
 /** Official 物件概要 — Traditional Chinese. */
 export const summaryOverviewZh = {
-  name: "EL FARO＋白金高輪 新建工程",
+  name: "OK PRIME＋白金高輪 新建工程",
   lotNumber: "東京都港區三田5丁目1番52",
   address: "東京都港區三田5丁目5番10號",
   siteArea: "148.83 ㎡（建築確認申請書記載面積）",
