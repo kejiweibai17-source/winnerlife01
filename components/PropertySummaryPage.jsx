@@ -13,6 +13,7 @@ const TH_BG = "#555555";
 const HERO_IMAGE = "/images/summary/物件概要01.png";
 const INTRO_IMAGE_02 = "/images/company-logo.svg";
 const INTRO_IMAGE_03 = "/images/summary/物件概要03.png";
+const FLOOR_PLAN_IMAGE = "/images/平面.png";
 
 function WaveDivider() {
   return (
@@ -117,11 +118,41 @@ function Td({ children, className = "", colSpan, rowSpan }) {
   );
 }
 
-function LabelCell({ children }) {
+function LabelCell({ children, colSpan, rowSpan, className = "" }) {
   return (
     <td
-      className="border border-gray-300 px-3 py-2.5 text-xs md:text-sm text-white text-center align-middle whitespace-nowrap w-[120px] md:w-[140px]"
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+      className={`border border-gray-300 px-3 py-2.5 text-xs md:text-sm text-white text-center align-middle w-[120px] md:w-[140px] ${className}`}
       style={{ backgroundColor: TH_BG }}
+    >
+      {children}
+    </td>
+  );
+}
+
+const OV_LABEL_BG = "#eeeeee";
+const OV_BORDER = "#cccccc";
+
+function OvLabel({ children, colSpan, rowSpan, className = "" }) {
+  return (
+    <td
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+      className={`border px-2 py-2 text-[11px] md:text-xs text-center align-middle text-gray-800 ${className}`}
+      style={{ backgroundColor: OV_LABEL_BG, borderColor: OV_BORDER }}
+    >
+      {children}
+    </td>
+  );
+}
+
+function OvValue({ children, colSpan, className = "" }) {
+  return (
+    <td
+      colSpan={colSpan}
+      className={`border px-2.5 py-2 text-[11px] md:text-[13px] text-gray-800 leading-relaxed align-middle ${className}`}
+      style={{ borderColor: OV_BORDER }}
     >
       {children}
     </td>
@@ -133,104 +164,113 @@ function OverviewTable({ t, overview }) {
   const o = overview;
 
   return (
-    <div className="bg-white shadow-sm border border-gray-200 overflow-x-auto">
-      <table className="w-full min-w-[720px] border-collapse">
-        <tbody>
-          <tr>
-            <LabelCell>{l("name")}</LabelCell>
-            <Td colSpan={5}>{o.name}</Td>
-          </tr>
-          <tr>
-            <LabelCell rowSpan={2}>{l("location")}</LabelCell>
-            <Th>{l("lotNumber")}</Th>
-            <Td colSpan={4}>{o.lotNumber}</Td>
-          </tr>
-          <tr>
-            <Th>{l("address")}</Th>
-            <Td colSpan={4}>{o.address}</Td>
-          </tr>
-          <tr>
-            <LabelCell rowSpan={7}>{l("siteOverview")}</LabelCell>
-            <Th>{l("siteArea")}</Th>
-            <Td colSpan={4}>{o.siteArea}</Td>
-          </tr>
-          <tr>
-            <Th>{l("zoning")}</Th>
-            <Td colSpan={4}>{o.zoning}</Td>
-          </tr>
-          <tr>
-            <Th>{l("fireZone")}</Th>
-            <Td colSpan={4}>{o.fireZone}</Td>
-          </tr>
-          <tr>
-            <Th>{l("coverage")}</Th>
-            <Td colSpan={4}>{o.coverage}</Td>
-          </tr>
-          <tr>
-            <Th>{l("far")}</Th>
-            <Td colSpan={4}>{o.far}</Td>
-          </tr>
-          <tr>
-            <Th>{l("heightDistrict")}</Th>
-            <Td colSpan={4}>{o.heightDistrict}</Td>
-          </tr>
-          <tr>
-            <Th>{l("other")}</Th>
-            <Td colSpan={4}>{o.other}</Td>
-          </tr>
-          <tr>
-            <LabelCell rowSpan={7}>{l("buildingOverview")}</LabelCell>
-            <Th>{l("mainUse")}</Th>
-            <Td>{o.mainUse}</Td>
-            <Th>{l("totalFloorArea")}</Th>
-            <Td colSpan={2}>{o.totalFloorArea}</Td>
-          </tr>
-          <tr>
-            <Th>{l("constructionType")}</Th>
-            <Td>{o.constructionType}</Td>
-            <Th>{l("buildingArea")}</Th>
-            <Td>{o.buildingArea}</Td>
-            <Th>{l("buildingCoverage")}</Th>
-            <Td>{o.buildingCoverage}</Td>
-          </tr>
-          <tr>
-            <Th colSpan={2}>{l("constructionPeriod")}</Th>
-            <Td colSpan={4}>{o.constructionPeriod}</Td>
-          </tr>
-          <tr>
-            <Th>{l("structure")}</Th>
-            <Td>{o.structure}</Td>
-            <Th>{l("farFloorArea")}</Th>
-            <Td>{o.farFloorArea}</Td>
-            <Th>{l("floorAreaRatio")}</Th>
-            <Td>{o.floorAreaRatio}</Td>
-          </tr>
-          <tr>
-            <Th>{l("fireResistance")}</Th>
-            <Td>{o.fireResistance}</Td>
-            <Th>{l("elevator")}</Th>
-            <Td>{o.elevator}</Td>
-            <Th>{l("parking")}</Th>
-            <Td>{o.parking}</Td>
-          </tr>
-          <tr>
-            <Th>{l("permitNumber")}</Th>
-            <Td>{o.permitNumber}</Td>
-            <Th>{l("bicycleParking")}</Th>
-            <Td>{o.bicycleParking}</Td>
-            <Th>{l("motorcycleParking")}</Th>
-            <Td>{o.motorcycleParking}</Td>
-          </tr>
-          <tr>
-            <Th colSpan={2}>{l("privateArea")}</Th>
-            <Td colSpan={4}>{o.privateArea}</Td>
-          </tr>
-          <tr>
-            <LabelCell>{l("developer")}</LabelCell>
-            <Td colSpan={5}>{o.developer}</Td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="overflow-hidden border shadow-sm" style={{ borderColor: OV_BORDER }}>
+      <div
+        className="flex flex-wrap items-baseline gap-3 px-4 py-3 text-white"
+        style={{ backgroundColor: NAVY }}
+      >
+        <span className="text-base md:text-lg tracking-[0.12em]">{t("overview.title")}</span>
+        <span className="font-serif text-sm md:text-base tracking-[0.08em] text-white/90">
+          {t("overview.subtitle")}
+        </span>
+      </div>
+      <div className="overflow-x-auto bg-white">
+        <table className="w-full min-w-[880px] border-collapse">
+          <tbody>
+            <tr>
+              <OvLabel>{l("name")}</OvLabel>
+              <OvValue colSpan={6}>{o.name}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel rowSpan={2}>{l("location")}</OvLabel>
+              <OvLabel>{l("lotNumber")}</OvLabel>
+              <OvValue colSpan={5}>{o.lotNumber}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("address")}</OvLabel>
+              <OvValue colSpan={5}>{o.address}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel rowSpan={5}>{l("siteOverview")}</OvLabel>
+              <OvLabel>{l("siteArea")}</OvLabel>
+              <OvValue>{o.siteArea}</OvValue>
+              <OvLabel>{l("zoning")}</OvLabel>
+              <OvValue>{o.zoning}</OvValue>
+              <OvLabel>{l("fireZone")}</OvLabel>
+              <OvValue>{o.fireZone}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("coverage")}</OvLabel>
+              <OvValue colSpan={5}>{o.coverage}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("far")}</OvLabel>
+              <OvValue colSpan={5}>{o.far}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("heightDistrict")}</OvLabel>
+              <OvValue colSpan={5}>{o.heightDistrict}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("other")}</OvLabel>
+              <OvValue colSpan={5}>{o.other}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel rowSpan={7}>{l("buildingOverview")}</OvLabel>
+              <OvLabel>{l("mainUse")}</OvLabel>
+              <OvValue>{o.mainUse}</OvValue>
+              <OvLabel>{l("totalFloorArea")}</OvLabel>
+              <OvValue colSpan={3}>{o.totalFloorArea}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("constructionType")}</OvLabel>
+              <OvValue>{o.constructionType}</OvValue>
+              <OvLabel>{l("buildingArea")}</OvLabel>
+              <OvValue>{o.buildingArea}</OvValue>
+              <OvLabel>{l("buildingCoverage")}</OvLabel>
+              <OvValue>{o.buildingCoverage}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("constructionPeriod")}</OvLabel>
+              <OvValue colSpan={5}>{o.constructionPeriod}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("structure")}</OvLabel>
+              <OvValue>{o.structure}</OvValue>
+              <OvLabel>{l("farFloorArea")}</OvLabel>
+              <OvValue>{o.farFloorArea}</OvValue>
+              <OvLabel>{l("floorAreaRatio")}</OvLabel>
+              <OvValue>{o.floorAreaRatio}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("fireResistance")}</OvLabel>
+              <OvValue>{o.fireResistance}</OvValue>
+              <OvLabel>{l("elevator")}</OvLabel>
+              <OvValue>{o.elevator}</OvValue>
+              <OvLabel>{l("parking")}</OvLabel>
+              <OvValue>{o.parking}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("permitNumber")}</OvLabel>
+              <OvValue>{o.permitNumber}</OvValue>
+              <OvLabel>{l("bicycleParking")}</OvLabel>
+              <OvValue>{o.bicycleParking}</OvValue>
+              <OvLabel>{l("motorcycleParking")}</OvLabel>
+              <OvValue>{o.motorcycleParking}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("privateArea")}</OvLabel>
+              <OvValue colSpan={5}>{o.privateArea}</OvValue>
+            </tr>
+            <tr>
+              <OvLabel>{l("developer")}</OvLabel>
+              <OvValue colSpan={6} className="whitespace-pre-line">
+                {o.developer}
+              </OvValue>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -240,59 +280,72 @@ function FloorPlanSection({ t, floorPlans }) {
 
   return (
     <section className="px-6 md:px-10 lg:px-16 py-16 md:py-20 bg-white">
-      <div className="mx-auto max-w-[1100px]">
+      <div className="mx-auto max-w-[1200px]">
         <SectionHeading
           title={t("floorPlan.title")}
           subtitle={t("floorPlan.subtitle")}
         />
 
-        <div className="space-y-14 md:space-y-20">
-          {floorPlans.map((plan, planIndex) => (
-            <div key={plan.floor}>
-              <CopyBlock delay={planIndex * 0.05}>
-                <h3 className="m-0 mb-6 font-serif text-base md:text-lg tracking-[0.08em] text-gray-800 border-b border-gray-300 pb-3">
-                  • {plan.floor}
-                </h3>
-              </CopyBlock>
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.9fr)] gap-8 lg:gap-10 items-start">
+          <div className="space-y-12 md:space-y-14">
+            {floorPlans.map((plan, planIndex) => (
+              <div key={plan.floor}>
+                <CopyBlock delay={planIndex * 0.05}>
+                  <h3 className="m-0 mb-6 font-serif text-base md:text-lg tracking-[0.08em] text-gray-800 border-b border-gray-300 pb-3">
+                    • {plan.floor}
+                  </h3>
+                </CopyBlock>
 
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[560px] border-collapse">
-                  <thead>
-                    <tr>
-                      <Th className="w-16">Type</Th>
-                      <Th>{l("layout")}</Th>
-                      <Th>{l("roomNo")}</Th>
-                      <Th>{l("exclusiveArea")}</Th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {plan.units.map((unit) => (
-                      <tr key={unit.type}>
-                        <Td className="text-center font-medium">
-                          <span
-                            className="inline-flex h-8 w-8 items-center justify-center text-white text-xs"
-                            style={{ backgroundColor: TH_BG }}
-                          >
-                            {unit.type}
-                          </span>
-                        </Td>
-                        <Td className="text-center font-medium">
-                          {unit.layout}
-                        </Td>
-                        <Td className="text-center">{unit.rooms}</Td>
-                        <Td className="text-center">
-                          {unit.area}
-                          <span className="text-gray-500">
-                            （{unit.tsubo}）
-                          </span>
-                        </Td>
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[480px] border-collapse">
+                    <thead>
+                      <tr>
+                        <Th className="w-16">{l("type")}</Th>
+                        <Th>{l("layout")}</Th>
+                        <Th>{l("roomNo")}</Th>
+                        <Th>{l("exclusiveArea")}</Th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {plan.units.map((unit) => (
+                        <tr key={unit.type}>
+                          <Td className="text-center font-medium">
+                            <span
+                              className="inline-flex h-8 w-8 items-center justify-center text-white text-xs"
+                              style={{ backgroundColor: TH_BG }}
+                            >
+                              {unit.type}
+                            </span>
+                          </Td>
+                          <Td className="text-center font-medium">
+                            {unit.layout}
+                          </Td>
+                          <Td className="text-center">{unit.rooms}</Td>
+                          <Td className="text-center">
+                            {unit.area}
+                            <span className="text-gray-500">
+                              （{unit.tsubo}）
+                            </span>
+                          </Td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="lg:sticky lg:top-28">
+            <Image
+              src={FLOOR_PLAN_IMAGE}
+              alt={t("floorPlan.imageAlt")}
+              width={628}
+              height={886}
+              className="w-full h-auto"
+              sizes="(min-width: 1024px) 42vw, 100vw"
+            />
+          </div>
         </div>
 
         <CopyBlock delay={0.2} className="mt-10">
@@ -305,6 +358,40 @@ function FloorPlanSection({ t, floorPlans }) {
   );
 }
 
+function SpecHeading({ title, subtitle, aside }) {
+  return (
+    <div className="mb-6 md:mb-8 flex flex-wrap items-end justify-between gap-3">
+      <div className="flex items-center gap-3">
+        <span className="block h-7 w-[3px] shrink-0 bg-[#8b7355]" aria-hidden />
+        <div className="flex flex-wrap items-baseline gap-3">
+          <span className="font-serif text-lg md:text-xl tracking-[0.08em] text-gray-900">
+            {title}
+          </span>
+          {subtitle && (
+            <span className="font-serif text-sm tracking-[0.12em] text-gray-600">
+              {subtitle}
+            </span>
+          )}
+        </div>
+      </div>
+      {aside}
+    </div>
+  );
+}
+
+function SpecCell({ cell }) {
+  if (!cell) return null;
+  return (
+    <td
+      rowSpan={cell.rowSpan}
+      className="border border-white px-2 py-2 text-[10px] md:text-xs text-center align-middle text-gray-800 leading-relaxed"
+      style={{ backgroundColor: "#f3efe9" }}
+    >
+      {cell.text}
+    </td>
+  );
+}
+
 function InteriorFinishSection({ t, interiorRows }) {
   const l = (key) => t(`labels.${key}`);
 
@@ -314,31 +401,28 @@ function InteriorFinishSection({ t, interiorRows }) {
       style={{ backgroundColor: BEIGE }}
     >
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
+        <SpecHeading
           title={t("interior.title")}
           subtitle={t("interior.subtitle")}
         />
 
-        <div className="overflow-x-auto bg-white border border-gray-200 shadow-sm">
-          <table className="w-full min-w-[900px] border-collapse">
+        <div className="overflow-x-auto border border-gray-300">
+          <table className="w-full min-w-[960px] border-collapse">
             <thead>
               <tr>
                 <Th rowSpan={2}>
                   {l("part")}
                   <br />
-                  <span className="text-[10px] font-light">
-                    {l("roomName")}
-                  </span>
+                  <span className="text-[10px] font-light">{l("roomName")}</span>
                 </Th>
                 <Th colSpan={2}>{l("floor")}</Th>
-                <Th>{l("baseboard")}</Th>
+                <Th rowSpan={2}>{l("baseboard")}</Th>
                 <Th colSpan={2}>{l("wall")}</Th>
                 <Th colSpan={3}>{l("ceiling")}</Th>
               </tr>
               <tr>
                 <Th>{l("finishMaterial")}</Th>
                 <Th>{l("substrate")}</Th>
-                <Th>—</Th>
                 <Th>{l("finishMaterial")}</Th>
                 <Th>{l("substrate")}</Th>
                 <Th>{l("finishMaterial")}</Th>
@@ -347,21 +431,34 @@ function InteriorFinishSection({ t, interiorRows }) {
               </tr>
             </thead>
             <tbody>
-              {interiorRows.map((row) => (
-                <tr key={row.room}>
-                  <LabelCell>{row.room}</LabelCell>
-                  <Td className="text-center">{row.floor}</Td>
-                  <Td className="text-center text-gray-500">{row.floorSub}</Td>
-                  <Td className="text-center">{row.baseboard}</Td>
-                  <Td className="text-center">{row.wall}</Td>
-                  <Td className="text-center text-gray-500">{row.wallSub}</Td>
-                  <Td className="text-center">{row.ceiling}</Td>
-                  <Td className="text-center text-gray-500">
-                    {row.ceilingSub}
-                  </Td>
-                  <Td className="text-center">{row.height}</Td>
-                </tr>
-              ))}
+              {interiorRows.map((row, index) => {
+                if (row.kind === "section") {
+                  return (
+                    <tr key={`section-${index}`}>
+                      <td
+                        colSpan={9}
+                        className="border border-white px-3 py-2 text-center text-xs md:text-sm tracking-[0.16em] text-white"
+                        style={{ backgroundColor: TH_BG }}
+                      >
+                        {row.label}
+                      </td>
+                    </tr>
+                  );
+                }
+                return (
+                  <tr key={row.room}>
+                    <LabelCell>{row.room}</LabelCell>
+                    <SpecCell cell={row.floor} />
+                    <SpecCell cell={row.floorSub} />
+                    <SpecCell cell={row.baseboard} />
+                    <SpecCell cell={row.wall} />
+                    <SpecCell cell={row.wallSub} />
+                    <SpecCell cell={row.ceiling} />
+                    <SpecCell cell={row.ceilingSub} />
+                    <SpecCell cell={row.height} />
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -371,33 +468,37 @@ function InteriorFinishSection({ t, interiorRows }) {
 }
 
 function EquipmentSection({ t, equipmentRows }) {
-  const l = (key) => t(`labels.${key}`);
-
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-16 md:py-20 bg-white">
+    <section
+      className="px-6 md:px-10 lg:px-16 py-16 md:py-20"
+      style={{ backgroundColor: BEIGE }}
+    >
       <div className="mx-auto max-w-[1100px]">
-        <SectionHeading title={t("equipment.title")} />
+        <div
+          className="mb-6 px-4 py-2.5 text-sm tracking-[0.2em] text-gray-800"
+          style={{ backgroundColor: "#d6cdc6" }}
+        >
+          {t("equipment.title")}
+        </div>
 
-        <div className="divide-y divide-gray-200 border border-gray-200 bg-white shadow-sm">
-          {equipmentRows.map((row, index) => (
+        <div className="flex flex-col gap-2">
+          {equipmentRows.map((row) => (
             <div
               key={row.part}
-              className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-0"
+              className="grid grid-cols-1 md:grid-cols-[168px_1fr] gap-2 md:gap-3"
             >
               <div
-                className="flex items-center justify-center px-4 py-4 md:py-5 text-xs md:text-sm text-white text-center"
+                className="flex items-center justify-center rounded-md px-3 py-3.5 text-xs md:text-sm text-white text-center tracking-[0.04em]"
                 style={{ backgroundColor: TH_BG }}
               >
                 {row.part}
               </div>
-              <CopyBlock
-                delay={index * 0.03}
-                className="px-4 py-4 md:py-5 md:px-6"
-              >
-                <p className="m-0 text-xs md:text-[13px] leading-[2] text-gray-700">
-                  {row.spec}
+              <div className="flex items-center bg-white px-4 py-3 md:px-5">
+                <p className="m-0 text-xs md:text-[13px] leading-[2] text-gray-800">
+                  {row.items.map((item) => `● ${item}`).join(" ")}
+                  {row.note ? ` ${row.note}` : ""}
                 </p>
-              </CopyBlock>
+              </div>
             </div>
           ))}
         </div>
@@ -406,7 +507,7 @@ function EquipmentSection({ t, equipmentRows }) {
   );
 }
 
-function ExteriorFinishSection({ t, exteriorRows }) {
+function ExteriorFinishSection({ t, exteriorColumns }) {
   const l = (key) => t(`labels.${key}`);
 
   return (
@@ -414,54 +515,71 @@ function ExteriorFinishSection({ t, exteriorRows }) {
       className="px-6 md:px-10 lg:px-16 py-16 md:py-20 pb-24 md:pb-32"
       style={{ backgroundColor: BEIGE }}
     >
-      <div className="mx-auto max-w-[1100px]">
-        <SectionHeading
+      <div className="mx-auto max-w-[1200px]">
+        <SpecHeading
           title={t("exterior.title")}
           subtitle={t("exterior.subtitle")}
+          aside={
+            <p className="m-0 max-w-[420px] text-right text-[10px] md:text-[11px] leading-relaxed text-gray-600">
+              {t("overview.disclaimer")}
+            </p>
+          }
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {exteriorRows.map((group, gi) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          {exteriorColumns.map((column, ci) => (
             <div
-              key={group.part}
-              className="bg-white border border-gray-200 shadow-sm overflow-hidden"
+              key={ci}
+              className="bg-white"
+              style={{ border: `1px solid ${OV_BORDER}` }}
             >
-              <table className="w-full border-collapse">
+              <table className="w-full border-collapse bg-white">
                 <thead>
                   <tr>
-                    <Th>{l("part")}</Th>
-                    <Th>{l("specification")}</Th>
+                    <Th className="w-[88px] md:w-[104px]">{l("part")}</Th>
+                    <Th colSpan={2}>{l("specification")}</Th>
                   </tr>
                 </thead>
                 <tbody>
-                  {group.items.map((item, ii) => (
-                    <tr key={ii}>
-                      {ii === 0 ? (
-                        <LabelCell rowSpan={group.items.length}>
-                          {group.part}
-                        </LabelCell>
-                      ) : null}
-                      <Td>
-                        {item.label && (
-                          <span className="text-gray-500 mr-1">
-                            {item.label}：
-                          </span>
-                        )}
-                        {item.value}
-                      </Td>
-                    </tr>
-                  ))}
+                  {column.groups.map((group) =>
+                    group.rows.map((item, ii) => (
+                      <tr key={`${group.part}-${ii}`}>
+                        {ii === 0 ? (
+                          <LabelCell rowSpan={group.rows.length}>
+                            <span className="block">{group.part}</span>
+                            {group.partNote ? (
+                              <span className="mt-1 block text-[10px] font-light leading-snug whitespace-normal">
+                                {group.partNote}
+                              </span>
+                            ) : null}
+                          </LabelCell>
+                        ) : null}
+                        {item.sub ? (
+                          <td
+                            className="px-2 py-2 text-[11px] md:text-xs text-center align-middle text-gray-800 whitespace-nowrap w-[92px] md:w-[110px]"
+                            style={{
+                              backgroundColor: "#eeeeee",
+                              border: `1px solid ${OV_BORDER}`,
+                            }}
+                          >
+                            {item.sub}
+                          </td>
+                        ) : null}
+                        <td
+                          colSpan={item.sub ? 1 : 2}
+                          className="bg-white px-3 py-2.5 text-[11px] md:text-xs text-gray-800 leading-relaxed align-top whitespace-pre-line"
+                          style={{ border: `1px solid ${OV_BORDER}` }}
+                        >
+                          {item.spec}
+                        </td>
+                      </tr>
+                    ))
+                  )}
                 </tbody>
               </table>
             </div>
           ))}
         </div>
-
-        <CopyBlock delay={0.15} className="mt-10">
-          <p className="m-0 text-[11px] md:text-xs text-gray-500 leading-relaxed">
-            {t("overview.disclaimer")}
-          </p>
-        </CopyBlock>
       </div>
     </section>
   );
@@ -587,10 +705,6 @@ export default function PropertySummaryPage() {
 
           <div className="relative z-10 px-6 md:px-10 lg:px-16 pt-12 md:pt-16 pb-16 md:pb-24">
             <div className="mx-auto max-w-[1100px]">
-              <SectionHeading
-                title={t("overview.title")}
-                subtitle={t("overview.subtitle")}
-              />
               <OverviewTable t={t} overview={data.overview} />
               <CopyBlock delay={0.1} className="mt-6">
                 <p className="m-0 text-[11px] md:text-xs text-white/80 md:text-gray-500 leading-relaxed">
@@ -611,7 +725,7 @@ export default function PropertySummaryPage() {
         <EquipmentSection t={t} equipmentRows={data.equipmentRows} />
 
         {/* Section 7: Exterior finish — still part of the 6 content blocks; equipment+exterior could count as 5+6 */}
-        <ExteriorFinishSection t={t} exteriorRows={data.exteriorRows} />
+        <ExteriorFinishSection t={t} exteriorColumns={data.exteriorColumns} />
       </main>
 
       <button

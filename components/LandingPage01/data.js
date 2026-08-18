@@ -395,6 +395,7 @@ export const LANDING_NAV = {
     { label: "東京核心", href: "#TokyoCore" },
     { label: "理想生活", href: "#StickyCards" },
     { label: "說明會", href: "#Seminar" },
+    { label: "官方網站", href: "/" },
     { label: "聯絡", href: "#Contact" },
   ],
 };

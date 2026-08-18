@@ -53,11 +53,11 @@ export default function Footer() {
   const t = useTranslations("footer");
   const navT = useTranslations("nav");
   const footerNav = navT.raw("items");
-  const storyNavItem = footerNav[8];
+  const storyNavItem = footerNav.find((item) => item.href === "/story");
   const navColumns = [
-    footerNav.slice(0, 4),
-    footerNav.slice(4, 7),
-    footerNav.slice(7, 10),
+    footerNav.slice(0, 3),
+    footerNav.slice(3, 6),
+    footerNav.slice(6),
   ];
   const storyHref = storyNavItem?.href
     ? getLocalizedPath(storyNavItem.href, currentLocale)

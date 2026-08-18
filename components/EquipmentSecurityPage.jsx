@@ -162,20 +162,18 @@ function MonitoringPillars({ heading, subtitle, items }) {
 function ServiceGridCard({ item, index }) {
   return (
     <article className="flex flex-col sm:flex-row gap-0 h-full border border-gray-200 bg-white overflow-hidden">
-      <StaticBlock>
-        <div className="relative h-40 w-full shrink-0 sm:h-auto sm:w-44 md:w-52 bg-[#f7f7f7]">
-          <Image
-            src={item.image}
-            alt={item.imageAlt}
-            fill
-            className="object-cover object-center"
-            sizes="(max-width:640px) 100vw, 208px"
-          />
-        </div>
-      </StaticBlock>
+      <div className="relative h-48 w-full shrink-0 sm:h-[220px] sm:w-44 md:w-52 bg-white">
+        <Image
+          src={item.image}
+          alt={item.imageAlt}
+          fill
+          className="object-contain object-center p-3"
+          sizes="(max-width:640px) 100vw, 208px"
+        />
+      </div>
       <div className="flex flex-1 flex-col justify-center px-5 py-5 md:px-6 md:py-6">
         <CopyBlock delay={index * 0.04}>
-          <h3 className="m-0 text-sm md:text-base font-medium tracking-[0.08em] text-gray-900 pb-3 mb-3 border-b-2 border-[#1a4a8a] w-fit max-w-full">
+          <h3 className="m-0 text-sm md:text-base font-medium tracking-[0.08em] text-gray-900 mb-2">
             {item.title}
           </h3>
           <p className="m-0 text-sm leading-[2] text-gray-600">{item.body}</p>

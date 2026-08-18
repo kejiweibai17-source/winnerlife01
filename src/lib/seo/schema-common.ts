@@ -1,6 +1,7 @@
 import {
   absoluteUrl,
   getBuildingDisplayName,
+  getProjectAlternateNames,
   homeSitelinks,
   siteConfig,
 } from "@/lib/site";
@@ -35,8 +36,23 @@ export function websiteId() {
   return `${absoluteUrl("/")}#website`;
 }
 
-export function listingId(locale: Locale = "zh") {
-  return `${absoluteUrl(homePath(locale))}#listing`;
+/** Canonical listing / residence live on the zh homepage so inner pages do not mint duplicates. */
+export function listingId(_locale: Locale = "zh") {
+  return `${absoluteUrl("/")}#listing`;
+}
+
+export function residenceId() {
+  return `${absoluteUrl("/")}#residence`;
+}
+
+export function buildWebsiteStub() {
+  return {
+    "@type": "WebSite" as const,
+    "@id": websiteId(),
+    name: "OK PRIME",
+    alternateName: getProjectAlternateNames(),
+    url: absoluteUrl("/"),
+  };
 }
 
 export function propertyPlaceId() {
@@ -116,14 +132,15 @@ export function buildOrganization(locale: Locale) {
     currenciesAccepted: "TWD, JPY",
     paymentAccepted: "Cash, Credit Card, Bank Transfer",
     knowsAbout: [
+      "OK PRIME",
+      "OK PRIME 白金高輪",
+      getBuildingDisplayName(),
       "日本不動產",
       "東京住宅",
       "海外置產",
-      getBuildingDisplayName(),
       "品川",
       "港区",
       "白金高輪",
-      "EL FARO+",
     ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
@@ -138,8 +155,8 @@ export function buildOrganization(locale: Locale) {
     sameAs: [...siteConfig.sameAs],
     description:
       locale === "jp"
-        ? "忠訓地產は EL FARO+ 白金高輪の日本不動産マーケティング・見学予約・投資相談を担当する不動産エージェントです。"
-        : "忠訓地產為 EL FARO+ 白金高輪日本建案之官方行銷代理，提供日本置產、賞屋預約與投資諮詢服務。",
+        ? "忠訓地產は OK PRIME+ 白金高輪の日本不動産マーケティング・見学予約・投資相談を担当する不動産エージェントです。"
+        : "忠訓地產為 OK PRIME+ 白金高輪日本建案之官方行銷代理，提供日本置產、賞屋預約與投資諮詢服務。",
   };
 }
 
@@ -166,7 +183,7 @@ export function buildAgencyServices(locale: Locale) {
       ? [
           {
             name: "モデルルーム見学予約",
-            description: "EL FARO+ 白金高輪のモデルルーム見学予約・現地案内。",
+            description: "OK PRIME+ 白金高輪のモデルルーム見学予約・現地案内。",
             url: absoluteUrl("/jp/contact"),
           },
           {
@@ -183,7 +200,7 @@ export function buildAgencyServices(locale: Locale) {
       : [
           {
             name: "樣品屋參觀預約",
-            description: "EL FARO+ 白金高輪樣品屋參觀預約與現地導覽。",
+            description: "OK PRIME+ 白金高輪樣品屋參觀預約與現地導覽。",
             url: absoluteUrl("/contact"),
           },
           {
@@ -219,11 +236,11 @@ export function buildSitelinksItemList(locale: Locale) {
   return {
     "@type": "ItemList",
     "@id": sitelinksId,
-    name: locale === "jp" ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面",
+    name: locale === "jp" ? "OK PRIME+ 白金高輪 主要ページ" : "OK PRIME+ 白金高輪 主要頁面",
     description:
       locale === "jp"
-        ? "公式サイトの主要セクション：コンセプト・立地・交通・物件概要・設備・お問い合わせ"
-        : "官方網站主要章節：建案理念、地段、交通、物件概要、設備與聯絡諮詢",
+        ? "公式サイトの主要セクション：立地・交通・物件概要・設備・お問い合わせ"
+        : "官方網站主要章節：地段、交通、物件概要、設備與聯絡諮詢",
     numberOfItems: navLinks.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: navLinks.map((link, index) => ({
@@ -259,20 +276,38 @@ export function buildSiteNavigationElements(locale: Locale) {
   }));
 }
 
-export function buildPropertyListing(locale: Locale, pageUrl: string) {
+export function buildPropertyListingRef() {
+  return {
+    "@type": "RealEstateListing" as const,
+    "@id": listingId(),
+    name: getBuildingDisplayName(),
+    alternateName: getProjectAlternateNames(),
+    url: absoluteUrl("/"),
+    brand: { "@type": "Brand", name: "OK PRIME" },
+    address: getPropertyPostalAddress(),
+    geo: getPropertyGeo(),
+    hasMap: siteConfig.propertyGeo.mapUrl,
+    contentLocation: { "@id": propertyPlaceId() },
+  };
+}
+
+export function buildPropertyListing(locale: Locale) {
   const ogImage = absoluteUrl(siteConfig.ogImage);
+  const canonicalUrl = absoluteUrl("/");
   return {
     "@type": "RealEstateListing",
-    "@id": `${pageUrl}#listing`,
+    "@id": listingId(),
     name: getBuildingDisplayName(),
+    alternateName: getProjectAlternateNames(),
     description:
       locale === "jp"
         ? "東京港区三田5-5-10の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、ALSOK防犯。"
         : "東京港區三田5-5-10出租公寓。全案14戶。白金高輪站步行約5分、ALSOK 保全。",
-    url: pageUrl,
+    url: canonicalUrl,
     image: [ogImage, absoluteUrl(siteConfig.icons.icon512)],
     inLanguage: localeLang(locale),
     datePosted: "2024-01-01",
+    brand: { "@type": "Brand", name: "OK PRIME" },
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),
     hasMap: siteConfig.propertyGeo.mapUrl,
@@ -288,11 +323,12 @@ export function buildPropertyListing(locale: Locale, pageUrl: string) {
     },
     broker: { "@id": `${absoluteUrl("/")}#realestate-agent` },
     provider: { "@id": orgId() },
-    mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
+    mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
   };
 }
 
-export function buildApartmentComplex(locale: Locale, pageUrl: string) {
+export function buildApartmentComplex(locale: Locale) {
+  const canonicalUrl = absoluteUrl("/");
   const residenceDescription =
     locale === "jp"
       ? "全14戸。港区三田5-5-10、白金高輪駅徒歩約5分。三田・田町・泉岳寺も徒歩圏。ALSOK防犯・スマート設備完備。"
@@ -300,11 +336,11 @@ export function buildApartmentComplex(locale: Locale, pageUrl: string) {
 
   return {
     "@type": ["ApartmentComplex", "Residence", "Accommodation"],
-    "@id": `${pageUrl}#residence`,
+    "@id": residenceId(),
     name: getBuildingDisplayName(),
-    alternateName: [siteConfig.buildingName, "EL FARO+ SHIROKANE-TAKANAWA"],
+    alternateName: getProjectAlternateNames(),
     description: residenceDescription,
-    url: pageUrl,
+    url: canonicalUrl,
     image: absoluteUrl(siteConfig.ogImage),
     address: getPropertyPostalAddress(),
     geo: getPropertyGeo(),

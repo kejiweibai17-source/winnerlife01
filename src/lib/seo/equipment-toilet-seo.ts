@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
-import {
-  getGeoMetaOther,
-  getPropertyGeo,
-  getPropertyGeoGraph,
-  getPropertyPostalAddress,
-} from "@/lib/seo/geo";
+import { absoluteUrl, siteConfig } from "@/lib/site";
+import { getGeoMetaOther, getPropertyGeoGraph } from "@/lib/seo/geo";
+import { buildPropertyListingRef } from "@/lib/seo/schema-common";
 
 type Locale = "zh" | "jp";
 
@@ -143,7 +139,7 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     isPartOf: {
       "@type": "WebSite",
       "@id": `${absoluteUrl("/")}#website`,
-      name: getBuildingDisplayName(),
+      name: "OK PRIME",
       url: absoluteUrl("/"),
     },
     primaryImageOfPage: {
@@ -153,7 +149,11 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     breadcrumb: { "@id": breadcrumb["@id"] },
     contentLocation: { "@id": `${absoluteUrl("/")}#property-place` },
     spatialCoverage: { "@id": `${absoluteUrl("/")}#property-place` },
-    about: { "@id": `${pageUrl}#product` },
+    about: [
+      { "@id": `${pageUrl}#product` },
+      { "@id": `${absoluteUrl("/")}#property-place` },
+      { "@id": `${absoluteUrl("/")}#listing` },
+    ],
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
       "@id": `${absoluteUrl("/")}#organization`,
@@ -179,13 +179,7 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     },
     model: page.hero.model,
     category: page.hero.category,
-    isRelatedTo: {
-      "@type": "RealEstateListing",
-      name: getBuildingDisplayName(),
-      url: absoluteUrl("/"),
-      address: getPropertyPostalAddress(),
-      geo: getPropertyGeo(),
-    },
+    isRelatedTo: buildPropertyListingRef(),
   };
 
   const faqPage = {
@@ -203,6 +197,13 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webPage, breadcrumb, ...getPropertyGeoGraph(locale), product, faqPage],
+    "@graph": [
+      webPage,
+      breadcrumb,
+      ...getPropertyGeoGraph(locale),
+      buildPropertyListingRef(),
+      product,
+      faqPage,
+    ],
   };
 }

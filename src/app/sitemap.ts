@@ -8,8 +8,6 @@ import { landingPage01Path } from "@/lib/landing-page-01-path";
  */
 const localizedPaths: Array<{ zh: string; jp: string; priority: number }> = [
   { zh: "/", jp: "/jp", priority: 1 },
-  { zh: "/concept", jp: "/jp/concept", priority: 0.9 },
-  { zh: "/amenities", jp: "/jp/amenities", priority: 0.9 },
   { zh: "/location", jp: "/jp/location", priority: 0.9 },
   { zh: "/transportation", jp: "/jp/transportation", priority: 0.85 },
   { zh: "/architecture", jp: "/jp/architecture", priority: 0.8 },
@@ -63,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: abs(landingPage01Path),
       lastModified,
       changeFrequency: "weekly",
-      priority: 0.85,
+      priority: 0.55,
     },
   ];
 

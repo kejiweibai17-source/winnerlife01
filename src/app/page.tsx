@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_TW",
     url: "/",
-    siteName: siteConfig.name,
+    siteName: "OK PRIME",
     title: getHomePageTitle("zh"),
     description: getHomeDescription("zh"),
     images: [

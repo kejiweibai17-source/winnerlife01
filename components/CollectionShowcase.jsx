@@ -65,7 +65,6 @@ export default function CollectionShowcase() {
       image: CASE_IMAGES[1],
       blockTitle: t("cases.1.blockTitle"),
       blockDesc: t("cases.1.blockDesc"),
-      featuredTag: t("cases.1.featuredTag"),
       btnLabel: t("cases.1.btnLabel"),
       href: `${getLocalizedPath("/contact", locale)}#contact-form`,
       bigImage: CASE_BIG_IMAGE,
@@ -132,11 +131,6 @@ export default function CollectionShowcase() {
                 <p className="text-[11px] lg:text-[12px] leading-[2.2] text-gray-500 whitespace-pre-line tracking-[0.1em]">
                   {item.blockDesc}
                 </p>
-                <div className="mt-6 inline-block border border-gray-300 rounded-full px-5 py-1.5">
-                  <span className="text-[9px] font-bold tracking-[0.15em] text-gray-600 uppercase">
-                    {item.featuredTag ?? t("tagFeatured")}
-                  </span>
-                </div>
               </div>
 
               {item.id === "style-02" ? (
@@ -177,7 +171,7 @@ export default function CollectionShowcase() {
                 <span className="text-[11px] font-bold tracking-[0.2em] mb-2 opacity-80 uppercase">
                   {item.role}
                 </span>
-                <h2 className="text-3xl lg:text-[32px] font-bold tracking-widest w-[75%] max-w-[800px] mb-4">
+                <h2 className="text-3xl lg:text-[32px] font-bold tracking-widest leading-[1.8] w-[75%] max-w-[800px] mb-4">
                   {item.name}
                 </h2>
                 <div className="w-6 h-[1px] bg-white/50 mb-6" />

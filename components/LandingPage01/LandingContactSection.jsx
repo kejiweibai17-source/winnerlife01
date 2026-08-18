@@ -97,7 +97,9 @@ export default function LandingContactSection() {
         />
         <div className="lp-lc-banner-bar">
           <p className="lp-lc-banner-headline">{bannerHeadline}</p>
-          <p className="lp-lc-banner-brand">{bannerBrand}</p>
+          <a href="/" className="lp-lc-banner-brand">
+            {bannerBrand}
+          </a>
         </div>
       </div>
     </section>

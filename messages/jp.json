@@ -19,7 +19,7 @@
       }
     ],
     "bottomTag": "品川・港区",
-    "bottomBrand": "忠訓地產",
+    "bottomBrand": "OK PRIME",
     "scrollText": "SCROLL FOR CONTENTS"
   },
   "info": {
@@ -31,7 +31,7 @@
     ],
     "register": {
       "label": "説明会予約",
-      "desc": "説明会のVIP席を無料でご予約ください。立地・建築・物件の特徴と忠訓地產についてご案内し、購入・投資をより安心に。"
+      "desc": "説明会のVIP席を無料でご予約ください。OK PRIME の立地・建築・物件の特徴と忠訓地產についてご案内し、購入・投資をより安心に。"
     },
     "reserve": {
       "label": "個別相談",
@@ -47,7 +47,7 @@
       "title": "進化し続ける「品川エリア」を生活圏に持つ「港区」のアドレス"
     },
     {
-      "title": "電車約13分で天王洲アイル駅へ"
+      "title": "電車約13分で天王洲島駅へ"
     },
     {
       "title": "南向き・大きな開口部で豊かな自然光を取り込み、\n明るく快適な暮らしを。"
@@ -60,7 +60,7 @@
   },
   "woven": {
     "titleV": "白金高輪で\n都心の暮らしを",
-    "body": "EL FARO+ 白金高輪は、東京港区の希少な立地に14戸の住まいが緑と運河水景に囲まれて立地します。南向きの開放的な眺望と、品川エリアの生活圏がすぐそば。スペイン語で「灯台」を意味する名のもと、都心の中で時を超える住まいのかたちを織りなします。",
+    "body": "OK PRIME+ 白金高輪は、東京港区の希少な立地に14戸の住まいが緑と運河水景に囲まれて立地します。南向きの開放的な眺望と、品川エリアの生活圏がすぐそば。スペイン語で「灯台」を意味する名のもと、都心の中で時を超える住まいのかたちを織りなします。",
     "more": "詳しく見る"
   },
   "transportSlider": {
@@ -68,7 +68,7 @@
       {
         "subtitle": "Landmark 2025",
         "title": "東京2025最新ランドマーク\n高輪GATEWAY CITY",
-        "description": "東京2025年最新ランドマーク誕生！「高輪GATEWAY CITY」—JR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集積し、白金・品川周辺に新たな都市エネルギーをもたらします。",
+        "description": "東京2025年最新ランドマーク誕生！「高輪 GATEWAY CITY」\nJR高輪ゲートウェイ駅直結の大規模複合都市開発。オフィス・商業・宿泊・文化施設が集積し、白金・品川周辺に新たな都市エネルギーをもたらします。",
         "subtext": "Urban Renaissance."
       },
       {
@@ -158,14 +158,6 @@
   "nav": {
     "items": [
       {
-        "label": "建築理念",
-        "href": "/concept"
-      },
-      {
-        "label": "地域再開発 / 周辺施設",
-        "href": "/amenities"
-      },
-      {
         "label": "立地の核心",
         "href": "/location"
       },
@@ -230,16 +222,6 @@
         "hoverText": "ホームへ戻る・物件を探索"
       },
       {
-        "title": "建築理念",
-        "subtitle": "Concept",
-        "hoverText": "都市の核心・現代美学・落ち着いた住まい"
-      },
-      {
-        "title": "地域再開発 / 周辺施設",
-        "subtitle": "Area Redevelopment",
-        "hoverText": "商業施設・駅など"
-      },
-      {
         "title": "立地の核心",
         "subtitle": "Location Value",
         "hoverText": "上質な建材・モデル展示・専門ガイド"
@@ -278,10 +260,10 @@
   },
   "concept": {
     "seo": {
-      "title": "コンセプト｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪—東京の中心で時代と流行を超える賃貸レジデンスシリーズ。住まいの灯台を目指す Urban Classic デザイン。忠訓地產が見学・ご相談をご案内します。",
+      "title": "コンセプト｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪—東京の中心で時代と流行を超える賃貸レジデンスシリーズ。住まいの灯台を目指す Urban Classic デザイン。忠訓地產が見学・ご相談をご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME+",
         "白金高輪",
         "コンセプト",
         "忠訓地產",
@@ -289,7 +271,7 @@
         "品川"
       ],
       "ogImage": "/images/og/concept.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 運河沿いの外観"
+      "ogImageAlt": "OK PRIME+ 白金高輪 運河沿いの外観"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -322,7 +304,7 @@
       "paragraphs": [
         "港区アドレスにありながら、再開発の機運に沸く品川エリアの\nその進化の最前線を感じて暮らすことのできる可能性に満ちたロケーション。",
         "天王洲アイル駅と品川駅を使いこなし、都心を軽やかに駆け抜けながら\n開放感あふれる南方面のウォーターフロントをかなえる日常へ。",
-        "先進と自然が溶け合うベイエリアに新たな価値を創造する、全14邸。\nEL FARO+ 白金高輪、いよいよ始動。"
+        "先進と自然が溶け合うベイエリアに新たな価値を創造する、全14邸。\nOK PRIME+ 白金高輪、いよいよ始動。"
       ]
     },
     "marquee": [
@@ -354,7 +336,7 @@
     "canalGreen": {
       "title": "CANAL & GREEN",
       "description": "南方面を運河に臨む開放感。発展を遂げる都心の中で、緑と水辺に彩られた風景がここに。",
-      "mapLabelLine1": "EL FARO+",
+      "mapLabelLine1": "OK PRIME+",
       "mapLabelLine2": "白金高輪"
     },
     "surroundings": {
@@ -377,10 +359,11 @@
   },
   "transportation": {
     "seo": {
-      "title": "交通・アクセス｜EL FARO+ 白金高輪",
-      "description": "東京都港区三田5-5-10。白金高輪・三田・田町の3駅が利用可能。南北線・三田線・浅草線・JRが交差し、都心と羽田空港へスムーズにアクセス。忠訓地產が EL FARO+ 白金高輪の交通をご案内します。",
+      "title": "交通・アクセス｜OK PRIME+ 白金高輪",
+      "description": "東京都港区三田5-5-10。白金高輪・三田・田町の3駅が利用可能。南北線・三田線・浅草線・JRが交差し、都心と羽田空港へスムーズにアクセス。忠訓地產が OK PRIME+ 白金高輪の交通をご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME",
+        "OK PRIME+",
         "白金高輪",
         "交通",
         "三田",
@@ -388,7 +371,7 @@
         "忠訓地產"
       ],
       "ogImage": "/images/og/transportation.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 アクセス"
+      "ogImageAlt": "OK PRIME+ 白金高輪 アクセス"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -552,7 +535,7 @@
     "faq": {
       "items": [
         {
-          "question": "EL FARO+ 白金高輪の最寄り駅は？",
+          "question": "OK PRIME+ 白金高輪の最寄り駅は？",
           "answer": "最寄りは東京メトロ南北線・都営三田線「白金高輪」駅、徒歩約5分（約400m）。三田駅・田町駅・泉岳寺駅も利用でき、品川や羽田空港へのアクセスも良好です。"
         },
         {
@@ -569,10 +552,11 @@
   "location": {
     "page": {
       "seo": {
-        "title": "ロケーション・周辺環境｜EL FARO+ 白金高輪",
+        "title": "ロケーション・周辺環境｜OK PRIME+ 白金高輪",
         "description": "東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分。慶應義塾大学三田キャンパス・高輪 GATEWAY CITY に近い港区コア立地。都市利便と静謐な住環境が共存。忠訓地產が物件情報をご案内します。",
         "keywords": [
-          "EL FARO+",
+          "OK PRIME",
+          "OK PRIME+",
           "白金高輪",
           "三田5-5-10",
           "周辺環境",
@@ -581,7 +565,7 @@
           "忠訓地產"
         ],
         "ogImage": "/images/og/location.jpg",
-        "ogImageAlt": "EL FARO+ 白金高輪 港区ロケーション"
+        "ogImageAlt": "OK PRIME+ 白金高輪 港区ロケーション"
       },
       "breadcrumb": {
         "home": "トップ",
@@ -590,7 +574,7 @@
       "faq": {
         "items": [
           {
-            "question": "EL FARO+ 白金高輪の住所は？",
+            "question": "OK PRIME+ 白金高輪の住所は？",
             "answer": "東京都港区三田5-5-10（〒108-0073）。白金高輪駅徒歩約5分、三田・田町・泉岳寺も徒歩圏です。"
           },
           {
@@ -603,15 +587,15 @@
           }
         ]
       },
-      "heroAlt": "周辺環境",
+      "heroAlt": "慶應文教エリア",
       "intro": {
         "title": "LOCATION",
-        "subtitle": "運河に臨む、開放のウォーターフロントへ。",
+        "subtitle": "慶應義塾大学至近、文教エリアならではの立地。",
         "paragraphs": [
-          "港区三田のアドレスにありながら、高輪・品川エリアの再開発が進む進化の最前線を感じて暮らせる、可能性に満ちたロケーション。",
-          "白金高輪・三田・田町など複数駅を使いこなし、都心と品川生活圏を軽やかに移動しながら、港区ならではの静謐な住環境もかなえる日常へ。"
+          "慶應義塾大学三田キャンパスまで徒歩約5分。都心でありながら、由緒ある文教エリアの落ち着きと知的な空気を日常に感じられます。",
+          "港区三田と白金高輪が交わるこの場所は、文教・ビジネス・生活機能が調和する、希少性と将来性を備えた住まいの立地です。"
         ],
-        "waterfrontAlt": "運河に臨むウォーターフロント"
+        "waterfrontAlt": "慶應義塾大学周辺の文教エリア"
       },
       "overview": {
         "title": "周辺環境のご案内",
@@ -664,10 +648,10 @@
             "distance": "約400m"
           },
           {
-            "id": "tennozu",
-            "name": "天王洲アイル駅",
-            "time": "電車約13分",
-            "distance": "品川／りんかい線経由"
+            "id": "mita_tamachi",
+            "name": "三田・田町駅",
+            "time": "徒歩約13–14分",
+            "distance": "都営三田線／JR山手線"
           },
           {
             "id": "shinagawa",
@@ -702,8 +686,8 @@
             "distance": "約240m"
           },
           {
-            "id": "season",
-            "name": "品川シーズンテラス",
+            "id": "gateway",
+            "name": "高輪 GATEWAY CITY",
             "time": "徒歩約15分",
             "distance": "約1,200m"
           },
@@ -725,8 +709,8 @@
             "detail": "南北線・三田線　徒歩約5分"
           },
           {
-            "label": "天王洲アイル駅",
-            "detail": "りんかい線・東京モノレール　電車約13分"
+            "label": "三田・田町駅",
+            "detail": "都営三田線・JR山手線　徒歩約13–14分"
           },
           {
             "label": "品川駅",
@@ -802,7 +786,7 @@
         "subtitle": "都市の利便と、穏やかな\n住環境が調和する街",
         "body": "白金高輪駅周辺には、日常の買い物に便利な商業施設や多彩な飲食店が揃い、暮らしを支える生活利便性が充実しています。また、近隣には公園や緑豊かな街並みが点在し、都心でありながら落ち着いた住環境を確保。都市の機能性と心地よい静けさを兼ね備えた快適な日常を享受できるエリアです。",
         "lifeInfoTitle": "Life Information",
-        "mapProject": "EL FARO+ SHIROKANE-TAKANAWA",
+        "mapProject": "OK PRIME+ SHIROKANE-TAKANAWA",
         "mapStations": [
           "白金高輪駅 — 徒歩 9分",
           "田町/三田駅 — 徒歩 14分"
@@ -850,10 +834,10 @@
   },
   "developer": {
     "seo": {
-      "title": "ブランドストーリー｜EL FARO+ 白金高輪",
-      "description": "OK PRIME ブランドストーリー—最初の一戸から家族の資産版図へ。忠訓地產が EL FARO+ 白金高輪の日本不動産・見学・投資相談をご提供します。",
+      "title": "ブランドストーリー｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME ブランドストーリー—最初の一戸から家族の資産版図へ。忠訓地產が OK PRIME+ 白金高輪の日本不動産・見学・投資相談をご提供します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME+",
         "OK PRIME",
         "忠訓地產",
         "ブランド",
@@ -982,17 +966,18 @@
   },
   "summary": {
     "seo": {
-      "title": "物件概要｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪の物件概要、間取り図、内外装仕上表・設備仕様。スペイン語で灯台を意味する El Faro。忠訓地產が見学予約をご案内します。",
+      "title": "物件概要｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪の物件概要、間取り図、内外装仕上表・設備仕様。スペイン語で灯台を意味する OK PRIME。忠訓地產が見学予約をご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME",
+        "OK PRIME+",
         "白金高輪",
         "物件概要",
         "間取り",
         "忠訓地產"
       ],
       "ogImage": "/images/og/summary.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 物件概要"
+      "ogImageAlt": "OK PRIME+ 白金高輪 物件概要"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -1002,7 +987,7 @@
     "intro": {
       "image02Alt": "エルファーロ ブランドイメージ",
       "image03Alt": "エルファーロプラス白金高輪",
-      "paragraph": "スペイン語で「灯台」を意味するエルファーロ。\n石造りの堅固さを表現したフォルムは、時を経ても美しい。\nそして、その灯りは人々の心の拠り所となり未来を照らす道標となる。",
+      "paragraph": "石造りの堅固さを表現したフォルムは、時を経ても美しい。\nそして、その灯りは人々の心の拠り所となり未来を照らす道標となる。",
       "heading": "時代を超えて資産価値の継続を"
     },
     "overview": {
@@ -1013,11 +998,13 @@
     "floorPlan": {
       "title": "間取り図",
       "subtitle": "Plan",
+      "imageAlt": "OK PRIME 白金高輪 1F・2F–4F・5F 間取り図",
       "footnote": "※間取り図はあくまでイメージで、施工上の都合等により変更となる場合があります。"
     },
     "interior": {
       "title": "内部仕上表",
-      "subtitle": "Finish schedule"
+      "subtitle": "Finish schedule",
+      "privateArea": "〈住戸専有部〉"
     },
     "equipment": {
       "title": "設備"
@@ -1069,22 +1056,23 @@
       "specification": "仕様",
       "layout": "間取り",
       "roomNo": "号室",
-      "exclusiveArea": "専有面積"
+      "exclusiveArea": "専有面積",
+      "type": "タイプ"
     }
   },
   "architecture": {
     "seo": {
-      "title": "建築デザイン｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪の外観デザイン。二丁掛タイル、石材、スペイン風タイルと光と影のコントラスト。Design Meiho Archilabo 設計。忠訓地產がご案内します。",
+      "title": "建築デザイン｜OK PRIME 白金高輪",
+      "description": "OK PRIME 白金高輪の外観デザイン。二丁掛タイル、石材、スペイン風タイルと光と影のコントラスト。Design Meiho Archilabo 設計。忠訓地產がご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME",
         "白金高輪",
         "建築",
         "外観",
         "忠訓地產"
       ],
       "ogImage": "/images/og/architecture.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 Urban Classic 外観"
+      "ogImageAlt": "OK PRIME 白金高輪 Urban Classic 外観"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -1094,11 +1082,11 @@
       "tag": "ARCHITECTURE & MATERIALS",
       "title": "建築デザイン",
       "subtitle": "千年の工芸で、時代を超える建築外観を。",
-      "imageAlt": "EL FARO+ SHIROKANE-TAKANAWA 建築外観"
+      "imageAlt": "OK PRIME SHIROKANE-TAKANAWA 建築外観"
     },
     "intro": {
       "heading": "職人工芸 × 現代建築技術の極致",
-      "body": "EL FARO+ 白金高輪は、外壁タイルから塗装システムまで、あらゆる素材の選択が品質へのこだわりを示しています。日本最高水準の建材を用い、千年の伝統を誇る工芸美学で、時を超えるプレミアム資産をご提供します。"
+      "body": "OK PRIME 白金高輪は、外壁タイルから塗装システムまで、あらゆる素材の選択が品質へのこだわりを示しています。日本最高水準の建材を用い、千年の伝統を誇る工芸美学で、時を超えるプレミアム資産をご提供します。"
     },
     "highlights": [
       {
@@ -1121,9 +1109,9 @@
       },
       {
         "num": "04",
-        "tag": "50二丁・黄金比例",
-        "title": "50二丁（材貼ネット貼り）——「職人の質感」と「施工効率」を両立",
-        "body": "1枚 95×45 mm の「50二丁」は、日本建築で最も定番のゴールデンプロポーション。繊細なラインを描き出します。裏面材貼（ネット貼り 300×300 mm）での出荷により、小タイルならではの繊細さを保ちながら、現場での施工スピードと平滑度を大幅に向上させました。"
+        "tag": "45二丁掛・フランカ",
+        "title": "45二丁掛フランカ（材貼ネット貼り）——「職人の質感」と「施工効率」を両立",
+        "body": "「45二丁掛フランカ」シリーズを採用。日本建築で定番の二丁掛プロポーションが、繊細なラインを描き出します。裏面材貼（ネット貼り）での出荷により、小タイルならではの繊細さを保ちながら、現場での施工スピードと平滑度を大幅に向上させました。"
       }
     ],
     "advantages": {
@@ -1167,11 +1155,11 @@
       "items": [
         {
           "label": "タイル名称",
-          "value": "EL FARO+ 外壁タイル"
+          "value": "Flanca"
         },
         {
           "label": "タイルサイズ",
-          "value": "95 × 45 mm（50二丁）"
+          "value": "45二丁掛フランカ"
         },
         {
           "label": "出荷仕様",
@@ -1207,7 +1195,7 @@
       "美濃焼",
       "BI類磁器質",
       "5:9:4混色",
-      "50二丁"
+      "Flanca"
     ],
     "consultant": {
       "name": "OK PRIME 担当"
@@ -1231,8 +1219,8 @@
       "title": "エスケー化研 建材採用事例",
       "items": [
         {
-          "src": "/images/architecture/sk-material-01.jpg",
-          "caption": "外壁塗装面 — 超低汚染・超耐候"
+          "src": "/images/architecture/sk-material-12.jpg",
+          "caption": "採用事例 — 集合住宅外壁"
         },
         {
           "src": "/images/architecture/sk-material-02.jpg",
@@ -1283,23 +1271,24 @@
     "partner": {
       "label": "MATERIAL PARTNER",
       "name": "エスケー化研株式会社 (SK KAKEN Co., Ltd.)",
-      "description": "1955年創業。建築仕上塗材・外壁タイルの国内シェアNo.1メーカー。EL FARO+ 白金高輪の外装仕上材として採用。"
+      "description": "1955年創業。建築仕上塗材・外壁タイルの国内シェアNo.1メーカー。OK PRIME 白金高輪の外装仕上材として採用。"
     },
     "backLink": "← 一覧へ",
     "backToTop": "ページトップへ"
   },
   "interiorPage": {
     "seo": {
-      "title": "インテリア｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪の室内デザイン。大きな窓から光が差し込み、柔らかな照明が美しい陰影を演出。住まいの灯台となる空間。忠訓地產が見学予約をご案内します。",
+      "title": "インテリア｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪の室内デザイン。大きな窓から光が差し込み、柔らかな照明が美しい陰影を演出。住まいの灯台となる空間。忠訓地產が見学予約をご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME",
+        "OK PRIME+",
         "白金高輪",
         "インテリア",
         "忠訓地產"
       ],
       "ogImage": "/images/og/interior.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 共用スペース"
+      "ogImageAlt": "OK PRIME+ 白金高輪 共用スペース"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -1309,7 +1298,7 @@
       "tag": "空間ビジョン",
       "body": "光、素材、プロポーションによって、白金高輪の室内ライフを描きます。玄関からリビングまで、日常の品質への繊細な配慮が宿る空間です。",
       "image": "/images/interior/住戶E-室內.png",
-      "imageAlt": "EL FARO+ 白金高輪 室内イメージ"
+      "imageAlt": "OK PRIME+ 白金高輪 室内イメージ"
     },
     "philosophy": {
       "heading": "建築と環境の「間」を考える",
@@ -1319,7 +1308,7 @@
     },
     "showcase": {
       "image": "/images/index/9497269d-233d-4a5e-8325-5febb2acf4d7.png",
-      "imageAlt": "EL FARO+ 白金高輪 室内パノラマ"
+      "imageAlt": "OK PRIME+ 白金高輪 室内パノラマ"
     },
     "projects": {
       "title": "空間イメージ",
@@ -1354,25 +1343,19 @@
           "id": "lobby",
           "title": "エントランスホール",
           "category": "共用・玄関",
-          "image": "/images/transportation/EFプラス白金高輪05.06p.jpg"
+          "image": "/images/迎賓大廳.png"
         },
         {
-          "id": "concept",
-          "title": "空間美学コンセプト",
-          "category": "コンセプト・設計",
-          "image": "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png"
+          "id": "corridor",
+          "title": "エントランス廊下",
+          "category": "共用・廊下",
+          "image": "/images/入口走廊.png"
         },
         {
-          "id": "news1",
-          "title": "自然光と素材",
-          "category": "光・素材",
-          "image": "/images/story/news1-1280x850.png"
-        },
-        {
-          "id": "news3",
-          "title": "和モダンの融合",
-          "category": "住宅・都心",
-          "image": "/images/story/news3-1280x850.png"
+          "id": "elevator",
+          "title": "ロビーエレベーター",
+          "category": "共用・エレベーター",
+          "image": "/images/大廳電梯.png"
         }
       ]
     },
@@ -1412,24 +1395,25 @@
       ]
     },
     "cta": {
-      "tag": "EL FARO+ 白金高輪",
+      "tag": "OK PRIME+ 白金高輪",
       "body": "室内プランと物件詳細をもっと見る",
       "button": "物件概要を見る"
     }
   },
   "equipmentPage": {
     "seo": {
-      "title": "設備・家電・保全系統｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪の設備紹介。キッチン、バスルーム、トイレ、ALSOK 防犯設備。上質な設備とスマートセキュリティ。忠訓地產がご案内します。",
+      "title": "設備・家電・保全系統｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪の設備紹介。キッチン、バスルーム、トイレ、ALSOK 防犯設備。上質な設備とスマートセキュリティ。忠訓地產がご案内します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME",
+        "OK PRIME+",
         "白金高輪",
         "設備",
         "防犯",
         "忠訓地產"
       ],
       "ogImage": "/images/og/equipment.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 設備"
+      "ogImageAlt": "OK PRIME+ 白金高輪 設備"
     },
     "breadcrumb": {
       "home": "トップ",
@@ -1488,10 +1472,10 @@
   },
   "amenitiesPage": {
     "seo": {
-      "title": "地域再開発・周辺施設｜EL FARO+ 白金高輪",
+      "title": "地域再開発・周辺施設｜OK PRIME+ 白金高輪",
       "description": "港区三田5-5-10・白金高輪の大規模都市更新、高輪 GATEWAY CITY、商業・生活施設をご案内。白金高輪駅徒歩約5分、慶應三田・品川生活圏に近接。忠訓地產が周辺環境をご説明します。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME+",
         "白金高輪",
         "三田5-5-10",
         "地域再開発",
@@ -1502,7 +1486,7 @@
         "忠訓地產"
       ],
       "ogImage": "/images/og/amenities.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 周辺商業・生活施設"
+      "ogImageAlt": "OK PRIME+ 白金高輪 周辺商業・生活施設"
     },
     "breadcrumb": {
       "ariaLabel": "パンくずリスト",
@@ -1774,21 +1758,22 @@
         },
         {
           "question": "見学予約で周辺環境を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪（港区三田5-5-10）の周辺施設、交通動線、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約をお申し込みいただけます。忠訓地產の専門スタッフが、OK PRIME+ 白金高輪（港区三田5-5-10）の周辺施設、交通動線、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
   },
   "equipmentToiletPage": {
     "seo": {
-      "title": "TOTO WASHLET SS1 トイレ設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ には TOTO WASHLET SS1 温水洗浄便座を採用。「びっくリーン」清潔技術、除菌・節電機能を搭載。仕様、カタログ、よくある質問を掲載。",
+      "title": "TOTO WASHLET SS1 トイレ設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ には TOTO WASHLET SS1 温水洗浄便座を採用。「びっくリーン」清潔技術、除菌・節電機能を搭載。仕様、カタログ、よくある質問を掲載。",
       "keywords": [
+        "OK PRIME",
         "TOTO WASHLET",
         "SS1",
         "温水洗浄便座",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "トイレ設備",
         "ウォシュレット",
         "忠訓地產"
@@ -1936,7 +1921,7 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ にはどの WASHLET が採用されていますか？",
+          "question": "白金高輪 OK PRIME+ にはどの WASHLET が採用されていますか？",
           "answer": "本物件のトイレ設備には TOTO WASHLET SS1 シリーズ（品番：SS1）を採用しています。温水洗浄、暖房便座、節電モードなどの基本機能に加え、TOTO 独自の「びっくリーン」清潔技術を搭載しています。"
         },
         {
@@ -1953,16 +1938,17 @@
         },
         {
           "question": "見学予約で実際の設備を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪のトイレ設備、室内プラン、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、OK PRIME+ 白金高輪のトイレ設備、室内プラン、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
   },
   "equipmentBathroomPage": {
     "seo": {
-      "title": "浴室設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ の浴室設備：TOTO WASHLET 温水洗浄便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ システムバスルーム。機能・仕様・よくある質問を掲載。",
+      "title": "浴室設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ の浴室設備：TOTO WASHLET 温水洗浄便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ システムバスルーム。機能・仕様・よくある質問を掲載。",
       "keywords": [
+        "OK PRIME",
         "浴室設備",
         "洗面化粧台",
         "ベラーザ・ネオ",
@@ -1970,7 +1956,7 @@
         "HOUSETEC NJ",
         "システムバス",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "忠訓地產"
       ],
       "ogImage": "/images/og/equipment-bathroom.jpg",
@@ -2147,7 +2133,7 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ にはどの浴室設備が採用されていますか？",
+          "question": "白金高輪 OK PRIME+ にはどの浴室設備が採用されていますか？",
           "answer": "本物件には TOTO WASHLET 温水洗浄便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ システムバスルームを採用しています。美観・機能・日常の使いやすさを兼ね備えた設備を厳選しています。"
         },
         {
@@ -2164,23 +2150,24 @@
         },
         {
           "question": "見学予約で実際の設備を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の浴室設備、室内プラン、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、OK PRIME+ 白金高輪の浴室設備、室内プラン、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
   },
   "equipmentKitchenPage": {
     "seo": {
-      "title": "NASLUCK リヴィエール キッチン設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ には NASLUCK コンパクトキッチン「リヴィエール」を採用。間口900mmから、I型・アイランド型・ペニンシュラ型に対応。設備機器、セットプラン、施工事例を掲載。",
+      "title": "NASLUCK リヴィエール キッチン設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ には NASLUCK コンパクトキッチン「リヴィエール」を採用。間口900mmから、I型・アイランド型・ペニンシュラ型に対応。設備機器、セットプラン、施工事例を掲載。",
       "keywords": [
+        "OK PRIME",
         "リヴィエール",
         "RIVIERE",
         "NASLUCK",
         "コンパクトキッチン",
         "キッチン設備",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "忠訓地產"
       ],
       "ogImage": "/images/og/equipment-kitchen.jpg",
@@ -2384,7 +2371,7 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ にはどのキッチン設備が採用されていますか？",
+          "question": "白金高輪 OK PRIME+ にはどのキッチン設備が採用されていますか？",
           "answer": "本物件のキッチン設備には NASLUCK コンパクトキッチン「リヴィエール」を採用しています。間口900mmからのジャストサイズ設計で、I型・アイランド型・ペニンシュラ型など多彩なレイアウトに対応。収納力とコンロの互換性も備えています。"
         },
         {
@@ -2401,22 +2388,23 @@
         },
         {
           "question": "見学予約で実際の設備を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪のキッチン設備、室内プラン、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、OK PRIME+ 白金高輪のキッチン設備、室内プラン、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
   },
   "equipmentSecurityPage": {
     "seo": {
-      "title": "ALSOK 防犯設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ 全棟に ALSOK「HOME ALSOK アパート・マンションプラン」を導入。侵入監視、火災監視、緊急通報、24時間ガードマン駆けつけなどの保全サービスを掲載。",
+      "title": "ALSOK 防犯設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ 全棟に ALSOK「HOME ALSOK アパート・マンションプラン」を導入。侵入監視、火災監視、緊急通報、24時間ガードマン駆けつけなどの保全サービスを掲載。",
       "keywords": [
+        "OK PRIME",
         "ALSOK",
         "防犯設備",
         "ホームセキュリティ",
         "HOME ALSOK",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "セキュリティ",
         "忠訓地產"
       ],
@@ -2483,40 +2471,40 @@
       "heading": "ALSOK 基本住宅保全",
       "items": [
         {
-          "title": "侵入監視",
-          "body": "開閉センサーなどを扉や窓に配置し、侵入を検知します。",
-          "image": "/images/equipment/security/alsok-extra-26.jpg",
-          "imageAlt": "侵入監視"
+          "title": "侵入監視・感知",
+          "body": "扉や窓に設置したセンサーにより、ガラス破りやこじ開けなどの不正侵入を検知。在宅時でも警戒エリアを設定できます。",
+          "image": "/images/入侵監控與感知.png",
+          "imageAlt": "侵入監視・感知"
         },
         {
           "title": "火災監視",
-          "body": "火災センサーを設置した監視の他、自動火災報知設備からの移報も監視します。",
-          "image": "/images/equipment/security/alsok-fire-sensor.webp",
+          "body": "センサーが火災による室内温度の異常上昇や煙の発生を検知し、自動通報します。",
+          "image": "/images/火災監控.png",
           "imageAlt": "火災監視"
         },
         {
-          "title": "非常通報",
-          "body": "身の危険を感じたときなどに遠隔非常ボタンを押すと ALSOK に通報されます。",
-          "image": "/images/equipment/security/alsok-emergency-button.webp",
-          "imageAlt": "非常通報"
+          "title": "非常通報機能",
+          "body": "不審者による脅迫や急病の際、非常ボタンを押すだけで ALSOK に直ちに通報できます。",
+          "image": "/images/緊急通報功能.png",
+          "imageAlt": "非常通報機能"
         },
         {
-          "title": "施錠確認",
-          "body": "扉や窓に配置した開閉センサーの開閉を感知し、戸締まりの確認ができます。",
-          "image": "/images/equipment/security/alsok-main-14.png",
-          "imageAlt": "施錠確認"
+          "title": "施錠確認・出入管理",
+          "body": "扉や窓の開閉を感知して施錠を確認。機器の操作状況を記録し、メールでお知らせします。",
+          "image": "/images/門窗上鎖確認與出入管理.png",
+          "imageAlt": "施錠確認・出入管理"
         },
         {
-          "title": "出入管理情報",
-          "body": "コントローラー操作を記録し、メールでお知らせします。",
-          "image": "/images/equipment/security/alsok-main-20.jpg",
-          "imageAlt": "出入管理情報"
+          "title": "遠隔操作・警備切り替え",
+          "body": "専用アプリで、いつでもどこからでも住まいの状況確認・操作が可能。「外出」「在宅」に応じて警備モードを切り替えられます。",
+          "image": "/images/遠端操作與警備切換.png",
+          "imageAlt": "遠隔操作・警備切り替え"
         },
         {
-          "title": "外部通知",
-          "body": "異常が発生すると ALSOK ライトが点滅し、周囲に知らせます。",
-          "image": "/images/equipment/security/alsok-sticker.png",
-          "imageAlt": "外部通知"
+          "title": "24時間ガードマンの迅速駆けつけ",
+          "body": "異常発生時、ALSOK は全国の待機拠点から訓練を受けたガードマンを派遣。最短で現場に急行し、対応後にご報告します。",
+          "image": "/images/24小時警衛.png",
+          "imageAlt": "24時間ガードマンの迅速駆けつけ"
         }
       ]
     },
@@ -2649,7 +2637,7 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ にはどの保全系統が導入されていますか？",
+          "question": "白金高輪 OK PRIME+ にはどの保全系統が導入されていますか？",
           "answer": "本物件全棟に ALSOK「HOME ALSOK アパート・マンションプラン」を導入しています。集合住宅向けに設計され、侵入監視、火災監視、緊急通報、遠隔操作、24時間ガードマン駆けつけを組み合わせた全方位のセキュリティです。"
         },
         {
@@ -2666,7 +2654,7 @@
         },
         {
           "question": "見学予約で実際の設備を確認できますか？",
-          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、EL FARO+ 白金高輪の防犯設備、室内プラン、投資・購入に関するご質問にお答えします。"
+          "answer": "はい。ウェブサイトから見学予約・ご相談をお申し込みいただけます。忠訓地產の専門スタッフが、OK PRIME+ 白金高輪の防犯設備、室内プラン、投資・購入に関するご質問にお答えします。"
         }
       ]
     }
@@ -2684,7 +2672,7 @@
         "忠訓地產",
         "品川",
         "見学予約",
-        "EL FARO+"
+        "OK PRIME+"
       ],
       "ogImage": "/images/og/home.jpg",
       "ogImageAlt": "OK PRIME 白金高輪 日本不動産説明会"

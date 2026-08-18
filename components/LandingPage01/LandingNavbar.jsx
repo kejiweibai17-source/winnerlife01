@@ -31,6 +31,10 @@ export default function LandingNavbar() {
   );
 
   const handleAnchorClick = (event, href) => {
+    if (!href.startsWith("#")) {
+      setMenuOpen(false);
+      return;
+    }
     event.preventDefault();
     scrollToAnchor(href);
   };

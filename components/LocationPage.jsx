@@ -10,7 +10,7 @@ import { getLocalizedPath } from "@/lib/locale-path";
 
 const TRAIN_IMAGES = {
   shirokane: "/images/landing-page/白金高輪站.png",
-  tennozu: "/images/landing-page/品川生活圈.png",
+  mita_tamachi: "/images/landing-page/港區核心.png",
   shinagawa: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
 };
 
@@ -21,7 +21,7 @@ const AIRPORT_IMAGES = {
 
 const FACILITY_IMAGES = {
   ael: "/images/index/白金アエルシティ.png",
-  season: "/images/amenities/001.png",
+  gateway: "/images/002.png",
   shiba: "/images/index/芝公園.png",
 };
 
@@ -224,7 +224,7 @@ export default function LocationPage() {
         <section className="relative z-10 h-[85vh] w-full">
           <div className="absolute inset-0 overflow-hidden">
             <img
-              src="/images/index/c2de02b1-7105-4795-ab74-c45b00505a7b.png"
+              src="/images/index/慶應文教區.png"
               alt={t("heroAlt")}
               className="h-full w-full object-cover object-center"
             />
@@ -340,7 +340,7 @@ export default function LocationPage() {
             </div>
             <div className="overflow-hidden">
               <Copy animateOnScroll delay={0.24}>
-                <p className="m-0 text-sm font-light leading-[2.2] tracking-widest text-gray-600 md:text-base">
+                <p className="m-0 whitespace-pre-line break-keep text-sm font-light leading-[2.2] tracking-[0.12em] text-gray-600 md:text-base">
                   {t("geo.body")}
                 </p>
               </Copy>

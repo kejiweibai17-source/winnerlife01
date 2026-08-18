@@ -88,7 +88,7 @@ function PlanAccordion({ plans, viewPlanLabel }) {
   );
 }
 
-function FaqSection({ items, heading, subtitle }) {
+function FaqSection({ items, heading }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -98,11 +98,6 @@ function FaqSection({ items, heading, subtitle }) {
     >
       <div className="mx-auto max-w-[900px]">
         <CopyBlock>
-          <p className="m-0 mb-3 text-center text-[10px] tracking-[0.35em] text-gray-400">
-            {subtitle}
-          </p>
-        </CopyBlock>
-        <CopyBlock delay={0.05}>
           <h2
             id="toilet-faq-heading"
             className="m-0 mb-10 md:mb-12 text-center font-serif text-xl md:text-2xl tracking-[0.12em] text-gray-900"
@@ -359,11 +354,7 @@ export default function EquipmentToiletPage() {
           </div>
         </section>
 
-        <FaqSection
-          items={faqItems}
-          heading={t("faq.heading")}
-          subtitle={t("faq.subtitle")}
-        />
+        <FaqSection items={faqItems} heading={t("faq.heading")} />
       </main>
 
       <button

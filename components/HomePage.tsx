@@ -1,6 +1,5 @@
 "use client";
 
-import WovenStory from "./WovenStory";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "./Slider01";
@@ -18,7 +17,10 @@ const LINE_URL =
 
 const HOME_CARDS = [
   { image: "/images/index/grid-02.png", href: "/location" },
-  { image: "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png", href: "/transportation" },
+  {
+    image: "/images/d7355725-427e-4c9b-b950-b0be06400e7e.png",
+    href: "/transportation",
+  },
   { image: "/images/index/運河.png", href: "/concept" },
 ];
 
@@ -39,6 +41,11 @@ export default function HomePage() {
 
   return (
     <>
+      <h1 className="sr-only">
+        {isJp
+          ? "OK PRIME｜OK PRIME+ 白金高輪 東京港区レジデンス"
+          : "OK PRIME｜OK PRIME+ 白金高輪 東京港區精品住宅"}
+      </h1>
       <Hero />
 
       <section className="relative w-full bg-[#fbfcfd] text-[#333] pt-24 pb-32 px-6 md:px-12 lg:px-20">
@@ -209,13 +216,14 @@ export default function HomePage() {
         </div>
       </Link>
 
-      <WovenStory />
       <Slider />
       <HomeBottomPromo />
 
       {/* Visually hidden: crawlable site nav for Google sitelinks (JSON-LD remains in getHomeJsonLd) */}
       <nav
-        aria-label={isJp ? "EL FARO+ 白金高輪 主要ページ" : "EL FARO+ 白金高輪 主要頁面"}
+        aria-label={
+          isJp ? "OK PRIME+ 白金高輪 主要ページ" : "OK PRIME+ 白金高輪 主要頁面"
+        }
         className="sr-only"
       >
         <ul>

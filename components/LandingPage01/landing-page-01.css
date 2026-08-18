@@ -4490,6 +4490,7 @@ a.lp-lc-line:hover {
   font-weight: 400;
   letter-spacing: 0.28em;
   color: #c9a962;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

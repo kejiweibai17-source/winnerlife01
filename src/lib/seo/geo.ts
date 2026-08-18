@@ -70,6 +70,76 @@ export function getMinatoCity(locale: "zh" | "jp" = "zh") {
   };
 }
 
+export function getMitaNeighborhood(locale: "zh" | "jp" = "zh") {
+  return {
+    "@type": "Place" as const,
+    "@id": `${absoluteUrl("/")}#mita`,
+    name: locale === "jp" ? "三田" : "三田",
+    alternateName: ["Mita", "港区三田", "港區三田"],
+    containedInPlace: { "@id": `${absoluteUrl("/")}#minato` },
+  };
+}
+
+export function getShirokaneTakanawaNeighborhood(locale: "zh" | "jp" = "zh") {
+  return {
+    "@type": "Place" as const,
+    "@id": `${absoluteUrl("/")}#shirokane-takanawa`,
+    name: "白金高輪",
+    alternateName: ["Shirokane-Takanawa", "白金高輪"],
+    containedInPlace: { "@id": `${absoluteUrl("/")}#minato` },
+  };
+}
+
+export function getNearbyStations(locale: "zh" | "jp" = "zh") {
+  const minato = { "@id": `${absoluteUrl("/")}#minato` };
+  return [
+    {
+      "@type": "TrainStation" as const,
+      "@id": `${absoluteUrl("/")}#station-shirokane-takanawa`,
+      name: locale === "jp" ? "白金高輪駅" : "白金高輪站",
+      alternateName: ["Shirokane-takanawa Station", "白金高輪駅"],
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 35.64315,
+        longitude: 139.73435,
+      },
+      containedInPlace: minato,
+      sameAs: ["https://en.wikipedia.org/wiki/Shirokane-takanawa_Station"],
+      additionalProperty: {
+        "@type": "PropertyValue",
+        name: locale === "jp" ? "徒歩" : "步行",
+        value: locale === "jp" ? "約5分" : "約5分",
+      },
+    },
+    {
+      "@type": "TrainStation" as const,
+      "@id": `${absoluteUrl("/")}#station-mita`,
+      name: locale === "jp" ? "三田駅" : "三田站",
+      alternateName: ["Mita Station", "三田駅"],
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 35.64805,
+        longitude: 139.7487,
+      },
+      containedInPlace: minato,
+      sameAs: ["https://en.wikipedia.org/wiki/Mita_Station"],
+    },
+    {
+      "@type": "TrainStation" as const,
+      "@id": `${absoluteUrl("/")}#station-tamachi`,
+      name: locale === "jp" ? "田町駅" : "田町站",
+      alternateName: ["Tamachi Station", "田町駅"],
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 35.64573,
+        longitude: 139.74758,
+      },
+      containedInPlace: minato,
+      sameAs: ["https://en.wikipedia.org/wiki/Tamachi_Station_(Tokyo)"],
+    },
+  ];
+}
+
 export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
   return {
     "@type": ["Place", "Residence"] as string[],
@@ -79,7 +149,10 @@ export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
         ? `${getBuildingDisplayName()}（港区三田・白金高輪）`
         : `${getBuildingDisplayName()}（港區三田・白金高輪）`,
     alternateName: [
-      "EL FARO+ SHIROKANE-TAKANAWA",
+      "OK PRIME",
+      "OK PRIME 白金高輪",
+      "OK PRIME SHIROKANE TAKANAWA",
+      "OK PRIME+ SHIROKANE-TAKANAWA",
       "5-5-10 Mita, Minato City, Tokyo",
       locale === "jp" ? "港区三田5-5-10" : "港區三田5-5-10",
     ],
@@ -92,7 +165,7 @@ export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
     hasMap: siteConfig.propertyGeo.mapUrl,
     latitude: siteConfig.propertyGeo.latitude,
     longitude: siteConfig.propertyGeo.longitude,
-    containedInPlace: { "@id": `${absoluteUrl("/")}#minato` },
+    containedInPlace: { "@id": `${absoluteUrl("/")}#mita` },
     additionalProperty: [
       {
         "@type": "PropertyValue",
@@ -118,7 +191,15 @@ export function getPropertyPlace(locale: "zh" | "jp" = "zh") {
 
 /** Full geo graph nodes to embed on pages that need location richness */
 export function getPropertyGeoGraph(locale: "zh" | "jp" = "zh") {
-  return [getJapanCountry(), getTokyoRegion(locale), getMinatoCity(locale), getPropertyPlace(locale)];
+  return [
+    getJapanCountry(),
+    getTokyoRegion(locale),
+    getMinatoCity(locale),
+    getMitaNeighborhood(locale),
+    getShirokaneTakanawaNeighborhood(locale),
+    ...getNearbyStations(locale),
+    getPropertyPlace(locale),
+  ];
 }
 
 export function getOrganizationStub() {

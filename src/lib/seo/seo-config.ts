@@ -6,6 +6,7 @@ export const seoPageConfigs = {
     zhPath: "/concept",
     jpPath: "/jp/concept",
     pageType: "WebPage",
+    noindex: true,
   },
   amenities: {
     messageKey: "amenitiesPage",
@@ -13,6 +14,7 @@ export const seoPageConfigs = {
     jpPath: "/jp/amenities",
     faqKey: "faq",
     pageType: ["WebPage", "CollectionPage"],
+    noindex: true,
   },
   location: {
     messageKey: "location",

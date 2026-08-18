@@ -5,12 +5,12 @@ export const siteConfig = {
  
   parentBrand: "OK忠訓國際集團",
   /** 建案名稱 */
-  buildingName: "EL FARO+ 白金高輪",
+  buildingName: "OK PRIME+ 白金高輪",
   /** 建案／網站主標 */
-  projectName: "EL FARO+",
+  projectName: "OK PRIME+",
   projectSubtitle: "白金高輪",
   description:
-    "EL FARO+ 白金高輪—東京都港區三田5-5-10（〒108-0073）出租公寓系列。全案14戶，白金高輪站步行約5分，串聯三田・田町・品川與羽田機場。ALSOK 保全與智慧設備完備，由忠訓地產提供日本置產與賞屋諮詢。",
+    "OK PRIME（OK PRIME+ 白金高輪）位於東京都港區三田5-5-10（〒108-0073）。全案14戶，白金高輪站步行約5分，串聯三田・田町・品川與羽田機場。ALSOK 保全與智慧設備完備，由忠訓地產提供日本置產與賞屋諮詢。",
   locale: "zh-TW",
   /**
    * 正式網域。務必在 Vercel / .env 設定 NEXT_PUBLIC_SITE_URL=https://okprime.winnerlife.com
@@ -60,8 +60,8 @@ export const siteConfig = {
   areaServed: ["東京都", "日本", "台北市"],
   ogImage: "/images/og/home.jpg",
   ogImageAlt: {
-    zh: "EL FARO+ 白金高輪 運河水岸建案外觀",
-    jp: "EL FARO+ 白金高輪 運河沿いの外観",
+    zh: "OK PRIME+ 白金高輪 運河水岸建案外觀",
+    jp: "OK PRIME+ 白金高輪 運河沿いの外観",
   },
   ogImageWidth: 1200,
   ogImageHeight: 630,
@@ -82,7 +82,10 @@ export const siteConfig = {
     "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true",
   ],
   keywords: [
-    "EL FARO+",
+    "OK PRIME",
+    "OK PRIME 白金高輪",
+    "OK PRIME+",
+    "OK PRIME SHIROKANE TAKANAWA",
     "白金高輪",
     "忠訓地產",
     "WinnerLife",
@@ -104,47 +107,54 @@ export function absoluteUrl(path: string) {
   return path.startsWith("http") ? path : `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+export function getProjectAlternateNames() {
+  return [
+    "OK PRIME",
+    "OK PRIME+",
+    "OK PRIME 白金高輪",
+    "OK PRIME+ 白金高輪",
+    "OK PRIME SHIROKANE TAKANAWA",
+    "OK PRIME+ SHIROKANE-TAKANAWA",
+  ];
+}
+
 /** 首頁瀏覽器分頁標題 */
 export function getHomePageTitle(locale: "zh" | "jp" = "zh") {
   if (locale === "jp") {
-    return `EL FARO+ 白金高輪｜東京港区賃貸レジデンス・品川生活圏14戸｜ALSOK防犯｜${siteConfig.name}`;
+    return `OK PRIME｜OK PRIME+ 白金高輪｜東京港区賃貸レジデンス・品川生活圏14戸｜${siteConfig.name}`;
   }
-  return `EL FARO+ 白金高輪｜東京港區出租公寓・品川生活圈14戶運河水岸｜ALSOK保全｜${siteConfig.name}`;
+  return `OK PRIME｜OK PRIME+ 白金高輪｜東京港區出租公寓・品川生活圈14戶｜${siteConfig.name}`;
 }
 
 /** 首頁 meta description */
 export function getHomeDescription(locale: "zh" | "jp" = "zh") {
   if (locale === "jp") {
-    return "EL FARO+ 白金高輪—東京都港区三田5-5-10（〒108-0073）の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、三田・田町も徒歩圏。ALSOK防犯・スマート設備完備。忠訓地產が見学予約・日本不動産相談をご案内。";
+    return "OK PRIME（OK PRIME+ 白金高輪）は東京都港区三田5-5-10（〒108-0073）の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、三田・田町も徒歩圏。ALSOK防犯・スマート設備完備。忠訓地產が見学予約・日本不動産相談をご案内。";
   }
   return siteConfig.description;
 }
 
 /**
  * 首頁 Sitelink 導覽（JSON-LD ItemList / SiteNavigationElement + 首頁可見導覽）。
- * 順序以 Google 常顯示的核心頁優先：理念 → 地段 → 交通 → 概要 → 設備 → 聯絡。
+ * 順序以 Google 常顯示的核心頁優先：地段 → 交通 → 概要 → 設備 → 聯絡。
  */
 export const homeSitelinks = {
   zh: [
-    { name: "建案理念", path: "/concept", description: "EL FARO+ 燈塔理念與 Urban Classic 設計願景" },
     { name: "地段核心", path: "/location", description: "港區三田5-5-10立地、文教區與周邊環境" },
     { name: "交通動線", path: "/transportation", description: "白金高輪站徒歩約5分、三田・田町・羽田成田" },
     { name: "物件概要", path: "/summary", description: "間取圖、仕上表與建案規格" },
     { name: "設備與保全系統", path: "/equipment", description: "廚衛設備、家電與 ALSOK 保全" },
     { name: "聯絡我們", path: "/contact", description: "賞屋預約、房源登記與置產諮詢" },
-    { name: "區域再開發與周邊設施", path: "/amenities", description: "白金高輪都市更新、商業與生活設施" },
     { name: "建築特色", path: "/architecture", description: "外觀設計、建材與光影美學" },
     { name: "室內情境", path: "/interior", description: "室內設計情境與居住空間" },
     { name: "品牌故事", path: "/story", description: "OK PRIME 與忠訓地產品牌願景" },
   ],
   jp: [
-    { name: "コンセプト", path: "/jp/concept", description: "EL FARO+ 灯台コンセプトと Urban Classic" },
     { name: "ロケーション", path: "/jp/location", description: "港区三田5-5-10の立地・文教エリア・周辺環境" },
     { name: "交通・アクセス", path: "/jp/transportation", description: "白金高輪駅徒歩約5分・三田・田町・羽田成田" },
     { name: "物件概要", path: "/jp/summary", description: "間取り図・仕様・建物概要" },
     { name: "設備・保全系統", path: "/jp/equipment", description: "キッチン・バス・ALSOK防犯" },
     { name: "お問い合わせ", path: "/jp/contact", description: "見学予約・登録・購入相談" },
-    { name: "地域再開発・周辺施設", path: "/jp/amenities", description: "白金高輪の都市更新と生活施設" },
     { name: "建築デザイン", path: "/jp/architecture", description: "外観・建材・光と影のデザイン" },
     { name: "インテリア", path: "/jp/interior", description: "室内デザインと居住空間" },
     { name: "ブランドストーリー", path: "/jp/developer", description: "OK PRIME・忠訓地產のブランド" },
@@ -160,9 +170,9 @@ export function getBuildingDisplayName() {
 export const homeFaqItems = {
   zh: [
     {
-      question: "EL FARO+ 白金高輪位於哪裡？",
+      question: "OK PRIME 白金高輪位於哪裡？",
       answer:
-        "位於東京都港區三田5-5-10（〒108-0073）。最近車站為白金高輪站（南北線・三田線，步行約5分），亦可利用三田站、田町站與泉岳寺站，輕鬆前往品川與羽田機場。",
+        "OK PRIME（OK PRIME+ 白金高輪）位於東京都港區三田5-5-10（〒108-0073）。最近車站為白金高輪站（南北線・三田線，步行約5分），亦可利用三田站、田町站與泉岳寺站，輕鬆前往品川與羽田機場。",
     },
     {
       question: "如何預約樣品屋或索取資料？",
@@ -180,9 +190,9 @@ export const homeFaqItems = {
   ],
   jp: [
     {
-      question: "EL FARO+ 白金高輪はどこにありますか？",
+      question: "OK PRIME 白金高輪はどこにありますか？",
       answer:
-        "東京都港区三田5-5-10（〒108-0073）。最寄りは白金高輪駅（南北線・三田線、徒歩約5分）。三田駅・田町駅・泉岳寺駅も利用でき、品川や羽田空港へのアクセスも良好です。",
+        "OK PRIME（OK PRIME+ 白金高輪）は東京都港区三田5-5-10（〒108-0073）。最寄りは白金高輪駅（南北線・三田線、徒歩約5分）。三田駅・田町駅・泉岳寺駅も利用でき、品川や羽田空港へのアクセスも良好です。",
     },
     {
       question: "モデルルーム見学や資料請求はどうすればよいですか？",

@@ -8,7 +8,7 @@
   
     ],
     "bottomTag": "品川・港區",
-    "bottomBrand": "忠訓地產",
+    "bottomBrand": "OK PRIME",
     "scrollText": "SCROLL FOR CONTENTS"
   },
   "info": {
@@ -20,7 +20,7 @@
     ],
     "register": {
       "label": "預約說明會",
-      "desc": "免費報名說明會VIP席位，了解物件區域、建築、特色與忠訓地產公司資訊，讓置產/投資更安心。"
+      "desc": "免費報名說明會VIP席位，了解 OK PRIME 物件區域、建築、特色與忠訓地產公司資訊，讓置產/投資更安心。"
     },
     "reserve": {
       "label": "一對一諮詢",
@@ -33,7 +33,7 @@
   },
   "cards": [
     { "title": "將持續演進的「品川地區」納入生活圈\n的「港區」地址" },
-    { "title": "乘車13分鐘抵達天王洲艾爾站" },
+    { "title": "乘車13分鐘抵達天王洲島站" },
     { "title": "座南朝向・大面積開窗，\n引入充沛自然光，打造明亮舒適的生活空間" }
   ],
   "parallax": {
@@ -43,7 +43,7 @@
   },
   "woven": {
     "titleV": "白金高輪\n珍藏都心生活",
-    "body": "EL FARO+ 白金高輪座落東京港區稀有地段，14戶住宅環繞綠意與運河水景，南向開闊視野與品川生活圈僅咫尺之遙。承襲西班牙語「燈塔」之意，在都市核心為您織就歷久彌新的居住樣貌。",
+    "body": "OK PRIME+ 白金高輪座落東京港區稀有地段，14戶住宅環繞綠意與運河水景，南向開闊視野與品川生活圈僅咫尺之遙。承襲西班牙語「燈塔」之意，在都市核心為您織就歷久彌新的居住樣貌。",
     "more": "了解更多"
   },
   "transportSlider": {
@@ -51,13 +51,13 @@
       {
         "subtitle": "Landmark 2025",
         "title": "東京2025最新地標\n高輪GATEWAY CITY",
-        "description": "東京2025年最新地標誕生！「高輪GATEWAY CITY」—JR 高輪 Gateway 站直結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金・品川周邊注入全新城市能量。",
+        "description": "東京2025年最新地標誕生！「高輪 GATEWAY CITY」\nJR 高輪 Gateway 站連結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金・品川周邊注入全新城市能量。",
         "subtext": "Urban Renaissance."
       },
       {
         "subtitle": "Exquisite Detail",
         "title": "5分鐘直達品川\n9分鐘直通東京",
-        "description": "品川站直結，輕鬆串聯東京都心與橫濱方向。日常通勤與週末出遊，都能以最短的移動時間完成。",
+        "description": "品川站直達，輕鬆串聯東京都心與橫濱方向。\n日常通勤與週末出遊，都能以最短的移動時間完成。",
         "subtext": "Exceptional Quality."
       },
       {
@@ -83,7 +83,7 @@
   "showcase": {
     "headerTitle": "LOCATION",
     "headerSub": "(Life Information)",
-    "headerTag": "都市便利與靜謐住環境和諧共存的街區",
+    "headerTag": "都市便利與靜謐住宅環境",
     "headerDesc": "白金高輪站周邊，設有日常購物便利的商業設施及多元飲食選擇，完善生活便利性。鄰近公園與綠意盎然的街景點綴其中，身處都心卻擁有靜謐安適的居住環境。兼具都市機能與宜人寧靜的優質日常生活，盡在此區實現。",
     "tagFeatured": "白金高輪周邊特集",
     "btnReadMore": "DISCOVER MORE",
@@ -97,7 +97,7 @@
         "blockDesc": "多元便捷的交通網絡，為日常注入活力與機動性。大型購物設施、高速道路與交通動線便利，工作、購物、娛樂、休閒皆齊備，打造真正宜居的都會生活圈。",
         "products": [
           {
-            "title": "白金AEL CITY",
+            "title": "白金AER CITY",
             "price": "白金高輪站直連的大型複合設施，集商業與醫療於一體，是街區的地標建築。",
             "stepNum": "15 min"
           },
@@ -140,8 +140,6 @@
   },
   "nav": {
     "items": [
-      { "label": "建案理念", "href": "/concept" },
-      { "label": "區域再開發 / 周邊設施", "href": "/amenities" },
       { "label": "地段核心", "href": "/location" },
       { "label": "生活圈 / 交通 / 設施", "href": "/transportation" },
       { "label": "建築特色", "href": "/architecture" },
@@ -183,16 +181,6 @@
         "hoverText": "回到首頁・探索建案"
       },
       {
-        "title": "建案理念",
-        "subtitle": "Concept",
-        "hoverText": "都市核心・現代美學・沉穩居所"
-      },
-      {
-        "title": "區域再開發 / 周邊設施",
-        "subtitle": "Area Redevelopment",
-        "hoverText": "商場 電車站等"
-      },
-      {
         "title": "地段核心",
         "subtitle": "Location Value",
         "hoverText": "頂級建材・情境展示・專業導覽"
@@ -231,11 +219,11 @@
   },
   "concept": {
     "seo": {
-      "title": "建案理念｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪—東京都心超越時代與流行的東京港區出租公寓系列，目標成為住戶的燈塔。融合西班牙建築美景、質感外牆與 Urban Classic 設計，由忠訓地產提供賞屋諮詢。",
-      "keywords": ["EL FARO+", "白金高輪", "建案理念", "忠訓地產", "東京住宅", "品川"],
+      "title": "建案理念｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪—東京都心超越時代與流行的東京港區出租公寓系列，目標成為住戶的燈塔。融合西班牙建築美景、質感外牆與 Urban Classic 設計，由忠訓地產提供賞屋諮詢。",
+      "keywords": ["OK PRIME+", "白金高輪", "建案理念", "忠訓地產", "東京住宅", "品川"],
       "ogImage": "/images/og/concept.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 運河水岸建案外觀"
+      "ogImageAlt": "OK PRIME+ 白金高輪 運河水岸建案外觀"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -268,7 +256,7 @@
       "paragraphs": [
         "座落港區，卻能感受再開發蓬勃發展中的品川區域，\n其進化最前線的居住潛力，盡在此處實現。",
         "靈活運用天王洲艾爾站與品川站，輕鬆往返都心，\n實現南向開闊水岸的日常風景。",
-        "在先進與自然融合的灣區創造全新價值，全14戶。\nEL FARO+ 白金高輪，正式啟動。"
+        "在先進與自然融合的灣區創造全新價值，全14戶。\nOK PRIME+ 白金高輪，正式啟動。"
       ]
     },
     "marquee": [
@@ -300,7 +288,7 @@
     "canalGreen": {
       "title": "CANAL & GREEN",
       "description": "南向臨運河的開闊視野。在持續發展的都心中，綠意與水岸交織的景致在此呈現。",
-      "mapLabelLine1": "EL FARO+",
+      "mapLabelLine1": "OK PRIME+",
       "mapLabelLine2": "白金高輪"
     },
     "surroundings": {
@@ -323,11 +311,11 @@
   },
   "transportation": {
     "seo": {
-      "title": "交通動線｜EL FARO+ 白金高輪",
-      "description": "東京都港區三田5-5-10。白金高輪・三田・田町三站可及，南北線・三田線・淺草線・JR 交會，輕鬆連結都心與羽田機場。忠訓地產為您說明 EL FARO+ 白金高輪交通優勢。",
-      "keywords": ["EL FARO+", "白金高輪", "交通", "三田", "田町", "忠訓地產"],
+      "title": "交通動線｜OK PRIME+ 白金高輪",
+      "description": "東京都港區三田5-5-10。白金高輪・三田・田町三站可及，南北線・三田線・淺草線・JR 交會，輕鬆連結都心與羽田機場。忠訓地產為您說明 OK PRIME+ 白金高輪交通優勢。",
+      "keywords": ["OK PRIME", "OK PRIME+", "白金高輪", "交通", "三田", "田町", "忠訓地產"],
       "ogImage": "/images/og/transportation.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 交通動線"
+      "ogImageAlt": "OK PRIME+ 白金高輪 交通動線"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -440,7 +428,7 @@
     "faq": {
       "items": [
         {
-          "question": "EL FARO+ 白金高輪最近的車站是哪一站？",
+          "question": "OK PRIME+ 白金高輪最近的車站是哪一站？",
           "answer": "最近車站為東京地鐵南北線・都營三田線「白金高輪」站，步行約5分（約400m）。亦可利用三田站、田町站與泉岳寺站前往品川與羽田機場。"
         },
         {
@@ -457,11 +445,11 @@
   "location": {
     "page": {
       "seo": {
-        "title": "地段核心・周邊環境｜EL FARO+ 白金高輪",
+        "title": "地段核心・周邊環境｜OK PRIME+ 白金高輪",
         "description": "東京都港區三田5-5-10（〒108-0073）。白金高輪站步行約5分，鄰近慶應義塾大學三田校區與高輪 GATEWAY CITY。都市便利與靜謐住環境和諧共存，由忠訓地產提供建案資訊。",
-        "keywords": ["EL FARO+", "白金高輪", "三田5-5-10", "周邊環境", "地理位置", "忠訓地產", "港區三田"],
+        "keywords": ["OK PRIME", "OK PRIME+", "白金高輪", "三田5-5-10", "周邊環境", "地理位置", "慶應文教區", "忠訓地產", "港區三田"],
         "ogImage": "/images/og/location.jpg",
-        "ogImageAlt": "EL FARO+ 白金高輪 港區地段與周邊環境"
+        "ogImageAlt": "OK PRIME+ 白金高輪 港區地段與周邊環境"
       },
       "breadcrumb": {
         "home": "首頁",
@@ -470,7 +458,7 @@
       "faq": {
         "items": [
           {
-            "question": "EL FARO+ 白金高輪的地址在哪？",
+            "question": "OK PRIME+ 白金高輪的地址在哪？",
             "answer": "位於東京都港區三田5-5-10（〒108-0073），白金高輪站步行約5分，三田・田町・泉岳寺亦在步行圈內。"
           },
           {
@@ -483,15 +471,15 @@
           }
         ]
       },
-      "heroAlt": "周邊環境",
+      "heroAlt": "慶應文教區",
       "intro": {
         "title": "LOCATION",
-        "subtitle": "臨近運河，走向開放的濱水前沿。",
+        "subtitle": "鄰近慶應義塾大學，獨特文教區立地。",
         "paragraphs": [
-          "坐擁港區三田地址，同時感受高輪・品川再開發帶動的街區演進，是一處充滿潛力的立地。",
-          "善用白金高輪・三田・田町等多站交通，輕鬆穿梭都心與品川生活圈，日常亦可享受港區靜謐住環境。"
+          "距慶應義塾大學三田校區步行約5分鐘。身處都心，卻能日常感受歷史悠久文教區的靜謐氛圍與知性氣息。",
+          "港區三田與白金高輪在此交會，文教、商務與生活機能並存，是一處兼具稀有性與潛力的居住立地。"
         ],
-        "waterfrontAlt": "臨近運河的濱水景觀"
+        "waterfrontAlt": "慶應義塾大學周邊文教區"
       },
       "overview": {
         "title": "周邊環境導覽",
@@ -528,7 +516,7 @@
         "title": "地理位置",
         "subtitle": "Location",
         "tagline": "港區三田・白金高輪—都心與文教圈交會的地址。",
-        "body": "位於東京都港區三田5-5-10，鄰近白金高輪與高輪 GATEWAY CITY 再開發。沉穩的住宅氛圍與都心便利共存，是具高未來性的立地。商務、文化與生活機能均衡發展的街景在此延展。",
+        "body": "位於東京都港區三田5-5-10，鄰近白金高輪與高輪 GATEWAY CITY 再開發。\n沉穩的住宅氛圍與都心便利共存，是具高未來性的立地。商務、文化與生活機能均衡發展的街景在此延展。",
         "imageAlt": "港區三田・白金高輪區域"
       },
       "access": {
@@ -544,10 +532,10 @@
             "distance": "約 400m"
           },
           {
-            "id": "tennozu",
-            "name": "天王洲艾爾站",
-            "time": "電車約 13 分",
-            "distance": "經品川／臨海線"
+            "id": "mita_tamachi",
+            "name": "三田、田町站",
+            "time": "步行約 13–14 分",
+            "distance": "都營三田線／JR 山手線"
           },
           {
             "id": "shinagawa",
@@ -577,13 +565,13 @@
         "items": [
           {
             "id": "ael",
-            "name": "白金 AEL CITY",
+            "name": "白金 AER CITY",
             "time": "步行約 3 分",
             "distance": "約 240m"
           },
           {
-            "id": "season",
-            "name": "品川 Season Terrace",
+            "id": "gateway",
+            "name": "高輪 GATEWAY CITY",
             "time": "步行約 15 分",
             "distance": "約 1,200m"
           },
@@ -601,7 +589,7 @@
         "description": "彙整主要車站與機場的連結方式。供日常通勤、出差與旅行參考。",
         "rows": [
           { "label": "白金高輪站", "detail": "南北線・三田線　步行約 5 分" },
-          { "label": "天王洲艾爾站", "detail": "臨海線・東京單軌　電車約 13 分" },
+          { "label": "三田、田町站", "detail": "都營三田線・JR 山手線　步行約 13–14 分" },
           { "label": "品川站", "detail": "JR・京急　電車約 8 分" },
           { "label": "羽田機場", "detail": "電車約 30 分（參考值）" },
           { "label": "成田機場", "detail": "電車約 60–80 分（參考值）" }
@@ -615,8 +603,8 @@
         "title": "SHINAGAWA Sta.",
         "subtitle": "磁浮中央新幹線帶來的「未來交通價值」",
         "paragraphs": [
-          "品川站預計開通磁浮中央新幹線，最快僅需 40 分鐘即可連結東京與名古屋，世界級的高速交通網絡即將誕生。",
-          "從白金高輪前往品川站僅需 2 站距離。無論國內外，移動便利性都將大幅提升，作為住宅區的稀有價值也將進一步提高。"
+          "品川站預計開通磁浮中央新幹線，最快僅需40分鐘即可連結東京與名古屋，世界級的高速交通網絡即將誕生。",
+          "從白金高輪前往品川站僅需2站。無論國內外，移動便利性都將大幅提升，作為住宅區的稀有價值也將進一步提高。"
         ],
         "imageAlt": "品川站周邊",
         "footer": "OK PRIME SHIROKANE-TAKANAWA | 03"
@@ -638,7 +626,7 @@
         "imageCaption": "慶應義塾大學 —— 步行 5 分／350m",
         "cards": [
           {
-            "name": "白金 AEL CITY",
+            "name": "白金 AER CITY",
             "time": "步行 10 分",
             "description": "白金高輪站直連的大型複合設施。集商業與醫療於一體，是街區的地標建築。"
           },
@@ -667,7 +655,7 @@
         "subtitle": "都市便利與靜謐住環境和諧共存的街區",
         "body": "白金高輪站周邊，設有日常購物便利的商業設施及多元飲食選擇，完善生活便利性。鄰近公園與綠意盎然的街景點綴其中，身處都心卻擁有靜謐安適的居住環境。兼具都市機能與宜人寧靜的優質日常生活，盡在此區實現。",
         "lifeInfoTitle": "Life Information",
-        "mapProject": "EL FARO+ SHIROKANE-TAKANAWA",
+        "mapProject": "OK PRIME+ SHIROKANE-TAKANAWA",
         "mapStations": [
           "白金高輪站 — 步行 9 分",
           "田町／三田站 — 步行 14 分"
@@ -681,7 +669,7 @@
           { "name": "DCM 三田店", "time": "步行 3 分", "distance": "190m" },
           { "name": "7-Eleven 港區三田五丁目店", "time": "步行 6 分", "distance": "400m" },
           { "name": "三井住友銀行 三田通支店", "time": "步行 10 分", "distance": "600m" },
-          { "name": "白金 AEL CITY", "time": "步行 10 分", "distance": "700m" },
+          { "name": "白金 AER CITY", "time": "步行 10 分", "distance": "700m" },
           { "name": "港區立高輪區民中心", "time": "步行 14 分", "distance": "950m" },
           { "name": "白金商店街", "time": "步行 14 分", "distance": "1.0km" }
         ],
@@ -691,9 +679,9 @@
   },
   "developer": {
     "seo": {
-      "title": "品牌故事｜EL FARO+ 白金高輪",
-      "description": "OK PRIME 品牌故事—從第一間房到家族資產版圖。忠訓地產為 EL FARO+ 白金高輪提供專業日本置產、賞屋諮詢與投資規劃服務。",
-      "keywords": ["EL FARO+", "OK PRIME", "忠訓地產", "品牌故事", "日本置產"],
+      "title": "品牌故事｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME 品牌故事—從第一間房到家族資產版圖。忠訓地產為 OK PRIME+ 白金高輪提供專業日本置產、賞屋諮詢與投資規劃服務。",
+      "keywords": ["OK PRIME+", "OK PRIME", "忠訓地產", "品牌故事", "日本置產"],
       "ogImage": "/images/og/story.jpg",
       "ogImageAlt": "OK PRIME 忠訓地產 品牌故事"
     },
@@ -808,11 +796,11 @@
   },
   "summary": {
     "seo": {
-      "title": "物件概要｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪物件概要、間取圖、內外部仕上表與設備規格。西班牙語「燈塔」之意，超越時代延續資產價值。由忠訓地產提供賞屋諮詢。",
-      "keywords": ["EL FARO+", "白金高輪", "物件概要", "間取り", "忠訓地產"],
+      "title": "物件概要｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪物件概要、間取圖、內外部仕上表與設備規格。西班牙語「燈塔」之意，超越時代延續資產價值。由忠訓地產提供賞屋諮詢。",
+      "keywords": ["OK PRIME", "OK PRIME+", "白金高輪", "物件概要", "間取り", "忠訓地產"],
       "ogImage": "/images/og/summary.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 物件概要"
+      "ogImageAlt": "OK PRIME+ 白金高輪 物件概要"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -822,22 +810,24 @@
     "intro": {
       "image02Alt": "エルファーロ 品牌意象",
       "image03Alt": "エルファーロプラス白金高輪",
-      "paragraph": "西班牙語中意為「燈塔」的 El Faro（エルファーロ）。\n展現石造建築堅固形態的設計，歷經歲月依舊美麗。\n而那光芒，將成為人們心靈的歸宿，照亮未來的路標。",
+      "paragraph": "展現石造建築堅固形態的設計，歷經歲月依舊美麗。\n而那光芒，將成為人們心靈的歸宿，照亮未來的路標。",
       "heading": "超越時代，延續資產價值"
     },
     "overview": {
       "title": "物件概要",
       "subtitle": "Design overview",
-      "disclaimer": "※外・内部仕上表および設備表記載の内容は、施工上の都合等により変更となる場合があります。"
+      "disclaimer": "※外部・內部仕上表及設備表所載內容，可能因施工等因素而變更。"
     },
     "floorPlan": {
-      "title": "間取り図",
+      "title": "平面圖",
       "subtitle": "Plan",
-      "footnote": "※間取り図はあくまでイメージで、施工上の都合等により変更となる場合があります。"
+      "imageAlt": "OK PRIME 白金高輪 1F、2F–4F、5F 平面圖",
+      "footnote": "※平面圖僅供參考，可能因施工等原因而有所變更。"
     },
     "interior": {
       "title": "內部仕上表",
-      "subtitle": "Finish schedule"
+      "subtitle": "Finish schedule",
+      "privateArea": "〈住戶專有部分〉"
     },
     "equipment": {
       "title": "設備"
@@ -849,56 +839,57 @@
     "labels": {
       "name": "名稱",
       "location": "所在地",
-      "lotNumber": "地名地番",
-      "address": "住居表示",
-      "siteOverview": "敷地概要",
-      "siteArea": "敷地面積",
-      "zoning": "用途地域",
-      "fireZone": "防火地域",
-      "coverage": "建ぺい率",
+      "lotNumber": "地號",
+      "address": "門牌地址",
+      "siteOverview": "基地概要",
+      "siteArea": "基地面積",
+      "zoning": "使用分區",
+      "fireZone": "防火區域",
+      "coverage": "建蔽率",
       "far": "容積率",
-      "heightDistrict": "高度地区",
-      "other": "その他",
-      "buildingOverview": "建物概要",
+      "heightDistrict": "高度地區",
+      "other": "其他",
+      "buildingOverview": "建築物概要",
       "mainUse": "主要用途",
-      "totalFloorArea": "延べ面積",
-      "constructionType": "工事種別",
+      "totalFloorArea": "總樓地板面積",
+      "constructionType": "工程種類",
       "buildingArea": "建築面積",
-      "buildingCoverage": "建ぺい率",
-      "constructionPeriod": "工事期間",
-      "structure": "構造・階數",
-      "farFloorArea": "容積対象延面積",
+      "buildingCoverage": "建蔽率",
+      "constructionPeriod": "工期",
+      "structure": "構造・樓層",
+      "farFloorArea": "容積計算樓地板面積",
       "floorAreaRatio": "容積率",
-      "fireResistance": "耐火種別",
-      "elevator": "エレベーター",
-      "parking": "駐車場",
-      "permitNumber": "建築確認番号",
-      "bicycleParking": "駐輪場",
-      "motorcycleParking": "バイク置場",
-      "privateArea": "専有面積",
+      "fireResistance": "耐火種類",
+      "elevator": "電梯",
+      "parking": "停車場",
+      "permitNumber": "建築確認編號",
+      "bicycleParking": "自行車停車位",
+      "motorcycleParking": "機車停車位",
+      "privateArea": "專有面積",
       "developer": "建築主",
       "part": "部位",
       "roomName": "室名",
-      "floor": "床",
-      "finishMaterial": "仕上材料",
-      "substrate": "下地",
-      "baseboard": "巾木",
-      "wall": "壁",
-      "ceiling": "天井",
-      "ceilingHeight": "天井高",
-      "specification": "仕様",
-      "layout": "間取り",
-      "roomNo": "号室",
-      "exclusiveArea": "専有面積"
+      "floor": "地面",
+      "finishMaterial": "面層材料",
+      "substrate": "底層",
+      "baseboard": "踢腳線",
+      "wall": "牆面",
+      "ceiling": "天花板",
+      "ceilingHeight": "天花高度",
+      "specification": "規格",
+      "layout": "格局",
+      "roomNo": "房號",
+      "exclusiveArea": "專有面積",
+      "type": "類型"
     }
   },
   "architecture": {
     "seo": {
-      "title": "建築特色｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪外觀設計：二丁掛磚、石材紋理、西班牙風格地磚與光影對比，呈現 Urban Classic 的沉穩屹立。Design Meiho Archilabo 操刀，由忠訓地產提供建案資訊。",
-      "keywords": ["EL FARO+", "白金高輪", "建築設計", "外觀", "忠訓地產"],
+      "title": "建築特色｜OK PRIME 白金高輪",
+      "description": "OK PRIME 白金高輪外觀設計：二丁掛磚、石材紋理、西班牙風格地磚與光影對比，呈現 Urban Classic 的沉穩屹立。Design Meiho Archilabo 操刀，由忠訓地產提供建案資訊。",
+      "keywords": ["OK PRIME", "白金高輪", "建築設計", "外觀", "忠訓地產"],
       "ogImage": "/images/og/architecture.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 Urban Classic 建築外觀"
+      "ogImageAlt": "OK PRIME 白金高輪 Urban Classic 建築外觀"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -908,11 +899,11 @@
       "tag": "ARCHITECTURE & MATERIALS",
       "title": "建築特色",
       "subtitle": "以千年工藝，打造穿越時代的建築外觀",
-      "imageAlt": "EL FARO+ SHIROKANE-TAKANAWA 建築外觀"
+      "imageAlt": "OK PRIME SHIROKANE-TAKANAWA 建築外觀"
     },
     "intro": {
       "heading": "職人工藝 × 現代建築技術的極致融合",
-      "body": "EL FARO+ 白金高輪，從外牆磁磚到塗裝系統，每一個材料的選擇都代表著對品質的堅持。我們選用日本最高規格的建材，以傳承千年的工藝美學，為您打造歷久彌新的都心資產。"
+      "body": "OK PRIME 白金高輪，從外牆磁磚到塗裝系統，每一個材料的選擇都代表著對品質的堅持。我們選用日本最高規格的建材，以傳承千年的工藝美學，為您打造歷久彌新的都心資產。"
     },
     "highlights": [
       {
@@ -935,9 +926,9 @@
       },
       {
         "num": "04",
-        "tag": "50二丁・黃金比例",
-        "title": "50二丁（材貼網拼）——兼顧「手工質感」與「施工效率」",
-        "body": "單片 95×45 mm 的「50二丁」是日系建築最經典的黃金比例，能拉出精緻的線條。採用背面材貼（網拼 300×300 mm）出貨，既保留了小磚的精緻度，又大幅提升了現場施工的速度與平整度。"
+        "tag": "45二丁掛・フランカ",
+        "title": "45二丁掛フランカ（材貼網拼）——兼顧「手工質感」與「施工效率」",
+        "body": "採用「45二丁掛フランカ」系列，是日系建築經典的二丁掛比例，能拉出精緻的線條。採用背面材貼（網拼）出貨，既保留了小磚的精緻度，又大幅提升了現場施工的速度與平整度。"
       }
     ],
     "advantages": {
@@ -979,8 +970,8 @@
     "spec": {
       "title": "主要規格",
       "items": [
-        { "label": "磁磚名稱", "value": "EL FARO+ 外牆磁磚" },
-        { "label": "磁磚尺寸", "value": "95 × 45 mm（50二丁）" },
+        { "label": "磁磚名稱", "value": "Flanca" },
+        { "label": "磁磚尺寸", "value": "45二丁掛フランカ" },
         { "label": "出貨規格", "value": "材貼網拼 300 × 300 mm" },
         { "label": "磁磚類型", "value": "BI類（磁器質）" },
         { "label": "吸水率", "value": "< 1%（頂級規格）" },
@@ -990,7 +981,7 @@
         { "label": "工藝產地", "value": "日本岐阜縣 美濃燒（長江陶業）" }
       ]
     },
-    "tags": ["美濃燒", "BI類磁器質", "5:9:4混色", "50二丁"],
+    "tags": ["美濃燒", "BI類磁器質", "5:9:4混色", "Flanca"],
     "consultant": {
       "name": "OK PRIME 顧問"
     },
@@ -1012,7 +1003,7 @@
       "label": "CASE STUDY",
       "title": "SK 化研建材採用案例",
       "items": [
-        { "src": "/images/architecture/sk-material-01.jpg", "caption": "外牆塗裝面 — 超低汙染・超耐候" },
+        { "src": "/images/architecture/sk-material-12.jpg", "caption": "採用事例 — 集合住宅外牆" },
         { "src": "/images/architecture/sk-material-02.jpg", "caption": "スーパーセラタイトF 外牆系統" },
         { "src": "/images/architecture/sk-material-03.jpg", "caption": "水性セラタイトF 耐久塗料" },
         { "src": "/images/architecture/sk-material-04.jpg", "caption": "水性セラタイトSi 系列" },
@@ -1029,18 +1020,18 @@
     "partner": {
       "label": "MATERIAL PARTNER",
       "name": "エスケー化研株式会社 (SK KAKEN Co., Ltd.)",
-      "description": "創業於 1955 年，日本建築仕上塗材・外牆磁磚國內市佔率 No.1，為 EL FARO+ 白金高輪指定外牆建材合作夥伴。"
+      "description": "創業於 1955 年，日本建築仕上塗材・外牆磁磚國內市佔率 No.1，為 OK PRIME 白金高輪指定外牆建材合作夥伴。"
     },
     "backLink": "← 返回首頁",
     "backToTop": "返回頂部"
   },
   "interiorPage": {
     "seo": {
-      "title": "室內情境｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪室內設計情境展示。寬闊大窗引入充沛陽光，柔和燈光映照美麗陰影，打造住戶心中的燈塔。由忠訓地產提供賞屋預約。",
-      "keywords": ["EL FARO+", "白金高輪", "室內設計", "忠訓地產"],
+      "title": "室內情境｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪室內設計情境展示。寬闊大窗引入充沛陽光，柔和燈光映照美麗陰影，打造住戶心中的燈塔。由忠訓地產提供賞屋預約。",
+      "keywords": ["OK PRIME", "OK PRIME+", "白金高輪", "室內設計", "忠訓地產"],
       "ogImage": "/images/og/interior.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 室內共用空間"
+      "ogImageAlt": "OK PRIME+ 白金高輪 室內共用空間"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -1050,7 +1041,7 @@
       "tag": "空間願景",
       "body": "以光線、材質與比例，勾勒白金高輪的室內生活想像。從玄關到客廳，每一處空間都承載著對日常品質的細膩思考。",
       "image": "/images/interior/住戶E-室內.png",
-      "imageAlt": "EL FARO+ 白金高輪 室內情境"
+      "imageAlt": "OK PRIME+ 白金高輪 室內情境"
     },
     "philosophy": {
       "heading": "思考建築與環境的「間」",
@@ -1060,7 +1051,7 @@
     },
     "showcase": {
       "image": "/images/index/9497269d-233d-4a5e-8325-5febb2acf4d7.png",
-      "imageAlt": "EL FARO+ 白金高輪 室內全景"
+      "imageAlt": "OK PRIME+ 白金高輪 室內全景"
     },
     "projects": {
       "title": "空間情境",
@@ -1095,25 +1086,19 @@
           "id": "lobby",
           "title": "迎賓大廳",
           "category": "公設・玄關",
-          "image": "/images/transportation/EFプラス白金高輪05.06p.jpg"
+          "image": "/images/迎賓大廳.png"
         },
         {
-          "id": "concept",
-          "title": "空間美學概念",
-          "category": "概念・設計",
-          "image": "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png"
+          "id": "corridor",
+          "title": "入口走廊",
+          "category": "公設・走廊",
+          "image": "/images/入口走廊.png"
         },
         {
-          "id": "news1",
-          "title": "自然光與材質",
-          "category": "光線・材質",
-          "image": "/images/story/news1-1280x850.png"
-        },
-        {
-          "id": "news3",
-          "title": "和式現代融合",
-          "category": "住宅・都心",
-          "image": "/images/story/news3-1280x850.png"
+          "id": "elevator",
+          "title": "大廳電梯",
+          "category": "公設・電梯",
+          "image": "/images/大廳電梯.png"
         }
       ]
     },
@@ -1153,18 +1138,18 @@
       ]
     },
     "cta": {
-      "tag": "EL FARO+ 白金高輪",
+      "tag": "OK PRIME+ 白金高輪",
       "body": "探索更多室內規劃與物件詳細資訊",
       "button": "查看物件概要"
     }
   },
   "equipmentPage": {
     "seo": {
-      "title": "設備家電與保全系統｜EL FARO+ 白金高輪",
-      "description": "EL FARO+ 白金高輪設備介紹：廚房、衛浴、廁所設備與 ALSOK 保全系統。頂級設備・智慧系統・全方位安全，由忠訓地產提供建案資訊。",
-      "keywords": ["EL FARO+", "白金高輪", "設備", "保全系統", "忠訓地產"],
+      "title": "設備家電與保全系統｜OK PRIME+ 白金高輪",
+      "description": "OK PRIME+ 白金高輪設備介紹：廚房、衛浴、廁所設備與 ALSOK 保全系統。頂級設備・智慧系統・全方位安全，由忠訓地產提供建案資訊。",
+      "keywords": ["OK PRIME", "OK PRIME+", "白金高輪", "設備", "保全系統", "忠訓地產"],
       "ogImage": "/images/og/equipment.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 設備"
+      "ogImageAlt": "OK PRIME+ 白金高輪 設備"
     },
     "breadcrumb": {
       "home": "首頁",
@@ -1223,10 +1208,10 @@
   },
   "amenitiesPage": {
     "seo": {
-      "title": "區域再開發與周邊設施｜EL FARO+ 白金高輪",
+      "title": "區域再開發與周邊設施｜OK PRIME+ 白金高輪",
       "description": "港區三田5-5-10・白金高輪大規模都市更新、高輪 GATEWAY CITY、商業與生活設施導覽。白金高輪站步行約5分，串聯慶應三田與品川生活圈。忠訓地產為您說明建案周邊環境。",
       "keywords": [
-        "EL FARO+",
+        "OK PRIME+",
         "白金高輪",
         "三田5-5-10",
         "區域再開發",
@@ -1237,7 +1222,7 @@
         "忠訓地產"
       ],
       "ogImage": "/images/og/amenities.jpg",
-      "ogImageAlt": "EL FARO+ 白金高輪 周邊商業與生活設施"
+      "ogImageAlt": "OK PRIME+ 白金高輪 周邊商業與生活設施"
     },
     "breadcrumb": {
       "ariaLabel": "麵包屑導覽",
@@ -1276,7 +1261,7 @@
     "pickUpItems": [
       {
         "title": "高輪 GATEWAY CITY——東京最新複合地標",
-        "body": "JR 高輪 Gateway 站直結的大規模複合都市開發。辦公、商業、住宿與文化空間匯聚，為白金高輪・品川生活圈注入全新城市能量。",
+        "body": "JR 高輪 Gateway 站連結的大規模複合都市開發。辦公、商業、住宿與文化空間匯聚，為白金高輪・品川生活圈注入全新城市能量。",
         "image": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
         "tags": ["Landmark", "都市更新"],
         "href": "#shopping"
@@ -1303,7 +1288,7 @@
         "minutes": "15",
         "showBike": false,
         "lead": "東京最新地標「高輪 GATEWAY CITY」，步行約 15 分鐘即可抵達。",
-        "body": "JR 高輪 Gateway 站直結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金高輪・品川生活圈注入全新城市景觀與日常機能。",
+        "body": "JR 高輪 Gateway 站連結的大規模複合都市開發，匯集辦公、商業、住宿與文化空間，為白金高輪・品川生活圈注入全新城市景觀與日常機能。",
         "note": "高輪 GATEWAY CITY",
         "noteDetail": "步行約 15 分",
         "imageMain": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
@@ -1414,21 +1399,22 @@
         },
         {
           "question": "如何預約賞屋了解周邊環境？",
-          "answer": "歡迎透過網站預約賞屋，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪（港區三田5-5-10）的周邊設施、交通動線與投資置產資訊。"
+          "answer": "歡迎透過網站預約賞屋，由忠訓地產專業團隊為您說明 OK PRIME+ 白金高輪（港區三田5-5-10）的周邊設施、交通動線與投資置產資訊。"
         }
       ]
     }
   },
   "equipmentToiletPage": {
     "seo": {
-      "title": "TOTO WASHLET SS1 廁所設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ 採用 TOTO WASHLET SS1 溫水洗淨便座，搭載「びっくリーン」清潔技術、除菌與節電功能。完整規格、カタログ與常見問題說明。",
+      "title": "TOTO WASHLET SS1 廁所設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ 採用 TOTO WASHLET SS1 溫水洗淨便座，搭載超潔淨清潔技術、除菌與節電功能。完整規格、型錄與常見問題說明。",
       "keywords": [
+        "OK PRIME",
         "TOTO WASHLET",
         "SS1",
         "溫水洗淨便座",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "廁所設備",
         "智能馬桶",
         "忠訓地產"
@@ -1441,20 +1427,20 @@
       "ariaLabel": "麵包屑導覽",
       "home": "首頁",
       "equipment": "設備家電與保全系統",
-      "current": "廁所"
+      "current": "廁所設備"
     },
     "hero": {
-      "category": "トイレ設備",
+      "category": "廁所設備",
       "brand": "TOTO",
       "title": "WASHLET",
-      "model": "品番：SS1",
-      "description": "TOTO ウォシュレット SS1 系列。搭載「びっくリーン」清潔技術，提供舒適且安心的如廁體驗。",
+      "model": "型號：SS1",
+      "description": "TOTO WASHLET SS1 系列。搭載超潔淨清潔技術，提供舒適且安心的如廁體驗。",
       "image": "/images/equipment/toilet/page-01.png",
-      "imageAlt": "TOTO WASHLET SS1 カタログ"
+      "imageAlt": "TOTO WASHLET SS1 型錄"
     },
     "intro": {
-      "heading": "使いやすく、嬉しい機能が満載",
-      "body": "搭載 TOTO 獨家「びっくリーン」技術，汚れがつきにくく、お掃除もラク。\n每一刻的使用，都帶來潔淨與安心的日常。"
+      "heading": "好用、貼心機能一次到位",
+      "body": "搭載 TOTO 獨家超潔淨技術，汙漬不易附著，清掃也更輕鬆。\n每一刻的使用，都帶來潔淨與安心的日常。"
     },
     "plans": {
       "heading": "產品規格",
@@ -1466,13 +1452,13 @@
           "title": "WASHLET SS1",
           "image": "/images/equipment/toilet/page-03.png",
           "specs": [
-            "品番：SS1",
-            "搭載「びっくリーン」清潔技術",
-            "汚れがつきにくい表面加工",
-            "使うたび除菌機能",
-            "お掃除超ラク設計"
+            "型號：SS1",
+            "搭載超潔淨清潔技術",
+            "汙漬不易附著的表面加工",
+            "每次使用即除菌",
+            "清掃超輕鬆設計"
           ],
-          "note": "※ 規格・機能はカタログ記載内容に準じます。施工上の都合により変更となる場合があります。"
+          "note": "※ 規格、機能以型錄記載為準。可能因施工條件而變更。"
         },
         {
           "id": "ss2",
@@ -1480,12 +1466,12 @@
           "title": "WASHLET SS2",
           "image": "/images/equipment/toilet/page-04.png",
           "specs": [
-            "品番：SS2",
-            "SS1 全機能搭載",
+            "型號：SS2",
+            "搭載 SS1 全部機能",
             "追加暖風乾燥功能",
-            "自動開閉便座（選配）"
+            "自動開闔便座（選配）"
           ],
-          "note": "※ 詳細仕様はカタログをご確認ください。"
+          "note": "※ 詳細規格請參閱型錄。"
         },
         {
           "id": "ss3",
@@ -1493,52 +1479,52 @@
           "title": "WASHLET SS3",
           "image": "/images/equipment/toilet/page-05.png",
           "specs": [
-            "品番：SS3",
+            "型號：SS3",
             "頂級 WASHLET 系列",
             "全自動清潔・除菌",
             "靜音緩降便座蓋"
           ],
-          "note": "※ 詳細仕様はカタログをご確認ください。"
+          "note": "※ 詳細規格請參閱型錄。"
         }
       ]
     },
     "features": {
       "heading": "核心機能",
       "image": "/images/equipment/toilet/page-02.png",
-      "imageAlt": "びっくリーン技術",
+      "imageAlt": "超潔淨技術",
       "items": [
         {
-          "title": "汚れツルリン",
-          "body": "特殊表面加工，汚れがつきにくく、水アカも付着しにくい設計。"
+          "title": "汙漬不易附著",
+          "body": "特殊表面加工，汙漬不易附著，水垢也難以殘留。"
         },
         {
-          "title": "おそうじ超ラク",
-          "body": "ノズル・便器内面のお手入れが簡単。日常の清掃負担を大幅に軽減。"
+          "title": "清掃超輕鬆",
+          "body": "噴嘴與便器內面保養簡便，大幅減輕日常清掃負擔。"
         },
         {
-          "title": "使うたび除菌",
-          "body": "使用のたびに除菌機能が作動し、いつも清潔な状態をキープ。"
+          "title": "每次使用即除菌",
+          "body": "每次使用時除菌機能即作動，隨時維持潔淨狀態。"
         }
       ]
     },
     "specs": {
-      "heading": "仕様・機能",
+      "heading": "規格・機能",
       "items": [
         {
           "title": "SS1 標準型",
           "image": "/images/equipment/toilet/toilet-03.png",
-          "details": ["温水洗浄便座", "暖房便座", "節電モード"]
+          "details": ["溫水洗淨便座", "暖座便座", "節電模式"]
         },
         {
-          "title": "操作パネル",
+          "title": "操作面板",
           "image": "/images/equipment/toilet/toilet-08.png",
-          "details": ["ワンタッチ操作", "着座センサー連動", "音量調整可能"]
+          "details": ["一鍵操作", "坐墊感應連動", "可調整音量"]
         }
       ]
     },
     "catalog": {
-      "heading": "カタログ詳細",
-      "pageAlt": "カタログページ",
+      "heading": "型錄詳情",
+      "pageAlt": "型錄頁面",
       "pages": [
         "/images/equipment/toilet/page-02.png",
         "/images/equipment/toilet/page-03.png",
@@ -1559,12 +1545,12 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ 採用哪一款 WASHLET？",
-          "answer": "本建案廁所設備採用 TOTO WASHLET SS1 系列（品番：SS1）。具備温水洗浄、暖房便座、節電模式等核心功能，並搭載 TOTO 獨家「びっくリーン」清潔技術。"
+          "question": "白金高輪 OK PRIME+ 採用哪一款 WASHLET？",
+          "answer": "本建案廁所設備採用 TOTO WASHLET SS1 系列（型號：SS1）。具備溫水洗淨、暖座便座、節電模式等核心功能，並搭載 TOTO 獨家超潔淨清潔技術。"
         },
         {
-          "question": "什麼是「びっくリーン」清潔技術？",
-          "answer": "「びっくリーン」是 TOTO 開發的清潔技術，透過特殊表面加工，讓汙漬不易附著、水垢不易殘留，日常清掃更輕鬆，並在使用時提供除菌功能，維持潔淨的如廁環境。"
+          "question": "什麼是超潔淨清潔技術？",
+          "answer": "超潔淨是 TOTO 開發的清潔技術，透過特殊表面加工，讓汙漬不易附著、水垢不易殘留，日常清掃更輕鬆，並在使用時提供除菌功能，維持潔淨的如廁環境。"
         },
         {
           "question": "WASHLET 是否具備節電功能？",
@@ -1572,32 +1558,33 @@
         },
         {
           "question": "設備規格是否可能變更？",
-          "answer": "頁面所示規格、機能與カタログ內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
+          "answer": "頁面所示規格、機能與型錄內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
         },
         {
           "question": "如何預約賞屋並確認實際設備？",
-          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪的廁所設備、室內規劃與投資置產資訊。"
+          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 OK PRIME+ 白金高輪的廁所設備、室內規劃與投資置產資訊。"
         }
       ]
     }
   },
   "equipmentBathroomPage": {
     "seo": {
-      "title": "衛浴設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ 衛浴設備介紹：TOTO WASHLET 溫水洗淨便座、NASLUCK ベラーザ・ネオ洗面化粧台、HOUSETEC NJ 系統浴室。完整機能、規格與常見問題說明。",
+      "title": "衛浴設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ 衛浴設備介紹：TOTO WASHLET 溫水洗淨便座、NASLUCK Bellaz Neo 洗面化妝台、HOUSETEC NJ 系統浴室。完整機能、規格與常見問題說明。",
       "keywords": [
+        "OK PRIME",
         "衛浴設備",
-        "洗面化粧台",
-        "ベラーザ・ネオ",
+        "洗面化妝台",
+        "Bellaz Neo",
         "NASLUCK",
         "HOUSETEC NJ",
         "系統浴室",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "忠訓地產"
       ],
       "ogImage": "/images/og/equipment-bathroom.jpg",
-      "ogImageAlt": "NASLUCK ベラーザ・ネオ 洗面化粧台",
+      "ogImageAlt": "NASLUCK Bellaz Neo 洗面化妝台",
       "productName": "衛浴設備",
       "products": [
         {
@@ -1606,14 +1593,14 @@
           "description": "搭載 EWATER+ 除菌水系統、噴嘴自動洗淨與自動除臭功能的溫水洗淨便座。"
         },
         {
-          "name": "ベラーザ・ネオ",
+          "name": "Bellaz Neo",
           "brand": "NASLUCK",
           "description": "配備手持花灑、可調式水龍頭與大容量洗面盆的機能盥洗台。"
         },
         {
           "name": "NJ 系統浴室",
           "brand": "HOUSETEC",
-          "description": "兼具清掃性、安心入浴、節水省エネ與省スペース設計的公寓向けシステムバスルーム。"
+          "description": "兼具清潔便利、安心入浴、節水節能與省空間設計的公寓用系統浴室。"
         }
       ]
     },
@@ -1627,7 +1614,7 @@
       "title": "衛浴設備",
       "subtitle": "馬桶、洗手台、浴室",
       "image": "/images/equipment/bathroom/nasluck-01.jpg",
-      "imageAlt": "ベラーザ・ネオ 洗面化粧台"
+      "imageAlt": "Bellaz Neo 洗面化妝台"
     },
     "toilet": {
       "tag": "TOILET",
@@ -1645,7 +1632,7 @@
       "brand": "NASLUCK",
       "product": "Bellaz Neo 機能盥洗台",
       "heroImage": "/images/equipment/bathroom/nasluck-01.jpg",
-      "heroImageAlt": "ベラーザ・ネオ 洗面化粧台",
+      "heroImageAlt": "Bellaz Neo 洗面化妝台",
       "paragraphs": [
         "兼具美學與實用性的 Bellaz Neo，為現代都會生活打造更舒適的洗漱體驗。",
         "配備可拉伸式手持花灑，不僅方便日常清潔，更能輕鬆完成洗髮需求；可調式水龍頭設計，靈活滿足不同使用情境。大容量洗臉盆有效提升使用便利性，即使忙碌的早晨也能從容整理儀容。",
@@ -1654,23 +1641,23 @@
       "highlights": [
         {
           "image": "/images/equipment/bathroom/nasluck-05.jpg",
-          "imageAlt": "ホース内蔵のシャワー水栓",
+          "imageAlt": "內藏軟管淋浴龍頭",
           "caption": "可拉伸式手持花灑・可調式水龍頭"
         },
         {
           "image": "/images/equipment/bathroom/nasluck-02.jpg",
-          "imageAlt": "樹脂ボウル",
+          "imageAlt": "樹脂面盆",
           "caption": "大容量洗臉盆"
         },
         {
           "image": "/images/equipment/bathroom/nasluck-07.jpg",
-          "imageAlt": "アッパーキャビネット",
+          "imageAlt": "上層櫥櫃",
           "caption": "充裕收納空間"
         },
         {
           "image": "/images/equipment/bathroom/nasluck-10.jpg",
-          "imageAlt": "ミラーキャビネット",
-          "caption": "ミラーキャビネット"
+          "imageAlt": "鏡櫃",
+          "caption": "鏡櫃"
         }
       ]
     },
@@ -1679,8 +1666,8 @@
       "brand": "HOUSETEC",
       "product": "NJ 系統浴室",
       "heroImage": "/images/equipment/bathroom/nj-hero.jpg",
-      "heroImageAlt": "HOUSETEC NJ システムバスルーム",
-      "colorLineupHeading": "カラーラインアップ",
+      "heroImageAlt": "HOUSETEC NJ 系統浴室",
+      "colorLineupHeading": "色彩款式",
       "colorLineup": [
         "/images/equipment/bathroom/nj-color-03.png",
         "/images/equipment/bathroom/nj-extra-14.png"
@@ -1688,12 +1675,12 @@
       "features": [
         {
           "title": "卓越的清潔便利性",
-          "subtitle": "清掃性",
-          "body": "採用無明顯凹凸的「平坦地板（プレーンフロア）」，不僅排水性極佳，且地板到浴缸採無接縫的一體成型設計，不易藏污納垢，只需用海綿即可輕鬆刷洗。此外，配備了利用水流自然集中毛髮的「免觸碰毛髮收集器（楽すてヘアキャッチャー）」，讓清理排水口變得衛生且方便。",
+          "subtitle": "清潔便利",
+          "body": "採用無明顯凹凸的平坦地板，不僅排水性極佳，且地板到浴缸採無接縫的一體成型設計，不易藏污納垢，只需用海綿即可輕鬆刷洗。此外，配備了利用水流自然集中毛髮的免觸碰毛髮收集器，讓清理排水口變得衛生且方便。",
           "layout": "double",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-clean-01.jpg", "alt": "プレーンフロア" },
-            { "src": "/images/equipment/bathroom/nj-clean-02.jpg", "alt": "楽すてヘアキャッチャー" }
+            { "src": "/images/equipment/bathroom/nj-clean-01.jpg", "alt": "平坦地板" },
+            { "src": "/images/equipment/bathroom/nj-clean-02.jpg", "alt": "免觸碰毛髮收集器" }
           ]
         },
         {
@@ -1702,29 +1689,29 @@
           "body": "浴室出入口採用降低高低差的平坦設計，可有效防止長輩或幼童絆倒跌倒。同時，浴缸的跨越高度被降低至約 450mm，並貼心設有可供倚靠的空間，幫助使用者在進出浴缸時維持平衡與安全。",
           "layout": "double",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-safe-01.jpg", "alt": "低床仕様 出入口" },
-            { "src": "/images/equipment/bathroom/nj-safe-02.jpg", "alt": "またぎ高さ約450mm" }
+            { "src": "/images/equipment/bathroom/nj-safe-01.jpg", "alt": "低床規格出入口" },
+            { "src": "/images/equipment/bathroom/nj-safe-02.jpg", "alt": "跨越高度約450mm" }
           ]
         },
         {
           "title": "兼顧舒適度與節能環保",
-          "subtitle": "くつろぎと節水・省エネ",
-          "body": "浴缸內部為肩部保留了寬敞空間並配備扶手，在維持泡澡舒適度的前提下，相較傳統浴缸大幅減少了約 45 公升的用水量。此外，搭配特殊水流設計的節水型淋浴頭（eシャワーNf），以及保溫效果極佳的「高斷熱浴缸」，能減少熱水重複加熱的頻率，有效降低光熱費與二氧化碳排放。",
+          "subtitle": "舒適泡澡與節水節能",
+          "body": "浴缸內部為肩部保留了寬敞空間並配備扶手，在維持泡澡舒適度的前提下，相較傳統浴缸大幅減少了約 45 公升的用水量。此外，搭配特殊水流設計的節水型淋浴頭，以及保溫效果極佳的高斷熱浴缸，能減少熱水重複加熱的頻率，有效降低光熱費與二氧化碳排放。",
           "layout": "eco",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg", "alt": "浴槽 俯瞰" },
-            { "src": "/images/equipment/bathroom/nj-eco-insulation.jpg", "alt": "高断熱浴槽 断面図" },
-            { "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg", "alt": "eシャワーNf" },
-            { "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg", "alt": "節水シャワー" }
+            { "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg", "alt": "浴缸俯瞰" },
+            { "src": "/images/equipment/bathroom/nj-eco-insulation.jpg", "alt": "高斷熱浴缸剖面圖" },
+            { "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg", "alt": "節水淋浴頭" },
+            { "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg", "alt": "節水淋浴" }
           ]
         },
         {
           "title": "高靈活度的省空間結構",
-          "subtitle": "柔軟な対応・省スペース設計",
+          "subtitle": "彈性對應・省空間設計",
           "body": "透過獨特的纖薄結構，能在不縮減浴室內部空間的情況下，有效縮小設備外部的整體尺寸。這種設計不僅非常適合空間受限的改裝現場，還能為住宅騰出更多空間來擴寬走廊或洗臉台區域，讓整體空間規劃更加自由。",
           "layout": "wide",
           "images": [
-            { "src": "/images/equipment/bathroom/nj-space-02.jpg", "alt": "省スペース設計 スリム構造" }
+            { "src": "/images/equipment/bathroom/nj-space-02.jpg", "alt": "省空間設計・纖薄結構" }
           ]
         }
       ]
@@ -1734,45 +1721,46 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ 採用哪些衛浴設備？",
-          "answer": "本建案衛浴空間整合 TOTO WASHLET 溫水洗淨便座、NASLUCK ベラーザ・ネオ洗面化粧台，以及 HOUSETEC NJ 系統浴室。各設備均經嚴選，兼顧美觀、機能與日常使用的便利性。"
+          "question": "白金高輪 OK PRIME+ 採用哪些衛浴設備？",
+          "answer": "本建案衛浴空間整合 TOTO WASHLET 溫水洗淨便座、NASLUCK Bellaz Neo 洗面化妝台，以及 HOUSETEC NJ 系統浴室。各設備均經嚴選，兼顧美觀、機能與日常使用的便利性。"
         },
         {
-          "question": "ベラーザ・ネオ 洗面化粧台有哪些特色？",
-          "answer": "ベラーザ・ネオ配備可拉伸式手持花灑與可調式水龍頭，大容量洗面盆提升洗漱效率，下方充裕收納可整齊收納盥洗用品。S タイプ配備ライン引手與ソフトクローズ，兼顧設計感與使用質感。"
+          "question": "Bellaz Neo 洗面化妝台有哪些特色？",
+          "answer": "Bellaz Neo 配備可拉伸式手持花灑與可調式水龍頭，大容量洗面盆提升洗漱效率，下方充裕收納可整齊收納盥洗用品。S 款配備線型拉手與緩降關閉，兼顧設計感與使用質感。"
         },
         {
           "question": "HOUSETEC NJ 系統浴室適合哪些需求？",
-          "answer": "NJ 系統浴室以清掃性、安心入浴、節水省エネ與省スペース設計為核心。平坦地板與毛髮收集器讓清掃更輕鬆，低床出入口與低跨越浴缸提升安全性，高斷熱浴缸與節水淋浴頭則有助降低光熱費。"
+          "answer": "NJ 系統浴室以清潔便利、安心入浴、節水節能與省空間設計為核心。平坦地板與毛髮收集器讓清掃更輕鬆，低床出入口與低跨越浴缸提升安全性，高斷熱浴缸與節水淋浴頭則有助降低光熱費。"
         },
         {
           "question": "設備規格是否可能變更？",
-          "answer": "頁面所示規格、機能與カタログ內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
+          "answer": "頁面所示規格、機能與型錄內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
         },
         {
           "question": "如何預約賞屋並確認實際設備？",
-          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪的衛浴設備、室內規劃與投資置產資訊。"
+          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 OK PRIME+ 白金高輪的衛浴設備、室內規劃與投資置產資訊。"
         }
       ]
     }
   },
   "equipmentKitchenPage": {
     "seo": {
-      "title": "NASLUCK リヴィエール 廚房設備｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ 採用 NASLUCK コンパクトキッチン「リヴィエール」。間口900mmから、I型・アイランド型・ペニンシュラ型に対応。設備機器、セットプラン、施工事例を掲載。",
+      "title": "NASLUCK RIVIERE 廚房設備｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ 採用 NASLUCK 精巧廚房「RIVIERE」。間口 900mm 起，對應 I 型、中島型、半島型。設備機具、套裝方案與施工實例一次掌握。",
       "keywords": [
-        "リヴィエール",
+        "OK PRIME",
         "RIVIERE",
+        "リヴィエール",
         "NASLUCK",
-        "コンパクトキッチン",
+        "精巧廚房",
         "廚房設備",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "忠訓地產"
       ],
       "ogImage": "/images/og/equipment-kitchen.jpg",
-      "ogImageAlt": "NASLUCK リヴィエール コンパクトキッチン",
-      "productName": "NASLUCK リヴィエール"
+      "ogImageAlt": "NASLUCK RIVIERE 精巧廚房",
+      "productName": "NASLUCK RIVIERE"
     },
     "breadcrumb": {
       "ariaLabel": "麵包屑導覽",
@@ -1784,132 +1772,132 @@
       "tag": "KITCHEN EQUIPMENT",
       "title": "廚房設備",
       "brand": "NASLUCK",
-      "product": "リヴィエール コンパクトキッチン",
+      "product": "RIVIERE 精巧廚房",
       "description": "即使坪數有限，也能實現開放式對廚的夢想。從間口 900mm 起，為都市生活打造恰到好處的廚房空間。",
       "image": "/images/equipment/kitchen/riviere-01.jpg",
-      "imageAlt": "NASLUCK リヴィエール コンパクトキッチン"
+      "imageAlt": "NASLUCK RIVIERE 精巧廚房"
     },
     "concept": {
       "label": "CONCEPT",
-      "heading": "コンセプト",
+      "heading": "概念",
       "paragraphs": [
         "即使在緊湊的格局中，也能實現「中島型・半島型」對廚配置的夢想。",
-        "NASLUCK コンパクトキッチン「リヴィエール」以恰到好處的尺寸感見長，即使在小坪數空間也能完美融入。人氣的「中島型・半島型」對面配置同樣能夠實現，成為空間的主角，滿足每一位使用者的理想。",
-        "這款廚房的設計旨在最大限度地利用有限的空間，例如小型公寓或多代同堂家庭中的第二個廚房。其尺寸經過精心設計，充分考慮了工作流程和過道寬度。"
+        "NASLUCK 精巧廚房「RIVIERE」以恰到好處的尺寸感見長，即使在小坪數空間也能完美融入。人氣的「中島型・半島型」對面配置同樣能夠實現，成為空間的主角，滿足每一位使用者的理想。",
+        "無論是小型公寓，或兩代同堂住宅的次廚房，都能在有限空間發揮最大機能。尺寸設計充分考量作業動線與走道寬度。"
       ],
       "image": "/images/equipment/kitchen/riviere-03.jpg",
-      "imageAlt": "アイランド型キッチン"
+      "imageAlt": "中島型廚房"
     },
     "features": {
       "label": "FEATURES",
-      "heading": "特長・魅力",
+      "heading": "特色・魅力",
       "paragraphs": [
-        "針對狹小格局或兩代同堂住宅的次廚房等有限空間，以充分考量作業動線與通道寬度的尺寸設計，讓廚房發揮最大效用。",
-        "纖薄的機身，精簡至極致，小巧地容納了所有必要的功能。除了充足的頂櫃儲物空間外，它還兼容雙爐燃氣爐和電磁爐。"
+        "針對狹小格局或兩代同堂住宅的次廚房等有限空間，以充分考量作業動線與走道寬度的尺寸設計，讓廚房發揮最大效用。",
+        "纖薄機身精簡至極，小巧容納所有必要機能。除了充足的吊櫃收納空間外，亦可搭配雙口瓦斯爐與 IH 電磁爐。"
       ],
       "imageMain": "/images/equipment/kitchen/riviere-07.jpg",
-      "imageMainAlt": "I型 システムタイプキッチン",
+      "imageMainAlt": "I型 系統款廚房",
       "imageDiagram": "/images/equipment/kitchen/riviere-02.png",
-      "imageDiagramAlt": "キッチン寸法",
-      "note": "※ 間口900仕様の設置においては、必ずコンロ側壁面に不燃材を使用してください。"
+      "imageDiagramAlt": "廚房尺寸圖",
+      "note": "※ 間口 900 規格安裝時，爐具側牆面必須使用不燃材料。"
     },
     "layouts": {
       "label": "LAYOUT",
-      "heading": "3つのタイプから選べるレイアウト",
+      "heading": "三種配置任您選擇",
       "viewLabel": "查看配置",
       "items": [
         {
           "id": "island",
-          "title": "アイランド型",
+          "title": "中島型",
           "subtitle": "Island Type",
           "body": "圍繞廚房，一邊聊天一邊熱鬧料理的中島型。開放感十足，讓空間顯得更加寬敞的開放式廚房。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-03.jpg", "alt": "アイランド型01" },
-            { "src": "/images/equipment/kitchen/riviere-04.jpg", "alt": "アイランド型02" }
+            { "src": "/images/equipment/kitchen/riviere-03.jpg", "alt": "中島型01" },
+            { "src": "/images/equipment/kitchen/riviere-04.jpg", "alt": "中島型02" }
           ]
         },
         {
           "id": "peninsula",
-          "title": "ペニンシュラ型",
+          "title": "半島型",
           "subtitle": "Peninsula Type",
-          "body": "在客廳與廚房之間各自保有空間，同時營造一體感的半島型。調理時也能俯瞰客廳的廚房配置。",
+          "body": "在客廳與廚房之間各自保有空間，同時營造一體感的半島型。料理時也能俯瞰客廳的廚房配置。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-05.jpg", "alt": "ペニンシュラ型01" },
-            { "src": "/images/equipment/kitchen/riviere-06.jpg", "alt": "ペニンシュラ型02" }
+            { "src": "/images/equipment/kitchen/riviere-05.jpg", "alt": "半島型01" },
+            { "src": "/images/equipment/kitchen/riviere-06.jpg", "alt": "半島型02" }
           ]
         },
         {
           "id": "i-type",
           "title": "I型",
           "subtitle": "I-Type",
-          "body": "貼牆配置讓空間更寬敞，最適合狹小格局的基本款式。可選擇自行配置加熱機器的分離型，或加熱機器一體成型的系統型，間口從 900mm 起。",
+          "body": "貼牆配置讓空間更寬敞，最適合狹小格局的基本款式。可選擇自行配置加熱機具的分離款，或加熱機具一體成型的系統款，間口從 900mm 起。",
           "images": [
-            { "src": "/images/equipment/kitchen/riviere-07.jpg", "alt": "I型01 セパレートタイプ" },
-            { "src": "/images/equipment/kitchen/riviere-08.jpg", "alt": "I型02 システムタイプ" },
+            { "src": "/images/equipment/kitchen/riviere-07.jpg", "alt": "I型01 分離款" },
+            { "src": "/images/equipment/kitchen/riviere-08.jpg", "alt": "I型02 系統款" },
             { "src": "/images/equipment/kitchen/riviere-09.jpg", "alt": "I型03" },
-            { "src": "/images/equipment/kitchen/riviere-10.jpg", "alt": "I型対面設置" }
+            { "src": "/images/equipment/kitchen/riviere-10.jpg", "alt": "I型對面設置" }
           ]
         }
       ]
     },
     "colors": {
       "label": "COLOR",
-      "heading": "扉カラーバリエーション",
+      "heading": "門板色彩款式",
       "body": "從 NASLUCK 獨家的 Stencia 門板，到能感受到木質溫潤的木紋款式，以及色彩鮮豔的彩色門板，精選共 32 色供您選擇，打造專屬的廚房風格。",
       "image": "/images/equipment/kitchen/riviere-11.jpg",
-      "imageAlt": "扉カラーバリエーション"
+      "imageAlt": "門板色彩款式"
     },
     "equipment": {
       "label": "EQUIPMENT",
-      "heading": "設備機器",
+      "heading": "設備機具",
       "items": [
         {
-          "title": "ワークトップ・シンクバリエーション",
+          "title": "工作檯面・水槽款式",
           "image": "/images/equipment/kitchen/riviere-15.jpg",
-          "imageAlt": "ワークトップ・シンク"
+          "imageAlt": "工作檯面・水槽"
         },
         {
-          "title": "フロアキャビネット",
+          "title": "落地櫥櫃",
           "image": "/images/equipment/kitchen/riviere-16.jpg",
-          "imageAlt": "フロアキャビネット"
+          "imageAlt": "落地櫥櫃"
         },
         {
-          "title": "吊戸棚・キッチン収納",
+          "title": "吊櫃・廚房收納",
           "image": "/images/equipment/kitchen/riviere-17.jpg",
-          "imageAlt": "吊戸棚・キッチン収納"
+          "imageAlt": "吊櫃・廚房收納"
         },
         {
-          "title": "キッチンパネル",
+          "title": "廚房壁板",
           "image": "/images/equipment/kitchen/riviere-18.jpg",
-          "imageAlt": "キッチンパネル"
+          "imageAlt": "廚房壁板"
         },
         {
-          "title": "レンジフード",
+          "title": "抽油煙機",
           "image": "/images/equipment/kitchen/riviere-19.jpg",
-          "imageAlt": "レンジフード"
+          "imageAlt": "抽油煙機"
         }
       ]
     },
     "setPlans": {
       "label": "PLAN",
-      "heading": "セットプラン",
+      "heading": "套裝方案",
       "items": [
-        { "title": "アイランド型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-20.jpg" },
-        { "title": "ペニンシュラ型 システムタイプ（引出し）", "image": "/images/equipment/kitchen/riviere-21.jpg" },
-        { "title": "I型 システムタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-22.jpg" },
-        { "title": "I型 システムタイプ（開き扉）02", "image": "/images/equipment/kitchen/riviere-23.jpg" },
-        { "title": "I型 システムタイプ（開き扉）03", "image": "/images/equipment/kitchen/riviere-24.jpg" },
-        { "title": "I型 セパレートタイプ（開き扉）01", "image": "/images/equipment/kitchen/riviere-25.jpg" },
-        { "title": "I型 システムタイプ（開き扉）04", "image": "/images/equipment/kitchen/riviere-26.jpg" },
-        { "title": "I型 システムタイプ（開き扉）05", "image": "/images/equipment/kitchen/riviere-27.jpg" }
+        { "title": "中島型 系統款（抽屜）", "image": "/images/equipment/kitchen/riviere-20.jpg" },
+        { "title": "半島型 系統款（抽屜）", "image": "/images/equipment/kitchen/riviere-21.jpg" },
+        { "title": "I型 系統款（對開門）01", "image": "/images/equipment/kitchen/riviere-22.jpg" },
+        { "title": "I型 系統款（對開門）02", "image": "/images/equipment/kitchen/riviere-23.jpg" },
+        { "title": "I型 系統款（對開門）03", "image": "/images/equipment/kitchen/riviere-24.jpg" },
+        { "title": "I型 分離款（對開門）01", "image": "/images/equipment/kitchen/riviere-25.jpg" },
+        { "title": "I型 系統款（對開門）04", "image": "/images/equipment/kitchen/riviere-26.jpg" },
+        { "title": "I型 系統款（對開門）05", "image": "/images/equipment/kitchen/riviere-27.jpg" }
       ]
     },
     "cases": {
       "label": "CASE",
-      "heading": "施工事例",
+      "heading": "施工實例",
       "items": [
-        { "title": "コンパクトキッチン施工事例01", "image": "/images/equipment/kitchen/riviere-13.jpg" },
-        { "title": "コンパクトキッチン施工事例02", "image": "/images/equipment/kitchen/riviere-14.jpg" }
+        { "title": "精巧廚房施工實例 01", "image": "/images/equipment/kitchen/riviere-13.jpg" },
+        { "title": "精巧廚房施工實例 02", "image": "/images/equipment/kitchen/riviere-14.jpg" }
       ]
     },
     "faq": {
@@ -1917,39 +1905,40 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ 採用哪一款廚房設備？",
-          "answer": "本建案廚房設備採用 NASLUCK コンパクトキッチン「リヴィエール」。間口 900mm 起的恰到好處尺寸，支援 I 型、中島型、半島型等多種配置，兼顧收納、爐具兼容性與都市生活的實際需求。"
+          "question": "白金高輪 OK PRIME+ 採用哪一款廚房設備？",
+          "answer": "本建案廚房設備採用 NASLUCK 精巧廚房「RIVIERE」。間口 900mm 起的恰到好處尺寸，支援 I 型、中島型、半島型等多種配置，兼顧收納、爐具兼容性與都市生活的實際需求。"
         },
         {
-          "question": "リヴィエール 適合什麼樣的空間？",
-          "answer": "リヴィエール 專為狹小格局、小型公寓，以及兩代同堂住宅的次廚房等有限空間設計。在考量作業動線與通道寬度的前提下，最大限度發揮廚房機能，即使坪數有限也能實現開放式對廚配置。"
+          "question": "RIVIERE 適合什麼樣的空間？",
+          "answer": "RIVIERE 專為狹小格局、小型公寓，以及兩代同堂住宅的次廚房等有限空間設計。在考量作業動線與走道寬度的前提下，最大限度發揮廚房機能，即使坪數有限也能實現開放式對廚配置。"
         },
         {
           "question": "可以選擇哪些廚房配置？",
-          "answer": "可依生活型態與房型選擇三種配置：開放感十足、適合與家人互動的「中島型」；兼顧客廳與廚房空間的「半島型」；以及最適合狹小格局、貼牆配置的「I 型」。I 型提供分離型與系統型，間口從 900mm 起。"
+          "answer": "可依生活型態與房型選擇三種配置：開放感十足、適合與家人互動的「中島型」；兼顧客廳與廚房空間的「半島型」；以及最適合狹小格局、貼牆配置的「I 型」。I 型提供分離款與系統款，間口從 900mm 起。"
         },
         {
           "question": "設備規格是否可能變更？",
-          "answer": "頁面所示規格、機能與カタログ內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
+          "answer": "頁面所示規格、機能與型錄內容，均以實際施工圖與交屋設備表為準。若因施工條件、供應商調整或法規更新而需變更，將依建案公告為準。"
         },
         {
           "question": "如何預約賞屋並確認實際設備？",
-          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪的廚房設備、室內規劃與投資置產資訊。"
+          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 OK PRIME+ 白金高輪的廚房設備、室內規劃與投資置產資訊。"
         }
       ]
     }
   },
   "equipmentSecurityPage": {
     "seo": {
-      "title": "ALSOK 保全設施｜白金高輪 EL FARO+",
-      "description": "白金高輪 EL FARO+ 全棟導入 ALSOK HOME ALSOK 公寓・大樓保全方案。入侵監控、火災感知、緊急通報、24 小時警衛派遣等完整保全服務說明。",
+      "title": "ALSOK 保全設施｜白金高輪 OK PRIME+",
+      "description": "白金高輪 OK PRIME+ 全棟導入 ALSOK HOME ALSOK 公寓・大樓保全方案。入侵監控、火災感知、緊急通報、24 小時警衛派遣等完整保全服務說明。",
       "keywords": [
+        "OK PRIME",
         "ALSOK",
         "保全設施",
         "居家保全系統",
         "HOME ALSOK",
         "白金高輪",
-        "EL FARO+",
+        "OK PRIME+",
         "防盜",
         "忠訓地產"
       ],
@@ -2017,39 +2006,39 @@
       "items": [
         {
           "title": "入侵監控與感知",
-          "body": "在門窗上配置開閉感測器，偵測破窗或撬鎖等非法入侵行為，即使在家中也能設定防護。",
-          "image": "/images/equipment/security/alsok-extra-26.jpg",
-          "imageAlt": "入侵監控"
+          "body": "透過安裝在門窗上的感測器，偵測破窗或撬鎖等非法入侵行為，即使在家中也能設定防護。",
+          "image": "/images/入侵監控與感知.png",
+          "imageAlt": "入侵監控與感知"
         },
         {
           "title": "火災監控",
-          "body": "除了設置火災感測器進行監控外，亦會監測自動火災警報設備的轉報訊號。",
-          "image": "/images/equipment/security/alsok-fire-sensor.webp",
+          "body": "感測器可偵測火災引起的室內溫度異常上升或煙霧發生並自動通報。",
+          "image": "/images/火災監控.png",
           "imageAlt": "火災監控"
         },
         {
           "title": "緊急通報功能",
-          "body": "當感到人身危險時，按下遠端緊急按鈕即可通報 ALSOK。",
-          "image": "/images/equipment/security/alsok-emergency-button.webp",
-          "imageAlt": "緊急通報"
+          "body": "當遭遇歹徒威脅或突發急病時，只需按下緊急按鈕即可立刻通報 ALSOK。",
+          "image": "/images/緊急通報功能.png",
+          "imageAlt": "緊急通報功能"
         },
         {
-          "title": "門窗上鎖確認",
-          "body": "感知安裝於門窗的開閉感測器狀態，確認門窗是否確實上鎖。",
-          "image": "/images/equipment/security/alsok-main-14.png",
-          "imageAlt": "上鎖確認"
+          "title": "門窗上鎖確認與出入管理",
+          "body": "系統可感知門窗開閉以確認是否確實上鎖，並能記錄設備操作狀況，透過電子郵件通知使用者。",
+          "image": "/images/門窗上鎖確認與出入管理.png",
+          "imageAlt": "門窗上鎖確認與出入管理"
         },
         {
-          "title": "出入管理資訊",
-          "body": "記錄控制器操作狀況，並透過電子郵件通知使用者。",
-          "image": "/images/equipment/security/alsok-main-20.jpg",
-          "imageAlt": "出入管理資訊"
+          "title": "遠端操作與警備切換",
+          "body": "提供專屬 APP，使用者可隨時隨地從遠端確認住家狀況、操作系統，並根據「外出」或「在家」切換不同的警備模式。",
+          "image": "/images/遠端操作與警備切換.png",
+          "imageAlt": "遠端操作與警備切換"
         },
         {
-          "title": "外部警示通知",
-          "body": "發生異常時，ALSOK 警示燈閃爍，向周圍環境發出警示。",
-          "image": "/images/equipment/security/alsok-sticker.png",
-          "imageAlt": "外部警示通知"
+          "title": "24小時警衛（ガードマン）迅速派遣",
+          "body": "一旦發生異常，ALSOK 會從全國的待命據點調派受過專業訓練的警衛，以最快速度趕赴現場處理並回報狀況。",
+          "image": "/images/24小時警衛.png",
+          "imageAlt": "24小時警衛迅速派遣"
         }
       ]
     },
@@ -2182,7 +2171,7 @@
       "subtitle": "FAQ",
       "items": [
         {
-          "question": "白金高輪 EL FARO+ 採用哪一套保全系統？",
+          "question": "白金高輪 OK PRIME+ 採用哪一套保全系統？",
           "answer": "本建案全棟導入 ALSOK「HOME ALSOK 公寓・大樓保全方案」。針對集合住宅設計，結合入侵監控、火災感知、緊急通報、遠端操作與 24 小時警衛派遣，為住戶提供全方位安全保障。"
         },
         {
@@ -2199,7 +2188,7 @@
         },
         {
           "question": "如何預約賞屋並確認實際設備？",
-          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 EL FARO+ 白金高輪的保全設施、室內規劃與投資置產資訊。"
+          "answer": "歡迎透過網站預約賞屋與諮詢，由忠訓地產專業團隊為您說明 OK PRIME+ 白金高輪的保全設施、室內規劃與投資置產資訊。"
         }
       ]
     }
@@ -2208,7 +2197,7 @@
     "seo": {
       "title": "聯絡我們・說明會報名｜OK PRIME 白金高輪",
       "description": "忠訓地產 OK PRIME 白金高輪（港區三田5-5-10）日本置產說明會—北中南巡迴加開。深入解析東京港區房市、法規稅制與投資趨勢，現正受理說明會報名、房源登記與樣品屋參觀預約。",
-      "keywords": ["OK PRIME", "白金高輪", "三田5-5-10", "日本置產", "說明會", "忠訓地產", "品川", "預約賞屋", "EL FARO+"],
+      "keywords": ["OK PRIME", "白金高輪", "三田5-5-10", "日本置產", "說明會", "忠訓地產", "品川", "預約賞屋", "OK PRIME+"],
       "ogImage": "/images/og/home.jpg",
       "ogImageAlt": "OK PRIME 白金高輪 日本置產說明會"
     },

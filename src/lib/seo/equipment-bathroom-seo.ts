@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
-import {
-  getGeoMetaOther,
-  getPropertyGeo,
-  getPropertyGeoGraph,
-  getPropertyPostalAddress,
-} from "@/lib/seo/geo";
-import { orgId } from "@/lib/seo/schema-common";
+import { absoluteUrl, siteConfig } from "@/lib/site";
+import { getGeoMetaOther, getPropertyGeoGraph } from "@/lib/seo/geo";
+import { orgId, buildPropertyListingRef } from "@/lib/seo/schema-common";
 
 type Locale = "zh" | "jp";
 
@@ -136,7 +131,7 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
     isPartOf: {
       "@type": "WebSite",
       "@id": `${absoluteUrl("/")}#website`,
-      name: getBuildingDisplayName(),
+      name: "OK PRIME",
       url: absoluteUrl("/"),
     },
     primaryImageOfPage: {
@@ -148,7 +143,11 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
     breadcrumb: { "@id": breadcrumb["@id"] },
     contentLocation: { "@id": `${absoluteUrl("/")}#property-place` },
     spatialCoverage: { "@id": `${absoluteUrl("/")}#property-place` },
-    about: { "@id": `${pageUrl}#itemlist` },
+    about: [
+      { "@id": `${pageUrl}#itemlist` },
+      { "@id": `${absoluteUrl("/")}#property-place` },
+      { "@id": `${absoluteUrl("/")}#listing` },
+    ],
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
       "@id": orgId(),
@@ -179,13 +178,7 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
             "@type": "Brand",
             name: product.brand,
           },
-          isRelatedTo: {
-      "@type": "RealEstateListing",
-      name: getBuildingDisplayName(),
-      url: absoluteUrl("/"),
-      address: getPropertyPostalAddress(),
-      geo: getPropertyGeo(),
-    },
+          isRelatedTo: buildPropertyListingRef(),
         },
       })
     ),
@@ -206,6 +199,13 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webPage, breadcrumb, ...getPropertyGeoGraph(locale), itemList, faqPage],
+    "@graph": [
+      webPage,
+      breadcrumb,
+      ...getPropertyGeoGraph(locale),
+      buildPropertyListingRef(),
+      itemList,
+      faqPage,
+    ],
   };
 }

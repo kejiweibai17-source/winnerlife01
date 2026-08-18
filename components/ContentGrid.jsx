@@ -17,22 +17,6 @@ const gridMeta = [
     maskTo: "rgba(0,80,70,0.18)",
   },
   {
-    id: 1,
-    href: "/concept",
-    bgImage: "/images/index/wall/交通連結.png",
-    maskFrom: "rgba(4,18,45,0.88)",
-    maskVia: "rgba(6,28,70,0.55)",
-    maskTo: "rgba(10,40,90,0.18)",
-  },
-  {
-    id: 2,
-    href: "/amenities",
-    bgImage: "/images/amenities/001.png",
-    maskFrom: "rgba(0,25,55,0.90)",
-    maskVia: "rgba(0,60,100,0.52)",
-    maskTo: "rgba(0,90,140,0.16)",
-  },
-  {
     id: 9,
     href: "/location",
     bgImage: "/images/location/section-01/section-1-1.png",
@@ -99,7 +83,7 @@ export default function ContentGrid() {
 
   return (
     <section className="w-full bg-[#0c0f1c]">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 w-full">
         {gridMeta.map((meta, index) => {
           const item = items[index];
           return (

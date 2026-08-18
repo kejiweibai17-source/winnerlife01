@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, getBuildingDisplayName, siteConfig } from "@/lib/site";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 import {
   getGeoMetaOther,
   getOrganizationStub,
-  getPropertyGeo,
   getPropertyGeoGraph,
-  getPropertyPostalAddress,
   getTaipeiOfficeAddress,
   getTaipeiOfficeGeo,
   officeOpenDays,
 } from "@/lib/seo/geo";
 import {
   buildApartmentComplex,
+  buildPropertyListingRef,
+  buildWebsiteStub,
   localeLang,
   orgId,
   propertyPlaceId,
-  websiteId,
   type Locale,
 } from "@/lib/seo/schema-common";
 
@@ -34,6 +33,8 @@ export type PageSeoConfig = {
   faqKey?: string;
   /** Attach Tokyo property Place + GeoCoordinates */
   includePropertyGeo?: boolean;
+  /** Keep the page live but hide it from search engines. */
+  noindex?: boolean;
   /**
    * Schema.org @type for the page node.
    * Defaults inferred from messageKey when omitted.
@@ -169,21 +170,32 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
         "x-default": config.zhPath,
       },
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: config.noindex
+      ? {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+          },
+        }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+          },
+        },
     openGraph: {
       type: "website",
       locale: locale === "jp" ? "ja_JP" : "zh_TW",
       url: path,
-      siteName: siteConfig.name,
+      siteName: "OK PRIME",
       title: seo.title,
       description: seo.description,
       images: [
@@ -249,16 +261,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     itemListElement: breadcrumbItems,
   };
 
-  const listingRef = {
-    "@type": "RealEstateListing",
-    "@id": `${absoluteUrl("/")}#listing`,
-    name: getBuildingDisplayName(),
-    url: absoluteUrl("/"),
-    address: getPropertyPostalAddress(),
-    geo: getPropertyGeo(),
-    hasMap: siteConfig.propertyGeo.mapUrl,
-    contentLocation: { "@id": propertyPlaceId() },
-  };
+  const listingRef = buildPropertyListingRef();
 
   const webPage: Record<string, unknown> = {
     "@type": pageType,
@@ -268,10 +271,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     description: seo.description,
     inLanguage,
     isPartOf: {
-      "@type": "WebSite",
-      "@id": websiteId(),
-      name: getBuildingDisplayName(),
-      url: absoluteUrl("/"),
+      ...buildWebsiteStub(),
       publisher: getOrganizationStub(),
       inLanguage: ["zh-TW", "ja"],
     },
@@ -310,6 +310,10 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     webPage.contentLocation = { "@id": propertyPlaceId() };
     webPage.spatialCoverage = { "@id": propertyPlaceId() };
     (webPage.about as unknown[]).push({ "@id": propertyPlaceId() });
+  }
+
+  if (config.messageKey === "location") {
+    webPage.mainEntity = { "@id": propertyPlaceId() };
   }
 
   if (config.messageKey === "contactPage") {
@@ -353,7 +357,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
 
   if (includeGeo) {
     graph.push(...getPropertyGeoGraph(locale));
-    graph.push(buildApartmentComplex(locale, pageUrl));
+    graph.push(buildApartmentComplex(locale));
   }
 
   if (faqItems.length > 0) {

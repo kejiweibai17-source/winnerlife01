@@ -30,6 +30,19 @@ export default function LocationDesignSections() {
         .location-design-sections h3 {
           line-height: 1.25 !important;
         }
+        .location-design-sections .shinagawa-copy h2,
+        .location-design-sections .shinagawa-copy h3 {
+          line-height: 1.45 !important;
+        }
+        .location-design-sections .shinagawa-copy h3 {
+          line-height: 1.7 !important;
+        }
+        .location-design-sections .location-s5-copy h2 {
+          line-height: 1 !important;
+        }
+        .location-design-sections .location-s5-copy h3 {
+          line-height: 1.7 !important;
+        }
       `}</style>
       <div className="location-design-sections">
       {/* Section 2 — 大規模再開発 */}
@@ -147,45 +160,37 @@ export default function LocationDesignSections() {
       </section>
 
       {/* Section 1 — SHINAGAWA Sta. */}
-      <section className="bg-white">
-        <div className="relative flex min-h-[640px] flex-col items-center lg:min-h-[95vh] lg:flex-row lg:items-center lg:pl-12 xl:pl-20">
-          <div className="relative flex w-full flex-col justify-center px-6 py-12 sm:px-10 lg:w-[30%] lg:px-0 lg:py-0">
-            <div className="absolute top-6 left-4 z-10 sm:left-6 lg:top-10 lg:left-[10%]">
-              <Copy animateOnScroll>
-                <h2
-                  className="m-0 text-4xl font-bold text-nowrap sm:text-5xl lg:!text-[102px]"
-                  style={{ color: GOLD }}
-                >
-                  {t("s1.title")}
-                </h2>
-              </Copy>
-            </div>
-            <div className="txt relative w-full lg:w-[85%]">
-              <div
-                className="relative h-[120px] sm:h-[160px] lg:h-[200px]"
-                aria-hidden
-              />
-              <Copy animateOnScroll delay={0.08}>
-                <h3 className="m-0 text-xl font-normal leading-snug whitespace-pre-line lg:!text-[32px]">
-                  {t("s1.subtitle")}
-                </h3>
-              </Copy>
+      <section className="overflow-hidden bg-white">
+        <div className="mx-auto flex max-w-[1600px] flex-col lg:min-h-[90vh] lg:flex-row lg:items-center">
+          <div className="shinagawa-copy flex min-w-0 w-full flex-col justify-center px-6 py-14 sm:px-10 md:px-14 lg:w-[44%] lg:px-16 lg:py-20 xl:px-20">
+            <Copy animateOnScroll>
+              <h2
+                className="m-0 text-[32px] font-bold leading-[1.2] tracking-[0.02em] sm:text-5xl lg:text-[56px] xl:text-[64px]"
+                style={{ color: GOLD }}
+              >
+                {t("s1.title")}
+              </h2>
+            </Copy>
+            <Copy animateOnScroll delay={0.08}>
+              <h3 className="m-0 mt-7 max-w-[28rem] text-xl font-normal leading-[1.7] lg:text-[28px] lg:leading-[1.7]">
+                {t("s1.subtitle")}
+              </h3>
+            </Copy>
+            <div className="mt-7 max-w-[32rem] space-y-5">
               {s1Paragraphs.map((paragraph, index) => (
                 <Copy key={index} animateOnScroll delay={0.12 + index * 0.06}>
-                  <p
-                    className={`m-0 text-base leading-[2] lg:!text-[18px] ${index === 0 ? "mt-5" : "mt-4"}`}
-                  >
+                  <p className="m-0 text-base leading-[2] break-keep lg:text-[18px]">
                     {paragraph}
                   </p>
                 </Copy>
               ))}
             </div>
           </div>
-          <div className="flex w-full items-center justify-center px-4 pb-12 lg:w-[70%] lg:px-0 lg:pb-0">
+          <div className="flex min-w-0 w-full items-center justify-center px-6 pb-14 sm:px-10 lg:w-[56%] lg:px-12 lg:py-16">
             <img
               src={IMAGES.s1Hero}
               alt={t("s1.imageAlt")}
-              className="w-full max-w-[1000px] lg:w-[80%]"
+              className="h-auto w-full max-w-[920px] object-contain"
               loading="lazy"
               decoding="async"
             />
@@ -203,32 +208,26 @@ export default function LocationDesignSections() {
         />
 
         <div className="relative z-10 px-6 py-10 sm:px-10 md:px-16 lg:px-20 xl:px-28">
-          <div className="flex min-h-0 flex-col items-center lg:min-h-[95vh] lg:flex-row">
-            <div className="flex w-full items-center lg:w-1/2 lg:min-h-[95vh] lg:pl-6 xl:pl-14">
-              <div className="txt relative z-10 w-full max-w-[560px] text-left">
-                <div
-                  className="relative h-[100px] sm:h-[140px] lg:h-[200px]"
-                  aria-hidden
-                />
-                <Copy animateOnScroll>
-                  <h2
-                    className="m-0 mb-6 text-5xl font-bold text-nowrap sm:text-6xl lg:!text-[122px]"
-                    style={{ color: NAVY }}
-                  >
-                    {t("s5.title")}
-                  </h2>
-                </Copy>
+          <div className="flex min-h-0 flex-col items-center lg:min-h-[90vh] lg:flex-row lg:items-center">
+            <div className="flex min-w-0 w-full items-center lg:w-[46%] lg:pl-2 xl:pl-6">
+              <div className="location-s5-copy relative z-20 w-full max-w-[640px] overflow-visible py-10 lg:py-0">
+                <h2
+                  className="m-0 mb-6 text-[40px] font-bold leading-none tracking-[0.04em] sm:text-6xl lg:text-[72px] xl:text-[80px]"
+                  style={{ color: NAVY }}
+                >
+                  {t("s5.title")}
+                </h2>
                 <Copy animateOnScroll delay={0.08}>
                   <h3
-                    className="m-0 text-xl leading-snug font-normal whitespace-pre-line lg:!text-[32px]"
-                    style={{ color: NAVY }}
+                    className="m-0 text-xl leading-[1.7] font-normal whitespace-pre-line lg:text-[28px] lg:leading-[1.7]"
+                    style={{ color: NAVY, lineHeight: 1.7 }}
                   >
                     {t("s5.subtitle")}
                   </h3>
                 </Copy>
                 <Copy animateOnScroll delay={0.12}>
                   <p
-                    className="mt-5 m-0 text-base leading-[2] lg:!text-[18px]"
+                    className="mt-5 m-0 text-base leading-[2] lg:text-[18px]"
                     style={{ color: "rgba(13, 65, 123, 0.9)" }}
                   >
                     {t("s5.body")}
@@ -236,7 +235,7 @@ export default function LocationDesignSections() {
                 </Copy>
               </div>
             </div>
-            <div className="mt-8 flex w-full items-center justify-center px-0 sm:px-4 lg:mt-0 lg:w-1/2 lg:px-8">
+            <div className="relative z-0 mt-8 flex min-w-0 w-full items-center justify-center px-0 sm:px-4 lg:mt-0 lg:w-[54%] lg:px-8">
               <img
                 src={IMAGES.s5Map}
                 alt={t("s5.title")}

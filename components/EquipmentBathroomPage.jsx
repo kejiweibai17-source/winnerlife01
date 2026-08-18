@@ -10,7 +10,7 @@ import { CopyBlock, StaticBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
 
-function FaqSection({ items, heading, subtitle }) {
+function FaqSection({ items, heading }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -20,11 +20,6 @@ function FaqSection({ items, heading, subtitle }) {
     >
       <div className="mx-auto max-w-[900px]">
         <CopyBlock>
-          <p className="m-0 mb-3 text-center text-[10px] tracking-[0.35em] text-gray-400">
-            {subtitle}
-          </p>
-        </CopyBlock>
-        <CopyBlock delay={0.05}>
           <h2
             id="bathroom-faq-heading"
             className="m-0 mb-10 md:mb-12 text-center font-serif text-xl md:text-2xl tracking-[0.12em] text-gray-900"
@@ -79,13 +74,10 @@ function FaqSection({ items, heading, subtitle }) {
   );
 }
 
-function BrandHeader({ tag, brand, product }) {
+function BrandHeader({ brand, product }) {
   return (
     <div className="mb-10 md:mb-14 border-b border-gray-200 pb-8">
       <CopyBlock>
-        <p className="m-0 text-[10px] tracking-[0.35em] text-gray-400 mb-3">{tag}</p>
-      </CopyBlock>
-      <CopyBlock delay={0.05}>
         <h2 className="m-0 font-serif text-3xl md:text-4xl tracking-[0.1em] text-gray-900">
           {brand}
         </h2>
@@ -109,7 +101,7 @@ function ToiletSection({ data, linkHref }) {
       aria-labelledby="toilet-heading"
     >
       <div className="mx-auto max-w-[1000px]">
-        <BrandHeader tag={data.tag} brand={data.brand} product={data.product} />
+        <BrandHeader brand={data.brand} product={data.product} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
           {data.specs.map((item, i) => (
@@ -148,7 +140,7 @@ function NasluckSection({ data }) {
       aria-labelledby="nasluck-heading"
     >
       <div className="mx-auto max-w-[1100px]">
-        <BrandHeader tag={data.tag} brand={data.brand} product={data.product} />
+        <BrandHeader brand={data.brand} product={data.product} />
 
         <div className="relative mb-12 md:mb-16 aspect-[16/9] w-full overflow-hidden bg-[#f4f4f4]">
           <Image
@@ -281,7 +273,7 @@ function HousetecSection({ data }) {
       aria-labelledby="housetec-heading"
     >
       <div className="mx-auto max-w-[1100px]">
-        <BrandHeader tag={data.tag} brand={data.brand} product={data.product} />
+        <BrandHeader brand={data.brand} product={data.product} />
 
         <div className="relative mb-14 md:mb-20 aspect-[16/8] w-full overflow-hidden bg-white">
           <Image
@@ -302,11 +294,6 @@ function HousetecSection({ data }) {
                 <CopyBlock>
                   <h3 className="m-0 text-lg md:text-xl font-medium tracking-[0.06em] text-gray-900 mb-1">
                     {feature.title}
-                    {feature.subtitle && (
-                      <span className="font-normal text-gray-500">
-                        （{feature.subtitle}）
-                      </span>
-                    )}
                   </h3>
                 </CopyBlock>
                 <CopyBlock delay={0.06}>
@@ -368,7 +355,6 @@ export default function EquipmentBathroomPage() {
   const toiletHref = getLocalizedPath("/equipment/toilet", locale);
 
   const toiletData = {
-    tag: t("toilet.tag"),
     brand: t("toilet.brand"),
     product: t("toilet.product"),
     linkLabel: t("toilet.linkLabel"),
@@ -376,7 +362,6 @@ export default function EquipmentBathroomPage() {
   };
 
   const nasluckData = {
-    tag: t("nasluck.tag"),
     brand: t("nasluck.brand"),
     product: t("nasluck.product"),
     heroImage: t("nasluck.heroImage"),
@@ -386,7 +371,6 @@ export default function EquipmentBathroomPage() {
   };
 
   const housetecData = {
-    tag: t("housetec.tag"),
     brand: t("housetec.brand"),
     product: t("housetec.product"),
     heroImage: t("housetec.heroImage"),
@@ -445,11 +429,7 @@ export default function EquipmentBathroomPage() {
         <NasluckSection data={nasluckData} />
         <HousetecSection data={housetecData} />
 
-        <FaqSection
-          items={faqItems}
-          heading={t("faq.heading")}
-          subtitle={t("faq.subtitle")}
-        />
+        <FaqSection items={faqItems} heading={t("faq.heading")} />
       </main>
 
       <button

@@ -12,13 +12,14 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const TEXT_CLASSES = {
   subtitle:
-    "text-sm md:text-base font-light tracking-[0.2em] text-white/80 mb-2 uppercase",
+    "text-[11px] md:text-sm font-light tracking-[0.35em] text-white/75 mb-3 uppercase",
   title:
-    "text-4xl md:text-6xl lg:text-7xl font-serif tracking-widest leading-tight text-white mb-6",
+    "text-4xl md:text-6xl lg:text-7xl font-serif tracking-widest leading-[1.35] text-white mb-8",
+  caption: "mt-1 max-w-[38rem] py-1",
   description:
-    "text-sm md:text-base font-light tracking-[0.1em] leading-loose text-white/90 max-w-xl",
+    "m-0 text-[13px] md:text-[15px] font-light tracking-[0.06em] leading-[2.2] text-white",
   subtext:
-    "text-xs md:text-sm font-light tracking-widest text-white/60 mt-4 uppercase",
+    "m-0 mt-5 text-[13px] md:text-[15px] font-light tracking-[0.06em] leading-[2.2] text-white",
 };
 
 const SLIDE_IMAGES = [
@@ -219,11 +220,19 @@ export default function Slider() {
         splits = [];
 
         const slide = slidesNow[index];
+        const descriptionHtml = (slide.description || "").replace(/\n/g, "<br/>");
+        const captionHtml =
+          slide.description || slide.subtext
+            ? `<div class="slide-caption ${TEXT_CLASSES.caption}">
+                ${slide.description ? `<p class="${TEXT_CLASSES.description}">${descriptionHtml}</p>` : ""}
+                ${slide.subtext ? `<p class="${TEXT_CLASSES.subtext}">${slide.subtext}</p>` : ""}
+              </div>`
+            : "";
+
         textContainerRef.current.innerHTML = `
           ${slide.subtitle ? `<p class="slide-text-element ${TEXT_CLASSES.subtitle}">${slide.subtitle}</p>` : ""}
           <h1 class="slide-text-element ${TEXT_CLASSES.title}">${slide.title}</h1>
-          ${slide.description ? `<div class="slide-text-element ${TEXT_CLASSES.description}">${slide.description}</div>` : ""}
-          ${slide.subtext ? `<p class="slide-text-element ${TEXT_CLASSES.subtext}">${slide.subtext}</p>` : ""}
+          ${captionHtml}
         `;
 
         const elementsToAnimate = textContainerRef.current.querySelectorAll(
@@ -255,6 +264,22 @@ export default function Slider() {
           });
           globalDelay += isMobile ? 0.1 : 0.15;
         });
+
+        const caption = textContainerRef.current.querySelector(".slide-caption");
+        if (caption) {
+          gsap.fromTo(
+            caption,
+            { opacity: 0, y: 18 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: isMobile ? 0.7 : 0.9,
+              delay: globalDelay,
+              ease: "power3.out",
+              overwrite: true,
+            },
+          );
+        }
       }
 
       createIndices();

@@ -10,7 +10,7 @@ import { CopyBlock, StaticBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
 
-function FaqSection({ items, heading, subtitle, idPrefix = "kitchen" }) {
+function FaqSection({ items, heading, idPrefix = "kitchen" }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -20,11 +20,6 @@ function FaqSection({ items, heading, subtitle, idPrefix = "kitchen" }) {
     >
       <div className="mx-auto max-w-[900px]">
         <CopyBlock>
-          <p className="m-0 mb-3 text-center text-[10px] tracking-[0.35em] text-gray-400">
-            {subtitle}
-          </p>
-        </CopyBlock>
-        <CopyBlock delay={0.05}>
           <h2
             id={`${idPrefix}-faq-heading`}
             className="m-0 mb-10 md:mb-12 text-center font-serif text-xl md:text-2xl tracking-[0.12em] text-gray-900"
@@ -153,15 +148,10 @@ function LayoutAccordion({ layouts, viewLabel }) {
   );
 }
 
-function SectionHeading({ label, title }) {
+function SectionHeading({ title }) {
   return (
     <div className="mb-10 md:mb-14 text-center">
       <CopyBlock>
-        <p className="m-0 text-[10px] tracking-[0.35em] text-gray-400 mb-3">
-          {label}
-        </p>
-      </CopyBlock>
-      <CopyBlock delay={0.05}>
         <h2 className="m-0 font-serif text-xl md:text-2xl tracking-[0.12em] text-gray-900">
           {title}
         </h2>
@@ -204,11 +194,6 @@ export default function EquipmentKitchenPage() {
             </div>
             <div className="flex flex-1 flex-col justify-center px-8 py-12 md:px-12 md:py-16 bg-[#e8edf2]">
               <CopyBlock>
-                <p className="m-0 text-[10px] tracking-[0.3em] text-gray-500 mb-4">
-                  {t("hero.tag")}
-                </p>
-              </CopyBlock>
-              <CopyBlock delay={0.05}>
                 <h1 className="m-0 font-serif text-3xl md:text-4xl tracking-[0.1em] text-gray-900 mb-2">
                   {t("hero.title")}
                 </h1>
@@ -244,7 +229,7 @@ export default function EquipmentKitchenPage() {
 
         <section className="px-6 py-14 md:px-10 md:py-20 lg:px-16 bg-white">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("concept.label")} title={t("concept.heading")} />
+            <SectionHeading title={t("concept.heading")} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
               <div className="space-y-6">
                 {conceptParagraphs.map((para, i) => (
@@ -270,7 +255,7 @@ export default function EquipmentKitchenPage() {
 
         <section className="bg-[#f7f7f7] px-6 py-14 md:px-10 md:py-20 lg:px-16">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("features.label")} title={t("features.heading")} />
+            <SectionHeading title={t("features.heading")} />
             <div className="mx-auto mb-12 max-w-[820px] space-y-6">
               {featureParagraphs.map((para, i) => (
                 <CopyBlock key={para} delay={i * 0.06}>
@@ -316,14 +301,14 @@ export default function EquipmentKitchenPage() {
 
         <section className="px-6 py-14 md:px-10 md:py-20 lg:px-16 bg-white">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("layouts.label")} title={t("layouts.heading")} />
+            <SectionHeading title={t("layouts.heading")} />
             <LayoutAccordion layouts={layouts} viewLabel={t("layouts.viewLabel")} />
           </div>
         </section>
 
         <section className="bg-[#f7f7f7] px-6 py-14 md:px-10 md:py-20 lg:px-16">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("colors.label")} title={t("colors.heading")} />
+            <SectionHeading title={t("colors.heading")} />
             <CopyBlock>
               <p className="mx-auto mb-10 max-w-[820px] text-center text-sm leading-[2.2] text-gray-600">
                 {t("colors.body")}
@@ -343,7 +328,7 @@ export default function EquipmentKitchenPage() {
 
         <section className="px-6 py-14 md:px-10 md:py-20 lg:px-16 bg-white">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("equipment.label")} title={t("equipment.heading")} />
+            <SectionHeading title={t("equipment.heading")} />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {equipment.map((item) => (
                 <StaticBlock key={item.title}>
@@ -369,7 +354,7 @@ export default function EquipmentKitchenPage() {
 
         <section className="bg-[#ececec] px-6 py-14 md:px-10 md:py-20 lg:px-16">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("setPlans.label")} title={t("setPlans.heading")} />
+            <SectionHeading title={t("setPlans.heading")} />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {setPlans.map((plan) => (
                 <StaticBlock key={plan.image}>
@@ -395,7 +380,7 @@ export default function EquipmentKitchenPage() {
 
         <section className="px-6 py-14 md:px-10 md:py-20 lg:px-16 bg-white">
           <div className="mx-auto max-w-[1100px]">
-            <SectionHeading label={t("cases.label")} title={t("cases.heading")} />
+            <SectionHeading title={t("cases.heading")} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {cases.map((item) => (
                 <StaticBlock key={item.image}>
@@ -418,7 +403,6 @@ export default function EquipmentKitchenPage() {
         <FaqSection
           items={faqItems}
           heading={t("faq.heading")}
-          subtitle={t("faq.subtitle")}
         />
       </main>
 

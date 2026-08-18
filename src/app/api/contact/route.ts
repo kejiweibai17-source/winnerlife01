@@ -140,7 +140,7 @@ export async function POST(request: Request) {
         ]
       : locale === "jp"
         ? [
-            "EL FARO+ 白金高輪 説明会申込（公式サイト）",
+            "OK PRIME+ 白金高輪 説明会申込（公式サイト）",
             "",
             `氏名: ${name}`,
             `敬称: ${salutation}`,
@@ -156,7 +156,7 @@ export async function POST(request: Request) {
             `受信: ${to}`,
           ]
         : [
-            "EL FARO+ 白金高輪 說明會報名（官方網站）",
+            "OK PRIME+ 白金高輪 說明會報名（官方網站）",
             "",
             `姓名: ${name}`,
             `稱謂: ${salutation}`,

@@ -3,10 +3,12 @@ import {
   getBuildingDisplayName,
   getHomeDescription,
   getHomePageTitle,
+  getProjectAlternateNames,
   homeFaqItems,
   homeSitelinks,
   siteConfig,
 } from "@/lib/site";
+import { landingPage01Path } from "@/lib/landing-page-01-path";
 import { getPropertyGeoGraph } from "@/lib/seo/geo";
 import {
   buildAgencyServices,
@@ -37,37 +39,44 @@ export function getHomeJsonLd(locale: Locale = "zh") {
   const description = getHomeDescription(locale);
 
   const org = buildOrganization(locale);
+  const listing = buildPropertyListing(locale);
+  const residence = buildApartmentComplex(locale);
   const agent = {
     ...buildRealEstateAgentStub(),
-    makesOffer: { "@id": `${pageUrl}#listing` },
+    makesOffer: { "@id": listing["@id"] },
   };
 
   const navLinks = homeSitelinks[locale];
   const sitelinksList = buildSitelinksItemList(locale);
   const siteNavigationElements = buildSiteNavigationElements(locale);
   const services = buildAgencyServices(locale);
-  const listing = buildPropertyListing(locale, pageUrl);
-  const residence = buildApartmentComplex(locale, pageUrl);
   const geoGraph = getPropertyGeoGraph(locale);
 
   const website = {
     "@type": "WebSite",
     "@id": websiteId(),
     url: siteUrl,
-    name: getBuildingDisplayName(),
-    alternateName: [siteConfig.buildingName, "EL FARO+ SHIROKANE-TAKANAWA", siteConfig.name],
+    name: "OK PRIME",
+    alternateName: [...getProjectAlternateNames(), siteConfig.name],
     description,
     publisher: { "@id": orgId() },
     copyrightHolder: { "@id": orgId() },
     inLanguage: ["zh-TW", "ja"],
-    about: [{ "@id": `${pageUrl}#listing` }, { "@id": propertyPlaceId() }],
+    about: [{ "@id": listing["@id"] }, { "@id": propertyPlaceId() }],
     hasPart: [
       { "@id": `${pageUrl}#sitelinks` },
       ...navLinks.map((link) => ({ "@id": `${absoluteUrl(link.path)}#webpage` })),
     ],
-    mainEntity: { "@id": `${pageUrl}#listing` },
-    significantLink: navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
-    relatedLink: [altUrl, ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path))],
+    mainEntity: { "@id": listing["@id"] },
+    significantLink: [
+      ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
+      absoluteUrl(landingPage01Path),
+    ],
+    relatedLink: [
+      altUrl,
+      absoluteUrl(landingPage01Path),
+      ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
+    ],
   };
 
   const webPage = {
@@ -77,7 +86,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     name: title,
     description,
     isPartOf: { "@id": websiteId() },
-    about: [{ "@id": `${pageUrl}#listing` }, { "@id": orgId() }, { "@id": propertyPlaceId() }],
+    about: [{ "@id": listing["@id"] }, { "@id": orgId() }, { "@id": propertyPlaceId() }],
     primaryImageOfPage: {
       "@type": "ImageObject",
       "@id": `${pageUrl}#primaryimage`,
@@ -102,7 +111,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     ],
     significantLink: navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
     relatedLink: navLinks.map((link) => absoluteUrl(link.path)),
-    mainEntity: { "@id": `${pageUrl}#listing` },
+    mainEntity: { "@id": listing["@id"] },
     publisher: { "@id": orgId() },
     contentLocation: { "@id": propertyPlaceId() },
     spatialCoverage: { "@id": propertyPlaceId() },
