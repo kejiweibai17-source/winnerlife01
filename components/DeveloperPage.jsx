@@ -13,8 +13,8 @@ const BORDER = "#e0dbd4";
 const HERO_IMAGE = "/images/story/152f7e88-f8c2-47bb-bfa4-38ba3cca70de.png";
 const TEAM_IMAGES = [
   "/images/concept/置產顧問團隊.png",
-  "/images/concept/002.png",
-  "https://www.winnerlife.com/wp-content/uploads/2024/08/%E7%A7%9F%E9%87%91%E6%8A%95%E5%A0%B1%E7%8E%87%E3%80%81%E6%88%BF%E5%B1%8B%E6%8A%95%E5%A0%B1%E7%8E%87-%E9%A6%96%E5%9C%96.jpg",
+  "/images/architecture/sk-building-01.jpg",
+  "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png",
 ];
 const PROJECT_IMAGE = "/images/index/9497269d-233d-4a5e-8325-5febb2acf4d7.png";
 const CTA_IMAGES = [

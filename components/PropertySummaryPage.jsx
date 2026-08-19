@@ -14,6 +14,14 @@ const HERO_IMAGE = "/images/summary/物件概要01.png";
 const INTRO_IMAGE_02 = "/images/company-logo.svg";
 const INTRO_IMAGE_03 = "/images/summary/物件概要03.png";
 const FLOOR_PLAN_IMAGE = "/images/平面.png";
+const FLOOR_PLAN_IMAGES_MOBILE = [
+  "/images/平面-01.png",
+  "/images/平面-02.png",
+  "/images/平面-03.png",
+  "/images/平面-04.png",
+  "/images/平面-05.png",
+  "/images/平面-06.png",
+];
 
 function WaveDivider() {
   return (
@@ -336,7 +344,7 @@ function FloorPlanSection({ t, floorPlans }) {
             ))}
           </div>
 
-          <div className="lg:sticky lg:top-28">
+          <div className="hidden lg:block lg:sticky lg:top-28">
             <Image
               src={FLOOR_PLAN_IMAGE}
               alt={t("floorPlan.imageAlt")}
@@ -345,6 +353,20 @@ function FloorPlanSection({ t, floorPlans }) {
               className="w-full h-auto"
               sizes="(min-width: 1024px) 42vw, 100vw"
             />
+          </div>
+
+          <div className="lg:hidden space-y-6">
+            {FLOOR_PLAN_IMAGES_MOBILE.map((src, i) => (
+              <Image
+                key={src}
+                src={src}
+                alt={t("floorPlan.imageAlt")}
+                width={628}
+                height={886}
+                className="w-full h-auto"
+                sizes="100vw"
+              />
+            ))}
           </div>
         </div>
 

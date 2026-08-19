@@ -2865,7 +2865,11 @@
         { "value": "2026-08-22-taichung", "label": "8/22（土）— 台中会場" },
         { "value": "2026-08-26-taipei", "label": "8/26（水）— 台北会場" },
         { "value": "2026-08-27-taipei", "label": "8/27（木）— 台北会場" },
-        { "value": "2026-08-28-taipei", "label": "8/28（金）— 台北会場" }
+        { "value": "2026-08-28-taipei", "label": "8/28（金）— 台北会場" },
+        { "value": "2026-08-30-kaohsiung-xinyi", "label": "8/30（日）14:00— 高雄TCCC（高雄信義館）" },
+        { "value": "2026-09-04-taipei", "label": "9/04（金）14:00— 台北忠訓地產（小巨蛋旁）" },
+        { "value": "2026-09-05-hsinchu", "label": "9/05（土）14:00— 新竹Le Phare 共有空間" },
+        { "value": "2026-09-06-linkou", "label": "9/06（日）14:00— 林口シェラトン 2F" }
       ],
       "regionOptions": [
         "台北",

@@ -9,14 +9,16 @@ import LocationDesignSections from "./LocationDesignSections";
 import { getLocalizedPath } from "@/lib/locale-path";
 
 const TRAIN_IMAGES = {
-  shirokane: "/images/landing-page/白金高輪站.png",
-  mita_tamachi: "/images/landing-page/港區核心.png",
-  shinagawa: "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+  tokyo: "/images/location/section-01/距離-東京.png",
+  ginza: "/images/location/section-01/距離-銀座.png",
+  roppongi: "/images/location/section-01/距離-六本木.png",
+  shibuya: "/images/location/section-01/距離-澀谷.png",
+  shinjuku: "/images/location/section-01/距離-新宿.png",
+  shinagawa: "/images/location/section-01/距離-品川.png",
 };
 
 const AIRPORT_IMAGES = {
-  haneda: "/images/index/4e8ee07e-5f3d-4a04-9b30-078ba9c7fb8c.png",
-  narita: "/images/index/wall/交通連結.png",
+  airport: "/images/location/section-01/距離-機場.png",
 };
 
 const FACILITY_IMAGES = {
@@ -116,7 +118,7 @@ function WaveDivider() {
   );
 }
 
-function GalleryCard({ name, time, distance, image, delay = 0 }) {
+function GalleryCard({ name, time, route, image, delay = 0 }) {
   return (
     <figure className="flex flex-col">
       <div className="relative aspect-[4/3] overflow-hidden bg-[#1a2c4e]/40">
@@ -132,10 +134,13 @@ function GalleryCard({ name, time, distance, image, delay = 0 }) {
         <Copy animateOnScroll delay={delay}>
           <p className="m-0 text-center text-sm font-light tracking-[0.12em] text-white/90 md:text-base">
             {name}
+            {time && <span className="ml-2 text-white/70">{time}</span>}
           </p>
-          <p className="m-0 mt-1 text-center text-xs font-light tracking-[0.12em] text-white/60 md:text-sm">
-            （{time}・{distance}）
-          </p>
+          {route && (
+            <p className="m-0 mt-1 text-center text-xs font-light tracking-[0.12em] text-white/50 md:text-sm">
+              {route}
+            </p>
+          )}
         </Copy>
       </div>
     </figure>
@@ -373,13 +378,13 @@ export default function LocationPage() {
               </h3>
             </Copy>
           </div>
-          <div className="mx-auto mb-16 grid max-w-[1200px] grid-cols-1 gap-8 sm:grid-cols-3 md:mb-20 md:gap-10">
+          <div className="mx-auto mb-16 grid max-w-[1200px] grid-cols-1 gap-8 sm:grid-cols-2 md:mb-20 md:grid-cols-3 md:gap-10">
             {trainItems.map((item, index) => (
               <GalleryCard
                 key={item.id}
                 name={item.name}
                 time={item.time}
-                distance={item.distance}
+                route={item.route}
                 image={item.image}
                 delay={0.15 + index * 0.08}
               />
@@ -393,13 +398,13 @@ export default function LocationPage() {
               </h3>
             </Copy>
           </div>
-          <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-8 sm:grid-cols-2 md:gap-10">
+          <div className="mx-auto grid max-w-[600px] grid-cols-1 gap-8 md:gap-10">
             {airportItems.map((item, index) => (
               <GalleryCard
                 key={item.id}
                 name={item.name}
                 time={item.time}
-                distance={item.distance}
+                route={item.route}
                 image={item.image}
                 delay={0.2 + index * 0.08}
               />
@@ -429,13 +434,12 @@ export default function LocationPage() {
               <GalleryCard
                 key={item.id}
                 name={item.name}
-                time={item.time}
-                distance={item.distance}
                 image={item.image}
                 delay={0.15 + index * 0.08}
               />
             ))}
           </div>
+
         </section>
 
         <section

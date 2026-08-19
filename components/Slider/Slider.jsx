@@ -27,7 +27,7 @@ const SLIDE_IMAGES = [
   "/images/index/cd78a1ca-c3db-4c12-a8b2-413e62181b4f.png",
   "/images/index/8f2716f6-12ae-4ff6-b310-1bfb8b3c20a7.png",
   "/images/index/4e8ee07e-5f3d-4a04-9b30-078ba9c7fb8c.png",
-  "/images/index/03.png",
+  "/images/index/慶應文教區.png",
 ];
 
 function normalizeSrc(src) {

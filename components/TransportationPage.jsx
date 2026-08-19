@@ -73,7 +73,7 @@ function SanuSectionHeader({ num, title, description, delay = 0 }) {
       <SectionNum>{num}</SectionNum>
       <div className="overflow-hidden">
         <Copy animateOnScroll delay={delay}>
-          <h2 className="font-serif text-xl md:text-2xl tracking-[0.06em] leading-snug m-0 text-gray-900">
+          <h2 className="font-serif text-xl md:text-2xl tracking-[0.06em] leading-relaxed md:leading-loose m-0 text-gray-900">
             {title}
           </h2>
         </Copy>
@@ -416,31 +416,6 @@ export default function TransportationPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24 px-6 bg-[#fafafa] border-y border-gray-100">
-          <div className="max-w-[560px] mx-auto">
-            <Copy animateOnScroll>
-              <h3 className="text-center font-serif text-lg md:text-xl tracking-[0.15em] m-0 mb-12 text-gray-900">
-                {t("sections.travelTime.title")}
-              </h3>
-            </Copy>
-            <ul className="space-y-5 m-0 p-0 list-none">
-              {travelTimeRows.map((row, index) => (
-                <li key={row.from} className="overflow-hidden">
-                  <Copy animateOnScroll delay={index * 0.05}>
-                    <p className="flex items-baseline gap-3 m-0 text-sm md:text-base tracking-widest">
-                      <span className="text-gray-900 shrink-0">{row.from}</span>
-                      <span className="flex-1 border-b border-dotted border-gray-300 min-w-[20px] mb-1" />
-                      <span className="text-gray-500 font-light shrink-0">
-                        {row.time}
-                      </span>
-                    </p>
-                  </Copy>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
