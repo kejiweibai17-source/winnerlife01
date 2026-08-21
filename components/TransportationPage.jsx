@@ -8,7 +8,7 @@ import { getLocalizedPath } from "@/lib/locale-path";
 
 const ACCENT = "#d4622a";
 const TAG_BG = "#4a3f35";
-const HERO_IMAGE = "/images/transportation/EFプラス白金高輪05.06p.jpg";
+const HERO_IMAGE = "/images/transportation/map.png";
 
 const PHOTO_GALLERY_IMAGES = [
   "/images/transportation/004.png",
