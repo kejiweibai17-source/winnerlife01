@@ -1,15 +1,24 @@
 import type {StructureResolver} from 'sanity/structure'
+import {CalendarIcon} from '@sanity/icons'
+
+const SEMINAR_CONFIG_DOC_ID = 'seminarConfig'
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
   S.list()
-    .title('Blog')
+    .title('內容管理')
     .items([
-      S.documentTypeListItem('post').title('Posts'),
-      S.documentTypeListItem('category').title('Categories'),
-      S.documentTypeListItem('author').title('Authors'),
+      S.listItem()
+        .title('說明會場次')
+        .icon(CalendarIcon)
+        .child(
+          S.document()
+            .schemaType('seminarConfig')
+            .documentId(SEMINAR_CONFIG_DOC_ID)
+            .title('說明會場次'),
+        ),
       S.divider(),
-      ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['post', 'category', 'author'].includes(item.getId()!),
-      ),
+      S.documentTypeListItem('post').title('文章'),
+      S.documentTypeListItem('category').title('分類'),
+      S.documentTypeListItem('author').title('作者'),
     ])

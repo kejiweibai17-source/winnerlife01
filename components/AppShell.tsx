@@ -26,6 +26,8 @@ export default function AppShell({
   const isLandingPage =
     pathname.startsWith(landingPage01Path) ||
     pathname.startsWith(legacyLandingPage01Path);
+  const isBareChrome =
+    pathname.startsWith("/admin") || pathname.startsWith("/studio");
   const isJp = pathname.startsWith("/jp");
   const locale = isJp ? "jp" : "zh";
   const messages = isJp ? jpMessages : zhMessages;
@@ -51,12 +53,12 @@ export default function AppShell({
         }
       >
         <ScrollToTopOnNavigate />
-        {!isLandingPage && <Nav />}
+        {!isLandingPage && !isBareChrome && <Nav />}
         <PageTransition>{children}</PageTransition>
-        <FixedSideActions />
+        {!isBareChrome && <FixedSideActions />}
       </ReactLenis>
-      {!isLandingPage && <ContentGrid />}
-      {!isLandingPage && <Footer />}
+      {!isLandingPage && !isBareChrome && <ContentGrid />}
+      {!isLandingPage && !isBareChrome && <Footer />}
     </NextIntlClientProvider>
   );
 }

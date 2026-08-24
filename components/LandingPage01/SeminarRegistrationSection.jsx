@@ -127,6 +127,7 @@ function SectionDivider({ title }) {
 export default function SeminarRegistrationSection() {
   const { hero, details, benefits, form } = SEMINAR_REGISTRATION;
   const lenis = useLenis();
+  const [sessionOptions, setSessionOptions] = useState(form.sessionOptions);
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -141,6 +142,20 @@ export default function SeminarRegistrationSection() {
 
   useEffect(() => {
     void fetch("/api/contact", { method: "HEAD" }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetch("/api/seminar-sessions?locale=zh")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data?.sessions?.length) return;
+        setSessionOptions(data.sessions);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
@@ -173,7 +188,7 @@ export default function SeminarRegistrationSection() {
     }
 
     const sessionLabel =
-      form.sessionOptions.find((opt) => opt.value === formState.session)
+      sessionOptions.find((opt) => opt.value === formState.session)
         ?.label || formState.session;
 
     setSubmitting(true);
@@ -346,7 +361,7 @@ export default function SeminarRegistrationSection() {
                     <span className="lp-sr-required">*</span>
                   </legend>
                   <div className="lp-sr-sessions-list" role="radiogroup">
-                    {form.sessionOptions.map((opt) => (
+                    {sessionOptions.map((opt) => (
                       <label key={opt.value} className="lp-sr-session-option">
                         <input
                           type="radio"

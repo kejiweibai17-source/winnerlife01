@@ -2315,7 +2315,7 @@
     "seminars": {
       "label": "OK PRIME",
       "heading": "【日本｜房產投資說明會】",
-      "note": "主題為東京港區置產說明會；請依日期選擇台北或台中場次。",
+      "note": "主題為東京港區置產說明會；請依日期選擇欲參加的場次。",
       "sessions": [
         {
           "label": "東京．港區",
@@ -2323,19 +2323,15 @@
           "image": "/images/concept/001.png",
           "dates": [
             "» 忠訓地產會議廳",
-            "｜8/21（五）",
             "｜8/26（三）",
             "｜8/27（四）",
-            "｜8/28（五）"
+            "｜8/28（五）",
+            "｜9/04（五）",
+            "｜9/18（五）",
+            "｜9/19（六）",
+            "｜9/30（三）"
           ],
           "ctaAria": "報名台北場"
-        },
-        {
-          "label": "東京．港區",
-          "title": "東京港區置產說明會 — 台中",
-          "image": "/images/architecture/sk-building-02.jpg",
-          "dates": ["» 忠訓台中分部", "｜8/22（六）"],
-          "ctaAria": "報名台中場"
         }
       ]
     },
@@ -2394,15 +2390,16 @@
       "mailNote": "備註",
       "mailFooter": "— 由 OK PRIME 白金高輪官網表單送出",
       "sessionOptions": [
-        { "value": "2026-08-21-taipei", "label": "8/21（五）— 台北場" },
-        { "value": "2026-08-22-taichung", "label": "8/22（六）— 台中場" },
         { "value": "2026-08-26-taipei", "label": "8/26（三）— 台北場" },
         { "value": "2026-08-27-taipei", "label": "8/27（四）— 台北場" },
         { "value": "2026-08-28-taipei", "label": "8/28（五）— 台北場" },
         { "value": "2026-08-30-kaohsiung-xinyi", "label": "8/30（日）14:00— 高雄TCCC高雄信義館" },
-        { "value": "2026-09-04-taipei", "label": "9/04（五）14:00— 台北忠訓地產（小巨蛋旁）" },
+        { "value": "2026-09-04-taipei", "label": "9/04（五）— 台北場" },
         { "value": "2026-09-05-hsinchu", "label": "9/05（六）14:00— 新竹Le Phare 共享空間" },
-        { "value": "2026-09-06-linkou", "label": "9/06（日）14:00— 林口喜來登 2F" }
+        { "value": "2026-09-06-linkou", "label": "9/06（日）14:00— 林口喜來登 2F" },
+        { "value": "2026-09-18-taipei", "label": "9/18（五）— 台北場" },
+        { "value": "2026-09-19-taipei", "label": "9/19（六）— 台北場" },
+        { "value": "2026-09-30-taipei", "label": "9/30（三）— 台北場" }
       ],
       "regionOptions": ["台北", "新北", "桃園", "台中", "台南", "高雄", "其他"],
       "salutationOptions": ["先生", "女士", "小姐", "其他"],

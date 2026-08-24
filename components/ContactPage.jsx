@@ -230,11 +230,12 @@ export default function ContactPage() {
   const reasons = t.raw("reasons.items");
   const sessions = t.raw("seminars.sessions");
   const venues = t.raw("venues.items");
-  const sessionOptions = t.raw("form.sessionOptions");
+  const fallbackSessionOptions = t.raw("form.sessionOptions");
   const regionOptions = t.raw("form.regionOptions");
   const salutationOptions = t.raw("form.salutationOptions");
   const timeOptions = t.raw("form.timeOptions");
 
+  const [sessionOptions, setSessionOptions] = useState(fallbackSessionOptions);
   const [form, setForm] = useState({
     name: "",
     salutation: "",
@@ -249,6 +250,20 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetch(`/api/seminar-sessions?locale=${locale}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data?.sessions?.length) return;
+        setSessionOptions(data.sessions);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
 
   useEffect(() => {
     if (!submitted) return;

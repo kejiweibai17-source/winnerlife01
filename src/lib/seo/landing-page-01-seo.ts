@@ -62,11 +62,13 @@ const seminarVenues = {
 } as const;
 
 const seminarSessions = [
-  { date: "2026-08-21", label: "8/21（五）台北場", venue: "taipei" as const },
-  { date: "2026-08-22", label: "8/22（六）台中場", venue: "taichung" as const },
   { date: "2026-08-26", label: "8/26（三）台北場", venue: "taipei" as const },
   { date: "2026-08-27", label: "8/27（四）台北場", venue: "taipei" as const },
   { date: "2026-08-28", label: "8/28（五）台北場", venue: "taipei" as const },
+  { date: "2026-09-04", label: "9/04（五）台北場", venue: "taipei" as const },
+  { date: "2026-09-18", label: "9/18（五）台北場", venue: "taipei" as const },
+  { date: "2026-09-19", label: "9/19（六）台北場", venue: "taipei" as const },
+  { date: "2026-09-30", label: "9/30（三）台北場", venue: "taipei" as const },
 ] as const;
 
 const faqItems = [
