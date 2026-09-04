@@ -127,7 +127,7 @@ function SectionDivider({ title }) {
 export default function SeminarRegistrationSection() {
   const { hero, details, benefits, form } = SEMINAR_REGISTRATION;
   const lenis = useLenis();
-  const [sessionOptions, setSessionOptions] = useState(form.sessionOptions);
+  const sessionOptions = form.sessionOptions;
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -142,20 +142,6 @@ export default function SeminarRegistrationSection() {
 
   useEffect(() => {
     void fetch("/api/contact", { method: "HEAD" }).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    void fetch("/api/seminar-sessions?locale=zh")
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (cancelled || !data?.sessions?.length) return;
-        setSessionOptions(data.sessions);
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
   }, []);
 
   useEffect(() => {

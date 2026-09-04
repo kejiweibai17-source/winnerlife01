@@ -6,14 +6,6 @@
 import {createClient} from '@sanity/client'
 
 const DEFAULT_SESSIONS = [
-  {date: '2026-08-26', labelZh: '8/26（三）— 台北場', labelJa: '8/26（水）— 台北会場'},
-  {date: '2026-08-27', labelZh: '8/27（四）— 台北場', labelJa: '8/27（木）— 台北会場'},
-  {date: '2026-08-28', labelZh: '8/28（五）— 台北場', labelJa: '8/28（金）— 台北会場'},
-  {
-    date: '2026-08-30',
-    labelZh: '8/30（日）14:00— 高雄TCCC高雄信義館',
-    labelJa: '8/30（日）14:00— 高雄TCCC（高雄信義館）',
-  },
   {date: '2026-09-04', labelZh: '9/04（五）— 台北場', labelJa: '9/04（金）— 台北会場'},
   {
     date: '2026-09-05',
@@ -25,8 +17,10 @@ const DEFAULT_SESSIONS = [
     labelZh: '9/06（日）14:00— 林口喜來登 2F',
     labelJa: '9/06（日）14:00— 林口シェラトン 2F',
   },
+  {date: '2026-09-12', labelZh: '9/12（六）— 台北場', labelJa: '9/12（土）— 台北会場'},
   {date: '2026-09-18', labelZh: '9/18（五）— 台北場', labelJa: '9/18（金）— 台北会場'},
   {date: '2026-09-19', labelZh: '9/19（六）— 台北場', labelJa: '9/19（土）— 台北会場'},
+  {date: '2026-09-20', labelZh: '9/20（日）— 台中場', labelJa: '9/20（日）— 台中会場'},
   {date: '2026-09-30', labelZh: '9/30（三）— 台北場', labelJa: '9/30（水）— 台北会場'},
 ]
 

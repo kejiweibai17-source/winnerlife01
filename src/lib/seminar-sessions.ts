@@ -9,30 +9,6 @@ export type SeminarSessionOption = {
 /** Fallback when CMS has no document yet — keep in sync with initial Studio seed. */
 export const DEFAULT_SEMINAR_SESSIONS: SeminarSessionOption[] = [
   {
-    value: "2026-08-26-taipei",
-    date: "2026-08-26",
-    label: "8/26（三）— 台北場",
-    labelJa: "8/26（水）— 台北会場",
-  },
-  {
-    value: "2026-08-27-taipei",
-    date: "2026-08-27",
-    label: "8/27（四）— 台北場",
-    labelJa: "8/27（木）— 台北会場",
-  },
-  {
-    value: "2026-08-28-taipei",
-    date: "2026-08-28",
-    label: "8/28（五）— 台北場",
-    labelJa: "8/28（金）— 台北会場",
-  },
-  {
-    value: "2026-08-30-kaohsiung-xinyi",
-    date: "2026-08-30",
-    label: "8/30（日）14:00— 高雄TCCC高雄信義館",
-    labelJa: "8/30（日）14:00— 高雄TCCC（高雄信義館）",
-  },
-  {
     value: "2026-09-04-taipei",
     date: "2026-09-04",
     label: "9/04（五）— 台北場",
@@ -51,6 +27,12 @@ export const DEFAULT_SEMINAR_SESSIONS: SeminarSessionOption[] = [
     labelJa: "9/06（日）14:00— 林口シェラトン 2F",
   },
   {
+    value: "2026-09-12-taipei",
+    date: "2026-09-12",
+    label: "9/12（六）— 台北場",
+    labelJa: "9/12（土）— 台北会場",
+  },
+  {
     value: "2026-09-18-taipei",
     date: "2026-09-18",
     label: "9/18（五）— 台北場",
@@ -61,6 +43,12 @@ export const DEFAULT_SEMINAR_SESSIONS: SeminarSessionOption[] = [
     date: "2026-09-19",
     label: "9/19（六）— 台北場",
     labelJa: "9/19（土）— 台北会場",
+  },
+  {
+    value: "2026-09-20-taichung",
+    date: "2026-09-20",
+    label: "9/20（日）— 台中場",
+    labelJa: "9/20（日）— 台中会場",
   },
   {
     value: "2026-09-30-taipei",

@@ -2787,15 +2787,20 @@
           "image": "/images/concept/001.png",
           "dates": [
             "» 忠訓地產会議室",
-            "｜8/26（水）",
-            "｜8/27（木）",
-            "｜8/28（金）",
             "｜9/04（金）",
+            "｜9/12（土）",
             "｜9/18（金）",
             "｜9/19（土）",
             "｜9/30（水）"
           ],
           "ctaAria": "台北会場に申込"
+        },
+        {
+          "label": "東京・港区",
+          "title": "東京港区不動産説明会 — 台中",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": ["» 忠訓台中分部", "｜9/20（日）"],
+          "ctaAria": "台中会場に申込"
         }
       ]
     },
@@ -2854,15 +2859,13 @@
       "mailNote": "備考",
       "mailFooter": "— OK PRIME 白金高輪 公式サイトより",
       "sessionOptions": [
-        { "value": "2026-08-26-taipei", "label": "8/26（水）— 台北会場" },
-        { "value": "2026-08-27-taipei", "label": "8/27（木）— 台北会場" },
-        { "value": "2026-08-28-taipei", "label": "8/28（金）— 台北会場" },
-        { "value": "2026-08-30-kaohsiung-xinyi", "label": "8/30（日）14:00— 高雄TCCC（高雄信義館）" },
         { "value": "2026-09-04-taipei", "label": "9/04（金）— 台北会場" },
         { "value": "2026-09-05-hsinchu", "label": "9/05（土）14:00— 新竹Le Phare 共有空間" },
         { "value": "2026-09-06-linkou", "label": "9/06（日）14:00— 林口シェラトン 2F" },
+        { "value": "2026-09-12-taipei", "label": "9/12（土）— 台北会場" },
         { "value": "2026-09-18-taipei", "label": "9/18（金）— 台北会場" },
         { "value": "2026-09-19-taipei", "label": "9/19（土）— 台北会場" },
+        { "value": "2026-09-20-taichung", "label": "9/20（日）— 台中会場" },
         { "value": "2026-09-30-taipei", "label": "9/30（水）— 台北会場" }
       ],
       "regionOptions": [

@@ -327,15 +327,17 @@ export const SEMINAR_REGISTRATION = {
       icon: "calendar",
       lines: [
         {
-          text: "台北：8/26（三）、8/27（四）、8/28（五）、9/04（五）、9/18（五）、9/19（六）、9/30（三）",
+          text: "台北：9/04（五）、9/12（六）、9/18（五）、9/19（六）、9/30（三）",
           accent: "red",
         },
+        { text: "台中：9/20（日）" },
       ],
     },
     {
       icon: "mapPin",
       lines: [
         { text: "台北｜忠訓地產會議廳　南京東路四段1號4樓", accent: "red" },
+        { text: "台中｜忠訓集團（中港經貿大樓）台灣大道二段573號11樓E室" },
       ],
     },
     {
@@ -369,15 +371,13 @@ export const SEMINAR_REGISTRATION = {
       note: "備註（選填）",
     },
     sessionOptions: [
-      { value: "2026-08-26-taipei", label: "8/26（三）— 台北場" },
-      { value: "2026-08-27-taipei", label: "8/27（四）— 台北場" },
-      { value: "2026-08-28-taipei", label: "8/28（五）— 台北場" },
-      { value: "2026-08-30-kaohsiung-xinyi", label: "8/30（日）14:00— 高雄TCCC高雄信義館" },
       { value: "2026-09-04-taipei", label: "9/04（五）— 台北場" },
       { value: "2026-09-05-hsinchu", label: "9/05（六）14:00— 新竹Le Phare 共享空間" },
       { value: "2026-09-06-linkou", label: "9/06（日）14:00— 林口喜來登 2F" },
+      { value: "2026-09-12-taipei", label: "9/12（六）— 台北場" },
       { value: "2026-09-18-taipei", label: "9/18（五）— 台北場" },
       { value: "2026-09-19-taipei", label: "9/19（六）— 台北場" },
+      { value: "2026-09-20-taichung", label: "9/20（日）— 台中場" },
       { value: "2026-09-30-taipei", label: "9/30（三）— 台北場" },
     ],
     guestOptions: ["1 人", "2 人", "3 人", "4 人以上"],
