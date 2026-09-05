@@ -16,6 +16,7 @@ import {
   landingPage01Path,
   legacyLandingPage01Path,
 } from "@/lib/landing-page-01-path";
+import { captureLeadAttributionFromUrl } from "@/lib/lead-attribution";
 
 export default function AppShell({
   children,
@@ -35,6 +36,10 @@ export default function AppShell({
   useEffect(() => {
     document.documentElement.lang = isJp ? "ja" : "zh-TW";
   }, [isJp]);
+
+  useEffect(() => {
+    captureLeadAttributionFromUrl();
+  }, [pathname]);
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>

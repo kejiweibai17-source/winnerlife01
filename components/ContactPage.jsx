@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
 import { getLocalizedPath } from "@/lib/locale-path";
 import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
+import { getAttributionPayload } from "@/lib/lead-attribution";
 
 const NAVY = "#0d417b";
 const NAVY_DEEP = "#1a365d";
@@ -293,6 +294,7 @@ export default function ContactPage() {
           ...form,
           locale,
           source: "contact",
+          attribution: getAttributionPayload(),
         }),
       });
       const data = await res.json().catch(() => ({}));

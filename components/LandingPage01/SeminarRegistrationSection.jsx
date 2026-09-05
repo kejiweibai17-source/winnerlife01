@@ -5,6 +5,7 @@ import { useLenis } from "lenis/react";
 import Copy from "../Copy";
 import { SEMINAR_REGISTRATION } from "./data";
 import { scrollToElementId } from "@/lib/scroll-to";
+import { getAttributionPayload } from "@/lib/lead-attribution";
 
 function RegIcon({ type, className = "" }) {
   const icons = {
@@ -191,6 +192,7 @@ export default function SeminarRegistrationSection() {
           session: sessionLabel,
           note: formState.note,
           locale: "zh",
+          attribution: getAttributionPayload(),
         }),
       });
       const data = await res.json().catch(() => ({}));

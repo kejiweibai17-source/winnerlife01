@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/lib/site";
+import {
+  formatAttributionLabel,
+  type LeadAttribution,
+} from "@/lib/lead-attribution";
 
 export const runtime = "nodejs";
 
@@ -16,6 +20,7 @@ type ContactPayload = {
   email?: string;
   note?: string;
   locale?: "zh" | "jp";
+  attribution?: LeadAttribution;
   /** honeypot — bots fill this; humans leave empty */
   website?: string;
 };
@@ -75,6 +80,21 @@ export async function POST(request: Request) {
   const email = clean(body.email, 120);
   const note = clean(body.note, 2000);
   const locale = body.locale === "jp" ? "jp" : "zh";
+  const attribution =
+    body.attribution && typeof body.attribution === "object"
+      ? body.attribution
+      : {};
+  const attributionLabel = formatAttributionLabel(attribution);
+  const attributionDetail = [
+    attribution.utm_source ? `utm_source=${attribution.utm_source}` : "",
+    attribution.utm_medium ? `utm_medium=${attribution.utm_medium}` : "",
+    attribution.utm_campaign ? `utm_campaign=${attribution.utm_campaign}` : "",
+    attribution.utm_content ? `utm_content=${attribution.utm_content}` : "",
+    attribution.fbclid ? `fbclid=有` : "",
+    attribution.landing_path ? `landing=${attribution.landing_path}` : "",
+  ]
+    .filter(Boolean)
+    .join(" | ");
 
   if (!name || !phone) {
     return NextResponse.json({ error: "missing_fields" }, { status: 400 });
@@ -136,6 +156,8 @@ export async function POST(request: Request) {
           note ? `備註: ${note}` : "",
           "",
           `來源頁面: ${sourceUrl}`,
+          `行銷來源: ${attributionLabel}`,
+          attributionDetail ? `來源參數: ${attributionDetail}` : "",
           `收件: ${to}`,
         ]
       : locale === "jp"
@@ -153,6 +175,8 @@ export async function POST(request: Request) {
             note ? `備考: ${note}` : "",
             "",
             `送信元: ${sourceUrl}`,
+            `流入元: ${attributionLabel}`,
+            attributionDetail ? `パラメータ: ${attributionDetail}` : "",
             `受信: ${to}`,
           ]
         : [
@@ -169,6 +193,8 @@ export async function POST(request: Request) {
             note ? `備註: ${note}` : "",
             "",
             `來源頁面: ${sourceUrl}`,
+            `行銷來源: ${attributionLabel}`,
+            attributionDetail ? `來源參數: ${attributionDetail}` : "",
             `收件: ${to}`,
           ];
 
