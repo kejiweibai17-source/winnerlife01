@@ -503,7 +503,7 @@ export default function ContactPage() {
           <h2 className="m-0 text-center font-serif text-xl tracking-[0.12em] text-gray-900 md:text-2xl">
             {t("venues.heading")}
           </h2>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {venues.map((venue) => (
               <div
                 key={venue.city}

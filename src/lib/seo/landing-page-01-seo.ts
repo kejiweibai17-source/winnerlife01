@@ -59,13 +59,20 @@ const seminarVenues = {
     postalCode: "403",
     addressCountry: "TW",
   },
+  kaohsiung: {
+    name: "高雄說明會場地",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "高雄市",
+    addressRegion: "高雄市",
+    postalCode: "800",
+    addressCountry: "TW",
+  },
 } as const;
 
 const seminarSessions = [
-  { date: "2026-09-04", label: "9/04（五）台北場", venue: "taipei" as const },
-  { date: "2026-09-12", label: "9/12（六）台北場", venue: "taipei" as const },
+  { date: "2026-09-13", label: "9/13（日）台北場", venue: "taipei" as const },
   { date: "2026-09-18", label: "9/18（五）台北場", venue: "taipei" as const },
-  { date: "2026-09-19", label: "9/19（六）台北場", venue: "taipei" as const },
+  { date: "2026-09-19", label: "9/19（六）高雄場", venue: "kaohsiung" as const },
   { date: "2026-09-20", label: "9/20（日）台中場", venue: "taichung" as const },
   { date: "2026-09-30", label: "9/30（三）台北場", venue: "taipei" as const },
 ] as const;
