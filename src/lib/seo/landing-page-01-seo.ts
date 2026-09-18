@@ -44,23 +44,47 @@ export const landingPage01Seo = {
 
 const seminarVenues = {
   taipei: {
-    name: "忠訓地產台北服務中心",
-    streetAddress: "南京東路四段1號4樓",
+    name: "忠訓地產會議廳／茹曦酒店",
+    streetAddress: "南京東路四段1號4樓（忠訓）",
     addressLocality: "松山區",
     addressRegion: "台北市",
     postalCode: "105",
     addressCountry: "TW",
   },
+  linkou: {
+    name: "亞昕福朋喜來登酒店",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "林口區",
+    addressRegion: "新北市",
+    postalCode: "244",
+    addressCountry: "TW",
+  },
+  hsinchu: {
+    name: "新竹國賓大飯店",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "新竹市",
+    addressRegion: "新竹市",
+    postalCode: "300",
+    addressCountry: "TW",
+  },
   taichung: {
-    name: "忠訓集團（中港經貿大樓）",
-    streetAddress: "台灣大道二段573號11樓E室",
+    name: "台中金典酒店",
+    streetAddress: "請依報名通知為準",
     addressLocality: "西區",
     addressRegion: "台中市",
     postalCode: "403",
     addressCountry: "TW",
   },
+  tainan: {
+    name: "台南老爺行旅",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "台南市",
+    addressRegion: "台南市",
+    postalCode: "700",
+    addressCountry: "TW",
+  },
   kaohsiung: {
-    name: "高雄說明會場地",
+    name: "和逸飯店（高雄中山館）",
     streetAddress: "請依報名通知為準",
     addressLocality: "高雄市",
     addressRegion: "高雄市",
@@ -70,11 +94,13 @@ const seminarVenues = {
 } as const;
 
 const seminarSessions = [
-  { date: "2026-09-13", label: "9/13（日）台北場", venue: "taipei" as const },
-  { date: "2026-09-18", label: "9/18（五）台北場", venue: "taipei" as const },
-  { date: "2026-09-19", label: "9/19（六）高雄場", venue: "kaohsiung" as const },
-  { date: "2026-09-20", label: "9/20（日）台中場", venue: "taichung" as const },
-  { date: "2026-09-30", label: "9/30（三）台北場", venue: "taipei" as const },
+  { date: "2026-10-10", label: "10/10（六）新竹｜新竹國賓大飯店", venue: "hsinchu" as const },
+  { date: "2026-10-11", label: "10/11（日）台中｜台中金典酒店", venue: "taichung" as const },
+  { date: "2026-10-17", label: "10/17（六）台南｜台南老爺行旅", venue: "tainan" as const },
+  { date: "2026-10-18", label: "10/18（日）高雄｜和逸飯店（高雄中山館）", venue: "kaohsiung" as const },
+  { date: "2026-10-24", label: "10/24（六）林口｜亞昕福朋喜來登酒店", venue: "linkou" as const },
+  { date: "2026-10-28", label: "10/28（三）台北｜忠訓地產會議廳", venue: "taipei" as const },
+  { date: "2026-10-31", label: "10/31（六）台北｜茹曦酒店", venue: "taipei" as const },
 ] as const;
 
 const faqItems = [
@@ -85,7 +111,7 @@ const faqItems = [
   {
     question: "說明會在哪裡舉辦？",
     answer:
-      "台北場於忠訓地產會議廳（南京東路四段1號4樓）舉辦；台中場於忠訓集團中港經貿大樓（台灣大道二段573號11樓E室）。請以頁面公告場次為準。",
+      "說明會於全台多縣市舉辦（台北、林口、新竹、台中、台南、高雄），場地以當期公告飯店／會議廳為準，請依報名場次前往。",
   },
   {
     question: "說明會會分享哪些內容？",
