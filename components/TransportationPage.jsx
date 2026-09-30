@@ -11,10 +11,37 @@ const TAG_BG = "#4a3f35";
 const HERO_IMAGE = "/images/transportation/map.png";
 
 const PHOTO_GALLERY_IMAGES = [
-  "/images/transportation/004.png",
-  "/images/transportation/005.png",
-  "/images/transportation/006.png",
-  "/images/transportation/007.png",
+  {
+    src: "/images/transportation/shirokane-takanawa-station.jpg",
+    author: "Nesnad",
+    fileUrl:
+      "https://commons.wikimedia.org/wiki/File:Shirokane-takanawa_Station_2018_07_13_various_2.jpg",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+  },
+  {
+    src: "/images/transportation/tamachi-mita.jpg",
+    author: "Rebirth10",
+    fileUrl: "https://commons.wikimedia.org/wiki/File:Tamachi_Sta_2020,7.jpg",
+    license: "CC BY 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+  },
+  {
+    src: "/images/transportation/takanawa-gateway-city.jpg",
+    author: "電車(新幹線)でゴー！",
+    fileUrl:
+      "https://commons.wikimedia.org/wiki/File:TAKANAWA_GATEWAY_CITY_THE_LINKPILLAR_1_SOUTH_02.jpg",
+    license: "CC0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+  },
+  {
+    src: "/images/transportation/mita-sakurada-dori.jpg",
+    author: "Mikagekawase",
+    fileUrl:
+      "https://commons.wikimedia.org/wiki/File:%E6%B8%AF%E5%8C%BA%E4%B8%89%E7%94%B0_%E6%A1%9C%E7%94%B0%E9%80%9A%E3%82%8A_20251124.jpg",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+  },
 ];
 
 function WaveDivider() {
@@ -344,26 +371,49 @@ export default function TransportationPage() {
             </Copy>
           </div>
           <div className="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {photoGallery.map((card, index) => (
-              <figure key={card.caption}>
-                <div className="aspect-[4/3] overflow-hidden bg-[#f4f4f4] mb-3">
-                  <img
-                    src={PHOTO_GALLERY_IMAGES[index]}
-                    alt={card.caption}
-                    className="w-full h-full object-cover block"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div className="overflow-hidden">
-                  <Copy animateOnScroll delay={index * 0.08}>
-                    <figcaption className="text-xs text-gray-600 tracking-widest font-light text-left px-1 m-0">
-                      {card.caption}
-                    </figcaption>
-                  </Copy>
-                </div>
-              </figure>
-            ))}
+            {photoGallery.map((card, index) => {
+              const photo = PHOTO_GALLERY_IMAGES[index];
+              return (
+                <figure key={card.caption}>
+                  <div className="aspect-[4/3] overflow-hidden bg-[#f4f4f4] mb-3">
+                    <img
+                      src={photo.src}
+                      alt={card.caption}
+                      className="w-full h-full object-cover block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="overflow-hidden">
+                    <Copy animateOnScroll delay={index * 0.08}>
+                      <figcaption className="text-xs text-gray-600 tracking-widest font-light text-left px-1 m-0">
+                        {card.caption}
+                        <span className="block mt-1 text-[10px] tracking-normal text-gray-400 normal-case">
+                          <a
+                            href={photo.fileUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-gray-600"
+                          >
+                            {photo.author}
+                          </a>
+                          {" / "}
+                          <a
+                            href={photo.licenseUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-gray-600"
+                          >
+                            {photo.license}
+                          </a>
+                          {" · Wikimedia Commons"}
+                        </span>
+                      </figcaption>
+                    </Copy>
+                  </div>
+                </figure>
+              );
+            })}
           </div>
         </section>
 
