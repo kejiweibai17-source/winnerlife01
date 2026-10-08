@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { siteConfig } from "@/lib/site";
 import {
   formatAttributionLabel,
+  sanitizeAttribution,
   type LeadAttribution,
 } from "@/lib/lead-attribution";
 
@@ -80,10 +81,7 @@ export async function POST(request: Request) {
   const email = clean(body.email, 120);
   const note = clean(body.note, 2000);
   const locale = body.locale === "jp" ? "jp" : "zh";
-  const attribution =
-    body.attribution && typeof body.attribution === "object"
-      ? body.attribution
-      : {};
+  const attribution = sanitizeAttribution(body.attribution);
   const attributionLabel = formatAttributionLabel(attribution);
   const attributionDetail = [
     attribution.utm_source ? `utm_source=${attribution.utm_source}` : "",
@@ -91,6 +89,9 @@ export async function POST(request: Request) {
     attribution.utm_campaign ? `utm_campaign=${attribution.utm_campaign}` : "",
     attribution.utm_content ? `utm_content=${attribution.utm_content}` : "",
     attribution.fbclid ? `fbclid=有` : "",
+    attribution.gclid ? `gclid=有` : "",
+    attribution.referrer ? `referrer=${attribution.referrer}` : "",
+    attribution.in_app ? `in_app=${attribution.in_app}` : "",
     attribution.landing_path ? `landing=${attribution.landing_path}` : "",
   ]
     .filter(Boolean)
