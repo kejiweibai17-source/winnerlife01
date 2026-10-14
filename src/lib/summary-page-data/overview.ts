@@ -61,3 +61,37 @@ export const summaryOverviewZh = {
   developer:
     "東京都目黑區目黑 2-10-11 目黑山手Place 4樓\n株式會社明豐企業",
 };
+
+/** Official property overview — English. */
+export const summaryOverviewEn = {
+  name: "OK PRIME+ Shirokane-Takanawa (New Construction)",
+  lotNumber: "5-1-52 Mita, Minato-ku, Tokyo",
+  address: "5-5-10 Mita, Minato-ku, Tokyo",
+  siteArea: "148.83 m² (per building permit application)",
+  zoning: "Commercial District",
+  fireZone: "Fire Prevention District",
+  coverage:
+    "80% (designated) / 100.00% (permitted) (fire-resistant building in a quasi-fire prevention district)",
+  far: "500% (designated) / 320.00% (permitted) (road width 4 m × 0.8)",
+  heightDistrict: "40 m Height Control District",
+  other: "Class 2 Educational District",
+  mainUse: "Apartment building (14 units)",
+  totalFloorArea: "541.28 m²",
+  constructionType: "New construction",
+  buildingArea: "110.56 m²",
+  buildingCoverage: "74.29%",
+  constructionPeriod:
+    "Dec 1, 2025 – early Nov 2026 (scheduled completion)",
+  structure: "Reinforced concrete, 5 stories above ground",
+  farFloorArea: "466.86 m²",
+  floorAreaRatio: "313.69%",
+  fireResistance: "Fire-resistant building",
+  elevator: "1",
+  parking: "-",
+  permitNumber: "TBD",
+  bicycleParking: "1 space (uncovered)",
+  motorcycleParking: "-",
+  privateArea: "20.02 m² (1K) – 47.58 m² (2LDK)",
+  developer:
+    "Meguro Yamate Place 4F, 2-10-11 Meguro, Meguro-ku, Tokyo\nMeiho Enterprise Co., Ltd.",
+};

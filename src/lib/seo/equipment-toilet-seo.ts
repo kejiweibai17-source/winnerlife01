@@ -1,40 +1,51 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import enMessages from "../../../messages/en.json";
+import { getHtmlLang, type SiteLocale } from "@/lib/locale-path";
+import {
+  getLocalePagePath,
+  getOgAlternateLocales,
+  getPageLanguageAlternates,
+  getWorkTranslations,
+  OG_LOCALE,
+} from "@/lib/seo/alternates";
+import { absoluteUrl, siteConfig, getOrganizationName } from "@/lib/site";
 import { getGeoMetaOther, getPropertyGeoGraph } from "@/lib/seo/geo";
 import { buildPropertyListingRef } from "@/lib/seo/schema-common";
 
-type Locale = "zh" | "jp";
+type Locale = SiteLocale;
+
+function pickMessages(locale: Locale) {
+  if (locale === "jp") return jpMessages;
+  if (locale === "en") return { ...zhMessages, ...enMessages };
+  return zhMessages;
+}
 
 type FaqItem = { question: string; answer: string };
 
 function getSeoContent(locale: Locale) {
   const page =
-    locale === "jp"
-      ? jpMessages.equipmentToiletPage
-      : zhMessages.equipmentToiletPage;
+    pickMessages(locale).equipmentToiletPage;
   return page.seo;
 }
 
 function getFaqItems(locale: Locale): FaqItem[] {
   const page =
-    locale === "jp"
-      ? jpMessages.equipmentToiletPage
-      : zhMessages.equipmentToiletPage;
+    pickMessages(locale).equipmentToiletPage;
   return page.faq.items;
 }
 
 function getPagePath(locale: Locale) {
-  return locale === "jp" ? "/jp/equipment/toilet" : "/equipment/toilet";
+  return getLocalePagePath(locale, "/equipment/toilet", "/jp/equipment/toilet");
 }
 
 function getEquipmentPath(locale: Locale) {
-  return locale === "jp" ? "/jp/equipment" : "/equipment";
+  return getLocalePagePath(locale, "/equipment", "/jp/equipment");
 }
 
 function getHomePath(locale: Locale) {
-  return locale === "jp" ? "/jp" : "/";
+  return getLocalePagePath(locale, "/", "/jp");
 }
 
 export function getEquipmentToiletMetadata(locale: Locale): Metadata {
@@ -48,11 +59,7 @@ export function getEquipmentToiletMetadata(locale: Locale): Metadata {
     keywords: seo.keywords,
     alternates: {
       canonical: path,
-      languages: {
-        "zh-TW": "/equipment/toilet",
-        ja: "/jp/equipment/toilet",
-        "x-default": "/equipment/toilet",
-      },
+      languages: getPageLanguageAlternates("/equipment/toilet", "/jp/equipment/toilet"),
     },
     robots: {
       index: true,
@@ -66,9 +73,10 @@ export function getEquipmentToiletMetadata(locale: Locale): Metadata {
     },
     openGraph: {
       type: "website",
-      locale: locale === "jp" ? "ja_JP" : "zh_TW",
+      locale: OG_LOCALE[locale],
+      alternateLocale: getOgAlternateLocales(locale, "/equipment/toilet"),
       url: path,
-      siteName: siteConfig.name,
+      siteName: "OK PRIME",
       title: seo.title,
       description: seo.description,
       images: [
@@ -93,16 +101,14 @@ export function getEquipmentToiletMetadata(locale: Locale): Metadata {
 export function getEquipmentToiletJsonLd(locale: Locale) {
   const seo = getSeoContent(locale);
   const page =
-    locale === "jp"
-      ? jpMessages.equipmentToiletPage
-      : zhMessages.equipmentToiletPage;
+    pickMessages(locale).equipmentToiletPage;
   const faqItems = getFaqItems(locale);
 
   const pageUrl = absoluteUrl(getPagePath(locale));
   const homeUrl = absoluteUrl(getHomePath(locale));
   const equipmentUrl = absoluteUrl(getEquipmentPath(locale));
   const ogImage = absoluteUrl(seo.ogImage);
-  const inLanguage = locale === "jp" ? "ja" : "zh-TW";
+  const inLanguage = getHtmlLang(locale);
 
   const breadcrumb = {
     "@type": "BreadcrumbList",
@@ -157,14 +163,10 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
       "@id": `${absoluteUrl("/")}#organization`,
-      name: siteConfig.name,
+      name: getOrganizationName(locale),
       url: siteConfig.url,
     },
-    workTranslation: {
-      "@type": "WebPage",
-      url: absoluteUrl(locale === "jp" ? "/equipment/toilet" : "/jp/equipment/toilet"),
-      inLanguage: locale === "jp" ? "zh-TW" : "ja",
-    },
+    workTranslation: getWorkTranslations(locale, "/equipment/toilet", "/jp/equipment/toilet"),
   };
 
   const product = {
@@ -179,7 +181,7 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
     },
     model: page.hero.model,
     category: page.hero.category,
-    isRelatedTo: buildPropertyListingRef(),
+    isRelatedTo: buildPropertyListingRef(locale),
   };
 
   const faqPage = {
@@ -201,7 +203,7 @@ export function getEquipmentToiletJsonLd(locale: Locale) {
       webPage,
       breadcrumb,
       ...getPropertyGeoGraph(locale),
-      buildPropertyListingRef(),
+      buildPropertyListingRef(locale),
       product,
       faqPage,
     ],

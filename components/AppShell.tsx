@@ -6,6 +6,7 @@ import { ReactLenis } from "lenis/react";
 import { useEffect } from "react";
 import zhMessages from "../messages/zh.json";
 import jpMessages from "../messages/jp.json";
+import enMessages from "../messages/en.json";
 import Nav from "./Navbar/Navbar";
 import Footer from "./Footer";
 import ContentGrid from "./ContentGrid";
@@ -17,6 +18,18 @@ import {
   legacyLandingPage01Path,
 } from "@/lib/landing-page-01-path";
 import { captureLeadAttributionFromUrl } from "@/lib/lead-attribution";
+import {
+  getHtmlLang,
+  getLocaleFromPathname,
+  type SiteLocale,
+} from "@/lib/locale-path";
+
+/** en only translates shared UI + homepage so far; zh fills untranslated namespaces. */
+const MESSAGES = {
+  zh: zhMessages,
+  jp: jpMessages,
+  en: { ...zhMessages, ...enMessages },
+} satisfies Record<SiteLocale, unknown>;
 
 export default function AppShell({
   children,
@@ -29,20 +42,23 @@ export default function AppShell({
     pathname.startsWith(legacyLandingPage01Path);
   const isBareChrome =
     pathname.startsWith("/admin") || pathname.startsWith("/studio");
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
-  const messages = isJp ? jpMessages : zhMessages;
+  const locale = getLocaleFromPathname(pathname);
+  const messages = MESSAGES[locale];
 
   useEffect(() => {
-    document.documentElement.lang = isJp ? "ja" : "zh-TW";
-  }, [isJp]);
+    document.documentElement.lang = getHtmlLang(locale);
+  }, [locale]);
 
   useEffect(() => {
     captureLeadAttributionFromUrl();
   }, [pathname]);
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages}
+      timeZone="Asia/Taipei"
+    >
       <ReactLenis
         root
         options={

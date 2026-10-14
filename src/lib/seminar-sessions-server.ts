@@ -7,9 +7,10 @@ import {
   getDefaultSessionOptions,
   mapCmsSessionsToOptions,
   type SeminarSessionOption,
+  type SessionLocale,
 } from '@/lib/seminar-sessions'
 
-const seminarQuery = `*[_id == $id][0]{ sessions[]{ date, labelZh, labelJa, enabled } }`
+const seminarQuery = `*[_id == $id][0]{ sessions[]{ date, labelZh, labelJa, labelEn, enabled } }`
 
 function getReadClient() {
   return createClient({
@@ -46,7 +47,7 @@ export async function fetchSeminarSessionsFromCms(): Promise<CmsSeminarSession[]
 }
 
 export async function getSeminarSessionOptions(
-  locale: 'zh' | 'jp' = 'zh',
+  locale: SessionLocale = 'zh',
 ): Promise<{value: string; label: string}[]> {
   const cms = await fetchSeminarSessionsFromCms()
   if (cms?.length) {
@@ -62,6 +63,7 @@ export async function getSeminarSessionsForAdmin(): Promise<CmsSeminarSession[]>
     date: s.date,
     labelZh: s.label,
     labelJa: s.labelJa || s.label,
+    labelEn: s.labelEn || '',
     enabled: true,
   }))
 }
@@ -85,6 +87,7 @@ export async function saveSeminarSessions(
       date: s.date,
       labelZh: s.labelZh.trim(),
       labelJa: (s.labelJa || s.labelZh).trim(),
+      labelEn: (s.labelEn || '').trim(),
       enabled: s.enabled !== false,
     }))
 
@@ -109,6 +112,7 @@ export function sessionsToEditorRows(
     date: s.date,
     labelZh: s.label,
     labelJa: s.labelJa || s.label,
+    labelEn: s.labelEn || '',
     enabled: s.enabled !== false,
   }))
 }

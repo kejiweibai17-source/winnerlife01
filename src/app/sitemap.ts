@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 import { landingPage01Path } from "@/lib/landing-page-01-path";
+import { getLocalizedPath, hasEnglishVersion } from "@/lib/locale-path";
 
 /**
- * zh path paired with its jp counterpart. `/story` and `/jp/developer` are
- * the same page under different slugs, so they're paired explicitly.
+ * zh path paired with its jp counterpart; the en URL is added automatically
+ * once the page is translated. `/story` and `/jp/developer` are the same page
+ * under different slugs, so they're paired explicitly.
  */
 const localizedPaths: Array<{ zh: string; jp: string; priority: number }> = [
   { zh: "/", jp: "/jp", priority: 1 },
@@ -28,32 +30,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const abs = (path: string) => `${base}${path}`;
 
   const localizedEntries: MetadataRoute.Sitemap = localizedPaths.flatMap(
-    ({ zh, jp, priority }) => [
-      {
-        url: abs(zh),
+    ({ zh, jp, priority }) => {
+      const en = hasEnglishVersion(zh) ? getLocalizedPath(zh, "en") : undefined;
+      const languages: Record<string, string> = {
+        "zh-TW": abs(zh),
+        ja: abs(jp),
+        ...(en ? { en: abs(en) } : {}),
+      };
+      const changeFrequency = zh === "/" ? "weekly" : "monthly";
+      return [zh, jp, ...(en ? [en] : [])].map((path) => ({
+        url: abs(path),
         lastModified,
-        changeFrequency: zh === "/" ? "weekly" : "monthly",
+        changeFrequency,
         priority,
-        alternates: {
-          languages: {
-            "zh-TW": abs(zh),
-            ja: abs(jp),
-          },
-        },
-      },
-      {
-        url: abs(jp),
-        lastModified,
-        changeFrequency: jp === "/jp" ? "weekly" : "monthly",
-        priority,
-        alternates: {
-          languages: {
-            "zh-TW": abs(zh),
-            ja: abs(jp),
-          },
-        },
-      },
-    ]
+        alternates: { languages },
+      }));
+    }
   );
 
   const landingEntry: MetadataRoute.Sitemap = [

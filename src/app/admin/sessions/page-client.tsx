@@ -17,6 +17,7 @@ function toRows(sessions: CmsSeminarSession[]): Row[] {
     date: s.date || '',
     labelZh: s.labelZh || '',
     labelJa: s.labelJa || '',
+    labelEn: s.labelEn || '',
     enabled: s.enabled !== false,
   }))
 }
@@ -102,6 +103,7 @@ export default function SeminarSessionsAdminPage() {
         date: '',
         labelZh: '',
         labelJa: '',
+        labelEn: '',
         enabled: true,
       },
     ])
@@ -132,6 +134,7 @@ export default function SeminarSessionsAdminPage() {
       date: r.date,
       labelZh: r.labelZh.trim(),
       labelJa: r.labelJa.trim() || r.labelZh.trim(),
+      labelEn: (r.labelEn || '').trim(),
       enabled: r.enabled !== false,
     }))
 
@@ -317,7 +320,7 @@ export default function SeminarSessionsAdminPage() {
                     required
                   />
                 </label>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                   <label className="block text-sm">
                     <span className="mb-1 block text-gray-600">
                       顯示文字（中文）
@@ -343,6 +346,20 @@ export default function SeminarSessionsAdminPage() {
                         updateRow(row.id, {labelJa: e.target.value})
                       }
                       placeholder="例：9/18（金）— 台北会場"
+                      className="w-full rounded border border-gray-200 px-3 py-2 text-sm outline-none focus:border-[#0d417b]"
+                    />
+                  </label>
+                  <label className="block text-sm">
+                    <span className="mb-1 block text-gray-600">
+                      顯示文字（英文，選填）
+                    </span>
+                    <input
+                      type="text"
+                      value={row.labelEn || ''}
+                      onChange={(e) =>
+                        updateRow(row.id, {labelEn: e.target.value})
+                      }
+                      placeholder="例：Fri, Sep 18 — Taipei"
                       className="w-full rounded border border-gray-200 px-3 py-2 text-sm outline-none focus:border-[#0d417b]"
                     />
                   </label>

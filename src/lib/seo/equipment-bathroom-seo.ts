@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import enMessages from "../../../messages/en.json";
+import { getHtmlLang, type SiteLocale } from "@/lib/locale-path";
+import {
+  getLocalePagePath,
+  getOgAlternateLocales,
+  getPageLanguageAlternates,
+  getWorkTranslations,
+  OG_LOCALE,
+} from "@/lib/seo/alternates";
+import { absoluteUrl, siteConfig, getOrganizationName } from "@/lib/site";
 import { getGeoMetaOther, getPropertyGeoGraph } from "@/lib/seo/geo";
 import { orgId, buildPropertyListingRef } from "@/lib/seo/schema-common";
 
-type Locale = "zh" | "jp";
+type Locale = SiteLocale;
+
+function pickMessages(locale: Locale) {
+  if (locale === "jp") return jpMessages;
+  if (locale === "en") return { ...zhMessages, ...enMessages };
+  return zhMessages;
+}
 
 type FaqItem = { question: string; answer: string };
 
 function getPageContent(locale: Locale) {
-  return locale === "jp"
-    ? jpMessages.equipmentBathroomPage
-    : zhMessages.equipmentBathroomPage;
+  return pickMessages(locale).equipmentBathroomPage;
 }
 
 function getFaqItems(locale: Locale): FaqItem[] {
@@ -20,15 +33,15 @@ function getFaqItems(locale: Locale): FaqItem[] {
 }
 
 function getPagePath(locale: Locale) {
-  return locale === "jp" ? "/jp/equipment/bathroom" : "/equipment/bathroom";
+  return getLocalePagePath(locale, "/equipment/bathroom", "/jp/equipment/bathroom");
 }
 
 function getEquipmentPath(locale: Locale) {
-  return locale === "jp" ? "/jp/equipment" : "/equipment";
+  return getLocalePagePath(locale, "/equipment", "/jp/equipment");
 }
 
 function getHomePath(locale: Locale) {
-  return locale === "jp" ? "/jp" : "/";
+  return getLocalePagePath(locale, "/", "/jp");
 }
 
 export function getEquipmentBathroomMetadata(locale: Locale): Metadata {
@@ -43,11 +56,7 @@ export function getEquipmentBathroomMetadata(locale: Locale): Metadata {
     keywords: seo.keywords,
     alternates: {
       canonical: path,
-      languages: {
-        "zh-TW": "/equipment/bathroom",
-        ja: "/jp/equipment/bathroom",
-        "x-default": "/equipment/bathroom",
-      },
+      languages: getPageLanguageAlternates("/equipment/bathroom", "/jp/equipment/bathroom"),
     },
     robots: {
       index: true,
@@ -61,9 +70,10 @@ export function getEquipmentBathroomMetadata(locale: Locale): Metadata {
     },
     openGraph: {
       type: "website",
-      locale: locale === "jp" ? "ja_JP" : "zh_TW",
+      locale: OG_LOCALE[locale],
+      alternateLocale: getOgAlternateLocales(locale, "/equipment/bathroom"),
       url: path,
-      siteName: siteConfig.name,
+      siteName: "OK PRIME",
       title: seo.title,
       description: seo.description,
       images: [
@@ -94,7 +104,7 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
   const homeUrl = absoluteUrl(getHomePath(locale));
   const equipmentUrl = absoluteUrl(getEquipmentPath(locale));
   const ogImage = absoluteUrl(seo.ogImage);
-  const inLanguage = locale === "jp" ? "ja" : "zh-TW";
+  const inLanguage = getHtmlLang(locale);
 
   const breadcrumb = {
     "@type": "BreadcrumbList",
@@ -151,14 +161,10 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
     publisher: {
       "@type": ["Organization", "RealEstateAgent"],
       "@id": orgId(),
-      name: siteConfig.name,
+      name: getOrganizationName(locale),
       url: siteConfig.url,
     },
-    workTranslation: {
-      "@type": "WebPage",
-      url: absoluteUrl(locale === "jp" ? "/equipment/bathroom" : "/jp/equipment/bathroom"),
-      inLanguage: locale === "jp" ? "zh-TW" : "ja",
-    },
+    workTranslation: getWorkTranslations(locale, "/equipment/bathroom", "/jp/equipment/bathroom"),
   };
 
   const itemList = {
@@ -178,7 +184,7 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
             "@type": "Brand",
             name: product.brand,
           },
-          isRelatedTo: buildPropertyListingRef(),
+          isRelatedTo: buildPropertyListingRef(locale),
         },
       })
     ),
@@ -203,7 +209,7 @@ export function getEquipmentBathroomJsonLd(locale: Locale) {
       webPage,
       breadcrumb,
       ...getPropertyGeoGraph(locale),
-      buildPropertyListingRef(),
+      buildPropertyListingRef(locale),
       itemList,
       faqPage,
     ],

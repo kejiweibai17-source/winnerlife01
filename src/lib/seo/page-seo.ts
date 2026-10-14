@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import zhMessages from "../../../messages/zh.json";
 import jpMessages from "../../../messages/jp.json";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import enMessages from "../../../messages/en.json";
+import { absoluteUrl, siteConfig, getOrganizationName } from "@/lib/site";
 import {
   getGeoMetaOther,
   getOrganizationStub,
@@ -14,11 +15,20 @@ import {
   buildApartmentComplex,
   buildPropertyListingRef,
   buildWebsiteStub,
+  homePath,
   localeLang,
   orgId,
   propertyPlaceId,
   type Locale,
 } from "@/lib/seo/schema-common";
+import { getLocalizedPath, SITE_LOCALES } from "@/lib/locale-path";
+import {
+  getLocalePagePath,
+  getOgAlternateLocales,
+  getPageLanguageAlternates,
+  getWorkTranslations,
+  OG_LOCALE,
+} from "@/lib/seo/alternates";
 
 export type { Locale };
 
@@ -55,15 +65,19 @@ const GEO_PAGE_KEYS = new Set([
   "developer",
 ]);
 
-/** Middle breadcrumb labels → absolute path (locale-aware) */
-const BREADCRUMB_PATH_MAP: Record<string, { zh: string; jp: string }> = {
-  equipment: { zh: "/equipment", jp: "/jp/equipment" },
-  amenities: { zh: "/amenities", jp: "/jp/amenities" },
-  location: { zh: "/location", jp: "/jp/location" },
+/** Middle breadcrumb labels → zh path, localized per request */
+const BREADCRUMB_PATH_MAP: Record<string, string> = {
+  equipment: "/equipment",
+  amenities: "/amenities",
+  location: "/location",
 };
 
+const enWithFallback = { ...zhMessages, ...enMessages };
+
 function getMessages(locale: Locale) {
-  return locale === "jp" ? jpMessages : zhMessages;
+  if (locale === "jp") return jpMessages;
+  if (locale === "en") return enWithFallback;
+  return zhMessages;
 }
 
 function getByPath(obj: Record<string, unknown>, path: string): unknown {
@@ -76,7 +90,7 @@ function getByPath(obj: Record<string, unknown>, path: string): unknown {
 }
 
 function getPagePath(locale: Locale, config: PageSeoConfig) {
-  return locale === "jp" ? config.jpPath : config.zhPath;
+  return getLocalePagePath(locale, config.zhPath, config.jpPath);
 }
 
 function getSeoData(locale: Locale, config: PageSeoConfig) {
@@ -148,7 +162,7 @@ function resolveBreadcrumbItemUrl(
   if (index === 0 || key === "home") return homeUrl;
   if (index === total - 1 || key === "current") return pageUrl;
   const mapped = BREADCRUMB_PATH_MAP[key];
-  if (mapped) return absoluteUrl(locale === "jp" ? mapped.jp : mapped.zh);
+  if (mapped) return absoluteUrl(getLocalizedPath(mapped, locale));
   // Fallback: keep crawlable URL (same page) rather than omitting item
   return pageUrl;
 }
@@ -164,11 +178,7 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
     keywords: seo.keywords,
     alternates: {
       canonical: path,
-      languages: {
-        "zh-TW": config.zhPath,
-        ja: config.jpPath,
-        "x-default": config.zhPath,
-      },
+      languages: getPageLanguageAlternates(config.zhPath, config.jpPath),
     },
     robots: config.noindex
       ? {
@@ -193,7 +203,8 @@ export function getPageMetadata(locale: Locale, config: PageSeoConfig): Metadata
         },
     openGraph: {
       type: "website",
-      locale: locale === "jp" ? "ja_JP" : "zh_TW",
+      locale: OG_LOCALE[locale],
+      alternateLocale: getOgAlternateLocales(locale, config.zhPath),
       url: path,
       siteName: "OK PRIME",
       title: seo.title,
@@ -222,8 +233,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
   const breadcrumbData = getBreadcrumb(locale, config);
   const faqItems = getFaqItems(locale, config);
   const pageUrl = absoluteUrl(getPagePath(locale, config));
-  const altUrl = absoluteUrl(locale === "jp" ? config.zhPath : config.jpPath);
-  const homeUrl = absoluteUrl(locale === "jp" ? "/jp" : "/");
+  const homeUrl = absoluteUrl(homePath(locale));
   const ogImage = absoluteUrl(seo.ogImage ?? siteConfig.ogImage);
   const inLanguage = localeLang(locale);
   const includeGeo = shouldIncludeGeo(config);
@@ -244,13 +254,13 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
         {
           "@type": "ListItem",
           position: 1,
-          name: locale === "jp" ? "トップ" : "首頁",
+          name: locale === "en" ? "Home" : locale === "jp" ? "トップ" : "首頁",
           item: homeUrl,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: seo.title.split("｜")[0],
+          name: seo.title.split(/｜| \| /)[0],
           item: pageUrl,
         },
       ];
@@ -261,7 +271,7 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     itemListElement: breadcrumbItems,
   };
 
-  const listingRef = buildPropertyListingRef();
+  const listingRef = buildPropertyListingRef(locale);
 
   const webPage: Record<string, unknown> = {
     "@type": pageType,
@@ -272,8 +282,8 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     inLanguage,
     isPartOf: {
       ...buildWebsiteStub(),
-      publisher: getOrganizationStub(),
-      inLanguage: ["zh-TW", "ja"],
+      publisher: getOrganizationStub(locale),
+      inLanguage: SITE_LOCALES.map((l) => l.htmlLang),
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
@@ -291,15 +301,10 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     },
     breadcrumb: { "@id": breadcrumb["@id"] },
     about: [listingRef, { "@id": orgId() }],
-    publisher: getOrganizationStub(),
+    publisher: getOrganizationStub(locale),
     mainEntity: listingRef,
     isAccessibleForFree: true,
-    workTranslation: {
-      "@type": "WebPage",
-      "@id": `${altUrl}#webpage`,
-      url: altUrl,
-      inLanguage: locale === "jp" ? "zh-TW" : "ja",
-    },
+    workTranslation: getWorkTranslations(locale, config.zhPath, config.jpPath),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2"],
@@ -320,11 +325,11 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     webPage.mainEntity = {
       "@type": ["RealEstateAgent", "LocalBusiness"],
       "@id": orgId(),
-      name: siteConfig.name,
+      name: getOrganizationName(locale),
       telephone: siteConfig.taipeiPhone,
       email: siteConfig.email,
-      url: absoluteUrl(locale === "jp" ? "/jp/contact" : "/contact"),
-      address: getTaipeiOfficeAddress(),
+      url: absoluteUrl(getLocalizedPath("/contact", locale)),
+      address: getTaipeiOfficeAddress(locale),
       geo: getTaipeiOfficeGeo(),
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
@@ -340,12 +345,12 @@ export function getPageJsonLd(locale: Locale, config: PageSeoConfig) {
     {
       "@type": ["Organization", "RealEstateAgent", "LocalBusiness"],
       "@id": orgId(),
-      name: siteConfig.name,
+      name: getOrganizationName(locale),
       url: siteConfig.url,
       logo: absoluteUrl(siteConfig.logo),
       telephone: siteConfig.taipeiPhone,
       email: siteConfig.email,
-      address: getTaipeiOfficeAddress(),
+      address: getTaipeiOfficeAddress(locale),
       geo: getTaipeiOfficeGeo(),
       sameAs: [...siteConfig.sameAs],
       areaServed: [{ "@id": propertyPlaceId() }],

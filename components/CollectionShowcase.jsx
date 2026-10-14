@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -32,7 +32,7 @@ const PRODUCT_IMAGES = [
 export default function CollectionShowcase() {
   const t = useTranslations("showcase");
   const pathname = usePathname();
-  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const containerRef = useRef(null);
   const isMobile = useIsMobile();
 

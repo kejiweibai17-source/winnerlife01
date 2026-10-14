@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { FaInstagram, FaFacebookF } from "react-icons/fa6";
 import { SiLine } from "react-icons/si";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { siteConfig } from "@/lib/site";
 
 const socialLinks = [
@@ -47,8 +47,8 @@ function NavColumn({ items, locale }) {
 
 export default function Footer() {
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const currentLocale = isJp ? "jp" : "zh";
+  const currentLocale = getLocaleFromPathname(pathname);
+  const isEn = currentLocale === "en";
   const homeHref = getLocalizedPath("/", currentLocale);
   const t = useTranslations("footer");
   const navT = useTranslations("nav");
@@ -63,9 +63,13 @@ export default function Footer() {
     ? getLocalizedPath(storyNavItem.href, currentLocale)
     : getLocalizedPath("/story", currentLocale);
 
-  const { address, taipeiPhoneDisplay, email, corporateUrl, license } =
+  const { address, taipeiPhoneDisplay, taipeiPhone, email, corporateUrl } =
     siteConfig;
-  const fullAddress = `${address.addressLocality}${address.streetAddress}`;
+  const fullAddress = isEn
+    ? siteConfig.addressDisplayEn
+    : `${address.addressLocality}${address.streetAddress}`;
+  const license = isEn ? siteConfig.licenseEn : siteConfig.license;
+  const companyName = isEn ? siteConfig.nameEn : siteConfig.name;
 
   return (
     <footer className="w-full bg-[#1a1a1a] text-white border-t border-white/10">
@@ -118,7 +122,7 @@ export default function Footer() {
           <p className="text-[11px] md:text-xs tracking-[0.12em] text-white/75 leading-[2] font-light m-0">
             {fullAddress}
             <br />
-            TEL. {taipeiPhoneDisplay}
+            TEL. {isEn ? taipeiPhone : taipeiPhoneDisplay}
             <br />
             E-MAIL{" "}
             <Link
@@ -141,7 +145,7 @@ export default function Footer() {
 
         <div className="mt-14 md:mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
           <div className="flex flex-col gap-2 text-[10px] md:text-[11px] tracking-[0.2em] text-white/50">
-            <p className="m-0">© {siteConfig.name}</p>
+            <p className="m-0">© {companyName}</p>
             <p className="m-0">{license}</p>
             <a href="https://www.jeek-webdesign.com.tw" target="_blank">
               <p className="m-0 text-white/40 tracking-[0.15em]">
@@ -173,7 +177,7 @@ export default function Footer() {
                 src={siteConfig.logo}
                 alt={siteConfig.name}
                 width={120}
-                height={48}
+                height={60}
                 className="w-[100px] md:w-[120px] h-auto opacity-90 brightness-0 invert"
               />
               <span className="text-[8px] tracking-[0.35em] text-white/40 uppercase">

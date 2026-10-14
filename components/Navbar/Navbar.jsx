@@ -5,11 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useLenis } from "lenis/react";
-import { getLocalizedPath, switchLocalePath } from "@/lib/locale-path";
+import {
+  getLocaleFromPathname,
+  getLocalizedPath,
+  switchLocalePath,
+} from "@/lib/locale-path";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +23,7 @@ export default function Header() {
   const t = useTranslations("nav");
   const navItems = t.raw("items");
 
-  const isJp = pathname.startsWith("/jp");
-  const currentLocale = isJp ? "jp" : "zh";
+  const currentLocale = getLocaleFromPathname(pathname);
 
   function switchLocale(targetLocale) {
     if (targetLocale === currentLocale) return;
@@ -179,27 +183,12 @@ export default function Header() {
           </div>
 
           <div className="flex w-[20%] shrink-0 justify-end items-center">
-            <div className="hidden md:flex items-center gap-1 mr-8 text-[11px] tracking-widest">
-              <button
-                onClick={() => switchLocale("zh")}
-                className={`px-3 py-1 rounded-full transition-all duration-200 ${
-                  currentLocale === "zh"
-                    ? "border border-white bg-white/15"
-                    : "opacity-60 hover:opacity-100"
-                }`}
-              >
-                中文
-              </button>
-              <button
-                onClick={() => switchLocale("jp")}
-                className={`px-3 py-1 rounded-full transition-all duration-200 ${
-                  currentLocale === "jp"
-                    ? "border border-white bg-white/15"
-                    : "opacity-60 hover:opacity-100"
-                }`}
-              >
-                日本語
-              </button>
+            <div className="hidden md:block mr-8">
+              <LanguageSwitcher
+                currentLocale={currentLocale}
+                onSelect={switchLocale}
+                label={t("language")}
+              />
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -282,23 +271,13 @@ export default function Header() {
                 animate="open"
                 className="flex flex-col items-start gap-5 lg:pl-10"
               >
-                <div className="flex items-center gap-1 text-xs border border-white/30 rounded-full p-1 mb-4">
-                  <button
-                    onClick={() => switchLocale("zh")}
-                    className={`px-3 py-1 rounded-full transition-all duration-200 ${
-                      currentLocale === "zh" ? "bg-white/20" : "opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    中文
-                  </button>
-                  <button
-                    onClick={() => switchLocale("jp")}
-                    className={`px-3 py-1 rounded-full transition-all duration-200 ${
-                      currentLocale === "jp" ? "bg-white/20" : "opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    日本語
-                  </button>
+                <div className="mb-4">
+                  <LanguageSwitcher
+                    currentLocale={currentLocale}
+                    onSelect={switchLocale}
+                    label={t("language")}
+                    variant="menu"
+                  />
                 </div>
                 <Link
                   href={contactHref}

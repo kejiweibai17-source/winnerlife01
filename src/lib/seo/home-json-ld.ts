@@ -10,6 +10,7 @@ import {
 } from "@/lib/site";
 import { landingPage01Path } from "@/lib/landing-page-01-path";
 import { getPropertyGeoGraph } from "@/lib/seo/geo";
+import { SITE_LOCALES } from "@/lib/locale-path";
 import {
   buildAgencyServices,
   buildApartmentComplex,
@@ -29,12 +30,15 @@ import {
 export function getHomeJsonLd(locale: Locale = "zh") {
   const pagePath = homePath(locale);
   const pageUrl = absoluteUrl(pagePath);
-  const altPath = locale === "jp" ? "/" : "/jp";
-  const altUrl = absoluteUrl(altPath);
+  const translations = SITE_LOCALES.filter((l) => l.code !== locale).map((l) => ({
+    url: absoluteUrl(homePath(l.code)),
+    inLanguage: l.htmlLang,
+    name: getHomePageTitle(l.code),
+  }));
   const siteUrl = absoluteUrl("/");
   const ogImage = absoluteUrl(siteConfig.ogImage);
   const inLanguage = localeLang(locale);
-  const homeLabel = locale === "jp" ? "トップ" : "首頁";
+  const homeLabel = locale === "en" ? "Home" : locale === "jp" ? "トップ" : "首頁";
   const title = getHomePageTitle(locale);
   const description = getHomeDescription(locale);
 
@@ -42,7 +46,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
   const listing = buildPropertyListing(locale);
   const residence = buildApartmentComplex(locale);
   const agent = {
-    ...buildRealEstateAgentStub(),
+    ...buildRealEstateAgentStub(locale),
     makesOffer: { "@id": listing["@id"] },
   };
 
@@ -61,7 +65,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     description,
     publisher: { "@id": orgId() },
     copyrightHolder: { "@id": orgId() },
-    inLanguage: ["zh-TW", "ja"],
+    inLanguage: SITE_LOCALES.map((l) => l.htmlLang),
     about: [{ "@id": listing["@id"] }, { "@id": propertyPlaceId() }],
     hasPart: [
       { "@id": `${pageUrl}#sitelinks` },
@@ -73,7 +77,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       absoluteUrl(landingPage01Path),
     ],
     relatedLink: [
-      altUrl,
+      ...translations.map((t) => t.url),
       absoluteUrl(landingPage01Path),
       ...navLinks.slice(0, 6).map((link) => absoluteUrl(link.path)),
     ],
@@ -94,7 +98,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       contentUrl: ogImage,
       width: siteConfig.ogImageWidth,
       height: siteConfig.ogImageHeight,
-      caption: siteConfig.ogImageAlt[locale === "jp" ? "jp" : "zh"],
+      caption: siteConfig.ogImageAlt[locale],
     },
     image: {
       "@type": "ImageObject",
@@ -119,13 +123,13 @@ export function getHomeJsonLd(locale: Locale = "zh") {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", "[data-seo-speakable]"],
     },
-    workTranslation: {
+    workTranslation: translations.map((t) => ({
       "@type": "WebPage",
-      "@id": `${altUrl}#webpage`,
-      url: altUrl,
-      inLanguage: locale === "jp" ? "zh-TW" : "ja",
-      name: getHomePageTitle(locale === "jp" ? "zh" : "jp"),
-    },
+      "@id": `${t.url}#webpage`,
+      url: t.url,
+      inLanguage: t.inLanguage,
+      name: t.name,
+    })),
     isAccessibleForFree: true,
   };
 
@@ -163,7 +167,7 @@ export function getHomeJsonLd(locale: Locale = "zh") {
     contentUrl: ogImage,
     width: siteConfig.ogImageWidth,
     height: siteConfig.ogImageHeight,
-    caption: getBuildingDisplayName(),
+    caption: getBuildingDisplayName(locale),
     representativeOfPage: true,
   };
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CopyBlock, StaticBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
@@ -155,8 +155,7 @@ function FaqSection({ items, heading }) {
 export default function EquipmentToiletPage() {
   const t = useTranslations("equipmentToiletPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const plans = t.raw("plans.items");
   const catalogPages = t.raw("catalog.pages");
   const features = t.raw("features.items");

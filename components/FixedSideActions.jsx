@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 import { useTranslations } from "next-intl";
 import { SiLine } from "react-icons/si";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
 
 const LINE_URL =
@@ -16,8 +16,7 @@ export default function FixedSideActions() {
   const pathname = usePathname();
   const lenis = useLenis();
   const t = useTranslations("sideActions");
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const contactPath = getLocalizedPath("/contact", locale);
   const contactHref = `${contactPath}#${CONTACT_FORM_ID}`;
   const onContactPage =

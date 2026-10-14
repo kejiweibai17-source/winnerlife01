@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Copy from "./Copy";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const ACCENT = "#d4622a";
 const TAG_BG = "#4a3f35";
@@ -118,8 +118,7 @@ function SanuSectionHeader({ num, title, description, delay = 0 }) {
 
 export default function TransportationPage() {
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const t = useTranslations("transportation");
 
   const stationAreasCol1 = t.raw("stationAreasCol1");

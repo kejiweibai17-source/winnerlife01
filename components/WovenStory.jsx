@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 // 我們只需要一張非常寬的圖片，或者幾張圖片拼成的長條圖。
 // 為了無縫平移，將四張圖片拼在同一個容器裡。
@@ -40,7 +40,7 @@ const slides = [
 export default function WovenStory() {
   const t = useTranslations("woven");
   const pathname = usePathname();
-  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const moreHref = getLocalizedPath("/concept", locale);
   return (
     <section className="relative w-full h-[50svh] min-h-[22rem] max-h-[28rem] overflow-hidden bg-[#111] md:h-[100svh] md:min-h-0 md:max-h-none">

@@ -17,7 +17,8 @@ function checkAdminAuth(request: Request): boolean {
 
 export async function GET(request: Request) {
   const {searchParams} = new URL(request.url)
-  const locale = searchParams.get('locale') === 'jp' ? 'jp' : 'zh'
+  const localeParam = searchParams.get('locale')
+  const locale = localeParam === 'jp' || localeParam === 'en' ? localeParam : 'zh'
   const admin = searchParams.get('admin') === '1'
   const setup = searchParams.get('setup') === '1'
 

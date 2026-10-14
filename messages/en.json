@@ -1,0 +1,2985 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "line1": "Shirokane-Takanawa",
+        "line2": "Only a few homes. A bayside life to treasure."
+      },
+      {
+        "line1": "Exquisite Detail",
+        "line2": "Exceptional Quality."
+      },
+      {
+        "line1": "Timeless Design",
+        "line2": "Refined finishes in a warm, inviting setting."
+      },
+      {
+        "line1": "Premium Location",
+        "line2": "At the heart of Shinagawa and Minato."
+      }
+    ],
+    "bottomTag": "Shinagawa · Minato",
+    "bottomBrand": "OK PRIME",
+    "scrollText": "SCROLL FOR CONTENTS"
+  },
+  "info": {
+    "title": "INFORMATION",
+    "items": [
+      "Sales: Now accepting applications in order of registration",
+      "Model residences: 14 units in total",
+      "Now accepting property registrations and viewing appointments!"
+    ],
+    "register": {
+      "label": "Book a Seminar",
+      "desc": "Reserve a complimentary VIP seat at our information seminar. Learn about OK PRIME's neighborhood, architecture and key features, as well as WinnerLife, so you can buy or invest with confidence."
+    },
+    "reserve": {
+      "label": "One-on-One Consultation",
+      "desc": "Book an online session with a dedicated advisor for tailored advice on overseas property and asset allocation."
+    },
+    "contact": {
+      "label": "Questions? Give us a call",
+      "hours": "Hours: 9:00 AM – 6:00 PM · Closed Sat, Sun & public holidays"
+    }
+  },
+  "cards": [
+    {
+      "title": "A Minato address with the ever-evolving\nShinagawa area as part of your everyday life"
+    },
+    {
+      "title": "13 minutes by train to Tennozu Isle Station"
+    },
+    {
+      "title": "South-facing with expansive windows,\nletting in plenty of natural light for bright, comfortable living"
+    }
+  ],
+  "parallax": {
+    "tag": "TRANSPORTATION",
+    "title": "Linking central Tokyo and the airport,\nwith easy, flexible ways to get around.",
+    "body": "About a 5-minute walk to Shirokane-Takanawa Station, with Mita, Tamachi and Shinagawa also close by for a smooth trip to Haneda Airport."
+  },
+  "transportSlider": {
+    "slides": [
+      {
+        "subtitle": "Landmark 2025",
+        "title": "Tokyo's newest landmark for 2025\nTAKANAWA GATEWAY CITY",
+        "description": "Tokyo's newest landmark for 2025 has arrived: TAKANAWA GATEWAY CITY.\nConnected to JR Takanawa Gateway Station, this large-scale mixed-use development brings together offices, shops, hotels and cultural spaces, bringing fresh energy to the Shirokane and Shinagawa area.",
+        "subtext": "Urban Renaissance."
+      },
+      {
+        "subtitle": "Exquisite Detail",
+        "title": "10 minutes to Shinagawa\n15 minutes to Tokyo Station",
+        "description": "Direct trains to Shinagawa Station make it easy to reach central Tokyo and head toward Yokohama.\nWhether it's your daily commute or a weekend outing, you'll spend less time getting there.",
+        "subtext": "Exceptional Quality."
+      },
+      {
+        "subtitle": "Urban Core",
+        "title": "Shops moments away\nLife at the center",
+        "description": "Shops and everyday amenities are just a short walk away. With shopping, dining and groceries all close at hand, you can enjoy the easy pace of life in the heart of the city.",
+        "subtext": "Premium Lifestyle."
+      },
+      {
+        "subtitle": "Global Gateway",
+        "title": "Two airports\nwithin easy reach",
+        "description": "With convenient direct routes to both airports, business trips and overseas travel start smoothly right from your front door, widening your world.",
+        "subtext": "Seamless Connection."
+      },
+      {
+        "subtitle": "Academic District",
+        "title": "The Keio neighborhood\nAn inspired everyday",
+        "description": "Just a 5-minute walk from Keio University's Mita Campus, you can enjoy the calm, scholarly atmosphere of a historic academic district every day, right in the heart of Tokyo.",
+        "subtext": "Keio Neighborhood."
+      }
+    ]
+  },
+  "showcase": {
+    "headerTitle": "LOCATION",
+    "headerSub": "(Life Information)",
+    "headerTag": "City convenience meets a quiet residential setting",
+    "headerDesc": "The area around Shirokane-Takanawa Station offers shopping facilities for everyday needs and a wide range of places to eat, making daily life easy and convenient. Nearby parks and leafy streets add to the charm, so you can enjoy a calm, comfortable home right in central Tokyo. It's a neighborhood where big-city convenience and peaceful everyday living go hand in hand.",
+    "tagFeatured": "Around Shirokane-Takanawa",
+    "btnReadMore": "DISCOVER MORE",
+    "cases": [
+      {
+        "caseNumber": "KEIO",
+        "role": "University",
+        "name": "An academic district near Keio University, with a location value all its own",
+        "description": "\"A 5-minute walk to Keio University.\" Right in central Tokyo, yet you can feel the calm, scholarly atmosphere of a historic academic district every day. It's a rare and truly special place to live.",
+        "blockTitle": "[Neighborhood] Where city convenience meets refined greenery",
+        "blockDesc": "An extensive, convenient transport network keeps everyday life lively and on the move. With large shopping centers, expressways and easy transit links, everything you need for work, shopping, entertainment and leisure is close by, creating a truly livable urban neighborhood.",
+        "products": [
+          {
+            "title": "Shirokane Aer City",
+            "price": "A large mixed-use complex directly connected to Shirokane-Takanawa Station, combining shops and medical facilities. It's the neighborhood's landmark building.",
+            "stepNum": "15 min"
+          },
+          {
+            "title": "Saiseikai Central Hospital",
+            "price": "A general hospital with more than 100 years of history that also provides emergency care, serving as the area's core medical facility.",
+            "stepNum": "8 min"
+          },
+          {
+            "title": "Shiba Park",
+            "price": "One of Japan's oldest parks, with views of Tokyo Tower, lush greenery and well-equipped recreation and sports facilities.",
+            "stepNum": "7 min"
+          }
+        ]
+      },
+      {
+        "caseNumber": "OK PRIME",
+        "role": "Minato, Tokyo · Shinagawa Area",
+        "name": "In the heart of Minato's prestigious academic district, a head start for the next generation",
+        "description": "Keio's academic setting × Shirokane-Takanawa's refinement × Shinagawa's everyday convenience\nWhere education, lifestyle and central-Tokyo value come together naturally every day",
+        "blockTitle": "Shirokane-Takanawa × Shinagawa × Canal Waterfront",
+        "blockDesc": "This is a rare point of balance in Tokyo's Minato City.\nOn one side, you enjoy the quiet streets and central-Tokyo refinement of Shirokane-Takanawa; on the other, you're connected to the transport, shopping and redevelopment momentum of the Shinagawa area. Grocery runs, commuting, airport trips and leisurely strolls all fit naturally within an easy radius. Where city amenities meet canal views, life gains a sense of openness and stability that's hard to find in Tokyo.",
+        "featuredTag": "Explore the Shinagawa area",
+        "btnLabel": "Book a Seminar"
+      }
+    ]
+  },
+  "bottomPromo": {
+    "sectionTitle": "Buying a Home",
+    "columns": [
+      {
+        "cta": "Browse Featured Homes",
+        "desc": "From condominiums to detached houses, we offer a wide range of options to help you find a home that suits your lifestyle."
+      },
+      {
+        "cta": "Property Inquiries",
+        "desc": "We offer property consultations and walk you through the details, helping you understand pricing, payment planning and how to book your next step."
+      }
+    ]
+  },
+  "nav": {
+    "items": [
+      {
+        "label": "Location",
+        "href": "/location"
+      },
+      {
+        "label": "Lifestyle / Access / Amenities",
+        "href": "/transportation"
+      },
+      {
+        "label": "Architecture",
+        "href": "/architecture"
+      },
+      {
+        "label": "Property Overview",
+        "href": "/summary"
+      },
+      {
+        "label": "Interiors",
+        "href": "/interior"
+      },
+      {
+        "label": "Appliances & Security",
+        "href": "/equipment"
+      },
+      {
+        "label": "Our Story",
+        "href": "/story"
+      },
+      {
+        "label": "Book a Seminar",
+        "href": "/contact#contact-form"
+      }
+    ],
+    "menu": "Menu",
+    "close": "Close",
+    "download": "Download Brochure",
+    "reserve": "Book a Viewing or Consultation",
+    "phoneInquiries": "Phone Inquiries & Appointments",
+    "taipeiOffice": "Taipei Office",
+    "japanHotline": "Japan Hotline",
+    "kantoOffice": "Taipei Office",
+    "kansaiOffice": "Japan Hotline",
+    "businessHours": "Hours: 9:00 AM – 6:00 PM · Closed Sat, Sun & public holidays",
+    "slogan": "Building the future, together.",
+    "language": "Language"
+  },
+  "footer": {
+    "brand": "忠訓地產",
+    "privacy": "Privacy Policy",
+    "designBy": "Design By",
+    "designer": "Jeek Web Design"
+  },
+  "sideActions": {
+    "ariaLabel": "Quick contact",
+    "line": "LINE Official Account",
+    "contact": "Seminar",
+    "goTop": "Back to top"
+  },
+  "contentGrid": {
+    "items": [
+      {
+        "title": "Home",
+        "subtitle": "Welcome",
+        "hoverText": "Back to the homepage · Explore the residence"
+      },
+      {
+        "title": "Location",
+        "subtitle": "Location Value",
+        "hoverText": "Premium materials · Model displays · Expert tours"
+      },
+      {
+        "title": "Lifestyle / Access / Amenities",
+        "subtitle": "Lifestyle",
+        "hoverText": "Master design · Minimalist façade · Fine craftsmanship"
+      },
+      {
+        "title": "Architecture",
+        "subtitle": "Design & Craft",
+        "hoverText": "Urban renewal · New streetscapes · Driving growth"
+      },
+      {
+        "title": "Property Overview",
+        "subtitle": "Overview",
+        "hoverText": "Multiple rail lines · Airport access · Easy connections"
+      },
+      {
+        "title": "Interiors",
+        "subtitle": "Interior",
+        "hoverText": "Parks & greenery · Full amenities · Top school district"
+      },
+      {
+        "title": "Appliances & Security",
+        "subtitle": "Equipment & Security",
+        "hoverText": "Smart systems · Premium appliances · All-round security"
+      },
+      {
+        "title": "Our Story",
+        "subtitle": "Brand Story",
+        "hoverText": "Brand philosophy · Our journey · Our vision"
+      }
+    ]
+  },
+  "location": {
+    "page": {
+      "seo": {
+        "title": "Location & Neighborhood | OK PRIME+ Shirokane-Takanawa",
+        "description": "5-5-10 Mita, Minato-ku, Tokyo (〒108-0073). About a 5-minute walk to Shirokane-Takanawa Station, close to Keio University's Mita Campus and Takanawa Gateway City. Where city convenience meets a quiet residential setting. Property information by WinnerLife.",
+        "keywords": [
+          "OK PRIME",
+          "OK PRIME+",
+          "Shirokane-Takanawa",
+          "5-5-10 Mita",
+          "neighborhood",
+          "location",
+          "Keio University area",
+          "WinnerLife",
+          "Mita Minato-ku"
+        ],
+        "ogImage": "/images/og/location.jpg",
+        "ogImageAlt": "OK PRIME+ Shirokane-Takanawa location and neighborhood in Minato City"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "current": "Location"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "Where is OK PRIME+ Shirokane-Takanawa located?",
+            "answer": "It's at 5-5-10 Mita, Minato-ku, Tokyo (〒108-0073), about a 5-minute walk from Shirokane-Takanawa Station. Mita, Tamachi and Sengakuji stations are also within walking distance."
+          },
+          {
+            "question": "What everyday amenities and schools are nearby?",
+            "answer": "The property is close to Keio University's Mita Campus, the Takanawa Gateway City redevelopment, and shopping centers like Shirokane Aer City, along with supermarkets, banks and medical facilities."
+          },
+          {
+            "question": "How can I learn more about the location?",
+            "answer": "Book a viewing on our website or give us a call. A WinnerLife specialist will walk you through the location, transit access and investment planning."
+          }
+        ]
+      },
+      "heroAlt": "Keio University area",
+      "intro": {
+        "title": "LOCATION",
+        "subtitle": "A rare address in a university district, steps from Keio University.",
+        "paragraphs": [
+          "Keio University's Mita Campus is about a 5-minute walk away. You're in the heart of Tokyo, yet every day you'll feel the calm, scholarly atmosphere of a historic university district.",
+          "Here, Mita and Shirokane-Takanawa meet in Minato City. Education, business and daily conveniences come together in a location that's both rare and full of potential."
+        ],
+        "waterfrontAlt": "University district around Keio University"
+      },
+      "overview": {
+        "title": "Neighborhood Guide",
+        "subtitle": "An overview of the location, transit, amenities and travel times",
+        "items": [
+          {
+            "id": "geo",
+            "num": "01",
+            "title": "Location",
+            "body": "Mita and Shirokane-Takanawa, Minato City. A neighborhood that keeps evolving, pairing central-city convenience with a calm residential setting."
+          },
+          {
+            "id": "access",
+            "num": "02",
+            "title": "Access (Stations & Airports)",
+            "body": "Multiple train lines plus direct links to Haneda and Narita. A transit hub connecting central Tokyo, the airports and the wider world."
+          },
+          {
+            "id": "facilities",
+            "num": "03",
+            "title": "Amenities & Travel Times",
+            "body": "Shops, clinics and parks are all within walking distance. From everyday errands to time in the green, here's how long it takes to get there."
+          },
+          {
+            "id": "summary",
+            "num": "04",
+            "title": "Transit at a Glance",
+            "body": "A quick rundown of links to stations, airports and everyday amenities, so you can picture getting around day to day."
+          }
+        ]
+      },
+      "geo": {
+        "breadcrumb": "TOP　|　Neighborhood　|　Location",
+        "title": "Location",
+        "subtitle": "Location",
+        "tagline": "Mita & Shirokane-Takanawa, Minato City — where central Tokyo meets a university district.",
+        "body": "Located at 5-5-10 Mita, Minato-ku, Tokyo, close to Shirokane-Takanawa and the Takanawa Gateway City redevelopment.\nA calm residential feel sits alongside big-city convenience, making this a location with strong long-term potential. The streets here offer a well-balanced mix of business, culture and everyday living.",
+        "imageAlt": "Mita and Shirokane-Takanawa area, Minato City"
+      },
+      "access": {
+        "title": "Access",
+        "description": "Outstanding airport access. The Toei Asakusa Line Airport Limited Express runs straight to Haneda and Narita airports with no transfers, so business trips and getaways are effortless.",
+        "trainLabel": "Routes",
+        "airportLabel": "Airports",
+        "trainItems": [
+          {
+            "id": "tokyo",
+            "name": "Tokyo Sta.",
+            "time": "Direct, approx. 9 min",
+            "route": "JR Yamanote Line (from Tamachi Sta.)"
+          },
+          {
+            "id": "ginza",
+            "name": "Ginza Sta.",
+            "time": "1 transfer, approx. 14 min",
+            "route": "Toei Asakusa Line (Mita Sta.) → transfer to Hibiya Line at Higashi-Ginza"
+          },
+          {
+            "id": "roppongi",
+            "name": "Roppongi Sta.",
+            "time": "1 transfer, approx. 16 min",
+            "route": "Tokyo Metro Namboku Line → transfer to Toei Oedo Line at Azabu-Juban"
+          },
+          {
+            "id": "shibuya",
+            "name": "Shibuya Sta.",
+            "time": "Direct, approx. 17 min",
+            "route": "JR Yamanote Line (from Tamachi Sta.)"
+          },
+          {
+            "id": "shinjuku",
+            "name": "Shinjuku Sta.",
+            "time": "Direct, approx. 26 min",
+            "route": "JR Yamanote Line (from Tamachi Sta.)"
+          },
+          {
+            "id": "shinagawa",
+            "name": "Shinagawa Sta.",
+            "time": "Direct, approx. 5 min",
+            "route": "Toei Asakusa Line Limited Express (from Mita Sta.)"
+          }
+        ],
+        "airportItems": [
+          {
+            "id": "airport",
+            "name": "Airports",
+            "time": "Haneda approx. 19 min / Narita from approx. 73 min",
+            "route": "Take the Toei Asakusa Line Airport Limited Express straight to your flight"
+          }
+        ]
+      },
+      "facilities": {
+        "title": "Amenities",
+        "description": "Shops, clinics and parks are all within walking distance. See how they fit into your daily routes, from everyday errands to time off.",
+        "items": [
+          {
+            "id": "ael",
+            "name": "Shirokane Aer City",
+            "time": "Approx. 3 min walk",
+            "distance": "Approx. 240 m"
+          },
+          {
+            "id": "gateway",
+            "name": "Takanawa Gateway City",
+            "time": "Approx. 15 min walk",
+            "distance": "Approx. 1,200 m"
+          },
+          {
+            "id": "shiba",
+            "name": "Shiba Park",
+            "time": "Approx. 20 min walk",
+            "distance": "Approx. 1,600 m"
+          }
+        ]
+      },
+      "summary": {
+        "imageAlt": "Transit connections",
+        "title": "Transit at a Glance",
+        "description": "Key connections to major stations and airports, for daily commutes, business trips and travel.",
+        "rows": [
+          {
+            "label": "Shirokane-Takanawa Sta.",
+            "detail": "Namboku Line / Mita Line　approx. 9 min walk"
+          },
+          {
+            "label": "Mita / Tamachi Sta.",
+            "detail": "Toei Mita Line / JR Yamanote Line　approx. 13–14 min walk"
+          },
+          {
+            "label": "Shinagawa Sta.",
+            "detail": "JR / Keikyu　approx. 8 min by train"
+          },
+          {
+            "label": "Haneda Airport",
+            "detail": "Approx. 30 min by train (estimate)"
+          },
+          {
+            "label": "Narita Airport",
+            "detail": "Approx. 60–80 min by train (estimate)"
+          }
+        ],
+        "backToTop": "Back to Home"
+      },
+      "backToTop": "Back to Top"
+    },
+    "designSections": {
+      "s1": {
+        "title": "SHINAGAWA Sta.",
+        "subtitle": "The future transit value of the Chuo Shinkansen maglev",
+        "paragraphs": [
+          "Shinagawa Station is set to become the terminal of the Chuo Shinkansen maglev, linking Tokyo and Nagoya in as little as 40 minutes — a world-class high-speed network in the making.",
+          "Shinagawa is just two stops from Shirokane-Takanawa. As domestic and international travel gets dramatically easier, the area's rare appeal as a residential address will only grow."
+        ],
+        "imageAlt": "Around Shinagawa Station",
+        "footer": "OK PRIME SHIROKANE-TAKANAWA | 03"
+      },
+      "s2": {
+        "verticalTitle": "白金高輪",
+        "enTitle": "SHIROKANE TAKANAWA",
+        "tagline": "The Ever-Evolving Shirokane-Takanawa",
+        "title": "A City Reimagined:\nLarge-Scale Redevelopment Underway",
+        "body": "Shirokane-Takanawa, with its history and refined character, is entering a new stage as the whole neighborhood is renewed. Alongside new housing, plans are steadily bringing in shops, restaurants, offices and everyday services, creating a city where living, working and relaxing all happen close to home. This is a neighborhood that will keep building value for years to come — this is Shirokane-Takanawa."
+      },
+      "s3": {
+        "titleKeio": "KEIO",
+        "titleUniversity": "University",
+        "title": "KEIO University",
+        "heading": "The unique value of a university district, steps from Keio University",
+        "quote": "\"A 5-minute walk to Keio University.\"",
+        "body": "Right in central Tokyo, yet you can feel the calm, scholarly air of a historic university district every day — a rare and truly special place to live.",
+        "imageCaption": "Keio University — 5 min walk / 350 m",
+        "cards": [
+          {
+            "name": "Shirokane Aer City",
+            "time": "10 min walk",
+            "description": "A large mixed-use complex directly connected to Shirokane-Takanawa Station. With shops and medical services under one roof, it's the neighborhood's landmark."
+          },
+          {
+            "name": "Saiseikai Central Hospital",
+            "time": "16 min walk",
+            "description": "A general hospital with over a century of history. It also provides emergency care and serves as the area's core medical center."
+          },
+          {
+            "name": "Shiba Park",
+            "time": "21 min walk",
+            "description": "One of Japan's oldest parks, with views of Tokyo Tower, lush greenery and excellent recreation and sports facilities."
+          }
+        ]
+      },
+      "s4": {
+        "imageLabels": [
+          "TAKANAWA GATEWAY CITY / THE LINKPILLAR 1 NORTH/SOUTH",
+          "SHIROKANE The SKY"
+        ],
+        "title": "New Landmarks, Rising Prestige",
+        "body": "Led by the completed SHIROKANE The SKY, major developments such as TAKANAWA GATEWAY CITY are becoming new landmarks and transforming the skyline around Shirokane-Takanawa. Sophisticated architecture paired with high-quality living, combined with Shirokane's signature calm and upscale feel and a modern urban edge, is lifting the brand value of the entire area."
+      },
+      "s5": {
+        "title": "LOCATION",
+        "subtitle": "A neighborhood where city convenience and a quiet home life live side by side",
+        "body": "Around Shirokane-Takanawa Station, you'll find shops for everyday needs and a wide range of places to eat, making daily life easy. Nearby parks and tree-lined streets add a touch of green, giving you a calm, comfortable home right in the heart of the city. Here, you get the best of both: urban convenience and a pleasant, peaceful everyday life.",
+        "lifeInfoTitle": "Life Information",
+        "mapProject": "OK PRIME+ SHIROKANE-TAKANAWA",
+        "mapStations": [
+          "Shirokane-Takanawa Sta. — 9 min walk",
+          "Tamachi / Mita Sta. — 14 min walk"
+        ],
+        "mapLabels": [
+          "Shirokane-Takanawa Sta. (Tokyo Metro Namboku Line / Toei Mita Line)",
+          "Mita Sta. (Toei Asakusa Line / Mita Line)",
+          "Tamachi Sta. (JR Keihin-Tohoku & Negishi Lines / Yamanote Line)"
+        ],
+        "lifeItems": [
+          {
+            "name": "DCM Mita",
+            "time": "3 min walk",
+            "distance": "190 m"
+          },
+          {
+            "name": "7-Eleven Minato Mita 5-chome",
+            "time": "6 min walk",
+            "distance": "400 m"
+          },
+          {
+            "name": "SMBC Mita-dori Branch",
+            "time": "10 min walk",
+            "distance": "600 m"
+          },
+          {
+            "name": "Shirokane Aer City",
+            "time": "10 min walk",
+            "distance": "700 m"
+          },
+          {
+            "name": "Minato City Takanawa Community Center",
+            "time": "14 min walk",
+            "distance": "950 m"
+          },
+          {
+            "name": "Shirokane Shopping Street",
+            "time": "14 min walk",
+            "distance": "1.0 km"
+          }
+        ],
+        "pageNum": "04"
+      }
+    }
+  },
+  "transportation": {
+    "seo": {
+      "title": "Transit Access | OK PRIME+ Shirokane-Takanawa",
+      "description": "5-5-10 Mita, Minato-ku, Tokyo. Within reach of three stations — Shirokane-Takanawa, Mita and Tamachi — served by the Namboku, Mita, Asakusa and JR lines, with easy links to central Tokyo and Haneda Airport. WinnerLife explains the transit advantages of OK PRIME+ Shirokane-Takanawa.",
+      "keywords": [
+        "OK PRIME",
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "transit access",
+        "Mita",
+        "Tamachi",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/transportation.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa transit access"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Neighborhood, Transit & Amenities"
+    },
+    "hero": {
+      "tag": "TRANSPORTATION",
+      "title": "Linked to central Tokyo and the airports —\nfast, flexible transit.",
+      "subtitle": "5-5-10 Mita, Minato-ku | Walk to Shirokane-Takanawa, Mita and Tamachi, with five lines nearby."
+    },
+    "heroImage": {
+      "alt": "OK PRIME+ Shirokane-Takanawa"
+    },
+    "sections": {
+      "s01": {
+        "title": "Shirokane-Takanawa, Mita and Tamachi: a Minato City base where multiple lines meet.",
+        "description": "Tokyo Metro Namboku Line, Toei Mita and Asakusa lines, and the JR Yamanote and Keihin-Tohoku lines. From major central stations to Haneda Airport, pick the best route for whatever your day holds."
+      },
+      "s02": {
+        "title": "From Mita, Minato City, a smooth ride to central Tokyo and the airports.",
+        "description": "The nearest station is Shirokane-Takanawa (9-minute walk). Mita, Tamachi and Sengakuji stations are also close by, connecting you to the Shinagawa hub and Haneda Airport.",
+        "routesLabel": " stations · 5 lines",
+        "minutesLabel": " min",
+        "nearestWalkMinutes": "9",
+        "nearestWalkNote": "9-minute walk to Shirokane-Takanawa Sta.",
+        "footnote": "* Estimates based on on-site measurements around the property address, 5-5-10 Mita, Minato-ku, Tokyo, and the real estate industry standard (approx. 80 m = 1 min). Actual times vary with road conditions and station exits.",
+        "walkStationsTag": "Stations within walking distance",
+        "mapAlt": "Local transit map"
+      },
+      "s03": {
+        "title": "Train or car — choose what suits the moment.",
+        "description": "Take the subway for your daily commute, the Shinkansen from Shinagawa for business trips, and the Asakusa Line or a JR/Keikyu transfer to reach Haneda. With so many ways to get around, city life is easy.",
+        "accessLabel": "Transit Access",
+        "cta": "More transit information"
+      },
+      "gallery": {
+        "title": "See the transit advantages in photos.",
+        "description": "From stations and streetscapes to airport links — a look at getting around Mita and Shirokane-Takanawa."
+      },
+      "s04": {
+        "title": "ACCESS",
+        "description": "Connected to central Tokyo, Shinagawa and the airports — a location where every way of getting around comes together.",
+        "accessImageAlt": "Buses and road transport"
+      },
+      "travelTime": {
+        "title": "Estimated Travel Times to Key Destinations"
+      },
+      "map": {
+        "alt": "Transit connections map",
+        "note": "* Travel times and distances are estimates and may vary with traffic, transfers and other factors."
+      }
+    },
+    "stationAreasCol1": [
+      "Shirokane-Takanawa",
+      "Mita",
+      "Tamachi",
+      "Sengakuji"
+    ],
+    "stationAreasCol2": [
+      "Takanawa Gateway",
+      "Shinagawa",
+      "Roppongi-itchome",
+      "Haneda Airport"
+    ],
+    "transportNodes": [
+      {
+        "label": "Train",
+        "sub": "Multiple lines"
+      },
+      {
+        "label": "Car",
+        "sub": "Expressway & airports"
+      },
+      {
+        "label": "Transfers",
+        "sub": "Shinagawa & Haneda"
+      }
+    ],
+    "photoGallery": [
+      {
+        "caption": "Around Shirokane-Takanawa Sta.　approx. 5 min walk"
+      },
+      {
+        "caption": "Streetscape toward Mita and Tamachi"
+      },
+      {
+        "caption": "Takanawa Gateway City　approx. 15 min walk"
+      },
+      {
+        "caption": "Streets of Mita, Minato City"
+      }
+    ],
+    "accessModes": [
+      {
+        "label": "BY TRAIN",
+        "items": [
+          "Shirokane-Takanawa Sta.　9 min walk",
+          "Mita Sta. (Toei Asakusa & Mita lines)　approx. 13 min walk (approx. 1,000 m)",
+          "Tamachi Sta. (JR Yamanote & Keihin-Tohoku lines)　approx. 14 min walk (approx. 1,100 m)",
+          "Sengakuji Sta. (Toei Asakusa Line / Keikyu)　approx. 12 min walk (approx. 950 m)",
+          "Takanawa Gateway Sta. (JR)　approx. 15 min walk (approx. 1,200 m)",
+          "Shinagawa Sta. (JR / Keikyu)　approx. 25 min walk / approx. 8 min by train"
+        ]
+      },
+      {
+        "label": "BY CAR",
+        "items": [
+          "Shuto Expressway Shibakoen on/off-ramp　approx. 8 min drive (approx. 2 km)*",
+          "Haneda Airport　approx. 25 min drive (approx. 15 km)*",
+          "Narita Airport　approx. 60 min drive (approx. 70 km)*"
+        ]
+      },
+      {
+        "label": "TO AIRPORT",
+        "items": [
+          "Toei Asakusa Line from Mita / Sengakuji → Keikyu Airport Line　approx. 25–35 min to Haneda*",
+          "Transfer at JR Tamachi / Shinagawa　approx. 25–35 min to Haneda*",
+          "Narita Airport via JR, Keisei, etc.　approx. 60–80 min*"
+        ]
+      }
+    ],
+    "travelTimeRows": [
+      {
+        "from": "Shirokane-Takanawa",
+        "time": "9 min walk"
+      },
+      {
+        "from": "Mita Sta.",
+        "time": "Approx. 13 min walk"
+      },
+      {
+        "from": "Tamachi Sta.",
+        "time": "Approx. 14 min walk"
+      },
+      {
+        "from": "Takanawa Gateway Sta.",
+        "time": "Approx. 15 min walk"
+      },
+      {
+        "from": "Shinagawa Sta.",
+        "time": "Approx. 8 min by train"
+      },
+      {
+        "from": "Tokyo Sta.",
+        "time": "Approx. 18 min by train"
+      },
+      {
+        "from": "Roppongi-itchome Sta.",
+        "time": "Approx. 8 min by train"
+      },
+      {
+        "from": "Haneda Airport",
+        "time": "Approx. 30 min by train"
+      }
+    ],
+    "links": {
+      "toLocation": "View Neighborhood",
+      "toAmenities": "View Nearby Amenities",
+      "backToTop": "Back to Top"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "What's the nearest station to OK PRIME+ Shirokane-Takanawa?",
+          "answer": "The nearest station is Shirokane-Takanawa on the Tokyo Metro Namboku Line and Toei Mita Line, a 9-minute walk (approx. 400 m) away. Mita, Tamachi and Sengakuji stations also give you easy access to Shinagawa and Haneda Airport."
+        },
+        {
+          "question": "How long does it take to get to Haneda Airport?",
+          "answer": "About 25–35 minutes via Shirokane-Takanawa, Mita, Tamachi or nearby stations, depending on the route and schedule."
+        },
+        {
+          "question": "What's the property address?",
+          "answer": "5-5-10 Mita, Minato-ku, Tokyo (〒108-0073)."
+        }
+      ]
+    }
+  },
+  "architecture": {
+    "seo": {
+      "title": "Architecture | OK PRIME Shirokane-Takanawa",
+      "description": "The exterior design of OK PRIME Shirokane-Takanawa: nichokake brick tiles, stone textures, Spanish-style paving and the interplay of light and shadow create a calm, enduring Urban Classic presence. Designed by Meiho Archilabo. Property information by WinnerLife.",
+      "keywords": [
+        "OK PRIME",
+        "Shirokane-Takanawa",
+        "architectural design",
+        "exterior",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/architecture.jpg",
+      "ogImageAlt": "OK PRIME Shirokane-Takanawa Urban Classic building exterior"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Architecture"
+    },
+    "hero": {
+      "tag": "ARCHITECTURE & MATERIALS",
+      "title": "Architecture",
+      "subtitle": "A timeless facade, built on a thousand years of craftsmanship",
+      "imageAlt": "OK PRIME SHIROKANE-TAKANAWA building exterior"
+    },
+    "intro": {
+      "heading": "Artisan craftsmanship meets modern building technology",
+      "body": "At OK PRIME Shirokane-Takanawa, every material — from the exterior tiles to the coating system — reflects an uncompromising commitment to quality. We've chosen Japan's highest-grade building materials and centuries-old craftsmanship to create a central Tokyo asset that only gets better with time."
+    },
+    "highlights": [
+      {
+        "num": "01",
+        "tag": "Mino-yaki · Traditional Craft",
+        "title": "Authentic Mino-yaki heritage — a treasured Japanese craft over 1,000 years in the making",
+        "body": "Mino-yaki ceramics have a history of more than 1,300 years and are officially designated a Traditional Craft by the Japanese government. Chōkō Tōgyō has taken this kiln-firing technique, once reserved for fine tea ware and tableware, and adapted it perfectly for modern exterior tiles. By bringing the wabi-sabi aesthetic of the Japanese tea ceremony to the facade, your home gains more character the longer you live in it."
+      },
+      {
+        "num": "02",
+        "tag": "Golden Blend · Artisan Mixed",
+        "title": "An exclusive 5:9:4 golden blend — depth and dimension, precisely mixed by artisans",
+        "body": "Artisans precisely mix three shades of deep gray — dark, medium and light — in a perfect 5:9:4 ratio and lay them in a random mesh-backed pattern. In natural light at different times of day, or after a rain shower, the wall reveals remarkably subtle depth and texture. It's a quiet kind of luxury that instantly elevates the entire building."
+      },
+      {
+        "num": "03",
+        "tag": "Class BI Porcelain · Top Grade",
+        "title": "Top-grade Class BI porcelain — durability built for extreme climates",
+        "body": "These tiles are classified as Class BI (porcelain), the top grade with the lowest water absorption (typically under 1%) and the highest firing temperature (over 1,200°C). The catalog specifically rates them \"Frost Resistance ◎\" — proven even in Japan's coldest regions — so in milder climates they keep the facade looking new for 30 years, saving significantly on exterior cleaning and maintenance."
+      },
+      {
+        "num": "04",
+        "tag": "45 Nichokake · Flanca",
+        "title": "45 Nichokake Flanca (mesh-backed) — handcrafted texture with efficient installation",
+        "body": "The 45 Nichokake Flanca series uses the classic nichokake proportions of Japanese architecture to create refined lines. Supplied on mesh backing, it keeps the fine detail of small tiles while making on-site installation much faster and more even."
+      }
+    ],
+    "advantages": {
+      "title": "Product Advantages",
+      "subtitle": "Building material performance that stands the test of time",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "Exceptional Durability",
+          "body": "A cross-linked coating with siloxane bonds effectively resists UV rays, moisture and other causes of polymer aging, protecting the building's exterior for the long term."
+        },
+        {
+          "icon": "sparkles",
+          "title": "Superior Stain Resistance",
+          "body": "The dense cross-linked coating keeps airborne dust and exhaust fumes from sticking, delivering outstanding resistance to dirt."
+        },
+        {
+          "icon": "leaf",
+          "title": "Mold & Algae Resistant",
+          "body": "A special formulation prevents mold, algae and other microbial growth over the long term, keeping the building's surfaces clean and hygienic."
+        },
+        {
+          "icon": "globe",
+          "title": "Eco-Friendly & Safe",
+          "body": "A water-based paint (thinned with water) with no risk of solvent poisoning or fire, making the job site safer for workers."
+        },
+        {
+          "icon": "trend",
+          "title": "Boosts Asset Value",
+          "body": "More durable than conventional acrylic or polyurethane paints, with a lower overall life-cycle cost that helps raise the building's asset value."
+        },
+        {
+          "icon": "gem",
+          "title": "Distinctive Look & Feel",
+          "body": "A richly textured, dimensional surface paired with a pearlescent glaze with its own unique sheen creates visual depth and material beauty that's hard to replicate."
+        }
+      ]
+    },
+    "spec": {
+      "title": "Key Specifications",
+      "items": [
+        {
+          "label": "Tile Name",
+          "value": "Flanca"
+        },
+        {
+          "label": "Tile Size",
+          "value": "45 Nichokake Flanca"
+        },
+        {
+          "label": "Supply Format",
+          "value": "Mesh-backed sheets 300 × 300 mm"
+        },
+        {
+          "label": "Tile Type",
+          "value": "Class BI (porcelain)"
+        },
+        {
+          "label": "Water Absorption",
+          "value": "< 1% (top grade)"
+        },
+        {
+          "label": "Firing Temperature",
+          "value": "1,200°C or higher"
+        },
+        {
+          "label": "Frost Resistance",
+          "value": "◎ (certified for Japan's coldest regions)"
+        },
+        {
+          "label": "Color Ratio",
+          "value": "Dark : Medium : Light = 5:9:4 (golden blend)"
+        },
+        {
+          "label": "Origin",
+          "value": "Mino-yaki, Gifu Prefecture, Japan (Chōkō Tōgyō)"
+        }
+      ]
+    },
+    "tags": [
+      "Mino-yaki",
+      "Class BI Porcelain",
+      "5:9:4 Blend",
+      "Flanca"
+    ],
+    "consultant": {
+      "name": "OK PRIME Advisor"
+    },
+    "bubbles": [
+      "Our tiles are Mino-yaki, a traditional Japanese craft with 1,300 years of kiln-firing heritage.",
+      "The exterior tiles are top-grade Class BI porcelain — under 1% water absorption and extremely durable.",
+      "A 5:9:4 golden blend gives the walls subtle depth in every kind of light."
+    ],
+    "sidebar": {
+      "premiumAlt": "SK Kaken Premium series",
+      "premiumCaption": "SK Kaken Premium paint series",
+      "specTitle": "Basic Specifications",
+      "ctaPrompt": "Want to know more?",
+      "lineCta": "Chat with us on LINE",
+      "summaryCta": "View Property Summary",
+      "advantagesTitle": "Product Advantages"
+    },
+    "gallery": {
+      "label": "CASE STUDY",
+      "title": "SK Kaken Materials in Use",
+      "items": [
+        {
+          "src": "/images/architecture/sk-material-12.jpg",
+          "caption": "Case study — apartment building exterior"
+        },
+        {
+          "src": "/images/architecture/sk-material-02.jpg",
+          "caption": "Super Ceratite F exterior wall system"
+        },
+        {
+          "src": "/images/architecture/sk-material-03.jpg",
+          "caption": "Water-based Ceratite F durable paint"
+        },
+        {
+          "src": "/images/architecture/sk-material-04.jpg",
+          "caption": "Water-based Ceratite Si series"
+        },
+        {
+          "src": "/images/architecture/sk-material-05.jpg",
+          "caption": "SK Premium Silicon"
+        },
+        {
+          "src": "/images/architecture/sk-material-06.jpg",
+          "caption": "Water-based Ceramisilicon exterior paint"
+        },
+        {
+          "src": "/images/architecture/sk-material-07.jpg",
+          "caption": "SK Premium Inorganic series"
+        },
+        {
+          "src": "/images/architecture/sk-material-08.jpg",
+          "caption": "Ultra-low soiling — hydrophilic coating"
+        },
+        {
+          "src": "/images/architecture/sk-material-09.jpg",
+          "caption": "Ultra-weatherproof — inorganic hybrid technology"
+        },
+        {
+          "src": "/images/architecture/sk-material-11.jpg",
+          "caption": "Long-life specification for condominiums"
+        },
+        {
+          "src": "/images/architecture/sk-building-01.jpg",
+          "caption": "Case study — luxury apartment building"
+        },
+        {
+          "src": "/images/architecture/sk-building-05.jpg",
+          "caption": "Case study — large mixed-use complex"
+        }
+      ]
+    },
+    "partner": {
+      "label": "MATERIAL PARTNER",
+      "name": "SK KAKEN Co., Ltd.",
+      "description": "Founded in 1955, SK Kaken is Japan's No. 1 maker of architectural finishing coatings and exterior wall finishes, and the designated exterior materials partner for OK PRIME Shirokane-Takanawa."
+    },
+    "backLink": "← Back to Home",
+    "backToTop": "Back to Top"
+  },
+  "summary": {
+    "seo": {
+      "title": "Property Summary | OK PRIME+ Shirokane-Takanawa",
+      "description": "Property summary, floor plans, interior and exterior finish schedules, and equipment specifications for OK PRIME+ Shirokane-Takanawa. Named after the Spanish word for \"lighthouse,\" it's built to hold its value for generations. Viewings and inquiries by WinnerLife.",
+      "keywords": [
+        "OK PRIME",
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "property summary",
+        "floor plans",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/summary.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa property summary"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Property Summary"
+    },
+    "heroAlt": "OK PRIME+ Shirokane-Takanawa property summary",
+    "intro": {
+      "image02Alt": "El Faro brand imagery",
+      "image03Alt": "OK PRIME+ Shirokane-Takanawa",
+      "paragraph": "A design that captures the solid form of stone architecture, beautiful through the years.\nAnd its light will become a place for the heart to come home to — a beacon lighting the way forward.",
+      "heading": "Timeless Design, Lasting Asset Value"
+    },
+    "overview": {
+      "title": "Property Summary",
+      "subtitle": "Design overview",
+      "disclaimer": "* Details in the exterior and interior finish schedules and equipment list are subject to change due to construction or other factors."
+    },
+    "floorPlan": {
+      "title": "Floor Plans",
+      "subtitle": "Plan",
+      "imageAlt": "OK PRIME Shirokane-Takanawa floor plans for 1F, 2F–4F and 5F",
+      "footnote": "* Floor plans are for reference only and are subject to change due to construction or other factors."
+    },
+    "interior": {
+      "title": "Interior Finish Schedule",
+      "subtitle": "Finish schedule",
+      "privateArea": "〈Private Areas〉"
+    },
+    "equipment": {
+      "title": "Equipment"
+    },
+    "exterior": {
+      "title": "Exterior Finish Schedule",
+      "subtitle": "Finish schedule"
+    },
+    "labels": {
+      "name": "Name",
+      "location": "Location",
+      "lotNumber": "Lot Number",
+      "address": "Street Address",
+      "siteOverview": "Site Overview",
+      "siteArea": "Site Area",
+      "zoning": "Zoning",
+      "fireZone": "Fire Zone",
+      "coverage": "Building Coverage Ratio",
+      "far": "Floor Area Ratio",
+      "heightDistrict": "Height District",
+      "other": "Other",
+      "buildingOverview": "Building Overview",
+      "mainUse": "Primary Use",
+      "totalFloorArea": "Total Floor Area",
+      "constructionType": "Construction Type",
+      "buildingArea": "Building Area",
+      "buildingCoverage": "Building Coverage Ratio",
+      "constructionPeriod": "Construction Period",
+      "structure": "Structure / Stories",
+      "farFloorArea": "Floor Area (for FAR)",
+      "floorAreaRatio": "Floor Area Ratio",
+      "fireResistance": "Fire Resistance",
+      "elevator": "Elevator",
+      "parking": "Parking",
+      "permitNumber": "Building Permit No.",
+      "bicycleParking": "Bicycle Parking",
+      "motorcycleParking": "Motorcycle Parking",
+      "privateArea": "Unit Floor Area",
+      "developer": "Owner / Developer",
+      "part": "Area",
+      "roomName": "Room",
+      "floor": "Floor",
+      "finishMaterial": "Finish",
+      "substrate": "Substrate",
+      "baseboard": "Baseboard",
+      "wall": "Walls",
+      "ceiling": "Ceiling",
+      "ceilingHeight": "Ceiling Height",
+      "specification": "Specification",
+      "layout": "Layout",
+      "roomNo": "Unit No.",
+      "exclusiveArea": "Unit Floor Area",
+      "type": "Type"
+    }
+  },
+  "interiorPage": {
+    "seo": {
+      "title": "Interiors | OK PRIME+ Shirokane-Takanawa",
+      "description": "Interior design showcase for OK PRIME+ Shirokane-Takanawa. Large windows bring in plenty of sunlight, while soft lighting casts beautiful shadows — a home that becomes a lighthouse for those who live there. Book a viewing with WinnerLife.",
+      "keywords": [
+        "OK PRIME",
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "interior design",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/interior.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa interior common areas"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Interiors"
+    },
+    "hero": {
+      "tag": "Spatial Vision",
+      "body": "Light, materials and proportion shape our vision of interior living in Shirokane-Takanawa. From the entryway to the living room, every space reflects careful thought about the quality of everyday life.",
+      "image": "/images/interior/住戶E-室內.png",
+      "imageAlt": "OK PRIME+ Shirokane-Takanawa interior"
+    },
+    "philosophy": {
+      "heading": "Thinking about the space between architecture and environment",
+      "body": "If architecture is black and the environment is white, we believe a truly comfortable life lies in the gray area in between.",
+      "aside": "Explore our approach to space, our design philosophy and our interiors.",
+      "link": "Our Concept →"
+    },
+    "showcase": {
+      "image": "/images/index/9497269d-233d-4a5e-8325-5febb2acf4d7.png",
+      "imageAlt": "OK PRIME+ Shirokane-Takanawa interior panorama"
+    },
+    "projects": {
+      "title": "Interior Spaces",
+      "subtitle": "Featured",
+      "link": "View Property Summary",
+      "items": [
+        {
+          "id": "cabinet",
+          "title": "Unit C — Open Kitchen",
+          "category": "Kitchen & Living",
+          "image": "/images/interior/住戶C-有櫥櫃.png"
+        },
+        {
+          "id": "hidden",
+          "title": "Unit C — Hidden Storage",
+          "category": "Storage & Details",
+          "image": "/images/interior/住戶C-隱藏櫥櫃.png"
+        },
+        {
+          "id": "resident-e",
+          "title": "Unit E — Living Room",
+          "category": "Living & Interior",
+          "image": "/images/interior/住戶E-室內.png"
+        }
+      ]
+    },
+    "moreProjects": {
+      "title": "More Spaces →",
+      "body": "Explore more interior designs and lifestyle scenes.",
+      "items": [
+        {
+          "id": "lobby",
+          "title": "Entrance Lobby",
+          "category": "Common Area · Entrance",
+          "image": "/images/迎賓大廳.png"
+        },
+        {
+          "id": "corridor",
+          "title": "Entrance Corridor",
+          "category": "Common Area · Corridor",
+          "image": "/images/入口走廊.png"
+        },
+        {
+          "id": "elevator",
+          "title": "Lobby Elevator",
+          "category": "Common Area · Elevator",
+          "image": "/images/大廳電梯.png"
+        }
+      ]
+    },
+    "journal": {
+      "title": "Design Notes",
+      "subtitle": "News / Insights",
+      "link": "More Articles →",
+      "items": [
+        {
+          "id": "01",
+          "date": "2025.12.10",
+          "title": "Balancing natural light and deep gray tones indoors",
+          "category": "Interior Design",
+          "image": "/images/story/news1-1280x850.png"
+        },
+        {
+          "id": "02",
+          "date": "2025.11.28",
+          "title": "Designing the open kitchen and living room as one",
+          "category": "Floor Planning",
+          "image": "/images/concept/a96de8c2-9540-43c1-80fb-e44c3be0d651.png"
+        },
+        {
+          "id": "03",
+          "date": "2025.11.05",
+          "title": "Bringing a Japanese touch to modern city living",
+          "category": "Case Studies",
+          "image": "/images/index/0f8e46f5-ef09-4528-977e-2bb774d803ef.png"
+        },
+        {
+          "id": "04",
+          "date": "2025.10.18",
+          "title": "Everyday elegance in Shirokane-Takanawa",
+          "category": "Lifestyle",
+          "image": "/images/index/152f7e88-f8c2-47bb-bfa4-38ba3cca70de.png"
+        }
+      ]
+    },
+    "cta": {
+      "tag": "OK PRIME+ Shirokane-Takanawa",
+      "body": "Discover more about the floor plans and property details",
+      "button": "View Property Summary"
+    }
+  },
+  "equipmentPage": {
+    "seo": {
+      "title": "Equipment & Security | OK PRIME+ Shirokane-Takanawa",
+      "description": "Equipment at OK PRIME+ Shirokane-Takanawa: kitchen, bathroom and toilet fixtures, plus the ALSOK security system. Premium equipment, smart systems and all-around security. Property information by WinnerLife.",
+      "keywords": [
+        "OK PRIME",
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "equipment",
+        "security system",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/equipment.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa equipment"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Equipment & Security"
+    },
+    "intro": {
+      "tag": "EQUIPMENT & SECURITY",
+      "mainImage": "/images/interior/住戶E-室內.png",
+      "mainImageAlt": "Equipment and living space",
+      "titleLine1": "Equipment",
+      "titleLine2": "Assurance",
+      "titleX": "×",
+      "subtitle": "Premium Equipment · Smart Systems · All-Around Security",
+      "description": "From kitchen appliances to the security system, every piece of equipment has been carefully selected to bring quality and peace of mind to everyday life in Shirokane-Takanawa.",
+      "gridImages": [
+        "/images/index/wall/設備與家電.png",
+        "/images/index/wall/IoT系統與保全設備.png",
+        "/images/index/wall/房型規劃.png",
+        "/images/architecture/sk-building-03.jpg"
+      ]
+    },
+    "categories": {
+      "label": "CATEGORIES",
+      "heading": "Equipment Categories",
+      "items": [
+        {
+          "id": "toilet",
+          "title": "Toilet",
+          "subtitle": "Toilet",
+          "href": "/equipment/toilet",
+          "image": "/images/equipment/toilet/page-01.png"
+        },
+        {
+          "id": "security",
+          "title": "Security",
+          "subtitle": "Security",
+          "href": "/equipment/security",
+          "image": "/images/equipment/security/alsok-main-02.jpg"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen",
+          "subtitle": "Kitchen",
+          "href": "/equipment/kitchen",
+          "image": "/images/equipment/kitchen/riviere-07.jpg"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom",
+          "subtitle": "Bathroom",
+          "href": "/equipment/bathroom",
+          "image": "/images/equipment/bathroom/nasluck-01.jpg"
+        }
+      ]
+    }
+  },
+  "equipmentToiletPage": {
+    "seo": {
+      "title": "TOTO WASHLET SS1 Toilet | OK PRIME+ Shirokane-Takanawa",
+      "description": "OK PRIME+ Shirokane-Takanawa features the TOTO WASHLET SS1 bidet seat with ultra-clean technology, sanitizing and energy-saving functions. Full specifications, catalog and FAQ.",
+      "keywords": [
+        "OK PRIME",
+        "TOTO WASHLET",
+        "SS1",
+        "bidet toilet seat",
+        "Shirokane-Takanawa",
+        "OK PRIME+",
+        "toilet fixtures",
+        "smart toilet",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/equipment-toilet.jpg",
+      "ogImageAlt": "TOTO WASHLET SS1 bidet toilet seat",
+      "productName": "TOTO WASHLET SS1"
+    },
+    "breadcrumb": {
+      "ariaLabel": "Breadcrumb",
+      "home": "Home",
+      "equipment": "Equipment & Security",
+      "current": "Toilet"
+    },
+    "hero": {
+      "category": "Toilet",
+      "brand": "TOTO",
+      "title": "WASHLET",
+      "model": "Model: SS1",
+      "description": "The TOTO WASHLET SS1 series. Equipped with ultra-clean technology for a comfortable, worry-free experience.",
+      "image": "/images/equipment/toilet/page-01.png",
+      "imageAlt": "TOTO WASHLET SS1 catalog"
+    },
+    "intro": {
+      "heading": "Easy to use, with every thoughtful feature built in",
+      "body": "TOTO's exclusive ultra-clean technology keeps grime from sticking, so cleaning is a breeze.\nEvery use brings a fresh, clean and reassuring daily routine."
+    },
+    "plans": {
+      "heading": "Product Lineup",
+      "viewPlan": "View Specs",
+      "items": [
+        {
+          "id": "ss1",
+          "tags": [
+            "SS1",
+            "Standard"
+          ],
+          "title": "WASHLET SS1",
+          "image": "/images/equipment/toilet/page-03.png",
+          "specs": [
+            "Model: SS1",
+            "Ultra-clean technology",
+            "Grime-resistant surface finish",
+            "Sanitizes with every use",
+            "Designed for effortless cleaning"
+          ],
+          "note": "* Specifications and features are as stated in the catalog and may change depending on construction conditions."
+        },
+        {
+          "id": "ss2",
+          "tags": [
+            "SS2",
+            "Advanced"
+          ],
+          "title": "WASHLET SS2",
+          "image": "/images/equipment/toilet/page-04.png",
+          "specs": [
+            "Model: SS2",
+            "All SS1 features",
+            "Adds warm-air dryer",
+            "Automatic opening/closing seat (optional)"
+          ],
+          "note": "* See the catalog for full specifications."
+        },
+        {
+          "id": "ss3",
+          "tags": [
+            "SS3",
+            "Flagship"
+          ],
+          "title": "WASHLET SS3",
+          "image": "/images/equipment/toilet/page-05.png",
+          "specs": [
+            "Model: SS3",
+            "Top-of-the-line WASHLET series",
+            "Fully automatic cleaning & sanitizing",
+            "Soft-close seat and lid"
+          ],
+          "note": "* See the catalog for full specifications."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Key Features",
+      "image": "/images/equipment/toilet/page-02.png",
+      "imageAlt": "Ultra-clean technology",
+      "items": [
+        {
+          "title": "Grime-Resistant",
+          "body": "A special surface finish keeps grime from sticking and stops water spots from building up."
+        },
+        {
+          "title": "Effortless Cleaning",
+          "body": "The nozzle and bowl are easy to care for, making daily cleaning much less of a chore."
+        },
+        {
+          "title": "Sanitizes with Every Use",
+          "body": "The sanitizing function activates with every use, so it always stays clean."
+        }
+      ]
+    },
+    "specs": {
+      "heading": "Specs & Features",
+      "items": [
+        {
+          "title": "SS1 Standard",
+          "image": "/images/equipment/toilet/toilet-03.png",
+          "details": [
+            "Warm-water bidet seat",
+            "Heated seat",
+            "Energy-saving mode"
+          ]
+        },
+        {
+          "title": "Control Panel",
+          "image": "/images/equipment/toilet/toilet-08.png",
+          "details": [
+            "One-touch operation",
+            "Seat sensor activation",
+            "Adjustable volume"
+          ]
+        }
+      ]
+    },
+    "catalog": {
+      "heading": "Catalog Details",
+      "pageAlt": "Catalog page",
+      "pages": [
+        "/images/equipment/toilet/page-02.png",
+        "/images/equipment/toilet/page-03.png",
+        "/images/equipment/toilet/page-04.png",
+        "/images/equipment/toilet/page-05.png",
+        "/images/equipment/toilet/page-06.png",
+        "/images/equipment/toilet/page-07.png",
+        "/images/equipment/toilet/page-08.png",
+        "/images/equipment/toilet/page-09.png",
+        "/images/equipment/toilet/page-10.png",
+        "/images/equipment/toilet/page-11.png",
+        "/images/equipment/toilet/page-12.png",
+        "/images/equipment/toilet/page-13.png"
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "Which WASHLET model does OK PRIME+ Shirokane-Takanawa use?",
+          "answer": "The toilets feature the TOTO WASHLET SS1 series (model: SS1), with core functions like a warm-water bidet, heated seat and energy-saving mode, plus TOTO's exclusive ultra-clean technology."
+        },
+        {
+          "question": "What is ultra-clean technology?",
+          "answer": "It's a cleaning technology developed by TOTO. A special surface finish keeps grime from sticking and water spots from building up, making daily cleaning easier, while a sanitizing function works during use to keep the toilet clean."
+        },
+        {
+          "question": "Does the WASHLET have an energy-saving function?",
+          "answer": "Yes. The SS1 series supports an energy-saving mode that automatically adjusts heating and standby based on your usage, cutting power consumption while staying comfortable."
+        },
+        {
+          "question": "Could the equipment specifications change?",
+          "answer": "The specifications, features and catalog content shown on this page are subject to the final construction drawings and the handover equipment list. Any changes due to construction conditions, supplier adjustments or regulatory updates will follow the official project announcements."
+        },
+        {
+          "question": "How can I book a viewing and see the actual equipment?",
+          "answer": "Book a viewing or send us an inquiry through our website. The WinnerLife team will walk you through the toilet fixtures, interior layout and investment details of OK PRIME+ Shirokane-Takanawa."
+        }
+      ]
+    }
+  },
+  "equipmentBathroomPage": {
+    "seo": {
+      "title": "Bathroom | OK PRIME+ Shirokane-Takanawa",
+      "description": "Bathroom fixtures at OK PRIME+ Shirokane-Takanawa: TOTO WASHLET bidet seat, NASLUCK Bellaz Neo vanity and HOUSETEC NJ modular bathroom. Full features, specifications and FAQ.",
+      "keywords": [
+        "OK PRIME",
+        "bathroom fixtures",
+        "vanity",
+        "Bellaz Neo",
+        "NASLUCK",
+        "HOUSETEC NJ",
+        "modular bathroom",
+        "Shirokane-Takanawa",
+        "OK PRIME+",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/equipment-bathroom.jpg",
+      "ogImageAlt": "NASLUCK Bellaz Neo vanity",
+      "productName": "Bathroom Fixtures",
+      "products": [
+        {
+          "name": "TOTO WASHLET SS1",
+          "brand": "TOTO",
+          "description": "A warm-water bidet seat with the EWATER+ sanitizing water system, automatic nozzle cleaning and automatic deodorizing."
+        },
+        {
+          "name": "Bellaz Neo",
+          "brand": "NASLUCK",
+          "description": "A functional vanity with a pull-out hand shower, adjustable faucet and extra-large basin."
+        },
+        {
+          "name": "NJ Modular Bathroom",
+          "brand": "HOUSETEC",
+          "description": "A modular bathroom for apartments designed for easy cleaning, safe bathing, water and energy savings, and a space-saving footprint."
+        }
+      ]
+    },
+    "breadcrumb": {
+      "ariaLabel": "Breadcrumb",
+      "home": "Home",
+      "equipment": "Equipment & Security",
+      "current": "Bathroom"
+    },
+    "hero": {
+      "title": "Bathroom",
+      "subtitle": "Toilet, Vanity & Bath",
+      "image": "/images/equipment/bathroom/nasluck-01.jpg",
+      "imageAlt": "Bellaz Neo vanity"
+    },
+    "toilet": {
+      "tag": "TOILET",
+      "brand": "TOTO",
+      "product": "",
+      "linkLabel": "View Toilet Details",
+      "specs": [
+        {
+          "label": "Sanitizing",
+          "value": "EWATER+ sanitizing water system"
+        },
+        {
+          "label": "Nozzle Cleaning",
+          "value": "Automatic cleaning before and after use"
+        },
+        {
+          "label": "Deodorizing",
+          "value": "Automatic deodorizing system"
+        }
+      ]
+    },
+    "nasluck": {
+      "tag": "VANITY",
+      "brand": "NASLUCK",
+      "product": "Bellaz Neo Vanity",
+      "heroImage": "/images/equipment/bathroom/nasluck-01.jpg",
+      "heroImageAlt": "Bellaz Neo vanity",
+      "paragraphs": [
+        "Combining style and practicality, Bellaz Neo makes your daily routine more comfortable in a modern city home.",
+        "The pull-out hand shower makes everyday cleaning easy and even lets you wash your hair at the sink, while the adjustable faucet adapts to whatever you need. The extra-large basin adds convenience, so you can get ready without rushing even on busy mornings.",
+        "Generous storage underneath keeps all your toiletries neatly organized and the space clean and uncluttered. Thoughtful details create a bathroom that truly fits the way you live."
+      ],
+      "highlights": [
+        {
+          "image": "/images/equipment/bathroom/nasluck-05.jpg",
+          "imageAlt": "Faucet with built-in shower hose",
+          "caption": "Pull-out hand shower & adjustable faucet"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-02.jpg",
+          "imageAlt": "Resin basin",
+          "caption": "Extra-large basin"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-07.jpg",
+          "imageAlt": "Upper cabinet",
+          "caption": "Generous storage"
+        },
+        {
+          "image": "/images/equipment/bathroom/nasluck-10.jpg",
+          "imageAlt": "Mirror cabinet",
+          "caption": "Mirror cabinet"
+        }
+      ]
+    },
+    "housetec": {
+      "tag": "SYSTEM BATH",
+      "brand": "HOUSETEC",
+      "product": "NJ Modular Bathroom",
+      "heroImage": "/images/equipment/bathroom/nj-hero.jpg",
+      "heroImageAlt": "HOUSETEC NJ modular bathroom",
+      "colorLineupHeading": "Color Options",
+      "colorLineup": [
+        "/images/equipment/bathroom/nj-color-03.png",
+        "/images/equipment/bathroom/nj-extra-14.png"
+      ],
+      "features": [
+        {
+          "title": "Outstanding Ease of Cleaning",
+          "subtitle": "Easy Cleaning",
+          "body": "The flat floor has no noticeable ridges, so it drains extremely well, and the seamless one-piece design from floor to tub leaves nowhere for grime to hide — a quick scrub with a sponge is all it takes. A touch-free hair catcher uses the flow of water to gather hair naturally, making drain cleaning hygienic and easy.",
+          "layout": "double",
+          "images": [
+            {
+              "src": "/images/equipment/bathroom/nj-clean-01.jpg",
+              "alt": "Flat floor"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-clean-02.jpg",
+              "alt": "Touch-free hair catcher"
+            }
+          ]
+        },
+        {
+          "title": "Friendly, Safe, Barrier-Free Design",
+          "subtitle": "Safe Bathing",
+          "body": "The bathroom entrance has a low, nearly flat threshold that helps prevent older family members and small children from tripping. The tub's step-over height is lowered to about 450 mm, with a handy spot to lean on, helping you stay balanced and safe as you get in and out.",
+          "layout": "double",
+          "images": [
+            {
+              "src": "/images/equipment/bathroom/nj-safe-01.jpg",
+              "alt": "Low-threshold entrance"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-safe-02.jpg",
+              "alt": "Step-over height approx. 450 mm"
+            }
+          ]
+        },
+        {
+          "title": "Comfort Meets Energy Efficiency",
+          "subtitle": "Relaxing Soaks, Water & Energy Savings",
+          "body": "The tub leaves plenty of room for your shoulders and includes a handrail, keeping soaks comfortable while using about 45 liters less water than a conventional tub. A water-saving showerhead with a special flow design and a highly insulated tub that keeps water warm longer mean less reheating, cutting utility bills and CO₂ emissions.",
+          "layout": "eco",
+          "images": [
+            {
+              "src": "/images/equipment/bathroom/nj-eco-bathtub.jpg",
+              "alt": "Bathtub from above"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-insulation.jpg",
+              "alt": "Cross-section of insulated bathtub"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-shower-01.jpg",
+              "alt": "Water-saving showerhead"
+            },
+            {
+              "src": "/images/equipment/bathroom/nj-eco-shower-02.jpg",
+              "alt": "Water-saving shower"
+            }
+          ]
+        },
+        {
+          "title": "A Flexible, Space-Saving Structure",
+          "subtitle": "Flexible Fit, Space-Saving Design",
+          "body": "A unique slim structure shrinks the unit's overall exterior footprint without reducing the space inside the bathroom. It's ideal for renovations with limited space and frees up room for a wider hallway or vanity area, giving you more freedom in planning the overall layout.",
+          "layout": "wide",
+          "images": [
+            {
+              "src": "/images/equipment/bathroom/nj-space-02.jpg",
+              "alt": "Space-saving design with slim structure"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "What bathroom fixtures does OK PRIME+ Shirokane-Takanawa use?",
+          "answer": "The bathrooms bring together a TOTO WASHLET bidet seat, a NASLUCK Bellaz Neo vanity and a HOUSETEC NJ modular bathroom. Each was carefully selected for its looks, functionality and everyday convenience."
+        },
+        {
+          "question": "What are the features of the Bellaz Neo vanity?",
+          "answer": "Bellaz Neo has a pull-out hand shower and adjustable faucet, an extra-large basin for a more efficient routine, and generous storage underneath to keep toiletries neatly organized. The S model adds slim bar handles and soft-close drawers for a refined look and feel."
+        },
+        {
+          "question": "What needs does the HOUSETEC NJ modular bathroom meet?",
+          "answer": "The NJ modular bathroom is built around easy cleaning, safe bathing, water and energy savings, and a space-saving design. The flat floor and hair catcher make cleaning easier, the low-threshold entrance and low step-over tub improve safety, and the insulated tub and water-saving showerhead help lower utility bills."
+        },
+        {
+          "question": "Could the equipment specifications change?",
+          "answer": "The specifications, features and catalog content shown on this page are subject to the final construction drawings and the handover equipment list. Any changes due to construction conditions, supplier adjustments or regulatory updates will follow the official project announcements."
+        },
+        {
+          "question": "How can I book a viewing and see the actual equipment?",
+          "answer": "Book a viewing or send us an inquiry through our website. The WinnerLife team will walk you through the bathroom fixtures, interior layout and investment details of OK PRIME+ Shirokane-Takanawa."
+        }
+      ]
+    }
+  },
+  "equipmentKitchenPage": {
+    "seo": {
+      "title": "NASLUCK RIVIERE Kitchen | OK PRIME+ Shirokane-Takanawa",
+      "description": "OK PRIME+ Shirokane-Takanawa features the NASLUCK RIVIERE compact kitchen. Widths from 900 mm, available in I-type, island and peninsula layouts. Explore the equipment, set plans and installation examples.",
+      "keywords": [
+        "OK PRIME",
+        "RIVIERE",
+        "リヴィエール",
+        "NASLUCK",
+        "compact kitchen",
+        "kitchen equipment",
+        "Shirokane-Takanawa",
+        "OK PRIME+",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/equipment-kitchen.jpg",
+      "ogImageAlt": "NASLUCK RIVIERE compact kitchen",
+      "productName": "NASLUCK RIVIERE"
+    },
+    "breadcrumb": {
+      "ariaLabel": "Breadcrumb",
+      "home": "Home",
+      "equipment": "Equipment & Security",
+      "current": "Kitchen"
+    },
+    "hero": {
+      "tag": "KITCHEN EQUIPMENT",
+      "title": "Kitchen",
+      "brand": "NASLUCK",
+      "product": "RIVIERE Compact Kitchen",
+      "description": "Even in a smaller home, you can have the open, face-to-face kitchen you've always wanted. Starting at just 900 mm wide, it's the right-sized kitchen for city living.",
+      "image": "/images/equipment/kitchen/riviere-01.jpg",
+      "imageAlt": "NASLUCK RIVIERE compact kitchen"
+    },
+    "concept": {
+      "label": "CONCEPT",
+      "heading": "Concept",
+      "paragraphs": [
+        "Even in a compact layout, you can have the island or peninsula kitchen you've dreamed of.",
+        "The NASLUCK RIVIERE compact kitchen stands out for its just-right proportions, fitting seamlessly into even small spaces. Popular face-to-face island and peninsula layouts are possible too, making the kitchen the centerpiece of the room and bringing everyone's ideal to life.",
+        "Whether in a small apartment or as a second kitchen in a multigenerational home, it delivers maximum function in a limited space. Every dimension is designed with workflow and aisle width in mind."
+      ],
+      "image": "/images/equipment/kitchen/riviere-03.jpg",
+      "imageAlt": "Island kitchen"
+    },
+    "features": {
+      "label": "FEATURES",
+      "heading": "Features & Appeal",
+      "paragraphs": [
+        "Designed for tight layouts and limited spaces such as second kitchens in multigenerational homes, its dimensions carefully account for workflow and aisle width so the kitchen works as hard as possible.",
+        "The slim, streamlined body packs every essential function into a compact footprint. Along with ample wall-cabinet storage, it accommodates both two-burner gas cooktops and IH induction cooktops."
+      ],
+      "imageMain": "/images/equipment/kitchen/riviere-07.jpg",
+      "imageMainAlt": "I-type system kitchen",
+      "imageDiagram": "/images/equipment/kitchen/riviere-02.png",
+      "imageDiagramAlt": "Kitchen dimensions diagram",
+      "note": "* When installing the 900 mm width model, the wall beside the cooktop must be made of non-combustible material."
+    },
+    "layouts": {
+      "label": "LAYOUT",
+      "heading": "Choose from Three Layouts",
+      "viewLabel": "View Layout",
+      "items": [
+        {
+          "id": "island",
+          "title": "Island",
+          "subtitle": "Island Type",
+          "body": "An island layout where everyone can gather around, chat and cook together. Wonderfully open, this kitchen makes the whole space feel bigger.",
+          "images": [
+            {
+              "src": "/images/equipment/kitchen/riviere-03.jpg",
+              "alt": "Island type 01"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-04.jpg",
+              "alt": "Island type 02"
+            }
+          ]
+        },
+        {
+          "id": "peninsula",
+          "title": "Peninsula",
+          "subtitle": "Peninsula Type",
+          "body": "A peninsula layout that gives the living room and kitchen their own space while keeping them connected. You can keep an eye on the living room while you cook.",
+          "images": [
+            {
+              "src": "/images/equipment/kitchen/riviere-05.jpg",
+              "alt": "Peninsula type 01"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-06.jpg",
+              "alt": "Peninsula type 02"
+            }
+          ]
+        },
+        {
+          "id": "i-type",
+          "title": "I-Type",
+          "subtitle": "I-Type",
+          "body": "The basic wall-mounted layout that opens up the room — ideal for compact floor plans. Choose a separate model where you add your own cooktop, or a system model with a built-in cooktop, starting at 900 mm wide.",
+          "images": [
+            {
+              "src": "/images/equipment/kitchen/riviere-07.jpg",
+              "alt": "I-type 01, separate model"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-08.jpg",
+              "alt": "I-type 02, system model"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-09.jpg",
+              "alt": "I-type 03"
+            },
+            {
+              "src": "/images/equipment/kitchen/riviere-10.jpg",
+              "alt": "I-type, face-to-face installation"
+            }
+          ]
+        }
+      ]
+    },
+    "colors": {
+      "label": "COLOR",
+      "heading": "Door Color Options",
+      "body": "Choose from 32 carefully selected colors — from NASLUCK's exclusive Stencia doors to warm woodgrain finishes and vivid solid colors — to create a kitchen that's uniquely yours.",
+      "image": "/images/equipment/kitchen/riviere-11.jpg",
+      "imageAlt": "Door color options"
+    },
+    "equipment": {
+      "label": "EQUIPMENT",
+      "heading": "Equipment",
+      "items": [
+        {
+          "title": "Countertops & Sinks",
+          "image": "/images/equipment/kitchen/riviere-15.jpg",
+          "imageAlt": "Countertop and sink"
+        },
+        {
+          "title": "Base Cabinets",
+          "image": "/images/equipment/kitchen/riviere-16.jpg",
+          "imageAlt": "Base cabinets"
+        },
+        {
+          "title": "Wall Cabinets & Kitchen Storage",
+          "image": "/images/equipment/kitchen/riviere-17.jpg",
+          "imageAlt": "Wall cabinets and kitchen storage"
+        },
+        {
+          "title": "Kitchen Wall Panels",
+          "image": "/images/equipment/kitchen/riviere-18.jpg",
+          "imageAlt": "Kitchen wall panels"
+        },
+        {
+          "title": "Range Hoods",
+          "image": "/images/equipment/kitchen/riviere-19.jpg",
+          "imageAlt": "Range hood"
+        }
+      ]
+    },
+    "setPlans": {
+      "label": "PLAN",
+      "heading": "Set Plans",
+      "items": [
+        {
+          "title": "Island, System Model (Drawers)",
+          "image": "/images/equipment/kitchen/riviere-20.jpg"
+        },
+        {
+          "title": "Peninsula, System Model (Drawers)",
+          "image": "/images/equipment/kitchen/riviere-21.jpg"
+        },
+        {
+          "title": "I-Type, System Model (Hinged Doors) 01",
+          "image": "/images/equipment/kitchen/riviere-22.jpg"
+        },
+        {
+          "title": "I-Type, System Model (Hinged Doors) 02",
+          "image": "/images/equipment/kitchen/riviere-23.jpg"
+        },
+        {
+          "title": "I-Type, System Model (Hinged Doors) 03",
+          "image": "/images/equipment/kitchen/riviere-24.jpg"
+        },
+        {
+          "title": "I-Type, Separate Model (Hinged Doors) 01",
+          "image": "/images/equipment/kitchen/riviere-25.jpg"
+        },
+        {
+          "title": "I-Type, System Model (Hinged Doors) 04",
+          "image": "/images/equipment/kitchen/riviere-26.jpg"
+        },
+        {
+          "title": "I-Type, System Model (Hinged Doors) 05",
+          "image": "/images/equipment/kitchen/riviere-27.jpg"
+        }
+      ]
+    },
+    "cases": {
+      "label": "CASE",
+      "heading": "Installation Examples",
+      "items": [
+        {
+          "title": "Compact Kitchen Installation 01",
+          "image": "/images/equipment/kitchen/riviere-13.jpg"
+        },
+        {
+          "title": "Compact Kitchen Installation 02",
+          "image": "/images/equipment/kitchen/riviere-14.jpg"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "What kitchen does OK PRIME+ Shirokane-Takanawa use?",
+          "answer": "The kitchens feature the NASLUCK RIVIERE compact kitchen. Its right-sized design, starting at 900 mm wide, supports I-type, island and peninsula layouts, balancing storage, cooktop compatibility and the practical needs of city living."
+        },
+        {
+          "question": "What kind of space is RIVIERE suited for?",
+          "answer": "RIVIERE is designed for limited spaces such as compact floor plans, small apartments and second kitchens in multigenerational homes. It makes the most of every inch while accounting for workflow and aisle width, so you can have an open, face-to-face kitchen even in a smaller home."
+        },
+        {
+          "question": "Which kitchen layouts are available?",
+          "answer": "There are three layouts to suit your lifestyle and floor plan: the open island, perfect for interacting with family; the peninsula, which balances living and kitchen space; and the wall-mounted I-type, ideal for compact layouts. The I-type comes in separate and system models, starting at 900 mm wide."
+        },
+        {
+          "question": "Could the equipment specifications change?",
+          "answer": "The specifications, features and catalog content shown on this page are subject to the final construction drawings and the handover equipment list. Any changes due to construction conditions, supplier adjustments or regulatory updates will follow the official project announcements."
+        },
+        {
+          "question": "How can I book a viewing and see the actual equipment?",
+          "answer": "Book a viewing or send us an inquiry through our website. The WinnerLife team will walk you through the kitchen equipment, interior layout and investment details of OK PRIME+ Shirokane-Takanawa."
+        }
+      ]
+    }
+  },
+  "equipmentSecurityPage": {
+    "seo": {
+      "title": "ALSOK Security | OK PRIME+ Shirokane-Takanawa",
+      "description": "OK PRIME+ Shirokane-Takanawa is fully equipped with the HOME ALSOK security plan for apartments and condominiums. Learn about intrusion monitoring, fire detection, emergency alerts and 24-hour guard dispatch.",
+      "keywords": [
+        "OK PRIME",
+        "ALSOK",
+        "security",
+        "home security system",
+        "HOME ALSOK",
+        "Shirokane-Takanawa",
+        "OK PRIME+",
+        "burglary prevention",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/equipment-security.jpg",
+      "ogImageAlt": "HOME ALSOK security plan for apartments and condominiums",
+      "productName": "HOME ALSOK Security Plan for Apartments & Condominiums"
+    },
+    "breadcrumb": {
+      "ariaLabel": "Breadcrumb",
+      "home": "Home",
+      "equipment": "Equipment & Security",
+      "current": "Security"
+    },
+    "hero": {
+      "tag": "SECURITY SYSTEM",
+      "title": "Security",
+      "subtitle": "Guardians of Your Peace of Mind",
+      "description": "We've partnered with one of Japan's leading security companies to provide all-around protection for your home. Whether you're out or relaxing at home, advanced sensors and 24-hour monitoring let you live with greater peace of mind.",
+      "image": "/images/equipment/security/alsok-main-02.jpg",
+      "imageAlt": "ALSOK home security system"
+    },
+    "intro": {
+      "heading": "Peace of mind is true luxury",
+      "paragraphs": [
+        "Owning a home in the heart of Tokyo is more than an investment — it's a commitment to your family and your future.",
+        "OK PRIME Shirokane-Takanawa features a building-wide security system from ALSOK, one of Japan's best-known security brands, combining smart access control, 24-hour monitoring and emergency response to create a safe, worry-free home."
+      ]
+    },
+    "brand": {
+      "tag": "ALSOK",
+      "name": "ALSOK Japan",
+      "product": "HOME ALSOK Security Plan for Apartments & Condominiums",
+      "description": "ALSOK provides professional security services designed specifically for apartment buildings and condominiums, linking sensors to a main controller for round-the-clock protection. With initial costs from ¥0, guards dispatched in an emergency and no internet line required, it's also an excellent fit for rental homes.",
+      "includesLabel": "ALSOK basic home security includes:",
+      "image": "/images/equipment/security/alsok-main-11.png",
+      "imageAlt": "HOME ALSOK security plan for apartments and condominiums: service overview"
+    },
+    "monitoring": {
+      "heading": "Airtight Security, 24 Hours a Day, 365 Days a Year",
+      "subtitle": "On-call guards rush to the scene. If anything unusual happens, they assess the situation, take action and report back to you. Whether it's a break-in or a sudden illness, you can feel safe in any situation.",
+      "items": [
+        {
+          "title": "Intrusion Detection",
+          "body": "Sensors on doors and windows detect break-ins such as lock picking and broken windows, and you can set protected zones even while you're home.",
+          "image": "/images/equipment/security/alsok-main-21.jpg",
+          "imageAlt": "Intrusion detection"
+        },
+        {
+          "title": "Emergency Alerts",
+          "body": "If you're harassed by a pushy salesperson or suddenly fall ill, just press the emergency button to alert the ALSOK monitoring center immediately.",
+          "image": "/images/equipment/security/alsok-main-10.png",
+          "imageAlt": "Emergency alerts"
+        },
+        {
+          "title": "Fire Detection",
+          "body": "Sensors detect abnormal temperature rises or smoke caused by fire and automatically notify the monitoring center.",
+          "image": "/images/equipment/security/alsok-main-16.png",
+          "imageAlt": "Fire detection"
+        }
+      ]
+    },
+    "serviceGrid": {
+      "label": "SERVICE",
+      "heading": "ALSOK Basic Home Security",
+      "items": [
+        {
+          "title": "Intrusion Monitoring & Detection",
+          "body": "Sensors on doors and windows detect break-ins such as broken windows or picked locks, with protection available even while you're home.",
+          "image": "/images/入侵監控與感知.png",
+          "imageAlt": "Intrusion monitoring and detection"
+        },
+        {
+          "title": "Fire Monitoring",
+          "body": "Sensors detect abnormal temperature rises or smoke caused by fire and send an automatic alert.",
+          "image": "/images/火災監控.png",
+          "imageAlt": "Fire monitoring"
+        },
+        {
+          "title": "Emergency Alert Function",
+          "body": "If you're threatened by an intruder or suddenly fall ill, just press the emergency button to alert ALSOK right away.",
+          "image": "/images/緊急通報功能.png",
+          "imageAlt": "Emergency alert function"
+        },
+        {
+          "title": "Lock Check & Entry Management",
+          "body": "The system detects whether doors and windows are open or closed to confirm they're locked, logs device activity and sends you email notifications.",
+          "image": "/images/門窗上鎖確認與出入管理.png",
+          "imageAlt": "Lock check and entry management"
+        },
+        {
+          "title": "Remote Control & Security Mode Switching",
+          "body": "With the dedicated app, you can check on your home and control the system remotely anytime, anywhere, and switch between \"Away\" and \"Home\" security modes.",
+          "image": "/images/遠端操作與警備切換.png",
+          "imageAlt": "Remote control and security mode switching"
+        },
+        {
+          "title": "24-Hour Rapid Guard Dispatch",
+          "body": "If anything goes wrong, ALSOK dispatches professionally trained guards from its nationwide network of standby bases to reach the scene as quickly as possible, handle the situation and report back.",
+          "image": "/images/24小時警衛.png",
+          "imageAlt": "24-hour rapid guard dispatch"
+        }
+      ]
+    },
+    "dispatch": {
+      "heading": "Guards on the Scene Fast in an Emergency",
+      "subtitle": "Once an emergency is reported to the monitoring center, the guard closest to your home rushes to the scene. Extensive professional experience and advanced systems ensure a fast response.",
+      "items": [
+        {
+          "title": "Rapid Response from Nationwide Bases",
+          "body": "Guards set out from standby bases across Japan and take the fastest route to the scene.",
+          "image": "/images/equipment/security/alsok-main-26.jpg",
+          "imageAlt": "Nationwide standby base network"
+        },
+        {
+          "title": "Real-Time Monitoring Center Response",
+          "body": "Alerts are received 24 hours a day, 365 days a year, and handled immediately with extensive experience and advanced systems.",
+          "image": "/images/equipment/security/alsok-main-07.png",
+          "imageAlt": "Monitoring center"
+        },
+        {
+          "title": "Trained Guards Rush to the Scene",
+          "body": "In an emergency, highly skilled, professionally trained guards rush to the scene to take action!",
+          "image": "/images/equipment/security/alsok-main-18.jpg",
+          "imageAlt": "Guard rushing to the scene"
+        }
+      ]
+    },
+    "editorial": {
+      "label": "FEATURE",
+      "heading": "Smart Security, All-Around Protection",
+      "items": [
+        {
+          "title": "Emergency Alert Function",
+          "body": "If you're threatened by an intruder or suddenly fall ill, just press the emergency button to alert ALSOK right away. With both sensors and a remote emergency button, help is on the way the moment you need it.",
+          "image": "/images/equipment/security/alsok-emergency-button.webp",
+          "imageAlt": "Remote emergency button"
+        },
+        {
+          "title": "Lock Check & Entry Management",
+          "body": "The system detects whether doors and windows are open or closed to confirm they're locked, logs device activity and sends you email notifications. Checking that your home is secure before and after you go out is effortless.",
+          "image": "/images/equipment/security/alsok-lock-check.png",
+          "imageAlt": "Lock check sensor"
+        },
+        {
+          "title": "Remote Control & Security Mode Switching",
+          "body": "With the dedicated app, you can check on your home and control the system remotely anytime, anywhere, and switch between \"Away\" and \"Home\" security modes.",
+          "image": "/images/equipment/security/alsok-remote-app.png",
+          "imageAlt": "HOME ALSOK app"
+        },
+        {
+          "title": "24-Hour Rapid Guard Dispatch",
+          "body": "If anything goes wrong, ALSOK dispatches professionally trained guards from its nationwide network of standby bases to reach the scene as quickly as possible, handle the situation and report back.",
+          "image": "/images/equipment/security/alsok-main-19.jpg",
+          "imageAlt": "Guard rushing to the scene"
+        }
+      ]
+    },
+    "devices": {
+      "label": "DEVICE",
+      "heading": "Devices",
+      "body": "Example installations for typical 2LDK and 3LDK layouts. The main controller, sensors and remote emergency button are placed in the best spots throughout your home for complete protection.",
+      "floorplan2ldk": "/images/equipment/security/alsok-extra-25.jpg",
+      "floorplan2ldkAlt": "Typical 2LDK installation example",
+      "floorplan3ldk": "/images/equipment/security/alsok-case-02.jpg",
+      "floorplan3ldkAlt": "Typical 3LDK installation example",
+      "items": [
+        {
+          "number": "1",
+          "title": "Main Controller",
+          "location": "Example location: wall near the kitchen",
+          "image": "/images/equipment/security/alsok-main-10.png",
+          "imageAlt": "Main controller"
+        },
+        {
+          "number": "2",
+          "title": "Open/Close Sensor",
+          "location": "Example location: top inside of the front door",
+          "image": "/images/equipment/security/alsok-extra-26.jpg",
+          "imageAlt": "Open/close sensor"
+        },
+        {
+          "number": "3",
+          "title": "Sensor Transmitter",
+          "location": "Example location: inside frame of the front door",
+          "image": "/images/equipment/security/alsok-extra-27.jpg",
+          "imageAlt": "Sensor transmitter"
+        },
+        {
+          "number": "4",
+          "title": "Lock Check Sensor",
+          "location": "Example location: above the balcony window lock",
+          "image": "/images/equipment/security/alsok-main-14.png",
+          "imageAlt": "Lock check sensor"
+        },
+        {
+          "number": "5",
+          "title": "Motion Sensor",
+          "location": "Example location: ceiling of the living room, hallway, etc.",
+          "image": "/images/equipment/security/alsok-main-15.png",
+          "imageAlt": "Motion sensor"
+        },
+        {
+          "number": "6",
+          "title": "Fire Sensor (Heat)",
+          "location": "Example location: kitchen ceiling",
+          "image": "/images/equipment/security/alsok-fire-sensor.webp",
+          "imageAlt": "Fire sensor"
+        },
+        {
+          "number": "7",
+          "title": "Remote Emergency Button",
+          "location": "Example location: an easy-to-reach spot such as the living room",
+          "image": "/images/equipment/security/alsok-emergency-button.webp",
+          "imageAlt": "Remote emergency button"
+        }
+      ]
+    },
+    "operation": {
+      "label": "OPERATION",
+      "heading": "Operation & Connectivity",
+      "paragraphs": [
+        "Use a passcode or the dedicated app to operate and check the system easily, even while you're out. Whenever you're unsure, you can see what's happening at home from anywhere.",
+        "The main controller has a built-in wireless connection, so it can be installed without an internet or phone line. No dedicated security line and no communication fees — and line outages and power failures are monitored too."
+      ],
+      "image": "/images/equipment/security/alsok-main-24.png",
+      "imageAlt": "Security zone settings"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "subtitle": "FAQ",
+      "items": [
+        {
+          "question": "What security system does OK PRIME+ Shirokane-Takanawa use?",
+          "answer": "The entire building is equipped with ALSOK's HOME ALSOK security plan for apartments and condominiums. Designed for multi-unit housing, it combines intrusion monitoring, fire detection, emergency alerts, remote control and 24-hour guard dispatch for all-around protection."
+        },
+        {
+          "question": "Do I still need home security if the building has an auto-lock entrance?",
+          "answer": "An auto-lock entrance alone can't stop someone from slipping in behind a resident or delivery person. With ALSOK home security, if something unusual happens, a guard is dispatched to the scene, takes appropriate action and then reports back to you."
+        },
+        {
+          "question": "Can I turn on security while I'm at home?",
+          "answer": "Yes. The system has a Home security mode that lets you set protection for specific areas such as the entrance and windows. For example, you can disarm just the bedroom while keeping the rest of your home protected, so you can relax with peace of mind."
+        },
+        {
+          "question": "Could the equipment specifications change?",
+          "answer": "The specifications, features and services shown on this page are subject to the final construction drawings and the handover equipment list. Any changes due to construction conditions, supplier adjustments or regulatory updates will follow the official project announcements."
+        },
+        {
+          "question": "How can I book a viewing and see the actual equipment?",
+          "answer": "Book a viewing or send us an inquiry through our website. The WinnerLife team will walk you through the security features, interior layout and investment details of OK PRIME+ Shirokane-Takanawa."
+        }
+      ]
+    }
+  },
+  "developer": {
+    "seo": {
+      "title": "Our Story | OK PRIME+ Shirokane-Takanawa",
+      "description": "The OK PRIME brand story — from your first home to a family legacy. WinnerLife provides expert Japan property acquisition, viewings and investment planning for OK PRIME+ Shirokane-Takanawa.",
+      "keywords": [
+        "OK PRIME+",
+        "OK PRIME",
+        "WinnerLife",
+        "brand story",
+        "Japan property investment"
+      ],
+      "ogImage": "/images/og/story.jpg",
+      "ogImageAlt": "OK PRIME by WinnerLife brand story"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Our Story"
+    },
+    "hero": {
+      "tag": "BRAND STORY",
+      "title": "Our Story",
+      "subtitle": "OK PRIME — From Your First Home to a Family Legacy",
+      "intro": "What we deal in has never been real estate — it's people's hopes for the future. What we sell has never been buildings — it's the foundation a family passes down through generations.",
+      "imageAlt": "Shirokane-Takanawa building exterior"
+    },
+    "brandStory": {
+      "lines": [
+        "What we deal in has never been real estate.",
+        "It's people's hopes for the future.",
+        "What we sell has never been buildings.",
+        "It's the foundation of a family's legacy."
+      ],
+      "bodyParagraphs": [
+        "OK PRIME hopes to stand beside every client for the next hundred years.",
+        "From a first home to a family's growing portfolio of assets — we want OK PRIME to leave its mark in every corner of the world.",
+        "So that every property you buy becomes the start of a better life."
+      ],
+      "brand": "OK PRIME",
+      "tagline": "Prime Location · Prime Living · Prime Legacy",
+      "pillarsLabel": "Global Asset Allocation | Global Health Care | Global Lifestyle Services | Family Legacy"
+    },
+    "recommend": {
+      "title": "Why OK PRIME",
+      "items": [
+        "Property planning focused on long-term asset value, not short-term speculation",
+        "Support across generations, from your first home to a family portfolio",
+        "Integrated advisory connecting global property, health care and lifestyle services",
+        "Architectural quality and living aesthetics built to stand the test of time"
+      ]
+    },
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Global Asset Allocation",
+        "description": "With an international perspective, we bring together real estate, financial and tax strategies to help clients build a solid asset portfolio in major cities around the world, so every investment becomes a cornerstone of family wealth."
+      },
+      {
+        "num": "02",
+        "title": "Global Health Care",
+        "description": "Buying property isn't just buying a home — it's choosing an environment for your family. We look closely at medical resources, air quality, neighborhood safety and long-term care support, making health an essential part of asset planning."
+      },
+      {
+        "num": "03",
+        "title": "Global Lifestyle Services",
+        "description": "From handover and rental management to international relocation and children's education, OK PRIME offers a one-stop network of lifestyle services, so clients enjoy a secure, convenient living experience even far from home."
+      },
+      {
+        "num": "04",
+        "title": "Family Legacy",
+        "description": "We believe true value lies in the future. Through professional succession planning and quality architecture, we help families turn property into lasting core assets that can be passed down."
+      }
+    ],
+    "team": {
+      "title": "An Expert Team Beside You Every Step of the Way",
+      "description": "OK PRIME brings together property advisors, architectural designers and wealth planning specialists. Whether it's your first property overseas, passing assets down through the family, or a pursuit of beautiful architecture and quality living, we'll help you make the right choice with integrity and expertise.",
+      "members": [
+        {
+          "title": "Property Advisory Team",
+          "description": "Deeply rooted in the Japanese real estate market and attuned to trends in prime areas like Minato and Shinagawa. From property selection and the buying process to taxes and financing, we provide transparent, end-to-end advice."
+        },
+        {
+          "title": "Architectural Design",
+          "description": "Blending the cultural heritage of classic European streetscapes with the language of modern urban architecture, we use facade proportions, material textures and the play of light to create buildings with timeless character."
+        },
+        {
+          "title": "Legacy Planning",
+          "description": "We plan family portfolios with a hundred-year view, bringing together global allocation, health care and lifestyle services so every property becomes the starting point of a lasting legacy."
+        }
+      ]
+    },
+    "project": {
+      "title": "About Shirokane-Takanawa",
+      "subtitle": "A lighthouse on your lifelong asset journey",
+      "paragraphs": [
+        "Set in Shirokane-Takanawa, Minato City, Tokyo, OK PRIME pursues not just architectural beauty but value that stands the test of time.",
+        "The building draws on the cultural richness of classic European streetscapes, with a finely detailed facade, layered material textures, refined metalwork and the interplay of light and shadow coming together to create a calm, elegant city landscape.",
+        "Just as a lighthouse guides those at sea, OK PRIME aims to protect the quality of life of every resident and the asset value of every investor — shining with a steady, warm light through the bustle of the city and the passing of the years."
+      ],
+      "imageAlt": "Shirokane-Takanawa architectural details"
+    },
+    "craftsmanship": {
+      "title": "Craftsmanship & Commitment",
+      "description": "The entrance gate, welcome corridor, lobby and every last detail reflect our dedication to quality and our commitment to the future. Through a constant pursuit of design, craftsmanship and living aesthetics, we create core assets worth holding for the long term and passing down for generations.",
+      "closing": "OK PRIME believes true value lies not only in today, but in the future.",
+      "details": [
+        {
+          "label": "Location",
+          "value": "Shirokane-Takanawa, Minato City, Tokyo"
+        },
+        {
+          "label": "Design Concept",
+          "value": "Classic European Streetscapes × Modern Urban Aesthetics"
+        },
+        {
+          "label": "Core Value",
+          "value": "Timeless Assets and Quality of Life"
+        }
+      ]
+    },
+    "cta": {
+      "download": {
+        "title": "Request Information",
+        "description": "Get the complete property brochure\nand discover our vision for architecture and living in Shirokane-Takanawa",
+        "button": "Download Brochure"
+      },
+      "reserve": {
+        "title": "Book a Viewing",
+        "description": "Experience the space in person\nwith a one-on-one consultation",
+        "button": "Book a Viewing & Consultation"
+      }
+    }
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contact Us & Seminar Registration | OK PRIME Shirokane-Takanawa",
+      "description": "WinnerLife's Japan property seminars for OK PRIME Shirokane-Takanawa (5-5-10 Mita, Minato-ku) — extra sessions added across northern, central and southern Taiwan. Get an in-depth look at the Minato City property market, regulations, taxes and investment trends. Now accepting seminar registrations, property inquiries and model unit viewing bookings.",
+      "keywords": [
+        "OK PRIME",
+        "Shirokane-Takanawa",
+        "5-5-10 Mita",
+        "Japan property investment",
+        "seminar",
+        "WinnerLife",
+        "Shinagawa",
+        "book a viewing",
+        "OK PRIME+"
+      ],
+      "ogImage": "/images/og/home.jpg",
+      "ogImageAlt": "OK PRIME Shirokane-Takanawa Japan property investment seminar"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Contact Us"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How do I book a model unit viewing or a seminar seat?",
+          "answer": "Fill out the form on this page, call +886-2-2713-1039 or email service@winnerlife.com, and a WinnerLife specialist will help you book and confirm."
+        },
+        {
+          "question": "What are your business hours?",
+          "answer": "We're open 9:00 AM – 6:00 PM (Taiwan time), closed on weekends and national holidays."
+        },
+        {
+          "question": "Where is the property located?",
+          "answer": "OK PRIME Shirokane-Takanawa is at 5-5-10 Mita, Minato-ku, Tokyo (〒108-0073), about a 5-minute walk from Shirokane-Takanawa Station."
+        }
+      ]
+    },
+    "hero": {
+      "eyebrow": "▁ ▂ ▃ WinnerLife ◭ OK PRIME Shirokane-Takanawa ▃ ▂ ▁",
+      "title": "Japan Property Investment Seminar",
+      "watermark": "TOKYO LIVING",
+      "highlights": [
+        "Clear entry requirements — overseas investors can legally plan Japanese property purchases",
+        "Prime Shinagawa and Minato City location with steady long-term living and rental demand",
+        "14 canal-side residences with ALSOK security and smart home features"
+      ],
+      "ctaPrimary": "Register Now",
+      "ctaLine": "One-on-One Chat on LINE",
+      "tickerLabel": "NEWS",
+      "tickerText": "⇝ Extra seminar sessions added across Taiwan! Seats are limited — register today ⇜"
+    },
+    "intro": {
+      "watermark": "PHILOSOPHY",
+      "title": "An In-Depth Look at the Latest in Minato City and Investment Trends",
+      "paragraphs": [
+        "Covering key topics like Japanese real estate regulations, taxes and holding costs, we'll help you time your purchase of OK PRIME Shirokane-Takanawa, plan your portfolio and spread your risk.",
+        "Seminars are by reservation only, with limited seating. The WinnerLife team will walk you through the property's positioning, transit and neighborhood, equipment specifications and the process of buying property overseas."
+      ],
+      "urgency": "Seminars are by reservation only, with limited seating",
+      "cta": "Register Now"
+    },
+    "regions": {
+      "label": "LOCATION",
+      "heading": "A Mature, Well-Connected Core of Tokyo",
+      "subheading": "West Tokyo: Shinagawa & Minato City — a central location offering both quality living and long-term asset value",
+      "cta": "Register Now",
+      "items": [
+        {
+          "tag": "MINATO · SHIROKANE-TAKANAWA",
+          "title": "Shirokane-Takanawa | A Stable Canal-Side Asset",
+          "subtitle": "A 14-unit residence with open south-facing canal views and Urban Classic architecture",
+          "image": "/images/index/運河.png",
+          "points": [
+            "Shinagawa and Minato City redevelopment keeps upgrading the neighborhood",
+            "Three stations and five lines, with direct access to Haneda and Narita",
+            "Building-wide ALSOK security and full smart home features",
+            "A cornerstone asset for living in, renting out or long-term portfolio building"
+          ],
+          "propertiesLabel": "╭。✧ Property Highlights ✧。╮",
+          "properties": [
+            "OK PRIME Shirokane-Takanawa | 14 canal-side units",
+            "Shinagawa & Tennozu area | ALSOK security",
+            "Urban Classic exterior | Full smart features"
+          ]
+        },
+        {
+          "tag": "SHINAGAWA · ACCESS",
+          "title": "Shinagawa Area | Growth at Tokyo's Transit Hub",
+          "subtitle": "Shinkansen and maglev developments, with mature commercial and rental markets",
+          "image": "/images/index/03.png",
+          "points": [
+            "Shinagawa Station is Tokyo's transit hub, with steady commuter and business demand",
+            "The Chuo Shinkansen maglev project strengthens the long-term outlook",
+            "Minato City's international vibe draws a diverse mix of expat and high-end renters",
+            "Suited to investment strategies seeking stable cash flow and capital growth"
+          ],
+          "propertiesLabel": "╭。✧ Neighborhood Amenities ✧。╮",
+          "properties": [
+            "Shirokane-Takanawa, Mita & Tamachi — three stations",
+            "Keio University district",
+            "Tennozu & Shinagawa shopping"
+          ]
+        }
+      ]
+    },
+    "reasons": {
+      "heading": "Your First Choice for Overseas Property: WinnerLife",
+      "subheading": "Handpicked Prime Tokyo Properties · Great to Live In, Great to Invest In",
+      "cta": "Get Started",
+      "items": [
+        "A reputable developer's project, with WinnerLife as exclusive sales agent for OK PRIME Shirokane-Takanawa",
+        "Great to live in and invest in — a fully planned 14-unit community",
+        "Backed by an expert team offering complete financial planning advice for your purchase",
+        "Up-to-date regulatory and market insight so you can invest in Japanese property with confidence"
+      ]
+    },
+    "seminars": {
+      "label": "OK PRIME",
+      "heading": "[Japan | Property Investment Seminar]",
+      "note": "These seminars focus on buying property in Minato City, Tokyo. Please choose the session you'd like to attend by date.",
+      "sessions": [
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Taipei",
+          "image": "/images/concept/001.png",
+          "dates": [
+            "» Taipei",
+            "| Wed, Oct 28, 2:00 PM — WinnerLife Conference Hall",
+            "📍 4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City",
+            "| Sat, Oct 31, 2:00 PM — illumé Taipei"
+          ],
+          "ctaAria": "Register for the Taipei session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Linkou",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Linkou",
+            "📍 Four Points by Sheraton Linkou",
+            "| Sat, Oct 24, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Linkou session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Hsinchu",
+          "image": "/images/concept/001.png",
+          "dates": [
+            "» Hsinchu",
+            "📍 Ambassador Hotel Hsinchu",
+            "| Sat, Oct 10, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Hsinchu session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Taichung",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Taichung",
+            "📍 The Splendor Hotel Taichung",
+            "| Sun, Oct 11, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Taichung session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Tainan",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Tainan",
+            "📍 The Place Tainan",
+            "| Sat, Oct 17, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Tainan session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Kaohsiung",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Kaohsiung",
+            "📍 Hotel COZZI Zhongshan Kaohsiung",
+            "| Sun, Oct 18, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Kaohsiung session"
+        }
+      ]
+    },
+    "venues": {
+      "heading": "— Venues —",
+      "linePrefix": "Click to add the",
+      "lineLink": "WinnerLife official LINE account",
+      "lineSuffix": "for a one-on-one consultation",
+      "items": [
+        {
+          "city": "[Taipei]",
+          "address": "📍 Oct 28: WinnerLife Conference Hall\n4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City\n📍 Oct 31: illumé Taipei"
+        },
+        {
+          "city": "[Linkou]",
+          "address": "📍 Four Points by Sheraton Linkou"
+        },
+        {
+          "city": "[Hsinchu]",
+          "address": "📍 Ambassador Hotel Hsinchu"
+        },
+        {
+          "city": "[Taichung]",
+          "address": "📍 The Splendor Hotel Taichung"
+        },
+        {
+          "city": "[Tainan]",
+          "address": "📍 The Place Tainan"
+        },
+        {
+          "city": "[Kaohsiung]",
+          "address": "📍 Hotel COZZI Zhongshan Kaohsiung"
+        }
+      ]
+    },
+    "form": {
+      "label": "REGISTRATION",
+      "heading": "Seminar Registration Form",
+      "note": "Please fill in the details below and we'll contact you within one business day to confirm your session.",
+      "name": "Full Name",
+      "salutation": "Title",
+      "session": "Minato City Property Seminar",
+      "sessionHint": "* Please select the date and session you'd like to attend",
+      "region": "Your Location",
+      "regionHint": "* Helps us arrange an advisor to contact you",
+      "guests": "Number of Attendees",
+      "phone": "Phone Number",
+      "phoneHint": "A mobile number is recommended (up to 10 digits)",
+      "contactTime": "Best Time to Reach You",
+      "email": "Email",
+      "remarks": "Additional Notes",
+      "remarksHint": "Feel free to include your LINE ID so we can send seminar updates",
+      "submit": "Submit Registration",
+      "submitting": "Submitting…",
+      "selectPlaceholder": "Please select",
+      "backHome": "Back to Home",
+      "errorRequired": "Please fill in all required fields",
+      "errorPhone": "Please enter a phone number of up to 10 digits",
+      "errorSend": "Something went wrong. Please try again later, or contact us by phone or LINE.",
+      "errorConfig": "Our email service isn't set up yet. Please call us or reach out on LINE.",
+      "successTitle": "Thank You for Registering",
+      "successBody": "Your registration has been submitted. We'll be in touch by phone, email or LINE shortly to confirm your session.",
+      "mailSubject": "[{project}] Seminar Registration",
+      "mailName": "Name",
+      "mailSalutation": "Title",
+      "mailSession": "Session",
+      "mailRegion": "Location",
+      "mailGuests": "Attendees",
+      "mailPhone": "Phone",
+      "mailTime": "Best Time to Reach",
+      "mailEmail": "Email",
+      "mailNote": "Notes",
+      "mailFooter": "— Submitted via the OK PRIME Shirokane-Takanawa website form",
+      "sessionOptions": [
+        {
+          "value": "2026-10-10-hsinchu",
+          "label": "Sat, Oct 10, 2:00 PM — Hsinchu | Ambassador Hotel Hsinchu"
+        },
+        {
+          "value": "2026-10-11-taichung",
+          "label": "Sun, Oct 11, 2:00 PM — Taichung | The Splendor Hotel Taichung"
+        },
+        {
+          "value": "2026-10-17-tainan",
+          "label": "Sat, Oct 17, 2:00 PM — Tainan | The Place Tainan"
+        },
+        {
+          "value": "2026-10-18-kaohsiung",
+          "label": "Sun, Oct 18, 2:00 PM — Kaohsiung | Hotel COZZI Zhongshan Kaohsiung"
+        },
+        {
+          "value": "2026-10-24-linkou",
+          "label": "Sat, Oct 24, 2:00 PM — Linkou | Four Points by Sheraton Linkou"
+        },
+        {
+          "value": "2026-10-28-taipei",
+          "label": "Wed, Oct 28, 2:00 PM — Taipei | WinnerLife Conference Hall"
+        },
+        {
+          "value": "2026-10-31-taipei",
+          "label": "Sat, Oct 31, 2:00 PM — Taipei | illumé Taipei"
+        }
+      ],
+      "regionOptions": [
+        "Taipei",
+        "New Taipei",
+        "Taoyuan",
+        "Taichung",
+        "Tainan",
+        "Kaohsiung",
+        "Other"
+      ],
+      "salutationOptions": [
+        "Mr.",
+        "Ms.",
+        "Miss",
+        "Other"
+      ],
+      "timeOptions": [
+        "Morning 10:00 AM – 12:00 PM",
+        "Afternoon 2:00 PM – 5:00 PM",
+        "Evening 6:00 PM – 8:00 PM",
+        "Anytime"
+      ]
+    }
+  },
+  "concept": {
+    "seo": {
+      "title": "Concept | OK PRIME+ Shirokane-Takanawa",
+      "description": "OK PRIME+ Shirokane-Takanawa — a series of rental residences in Minato City, central Tokyo, designed to transcend time and trends and become a lighthouse for those who live there. Spanish-inspired architectural beauty, textured facades and Urban Classic design. Viewings and inquiries by WinnerLife.",
+      "keywords": [
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "concept",
+        "WinnerLife",
+        "Tokyo residences",
+        "Shinagawa"
+      ],
+      "ogImage": "/images/og/concept.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa canal-side building exterior"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Concept"
+    },
+    "heroSlider": {
+      "slides": [
+        {
+          "title": "Low-Density Living in Shirokane-Takanawa",
+          "description": "Enjoy life at the heart of the Shinagawa area"
+        },
+        {
+          "title": "The Best of Shinagawa at Your Doorstep",
+          "description": "A diverse, convenient transit network brings energy and mobility to your everyday life"
+        },
+        {
+          "title": "IoT Smart Home",
+          "description": "Smart remote control, smart curtains and smart home security"
+        },
+        {
+          "title": "Modern Facade Design",
+          "description": "Refined yet warm, a facade that becomes the face of the residence"
+        }
+      ]
+    },
+    "waterFront": {
+      "line1": "By The",
+      "line2": "Water Front",
+      "subtitle": "Canal-side living with wide-open waterfront views.",
+      "paragraphs": [
+        "Set in Minato City yet close to the booming Shinagawa redevelopment area,\nthis is where the cutting edge of city living comes to life.",
+        "With Tennozu Isle and Shinagawa stations at hand, getting around central Tokyo is easy,\nand open south-facing waterfront views become part of your everyday.",
+        "Creating new value in a bay area where innovation meets nature — just 14 residences.\nOK PRIME+ Shirokane-Takanawa has officially launched."
+      ]
+    },
+    "marquee": [
+      {
+        "alt": "Takanawa Gateway City",
+        "label": "Takanawa Gateway City"
+      },
+      {
+        "alt": "Tokyo Tower and the Minato bay area skyline",
+        "label": "Tokyo Tower · Minato Bay Area"
+      },
+      {
+        "alt": "Shirokane Aer City",
+        "label": "Shirokane Aer City"
+      },
+      {
+        "alt": "Saiseikai Central Hospital",
+        "label": "Saiseikai Central Hospital"
+      },
+      {
+        "alt": "Shiba Park and Tokyo Tower",
+        "label": "Shiba Park · Tokyo Tower"
+      },
+      {
+        "alt": "Keio University Old Library (Mita)",
+        "label": "Keio University (Mita)"
+      }
+    ],
+    "canalGreen": {
+      "title": "CANAL & GREEN",
+      "description": "Wide-open south-facing canal views. In the heart of an ever-growing city, greenery and waterfront scenery come together here.",
+      "mapLabelLine1": "OK PRIME+",
+      "mapLabelLine2": "Shirokane-Takanawa"
+    },
+    "surroundings": {
+      "intro": "Fresh greenery, waterfront views and refined culture share these streets — the stage for your everyday life.",
+      "items": [
+        {
+          "alt": "Park",
+          "caption": "Shinagawa Season Terrace (15 min · approx. 1,200 m)"
+        },
+        {
+          "alt": "Building exterior",
+          "caption": "Shinagawa Intercity (14 min · approx. 1,060 m)"
+        },
+        {
+          "alt": "Waterfront promenade",
+          "caption": "Tennozu Isle waterfront plaza (7 min · approx. 490 m)"
+        }
+      ]
+    }
+  },
+  "amenitiesPage": {
+    "seo": {
+      "title": "Area Redevelopment & Nearby Amenities | OK PRIME+ Shirokane-Takanawa",
+      "description": "A guide to the large-scale urban renewal of Shirokane-Takanawa around 5-5-10 Mita, Minato-ku, including Takanawa Gateway City and local shops and services. About a 5-minute walk to Shirokane-Takanawa Station, linking the Keio Mita and Shinagawa areas. WinnerLife introduces the neighborhood around the property.",
+      "keywords": [
+        "OK PRIME+",
+        "Shirokane-Takanawa",
+        "5-5-10 Mita",
+        "area redevelopment",
+        "nearby amenities",
+        "Shinagawa",
+        "Mita Minato-ku",
+        "urban renewal",
+        "WinnerLife"
+      ],
+      "ogImage": "/images/og/amenities.jpg",
+      "ogImageAlt": "OK PRIME+ Shirokane-Takanawa nearby shops and amenities"
+    },
+    "breadcrumb": {
+      "ariaLabel": "Breadcrumb",
+      "home": "Home",
+      "current": "Area Redevelopment & Nearby Amenities"
+    },
+    "hero": {
+      "imageAlt": "Nearby amenities"
+    },
+    "title": "Explore Nearby Amenities",
+    "intro": {
+      "sideTag": "Shopping, Stations & Everyday Amenities",
+      "sideTitle": "AMENITIES",
+      "allFacilities": "All Amenities",
+      "body": "The Shirokane-Takanawa and Mita area brings together shops for everyday needs, stations on multiple lines, parks and medical facilities. From shopping and commuting to weekend outings, you can enjoy a well-balanced life with all the convenience of central Tokyo."
+    },
+    "redevelopment": {
+      "label": "URBAN RENEWAL",
+      "heading": "Shirokane-Takanawa: Large-Scale Urban Renewal",
+      "items": [
+        {
+          "title": "A City Reimagined",
+          "body": "Shirokane-Takanawa, with its history and refined character, is now entering a new stage as the whole neighborhood is renewed. Alongside new housing, plans are steadily bringing in shops, restaurants, offices and everyday services, creating a city where living, working and relaxing all happen close to home. This is a neighborhood that will keep building value — Shirokane-Takanawa."
+        },
+        {
+          "title": "New Landmarks, Rising Prestige",
+          "body": "The completed SHIROKANE The SKY and major developments such as TAKANAWA GATEWAY CITY are becoming new landmarks and transforming the area's skyline. Sophisticated architecture and high-quality homes are coming together, layering Shirokane's signature calm and upscale feel with a modern urban edge and further lifting the brand value of the entire area."
+        },
+        {
+          "title": "The Future Transit Value of the Chuo Shinkansen Maglev",
+          "body": "Shinagawa Station is set to become the terminal of the Chuo Shinkansen maglev, linking Tokyo and Nagoya in as little as 40 minutes and creating a world-class high-speed network. Shinagawa is just two stops from Shirokane-Takanawa, so as domestic and international travel gets dramatically easier, the area's rare appeal as a residential address will only grow."
+        }
+      ]
+    },
+    "pickUpLabel": "Pick Up!",
+    "pickUpItems": [
+      {
+        "title": "Takanawa Gateway City — Tokyo's Newest Mixed-Use Landmark",
+        "body": "A large-scale mixed-use development connected to JR Takanawa Gateway Station. Offices, shops, hotels and cultural spaces come together, bringing fresh urban energy to the Shirokane-Takanawa and Shinagawa area.",
+        "image": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+        "tags": [
+          "Landmark",
+          "Urban Renewal"
+        ],
+        "href": "#shopping"
+      },
+      {
+        "title": "Tokyo Tower & Shiba Park — Minato City's Iconic Green Skyline",
+        "body": "Shiba Park and Tokyo Tower are close by, putting Minato City's landmarks within easy reach. Whether it's a weekday stroll or a weekend break, enjoy greenery and classic city views right in central Tokyo.",
+        "image": "/images/index/周邊.png",
+        "tags": [
+          "Landmark",
+          "Green Space"
+        ],
+        "href": "#shirokane"
+      },
+      {
+        "title": "Keio University — The Scholarly Air of the Mita Campus",
+        "body": "Close to Keio University's Mita Campus and its historic buildings, the area has a rich academic and cultural atmosphere — a peaceful university district in Minato City.",
+        "image": "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
+        "tags": [
+          "Education",
+          "University District"
+        ],
+        "href": "#shinagawa"
+      }
+    ],
+    "spotlightSections": [
+      {
+        "id": "shopping",
+        "titleEn": "TAKANAWA GATEWAY CITY",
+        "minutes": "15",
+        "showBike": false,
+        "lead": "Tokyo's newest landmark, Takanawa Gateway City, is about a 15-minute walk away.",
+        "body": "A large-scale mixed-use development connected to JR Takanawa Gateway Station, bringing together offices, shops, hotels and cultural spaces and adding a fresh cityscape and everyday conveniences to the Shirokane-Takanawa and Shinagawa area.",
+        "note": "Takanawa Gateway City",
+        "noteDetail": "Approx. 15 min walk",
+        "imageMain": "/images/index/ChatGPT Image 2026年5月29日 上午11_28_42.png",
+        "imageSub1": "/images/amenities/012.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/index/白金アエルシティ.png",
+        "imageSub2Label": ""
+      },
+      {
+        "id": "shirokane",
+        "titleEn": "TOKYO TOWER",
+        "minutes": "20",
+        "showBike": false,
+        "lead": "About a 20-minute walk to the green skyline of Tokyo Tower and Shiba Park.",
+        "body": "Shiba Park and Tokyo Tower are close by, putting Minato City's most iconic landmarks within easy reach. Whether it's a weekday stroll or a weekend break, greenery and classic city views are always nearby.",
+        "note": "Tokyo Tower · Shiba Park",
+        "noteDetail": "Approx. 20 min walk",
+        "imageMain": "/images/index/周邊.png",
+        "imageSub1": "/images/index/芝公園.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/amenities/961acae3-48de-46bf-b84d-c8ade6e5e598.png",
+        "imageSub2Label": ""
+      },
+      {
+        "id": "shinagawa",
+        "titleEn": "KEIO UNIVERSITY",
+        "minutes": "10",
+        "showBike": false,
+        "lead": "About a 10-minute walk to the area around Keio University's Mita Campus.",
+        "body": "Close to Keio University's Mita Campus and its historic buildings, with a rich academic and cultural atmosphere. Life in waterside Shirokane-Takanawa also comes with the calm, scholarly feel of Minato City.",
+        "note": "Keio University (Mita)",
+        "noteDetail": "Approx. 10 min walk",
+        "imageMain": "/images/index/ChatGPT Image 2026年5月29日 上午11_34_05.png",
+        "imageSub1": "/images/amenities/005.png",
+        "imageSub1Label": "",
+        "imageSub2": "/images/amenities/007.png",
+        "imageSub2Label": ""
+      }
+    ],
+    "stations": {
+      "title": "Nearby Train Stations",
+      "footnote": "Stations on multiple lines are within walking distance, with smooth connections to central Tokyo, the airports and Yokohama.",
+      "items": [
+        {
+          "name": "Shirokane-Takanawa",
+          "lines": "Namboku Line / Mita Line",
+          "time": "Approx. 6 min walk",
+          "image": "/images/amenities/006.png"
+        },
+        {
+          "name": "Tennozu Isle",
+          "lines": "Rinkai Line",
+          "time": "Approx. 6 min walk",
+          "image": "/images/amenities/007.png"
+        },
+        {
+          "name": "Shinagawa",
+          "lines": "JR / Keikyu",
+          "time": "Approx. 15 min walk",
+          "image": "/images/amenities/009.png"
+        },
+        {
+          "name": "Tamachi",
+          "lines": "JR Yamanote Line",
+          "time": "Approx. 18 min walk",
+          "image": "/images/amenities/010.png"
+        },
+        {
+          "name": "Gotanda",
+          "lines": "JR / Tokyu",
+          "time": "Approx. 8 min drive",
+          "image": "/images/amenities/011.png"
+        },
+        {
+          "name": "Hamamatsucho",
+          "lines": "JR / Monorail",
+          "time": "Approx. 10 min drive",
+          "image": "/images/amenities/013.png"
+        }
+      ]
+    },
+    "features": {
+      "label": "Neighborhood Highlights",
+      "heading": "Everyday Essentials, Close at Hand",
+      "body": "Shopping, transit, green space and medical care — a well-balanced daily life in Mita and Shirokane-Takanawa, Minato City.",
+      "items": [
+        {
+          "title": "Tokyo's newest landmark of 2025: Takanawa Gateway City",
+          "image": "/images/002.png"
+        },
+        {
+          "title": "Supermarkets & Daily Essentials",
+          "image": "/images/amenities/004.png"
+        },
+        {
+          "title": "Restaurants & Cafés",
+          "image": "/images/961acae3-48de-46bf-b84d-c8ade6e5e598.png"
+        },
+        {
+          "title": "Multi-Line Stations",
+          "image": "/images/amenities/006.png"
+        },
+        {
+          "title": "Parks & Green Space",
+          "image": "/images/amenities/012.png"
+        },
+        {
+          "title": "Medical & Public Facilities",
+          "image": "/images/amenities/013.png"
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Neighborhood Details",
+      "body": "For details on the location, transit and airport access, visit our Neighborhood page.",
+      "link": "View Details"
+    },
+    "carousel": {
+      "heading": "Nearby Amenities",
+      "body": "Key shops, stations and parks within walking distance. Swipe through the photos to get a feel for the neighborhood.",
+      "prevLabel": "Previous",
+      "nextLabel": "Next",
+      "slides": [
+        {
+          "title": "Takanawa Gateway City",
+          "caption": "Newest landmark of 2025 · Urban renewal",
+          "image": "/images/002.png"
+        },
+        {
+          "title": "Shinagawa Season Terrace",
+          "caption": "Approx. 15 min walk · Large commercial complex",
+          "image": "/images/amenities/005.png"
+        },
+        {
+          "title": "Tennozu Isle",
+          "caption": "Approx. 6 min walk · Along the canal",
+          "image": "/images/amenities/012.png"
+        },
+        {
+          "title": "Shirokane-Takanawa Sta.",
+          "caption": "Approx. 6 min walk · Two lines",
+          "image": "/images/amenities/008.png"
+        },
+        {
+          "title": "Shinagawa Sta.",
+          "caption": "Approx. 15 min walk · Major hub",
+          "image": "/images/amenities/009.png"
+        }
+      ]
+    },
+    "summary": {
+      "heading": "Estimated Travel Times to Amenities",
+      "subheading": "Walking and driving times are estimates; actual times may vary with conditions.",
+      "listLink": "View List",
+      "rows": [
+        {
+          "label": "Takanawa Gateway City",
+          "detail": "Newest landmark of 2025　approx. 15 min walk"
+        },
+        {
+          "label": "Shinagawa Season Terrace",
+          "detail": "Shops & offices　approx. 15 min walk"
+        },
+        {
+          "label": "Shirokane-Takanawa Sta.",
+          "detail": "Namboku Line / Mita Line　approx. 6 min walk"
+        },
+        {
+          "label": "Tennozu Isle Sta.",
+          "detail": "Rinkai Line / Tokyo Monorail　approx. 6 min walk"
+        },
+        {
+          "label": "Shinagawa Sta.",
+          "detail": "JR / Keikyu　approx. 15 min walk"
+        },
+        {
+          "label": "Shiba Park",
+          "detail": "Green space & walks　approx. 20 min walk"
+        }
+      ],
+      "footnote": "*1 Distances and travel times are estimates based on straight-line map distances and a walking speed of 80 m per minute; actual times may vary with conditions.",
+      "homeLink": "Back to Home"
+    },
+    "backToTop": "Back to Top",
+    "faq": {
+      "items": [
+        {
+          "question": "What are the main amenities around Shirokane-Takanawa?",
+          "answer": "Within walking distance you'll find the Shirokane Aer City mixed-use complex, Takanawa Gateway City, multiple stations including Shirokane-Takanawa, Mita and Tamachi, green spaces like Shiba Park, plus supermarkets, banks and medical facilities — everything you need day to day."
+        },
+        {
+          "question": "What's the current state of redevelopment in Shirokane-Takanawa?",
+          "answer": "Shirokane-Takanawa is undergoing large-scale urban renewal. Landmarks like SHIROKANE The SKY and TAKANAWA GATEWAY CITY have been completed one after another, and shops, offices and everyday services keep improving, steadily raising the value of the area."
+        },
+        {
+          "question": "How can I book a viewing to learn about the neighborhood?",
+          "answer": "Book a viewing through our website, and the WinnerLife team will walk you through the amenities, transit access and investment details around OK PRIME+ Shirokane-Takanawa (5-5-10 Mita, Minato-ku)."
+        }
+      ]
+    }
+  }
+}

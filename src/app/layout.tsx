@@ -7,6 +7,7 @@ import "./globals.css";
 import AppShell from "../../components/AppShell";
 import { getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
 import { getGeoMetaOther } from "@/lib/seo/geo";
+import { getHtmlLang, getLocaleFromPathname } from "@/lib/locale-path";
 
 const GTM_ID = "GTM-T84JXCM4";
 
@@ -50,10 +51,10 @@ export default async function RootLayout({
 }) {
   const headerList = await headers();
   const pathname = headerList.get("x-pathname") ?? "";
-  const isJp = pathname.startsWith("/jp");
+  const lang = getHtmlLang(getLocaleFromPathname(pathname));
 
   return (
-    <html lang={isJp ? "ja" : "zh-TW"}>
+    <html lang={lang}>
       <body
         className={`${notoSerifTC.variable} ${geistMono.variable} font-sans antialiased`}
       >

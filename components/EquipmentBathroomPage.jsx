@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CopyBlock, StaticBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
@@ -346,8 +346,7 @@ function HousetecSection({ data }) {
 export default function EquipmentBathroomPage() {
   const t = useTranslations("equipmentBathroomPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const faqItems = t.raw("faq.items");
 
   const homeHref = getLocalizedPath("/", locale);

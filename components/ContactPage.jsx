@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CONTACT_FORM_ID, scrollToElementId } from "@/lib/scroll-to";
 import { getAttributionPayload } from "@/lib/lead-attribution";
 
@@ -208,8 +208,7 @@ export default function ContactPage() {
   const t = useTranslations("contactPage");
   const pathname = usePathname();
   const lenis = useLenis();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
 
   useEffect(() => {
     const hash = window.location.hash.replace(/^#/, "");

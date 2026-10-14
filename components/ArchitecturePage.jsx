@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import Copy from "./Copy";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const NAVY = "#0d417b";
 const HERO_IMAGE = "/images/76333f51-a994-4281-b2d2-513ce5235265.png";
@@ -48,8 +48,7 @@ function CopyBlock({ children, delay = 0, className = "", heading = false }) {
 export default function ArchitecturePage() {
   const t = useTranslations("architecture");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
 
   const highlights = t.raw("highlights");
   const advantages = t.raw("advantages.items");

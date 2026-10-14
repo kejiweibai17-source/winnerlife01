@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CopyBlock, StaticBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
@@ -163,8 +163,7 @@ function SectionHeading({ title }) {
 export default function EquipmentKitchenPage() {
   const t = useTranslations("equipmentKitchenPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
 
   const homeHref = getLocalizedPath("/", locale);
   const equipmentHref = getLocalizedPath("/equipment", locale);

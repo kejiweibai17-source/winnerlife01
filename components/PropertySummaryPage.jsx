@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { getSummaryPageData } from "@/lib/summary-page-data";
 import Copy from "./Copy";
+import { getLocaleFromPathname } from "@/lib/locale-path";
 
 const NAVY = "#0d417b";
 const BEIGE = "#dad5d0";
@@ -609,7 +610,7 @@ function ExteriorFinishSection({ t, exteriorColumns }) {
 
 export default function PropertySummaryPage() {
   const pathname = usePathname();
-  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const data = getSummaryPageData(locale);
   const t = useTranslations("summary");
 

@@ -1,71 +1,73 @@
 import type { Metadata } from "next";
-import { absoluteUrl, getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
+import { getHomeDescription, getHomePageTitle, siteConfig } from "@/lib/site";
 import { getGeoMetaOther } from "@/lib/seo/geo";
+import { getLocalizedPath, SITE_LOCALES, type SiteLocale } from "@/lib/locale-path";
 
-const title = getHomePageTitle();
-const description = getHomeDescription("zh");
+const OG_LOCALE: Record<SiteLocale, string> = {
+  zh: "zh_TW",
+  jp: "ja_JP",
+  en: "en_US",
+};
 
-export const homeMetadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: title,
-    template: `%s｜${siteConfig.name}`,
-  },
-  description,
-  keywords: [...siteConfig.keywords],
-  authors: [{ name: siteConfig.legalName, url: siteConfig.corporateUrl }],
-  creator: siteConfig.legalName,
-  publisher: siteConfig.legalName,
-  category: "real estate",
-  alternates: {
-    canonical: "/",
-    languages: {
-      "zh-TW": "/",
+/** hreflang map shared by every homepage variant so each points at all three. */
+export function getHomeLanguageAlternates() {
+  return {
+    ...Object.fromEntries(
+      SITE_LOCALES.map((l) => [l.htmlLang, getLocalizedPath("/", l.code)])
+    ),
+    "x-default": "/",
+  };
+}
+
+export function getHomeMetadata(locale: SiteLocale): Metadata {
+  const title = getHomePageTitle(locale);
+  const description = getHomeDescription(locale);
+  const path = getLocalizedPath("/", locale);
+
+  return {
+    title,
+    description,
+    keywords: [...(locale === "en" ? siteConfig.keywordsEn : siteConfig.keywords)],
+    alternates: {
+      canonical: path,
+      languages: getHomeLanguageAlternates(),
     },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  icons: {
-    icon: [
-      { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/icons/icon-96.png", sizes: "96x96", type: "image/png" },
-      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-  },
-  openGraph: {
-    type: "website",
-    locale: "zh_TW",
-    url: "/",
-    siteName: "OK PRIME",
-    title,
-    description,
-    images: [
-      {
-        url: absoluteUrl(siteConfig.ogImage),
-        width: siteConfig.ogImageWidth,
-        height: siteConfig.ogImageHeight,
-        alt: siteConfig.ogImageAlt.zh,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [absoluteUrl(siteConfig.ogImage)],
-  },
-  other: getGeoMetaOther(),
-};
+    },
+    openGraph: {
+      type: "website",
+      locale: OG_LOCALE[locale],
+      alternateLocale: SITE_LOCALES.filter((l) => l.code !== locale).map(
+        (l) => OG_LOCALE[l.code]
+      ),
+      url: path,
+      siteName: "OK PRIME",
+      title,
+      description,
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: siteConfig.ogImageWidth,
+          height: siteConfig.ogImageHeight,
+          alt: siteConfig.ogImageAlt[locale],
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [siteConfig.ogImage],
+    },
+    other: getGeoMetaOther(),
+  };
+}

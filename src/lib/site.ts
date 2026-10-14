@@ -1,8 +1,12 @@
+import { getLocalizedPath, type SiteLocale } from "@/lib/locale-path";
+
 /** 全站 SEO 與結構化資料共用的網站設定 */
 export const siteConfig = {
   name: "忠訓地產",
+  /** 英文版顯示用公司名稱（如有正式英文名稱請在此統一修改） */
+  nameEn: "WinnerLife",
   legalName: "忠訓地產開發有限公司",
- 
+
   parentBrand: "OK忠訓國際集團",
   /** 建案名稱 */
   buildingName: "OK PRIME+ 白金高輪",
@@ -33,6 +37,13 @@ export const siteConfig = {
     postalCode: "105",
     addressCountry: "TW",
   },
+  addressEn: {
+    streetAddress: "4F, No. 1, Sec. 4, Nanjing E. Rd.",
+    addressLocality: "Songshan Dist.",
+    addressRegion: "Taipei City",
+  },
+  addressDisplayEn:
+    "4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City 105, Taiwan",
   /** 台北辦公室座標（南京東路四段一帶） */
   officeGeo: {
     latitude: 25.0516,
@@ -45,6 +56,11 @@ export const siteConfig = {
     postalCode: "108-0073",
     addressCountry: "JP",
   },
+  propertyAddressEn: {
+    streetAddress: "5-5-10 Mita",
+    addressLocality: "Minato-ku",
+    addressRegion: "Tokyo",
+  },
   /** 建案／港区三田5-5-10 */
   propertyGeo: {
     latitude: 35.6463,
@@ -52,16 +68,19 @@ export const siteConfig = {
     mapUrl: "https://maps.google.com/?q=5-5-10+Mita,+Minato+City,+Tokyo+108-0073",
   },
   license: "北市代銷會證字第 110011 號",
+  licenseEn: "Taipei Real Estate Marketing Association Cert. No. 110011",
   businessHours: "Mo,Tu,We,Th,Fr 09:00-18:00",
   businessHoursDisplay: {
     zh: "營業時間：09:00~18:00　休六日(國定假日)",
     jp: "営業時間：09:00〜18:00　土日定休（祝日）",
+    en: "Hours: 9:00 AM – 6:00 PM · Closed Sat, Sun & public holidays",
   },
   areaServed: ["東京都", "日本", "台北市"],
   ogImage: "/images/og/home.jpg",
   ogImageAlt: {
     zh: "OK PRIME+ 白金高輪 運河水岸建案外觀",
     jp: "OK PRIME+ 白金高輪 運河沿いの外観",
+    en: "OK PRIME+ Shirokane-Takanawa canal-side exterior",
   },
   ogImageWidth: 1200,
   ogImageHeight: 630,
@@ -100,6 +119,24 @@ export const siteConfig = {
     "房源登記",
     "樣品屋參觀",
   ],
+  keywordsEn: [
+    "OK PRIME",
+    "OK PRIME+",
+    "OK PRIME Shirokane-Takanawa",
+    "OK PRIME SHIROKANE TAKANAWA",
+    "Shirokane-Takanawa apartments",
+    "Minato City apartments",
+    "Tokyo rental apartments",
+    "Tokyo real estate investment",
+    "buy property in Tokyo",
+    "Japan property for foreigners",
+    "5-5-10 Mita",
+    "Mita Minato Tokyo",
+    "Shinagawa",
+    "Takanawa Gateway City",
+    "WinnerLife",
+    "WinnerLife Real Estate",
+  ],
 } as const;
 
 export function absoluteUrl(path: string) {
@@ -119,17 +156,23 @@ export function getProjectAlternateNames() {
 }
 
 /** 首頁瀏覽器分頁標題 */
-export function getHomePageTitle(locale: "zh" | "jp" = "zh") {
+export function getHomePageTitle(locale: SiteLocale = "zh") {
   if (locale === "jp") {
     return `OK PRIME｜OK PRIME+ 白金高輪｜東京港区賃貸レジデンス・品川生活圏14戸｜${siteConfig.name}`;
+  }
+  if (locale === "en") {
+    return `OK PRIME | OK PRIME+ Shirokane-Takanawa | 14 Rental Residences in Minato, Tokyo near Shinagawa | ${siteConfig.nameEn}`;
   }
   return `OK PRIME｜OK PRIME+ 白金高輪｜東京港區出租公寓・品川生活圈14戶｜${siteConfig.name}`;
 }
 
 /** 首頁 meta description */
-export function getHomeDescription(locale: "zh" | "jp" = "zh") {
+export function getHomeDescription(locale: SiteLocale = "zh") {
   if (locale === "jp") {
     return "OK PRIME（OK PRIME+ 白金高輪）は東京都港区三田5-5-10（〒108-0073）の賃貸レジデンス。全14戸。白金高輪駅徒歩約5分、三田・田町も徒歩圏。ALSOK防犯・スマート設備完備。忠訓地產が見学予約・日本不動産相談をご案内。";
+  }
+  if (locale === "en") {
+    return `OK PRIME (OK PRIME+ Shirokane-Takanawa) is a 14-unit rental residence at 5-5-10 Mita, Minato City, Tokyo 108-0073. About a 5-minute walk to Shirokane-Takanawa Station, with easy access to Mita, Tamachi, Shinagawa and Haneda Airport. ALSOK security and smart-home features throughout. ${siteConfig.nameEn} arranges viewings and Japan property consultations.`;
   }
   return siteConfig.description;
 }
@@ -159,10 +202,25 @@ export const homeSitelinks = {
     { name: "インテリア", path: "/jp/interior", description: "室内デザインと居住空間" },
     { name: "ブランドストーリー", path: "/jp/developer", description: "OK PRIME・忠訓地產のブランド" },
   ],
-} as const;
+  en: [
+    { name: "Location", path: getLocalizedPath("/location", "en"), description: "5-5-10 Mita, Minato City: academic district and neighborhood" },
+    { name: "Access", path: getLocalizedPath("/transportation", "en"), description: "About 5 min on foot to Shirokane-Takanawa Station; Mita, Tamachi, Haneda and Narita" },
+    { name: "Property Overview", path: getLocalizedPath("/summary", "en"), description: "Floor plans, finishes and building specifications" },
+    { name: "Appliances & Security", path: getLocalizedPath("/equipment", "en"), description: "Kitchen and bath fixtures, appliances and ALSOK security" },
+    { name: "Contact Us", path: getLocalizedPath("/contact", "en"), description: "Viewing appointments, registration and property consultations" },
+    { name: "Architecture", path: getLocalizedPath("/architecture", "en"), description: "Exterior design, materials and the play of light" },
+    { name: "Interiors", path: getLocalizedPath("/interior", "en"), description: "Interior design and living spaces" },
+    { name: "Our Story", path: getLocalizedPath("/story", "en"), description: `The vision behind OK PRIME and ${siteConfig.nameEn}` },
+  ],
+};
 
 /** 建案完整顯示名稱（SEO、結構化資料用） */
-export function getBuildingDisplayName() {
+export function getOrganizationName(locale: SiteLocale = "zh") {
+  return locale === "en" ? siteConfig.nameEn : siteConfig.name;
+}
+
+export function getBuildingDisplayName(locale: SiteLocale = "zh") {
+  if (locale === "en") return `${siteConfig.projectName} Shirokane-Takanawa`;
   return `${siteConfig.projectName} ${siteConfig.projectSubtitle}`;
 }
 
@@ -184,8 +242,8 @@ export const homeFaqItems = {
         "全案14戶，配備 ALSOK 保全與智慧設備，鄰近白金高輪・三田・田町交通樞紐與高輪 GATEWAY CITY，適合自住與日本置產規劃。",
     },
     {
-      question: "網站有日文版本嗎？",
-      answer: "有。中文版首頁為 /，日文版首頁為 /jp，各主要頁面均提供中日文對應內容。",
+      question: "網站有日文或英文版本嗎？",
+      answer: "有。中文版首頁為 /，日文版首頁為 /jp，英文版首頁為 /en。各主要頁面均提供中日文對應內容，英文版內容陸續上線中。",
     },
   ],
   jp: [
@@ -204,8 +262,29 @@ export const homeFaqItems = {
         "全14戸。ALSOK防犯・スマート設備を備え、白金高輪・三田・田町の交通利便性と高輪 GATEWAY CITY に近い住まいです。",
     },
     {
-      question: "中国語版のサイトはありますか？",
-      answer: "はい。日本語トップは /jp、中国語トップは / です。主要ページは中日両言語でご確認いただけます。",
+      question: "中国語版・英語版のサイトはありますか？",
+      answer: "はい。日本語トップは /jp、中国語トップは /、英語トップは /en です。主要ページは中日両言語でご確認いただけます。英語版は順次公開中です。",
+    },
+  ],
+  en: [
+    {
+      question: "Where is OK PRIME Shirokane-Takanawa located?",
+      answer:
+        "OK PRIME (OK PRIME+ Shirokane-Takanawa) is located at 5-5-10 Mita, Minato City, Tokyo 108-0073. The nearest station is Shirokane-Takanawa (Namboku and Mita lines), about a 5-minute walk away. Mita, Tamachi and Sengakuji stations are also nearby, making it easy to get to Shinagawa and Haneda Airport.",
+    },
+    {
+      question: "How can I book a model unit viewing or request information?",
+      answer: `Fill out the form on our Contact page, call us at ${siteConfig.taipeiPhone}, or email ${siteConfig.email}. A ${siteConfig.nameEn} advisor will help you book a viewing and answer any questions.`,
+    },
+    {
+      question: "What are the key features of the property?",
+      answer:
+        "The building has 14 residences with ALSOK security and smart-home features. It's close to the Shirokane-Takanawa, Mita and Tamachi transit hubs and Takanawa Gateway City, making it a great fit for both living in Tokyo and investing in Japanese property.",
+    },
+    {
+      question: "Is the website available in other languages?",
+      answer:
+        "Yes. The Traditional Chinese homepage is at /, the Japanese homepage is at /jp, and the English homepage is at /en. All main pages are available in Chinese and Japanese, and more English pages are on the way.",
     },
   ],
 } as const;

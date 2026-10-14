@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import useEmblaCarousel from "embla-carousel-react";
 import Copy from "./Copy";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const ACCENT = "#c41e3a";
 
@@ -373,8 +373,7 @@ function FacilityCarousel({ heading, body, prevLabel, nextLabel, slides }) {
 export default function AmenitiesPage() {
   const t = useTranslations("amenitiesPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const homeHref = getLocalizedPath("/", locale);
   const locationHref = getLocalizedPath("/location", locale);
 

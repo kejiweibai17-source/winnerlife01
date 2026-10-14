@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import { CopyBlock } from "./EquipmentBlocks";
 
 const NAVY = "#0d417b";
@@ -53,8 +53,7 @@ function WaveDivider({ id = "equipment-wave" }) {
 export default function EquipmentPage() {
   const t = useTranslations("equipmentPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const introImages = t.raw("intro.gridImages");
   const categories = t.raw("categories.items");
 

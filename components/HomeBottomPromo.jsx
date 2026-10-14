@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const COLUMN_IMAGES = [
   "/images/index/白金アエルシティ.png",
@@ -49,7 +49,7 @@ function PromoColumn({ image, imageAlt, ctaLabel, ctaHref, description }) {
 export default function HomeBottomPromo() {
   const t = useTranslations("bottomPromo");
   const pathname = usePathname();
-  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
 
   const columnHrefs = [
     getLocalizedPath("/summary", locale),

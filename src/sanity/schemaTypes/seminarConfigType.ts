@@ -52,6 +52,12 @@ export const seminarConfigType = defineType({
               validation: (Rule) => Rule.required(),
             }),
             defineField({
+              name: 'labelEn',
+              title: '顯示文字（英文）',
+              description: '例：Fri, Sep 18 — Taipei（未填寫時英文版顯示中文）',
+              type: 'string',
+            }),
+            defineField({
               name: 'enabled',
               title: '顯示在表單',
               type: 'boolean',

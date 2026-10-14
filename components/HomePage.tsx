@@ -10,7 +10,7 @@ import HomeBottomPromo from "./HomeBottomPromo";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { homeSitelinks } from "@/lib/site";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const LINE_URL =
   "https://page.line.me/qoi6885d?oat_content=url&openQrModal=true";
@@ -24,11 +24,22 @@ const HOME_CARDS = [
   { image: "/images/index/運河.png", href: "/concept" },
 ];
 
+const HOME_H1 = {
+  zh: "OK PRIME｜OK PRIME+ 白金高輪 東京港區精品住宅",
+  jp: "OK PRIME｜OK PRIME+ 白金高輪 東京港区レジデンス",
+  en: "OK PRIME | OK PRIME+ Shirokane-Takanawa: Boutique Residences in Minato, Tokyo",
+};
+
+const SITE_NAV_LABEL = {
+  zh: "OK PRIME+ 白金高輪 主要頁面",
+  jp: "OK PRIME+ 白金高輪 主要ページ",
+  en: "OK PRIME+ Shirokane-Takanawa main pages",
+};
+
 export default function HomePage() {
   const t = useTranslations();
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const siteNavLinks = homeSitelinks[locale];
   const contactHref = `${getLocalizedPath("/contact", locale)}#contact-form`;
 
@@ -42,9 +53,7 @@ export default function HomePage() {
   return (
     <>
       <h1 className="sr-only">
-        {isJp
-          ? "OK PRIME｜OK PRIME+ 白金高輪 東京港区レジデンス"
-          : "OK PRIME｜OK PRIME+ 白金高輪 東京港區精品住宅"}
+        {HOME_H1[locale]}
       </h1>
       <Hero />
 
@@ -221,9 +230,7 @@ export default function HomePage() {
 
       {/* Visually hidden: crawlable site nav for Google sitelinks (JSON-LD remains in getHomeJsonLd) */}
       <nav
-        aria-label={
-          isJp ? "OK PRIME+ 白金高輪 主要ページ" : "OK PRIME+ 白金高輪 主要頁面"
-        }
+        aria-label={SITE_NAV_LABEL[locale]}
         className="sr-only"
       >
         <ul>

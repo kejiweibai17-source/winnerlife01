@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/lib/site";
+import { getLocalizedPath } from "@/lib/locale-path";
 import {
   formatAttributionLabel,
   sanitizeAttribution,
@@ -20,7 +21,7 @@ type ContactPayload = {
   contactTime?: string;
   email?: string;
   note?: string;
-  locale?: "zh" | "jp";
+  locale?: "zh" | "jp" | "en";
   attribution?: LeadAttribution;
   /** honeypot — bots fill this; humans leave empty */
   website?: string;
@@ -80,7 +81,8 @@ export async function POST(request: Request) {
   const contactTime = clean(body.contactTime, 80);
   const email = clean(body.email, 120);
   const note = clean(body.note, 2000);
-  const locale = body.locale === "jp" ? "jp" : "zh";
+  const locale =
+    body.locale === "jp" || body.locale === "en" ? body.locale : "zh";
   const attribution = sanitizeAttribution(body.attribution);
   const attributionLabel = formatAttributionLabel(attribution);
   const attributionDetail = [
@@ -135,14 +137,14 @@ export async function POST(request: Request) {
       ? `【OK PRIME 白金高輪】落地頁說明會預約 — ${name}`
       : locale === "jp"
         ? `【${siteConfig.buildingName}】説明会申込 — ${name}`
-        : `【${siteConfig.buildingName}】說明會報名 — ${name}`;
+        : locale === "en"
+          ? `【${siteConfig.buildingName}】說明會報名（英文版）— ${name}`
+          : `【${siteConfig.buildingName}】說明會報名 — ${name}`;
 
   const sourceUrl =
     source === "landing"
       ? `${siteConfig.url}/ok-prime-shirokane-takanawa`
-      : locale === "jp"
-        ? `${siteConfig.url}/jp/contact`
-        : `${siteConfig.url}/contact`;
+      : `${siteConfig.url}${getLocalizedPath("/contact", locale)}`;
 
   const lines =
     source === "landing"
@@ -181,7 +183,9 @@ export async function POST(request: Request) {
             `受信: ${to}`,
           ]
         : [
-            "OK PRIME+ 白金高輪 說明會報名（官方網站）",
+            locale === "en"
+              ? "OK PRIME+ 白金高輪 說明會報名（官方網站・英文版）"
+              : "OK PRIME+ 白金高輪 說明會報名（官方網站）",
             "",
             `姓名: ${name}`,
             `稱謂: ${salutation}`,

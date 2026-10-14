@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Copy from "./Copy";
 import LocationDesignSections from "./LocationDesignSections";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 const TRAIN_IMAGES = {
   tokyo: "/images/location/section-01/距離-東京.png",
@@ -150,7 +150,7 @@ function GalleryCard({ name, time, route, image, delay = 0 }) {
 export default function LocationPage() {
   const t = useTranslations("location.page");
   const pathname = usePathname();
-  const locale = pathname.startsWith("/jp") ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const homeHref = getLocalizedPath("/", locale);
 
   const overviewItems = t.raw("overview.items").map((item) => ({

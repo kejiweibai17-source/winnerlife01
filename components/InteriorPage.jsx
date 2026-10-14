@@ -10,7 +10,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Copy from "./Copy";
 import { useIsMobile } from "@/lib/use-is-mobile";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -149,8 +149,7 @@ function ProjectCard({ project, index }) {
 export default function InteriorPage() {
   const t = useTranslations("interiorPage");
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const locale = isJp ? "jp" : "zh";
+  const locale = getLocaleFromPathname(pathname);
   const lenis = useLenis();
 
   const projects = t.raw("projects.items");

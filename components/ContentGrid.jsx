@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { getLocalizedPath } from "@/lib/locale-path";
+import { getLocaleFromPathname, getLocalizedPath } from "@/lib/locale-path";
 import Copy from "./Copy";
 
 const gridMeta = [
@@ -76,8 +76,7 @@ const gridMeta = [
 
 export default function ContentGrid() {
   const pathname = usePathname();
-  const isJp = pathname.startsWith("/jp");
-  const currentLocale = isJp ? "jp" : "zh";
+  const currentLocale = getLocaleFromPathname(pathname);
   const t = useTranslations("contentGrid");
   const items = t.raw("items");
 
