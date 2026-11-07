@@ -2279,7 +2279,7 @@
   "contactPage": {
     "seo": {
       "title": "Contact Us & Seminar Registration | OK PRIME Shirokane-Takanawa",
-      "description": "WinnerLife's Japan property seminars for OK PRIME Shirokane-Takanawa (5-5-10 Mita, Minato-ku) — extra sessions added across northern, central and southern Taiwan. Get an in-depth look at the Minato City property market, regulations, taxes and investment trends. Now accepting seminar registrations, property inquiries and model unit viewing bookings.",
+      "description": "WinnerLife's Japan property seminars for OK PRIME Shirokane-Takanawa (5-5-10 Mita, Minato-ku) — now open in Taichung (The Lin Hotel) and Taipei (WinnerLife). Get an in-depth look at the Minato City property market, regulations, taxes and investment trends. Now accepting seminar registrations, property inquiries and model unit viewing bookings.",
       "keywords": [
         "OK PRIME",
         "Shirokane-Takanawa",
@@ -2326,7 +2326,7 @@
       "ctaPrimary": "Register Now",
       "ctaLine": "One-on-One Chat on LINE",
       "tickerLabel": "NEWS",
-      "tickerText": "⇝ Extra seminar sessions added across Taiwan! Seats are limited — register today ⇜"
+      "tickerText": "⇝ New sessions: Nov 14 Taichung (The Lin Hotel), Nov 20 Taipei (WinnerLife) — seats limited, register today ⇜"
     },
     "intro": {
       "watermark": "PHILOSOPHY",
@@ -2400,70 +2400,27 @@
       "sessions": [
         {
           "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Taipei",
-          "image": "/images/concept/001.png",
-          "dates": [
-            "» Taipei",
-            "| Wed, Oct 28, 2:00 PM — WinnerLife Conference Hall",
-            "📍 4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City",
-            "| Sat, Oct 31, 2:00 PM — illumé Taipei"
-          ],
-          "ctaAria": "Register for the Taipei session"
-        },
-        {
-          "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Linkou",
-          "image": "/images/architecture/sk-building-02.jpg",
-          "dates": [
-            "» Linkou",
-            "📍 Four Points by Sheraton Linkou",
-            "| Sat, Oct 24, 2:00 PM"
-          ],
-          "ctaAria": "Register for the Linkou session"
-        },
-        {
-          "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Hsinchu",
-          "image": "/images/concept/001.png",
-          "dates": [
-            "» Hsinchu",
-            "📍 Ambassador Hotel Hsinchu",
-            "| Sat, Oct 10, 2:00 PM"
-          ],
-          "ctaAria": "Register for the Hsinchu session"
-        },
-        {
-          "label": "Minato City, Tokyo",
           "title": "Minato City Property Seminar — Taichung",
           "image": "/images/architecture/sk-building-02.jpg",
           "dates": [
             "» Taichung",
-            "📍 The Splendor Hotel Taichung",
-            "| Sun, Oct 11, 2:00 PM"
+            "📍 The Lin Hotel",
+            "No. 99, Chaofu Rd., Xitun Dist., Taichung City",
+            "| Sat, Nov 14, 2:00 PM"
           ],
           "ctaAria": "Register for the Taichung session"
         },
         {
           "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Tainan",
-          "image": "/images/architecture/sk-building-02.jpg",
+          "title": "Minato City Property Seminar — Taipei",
+          "image": "/images/concept/001.png",
           "dates": [
-            "» Tainan",
-            "📍 The Place Tainan",
-            "| Sat, Oct 17, 2:00 PM"
+            "» Taipei",
+            "📍 WinnerLife",
+            "4F, No. 1, Sec. 4, Nanjing E. Rd., Taipei City",
+            "| Fri, Nov 20, 2:00 PM"
           ],
-          "ctaAria": "Register for the Tainan session"
-        },
-        {
-          "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Kaohsiung",
-          "image": "/images/architecture/sk-building-02.jpg",
-          "dates": [
-            "» Kaohsiung",
-            "📍 Hotel COZZI Zhongshan Kaohsiung",
-            "| Sun, Oct 18, 2:00 PM"
-          ],
-          "ctaAria": "Register for the Kaohsiung session"
+          "ctaAria": "Register for the Taipei session"
         }
       ]
     },
@@ -2474,28 +2431,12 @@
       "lineSuffix": "for a one-on-one consultation",
       "items": [
         {
-          "city": "[Taipei]",
-          "address": "📍 Oct 28: WinnerLife Conference Hall\n4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City\n📍 Oct 31: illumé Taipei"
-        },
-        {
-          "city": "[Linkou]",
-          "address": "📍 Four Points by Sheraton Linkou"
-        },
-        {
-          "city": "[Hsinchu]",
-          "address": "📍 Ambassador Hotel Hsinchu"
-        },
-        {
           "city": "[Taichung]",
-          "address": "📍 The Splendor Hotel Taichung"
+          "address": "📍 The Lin Hotel\nNo. 99, Chaofu Rd., Xitun Dist., Taichung City"
         },
         {
-          "city": "[Tainan]",
-          "address": "📍 The Place Tainan"
-        },
-        {
-          "city": "[Kaohsiung]",
-          "address": "📍 Hotel COZZI Zhongshan Kaohsiung"
+          "city": "[Taipei]",
+          "address": "📍 WinnerLife\n4F, No. 1, Sec. 4, Nanjing E. Rd., Taipei City"
         }
       ]
     },
@@ -2539,32 +2480,12 @@
       "mailFooter": "— Submitted via the OK PRIME Shirokane-Takanawa website form",
       "sessionOptions": [
         {
-          "value": "2026-10-10-hsinchu",
-          "label": "Sat, Oct 10, 2:00 PM — Hsinchu | Ambassador Hotel Hsinchu"
+          "value": "2026-11-14-taichung",
+          "label": "Sat, Nov 14, 2:00 PM — Taichung | The Lin Hotel"
         },
         {
-          "value": "2026-10-11-taichung",
-          "label": "Sun, Oct 11, 2:00 PM — Taichung | The Splendor Hotel Taichung"
-        },
-        {
-          "value": "2026-10-17-tainan",
-          "label": "Sat, Oct 17, 2:00 PM — Tainan | The Place Tainan"
-        },
-        {
-          "value": "2026-10-18-kaohsiung",
-          "label": "Sun, Oct 18, 2:00 PM — Kaohsiung | Hotel COZZI Zhongshan Kaohsiung"
-        },
-        {
-          "value": "2026-10-24-linkou",
-          "label": "Sat, Oct 24, 2:00 PM — Linkou | Four Points by Sheraton Linkou"
-        },
-        {
-          "value": "2026-10-28-taipei",
-          "label": "Wed, Oct 28, 2:00 PM — Taipei | WinnerLife Conference Hall"
-        },
-        {
-          "value": "2026-10-31-taipei",
-          "label": "Sat, Oct 31, 2:00 PM — Taipei | illumé Taipei"
+          "value": "2026-11-20-taipei",
+          "label": "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife"
         }
       ],
       "regionOptions": [

@@ -12,53 +12,18 @@ export type SessionLocale = "zh" | "jp" | "en";
 /** Fallback when CMS has no document yet — keep in sync with form copy. */
 export const DEFAULT_SEMINAR_SESSIONS: SeminarSessionOption[] = [
   {
-    value: "2026-10-10-hsinchu",
-    date: "2026-10-10",
-    label: "10/10（六）14:00— 新竹｜新竹國賓大飯店",
-    labelJa: "10/10（土）14:00— 新竹｜新竹國賓大飯店",
-    labelEn: "Sat, Oct 10, 2:00 PM — Hsinchu | Ambassador Hotel Hsinchu",
+    value: "2026-11-14-taichung",
+    date: "2026-11-14",
+    label: "11/14（六）14:00— 台中｜林酒店",
+    labelJa: "11/14（土）14:00— 台中｜林ホテル",
+    labelEn: "Sat, Nov 14, 2:00 PM — Taichung | The Lin Hotel",
   },
   {
-    value: "2026-10-11-taichung",
-    date: "2026-10-11",
-    label: "10/11（日）14:00— 台中｜台中金典酒店",
-    labelJa: "10/11（日）14:00— 台中｜台中金典ホテル",
-    labelEn: "Sun, Oct 11, 2:00 PM — Taichung | The Splendor Hotel Taichung",
-  },
-  {
-    value: "2026-10-17-tainan",
-    date: "2026-10-17",
-    label: "10/17（六）14:00— 台南｜台南老爺行旅",
-    labelJa: "10/17（土）14:00— 台南｜台南老爺行旅",
-    labelEn: "Sat, Oct 17, 2:00 PM — Tainan | The Place Tainan",
-  },
-  {
-    value: "2026-10-18-kaohsiung",
-    date: "2026-10-18",
-    label: "10/18（日）14:00— 高雄｜和逸飯店（高雄中山館）",
-    labelJa: "10/18（日）14:00— 高雄｜和逸飯店（高雄中山館）",
-    labelEn: "Sun, Oct 18, 2:00 PM — Kaohsiung | Hotel COZZI Zhongshan Kaohsiung",
-  },
-  {
-    value: "2026-10-24-linkou",
-    date: "2026-10-24",
-    label: "10/24（六）14:00— 林口｜亞昕福朋喜來登酒店",
-    labelJa: "10/24（土）14:00— 林口｜亞昕福朋喜來登ホテル",
-    labelEn: "Sat, Oct 24, 2:00 PM — Linkou | Four Points by Sheraton Linkou",
-  },
-  {
-    value: "2026-10-28-taipei",
-    date: "2026-10-28",
-    label: "10/28（三）14:00— 台北｜忠訓地產會議廳",
-    labelJa: "10/28（水）14:00— 台北｜忠訓地產会議室",
-    labelEn: "Wed, Oct 28, 2:00 PM — Taipei | WinnerLife Conference Hall",
-  },
-  {
-    value: "2026-10-31-taipei",
-    date: "2026-10-31",
-    label: "10/31（六）14:00— 台北｜茹曦酒店",
-    labelJa: "10/31（土）14:00— 台北｜茹曦ホテル",
-    labelEn: "Sat, Oct 31, 2:00 PM — Taipei | illumé Taipei",
+    value: "2026-11-20-taipei",
+    date: "2026-11-20",
+    label: "11/20（五）14:00— 台北｜忠訓地產",
+    labelJa: "11/20（金）14:00— 台北｜忠訓地產",
+    labelEn: "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife",
   },
 ];
 
