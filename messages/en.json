@@ -2279,7 +2279,7 @@
   "contactPage": {
     "seo": {
       "title": "Contact Us & Seminar Registration | OK PRIME Shirokane-Takanawa",
-      "description": "WinnerLife's Japan property seminars for OK PRIME Shirokane-Takanawa (5-5-10 Mita, Minato-ku) — now open in Taichung (The Lin Hotel) and Taipei (WinnerLife). Get an in-depth look at the Minato City property market, regulations, taxes and investment trends. Now accepting seminar registrations, property inquiries and model unit viewing bookings.",
+      "description": "WinnerLife's Japan property seminars for OK PRIME Shirokane-Takanawa (5-5-10 Mita, Minato-ku) — now open in Taipei (WinnerLife / illumé), Tainan (Silks Place), and Linkou (Sheraton). Get an in-depth look at the Minato City property market, regulations, taxes and investment trends. Now accepting seminar registrations, property inquiries and model unit viewing bookings.",
       "keywords": [
         "OK PRIME",
         "Shirokane-Takanawa",
@@ -2326,7 +2326,7 @@
       "ctaPrimary": "Register Now",
       "ctaLine": "One-on-One Chat on LINE",
       "tickerLabel": "NEWS",
-      "tickerText": "⇝ New sessions: Nov 14 Taichung (The Lin Hotel), Nov 20 Taipei (WinnerLife) — seats limited, register today ⇜"
+      "tickerText": "⇝ New sessions: Nov 20 & 25 Taipei WinnerLife, Nov 21 Tainan, Dec 2 & 5 illumé, Dec 12 Linkou — seats limited ⇜"
     },
     "intro": {
       "watermark": "PHILOSOPHY",
@@ -2400,27 +2400,50 @@
       "sessions": [
         {
           "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Taichung",
-          "image": "/images/architecture/sk-building-02.jpg",
-          "dates": [
-            "» Taichung",
-            "📍 The Lin Hotel",
-            "No. 99, Chaofu Rd., Xitun Dist., Taichung City",
-            "| Sat, Nov 14, 2:00 PM"
-          ],
-          "ctaAria": "Register for the Taichung session"
-        },
-        {
-          "label": "Minato City, Tokyo",
-          "title": "Minato City Property Seminar — Taipei",
+          "title": "Minato City Property Seminar — Taipei WinnerLife",
           "image": "/images/concept/001.png",
           "dates": [
             "» Taipei",
-            "📍 WinnerLife",
-            "4F, No. 1, Sec. 4, Nanjing E. Rd., Taipei City",
-            "| Fri, Nov 20, 2:00 PM"
+            "📍 WinnerLife Conference Room",
+            "4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City",
+            "| Fri, Nov 20, 2:00 PM",
+            "| Wed, Nov 25, 2:00 PM"
           ],
-          "ctaAria": "Register for the Taipei session"
+          "ctaAria": "Register for the Taipei WinnerLife session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Tainan",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Tainan",
+            "📍 Silks Place Tainan 2F",
+            "| Sat, Nov 21, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Tainan session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Taipei illumé",
+          "image": "/images/concept/001.png",
+          "dates": [
+            "» Taipei",
+            "📍 illumé Taipei",
+            "| Wed, Dec 2, 2:00 PM",
+            "| Fri, Dec 5, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Taipei illumé session"
+        },
+        {
+          "label": "Minato City, Tokyo",
+          "title": "Minato City Property Seminar — Linkou",
+          "image": "/images/architecture/sk-building-02.jpg",
+          "dates": [
+            "» Linkou",
+            "📍 Sheraton Linkou",
+            "| Sat, Dec 12, 2:00 PM"
+          ],
+          "ctaAria": "Register for the Linkou session"
         }
       ]
     },
@@ -2431,12 +2454,20 @@
       "lineSuffix": "for a one-on-one consultation",
       "items": [
         {
-          "city": "[Taichung]",
-          "address": "📍 The Lin Hotel\nNo. 99, Chaofu Rd., Xitun Dist., Taichung City"
+          "city": "[Taipei · WinnerLife]",
+          "address": "📍 WinnerLife Conference Room\n4F, No. 1, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City"
         },
         {
-          "city": "[Taipei]",
-          "address": "📍 WinnerLife\n4F, No. 1, Sec. 4, Nanjing E. Rd., Taipei City"
+          "city": "[Tainan]",
+          "address": "📍 Silks Place Tainan 2F"
+        },
+        {
+          "city": "[Taipei · illumé]",
+          "address": "📍 illumé Taipei"
+        },
+        {
+          "city": "[Linkou]",
+          "address": "📍 Sheraton Linkou"
         }
       ]
     },
@@ -2480,12 +2511,28 @@
       "mailFooter": "— Submitted via the OK PRIME Shirokane-Takanawa website form",
       "sessionOptions": [
         {
-          "value": "2026-11-14-taichung",
-          "label": "Sat, Nov 14, 2:00 PM — Taichung | The Lin Hotel"
+          "value": "2026-11-20-taipei",
+          "label": "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife Conference Room"
         },
         {
-          "value": "2026-11-20-taipei",
-          "label": "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife"
+          "value": "2026-11-21-tainan",
+          "label": "Sat, Nov 21, 2:00 PM — Tainan | Silks Place Tainan 2F"
+        },
+        {
+          "value": "2026-11-25-taipei",
+          "label": "Wed, Nov 25, 2:00 PM — Taipei | WinnerLife Conference Room"
+        },
+        {
+          "value": "2026-12-02-taipei",
+          "label": "Wed, Dec 2, 2:00 PM — Taipei | illumé Taipei"
+        },
+        {
+          "value": "2026-12-05-taipei",
+          "label": "Fri, Dec 5, 2:00 PM — Taipei | illumé Taipei"
+        },
+        {
+          "value": "2026-12-12-linkou",
+          "label": "Sat, Dec 12, 2:00 PM — Linkou | Sheraton Linkou"
         }
       ],
       "regionOptions": [

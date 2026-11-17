@@ -43,27 +43,47 @@ export const landingPage01Seo = {
 } as const;
 
 const seminarVenues = {
-  taichung: {
-    name: "林酒店",
-    streetAddress: "朝富路99號",
-    addressLocality: "西屯區",
-    addressRegion: "台中市",
-    postalCode: "407",
-    addressCountry: "TW",
-  },
   taipei: {
-    name: "忠訓地產",
+    name: "忠訓地產會議室",
     streetAddress: "南京東路四段1號4樓",
     addressLocality: "松山區",
     addressRegion: "台北市",
     postalCode: "105",
     addressCountry: "TW",
   },
+  tainan: {
+    name: "台南晶英酒店 2F 府城會A",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "台南市",
+    addressRegion: "台南市",
+    postalCode: "700",
+    addressCountry: "TW",
+  },
+  illume: {
+    name: "茹曦酒店",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "台北市",
+    addressRegion: "台北市",
+    postalCode: "104",
+    addressCountry: "TW",
+  },
+  linkou: {
+    name: "林口喜來登酒店",
+    streetAddress: "請依報名通知為準",
+    addressLocality: "林口區",
+    addressRegion: "新北市",
+    postalCode: "244",
+    addressCountry: "TW",
+  },
 } as const;
 
 const seminarSessions = [
-  { date: "2026-11-14", label: "11/14（六）台中｜林酒店", venue: "taichung" as const },
-  { date: "2026-11-20", label: "11/20（五）台北｜忠訓地產", venue: "taipei" as const },
+  { date: "2026-11-20", label: "11/20（五）台北｜忠訓地產會議室", venue: "taipei" as const },
+  { date: "2026-11-21", label: "11/21（六）台南｜晶英酒店", venue: "tainan" as const },
+  { date: "2026-11-25", label: "11/25（三）台北｜忠訓地產會議室", venue: "taipei" as const },
+  { date: "2026-12-02", label: "12/2（三）台北｜茹曦酒店", venue: "illume" as const },
+  { date: "2026-12-05", label: "12/5（五）台北｜茹曦酒店", venue: "illume" as const },
+  { date: "2026-12-12", label: "12/12（六）林口｜喜來登酒店", venue: "linkou" as const },
 ] as const;
 
 const faqItems = [
@@ -74,7 +94,7 @@ const faqItems = [
   {
     question: "說明會在哪裡舉辦？",
     answer:
-      "說明會於台中林酒店、台北忠訓地產舉辦，場地以當期公告為準，請依報名場次前往。",
+      "說明會於台北忠訓地產會議室／茹曦酒店、台南晶英酒店、林口喜來登酒店舉辦，場地以當期公告為準，請依報名場次前往。",
   },
   {
     question: "說明會會分享哪些內容？",

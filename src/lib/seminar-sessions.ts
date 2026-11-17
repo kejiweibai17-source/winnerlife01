@@ -12,18 +12,46 @@ export type SessionLocale = "zh" | "jp" | "en";
 /** Fallback when CMS has no document yet — keep in sync with form copy. */
 export const DEFAULT_SEMINAR_SESSIONS: SeminarSessionOption[] = [
   {
-    value: "2026-11-14-taichung",
-    date: "2026-11-14",
-    label: "11/14（六）14:00— 台中｜林酒店",
-    labelJa: "11/14（土）14:00— 台中｜林ホテル",
-    labelEn: "Sat, Nov 14, 2:00 PM — Taichung | The Lin Hotel",
-  },
-  {
     value: "2026-11-20-taipei",
     date: "2026-11-20",
-    label: "11/20（五）14:00— 台北｜忠訓地產",
-    labelJa: "11/20（金）14:00— 台北｜忠訓地產",
-    labelEn: "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife",
+    label: "11/20（五）14:00— 台北｜忠訓地產會議室",
+    labelJa: "11/20（金）14:00— 台北｜忠訓地產会議室",
+    labelEn: "Fri, Nov 20, 2:00 PM — Taipei | WinnerLife Conference Room",
+  },
+  {
+    value: "2026-11-21-tainan",
+    date: "2026-11-21",
+    label: "11/21（六）14:00— 台南｜晶英酒店 2F 府城會A",
+    labelJa: "11/21（土）14:00— 台南｜シルクプレイス台南 2F 府城會A",
+    labelEn: "Sat, Nov 21, 2:00 PM — Tainan | Silks Place Tainan 2F",
+  },
+  {
+    value: "2026-11-25-taipei",
+    date: "2026-11-25",
+    label: "11/25（三）14:00— 台北｜忠訓地產會議室",
+    labelJa: "11/25（水）14:00— 台北｜忠訓地產会議室",
+    labelEn: "Wed, Nov 25, 2:00 PM — Taipei | WinnerLife Conference Room",
+  },
+  {
+    value: "2026-12-02-taipei",
+    date: "2026-12-02",
+    label: "12/2（三）14:00— 台北｜茹曦酒店",
+    labelJa: "12/2（水）14:00— 台北｜茹曦ホテル",
+    labelEn: "Wed, Dec 2, 2:00 PM — Taipei | illumé Taipei",
+  },
+  {
+    value: "2026-12-05-taipei",
+    date: "2026-12-05",
+    label: "12/5（五）14:00— 台北｜茹曦酒店",
+    labelJa: "12/5（金）14:00— 台北｜茹曦ホテル",
+    labelEn: "Fri, Dec 5, 2:00 PM — Taipei | illumé Taipei",
+  },
+  {
+    value: "2026-12-12-linkou",
+    date: "2026-12-12",
+    label: "12/12（六）14:00— 林口｜喜來登酒店",
+    labelJa: "12/12（土）14:00— 林口｜シェラトン酒店",
+    labelEn: "Sat, Dec 12, 2:00 PM — Linkou | Sheraton Linkou",
   },
 ];
 

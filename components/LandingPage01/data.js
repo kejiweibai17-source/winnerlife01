@@ -327,20 +327,24 @@ export const SEMINAR_REGISTRATION = {
       icon: "calendar",
       lines: [
         {
-          text: "台中：11/14（六）林酒店｜14:00",
+          text: "台北：11/20（五）、11/25（三）忠訓地產會議室｜14:00",
           accent: "red",
         },
-        {
-          text: "台北：11/20（五）忠訓地產｜14:00",
-          accent: "red",
-        },
+        { text: "台南：11/21（六）晶英酒店 2F 府城會A｜14:00" },
+        { text: "台北：12/2（三）、12/5（五）茹曦酒店｜14:00" },
+        { text: "林口：12/12（六）喜來登酒店｜14:00" },
       ],
     },
     {
       icon: "mapPin",
       lines: [
-        { text: "台中｜林酒店（西屯區朝富路99號）", accent: "red" },
-        { text: "台北｜忠訓地產（南京東路四段1號4樓）", accent: "red" },
+        {
+          text: "台北｜忠訓地產會議室（松山區南京東路四段1號4樓）",
+          accent: "red",
+        },
+        { text: "台南｜晶英酒店 2F 府城會A" },
+        { text: "台北｜茹曦酒店" },
+        { text: "林口｜喜來登酒店" },
       ],
     },
     {
@@ -374,8 +378,12 @@ export const SEMINAR_REGISTRATION = {
       note: "備註（選填）",
     },
     sessionOptions: [
-      { value: "2026-11-14-taichung", label: "11/14（六）14:00— 台中｜林酒店" },
-      { value: "2026-11-20-taipei", label: "11/20（五）14:00— 台北｜忠訓地產" },
+      { value: "2026-11-20-taipei", label: "11/20（五）14:00— 台北｜忠訓地產會議室" },
+      { value: "2026-11-21-tainan", label: "11/21（六）14:00— 台南｜晶英酒店 2F 府城會A" },
+      { value: "2026-11-25-taipei", label: "11/25（三）14:00— 台北｜忠訓地產會議室" },
+      { value: "2026-12-02-taipei", label: "12/2（三）14:00— 台北｜茹曦酒店" },
+      { value: "2026-12-05-taipei", label: "12/5（五）14:00— 台北｜茹曦酒店" },
+      { value: "2026-12-12-linkou", label: "12/12（六）14:00— 林口｜喜來登酒店" },
     ],
     guestOptions: ["1 人", "2 人", "3 人", "4 人以上"],
     submit: "立即預約",
