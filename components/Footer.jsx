@@ -63,8 +63,11 @@ export default function Footer() {
     ? getLocalizedPath(storyNavItem.href, currentLocale)
     : getLocalizedPath("/story", currentLocale);
 
-  const { address, taipeiPhoneDisplay, taipeiPhone, email, corporateUrl } =
-    siteConfig;
+  const { address, email, corporateUrl } = siteConfig;
+  const phoneDisplay =
+    currentLocale === "zh"
+      ? siteConfig.taipeiPhoneDisplay
+      : siteConfig.taipeiPhone;
   const fullAddress = isEn
     ? siteConfig.addressDisplayEn
     : `${address.addressLocality}${address.streetAddress}`;
@@ -122,7 +125,7 @@ export default function Footer() {
           <p className="text-[11px] md:text-xs tracking-[0.12em] text-white/75 leading-[2] font-light m-0">
             {fullAddress}
             <br />
-            TEL. {isEn ? taipeiPhone : taipeiPhoneDisplay}
+            TEL. {phoneDisplay}
             <br />
             E-MAIL{" "}
             <Link

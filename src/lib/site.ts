@@ -224,6 +224,13 @@ export function getBuildingDisplayName(locale: SiteLocale = "zh") {
   return `${siteConfig.projectName} ${siteConfig.projectSubtitle}`;
 }
 
+/** 外文介面顯示國際冠碼 +886；中文維持國內格式 */
+export function getTaipeiPhoneDisplay(locale: SiteLocale = "zh") {
+  return locale === "zh"
+    ? siteConfig.taipeiPhoneDisplay
+    : siteConfig.taipeiPhone;
+}
+
 /** 首頁 FAQ（與 HomePage 可見內容、JSON-LD FAQPage 同步） */
 export const homeFaqItems = {
   zh: [
@@ -254,7 +261,7 @@ export const homeFaqItems = {
     },
     {
       question: "モデルルーム見学や資料請求はどうすればよいですか？",
-      answer: `「お問い合わせ」ページからご予約ください。お電話（${siteConfig.taipeiPhoneDisplay}）またはメール（${siteConfig.email}）でも承ります。`,
+      answer: `「お問い合わせ」ページからご予約ください。お電話（${siteConfig.taipeiPhone}）またはメール（${siteConfig.email}）でも承ります。`,
     },
     {
       question: "物件の主な特長は？",

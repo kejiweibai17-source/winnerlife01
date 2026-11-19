@@ -559,7 +559,10 @@ export default function ContactPage() {
                 {t("form.successBody")}
               </p>
               <p className="m-0 mt-6 text-sm text-gray-500">
-                {siteConfig.taipeiPhoneDisplay} · {siteConfig.email}
+                {locale === "zh"
+                  ? siteConfig.taipeiPhoneDisplay
+                  : siteConfig.taipeiPhone}{" "}
+                · {siteConfig.email}
               </p>
             </div>
           ) : (

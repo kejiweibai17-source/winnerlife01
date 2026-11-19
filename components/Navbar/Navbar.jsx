@@ -309,7 +309,9 @@ export default function Header() {
                       href={`tel:${siteConfig.taipeiPhone}`}
                       className="text-xl md:text-2xl font-light tracking-wider hover:opacity-80 transition-opacity"
                     >
-                      {siteConfig.taipeiPhoneDisplay}
+                      {currentLocale === "zh"
+                        ? siteConfig.taipeiPhoneDisplay
+                        : siteConfig.taipeiPhone}
                     </a>
                   </div>
                   <div className="flex items-end pb-1 lg:max-w-xs">
